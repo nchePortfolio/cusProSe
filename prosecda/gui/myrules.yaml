@@ -1,0 +1,18 @@
+PKS:
+ COMMENT: 
+ CONDITION:
+  mandatory:
+  - KS, 10
+  - A
+  forbidden:
+
+
+Terpene:
+ COMMENT: 
+ CONDITION:
+  mandatory:
+  - phytoene, 9
+  forbidden:
+
+
+

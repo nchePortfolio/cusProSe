@@ -1,0 +1,65 @@
+{
+    "version": 1,
+    "formatters": {
+        "simple": {
+            "format": "%(message)s"
+        },
+        "detailed": {
+            "format": "%(asctime)s %(name)s %(levelname)s:\t%(message)s",
+            "datefmt": "%H:%M:%S"
+        }
+    },
+    "loggers": {
+        "prosecda.lib.report": {
+            "handlers": [
+                "console",
+                "summary_handler",
+                "info_handler"
+            ],
+            "propagate": false,
+            "level": "DEBUG"
+        },
+        "prosecda.lib": {
+            "handlers": [
+                "console",
+                "info_handler"
+            ],
+            "propagate": false,
+            "level": "DEBUG"
+        }
+    },
+    "disable_existing_loggers": false,
+    "handlers": {
+        "summary_handler": {
+            "mode": "a",
+            "formatter": "simple",
+            "class": "logging.FileHandler",
+            "level": "INFO",
+            "filename": "prosecda_trial/run_2020-04-25T14.14.45.796738/summary.log",
+            "encoding": "utf8",
+            "delay": false
+        },
+        "info_handler": {
+            "mode": "a",
+            "formatter": "detailed",
+            "class": "logging.FileHandler",
+            "level": "DEBUG",
+            "filename": "prosecda_trial/run_2020-04-25T14.14.45.796738/info.log",
+            "encoding": "utf8",
+            "delay": false
+        },
+        "console": {
+            "formatter": "detailed",
+            "class": "logging.StreamHandler",
+            "level": "DEBUG"
+        }
+    },
+    "root": {
+        "handlers": [
+            "console",
+            "info_handler"
+        ],
+        "propagate": false,
+        "level": "NOTSET"
+    }
+}

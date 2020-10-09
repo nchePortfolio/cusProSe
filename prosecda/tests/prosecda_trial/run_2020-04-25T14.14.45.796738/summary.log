@@ -1,0 +1,388 @@
+#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.
+#  ____           ____        ____ ____    _     #
+# |  _ \ _ __ ___/ ___|  ___ / ___|  _ \  / \    #
+# | |_) | '__/ _ \___ \ / _ \ |   | | | |/ _ \   #
+# |  __/| | | (_) |__) |  __/ |___| |_| / ___ \  #
+# |_|   |_|  \___/____/ \___|\____|____/_/   \_\ #
+#                                                #
+#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.
+
+# Summary of input files used parameters
+----------------------------------------
+- Output of hmmscan (.domtblout): dataset/fusarium_fujikuroi_IMI58289_V2_protein.domtblout
+- Proteome (.fasta): dataset/fusarium_fujikuroi_IMI58289_V2_protein.fasta
+- Rules (.yaml): dataset/annotation_rules.yaml
+- Output path: prosecda_trial/run_2020-04-25T14.14.45.796738/
+- Score cutoff for domain match: 3.0
+
+15 protein(s) match the rule NRPS
+---------------------------------
+Comment: Non-Ribosomal Peptide Synthase
+Mandatories: [(name, score), ...]: [('C', 3.0), ('A', 3.0), ('PP-binding', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023423580.1
+> XP_023425441.1
+> XP_023426270.1
+> XP_023427367.1
+> XP_023428681.1
+> XP_023429959.1
+> XP_023430243.1
+> XP_023431540.1
+> XP_023433861.1
+> XP_023434892.1
+> XP_023435338.1
+> XP_023435956.1
+> XP_023436753.1
+> XP_023438002.1
+> XP_023438099.1
+
+17 protein(s) match the rule PKS
+--------------------------------
+Comment: Polyketide Synthase
+Mandatories: [(name, score), ...]: [('KS', 3.0), ('AT', 3.0), ('PP-binding', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023425337.1
+> XP_023426843.1
+> XP_023427265.1
+> XP_023427367.1
+> XP_023429959.1
+> XP_023430071.1
+> XP_023432379.1
+> XP_023434455.1
+> XP_023434892.1
+> XP_023435338.1
+> XP_023436006.1
+> XP_023436378.1
+> XP_023437038.1
+> XP_023437239.1
+> XP_023438013.1
+> XP_023438054.1
+> XP_023438100.1
+
+4 protein(s) match the rule PKS-NRPS_d
+--------------------------------------
+Comment: Hybrides PKS-NRPS like
+Mandatories: [(name, score), ...]: [('A', 3.0), ('PP-binding', 3.0), ('AT', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023427367.1
+> XP_023429959.1
+> XP_023434892.1
+> XP_023435338.1
+
+1 protein(s) match the rule NRPS-like_a
+---------------------------------------
+Comment: Non-Ribosomal Peptide Synthase like
+Mandatories: [(name, score), ...]: [('C', 3.0), ('A', 3.0)]
+Forbidden: [name, ...]: ['PP-binding']
+> XP_023431963.1
+
+1 protein(s) match the rule NRPS-like_b
+---------------------------------------
+Comment: Non-Ribosomal Peptide Synthase like
+Mandatories: [(name, score), ...]: [('C', 3.0), ('PP-binding', 3.0)]
+Forbidden: [name, ...]: ['A']
+> XP_023435998.1
+
+11 protein(s) match the rule NRPS-like_c
+----------------------------------------
+Comment: Non-Ribosomal Peptide Synthase like
+Mandatories: [(name, score), ...]: [('A', 3.0), ('PP-binding', 3.0)]
+Forbidden: [name, ...]: ['C']
+> XP_023425183.1
+> XP_023425329.1
+> XP_023427274.1
+> XP_023428008.1
+> XP_023428553.1
+> XP_023428645.1
+> XP_023429714.1
+> XP_023430049.1
+> XP_023436908.1
+> XP_023437194.1
+> XP_023437753.1
+
+2 protein(s) match the rule DMATS
+---------------------------------
+Comment: Dimethylallyl tryptophan synthases
+Mandatories: [(name, score), ...]: [('Trp_DMAT', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023429775.1
+> XP_023436063.1
+
+2 protein(s) match the rule Diterp_synthase
+-------------------------------------------
+Comment: Diterpene synthase
+Mandatories: [(name, score), ...]: [('diterpene', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023431478.1
+> XP_023432246.1
+
+1 protein(s) match the rule Ent_kaurene_synthase
+------------------------------------------------
+Comment: Ent_kaurene synthase
+Mandatories: [(name, score), ...]: [('ent_kaurene', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023431478.1
+
+5 protein(s) match the rule Fusicocadiene_synthase
+--------------------------------------------------
+Comment: fusicocadiene synthase
+Mandatories: [(name, score), ...]: [('fusicocadiene', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023430643.1
+> XP_023431252.1
+> XP_023433727.1
+> XP_023434772.1
+> XP_023436384.1
+
+1 protein(s) match the rule Oxidosqualene_synthase
+--------------------------------------------------
+Comment: oxidosqualene synthase
+Mandatories: [(name, score), ...]: [('oxidosqualene', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023429045.1
+
+1 protein(s) match the rule PKS-type3_a
+---------------------------------------
+Comment: Polyketide Syntase type III
+Mandatories: [(name, score), ...]: [('CHS_like', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023432019.1
+
+3 protein(s) match the rule PaxC_like_synthase
+----------------------------------------------
+Comment: paxC_like synthase
+Mandatories: [(name, score), ...]: [('paxC_like', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023430643.1
+> XP_023431252.1
+> XP_023433727.1
+
+3 protein(s) match the rule Phytoene_synthase
+---------------------------------------------
+Comment: phytoene synthase
+Mandatories: [(name, score), ...]: [('phytoene', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023427187.1
+> XP_023428689.1
+> XP_023438116.1
+
+8 protein(s) match the rule Sesquiterp_synthase
+-----------------------------------------------
+Comment: Sesquiterpene synthase
+Mandatories: [(name, score), ...]: [('sesquiterpene', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023424560.1
+> XP_023425609.1
+> XP_023427124.1
+> XP_023429881.1
+> XP_023434772.1
+> XP_023436384.1
+> XP_023437750.1
+> XP_023438018.1
+
+2 protein(s) match the rule Squalene_hopene_cyclase
+---------------------------------------------------
+Comment: squalene_hopene synthase
+Mandatories: [(name, score), ...]: [('squalene_hopene', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023429045.1
+> XP_023432401.1
+
+2 protein(s) match the rule Squalene_synthase
+---------------------------------------------
+Comment: squalene synthase
+Mandatories: [(name, score), ...]: [('squalene', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023427187.1
+> XP_023438116.1
+
+75 protein(s) match the rule dom_A
+----------------------------------
+Comment: Adenylation domain
+Mandatories: [(name, score), ...]: [('A', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023423550.1
+> XP_023423580.1
+> XP_023423958.1
+> XP_023424045.1
+> XP_023424681.1
+> XP_023425082.1
+> XP_023425183.1
+> XP_023425329.1
+> XP_023425441.1
+> XP_023425662.1
+> XP_023425693.1
+> XP_023426270.1
+> XP_023426579.1
+> XP_023427274.1
+> XP_023427318.1
+> XP_023427367.1
+> XP_023427389.1
+> XP_023427577.1
+> XP_023428008.1
+> XP_023428260.1
+> XP_023428418.1
+> XP_023428553.1
+> XP_023428645.1
+> XP_023428681.1
+> XP_023428767.1
+> XP_023429182.1
+> XP_023429714.1
+> XP_023429852.1
+> XP_023429959.1
+> XP_023430049.1
+> XP_023430243.1
+> XP_023430388.1
+> XP_023430488.1
+> XP_023430617.1
+> XP_023431532.1
+> XP_023431540.1
+> XP_023431628.1
+> XP_023431692.1
+> XP_023431908.1
+> XP_023431963.1
+> XP_023432102.1
+> XP_023432466.1
+> XP_023433861.1
+> XP_023434612.1
+> XP_023434861.1
+> XP_023434892.1
+> XP_023434924.1
+> XP_023434929.1
+> XP_023434939.1
+> XP_023434994.1
+> XP_023435095.1
+> XP_023435249.1
+> XP_023435338.1
+> XP_023435492.1
+> XP_023435723.1
+> XP_023435956.1
+> XP_023435996.1
+> XP_023436002.1
+> XP_023436354.1
+> XP_023436422.1
+> XP_023436545.1
+> XP_023436753.1
+> XP_023436908.1
+> XP_023436940.1
+> XP_023437194.1
+> XP_023437327.1
+> XP_023437543.1
+> XP_023437588.1
+> XP_023437589.1
+> XP_023437622.1
+> XP_023437753.1
+> XP_023437999.1
+> XP_023438002.1
+> XP_023438064.1
+> XP_023438099.1
+
+21 protein(s) match the rule dom_AT
+-----------------------------------
+Comment: Acyltransferase domain
+Mandatories: [(name, score), ...]: [('AT', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023425337.1
+> XP_023426503.1
+> XP_023426843.1
+> XP_023427230.1
+> XP_023427265.1
+> XP_023427367.1
+> XP_023429959.1
+> XP_023430071.1
+> XP_023430771.1
+> XP_023432379.1
+> XP_023434455.1
+> XP_023434892.1
+> XP_023435338.1
+> XP_023436006.1
+> XP_023436378.1
+> XP_023437038.1
+> XP_023437239.1
+> XP_023438013.1
+> XP_023438054.1
+> XP_023438074.1
+> XP_023438100.1
+
+26 protein(s) match the rule dom_KS
+-----------------------------------
+Comment: Ketoacyl synthase domain
+Mandatories: [(name, score), ...]: [('KS', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023425337.1
+> XP_023425435.1
+> XP_023425886.1
+> XP_023426320.1
+> XP_023426749.1
+> XP_023426843.1
+> XP_023427265.1
+> XP_023427367.1
+> XP_023428306.1
+> XP_023429959.1
+> XP_023430071.1
+> XP_023430151.1
+> XP_023432379.1
+> XP_023432476.1
+> XP_023433644.1
+> XP_023434455.1
+> XP_023434732.1
+> XP_023434892.1
+> XP_023435338.1
+> XP_023436006.1
+> XP_023436378.1
+> XP_023437038.1
+> XP_023437239.1
+> XP_023438013.1
+> XP_023438054.1
+> XP_023438100.1
+
+44 protein(s) match the rule dom_PP
+-----------------------------------
+Comment: PP-binding domain
+Mandatories: [(name, score), ...]: [('PP-binding', 3.0)]
+Forbidden: [name, ...]: []
+> XP_023423580.1
+> XP_023425183.1
+> XP_023425329.1
+> XP_023425337.1
+> XP_023425441.1
+> XP_023425869.1
+> XP_023426270.1
+> XP_023426843.1
+> XP_023426902.1
+> XP_023427265.1
+> XP_023427274.1
+> XP_023427367.1
+> XP_023428008.1
+> XP_023428553.1
+> XP_023428645.1
+> XP_023428681.1
+> XP_023429714.1
+> XP_023429959.1
+> XP_023430049.1
+> XP_023430071.1
+> XP_023430243.1
+> XP_023431540.1
+> XP_023432379.1
+> XP_023433861.1
+> XP_023434455.1
+> XP_023434581.1
+> XP_023434892.1
+> XP_023435338.1
+> XP_023435956.1
+> XP_023435998.1
+> XP_023436006.1
+> XP_023436378.1
+> XP_023436753.1
+> XP_023436908.1
+> XP_023437038.1
+> XP_023437194.1
+> XP_023437239.1
+> XP_023437753.1
+> XP_023438002.1
+> XP_023438013.1
+> XP_023438054.1
+> XP_023438074.1
+> XP_023438099.1
+> XP_023438100.1
+

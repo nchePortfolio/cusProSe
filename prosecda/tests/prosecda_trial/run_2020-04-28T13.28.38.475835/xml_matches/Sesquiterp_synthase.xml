@@ -1,0 +1,397 @@
+<annotation>
+  <inputs>
+    <domtblout>dataset/fusarium_fujikuroi_IMI58289_V2_protein.domtblout</domtblout>
+    <proteome>dataset/fusarium_fujikuroi_IMI58289_V2_protein.fasta</proteome>
+    <yamlrules>dataset/annotation_rules.yaml</yamlrules>
+  </inputs>
+  <family>
+    <name>Sesquiterp_synthase</name>
+    <comment>Sesquiterpene synthase</comment>
+    <rule>
+      <mandatories>
+        <name>sesquiterpene</name>
+        <score>3.0</score>
+      </mandatories>
+      <forbidden/>
+    </rule>
+  </family>
+  <proteins>
+    <match_nb>8</match_nb>
+    <protein id="XP_023424560.1">
+      <sequence>MKYSRLNQAAIVDALRGQTLQISNLHNFFCGWPNPRGQLNRHHEHVTPIVNRAVERMATAYPLIARRKKDDIASLACSLYPQARRRQIEALTLYTTWLVCWDDAVDANEGDLAGDFMRAERWREQTMRMVREALAVDEMSTSEAADDDPISGVFREFGARFCQTAPRDQRRLLYDEIQFFINSCAAEQRLRLASRIPDYEPYMKMRIGTVGGRMLCSLVPYATDERLPGALSSAPEVVHLWTQVSILQSLMNDMLSLKKELRTDCVINAVAAIMEPGMSLDVVVAKLEERMKMAVNNFDDAANMLLHKTEFQEQTHPIVQRYVGGCRSIVTGTLRFTLTSPRYNIQKLIEQDGSLKITV</sequence>
+      <length>359</length>
+      <architectures>
+        <number>2</number>
+        <architecture id="1">
+          <is_matching_rule>True</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="sesquiterpene">
+              <sequence>LHNFFCGWPNPRGQLNRHHEHVTPIVNRAVERMATAYPLIARRKKDDIASLACSLYPQARRRQIEALTLYTTWLVCWDDAVDANEGDLAGDFMRAERWREQTMRMVREALAVDEMSTSEAADDDPISGVFREFGARFCQTAPRDQRRLLYDEIQFFINSCAAEQRLRLASRIPDYEPYMKMRIGTVGGRMLCSLVPYATDERLPGALSSAPEVVHLWTQVSILQSLMNDMLSLKKELRTDCVINAVAAIMEPGMSLDVVVAKLEERMKMAVNNFDDAANMLLHKTEFQEQTHPIVQRYVGGCRSIVTGTLRFTLTSPRYNIQKLIE</sequence>
+              <length>326</length>
+              <from>25</from>
+              <to>350</to>
+              <score>57.6</score>
+              <i-eval>1.2e-18</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+        <architecture id="2">
+          <is_matching_rule>False</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="Isoprenoid_Biosyn_C1">
+              <sequence>EHVTPIVNRAVERMATAYPLIARRKKDDIASLACSLYPQARRRQIEALTLYTTWLVCWDDAVDANEGDLAGDFMRAERWREQTMRMVREALAVDEMSTSEAADDDPISGVFREFGARFCQTAPRDQRRLLYDEIQFFINSCAAEQRLRLASRIPDYEPYMKMRIGTVGGRMLCSLVPYATDERLPGALSSAPEVVHLWTQVSILQSLMNDMLSLKKELRTDCVINAVAAIMEPGMSLDVVVAKLEERMKMAVNNFDDAANMLLHKTEFQEQTHPIVQRYVGGCRSIVTGTLRFTLTS</sequence>
+              <length>297</length>
+              <from>44</from>
+              <to>340</to>
+              <score>118.6</score>
+              <i-eval>3.9e-37</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+      </architectures>
+    </protein>
+    <protein id="XP_023425609.1">
+      <sequence>MAYKPGRDFCVSHNVVVASPIISSPQSVPAAQAMQVFTIKMESRRTVILPDMFKGFVVETPPMNPNYETVKPISERWLSEKCSFSPRMKKRVEFCDFAIFISIAAPDAPFDKLKTMCDWGNWVFPFDDMFDEGSLKSDPKRSQVVIDSLMADMLDQTYTRTKSAVVQAHDDIFRRVSKGSTVAPGARRRFALAMKQYTDGVVHHVKQFSTNSIPSIQEMLDTRRLSSGVTPLYHLIEYAHDIKLPDEVFENPVIQKLELLGADFVLLSNDILSYWKEENDDCPFSMVAACRMTGQSPQEAFDTVGNLLEERYQDWRSAIEQLPSWGPEIDMNVARYIQGIQNVVQANITWSFRSGRYFGKQAPEIRRTRMIDVMVNPPFLQARQRRSGWPKLVIGSSFRRLFGSFIICFMFAFYFTILKG</sequence>
+      <length>420</length>
+      <architectures>
+        <number>2</number>
+        <architecture id="1">
+          <is_matching_rule>True</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="sesquiterpene">
+              <sequence>PQSVPAAQAMQVFTIKMESRRTVILPDMFKGFVVETPPMNPNYETVKPISERWLSEKCSFSPRMKKRVEFCDFAIFISIAAPDAPFDKLKTMCDWGNWVFPFDDMFDEGSLKSDPKRSQVVIDSLMADMLDQTYTRTKSAVVQAHDDIFRRVSKGSTVAPGARRRFALAMKQYTDGVVHHVKQFSTNSIPSIQEMLDTRRLSSGVTPLYHLIEYAHDIKLPDEVFENPVIQKLELLGADFVLLSNDILSYWKEENDDCPFSMVAACRMTGQSPQEAFDTVGNLLEERYQDWRSAIEQLPSWGPEIDMNVARYIQGIQNVVQANITWSFRSGRYFGKQAPEIR</sequence>
+              <length>342</length>
+              <from>25</from>
+              <to>366</to>
+              <score>119.7</score>
+              <i-eval>1.6e-37</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+        <architecture id="2">
+          <is_matching_rule>False</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="Isoprenoid_Biosyn_C1">
+              <sequence>ETVKPISERWLSEKCSFSPRMKKRVEFCDFAIFISIAAPDAPFDKLKTMCDWGNWVFPFDDMFDEGSLKSDPKRSQVVIDSLMADMLDQTYTRTKSAVVQAHDDIFRRVSKGSTVAPGARRRFALAMKQYTDGVVHHVKQFSTNSIPSIQEMLDTRRLSSGVTPLYHLIEYAHDIKLPDEVFENPVIQKLELLGADFVLLSNDILSYWKEENDDCPFSMVAACRMTGQSPQEAFDTVGNLLEERYQDWRSAIEQLPSWGPEIDMNVARYIQGIQNVVQANITWSFRS</sequence>
+              <length>287</length>
+              <from>68</from>
+              <to>354</to>
+              <score>211.1</score>
+              <i-eval>2.6e-65</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+      </architectures>
+    </protein>
+    <protein id="XP_023427124.1">
+      <sequence>MIATINGDTKINGKGHPTEVRIPDMFGSIMSATPMVNPHHFKVKAAADAFIADYLKMDKHEATKNRKADFCFCASAMAPHADAEALRTMVDWLNWIFYFDDDFDEGQLDRDPVAAEKEIRHTLAVLEEGAEIPDRELHPLRYLFRTIWDRVKERAYPDVQTQFKITHKRYLDGLLHQVEATRDGNGQPRTEEDYIRMRRRTVGGYPCISLIAYAHNVDLSQEAFEHPSVQECIAVGCDLAWIHNDIVSYKKDVKSGIEHNFITVLKKNGFTTQQAMDRAGELQDECYRRWYLALASMPIWGESIDREVLRYIEACHSFPLGDLLWSFQTGRYLGATEGYKLHETRVLDLSDLEPIAV</sequence>
+      <length>357</length>
+      <architectures>
+        <number>2</number>
+        <architecture id="1">
+          <is_matching_rule>True</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="sesquiterpene">
+              <sequence>ATINGDTKINGKGHPTEVRIPDMFGSIMSATPMVNPHHFKVKAAADAFIADYLKMDKHEATKNRKADFCFCASAMAPHADAEALRTMVDWLNWIFYFDDDFDEGQLDRDPVAAEKEIRHTLAVLEEGAEIPDRELHPLRYLFRTIWDRVKERAYPDVQTQFKITHKRYLDGLLHQVEATRDGNGQPRTEEDYIRMRRRTVGGYPCISLIAYAHNVDLSQEAFEHPSVQECIAVGCDLAWIHNDIVSYKKDVKSGIEHNFITVLKKNGFTTQQAMDRAGELQDECYRRWYLALASMPIWGESIDREVLRYIEACHSFPLGDLLWSFQTGRYLGATEGYKL</sequence>
+              <length>339</length>
+              <from>3</from>
+              <to>341</to>
+              <score>181.0</score>
+              <i-eval>3.5e-56</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+        <architecture id="2">
+          <is_matching_rule>False</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="Isoprenoid_Biosyn_C1">
+              <sequence>FKVKAAADAFIADYLKMDKHEATKNRKADFCFCASAMAPHADAEALRTMVDWLNWIFYFDDDFDEGQLDRDPVAAEKEIRHTLAVLEEGAEIPDRELHPLRYLFRTIWDRVKERAYPDVQTQFKITHKRYLDGLLHQVEATRDGNGQPRTEEDYIRMRRRTVGGYPCISLIAYAHNVDLSQEAFEHPSVQECIAVGCDLAWIHNDIVSYKKDVKSGIEHNFITVLKKNGFTTQQAMDRAGELQDECYRRWYLALASMPIWGESIDREVLRYIEACHSFPLGDLLWSFQT</sequence>
+              <length>289</length>
+              <from>41</from>
+              <to>329</to>
+              <score>216.7</score>
+              <i-eval>5.2e-67</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+      </architectures>
+    </protein>
+    <protein id="XP_023429881.1">
+      <sequence>MASSSSTQTGKASTREDLLSVLRGQSLRVLDLALMHAGWPRDTNPHVDAIDVKILQLIETHAVNETVRSRLTKANLSEQLAGWYPYASREKLEVLTSFQVWMFIIDDLLDQYSIVEQFDYNKLQALLNDCEDYVERSLGVSSQEVEPSTRYLDHDAVLSFGEYASTVHRLYSDNPSYRKRIAKEAIATLKAYQKEAFNRRNAHLPSLDEYLGYRDASSCMKQVAANIEFANGLDLPEYVMESKEIQDLCEASVAVMWITNDIVSVRKEIREGFVENIVVLLAHGDMRRGLDASLDRLQVEIDRVNKASDDAASRFASETFESDIALLTKNCKNMCLSSWFWSVKTPRYCLHDIKPDADGGFNFTIDQVAEGTS</sequence>
+      <length>373</length>
+      <architectures>
+        <number>2</number>
+        <architecture id="1">
+          <is_matching_rule>True</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="sesquiterpene">
+              <sequence>QLIETHAVNETVRSRLTKANLSEQLAGWYPYASREKLEVLTSFQVWMFIIDDLLDQYSIVEQFDYNKLQALLNDCEDYVERSLGVSSQEVEPSTRYLDHDAVLSFGEYASTVHRLYSDNPSYRKRIAKEAIATLKAYQKEAFNRRNAHLPSLDEYLGYRDASSCMKQVAANIEFANGLDLPEYVMESKEIQDLCEASVAVMWITNDIVSVRKEIREGFVENIVVLLAHGDMRRGLDASLDRLQVEIDRVNKASDDAASRFASETFESDIALLTKNCKNMCLSSWFWSVKTPRYCLHDIKP</sequence>
+              <length>300</length>
+              <from>56</from>
+              <to>355</to>
+              <score>51.5</score>
+              <i-eval>7.9e-17</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+        <architecture id="2">
+          <is_matching_rule>False</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="Isoprenoid_Biosyn_C1">
+              <sequence>IDVKILQLIETHAVNETVRSRLTKANLSEQLAGWYPYASREKLEVLTSFQVWMFIIDDLLDQYSIVEQFDYNKLQALLNDCEDYVERSLGVSSQEVEPSTRYLDHDAVLSFGEYASTVHRLYSDNPSYRKRIAKEAIATLKAYQKEAFNRRNAHLPSLDEYLGYRDASSCMKQVAANIEFANGLDLPEYVMESKEIQDLCEASVAVMWITNDIVSVRKEIREGFVENIVVLLAHGDMRRGLDASLDRLQVEIDRVNKASDDAASRFASETFESDIALLTKNCKNMCLSSWFWSVKT</sequence>
+              <length>296</length>
+              <from>50</from>
+              <to>345</to>
+              <score>109.9</score>
+              <i-eval>1.8e-34</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+      </architectures>
+    </protein>
+    <protein id="XP_023434772.1">
+      <sequence>MVPSLITPPPSRSGEATPQKDACLNPVNIAEPEGHWIKLPEALFSSIMAVEPEVNPLYRTSKALSDEWLKTALRMNDKTAVIWSRLDIAYMSAICAPHADLETLKLMNDWNGWVFAFDDPFDEGTFANDPIKAAEEVIYTLATLDNIHPVVSPDENPLRHTLQSCWMRFRERSSPSLQYRWKKHLTMYCVGVLQQVGVQHRATRPTIEEYMDMRAGCVGAYPCIGLMEFAEGIDIPQNVMDHPSMQAISRITCDLVTLQNDLCSYRKDLIQGEESNIIFILKDQGMTDQQAVDQIGEMLYDCYRRWHMALANLPFWGEGIDRDVIKFVTGCRNIALGNLHWSLYTFRYLGNDGPEVKRTRMMKLP</sequence>
+      <length>365</length>
+      <architectures>
+        <number>3</number>
+        <architecture id="1">
+          <is_matching_rule>False</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="fusicocadiene">
+              <sequence>DIAYMSAICAPHADLETLKLMNDWNGWVFAFDDPFDEGTFANDPIKAAEEVIYTLATLDNIHPVVSPDENPLRHTLQSCWMRFRERSSPSLQYRWKKHLTMYCVGVLQQVGVQHRATRPTIEEYMDMRAGCVGAYPCIGLMEFAEGIDIPQNVMDHPSMQAISRITCDLVTLQNDLCSYRKDLIQGEESNIIFILKDQGMTDQQAVDQIGEMLYDCYRRWHMALANLPFWGEGIDRDVIKFVTGCRNIALGNLHWSLYTFRYLGNDGPEVKRTRMM</sequence>
+              <length>276</length>
+              <from>87</from>
+              <to>362</to>
+              <score>24.0</score>
+              <i-eval>1.1e-08</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+        <architecture id="2">
+          <is_matching_rule>False</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="Isoprenoid_Biosyn_C1">
+              <sequence>RTSKALSDEWLKTALRMNDKTAVIWSRLDIAYMSAICAPHADLETLKLMNDWNGWVFAFDDPFDEGTFANDPIKAAEEVIYTLATLDNIHPVVSPDENPLRHTLQSCWMRFRERSSPSLQYRWKKHLTMYCVGVLQQVGVQHRATRPTIEEYMDMRAGCVGAYPCIGLMEFAEGIDIPQNVMDHPSMQAISRITCDLVTLQNDLCSYRKDLIQGEESNIIFILKDQGMTDQQAVDQIGEMLYDCYRRWHMALANLPFWGEGIDRDVIKFVTGCRNIALGNLHWSLYT</sequence>
+              <length>287</length>
+              <from>59</from>
+              <to>345</to>
+              <score>221.0</score>
+              <i-eval>2.5e-68</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+        <architecture id="3">
+          <is_matching_rule>True</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="sesquiterpene">
+              <sequence>EATPQKDACLNPVNIAEPEGHWIKLPEALFSSIMAVEPEVNPLYRTSKALSDEWLKTALRMNDKTAVIWSRLDIAYMSAICAPHADLETLKLMNDWNGWVFAFDDPFDEGTFANDPIKAAEEVIYTLATLDNIHPVVSPDENPLRHTLQSCWMRFRERSSPSLQYRWKKHLTMYCVGVLQQVGVQHRATRPTIEEYMDMRAGCVGAYPCIGLMEFAEGIDIPQNVMDHPSMQAISRITCDLVTLQNDLCSYRKDLIQGEESNIIFILKDQGMTDQQAVDQIGEMLYDCYRRWHMALANLPFWGEGIDRDVIKFVTGCRNIALGNLHWSLYTFRYLGNDGPEVK</sequence>
+              <length>343</length>
+              <from>15</from>
+              <to>357</to>
+              <score>177.4</score>
+              <i-eval>4.4e-55</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+      </architectures>
+    </protein>
+    <protein id="XP_023436384.1">
+      <sequence>MPHKDLPIRPLVRAFDPVGPDTLGPPDLDFASLFRERNVPEDAPLTLYPEQLNVPWHTSLPWTRQSKWWVQGEAAGRDLVNRISADKASERGALPVEFMDERRKGKIDELVEDAVSCAVYLYPSSSPTRIELLTQALLLLFFHDDVMERGATQDDATVCDDFVTMIPKNKHMKRYFAEVLECDPILGPGLLRAIGLFVNAGRKKSPFKQDKYATLAEYLDYRRHDIAKPFMIAAIRFGSGVRQTPEETAPFAELEDLYVQHSILINDLYSYDKEMYEARTINGSVVNAVHVIEKLMCVPPHLAKTITRTMSFDVEKKYYAESERFMRDPALNDKQRTYVIALFDCLTGNLFHHATLGRYSRYAEYVFDCKT</sequence>
+      <length>371</length>
+      <architectures>
+        <number>3</number>
+        <architecture id="1">
+          <is_matching_rule>False</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="Isoprenoid_Biosyn_C1">
+              <sequence>MDERRKGKIDELVEDAVSCAVYLYPSSSPTRIELLTQALLLLFFHDDVMERGATQDDATVCDDFVTMIPKNKHMKRYFAEVLECDPILGPGLLRAIGLFVNAGRKKSPFKQDKYATLAEYLDYRRHDIAKPFMIAAIRFGSGVRQTPEETAPFAELEDLYVQHSILINDLYSYDKEMYEARTINGSVVNAVHVIEKLMCVPPHLAKTITRTMSFDVEKKYYAESERFMRDPALNDKQRTYVIALFDCLTGNLFHHATL</sequence>
+              <length>258</length>
+              <from>99</from>
+              <to>356</to>
+              <score>100.5</score>
+              <i-eval>1.3e-31</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+        <architecture id="2">
+          <is_matching_rule>False</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="fusicocadiene">
+              <sequence>LVEDAVSCAVYLYPSSSPTRIELLTQALLLLFFHDDVMERGATQDDATVCDDFVTMIPKNKHMKRYFAEVLECDPILGPGLLRAIGLFVNAGRKKSPFKQDKYATLAEYLDYRRHDIAKPFMIAAIRFGSGVRQTPEETAPFAELEDLYVQHSILINDLYSYDKEMYEARTINGSVVNAVHVIEKLMCVPPHLAKTITRTMSFDVEKKYYAESERFMRDPALNDKQRTYVIALFDCLTGNLFHHATLGRYSRYAEYVFD</sequence>
+              <length>259</length>
+              <from>110</from>
+              <to>368</to>
+              <score>48.7</score>
+              <i-eval>3.8e-16</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+        <architecture id="3">
+          <is_matching_rule>True</is_matching_rule>
+          <domains>
+            <number>2</number>
+            <domain name="sesquiterpene">
+              <sequence>PEDAPLTLYPEQLNVPWHTSLPWTRQSKWWVQGEAAGRDLVNRISADKASERGALPVEFMDERRKGKIDELVEDAVSCAVYLYPSSSPTRIELLTQALLLLFFHDDVMERGATQDDATVCDDFVTMIPKNKHMKRYFAEVLE</sequence>
+              <length>142</length>
+              <from>40</from>
+              <to>181</to>
+              <score>31.0</score>
+              <i-eval>1.4e-10</i-eval>
+            </domain>
+            <domain name="sesquiterpene">
+              <sequence>KKSPFKQDKYATLAEYLDYRRHDIAKPFMIAAIRFGSGVRQTPEETAPFAELEDLYVQHSILINDLYSYDKEMYEARTINGSVVNAVHVIEKLMCVPPHLAKTITRTMSFDVEKKYYAESERFMRDPALNDKQRTYVIALFDCLTGNLFHHATLGRYSRYAEYV</sequence>
+              <length>164</length>
+              <from>203</from>
+              <to>366</to>
+              <score>67.6</score>
+              <i-eval>1e-21</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+      </architectures>
+    </protein>
+    <protein id="XP_023437750.1">
+      <sequence>MVKFDSGSESEMTNGDELHINSKHEVKSRMANGNGVHNVPDHDQFQDRAEMEVLILPDLFSSLMSVPARENPHYASVKADADEWISFVINADAKWASRNKRVDFTYLASIWAPDCSAFALRTSADWNSWAFLFDDQFDEGHLSNDLEGAINEIARTREIMEGTAPRYTADSEHPIRYVFQTLCDRVKQNPEGFYAGKPSSERFYRRWMWAHELYWEGLVAQVRTNVEGRSFTRGPEEYLAMRRGSLGAYPALVNNEWAYGIDLPEEVADHPLVFEIMIIMSDQILLVKDILSYEKDLRLGVDHNMVRLLKAKGLSTQQAINEVGVMINNCYRRYYRALSELPCFGEEADRALLGYLEVEKNHALGSLLWSYNTGRYFKSKEDGARVRKTRELLIPKKMAAL</sequence>
+      <length>401</length>
+      <architectures>
+        <number>2</number>
+        <architecture id="1">
+          <is_matching_rule>True</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="sesquiterpene">
+              <sequence>LHINSKHEVKSRMANGNGVHNVPDHDQFQDRAEMEVLILPDLFSSLMSVPARENPHYASVKADADEWISFVINADAKWASRNKRVDFTYLASIWAPDCSAFALRTSADWNSWAFLFDDQFDEGHLSNDLEGAINEIARTREIMEGTAPRYTADSEHPIRYVFQTLCDRVKQNPEGFYAGKPSSERFYRRWMWAHELYWEGLVAQVRTNVEGRSFTRGPEEYLAMRRGSLGAYPALVNNEWAYGIDLPEEVADHPLVFEIMIIMSDQILLVKDILSYEKDLRLGVDHNMVRLLKAKGLSTQQAINEVGVMINNCYRRYYRALSELPCFGEEADRALLGYLEVEKNHALGSLLWSYNTGRYFKSKEDGA</sequence>
+              <length>367</length>
+              <from>18</from>
+              <to>384</to>
+              <score>158.7</score>
+              <i-eval>2.2e-49</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+        <architecture id="2">
+          <is_matching_rule>False</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="Isoprenoid_Biosyn_C1">
+              <sequence>ASVKADADEWISFVINADAKWASRNKRVDFTYLASIWAPDCSAFALRTSADWNSWAFLFDDQFDEGHLSNDLEGAINEIARTREIMEGTAPRYTADSEHPIRYVFQTLCDRVKQNPEGFYAGKPSSERFYRRWMWAHELYWEGLVAQVRTNVEGRSFTRGPEEYLAMRRGSLGAYPALVNNEWAYGIDLPEEVADHPLVFEIMIIMSDQILLVKDILSYEKDLRLGVDHNMVRLLKAKGLSTQQAINEVGVMINNCYRRYYRALSELPCFGEEADRALLGYLEVEKNHALGSLLWSYNT</sequence>
+              <length>299</length>
+              <from>75</from>
+              <to>373</to>
+              <score>206.2</score>
+              <i-eval>7.8e-64</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+      </architectures>
+    </protein>
+    <protein id="XP_023438018.1">
+      <sequence>MAIESPTSRKHQEHGGLIGLSANSSQALTPLTQLYNPPSLHKVHARADWVIEQVRQWLYPHLEQLGAEKLIKGIVNETASMCTYLYPNADDEGIFLATGFLTVQFVNDDIFDSAAILKAIQATASGQRLARDLQKLRDTPKRLADGIVCAARIMQNPLAYEECREIISDLNTDPFLLGAIYELSTRMHIRGRKINEERFEVWLGKFCAAMSDFGKSHALIYSEAKNMTVEEYADHKLRNSGMIYTVLFVEMAMETFLEDTNNLLAVLVHTQNISLYEAARRVAEMSQRHAREVKRHRTEIEAECDVNSEEYTGLGAYMVDMELFGAGCWFWQLQGTKRYFSKTSPFAELRLEAEAEKTY</sequence>
+      <length>359</length>
+      <architectures>
+        <number>4</number>
+        <architecture id="1">
+          <is_matching_rule>True</is_matching_rule>
+          <domains>
+            <number>2</number>
+            <domain name="sesquiterpene">
+              <sequence>DWVIEQVRQWLYPHLEQLGAEKLIKGIVNETASMCTYLYPNADDEGIFLATGFLTVQFVNDDIFDSAAILKAIQATASGQRLARDLQKLR</sequence>
+              <length>90</length>
+              <from>48</from>
+              <to>137</to>
+              <score>9.6</score>
+              <i-eval>0.00044</i-eval>
+            </domain>
+            <domain name="Isoprenoid_Biosyn_C1">
+              <sequence>EMAMETFLEDTNNLLAVLVHTQNISLYEAARRVAEMSQRHAREVKRHRTEIEAECDVNSEEYTGLGAYMVDMELFGAGCWFWQLQ</sequence>
+              <length>85</length>
+              <from>250</from>
+              <to>334</to>
+              <score>12.3</score>
+              <i-eval>9.8e-05</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+        <architecture id="2">
+          <is_matching_rule>True</is_matching_rule>
+          <domains>
+            <number>2</number>
+            <domain name="sesquiterpene">
+              <sequence>DWVIEQVRQWLYPHLEQLGAEKLIKGIVNETASMCTYLYPNADDEGIFLATGFLTVQFVNDDIFDSAAILKAIQATASGQRLARDLQKLR</sequence>
+              <length>90</length>
+              <from>48</from>
+              <to>137</to>
+              <score>9.6</score>
+              <i-eval>0.00044</i-eval>
+            </domain>
+            <domain name="sesquiterpene">
+              <sequence>CAAMSDFGKSHALIYSEAKNMTVEEYADHKLRNSGMIYTVLFVEMAMETFLEDTNNLLAVLVHTQNISLYEAARRVAEMSQRHAREVKRHRTEIEAECDVNSEEYTGLGAYMVDMELFGAGCWFWQLQGTKRYFSKTS</sequence>
+              <length>138</length>
+              <from>207</from>
+              <to>344</to>
+              <score>6.8</score>
+              <i-eval>0.0031</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+        <architecture id="3">
+          <is_matching_rule>False</is_matching_rule>
+          <domains>
+            <number>2</number>
+            <domain name="Isoprenoid_Biosyn_C1">
+              <sequence>RQWLYPHLEQLGAEKLIKGIVNETASMCTYLYPNADDEGIFLATGFLTVQFVNDDIFDSAAILKAIQATASGQRLARDLQKLRDTPKRLADGIVCAARIMQ</sequence>
+              <length>101</length>
+              <from>55</from>
+              <to>155</to>
+              <score>14.4</score>
+              <i-eval>2.2e-05</i-eval>
+            </domain>
+            <domain name="Isoprenoid_Biosyn_C1">
+              <sequence>EMAMETFLEDTNNLLAVLVHTQNISLYEAARRVAEMSQRHAREVKRHRTEIEAECDVNSEEYTGLGAYMVDMELFGAGCWFWQLQ</sequence>
+              <length>85</length>
+              <from>250</from>
+              <to>334</to>
+              <score>12.3</score>
+              <i-eval>9.8e-05</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+        <architecture id="4">
+          <is_matching_rule>True</is_matching_rule>
+          <domains>
+            <number>2</number>
+            <domain name="Isoprenoid_Biosyn_C1">
+              <sequence>RQWLYPHLEQLGAEKLIKGIVNETASMCTYLYPNADDEGIFLATGFLTVQFVNDDIFDSAAILKAIQATASGQRLARDLQKLRDTPKRLADGIVCAARIMQ</sequence>
+              <length>101</length>
+              <from>55</from>
+              <to>155</to>
+              <score>14.4</score>
+              <i-eval>2.2e-05</i-eval>
+            </domain>
+            <domain name="sesquiterpene">
+              <sequence>CAAMSDFGKSHALIYSEAKNMTVEEYADHKLRNSGMIYTVLFVEMAMETFLEDTNNLLAVLVHTQNISLYEAARRVAEMSQRHAREVKRHRTEIEAECDVNSEEYTGLGAYMVDMELFGAGCWFWQLQGTKRYFSKTS</sequence>
+              <length>138</length>
+              <from>207</from>
+              <to>344</to>
+              <score>6.8</score>
+              <i-eval>0.0031</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+      </architectures>
+    </protein>
+  </proteins>
+</annotation>

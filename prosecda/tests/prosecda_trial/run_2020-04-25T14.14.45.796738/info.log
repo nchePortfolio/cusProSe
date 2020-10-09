@@ -1,0 +1,2579 @@
+14:14:46 prosecda INFO:	#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.
+14:14:46 prosecda INFO:	#  ____           ____        ____ ____    _     #
+14:14:46 prosecda INFO:	# |  _ \ _ __ ___/ ___|  ___ / ___|  _ \  / \    #
+14:14:46 prosecda INFO:	# | |_) | '__/ _ \___ \ / _ \ |   | | | |/ _ \   #
+14:14:46 prosecda INFO:	# |  __/| | | (_) |__) |  __/ |___| |_| / ___ \  #
+14:14:46 prosecda INFO:	# |_|   |_|  \___/____/ \___|\____|____/_/   \_\ #
+14:14:46 prosecda INFO:	#                                                #
+14:14:46 prosecda INFO:	#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.
+14:14:46 prosecda INFO:	
+14:14:46 prosecda INFO:	# Summary of input files used parameters
+14:14:46 prosecda INFO:	----------------------------------------
+14:14:46 prosecda INFO:	- Output of hmmscan (.domtblout): dataset/fusarium_fujikuroi_IMI58289_V2_protein.domtblout
+14:14:46 prosecda INFO:	- Proteome (.fasta): dataset/fusarium_fujikuroi_IMI58289_V2_protein.fasta
+14:14:46 prosecda INFO:	- Rules (.yaml): dataset/annotation_rules.yaml
+14:14:46 prosecda INFO:	- Output path: prosecda_trial/run_2020-04-25T14.14.45.796738/
+14:14:46 prosecda INFO:	- Score cutoff for domain match: 3.0
+14:14:46 prosecda INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	------------------------------------------------------------------
+14:14:46 prosecda.lib.hmmer INFO:	# Parsing of fusarium_fujikuroi_IMI58289_V2_protein.domtblout... #
+14:14:46 prosecda.lib.hmmer INFO:	------------------------------------------------------------------
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023423550.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023423580.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.1: bit score -3.0 < 3.0 (i-evalue: 12.0)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.3
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023423958.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023424045.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023424560.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer WARNING:	 - Removal of domain Isoprenoid_Biosyn_C1.1: (duplicate)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain sesquiterpene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023424681.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain A.1: bit score -1.8 < 3.0 (i-evalue: 1.1)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023425082.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023425183.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain A.2: bit score -3.5 < 3.0 (i-evalue: 3.7)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023425329.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023425337.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain AT.2: bit score -2.6 < 3.0 (i-evalue: 4.2)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023425435.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023425441.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.4
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.4
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.5
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.6
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.4
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023425609.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer WARNING:	 - Removal of domain Isoprenoid_Biosyn_C1.1: (duplicate)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain sesquiterpene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023425662.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023425693.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023425869.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.1: bit score -3.6 < 3.0 (i-evalue: 17.0)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023425886.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023426148.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer WARNING:	 - Removal of domain Isoprenoid_Biosyn_C1.1: (duplicate)
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023426270.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.4
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.5
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.6
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.4: bit score -3.0 < 3.0 (i-evalue: 12.0)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.5
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.6
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.7
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023426320.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023426503.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain AT.1: bit score -0.1 < 3.0 (i-evalue: 0.76)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain AT.3: bit score -2.7 < 3.0 (i-evalue: 4.4)
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023426579.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023426749.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain KS.2: bit score -0.6 < 3.0 (i-evalue: 0.69)
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023426843.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023426902.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023427002.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023427124.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer WARNING:	 - Removal of domain Isoprenoid_Biosyn_C1.1: (duplicate)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain sesquiterpene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023427187.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain squalene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain phytoene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain phytoene.2: bit score 2.7 < 3.0 (i-evalue: 0.039)
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023427230.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain AT.3: bit score -3.5 < 3.0 (i-evalue: 8.3)
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023427265.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.1: bit score -3.1 < 3.0 (i-evalue: 12.0)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.2: bit score -2.0 < 3.0 (i-evalue: 5.4)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.3
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023427274.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.2: bit score -2.5 < 3.0 (i-evalue: 7.9)
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023427318.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023427367.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023427389.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023427577.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023428008.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023428260.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023428306.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023428418.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.4
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023428553.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023428579.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023428645.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain A.2: bit score 2.2 < 3.0 (i-evalue: 0.069)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023428681.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023428689.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain phytoene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023428767.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023429045.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain oxidosqualene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain squalene_hopene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023429182.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023429226.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer WARNING:	 - Removal of domain Isoprenoid_Biosyn_C1.1: (duplicate)
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023429714.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023429775.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain Trp_DMAT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023429852.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023429881.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer WARNING:	 - Removal of domain Isoprenoid_Biosyn_C1.1: (duplicate)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain sesquiterpene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023429888.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023429959.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.1: bit score -3.6 < 3.0 (i-evalue: 17.0)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.3
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023430049.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023430071.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.2: bit score -3.6 < 3.0 (i-evalue: 18.0)
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023430151.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023430243.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain A.1: bit score -3.9 < 3.0 (i-evalue: 4.7)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.3: bit score 1.9 < 3.0 (i-evalue: 0.34)
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023430388.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023430488.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023430617.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023430643.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain fusicocadiene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain paxC_like.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023430771.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain AT.1: bit score -3.0 < 3.0 (i-evalue: 5.7)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023431252.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain fusicocadiene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain paxC_like.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023431478.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain ent_kaurene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain diterpene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain TPS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain TPS.2
+14:14:46 prosecda.lib.hmmer WARNING:	 - Removal of domain TPS.1: (duplicate)
+14:14:46 prosecda.lib.hmmer WARNING:	 - Removal of domain TPS.2: (duplicate)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain ISOPREN_C2_like.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain ISOPREN_C2_like.2
+14:14:46 prosecda.lib.hmmer WARNING:	 - Removal of domain ISOPREN_C2_like.1: (duplicate)
+14:14:46 prosecda.lib.hmmer WARNING:	 - Removal of domain ISOPREN_C2_like.2: (duplicate)
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023431532.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023431540.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.2: bit score -2.4 < 3.0 (i-evalue: 7.4)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.3
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023431628.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023431692.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023431908.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023431963.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023432019.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain CHS_like.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain Chal_synt_N.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain Chal_synt_C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023432102.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023432246.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain diterpene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023432379.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.1: bit score -2.1 < 3.0 (i-evalue: 6.1)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023432401.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain squalene_hopene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023432466.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023432476.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023433644.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023433727.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain fusicocadiene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain paxC_like.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023433806.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023433861.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.4
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.5
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.4
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.5
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.6
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain C.7: bit score -1.5 < 3.0 (i-evalue: 1.6)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.8
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.9
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.10
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.11
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.4
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.5
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.6
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023434455.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain AT.2: bit score -4.1 < 3.0 (i-evalue: 12.0)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain AT.3: bit score -3.9 < 3.0 (i-evalue: 11.0)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023434581.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023434612.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023434732.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023434772.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer WARNING:	 - Removal of domain Isoprenoid_Biosyn_C1.1: (duplicate)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain sesquiterpene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain fusicocadiene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023434861.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023434892.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain C.2: bit score -3.7 < 3.0 (i-evalue: 7.6)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.1: bit score -2.7 < 3.0 (i-evalue: 9.1)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.3
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023434924.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023434929.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023434939.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023434994.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023435095.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023435105.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023435249.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023435338.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain C.1: bit score 0.2 < 3.0 (i-evalue: 0.49)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain C.2: bit score -3.4 < 3.0 (i-evalue: 6.3)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023435492.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023435617.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain C.2: bit score -3.4 < 3.0 (i-evalue: 6.4)
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023435723.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023435794.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023435836.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer WARNING:	 - Removal of domain Isoprenoid_Biosyn_C1.1: (duplicate)
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023435956.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.3
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023435996.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023435998.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023436002.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023436006.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.1: bit score -1.8 < 3.0 (i-evalue: 4.7)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.2: bit score -3.1 < 3.0 (i-evalue: 12.0)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.3: bit score -2.4 < 3.0 (i-evalue: 7.4)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.4
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023436063.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain Trp_DMAT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain Trp_DMAT.2: bit score -3.8 < 3.0 (i-evalue: 6.9)
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023436354.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023436378.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023436384.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer WARNING:	 - Removal of domain Isoprenoid_Biosyn_C1.1: (duplicate)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain sesquiterpene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain sesquiterpene.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain fusicocadiene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023436422.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023436545.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023436741.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023436753.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain C.1: bit score -0.6 < 3.0 (i-evalue: 0.89)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.1: bit score -1.6 < 3.0 (i-evalue: 4.2)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.4: bit score -2.9 < 3.0 (i-evalue: 10.0)
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023436908.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023436940.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023437038.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.1: bit score -1.4 < 3.0 (i-evalue: 3.5)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023437173.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023437194.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.1: bit score -2.6 < 3.0 (i-evalue: 8.4)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023437239.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023437327.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023437454.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023437543.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023437569.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023437588.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023437589.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023437622.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023437750.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer WARNING:	 - Removal of domain Isoprenoid_Biosyn_C1.1: (duplicate)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain sesquiterpene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023437753.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023437987.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain C.2: bit score -0.1 < 3.0 (i-evalue: 0.62)
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023437999.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023438002.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.4
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.4
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.5
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.6
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.7
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.3
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.4
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.5
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023438013.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain AT.2: bit score -3.4 < 3.0 (i-evalue: 7.2)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023438018.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain Isoprenoid_Biosyn_C1.2: bit score -2.1 < 3.0 (i-evalue: 2.4)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain Isoprenoid_Biosyn_C1.3
+14:14:46 prosecda.lib.hmmer WARNING:	 - Removal of domain Isoprenoid_Biosyn_C1.1: (duplicate)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain Isoprenoid_Biosyn_C1.2: bit score -2.1 < 3.0 (i-evalue: 2.4)
+14:14:46 prosecda.lib.hmmer WARNING:	 - Removal of domain Isoprenoid_Biosyn_C1.3: (duplicate)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain sesquiterpene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain sesquiterpene.2
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023438054.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023438064.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023438074.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023438099.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain A.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain A.2: bit score -4.0 < 3.0 (i-evalue: 5.0)
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain C.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023438100.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain KS.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain AT.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain PP-binding.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Dropping of domain PP-binding.2: bit score 0.6 < 3.0 (i-evalue: 0.85)
+14:14:46 prosecda.lib.hmmer DEBUG:	
+14:14:46 prosecda.lib.hmmer DEBUG:	* Reading of query XP_023438116.1 *
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain phytoene.1
+14:14:46 prosecda.lib.hmmer DEBUG:	 - Addition of domain squalene.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	-----------------------------------------------------
+14:14:46 prosecda.lib.hmmer INFO:	# Building of all possible architectures of queries #
+14:14:46 prosecda.lib.hmmer INFO:	-----------------------------------------------------
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023423550.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023423580.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 7 domain(s) in query: A.1, A.2, C.1, C.2, C.3, PP-binding.2, PP-binding.3
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1 - A.1 - PP-binding.2 - C.2 - A.2 - PP-binding.3 - C.3
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023423958.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, A.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - A.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023424045.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023424560.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: Isoprenoid_Biosyn_C1.1, sesquiterpene.1
+14:14:46 prosecda.lib.hmmer INFO:	- 2 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> sesquiterpene.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023424681.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023425082.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023425183.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023425329.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 3 domain(s) in query: A.1, A.2, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 2 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.2 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023425337.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 3 domain(s) in query: KS.1, AT.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - AT.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023425435.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: KS.1, KS.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - KS.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023425441.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 14 domain(s) in query: A.1, A.2, A.3, A.4, C.1, C.2, C.3, C.4, C.5, C.6, PP-binding.1, PP-binding.2, PP-binding.3, PP-binding.4
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1 - A.1 - PP-binding.1 - C.2 - C.3 - A.2 - PP-binding.2 - C.4 - A.3 - PP-binding.3 - C.5 - A.4 - PP-binding.4 - C.6
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023425609.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: Isoprenoid_Biosyn_C1.1, sesquiterpene.1
+14:14:46 prosecda.lib.hmmer INFO:	- 2 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> sesquiterpene.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023425662.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023425693.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023425869.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023425886.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: KS.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023426148.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023426270.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 15 domain(s) in query: A.1, A.2, A.3, C.1, C.2, C.3, C.4, C.5, C.6, PP-binding.1, PP-binding.2, PP-binding.3, PP-binding.5, PP-binding.6, PP-binding.7
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - PP-binding.1 - C.1 - A.2 - PP-binding.2 - C.2 - PP-binding.3 - C.3 - A.3 - PP-binding.5 - C.4 - PP-binding.6 - C.5 - PP-binding.7 - C.6
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023426320.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: KS.1, KS.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - KS.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023426503.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: AT.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> AT.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023426579.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023426749.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: KS.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023426843.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 5 domain(s) in query: KS.1, AT.1, AT.2, PP-binding.1, PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> AT.1 - KS.1 - AT.2 - PP-binding.1 - PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023426902.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023427002.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: C.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023427124.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: Isoprenoid_Biosyn_C1.1, sesquiterpene.1
+14:14:46 prosecda.lib.hmmer INFO:	- 2 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> sesquiterpene.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023427187.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: squalene.1, phytoene.1
+14:14:46 prosecda.lib.hmmer INFO:	- 2 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> phytoene.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> squalene.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023427230.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: AT.1, AT.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> AT.1 - AT.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023427265.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 3 domain(s) in query: KS.1, AT.1, PP-binding.3
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - AT.1 - PP-binding.3
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023427274.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023427318.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023427367.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 6 domain(s) in query: KS.1, A.1, AT.1, C.1, PP-binding.1, PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - AT.1 - PP-binding.1 - C.1 - A.1 - PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023427389.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, A.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - A.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023427577.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023428008.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023428260.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023428306.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: KS.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023428418.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 4 domain(s) in query: A.1, A.2, A.3, A.4
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - A.2 - A.3 - A.4
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023428553.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023428579.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: C.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023428645.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023428681.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 3 domain(s) in query: A.1, PP-binding.1, C.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1 - A.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023428689.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: phytoene.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> phytoene.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023428767.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023429045.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: oxidosqualene.1, squalene_hopene.1
+14:14:46 prosecda.lib.hmmer INFO:	- 2 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> oxidosqualene.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> squalene_hopene.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023429182.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023429226.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023429714.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023429775.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: Trp_DMAT.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> Trp_DMAT.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023429852.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023429881.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: Isoprenoid_Biosyn_C1.1, sesquiterpene.1
+14:14:46 prosecda.lib.hmmer INFO:	- 2 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> sesquiterpene.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023429888.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: C.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023429959.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 6 domain(s) in query: KS.1, A.1, AT.1, C.1, PP-binding.2, PP-binding.3
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - AT.1 - PP-binding.2 - C.1 - A.1 - PP-binding.3
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023430049.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023430071.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 4 domain(s) in query: KS.1, AT.1, AT.2, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> AT.1 - KS.1 - AT.2 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023430151.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: KS.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023430243.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 6 domain(s) in query: C.1, C.2, C.3, A.2, PP-binding.1, PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> PP-binding.1 - C.1 - C.2 - A.2 - PP-binding.2 - C.3
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023430388.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023430488.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023430617.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023430643.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: fusicocadiene.1, paxC_like.1
+14:14:46 prosecda.lib.hmmer INFO:	- 2 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> fusicocadiene.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> paxC_like.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023430771.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: AT.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> AT.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023431252.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: fusicocadiene.1, paxC_like.1
+14:14:46 prosecda.lib.hmmer INFO:	- 2 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> fusicocadiene.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> paxC_like.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023431478.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 6 domain(s) in query: ent_kaurene.1, diterpene.1, TPS.1, TPS.2, ISOPREN_C2_like.1, ISOPREN_C2_like.2
+14:14:46 prosecda.lib.hmmer INFO:	- 5 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> diterpene.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> ent_kaurene.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> ISOPREN_C2_like.1 - ISOPREN_C2_like.2
+14:14:46 prosecda.lib.hmmer INFO:	  -> ISOPREN_C2_like.1 - TPS.2
+14:14:46 prosecda.lib.hmmer INFO:	  -> TPS.1 - TPS.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023431532.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023431540.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 5 domain(s) in query: A.1, C.1, C.2, PP-binding.1, PP-binding.3
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> PP-binding.1 - C.1 - A.1 - PP-binding.3 - C.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023431628.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023431692.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023431908.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023431963.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, C.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - C.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023432019.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 3 domain(s) in query: CHS_like.1, Chal_synt_N.1, Chal_synt_C.1
+14:14:46 prosecda.lib.hmmer INFO:	- 2 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> CHS_like.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> Chal_synt_N.1 - Chal_synt_C.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023432102.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, A.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - A.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023432246.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: diterpene.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> diterpene.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023432379.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 3 domain(s) in query: KS.1, AT.1, PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - AT.1 - PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023432401.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: squalene_hopene.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> squalene_hopene.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023432466.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023432476.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: KS.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023433644.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: KS.1, KS.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - KS.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023433727.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: fusicocadiene.1, paxC_like.1
+14:14:46 prosecda.lib.hmmer INFO:	- 2 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> fusicocadiene.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> paxC_like.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023433806.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: C.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023433861.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 21 domain(s) in query: A.1, A.2, A.3, A.4, A.5, C.1, C.2, C.3, C.4, C.5, C.6, C.8, C.9, C.10, C.11, PP-binding.1, PP-binding.2, PP-binding.3, PP-binding.4, PP-binding.5, PP-binding.6
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1 - A.1 - PP-binding.1 - C.2 - C.3 - A.2 - PP-binding.2 - C.4 - A.3 - PP-binding.3 - C.5 - C.6 - A.4 - PP-binding.4 - C.8 - A.5 - PP-binding.5 - C.9 - C.10 - PP-binding.6 - C.11
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023434455.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 3 domain(s) in query: KS.1, AT.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - AT.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023434581.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023434612.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023434732.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: KS.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023434772.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 3 domain(s) in query: Isoprenoid_Biosyn_C1.1, sesquiterpene.1, fusicocadiene.1
+14:14:46 prosecda.lib.hmmer INFO:	- 3 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> sesquiterpene.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> fusicocadiene.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023434861.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023434892.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 6 domain(s) in query: KS.1, A.1, AT.1, C.1, PP-binding.2, PP-binding.3
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - AT.1 - PP-binding.2 - C.1 - A.1 - PP-binding.3
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023434924.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023434929.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023434939.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, A.2
+14:14:46 prosecda.lib.hmmer INFO:	- 2 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023434994.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023435095.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, A.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - A.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023435105.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: C.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023435249.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023435338.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 6 domain(s) in query: KS.1, A.1, AT.1, C.3, PP-binding.1, PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - AT.1 - PP-binding.1 - C.3 - A.1 - PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023435492.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023435617.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: C.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023435723.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, A.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - A.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023435794.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: C.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023435836.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023435956.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 9 domain(s) in query: A.1, A.2, A.3, C.1, C.2, C.3, PP-binding.1, PP-binding.2, PP-binding.3
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1 - A.1 - PP-binding.1 - C.2 - A.2 - A.3 - PP-binding.2 - PP-binding.3 - C.3
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023435996.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, A.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - A.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023435998.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: C.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> PP-binding.1 - C.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023436002.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023436006.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 3 domain(s) in query: KS.1, AT.1, PP-binding.4
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - AT.1 - PP-binding.4
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023436063.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: Trp_DMAT.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> Trp_DMAT.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023436354.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, A.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - A.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023436378.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 3 domain(s) in query: KS.1, AT.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - AT.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023436384.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 4 domain(s) in query: Isoprenoid_Biosyn_C1.1, sesquiterpene.1, sesquiterpene.2, fusicocadiene.1
+14:14:46 prosecda.lib.hmmer INFO:	- 3 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> fusicocadiene.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> sesquiterpene.1 - sesquiterpene.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023436422.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023436545.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023436741.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: C.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023436753.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 6 domain(s) in query: A.1, A.2, C.2, C.3, PP-binding.2, PP-binding.3
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - PP-binding.2 - C.2 - A.2 - PP-binding.3 - C.3
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023436908.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 3 domain(s) in query: A.1, A.2, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - A.2 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023436940.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023437038.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 4 domain(s) in query: KS.1, KS.2, AT.1, PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	- 2 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.2 - AT.1 - PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - AT.1 - PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023437173.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: C.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023437194.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 3 domain(s) in query: A.1, A.2, PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - A.2 - PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023437239.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 3 domain(s) in query: KS.1, AT.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - AT.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023437327.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023437454.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: C.1, C.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1 - C.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023437543.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, A.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - A.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023437569.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: C.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023437588.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023437589.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023437622.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023437750.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: Isoprenoid_Biosyn_C1.1, sesquiterpene.1
+14:14:46 prosecda.lib.hmmer INFO:	- 2 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> sesquiterpene.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023437753.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: A.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023437987.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: C.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> C.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023437999.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023438002.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 16 domain(s) in query: A.1, A.2, A.3, A.4, C.1, C.2, C.3, C.4, C.5, C.6, C.7, PP-binding.1, PP-binding.2, PP-binding.3, PP-binding.4, PP-binding.5
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> PP-binding.1 - C.1 - A.1 - PP-binding.2 - C.2 - C.3 - A.2 - PP-binding.3 - C.4 - C.5 - A.3 - PP-binding.4 - C.6 - A.4 - PP-binding.5 - C.7
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023438013.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 4 domain(s) in query: KS.1, AT.1, PP-binding.1, PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - AT.1 - PP-binding.1 - PP-binding.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023438018.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 4 domain(s) in query: Isoprenoid_Biosyn_C1.1, Isoprenoid_Biosyn_C1.3, sesquiterpene.1, sesquiterpene.2
+14:14:46 prosecda.lib.hmmer INFO:	- 4 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> Isoprenoid_Biosyn_C1.1 - Isoprenoid_Biosyn_C1.3
+14:14:46 prosecda.lib.hmmer INFO:	  -> Isoprenoid_Biosyn_C1.1 - sesquiterpene.2
+14:14:46 prosecda.lib.hmmer INFO:	  -> sesquiterpene.1 - Isoprenoid_Biosyn_C1.3
+14:14:46 prosecda.lib.hmmer INFO:	  -> sesquiterpene.1 - sesquiterpene.2
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023438054.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 3 domain(s) in query: KS.1, AT.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - AT.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023438064.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 1 domain(s) in query: A.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023438074.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: AT.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> AT.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023438099.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 3 domain(s) in query: A.1, C.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> A.1 - PP-binding.1 - C.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023438100.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 3 domain(s) in query: KS.1, AT.1, PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	- 1 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> KS.1 - AT.1 - PP-binding.1
+14:14:46 prosecda.lib.hmmer INFO:	
+14:14:46 prosecda.lib.hmmer INFO:	* Reading of query XP_023438116.1
+14:14:46 prosecda.lib.hmmer DEBUG:	- 2 domain(s) in query: phytoene.1, squalene.1
+14:14:46 prosecda.lib.hmmer INFO:	- 2 possible architecture(s) found:
+14:14:46 prosecda.lib.hmmer INFO:	  -> phytoene.1
+14:14:46 prosecda.lib.hmmer INFO:	  -> squalene.1
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	--------------------------------------
+14:14:46 prosecda.lib.match INFO:	# Searching for queries matching rules
+14:14:46 prosecda.lib.match INFO:	--------------------------------------
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule PKS-NRPS_b:
+14:14:46 prosecda.lib.match INFO:	- Comment: Hybrides PKS-NRPS
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('KS', 3.0), ('C', 200.0), ('PP-binding', 200.0), ('AT', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:46 prosecda.lib.match INFO:	----------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- No query matches the rule
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule NRPS:
+14:14:46 prosecda.lib.match INFO:	- Comment: Non-Ribosomal Peptide Synthase
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('C', 3.0), ('A', 3.0), ('PP-binding', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:46 prosecda.lib.match INFO:	----------------------------------------
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023423580.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: C.1 - A.1 - PP-binding.2 - C.2 - A.2 - PP-binding.3 - C.3
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023425441.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: C.1 - A.1 - PP-binding.1 - C.2 - C.3 - A.2 - PP-binding.2 - C.4 - A.3 - PP-binding.3 - C.5 - A.4 - PP-binding.4 - C.6
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023426270.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1 - C.1 - A.2 - PP-binding.2 - C.2 - PP-binding.3 - C.3 - A.3 - PP-binding.5 - C.4 - PP-binding.6 - C.5 - PP-binding.7 - C.6
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023427367.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - C.1 - A.1 - PP-binding.2
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023428681.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: C.1 - A.1 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023429959.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2 - C.1 - A.1 - PP-binding.3
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023430243.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: PP-binding.1 - C.1 - C.2 - A.2 - PP-binding.2 - C.3
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023431540.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: PP-binding.1 - C.1 - A.1 - PP-binding.3 - C.2
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023433861.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: C.1 - A.1 - PP-binding.1 - C.2 - C.3 - A.2 - PP-binding.2 - C.4 - A.3 - PP-binding.3 - C.5 - C.6 - A.4 - PP-binding.4 - C.8 - A.5 - PP-binding.5 - C.9 - C.10 - PP-binding.6 - C.11
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023434892.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2 - C.1 - A.1 - PP-binding.3
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023435338.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - C.3 - A.1 - PP-binding.2
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023435956.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: C.1 - A.1 - PP-binding.1 - C.2 - A.2 - A.3 - PP-binding.2 - PP-binding.3 - C.3
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023436753.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.2 - C.2 - A.2 - PP-binding.3 - C.3
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023438002.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: PP-binding.1 - C.1 - A.1 - PP-binding.2 - C.2 - C.3 - A.2 - PP-binding.3 - C.4 - C.5 - A.3 - PP-binding.4 - C.6 - A.4 - PP-binding.5 - C.7
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023438099.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1 - C.1
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule PKS:
+14:14:46 prosecda.lib.match INFO:	- Comment: Polyketide Synthase
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('KS', 3.0), ('AT', 3.0), ('PP-binding', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:46 prosecda.lib.match INFO:	---------------------------------------
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023425337.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023426843.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: AT.1 - KS.1 - AT.2 - PP-binding.1 - PP-binding.2
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023427265.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.3
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023427367.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - C.1 - A.1 - PP-binding.2
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023429959.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2 - C.1 - A.1 - PP-binding.3
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023430071.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: AT.1 - KS.1 - AT.2 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023432379.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023434455.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023434892.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2 - C.1 - A.1 - PP-binding.3
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023435338.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - C.3 - A.1 - PP-binding.2
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023436006.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.4
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023436378.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023437038.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/2: KS.2 - AT.1 - PP-binding.2
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 2/2: KS.1 - AT.1 - PP-binding.2
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023437239.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023438013.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - PP-binding.2
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023438054.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023438100.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule PKS-NRPS-like_a:
+14:14:46 prosecda.lib.match INFO:	- Comment: Hybrides PKS-NRPS like
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('KS', 3.0), ('C', 3.0), ('AT', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: ['PP-binding']
+14:14:46 prosecda.lib.match INFO:	---------------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- No query matches the rule
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule PKS-NRPS_a:
+14:14:46 prosecda.lib.match INFO:	- Comment: Hybrides PKS-NRPS
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('KS', 3.0), ('C', 3.0), ('PP-binding', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: ['AT']
+14:14:46 prosecda.lib.match INFO:	----------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- No query matches the rule
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule PKS-NRPS_c:
+14:14:46 prosecda.lib.match INFO:	- Comment: Hybrides PKS-NRPS like
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('C', 3.0), ('PP-binding', 3.0), ('AT', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: ['KS']
+14:14:46 prosecda.lib.match INFO:	----------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- No query matches the rule
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule PKS-NRPS_d:
+14:14:46 prosecda.lib.match INFO:	- Comment: Hybrides PKS-NRPS like
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('A', 3.0), ('PP-binding', 3.0), ('AT', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:46 prosecda.lib.match INFO:	----------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023427367.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - C.1 - A.1 - PP-binding.2
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023429959.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2 - C.1 - A.1 - PP-binding.3
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023434892.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2 - C.1 - A.1 - PP-binding.3
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023435338.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - C.3 - A.1 - PP-binding.2
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule NRPS-like_a:
+14:14:46 prosecda.lib.match INFO:	- Comment: Non-Ribosomal Peptide Synthase like
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('C', 3.0), ('A', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: ['PP-binding']
+14:14:46 prosecda.lib.match INFO:	-----------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023431963.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - C.1
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule NRPS-like_b:
+14:14:46 prosecda.lib.match INFO:	- Comment: Non-Ribosomal Peptide Synthase like
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('C', 3.0), ('PP-binding', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: ['A']
+14:14:46 prosecda.lib.match INFO:	-----------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023435998.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: PP-binding.1 - C.1
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule NRPS-like_c:
+14:14:46 prosecda.lib.match INFO:	- Comment: Non-Ribosomal Peptide Synthase like
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('A', 3.0), ('PP-binding', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: ['C']
+14:14:46 prosecda.lib.match INFO:	-----------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023425183.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023425329.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/2: A.2 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 2/2: A.1 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023427274.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023428008.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023428553.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023428645.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023429714.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023430049.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023436908.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - A.2 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023437194.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - A.2 - PP-binding.2
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023437753.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule PKS-NRPS-like_b:
+14:14:46 prosecda.lib.match INFO:	- Comment: Hybrides PKS-NRPS like
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('KS', 3.0), ('A', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: ['PP-binding', 'AT']
+14:14:46 prosecda.lib.match INFO:	---------------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- No query matches the rule
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule PKS-NRPS_e:
+14:14:46 prosecda.lib.match INFO:	- Comment: Hybrides PKS-NRPS like
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('C', 3.0), ('KS', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: ['PP-binding']
+14:14:46 prosecda.lib.match INFO:	----------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- No query matches the rule
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule PKS-like:
+14:14:46 prosecda.lib.match INFO:	- Comment: Polyketide Synthase like
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('KS', 3.0), ('AT', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: ['PP-binding']
+14:14:46 prosecda.lib.match INFO:	--------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- No query matches the rule
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule PKS-type3_b:
+14:14:46 prosecda.lib.match INFO:	- Comment: Polyketide Syntase type III
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('Chal_sti_synt_C', 3.0), ('Chal_sti_synt_N', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: ['CHS_like']
+14:14:46 prosecda.lib.match INFO:	-----------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- No query matches the rule
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule DMATS:
+14:14:46 prosecda.lib.match INFO:	- Comment: Dimethylallyl tryptophan synthases
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('Trp_DMAT', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:46 prosecda.lib.match INFO:	-----------------------------------------
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023429775.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: Trp_DMAT.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023436063.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: Trp_DMAT.1
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule Diterp_synthase:
+14:14:46 prosecda.lib.match INFO:	- Comment: Diterpene synthase
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('diterpene', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:46 prosecda.lib.match INFO:	---------------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023431478.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/5: diterpene.1
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 2/5: ent_kaurene.1
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 3/5: ISOPREN_C2_like.1 - ISOPREN_C2_like.2
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 4/5: ISOPREN_C2_like.1 - TPS.2
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 5/5: TPS.1 - TPS.2
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023432246.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: diterpene.1
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule Ent_kaurene_synthase:
+14:14:46 prosecda.lib.match INFO:	- Comment: Ent_kaurene synthase
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('ent_kaurene', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:46 prosecda.lib.match INFO:	--------------------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023431478.1:
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 1/5: diterpene.1
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 2/5: ent_kaurene.1
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 3/5: ISOPREN_C2_like.1 - ISOPREN_C2_like.2
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 4/5: ISOPREN_C2_like.1 - TPS.2
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 5/5: TPS.1 - TPS.2
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule Fusicocadiene_synthase:
+14:14:46 prosecda.lib.match INFO:	- Comment: fusicocadiene synthase
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('fusicocadiene', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:46 prosecda.lib.match INFO:	----------------------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023430643.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/2: fusicocadiene.1
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 2/2: paxC_like.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023431252.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/2: fusicocadiene.1
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 2/2: paxC_like.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023433727.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/2: fusicocadiene.1
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 2/2: paxC_like.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023434772.1:
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 1/3: sesquiterpene.1
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 2/3: fusicocadiene.1
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 3/3: Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023436384.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/3: fusicocadiene.1
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 2/3: Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 3/3: sesquiterpene.1 - sesquiterpene.2
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule Oxidosqualene_synthase:
+14:14:46 prosecda.lib.match INFO:	- Comment: oxidosqualene synthase
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('oxidosqualene', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:46 prosecda.lib.match INFO:	----------------------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023429045.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/2: oxidosqualene.1
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 2/2: squalene_hopene.1
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule PKS-type3_a:
+14:14:46 prosecda.lib.match INFO:	- Comment: Polyketide Syntase type III
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('CHS_like', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:46 prosecda.lib.match INFO:	-----------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023432019.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/2: CHS_like.1
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 2/2: Chal_synt_N.1 - Chal_synt_C.1
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule PaxC_like_synthase:
+14:14:46 prosecda.lib.match INFO:	- Comment: paxC_like synthase
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('paxC_like', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:46 prosecda.lib.match INFO:	------------------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023430643.1:
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 1/2: fusicocadiene.1
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 2/2: paxC_like.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023431252.1:
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 1/2: fusicocadiene.1
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 2/2: paxC_like.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023433727.1:
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 1/2: fusicocadiene.1
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 2/2: paxC_like.1
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule Phytoene_synthase:
+14:14:46 prosecda.lib.match INFO:	- Comment: phytoene synthase
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('phytoene', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:46 prosecda.lib.match INFO:	-----------------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023427187.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/2: phytoene.1
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 2/2: squalene.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023428689.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/1: phytoene.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023438116.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/2: phytoene.1
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 2/2: squalene.1
+14:14:46 prosecda.lib.match INFO:	
+14:14:46 prosecda.lib.match INFO:	* Search queries matching the rule Sesquiterp_synthase:
+14:14:46 prosecda.lib.match INFO:	- Comment: Sesquiterpene synthase
+14:14:46 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('sesquiterpene', 3.0)]
+14:14:46 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:46 prosecda.lib.match INFO:	-------------------------------------------------------
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023424560.1:
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 1/2: Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 2/2: sesquiterpene.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023425609.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/2: sesquiterpene.1
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 2/2: Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023427124.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/2: sesquiterpene.1
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 2/2: Isoprenoid_Biosyn_C1.1
+14:14:46 prosecda.lib.match INFO:	- Match found for query XP_023429881.1:
+14:14:46 prosecda.lib.match INFO:	   -> True for architecture 1/2: sesquiterpene.1
+14:14:46 prosecda.lib.match INFO:	   -> False for architecture 2/2: Isoprenoid_Biosyn_C1.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023434772.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/3: sesquiterpene.1
+14:14:47 prosecda.lib.match INFO:	   -> False for architecture 2/3: fusicocadiene.1
+14:14:47 prosecda.lib.match INFO:	   -> False for architecture 3/3: Isoprenoid_Biosyn_C1.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023436384.1:
+14:14:47 prosecda.lib.match INFO:	   -> False for architecture 1/3: fusicocadiene.1
+14:14:47 prosecda.lib.match INFO:	   -> False for architecture 2/3: Isoprenoid_Biosyn_C1.1
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 3/3: sesquiterpene.1 - sesquiterpene.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437750.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/2: sesquiterpene.1
+14:14:47 prosecda.lib.match INFO:	   -> False for architecture 2/2: Isoprenoid_Biosyn_C1.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438018.1:
+14:14:47 prosecda.lib.match INFO:	   -> False for architecture 1/4: Isoprenoid_Biosyn_C1.1 - Isoprenoid_Biosyn_C1.3
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 2/4: Isoprenoid_Biosyn_C1.1 - sesquiterpene.2
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 3/4: sesquiterpene.1 - Isoprenoid_Biosyn_C1.3
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 4/4: sesquiterpene.1 - sesquiterpene.2
+14:14:47 prosecda.lib.match INFO:	
+14:14:47 prosecda.lib.match INFO:	* Search queries matching the rule Squalene_hopene_cyclase:
+14:14:47 prosecda.lib.match INFO:	- Comment: squalene_hopene synthase
+14:14:47 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('squalene_hopene', 3.0)]
+14:14:47 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.match INFO:	-----------------------------------------------------------
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023429045.1:
+14:14:47 prosecda.lib.match INFO:	   -> False for architecture 1/2: oxidosqualene.1
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 2/2: squalene_hopene.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023432401.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: squalene_hopene.1
+14:14:47 prosecda.lib.match INFO:	
+14:14:47 prosecda.lib.match INFO:	* Search queries matching the rule Squalene_synthase:
+14:14:47 prosecda.lib.match INFO:	- Comment: squalene synthase
+14:14:47 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('squalene', 3.0)]
+14:14:47 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.match INFO:	-----------------------------------------------------
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023427187.1:
+14:14:47 prosecda.lib.match INFO:	   -> False for architecture 1/2: phytoene.1
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 2/2: squalene.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438116.1:
+14:14:47 prosecda.lib.match INFO:	   -> False for architecture 1/2: phytoene.1
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 2/2: squalene.1
+14:14:47 prosecda.lib.match INFO:	
+14:14:47 prosecda.lib.match INFO:	* Search queries matching the rule dom_A:
+14:14:47 prosecda.lib.match INFO:	- Comment: Adenylation domain
+14:14:47 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('A', 3.0)]
+14:14:47 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.match INFO:	-----------------------------------------
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023423550.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023423580.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: C.1 - A.1 - PP-binding.2 - C.2 - A.2 - PP-binding.3 - C.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023423958.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - A.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023424045.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023424681.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023425082.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023425183.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023425329.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/2: A.2 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 2/2: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023425441.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: C.1 - A.1 - PP-binding.1 - C.2 - C.3 - A.2 - PP-binding.2 - C.4 - A.3 - PP-binding.3 - C.5 - A.4 - PP-binding.4 - C.6
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023425662.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023425693.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023426270.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1 - C.1 - A.2 - PP-binding.2 - C.2 - PP-binding.3 - C.3 - A.3 - PP-binding.5 - C.4 - PP-binding.6 - C.5 - PP-binding.7 - C.6
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023426579.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023427274.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023427318.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023427367.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - C.1 - A.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023427389.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - A.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023427577.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023428008.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023428260.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023428418.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - A.2 - A.3 - A.4
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023428553.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023428645.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023428681.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: C.1 - A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023428767.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023429182.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023429714.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023429852.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023429959.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2 - C.1 - A.1 - PP-binding.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023430049.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023430243.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: PP-binding.1 - C.1 - C.2 - A.2 - PP-binding.2 - C.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023430388.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023430488.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023430617.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023431532.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023431540.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: PP-binding.1 - C.1 - A.1 - PP-binding.3 - C.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023431628.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023431692.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023431908.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023431963.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - C.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023432102.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - A.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023432466.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023433861.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: C.1 - A.1 - PP-binding.1 - C.2 - C.3 - A.2 - PP-binding.2 - C.4 - A.3 - PP-binding.3 - C.5 - C.6 - A.4 - PP-binding.4 - C.8 - A.5 - PP-binding.5 - C.9 - C.10 - PP-binding.6 - C.11
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023434612.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023434861.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023434892.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2 - C.1 - A.1 - PP-binding.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023434924.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023434929.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023434939.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/2: A.1
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 2/2: A.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023434994.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023435095.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - A.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023435249.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023435338.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - C.3 - A.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023435492.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023435723.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - A.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023435956.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: C.1 - A.1 - PP-binding.1 - C.2 - A.2 - A.3 - PP-binding.2 - PP-binding.3 - C.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023435996.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - A.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023436002.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023436354.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - A.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023436422.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023436545.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023436753.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.2 - C.2 - A.2 - PP-binding.3 - C.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023436908.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - A.2 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023436940.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437194.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - A.2 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437327.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437543.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - A.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437588.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437589.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437622.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437753.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437999.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438002.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: PP-binding.1 - C.1 - A.1 - PP-binding.2 - C.2 - C.3 - A.2 - PP-binding.3 - C.4 - C.5 - A.3 - PP-binding.4 - C.6 - A.4 - PP-binding.5 - C.7
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438064.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438099.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1 - C.1
+14:14:47 prosecda.lib.match INFO:	
+14:14:47 prosecda.lib.match INFO:	* Search queries matching the rule dom_AT:
+14:14:47 prosecda.lib.match INFO:	- Comment: Acyltransferase domain
+14:14:47 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('AT', 3.0)]
+14:14:47 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.match INFO:	------------------------------------------
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023425337.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023426503.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: AT.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023426843.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: AT.1 - KS.1 - AT.2 - PP-binding.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023427230.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: AT.1 - AT.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023427265.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023427367.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - C.1 - A.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023429959.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2 - C.1 - A.1 - PP-binding.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023430071.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: AT.1 - KS.1 - AT.2 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023430771.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: AT.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023432379.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023434455.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023434892.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2 - C.1 - A.1 - PP-binding.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023435338.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - C.3 - A.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023436006.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.4
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023436378.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437038.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/2: KS.2 - AT.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 2/2: KS.1 - AT.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437239.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438013.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438054.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438074.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438100.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	
+14:14:47 prosecda.lib.match INFO:	* Search queries matching the rule dom_KS:
+14:14:47 prosecda.lib.match INFO:	- Comment: Ketoacyl synthase domain
+14:14:47 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('KS', 3.0)]
+14:14:47 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.match INFO:	------------------------------------------
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023425337.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023425435.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - KS.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023425886.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023426320.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - KS.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023426749.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023426843.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: AT.1 - KS.1 - AT.2 - PP-binding.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023427265.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023427367.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - C.1 - A.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023428306.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023429959.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2 - C.1 - A.1 - PP-binding.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023430071.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: AT.1 - KS.1 - AT.2 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023430151.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023432379.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023432476.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023433644.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - KS.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023434455.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023434732.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023434892.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2 - C.1 - A.1 - PP-binding.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023435338.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - C.3 - A.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023436006.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.4
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023436378.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437038.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/2: KS.2 - AT.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 2/2: KS.1 - AT.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437239.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438013.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438054.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438100.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	
+14:14:47 prosecda.lib.match INFO:	* Search queries matching the rule dom_PP:
+14:14:47 prosecda.lib.match INFO:	- Comment: PP-binding domain
+14:14:47 prosecda.lib.match INFO:	- Mandatories: [(name, score), ...]: [('PP-binding', 3.0)]
+14:14:47 prosecda.lib.match INFO:	- Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.match INFO:	------------------------------------------
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023423580.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: C.1 - A.1 - PP-binding.2 - C.2 - A.2 - PP-binding.3 - C.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023425183.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023425329.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/2: A.2 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 2/2: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023425337.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023425441.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: C.1 - A.1 - PP-binding.1 - C.2 - C.3 - A.2 - PP-binding.2 - C.4 - A.3 - PP-binding.3 - C.5 - A.4 - PP-binding.4 - C.6
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023425869.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023426270.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1 - C.1 - A.2 - PP-binding.2 - C.2 - PP-binding.3 - C.3 - A.3 - PP-binding.5 - C.4 - PP-binding.6 - C.5 - PP-binding.7 - C.6
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023426843.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: AT.1 - KS.1 - AT.2 - PP-binding.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023426902.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023427265.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023427274.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023427367.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - C.1 - A.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023428008.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023428553.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023428645.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023428681.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: C.1 - A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023429714.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023429959.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2 - C.1 - A.1 - PP-binding.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023430049.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023430071.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: AT.1 - KS.1 - AT.2 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023430243.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: PP-binding.1 - C.1 - C.2 - A.2 - PP-binding.2 - C.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023431540.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: PP-binding.1 - C.1 - A.1 - PP-binding.3 - C.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023432379.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023433861.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: C.1 - A.1 - PP-binding.1 - C.2 - C.3 - A.2 - PP-binding.2 - C.4 - A.3 - PP-binding.3 - C.5 - C.6 - A.4 - PP-binding.4 - C.8 - A.5 - PP-binding.5 - C.9 - C.10 - PP-binding.6 - C.11
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023434455.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023434581.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023434892.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.2 - C.1 - A.1 - PP-binding.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023435338.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - C.3 - A.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023435956.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: C.1 - A.1 - PP-binding.1 - C.2 - A.2 - A.3 - PP-binding.2 - PP-binding.3 - C.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023435998.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: PP-binding.1 - C.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023436006.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.4
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023436378.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023436753.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.2 - C.2 - A.2 - PP-binding.3 - C.3
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023436908.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - A.2 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437038.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/2: KS.2 - AT.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 2/2: KS.1 - AT.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437194.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - A.2 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437239.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023437753.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438002.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: PP-binding.1 - C.1 - A.1 - PP-binding.2 - C.2 - C.3 - A.2 - PP-binding.3 - C.4 - C.5 - A.3 - PP-binding.4 - C.6 - A.4 - PP-binding.5 - C.7
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438013.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1 - PP-binding.2
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438054.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438074.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: AT.1 - PP-binding.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438099.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: A.1 - PP-binding.1 - C.1
+14:14:47 prosecda.lib.match INFO:	- Match found for query XP_023438100.1:
+14:14:47 prosecda.lib.match INFO:	   -> True for architecture 1/1: KS.1 - AT.1 - PP-binding.1
+14:14:47 prosecda.lib.report DEBUG:	
+14:14:47 prosecda.lib.report DEBUG:	--------------------------------------------------------------------------------------
+14:14:47 prosecda.lib.report DEBUG:	# Writing xml of matches in prosecda_trial/run_2020-04-25T14.14.45.796738/xml_matches/
+14:14:47 prosecda.lib.report DEBUG:	--------------------------------------------------------------------------------------
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule NRPS
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule PKS
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule PKS-NRPS_d
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule NRPS-like_a
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule NRPS-like_b
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule NRPS-like_c
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule DMATS
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule Diterp_synthase
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule Ent_kaurene_synthase
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule Fusicocadiene_synthase
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule Oxidosqualene_synthase
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule PKS-type3_a
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule PaxC_like_synthase
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule Phytoene_synthase
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule Sesquiterp_synthase
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule Squalene_hopene_cyclase
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule Squalene_synthase
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule dom_A
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule dom_AT
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule dom_KS
+14:14:47 prosecda.lib.report DEBUG:	- Writing xml for queries matching the rule dom_PP
+14:14:47 prosecda.lib.report DEBUG:	
+14:14:47 prosecda.lib.report INFO:	#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.
+14:14:47 prosecda.lib.report INFO:	#  ____           ____        ____ ____    _     #
+14:14:47 prosecda.lib.report INFO:	# |  _ \ _ __ ___/ ___|  ___ / ___|  _ \  / \    #
+14:14:47 prosecda.lib.report INFO:	# | |_) | '__/ _ \___ \ / _ \ |   | | | |/ _ \   #
+14:14:47 prosecda.lib.report INFO:	# |  __/| | | (_) |__) |  __/ |___| |_| / ___ \  #
+14:14:47 prosecda.lib.report INFO:	# |_|   |_|  \___/____/ \___|\____|____/_/   \_\ #
+14:14:47 prosecda.lib.report INFO:	#                                                #
+14:14:47 prosecda.lib.report INFO:	#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.#.
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	# Summary of input files used parameters
+14:14:47 prosecda.lib.report INFO:	----------------------------------------
+14:14:47 prosecda.lib.report INFO:	- Output of hmmscan (.domtblout): dataset/fusarium_fujikuroi_IMI58289_V2_protein.domtblout
+14:14:47 prosecda.lib.report INFO:	- Proteome (.fasta): dataset/fusarium_fujikuroi_IMI58289_V2_protein.fasta
+14:14:47 prosecda.lib.report INFO:	- Rules (.yaml): dataset/annotation_rules.yaml
+14:14:47 prosecda.lib.report INFO:	- Output path: prosecda_trial/run_2020-04-25T14.14.45.796738/
+14:14:47 prosecda.lib.report INFO:	- Score cutoff for domain match: 3.0
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	15 protein(s) match the rule NRPS
+14:14:47 prosecda.lib.report INFO:	---------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: Non-Ribosomal Peptide Synthase
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('C', 3.0), ('A', 3.0), ('PP-binding', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023423580.1
+14:14:47 prosecda.lib.report INFO:	> XP_023425441.1
+14:14:47 prosecda.lib.report INFO:	> XP_023426270.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427367.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428681.1
+14:14:47 prosecda.lib.report INFO:	> XP_023429959.1
+14:14:47 prosecda.lib.report INFO:	> XP_023430243.1
+14:14:47 prosecda.lib.report INFO:	> XP_023431540.1
+14:14:47 prosecda.lib.report INFO:	> XP_023433861.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434892.1
+14:14:47 prosecda.lib.report INFO:	> XP_023435338.1
+14:14:47 prosecda.lib.report INFO:	> XP_023435956.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436753.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438002.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438099.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	17 protein(s) match the rule PKS
+14:14:47 prosecda.lib.report INFO:	--------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: Polyketide Synthase
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('KS', 3.0), ('AT', 3.0), ('PP-binding', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023425337.1
+14:14:47 prosecda.lib.report INFO:	> XP_023426843.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427265.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427367.1
+14:14:47 prosecda.lib.report INFO:	> XP_023429959.1
+14:14:47 prosecda.lib.report INFO:	> XP_023430071.1
+14:14:47 prosecda.lib.report INFO:	> XP_023432379.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434455.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434892.1
+14:14:47 prosecda.lib.report INFO:	> XP_023435338.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436006.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436378.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437038.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437239.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438013.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438054.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438100.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	4 protein(s) match the rule PKS-NRPS_d
+14:14:47 prosecda.lib.report INFO:	--------------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: Hybrides PKS-NRPS like
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('A', 3.0), ('PP-binding', 3.0), ('AT', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023427367.1
+14:14:47 prosecda.lib.report INFO:	> XP_023429959.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434892.1
+14:14:47 prosecda.lib.report INFO:	> XP_023435338.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	1 protein(s) match the rule NRPS-like_a
+14:14:47 prosecda.lib.report INFO:	---------------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: Non-Ribosomal Peptide Synthase like
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('C', 3.0), ('A', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: ['PP-binding']
+14:14:47 prosecda.lib.report INFO:	> XP_023431963.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	1 protein(s) match the rule NRPS-like_b
+14:14:47 prosecda.lib.report INFO:	---------------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: Non-Ribosomal Peptide Synthase like
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('C', 3.0), ('PP-binding', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: ['A']
+14:14:47 prosecda.lib.report INFO:	> XP_023435998.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	11 protein(s) match the rule NRPS-like_c
+14:14:47 prosecda.lib.report INFO:	----------------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: Non-Ribosomal Peptide Synthase like
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('A', 3.0), ('PP-binding', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: ['C']
+14:14:47 prosecda.lib.report INFO:	> XP_023425183.1
+14:14:47 prosecda.lib.report INFO:	> XP_023425329.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427274.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428008.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428553.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428645.1
+14:14:47 prosecda.lib.report INFO:	> XP_023429714.1
+14:14:47 prosecda.lib.report INFO:	> XP_023430049.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436908.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437194.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437753.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	2 protein(s) match the rule DMATS
+14:14:47 prosecda.lib.report INFO:	---------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: Dimethylallyl tryptophan synthases
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('Trp_DMAT', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023429775.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436063.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	2 protein(s) match the rule Diterp_synthase
+14:14:47 prosecda.lib.report INFO:	-------------------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: Diterpene synthase
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('diterpene', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023431478.1
+14:14:47 prosecda.lib.report INFO:	> XP_023432246.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	1 protein(s) match the rule Ent_kaurene_synthase
+14:14:47 prosecda.lib.report INFO:	------------------------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: Ent_kaurene synthase
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('ent_kaurene', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023431478.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	5 protein(s) match the rule Fusicocadiene_synthase
+14:14:47 prosecda.lib.report INFO:	--------------------------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: fusicocadiene synthase
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('fusicocadiene', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023430643.1
+14:14:47 prosecda.lib.report INFO:	> XP_023431252.1
+14:14:47 prosecda.lib.report INFO:	> XP_023433727.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434772.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436384.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	1 protein(s) match the rule Oxidosqualene_synthase
+14:14:47 prosecda.lib.report INFO:	--------------------------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: oxidosqualene synthase
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('oxidosqualene', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023429045.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	1 protein(s) match the rule PKS-type3_a
+14:14:47 prosecda.lib.report INFO:	---------------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: Polyketide Syntase type III
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('CHS_like', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023432019.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	3 protein(s) match the rule PaxC_like_synthase
+14:14:47 prosecda.lib.report INFO:	----------------------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: paxC_like synthase
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('paxC_like', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023430643.1
+14:14:47 prosecda.lib.report INFO:	> XP_023431252.1
+14:14:47 prosecda.lib.report INFO:	> XP_023433727.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	3 protein(s) match the rule Phytoene_synthase
+14:14:47 prosecda.lib.report INFO:	---------------------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: phytoene synthase
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('phytoene', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023427187.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428689.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438116.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	8 protein(s) match the rule Sesquiterp_synthase
+14:14:47 prosecda.lib.report INFO:	-----------------------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: Sesquiterpene synthase
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('sesquiterpene', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023424560.1
+14:14:47 prosecda.lib.report INFO:	> XP_023425609.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427124.1
+14:14:47 prosecda.lib.report INFO:	> XP_023429881.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434772.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436384.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437750.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438018.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	2 protein(s) match the rule Squalene_hopene_cyclase
+14:14:47 prosecda.lib.report INFO:	---------------------------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: squalene_hopene synthase
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('squalene_hopene', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023429045.1
+14:14:47 prosecda.lib.report INFO:	> XP_023432401.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	2 protein(s) match the rule Squalene_synthase
+14:14:47 prosecda.lib.report INFO:	---------------------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: squalene synthase
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('squalene', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023427187.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438116.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	75 protein(s) match the rule dom_A
+14:14:47 prosecda.lib.report INFO:	----------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: Adenylation domain
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('A', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023423550.1
+14:14:47 prosecda.lib.report INFO:	> XP_023423580.1
+14:14:47 prosecda.lib.report INFO:	> XP_023423958.1
+14:14:47 prosecda.lib.report INFO:	> XP_023424045.1
+14:14:47 prosecda.lib.report INFO:	> XP_023424681.1
+14:14:47 prosecda.lib.report INFO:	> XP_023425082.1
+14:14:47 prosecda.lib.report INFO:	> XP_023425183.1
+14:14:47 prosecda.lib.report INFO:	> XP_023425329.1
+14:14:47 prosecda.lib.report INFO:	> XP_023425441.1
+14:14:47 prosecda.lib.report INFO:	> XP_023425662.1
+14:14:47 prosecda.lib.report INFO:	> XP_023425693.1
+14:14:47 prosecda.lib.report INFO:	> XP_023426270.1
+14:14:47 prosecda.lib.report INFO:	> XP_023426579.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427274.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427318.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427367.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427389.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427577.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428008.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428260.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428418.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428553.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428645.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428681.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428767.1
+14:14:47 prosecda.lib.report INFO:	> XP_023429182.1
+14:14:47 prosecda.lib.report INFO:	> XP_023429714.1
+14:14:47 prosecda.lib.report INFO:	> XP_023429852.1
+14:14:47 prosecda.lib.report INFO:	> XP_023429959.1
+14:14:47 prosecda.lib.report INFO:	> XP_023430049.1
+14:14:47 prosecda.lib.report INFO:	> XP_023430243.1
+14:14:47 prosecda.lib.report INFO:	> XP_023430388.1
+14:14:47 prosecda.lib.report INFO:	> XP_023430488.1
+14:14:47 prosecda.lib.report INFO:	> XP_023430617.1
+14:14:47 prosecda.lib.report INFO:	> XP_023431532.1
+14:14:47 prosecda.lib.report INFO:	> XP_023431540.1
+14:14:47 prosecda.lib.report INFO:	> XP_023431628.1
+14:14:47 prosecda.lib.report INFO:	> XP_023431692.1
+14:14:47 prosecda.lib.report INFO:	> XP_023431908.1
+14:14:47 prosecda.lib.report INFO:	> XP_023431963.1
+14:14:47 prosecda.lib.report INFO:	> XP_023432102.1
+14:14:47 prosecda.lib.report INFO:	> XP_023432466.1
+14:14:47 prosecda.lib.report INFO:	> XP_023433861.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434612.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434861.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434892.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434924.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434929.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434939.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434994.1
+14:14:47 prosecda.lib.report INFO:	> XP_023435095.1
+14:14:47 prosecda.lib.report INFO:	> XP_023435249.1
+14:14:47 prosecda.lib.report INFO:	> XP_023435338.1
+14:14:47 prosecda.lib.report INFO:	> XP_023435492.1
+14:14:47 prosecda.lib.report INFO:	> XP_023435723.1
+14:14:47 prosecda.lib.report INFO:	> XP_023435956.1
+14:14:47 prosecda.lib.report INFO:	> XP_023435996.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436002.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436354.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436422.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436545.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436753.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436908.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436940.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437194.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437327.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437543.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437588.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437589.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437622.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437753.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437999.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438002.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438064.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438099.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	21 protein(s) match the rule dom_AT
+14:14:47 prosecda.lib.report INFO:	-----------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: Acyltransferase domain
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('AT', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023425337.1
+14:14:47 prosecda.lib.report INFO:	> XP_023426503.1
+14:14:47 prosecda.lib.report INFO:	> XP_023426843.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427230.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427265.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427367.1
+14:14:47 prosecda.lib.report INFO:	> XP_023429959.1
+14:14:47 prosecda.lib.report INFO:	> XP_023430071.1
+14:14:47 prosecda.lib.report INFO:	> XP_023430771.1
+14:14:47 prosecda.lib.report INFO:	> XP_023432379.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434455.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434892.1
+14:14:47 prosecda.lib.report INFO:	> XP_023435338.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436006.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436378.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437038.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437239.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438013.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438054.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438074.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438100.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	26 protein(s) match the rule dom_KS
+14:14:47 prosecda.lib.report INFO:	-----------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: Ketoacyl synthase domain
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('KS', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023425337.1
+14:14:47 prosecda.lib.report INFO:	> XP_023425435.1
+14:14:47 prosecda.lib.report INFO:	> XP_023425886.1
+14:14:47 prosecda.lib.report INFO:	> XP_023426320.1
+14:14:47 prosecda.lib.report INFO:	> XP_023426749.1
+14:14:47 prosecda.lib.report INFO:	> XP_023426843.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427265.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427367.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428306.1
+14:14:47 prosecda.lib.report INFO:	> XP_023429959.1
+14:14:47 prosecda.lib.report INFO:	> XP_023430071.1
+14:14:47 prosecda.lib.report INFO:	> XP_023430151.1
+14:14:47 prosecda.lib.report INFO:	> XP_023432379.1
+14:14:47 prosecda.lib.report INFO:	> XP_023432476.1
+14:14:47 prosecda.lib.report INFO:	> XP_023433644.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434455.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434732.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434892.1
+14:14:47 prosecda.lib.report INFO:	> XP_023435338.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436006.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436378.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437038.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437239.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438013.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438054.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438100.1
+14:14:47 prosecda.lib.report INFO:	
+14:14:47 prosecda.lib.report INFO:	44 protein(s) match the rule dom_PP
+14:14:47 prosecda.lib.report INFO:	-----------------------------------
+14:14:47 prosecda.lib.report INFO:	Comment: PP-binding domain
+14:14:47 prosecda.lib.report INFO:	Mandatories: [(name, score), ...]: [('PP-binding', 3.0)]
+14:14:47 prosecda.lib.report INFO:	Forbidden: [name, ...]: []
+14:14:47 prosecda.lib.report INFO:	> XP_023423580.1
+14:14:47 prosecda.lib.report INFO:	> XP_023425183.1
+14:14:47 prosecda.lib.report INFO:	> XP_023425329.1
+14:14:47 prosecda.lib.report INFO:	> XP_023425337.1
+14:14:47 prosecda.lib.report INFO:	> XP_023425441.1
+14:14:47 prosecda.lib.report INFO:	> XP_023425869.1
+14:14:47 prosecda.lib.report INFO:	> XP_023426270.1
+14:14:47 prosecda.lib.report INFO:	> XP_023426843.1
+14:14:47 prosecda.lib.report INFO:	> XP_023426902.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427265.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427274.1
+14:14:47 prosecda.lib.report INFO:	> XP_023427367.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428008.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428553.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428645.1
+14:14:47 prosecda.lib.report INFO:	> XP_023428681.1
+14:14:47 prosecda.lib.report INFO:	> XP_023429714.1
+14:14:47 prosecda.lib.report INFO:	> XP_023429959.1
+14:14:47 prosecda.lib.report INFO:	> XP_023430049.1
+14:14:47 prosecda.lib.report INFO:	> XP_023430071.1
+14:14:47 prosecda.lib.report INFO:	> XP_023430243.1
+14:14:47 prosecda.lib.report INFO:	> XP_023431540.1
+14:14:47 prosecda.lib.report INFO:	> XP_023432379.1
+14:14:47 prosecda.lib.report INFO:	> XP_023433861.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434455.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434581.1
+14:14:47 prosecda.lib.report INFO:	> XP_023434892.1
+14:14:47 prosecda.lib.report INFO:	> XP_023435338.1
+14:14:47 prosecda.lib.report INFO:	> XP_023435956.1
+14:14:47 prosecda.lib.report INFO:	> XP_023435998.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436006.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436378.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436753.1
+14:14:47 prosecda.lib.report INFO:	> XP_023436908.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437038.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437194.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437239.1
+14:14:47 prosecda.lib.report INFO:	> XP_023437753.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438002.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438013.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438054.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438074.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438099.1
+14:14:47 prosecda.lib.report INFO:	> XP_023438100.1
+14:14:47 prosecda.lib.report INFO:	

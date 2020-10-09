@@ -1,0 +1,64 @@
+<annotation>
+  <inputs>
+    <domtblout>dataset/fusarium_fujikuroi_IMI58289_V2_protein.domtblout</domtblout>
+    <proteome>dataset/fusarium_fujikuroi_IMI58289_V2_protein.fasta</proteome>
+    <yamlrules>dataset/annotation_rules.yaml</yamlrules>
+  </inputs>
+  <family>
+    <name>PKS-type3_a</name>
+    <comment>Polyketide Syntase type III</comment>
+    <rule>
+      <mandatories>
+        <name>CHS_like</name>
+        <score>3.0</score>
+      </mandatories>
+      <forbidden/>
+    </rule>
+  </family>
+  <proteins>
+    <match_nb>1</match_nb>
+    <protein id="XP_023432019.1">
+      <sequence>MSAPGTFGELGLSIIGIGAEYPPYSLDYTCLNTLSDKFYPDTLSMQKVLGINRYTGIDTRSSIGTPDHPAVNKKDAPSIAELHSLFLSDGVPLAIRAARKAIDEAKIDTRFITHIVATTCTDSANPGFDHFVAKGLGISHGVEKVLLHGVGCSGGLATLRTGANLALGHKARGLPARVLCVALEVSTTMVRSELDSINELQQTRIGACLFSDCGSAAVLSNGIGEPSEPVYDLLGWDHRTIPDTEDDLGFDVDPVGWKVVLTPRVPKLTAASIGPAFNDLKASLPQLPPDYQKAADFDWAMHPGGATILSGAERAMDITPEHQRASYDTYINHGNSSSATIFSVMDRLRSRDMDAMAPDGRVRDYVVGCAFGPGITVEMCMLKRNTSYGAGLPGLQTPPETPAETETEPSEIGDGDGEWGRESSGDPAESPDQYALFVAESLEHLDLD</sequence>
+      <length>448</length>
+      <architectures>
+        <number>2</number>
+        <architecture id="1">
+          <is_matching_rule>True</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="CHS_like">
+              <sequence>GLSIIGIGAEYPPYSLDYTCLNTLSDKFYPDTLSMQKVLGINRYTGIDTRSSIGTPDHPAVNKKDAPSIAELHSLFLSDGVPLAIRAARKAIDEAKIDTRFITHIVATTCTDSANPGFDHFVAKGLGISHGVEKVLLHGVGCSGGLATLRTGANLALGHKARGLPARVLCVALEVSTTMVRSELDSINELQQTRIGACLFSDCGSAAVLSNGIGEPSEPVYDLLGWDHRTIPDTEDDLGFDVDPVGWKVVLTPRVPKLTAASIGPAFNDLKASLPQLPPDYQKAADFDWAMHPGGATILSGAERAMDITPEHQRASYDTYINHGNSSSATIFSVMDRLRSRDMDAMAPDGRVRDYVVGCAFGPGITVEMCM</sequence>
+              <length>371</length>
+              <from>11</from>
+              <to>381</to>
+              <score>575.6</score>
+              <i-eval>5.8e-176</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+        <architecture id="2">
+          <is_matching_rule>False</is_matching_rule>
+          <domains>
+            <number>2</number>
+            <domain name="Chal_synt_N">
+              <sequence>PDHPAVNKKDAPSIAELHSLFLSDGVPLAIRAARKAIDEAKIDTRFITHIVATTCTDSANPGFDHFVAKGLGISHGVEKVLLHGVGCSGGLATLRTGANLALGHKARGLPARVLCVALEVSTTMVRSELDSINELQQTRIGACLFSDCGSAAVL</sequence>
+              <length>154</length>
+              <from>66</from>
+              <to>219</to>
+              <score>225.4</score>
+              <i-eval>4e-70</i-eval>
+            </domain>
+            <domain name="Chal_synt_C">
+              <sequence>RTIPDTEDDLGFDVDPVGWKVVLTPRVPKLTAASIGPAFNDLKASLPQLPPDYQKAADFDWAMHPGGATILSGAERAMDITPEHQRASYDTYINHGNSSSATIFSVMDRLRSRDMDAMAPDGRVRDYVVGCAFGPGITVEMCML</sequence>
+              <length>144</length>
+              <from>239</from>
+              <to>382</to>
+              <score>221.7</score>
+              <i-eval>3.9e-69</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+      </architectures>
+    </protein>
+  </proteins>
+</annotation>

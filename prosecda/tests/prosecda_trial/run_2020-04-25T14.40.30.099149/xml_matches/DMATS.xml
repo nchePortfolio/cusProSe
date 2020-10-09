@@ -1,0 +1,65 @@
+<annotation>
+  <inputs>
+    <domtblout>dataset/fusarium_fujikuroi_IMI58289_V2_protein.domtblout</domtblout>
+    <proteome>dataset/fusarium_fujikuroi_IMI58289_V2_protein.fasta</proteome>
+    <yamlrules>dataset/annotation_rules.yaml</yamlrules>
+  </inputs>
+  <family>
+    <name>DMATS</name>
+    <comment>Dimethylallyl tryptophan synthases</comment>
+    <rule>
+      <mandatories>
+        <mandatory id="1">
+          <name>Trp_DMAT</name>
+          <score>3.0</score>
+        </mandatory>
+      </mandatories>
+      <forbidden/>
+    </rule>
+  </family>
+  <proteins>
+    <match_nb>2</match_nb>
+    <protein id="XP_023429775.1">
+      <sequence>MPGKVNLSKLDSGTFYSFHNNKSKTGPEVDIHHQYWNQTVGSTLKRFLASAGYDSESQYRILDQFSNLVAPSLGSSPVRGEPKWKSFMTDNNCPVELSWDFHTGSSQPTIRYSIEPIGLEAGTAADLHNEEAAAKFVRRATQVFPDIDTAIFSHFYQYFNGQWNADRPEGHQSTMFWAFDLKESITTNKAYFFPGLVAHAMGKSTLEVVADSITSAPGCRPENISSFASFAKFIHERQHLGLEMDMLALDLVPVENSRLKIYFRDRRTDFRSVTEIMSLGGRIHGEEFEVGMRNLRKLWGALLGMTGVPEDIPLPHKNHRTAGILYNVEFRRNSRTPKVKIYIPVRHYAESDSQILEALGCFLEGQISKLPDVVINSVWTKRYSECLYSIFGEERLLNGLGVHTYVGCSMQSEGDLRVVAYVNPQQ</sequence>
+      <length>426</length>
+      <architectures>
+        <number>1</number>
+        <architecture id="1">
+          <is_matching_rule>True</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="Trp_DMAT">
+              <sequence>YWNQTVGSTLKRFLASAGYDSESQYRILDQFSNLVAPSLGSSPVRGEPKWKSFMTDNNCPVELSWDFHTGSSQPTIRYSIEPIGLEAGTAADLHNEEAAAKFVRRATQVFPDIDTAIFSHFYQYFNGQWNADRPEGHQSTMFWAFDLKESITTNKAYFFPGLVAHAMGKSTLEVVADSITSAPGCRPENISSFASFAKFIHERQHLGLEMDMLALDLVPVENSRLKIYFRDRRTDFRSVTEIMSLGGRIHGEEFEVGMRNLRKLWGALLGMTGVPEDIPLPHKNHRTAGILYNVEFRRNSRTPKVKIYIPVRHYAESDSQILEALGCFLEGQISKL</sequence>
+              <length>336</length>
+              <from>35</from>
+              <to>370</to>
+              <score>257.7</score>
+              <i-eval>2.1e-79</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+      </architectures>
+    </protein>
+    <protein id="XP_023436063.1">
+      <sequence>MLLQASQATQSVWKTLNKWLPPLSRDKDWWWKTLGPQINTLLTEADYDLNERYEALLLLYRWVVPEMGPRPRSSVAPSKSFMTDDHSPIEYSWKWISGNKKPEIRYAVELVSPLAGSKQDPFNQIPTRNLVYNLAKIIPELDLTWFEHFWHELLGPGSPTTSTSGVLTKGSTVFAALEMLHGHLSVKVYFIPVETPDFSAWHQIKHAIEASGCPNLEALNHVDAYLSSHDDGRQLRPFMLAIDLVEPAASRLKIYARSNQTSFRFVRDVMTIGGLRTDLDRSIEKFSDLWKRALGLDPDTPPEDELPKVDHLTSGAVFNFDVAPKSQIPEVKAYIPVRHYANNDLQAALGLIGYLEDHGHGGYSQSYLRGLDMLAPSGQLDQATGVQTYFAVACQGEDLSLTSYLNPQFYAAFQEPERT</sequence>
+      <length>419</length>
+      <architectures>
+        <number>1</number>
+        <architecture id="1">
+          <is_matching_rule>True</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="Trp_DMAT">
+              <sequence>WWWKTLGPQINTLLTEADYDLNERYEALLLLYRWVVPEMGPRPRSSVAPSKSFMTDDHSPIEYSWKWISGNKKPEIRYAVELVSPLAGSKQDPFNQIPTRNLVYNLAKIIPELDLTWFEHFWHELLGPGSPTTSTSGVLTKGSTVFAALEMLHGHLSVKVYFIPVETPDFSAWHQIKHAIEASGCPNLEALNHVDAYLSSHDDGRQLRPFMLAIDLVEPAASRLKIYARSNQTSFRFVRDVMTIGGLRTDLDRSIEKFSDLWKRALGLDPDTPPEDELPKVDHLTSGAVFNFDVAPKSQIPEVKAYIPVRHYANNDLQAALGLIGYLEDHGHGGYSQSY</sequence>
+              <length>339</length>
+              <from>29</from>
+              <to>367</to>
+              <score>263.6</score>
+              <i-eval>3.4e-81</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+      </architectures>
+    </protein>
+  </proteins>
+</annotation>

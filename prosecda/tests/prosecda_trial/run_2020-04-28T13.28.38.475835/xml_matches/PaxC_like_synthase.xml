@@ -1,0 +1,126 @@
+<annotation>
+  <inputs>
+    <domtblout>dataset/fusarium_fujikuroi_IMI58289_V2_protein.domtblout</domtblout>
+    <proteome>dataset/fusarium_fujikuroi_IMI58289_V2_protein.fasta</proteome>
+    <yamlrules>dataset/annotation_rules.yaml</yamlrules>
+  </inputs>
+  <family>
+    <name>PaxC_like_synthase</name>
+    <comment>paxC_like synthase</comment>
+    <rule>
+      <mandatories>
+        <name>paxC_like</name>
+        <score>3.0</score>
+      </mandatories>
+      <forbidden/>
+    </rule>
+  </family>
+  <proteins>
+    <match_nb>3</match_nb>
+    <protein id="XP_023430643.1">
+      <sequence>MIPTADPILSFNPEALPPSALHMLSLSPKAMEKMSGISNPLVSPNAIPPRTSSTGIPTSLNATPTKPVLRPVPEGDWLSQKQLSPRAQMSNAGYGVMQAPNPPPDPERYAHEDLEFTAKRSWTDEKENVVRGPYDYVISHPGKDFRAQLIGAFNVWLDVPTSSLEVITRVVGMLHESSLLIDDVQDSSELRRGFPVAHNIFGVAQTINSANYIYFVALQELHKLNNPELITIFSDELVNLHRGQGMDLFWRDTLTCPTEEDYLEMVGNKTGGLFRLGIKLMAAEANGPSPTDCVPLVNLIGLIFQIRDDYMNLSSKEYSHNKGMCEDLTEGKFSFPVIHSIRTNPTNLQLINILKQKTSDTQIKRYAVAYMESTGSFEYTRKVLSVLIERARKMAEELDQGRGSTKGIQKILDKMAIQ</sequence>
+      <length>418</length>
+      <architectures>
+        <number>2</number>
+        <architecture id="1">
+          <is_matching_rule>False</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="fusicocadiene">
+              <sequence>PERYAHEDLEFTAKRSWTDEKENVVRGPYDYVISHPGKDFRAQLIGAFNVWLDVPTSSLEVITRVVGMLHESSLLIDDVQDSSELRRGFPVAHNIFGVAQTINSANYIYFVALQELHKLNNPELITIFSDELVNLHRGQGMDLFWRDTLTCPTEEDYLEMVGNKTGGLFRLGIKLMAAEANGPSPTDCVPLVNLIGLIFQIRDDYMNLSSKEYSHNKGMCEDLTEGKFSFPVIHSIRTNPTNLQLINILKQKTSDTQIKRYAVAYMESTGSFEYTRKVLSVLIERARKMAEELDQGRGSTKGIQKILDKMAI</sequence>
+              <length>312</length>
+              <from>106</from>
+              <to>417</to>
+              <score>224.0</score>
+              <i-eval>3.6e-69</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+        <architecture id="2">
+          <is_matching_rule>True</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="paxC_like">
+              <sequence>LEFTAKRSWTDEKENVVRGPYDYVISHPGKDFRAQLIGAFNVWLDVPTSSLEVITRVVGMLHESSLLIDDVQDSSELRRGFPVAHNIFGVAQTINSANYIYFVALQELHKLNNPELITIFSDELVNLHRGQGMDLFWRDTLTCPTEEDYLEMVGNKTGGLFRLGIKLMAAEANGPSPTDCVPLVNLIGLIFQIRDDYMNLSSKEYSHNKGMCEDLTEGKFSFPVIHSIRTNPTNLQLINILKQKTSDTQIKRYAVAYMESTGSFEYTRKVL</sequence>
+              <length>271</length>
+              <from>114</from>
+              <to>384</to>
+              <score>98.6</score>
+              <i-eval>3.6e-31</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+      </architectures>
+    </protein>
+    <protein id="XP_023431252.1">
+      <sequence>MAEQQISNLLSMFDASHASQKLEITVQMMDTYHYRETPPDSSSSEGGSLSRYDERRVSLPLSHNAASPDIVSQLCFSTAMSSELNHRWKSQRLKVADSPYNYILTLPSKGIRGAFIDSLNVWLEVPEDETSVIKEVIGMLHNSSLIIDDFQDNSPLRRGKPSTHTVFGPAQAINTATYVIVKAIEKIQDIVGHDALADVTGTITTIFQGQAMDLWWTANAIVPSIQEYLLMVNDKTGALFRLSLELLALNSEASISDSALESLSSAVSLLGQYFQIRDDYMNLIDNKYTDQKGFCEDLDEGKYSLTLIHALQTDSSDLLTNILSMRRVQGKLTAQQKMLVLEVMKTNGSLDWTSKLLGMLHTRVVAEIESLEVSTKRDNHALRALVERLKLET</sequence>
+      <length>393</length>
+      <architectures>
+        <number>2</number>
+        <architecture id="1">
+          <is_matching_rule>True</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="paxC_like">
+              <sequence>DIVSQLCFSTAMSSELNHRWKSQRLKVADSPYNYILTLPSKGIRGAFIDSLNVWLEVPEDETSVIKEVIGMLHNSSLIIDDFQDNSPLRRGKPSTHTVFGPAQAINTATYVIVKAIEKIQDIVGHDALADVTGTITTIFQGQAMDLWWTANAIVPSIQEYLLMVNDKTGALFRLSLELLALNSEASISDSALESLSSAVSLLGQYFQIRDDYMNLIDNKYTDQKGFCEDLDEGKYSLTLIHALQTDSSDLLTNILSMRRVQGKLTAQQKMLVLEV</sequence>
+              <length>275</length>
+              <from>69</from>
+              <to>343</to>
+              <score>88.9</score>
+              <i-eval>3.4e-28</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+        <architecture id="2">
+          <is_matching_rule>False</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="fusicocadiene">
+              <sequence>VQMMDTYHYRETPPDSSSSEGGSLSRYDERRVSLPLSHNAASPDIVSQLCFSTAMSSELNHRWKSQRLKVADSPYNYILTLPSKGIRGAFIDSLNVWLEVPEDETSVIKEVIGMLHNSSLIIDDFQDNSPLRRGKPSTHTVFGPAQAINTATYVIVKAIEKIQDIVGHDALADVTGTITTIFQGQAMDLWWTANAIVPSIQEYLLMVNDKTGALFRLSLELLALNSEASISDSALESLSSAVSLLGQYFQIRDDYMNLIDNKYTDQKGFCEDLDEGKYSLTLIHALQTDSSDLLTNILSMRRVQGKLTAQQKMLVLEVMKTNGSLDWTSKLLGMLHTRVVAEIESLEVSTKRDNHALRALVERLKLET</sequence>
+              <length>368</length>
+              <from>26</from>
+              <to>393</to>
+              <score>331.3</score>
+              <i-eval>1.3e-101</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+      </architectures>
+    </protein>
+    <protein id="XP_023433727.1">
+      <sequence>MNRQAMWTRTSTAAPACALCRQLTVSRSPSRIHSASLHISPRRDSAWGAAVQVASNVVSNVVKKASKDAMHVDPLRTVAKEMKFLTGNIRKLLGSGHPSLDRAAKYYTQAEGKHVRPLIVLLMSRATYLCPKTPPTAPIVTHRGVDTAISPAQILADVNPSAQPLSSLEQEVPDANSDILPSQRRLAEITELIHTASLLHDDVIDHSISRRGSPSANLEFGNKMAVLAGDFLLGRASVALARLRNPEVVELLATVIANLVEGEFMQLKNTERDERNPKWSEETVTYYLQKTYLKTASLISKSCRAAALLGNTDAVTVDAAYSYGRNLGLAFQLVDDLLDYTQSGSDLGKPAGADLELGLATAPLLFAWKQMPELGALVGRKFAQEGDVQRARELVLQSDGIEQTRALAQEYVDKAIASIAEFPESEAKDGLIEMAHKSLKRQK</sequence>
+      <length>443</length>
+      <architectures>
+        <number>2</number>
+        <architecture id="1">
+          <is_matching_rule>False</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="fusicocadiene">
+              <sequence>VPDANSDILPSQRRLAEITELIHTASLLHDDVIDHSISRRGSPSANLEFGNKMAVLAGDFLLGRASVALARLRNPEVVELLATVIANLVEGEFMQLKNTERDERNPKWSEETVTYYLQKTYLKTASLISKSCRAAALLGNTDAVTVDAAYSYGRNLGLAFQLVDDLLDYTQSGSDLGKPAGADLELGLATAPLLFAWKQMPELGALVGRKFAQEGDVQRARELVLQSDGIEQTRALAQEYVDKAIASIAEFP</sequence>
+              <length>252</length>
+              <from>172</from>
+              <to>423</to>
+              <score>34.6</score>
+              <i-eval>6.9e-12</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+        <architecture id="2">
+          <is_matching_rule>True</is_matching_rule>
+          <domains>
+            <number>1</number>
+            <domain name="paxC_like">
+              <sequence>PKTPPTAPIVTHRGVDTAISPAQILADVNPSAQPLSSLEQEVPDANSDILPSQRRLAEITELIHTASLLHDDVIDHSISRRGSPSANLEFGNKMAVLAGDFLLGRASVALARLRNPEVVELLATVIANLVEGEFMQLKNTERDERNPKWSEETVTYYLQKTYLKTASLISKSCRAAALLGNTDAVTVDAAYSYGRNLGLAFQLVDDLLDYTQSGSDLGKPAGADLELGLATAPLLFAWKQMPELGALVGRKFAQEGDVQRARELVLQSDGIEQTRALAQ</sequence>
+              <length>279</length>
+              <from>131</from>
+              <to>409</to>
+              <score>19.7</score>
+              <i-eval>3.7e-07</i-eval>
+            </domain>
+          </domains>
+        </architecture>
+      </architectures>
+    </protein>
+  </proteins>
+</annotation>
