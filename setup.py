@@ -10,7 +10,8 @@ st.setup(name='CustomProteinSearch',
         'lxml>=4.5.2',
         'matplotlib>=3.3.2',
          'PyYAML>=5.3.1',
-         'networkx>=2.5'],
+         'networkx>=2.5',
+         'numpy>=1.19.2'],
          entry_points={
              'console_scripts': [
                  'run_prosecda=prosecda.main:main',

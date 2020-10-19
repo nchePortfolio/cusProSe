@@ -4,35 +4,42 @@ Created on Wed Apr  1 17:25:46 2020
 
 @author: nicolas
 """
+import os
 import sys
 
-#sys.path.append('/home/nicolas/spyder_workspace/ProSeCDA/prosecda')
-#import os
-
-from prosecda.lib import logger as logging
-from prosecda.lib import config
-from prosecda.lib import header
-from prosecda.lib import hmmer
-from prosecda.lib import match
-from prosecda.lib import report
+import lib.logHandler as logHandler
+import lib.external as external
+import prosecda.lib.parameters as parameters
+import prosecda.lib.path as path
+import prosecda.lib.hmmer as hmmer
+import prosecda.lib.match as match
+import prosecda.lib.report as report
 
 
-def main(args=None):
-    if not args:        
-        param = config.Parameters(config.get_arguments())
-    else:
-        param = config.Parameters(args)
-        print('\n'.join(param.summary()))
+def main():
+    param = parameters.Param(parameters.get_arguments())
+    logger = logHandler.Logger(name='prosecda', outpath=param.outdirname)
+    param.description()
+    for rule in param.rules:
+        print(rule.summary())
+    sys.exit()
 
-    logger = logging.get_logger(name='prosecda', param=param)
-    
-    # Resumes parameters
-    for line in header.get_logo():
-        logger.info(line)
-    
-    for line in param.summary():
-        logger.info(line)
-    
+    # Runs hmmsearch and gets hits from its output (.domtblout format)
+    logger.title('Running hmmsearch...')
+    hmmsearch = external.HmmSearch(input_hmm=param.hmmdb, input_db=param.proteome_filename,
+                                   parameters=param, outdir=param.outdirname,
+                                   basename=os.path.basename(param.proteome_filename))
+    hmmsearch.run()
+    proteins = hmmsearch.get_proteins()
+
+    for protein in proteins:
+        protein_path = path.Path(domains=protein.domains)
+        protein_path.search()
+        protein.architectures = protein_path.architectures
+
+
+    sys.exit(0)
+
     # Gets a list of Hmm_query instances from an hmmscan domtblout file
     hmm_queries = hmmer.parse_domtblout(param=param)
     
@@ -48,20 +55,7 @@ def main(args=None):
     if param.pdf:
         for _match in matches:
             report.draw_match(match=_match, param=param)
-            
-def test():
-    args = config.Test_args()
-    sys.exit(main(args=args))
-            
+
+
 if __name__ == '__main__':
     sys.exit(main())
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

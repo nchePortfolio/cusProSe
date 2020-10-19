@@ -97,5 +97,4 @@ class Family_rules:
         log.append('Forbidden: [name, ...]: {}'.format(self.forbidden))
         log.append('')
         
-        return log
-        
+        return '\n'.join(log)

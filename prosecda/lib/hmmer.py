@@ -57,7 +57,7 @@ class Hmm_target(object):
         if self.sequence is None:
             self.sequence = query_sequence[self.env_from-1:self.env_to]
 
-class Architecture():
+class Architecture:
     """
     Wrapper describing an architecture of a protein. An architecture is defined
     as a set of non-overlapping domains.
