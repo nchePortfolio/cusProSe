@@ -368,7 +368,7 @@ class Protein:
             self.domains = domains
         self.architectures = []
         self.best_architecture = None
-        self.length = None
+        self.length = domains[0].tlen
 
         self.logger = logHandler.Logger(name=__name__)
 
@@ -407,6 +407,14 @@ class Protein:
     def list_domains(self):
         return [x.qname for x in self.domains]
 
+    def set_best_architecture(self):
+        if not self.best_architecture:
+            arch_with_best_logscore = sorted([(x, x.get_logscore()) for x in self.architectures], key=lambda x: x[1])[-1][0]
+            self.best_architecture = arch_with_best_logscore
+
+    def get_sequence(self, fasta_dict):
+        return fasta_dict[self.name]
+
 
 class Architecture:
     def __init__(self, _id: str, domains: list):
@@ -415,7 +423,7 @@ class Architecture:
         self.domain_nb = len(domains)
         self.logscore = self.get_logscore()
 
-    def list_names(self) -> list:
+    def domain_names(self) -> list:
         """
 
         @return: list of domain names

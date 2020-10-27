@@ -152,7 +152,7 @@ class Path:
         source = self.domains[0]  # 'virtual_start' domain
         target = self.domains[-1]  # 'virtual_end' domain
 
-        paths = [path for path in nx.all_simple_paths(graph, source=source, target=target)]
+        paths = (path for path in nx.all_simple_paths(graph, source=source, target=target))
         paths = sorted([x for x in paths], key=lambda x: len(x))
 
         # removal of virtual_domains
@@ -173,7 +173,7 @@ class Path:
         [self.domains.remove(x) for x in self.domains if x.qname in ['virtual_start', 'virtual_end']]
 
     def get_longest_paths(self, paths):
-        return [x for x in paths if x not in self.get_subpaths(paths=paths)]
+        return (x for x in paths if x not in self.get_subpaths(paths=paths))
 
     @staticmethod
     def get_subpaths(paths):

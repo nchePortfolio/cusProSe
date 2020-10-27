@@ -4,7 +4,7 @@ PKS:
   mandatory:
    - KS
    - AT
-   - PP-binding
+   - PP
   forbidden:
 
 
@@ -15,7 +15,7 @@ PKS-like:
    - KS
    - AT
   forbidden:
-   - PP-binding
+   - PP
 
 PKS-type3_a:
  COMMENT: Polyketide Syntase type III
@@ -41,10 +41,10 @@ dom_A:
   forbidden:
 
 dom_PP:
- COMMENT: PP-binding domain
+ COMMENT: PP domain
  CONDITION:
   mandatory:
-   - PP-binding
+   - PP
   forbidden:
 
 dom_KS:
@@ -60,6 +60,8 @@ dom_AT:
   mandatory:
    - AT
   forbidden:
+   - KS
+   - PP
 
 NRPS:
  COMMENT: Non-Ribosomal Peptide Synthase
@@ -67,7 +69,7 @@ NRPS:
   mandatory:
    - C
    - A
-   - PP-binding
+   - PP
   forbidden:
 
 NRPS-like_a:
@@ -77,14 +79,14 @@ NRPS-like_a:
    - C
    - A
   forbidden:
-   - PP-binding
+   - PP
 
 NRPS-like_b:
  COMMENT: Non-Ribosomal Peptide Synthase like
  CONDITION:
   mandatory:
    - C
-   - PP-binding
+   - PP
   forbidden:
    - A
 
@@ -93,7 +95,7 @@ NRPS-like_c:
  CONDITION:
   mandatory:
    - A
-   - PP-binding
+   - PP
   forbidden:
    - C
 
@@ -103,7 +105,7 @@ PKS-NRPS_a:
   mandatory:
    - KS
    - C
-   - PP-binding
+   - PP
   forbidden:
    - AT
 
@@ -113,7 +115,7 @@ PKS-NRPS_b:
   mandatory:
    - KS
    - C,200
-   - PP-binding,200
+   - PP,200
    - AT
   forbidden:
 
@@ -125,7 +127,7 @@ PKS-NRPS-like_a:
    - C
    - AT
   forbidden:
-   - PP-binding
+   - PP
 
 PKS-NRPS-like_b:
  COMMENT: Hybrides PKS-NRPS like
@@ -134,7 +136,7 @@ PKS-NRPS-like_b:
    - KS
    - A
   forbidden:
-   - PP-binding
+   - PP
    - AT
 
 PKS-NRPS_c:
@@ -142,7 +144,7 @@ PKS-NRPS_c:
  CONDITION:
   mandatory:
    - C
-   - PP-binding
+   - PP
    - AT
   forbidden:
    - KS
@@ -152,7 +154,7 @@ PKS-NRPS_d:
  CONDITION:
   mandatory:
    - A
-   - PP-binding
+   - PP
    - AT
   forbidden:
 
@@ -163,7 +165,7 @@ PKS-NRPS_e:
    - C
    - KS
   forbidden:
-   - PP-binding
+   - PP
 
 DMATS:
  COMMENT: Dimethylallyl tryptophan synthases

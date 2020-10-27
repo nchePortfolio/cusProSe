@@ -1,284 +1,307 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Apr  1 17:42:07 2020
-
-@author: nicolas
-    
-"""
+import os
 
 from lxml import etree
-from prosecda.lib import logger as logging
 
-class Match():
-    """
-    Wrapper containing informations about hmm hits that match rules defining 
-    a given family. 
-    
-    Constructor:
-        - family_rules: instance of Family_rules
-        - hmm_queries: list of Hmm_query instances
-        - matching_arch_bool: list of boolean (one for each hmm_queries element)
-    """
-    def __init__(self, family_rules, param):
-        self.family_rules = family_rules
+import logging
+import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+import matplotlib.patches as patches
+from matplotlib.backends.backend_pdf import PdfPages
+
+import prosecda.lib.rules as Rules
+import lib.logHandler as logHandler
+
+
+logging.getLogger('matplotlib.font_manager').disabled = True
+logging.getLogger('matplotlib.backends.backend_pdf').disabled = True
+
+
+class Matches:
+    def __init__(self, param):
         self.param = param
-        self.hmm_queries = []
-        self.matching_arch_bool = []
-        self.logger = logging.get_logger(__name__)
-        
-    def query_names(self):
+        self.list = []
+        self.outdir = param.outdirname + 'matches/'
+
+        self.logger = logHandler.Logger(name=__name__)
+
+    def add(self, match: None):
         """
-        Returns a list of all hmm_queries domain names
+
+        @param match: a Match instance
+        @return: None
         """
-        if not self.hmm_queries:
-            return None
+        self.list.append(match)
+
+    def search(self, rules: list, proteins: list):
+        """
+        Searches proteins matching defined rules.
+
+        @param rules: list of Rules.Rule instances
+        @param proteins: list of external.Protein instances
+        @return: None
+        """
+        self.logger.info('Searching for proteins matching rules...')
+
+        match = None
+        for rule in rules:
+            for protein in proteins:
+                if is_match(rule, protein):
+                    if not self.is_match_in_list(name=rule.name):
+                        match = Match(rule=rule)
+                        self.add(match=match)
+
+                    match.add(protein=protein)
+
+    def is_match_in_list(self, name: str):
+        return name in self.get_rulenames()
+
+    def get_rulenames(self):
+        if self.list:
+            return sorted([x.rule.name for x in self.list])
         else:
-            return [ x.name for x in self.hmm_queries ]
-    
-    def get_xml(self):
+            return []
+
+    def report(self, fasta_dict: dict):
+        if self.list:
+            os.makedirs(self.outdir, exist_ok=True)
+            for match in self.list:
+                match.report(fasta_dict=fasta_dict, outdir=self.outdir)
+
+
+class Match:
+    palette = ['dodgerblue', 'orange', 'darkseagreen',
+               'red', 'lightsalmon', 'steelblue',
+               'cyan', 'teal', 'darkkhaki',
+               'firebrick', 'greenyellow', 'mediumvioletred',
+               'midnightblue', 'tan', 'rosybrown']
+
+    def __init__(self, rule: Rules.Rule):
+        self.rule = rule
+        self.proteins = []
+
+        self.domain_colors = None
+
+        self.logger = logHandler.Logger(name=__name__)
+
+    def add(self, protein=None):
+        if protein not in self.proteins:
+            self.proteins.append(protein)
+
+    def set_colors(self):
+        domains_set = self.list_domains()
+        if len(domains_set) <= len(self.palette):
+            self.domain_colors = {x: self.palette[i] for i, x in enumerate(self.list_domains())}
+
+    def list_domains(self):
+        all_lists = [x.best_architecture.domain_names() for x in self.proteins]
+
+        return sorted(set([item for sublist in all_lists for item in sublist]))
+
+    def report(self, fasta_dict: dict, outdir: str):
+        self.set_colors()
+
+        outpath = outdir + self.rule.name + '/'
+        os.makedirs(outpath, exist_ok=True)
+
+        pdf_pages = PdfPages(filename=outpath[:-1] + '.pdf')
+        self.logger.info('Creating plots for proteins matching {}:'.format(self.rule.name))
+
+        for protein in self.proteins:
+            self.logger.info(' - {}'.format(protein.name))
+            with open(outpath + protein.name + '.fa', 'w') as o_fasta:
+                header = '>' + protein.name + '\n'
+                sequence_ori = fasta_dict[protein.name]
+                sequence = '\n'.join([sequence_ori[x:x + 80] for x in range(0, len(sequence_ori), 80)])
+                o_fasta.write(header + sequence + '\n')
+
+            with open(outpath + protein.name + '.xml', 'w') as o_xml:
+                o_xml.write(self.get_xml(protein=protein))
+
+            visual_protein = PlotProt(protein=protein, colors=self.domain_colors)
+            visual_protein.draw()
+            visual_protein.save(pdf_pages=pdf_pages)
+            visual_protein.close_figs()
+
+        pdf_pages.close()
+
+    def get_xml(self, protein):
+
+        protein_element = etree.Element('protein')
+
+        protein_id = etree.SubElement(protein_element, 'id')
+        protein_id.text = protein.name
+
+        sequence_length = etree.SubElement(protein_element, 'sequence_length')
+        sequence_length.text = str(protein.length)
+
+        class_name = etree.SubElement(protein_element, 'class_name')
+        class_name.text = self.rule.name
+
+        domain_architecture = etree.SubElement(protein_element, 'domain_architecture')
+        for domain in protein.best_architecture.domains:
+            _domain = etree.SubElement(domain_architecture, "domain")
+            _domain.set('name', domain.qname)
+
+            _domain_cval = etree.SubElement(_domain, "cval")
+            _domain_cval.text = str(domain.dom_cval)
+            _domain_ival = etree.SubElement(_domain, "ival")
+            _domain_ival.text = str(domain.dom_ival)
+            _domain_score = etree.SubElement(_domain, "score")
+            _domain_score.text = str(domain.dom_score)
+
+            _domain_start = etree.SubElement(_domain, "start")
+            _domain_start.text = str(domain.env_from)
+            _domain_end = etree.SubElement(_domain, "end")
+            _domain_end.text = str(domain.env_to)
+            _domain_length = etree.SubElement(_domain, "domain_length")
+            _domain_length.text = str(domain.env_to - domain.env_from + 1)
+
+        return etree.tostring(protein_element, pretty_print=True, encoding="utf-8").decode()
+
+
+class PlotProt:
+    def __init__(self, protein, colors=None):
+        self.protein = protein
+        self.domains = protein.best_architecture.domains
+        self.domains_nb = len(self.domains)
+
+        self.colors = colors
+        self.delta = self.protein.length * 0.01
+
+        self.n_max_rows = 20 + 1
+        self.gs = gridspec.GridSpec(nrows=self.n_max_rows, ncols=5)
+
+        self.plots = self.create_fig()
+
+    def create_fig(self):
+        n_figs = self.domains_nb // (self.n_max_rows - 1) + (self.domains_nb % (self.n_max_rows - 1) > 0)
+        plots = {}
+        for i in range(n_figs):
+            figure = plt.figure(figsize=(8, 10))
+            axs_draw = [figure.add_subplot(self.gs[x, :-2]) for x in range(self.n_max_rows)]
+            [x.set_axis_off() for x in axs_draw]
+
+            axs_text = [figure.add_subplot(self.gs[x, -2:]) for x in range(self.n_max_rows)]
+            [x.set_axis_off() for x in axs_text]
+            start = i * (self.n_max_rows - 1)
+            end = start + self.n_max_rows - 1
+
+            plots[i] = {'fig': figure,
+                        'axs_draw': axs_draw,
+                        'axs_text': axs_text,
+                        'domains_idx': (start, end),
+                        }
+
+        return plots
+
+    def draw(self):
+        for i in self.plots:
+            self.draw_protein(ax=self.plots[i]['axs_draw'][0])
+
+            start = self.plots[i]['domains_idx'][0]
+            end = self.plots[i]['domains_idx'][1]
+            for j, domain in enumerate(self.domains[start:end], start=1):
+                self.draw_sequence(ax=self.plots[i]['axs_draw'][j])
+                self.draw_domain(domain=domain, ax=self.plots[i]['axs_draw'][j])
+
+                pos_from = domain.env_from - self.delta  # - len(str(domain.env_from))
+                pos_to = domain.env_to + self.delta  # + len(str(domain.env_to))
+                self.plots[i]['axs_draw'][j].text(pos_from, 7, str(domain.env_from), fontsize=7, ha='right')
+                self.plots[i]['axs_draw'][j].text(pos_to, 7, str(domain.env_to), fontsize=7)
+
+                self.plot_text(domain=domain, ax_text=self.plots[i]['axs_text'][j])
+
+                self.plots[i]['fig'].suptitle(self.protein.name, fontsize=12, fontweight='bold')
+
+    def draw_protein(self, ax):
+        self.draw_sequence(ax=ax)
+        for domain in self.domains:
+            self.draw_domain(domain=domain, ax=ax)
+
+        ax.text(1 - self.delta, 9, '1', fontsize=8, ha='right')
+        ax.text(self.protein.length, 9, str(self.protein.length), fontsize=8)
+
+    def draw_sequence(self, ax):
+        ax.set_xlim([1, self.protein.length])
+        ax.set_ylim([0, 10])
+
+        mean_ax_lim = (ax.get_ylim()[1] - ax.get_ylim()[0]) / 2.
+        width = self.protein.length
+        height = 0.2  # mean_ax_lim * 0.025
+        x = 1
+        y = mean_ax_lim - height / 2.
+
+        ax.add_patch(
+            patches.Rectangle(
+                (x, y),
+                width,
+                height,
+                color='darkslategrey',
+                alpha=0.95
+            )
+        )
+
+    def draw_domain(self, domain, ax):
         """
-        Returns an XML format resuming informations about hits in the
-        Match instance
+        Draws a domain
         """
-        annotation = etree.Element('annotation')
-        inputs = etree.SubElement(annotation,'inputs')
-        domtblout = etree.SubElement(inputs,'domtblout')
-        domtblout.text = self.param.domtblout
-        proteome = etree.SubElement(inputs,'proteome')
-        proteome.text = self.param.proteome_filename
-        yamlrules = etree.SubElement(inputs,'yamlrules')
-        yamlrules.text = self.param.yamlrules
-        
-        family = etree.SubElement(annotation,'family')
-        family_name = etree.SubElement(family, "name")
-        family_name.text = self.family_rules.name
-        family_comment = etree.SubElement(family, "comment")
-        family_comment.text = self.family_rules.comment
-        
-        family_rule = etree.SubElement(family, "rule")
-        mandatories = etree.SubElement(family_rule, "mandatories")
-        
-        for dom_name, dom_score in self.family_rules.mandatory:        
-            name = etree.SubElement(mandatories, "name")
-            name.text = dom_name
-            score = etree.SubElement(mandatories, "score")
-            score.text = str(dom_score)
+        if not self.colors:
+            color = 'orange'  # 'dodgerblue'
+        else:
+            color = self.colors[domain.qname]
+        start_pos = domain.env_from
+        end_pos = domain.env_to
 
-        forbidden = etree.SubElement(family_rule, "forbidden")
-        if self.family_rules.forbidden:
-            for dom_name in self.family_rules.forbidden:
-                name = etree.SubElement(forbidden, "name")
-                name.text = dom_name
-            
-#        forbidden = etree.SubElement(family_rule, "forbidden")
-#        if self.family_rules.forbidden:
-#            for i,dom_name in enumerate(self.family_rules.forbidden, start=1):
-#                forbid = etree.SubElement(forbidden, "forbid")
-#                forbid.set('id', str(i))
-#                name = etree.SubElement(forbid, "name")
-#                name.text = dom_name
-        
-        proteins = etree.SubElement(annotation,'proteins')
-        match_nb = etree.SubElement(proteins,'match_nb')
-        match_nb.text = str(len(self.hmm_queries))
-        for i,query in enumerate(self.hmm_queries):        
-            protein = etree.SubElement(proteins, "protein")
-            protein.set('id', query.name)
-            protein_sequence = etree.SubElement(protein, "sequence")
-            protein_sequence.text = query.sequence
-            protein_length = etree.SubElement(protein, "length")
-            protein_length.text = str(len(query.sequence))
-            architectures = etree.SubElement(protein, "architectures")
-            architectures_nb = etree.SubElement(architectures, "number")
-            architectures_nb.text = str(len(query.architectures))
-            for j,(arch,arch_bool) in enumerate(zip(query.architectures, self.matching_arch_bool[i]), start=1):
-                architecture = etree.SubElement(architectures, "architecture")
-                architecture.set('id', str(j))
-                is_matching_rule = etree.SubElement(architecture, "is_matching_rule")
-                is_matching_rule.text = str(arch_bool)
-                domains = etree.SubElement(architecture, "domains")
-                domains_nb = etree.SubElement(domains, "number")
-                domains_nb.text = str(len(arch.domains))
-                for dom in arch.domains:
-                    domain = etree.SubElement(domains, "domain")
-                    domain.set('name', dom.qname)
-                    domain_sequence = etree.SubElement(domain, "sequence")
-                    domain_sequence.text = dom.sequence
-                    domain_length = etree.SubElement(domain, "length")
-                    domain_length.text = str(len(dom.sequence))
-                    domain_from = etree.SubElement(domain, "from")
-                    domain_from.text = str(dom.env_from)
-                    domain_to = etree.SubElement(domain, "to")
-                    domain_to.text = str(dom.env_to)
-                    domain_score = etree.SubElement(domain, "score")
-                    domain_score.text = str(dom.dom_score)
-                    domain_ival = etree.SubElement(domain, "i-eval")
-                    domain_ival.text = str(dom.dom_ival)
-        
-        xml = etree.tostring(annotation, pretty_print=True, encoding="utf-8")
-        
-        return xml.decode('utf-8')
-        
-    def summary(self):
-        log = []
-        match_nb = len(self.hmm_queries)
-        txt = '{} protein(s) match the rule {}'.format(match_nb, self.family_rules.name)
-        log.append(txt)
-        log.append(len(txt)*'-')
-        log.append('Comment: {}'.format(self.family_rules.comment))
-        log.append('Mandatories: [(name, score), ...]: {}'.format(self.family_rules.mandatory))
-        log.append('Forbidden: [name, ...]: {}'.format(self.family_rules.forbidden))
-            
-        for query in self.hmm_queries:
-            log.append('> {}'.format(query.name))
-            
-        return log
+        mean_ax_lim = (ax.get_ylim()[1] - ax.get_ylim()[0]) / 2
+        width = (end_pos - start_pos)
+        height = mean_ax_lim * 1
+        x = start_pos
+        y = mean_ax_lim - height / 2.
 
-def is_mandatory(mandatories, domains):
-    """
-    Checks if all mandatory domains are in domains
-    
-    Arguments:
-        - domains: list of domain names (str)
-        - mandatories: list of mandatory domain names (str)
-        
-    Return:
-        - True if all mandatories in domains, False otherwise
-    """
-    return all([ x in set(domains) for x in mandatories ])
+        ax.add_patch(
+            patches.Rectangle(
+                (x, y),
+                width,
+                height,
+                facecolor=color,
+                edgecolor='black',
+                alpha=0.75,
+                label=domain.qname
+            )
+        )
 
-def is_forbidden(forbidden, domains):
-    """
-    Checks if all forbidden domains are in domains
-    
-    Arguments:
-        - domains: list of domain names (str)
-        - forbidden: list of forbidden domain names (str)
-        
-    Return:
-        - True if a forbidden domain is in domains, False otherwise
-    """
-    if forbidden:
-        return True in [ x in set(domains) for x in forbidden ]
-    else:
+    def plot_text(self, domain, ax_text):
+        domain_name = r'$\bf{' + domain.qname.replace('_', '\_') + ':' + '}$'
+        text = ' i_val = {}, score = {}'.format(domain.dom_ival, domain.dom_score)
+        ax_text.text(0.055, 0.35, domain_name + text, fontsize=9)
+
+    def save(self, pdf_pages):
+        for i in self.plots:
+            pdf_pages.savefig(self.plots[i]['fig'])
+
+    def close_figs(self):
+        for i in self.plots:
+            plt.close(self.plots[i]['fig'])
+
+
+def is_match(rule, protein):
+    protein_architecture = protein.best_architecture
+
+    if True in [x in [y.name for y in rule.forbidden_domains] for x in protein_architecture.domain_names()]:
         return False
+    elif sum([x.name in protein_architecture.domain_names() for x in rule.mandatory_domains]) < len(rule.mandatory_domains):
+        return False
+    else:
+        mandatories_in_architecture = (x for x in protein_architecture.domains if x.qname in [y.name for y in rule.mandatory_domains])
+        encountered_names = []
 
-def get_mandatories_passing_score(mandatory_rules, domains):
-    """
-    Finds mandatory domains in architecture passing the score cutoff assigned
-    to a given mandatory domain.
-    
-    Arguments:
-        - mandatory_rules: tuple in the form -> (mandatory name (str),
-                                                 mandatory score (float))
-        - domains: list of Hmm_target instances
-        
-    Return:
-        - list all mandatory domain names in architecture that passes the score
-        cutoff
-    """
-    for mand_name, mand_score in mandatory_rules:
-        for dom in domains:
-            if dom.qname == mand_name:
-                if dom.dom_score >= mand_score:
-                    dom.pass_score_co = True
-                else:
-                    dom.pass_score_co = False
-        
-    return [ x.qname for x in domains if x.pass_score_co ]
+        for protein_domain in mandatories_in_architecture:
+            for mandatory_domain in rule.mandatory_domains:
+                if protein_domain.qname == mandatory_domain.name and mandatory_domain.name not in encountered_names:
+                    if protein_domain.dom_ival <= mandatory_domain.ival:
+                        encountered_names.append(mandatory_domain.name)
 
-def is_rule_met(family_rules, architecture):
-    """
-    Checks if a rule defining a family is met for a given architecture.
-    
-    Arguments:
-        - family_rules: instance of Family_rules
-        - architecture: instance of Architecture
-        
-    Return:
-        - True if rule is met, False otherwise
-    """
-    domains_in_architecture = [x.qname for x in architecture.domains]
-    mandatory_domains = [ x[0] for x in family_rules.mandatory ]
-    forbidden_domains = [ x for x in family_rules.forbidden ]
-    if not is_forbidden(domains=domains_in_architecture, forbidden=forbidden_domains):
-        mandatories_passing_score = get_mandatories_passing_score(mandatory_rules=family_rules.mandatory,
-                                                                  domains=architecture.domains)
-        if is_mandatory(domains=mandatories_passing_score, mandatories=mandatory_domains):
+        if len(encountered_names) == len(rule.mandatory_domains):
             return True
         else:
             return False
-    else:
-        return False
-
-def run_search(param, hmm_queries):
-    """
-    Finds all Hmm_query instances matching defined families.
-    For each rule defining a family:
-        - a Match instance is created for the rule
-        - for each Hmm_query instance, all possible architectures are searched
-        for a match.
-            - for each architecture
-                - the architecture is flagged as a match if conditions are met
-                (True appended in matching_arch_bool)
-            - if at least one architecture is flagged as a match,
-            the Hmm_query instance is flagged as a match for the rule
-        - if the Hmm_query instance is flagged as a match,
-        the Match instance is appended to matching_families
-        
-    Arguments:
-        - param: instance of Parameters
-        - hmm_queries: dictionary of Hmm_query instances
-        
-    Returns:
-        - list of Match instances
-    """
-    logger = logging.get_logger(__name__)
-    logger.info('')
-    log = '# Searching for queries matching rules'
-    log_deco = len(log)*'-'
-    logger.info(log_deco)
-    logger.info(log)
-    logger.info(log_deco)
-    
-    matching_families = []
-    for family_rules in sorted([ family for family in param.rules ], key=lambda x: len(x.mandatory), reverse=True):
-        
-        logger.info('')
-        log = '* Search queries matching the rule {}:'.format(family_rules.name)
-        logger.info(log)
-        logger.info('- Comment: {}'.format(family_rules.comment))
-        logger.info('- Mandatories: [(name, score), ...]: {}'.format(family_rules.mandatory))
-        logger.info('- Forbidden: [name, ...]: {}'.format(family_rules.forbidden))     
-        logger.info(len(log)*'-')
-        
-        match = Match(family_rules, param)
-        flag_query_match = False
-        for query in sorted(hmm_queries):
-            matching_arch_bool = []
-            query_instance = hmm_queries[query]
-            for architecture in query_instance.architectures:
-                if is_rule_met(family_rules=family_rules, architecture=architecture):
-                    matching_arch_bool.append(True)                    
-                else:
-                    matching_arch_bool.append(False)
-            if True in matching_arch_bool:
-                logger.info('- Match found for query {}:'.format(query))
-                
-                for i,_bool in enumerate(matching_arch_bool, start=1):
-                    logger.info('   -> {} for architecture {}/{}: {}'.format(_bool,
-                                i,
-                                len(matching_arch_bool),
-                                ' - '.join([ x.get_name() for x in query_instance.architectures[i-1].domains ])))
-                    
-                match.hmm_queries.append(query_instance)
-                match.matching_arch_bool.append(matching_arch_bool)
-                flag_query_match = True
-        if flag_query_match:
-            matching_families.append(match)
-        else:
-            logger.info('- No query matches the rule')
-        del match
-        
-    return matching_families
-
