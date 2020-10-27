@@ -68,6 +68,29 @@ class Matches:
                 match.report(fasta_dict=fasta_dict, outdir=self.outdir)
 
 
+def is_match(rule, protein):
+    protein_architecture = protein.best_architecture
+
+    if True in [x in [y.name for y in rule.forbidden_domains] for x in protein_architecture.domain_names()]:
+        return False
+    elif sum([x.name in protein_architecture.domain_names() for x in rule.mandatory_domains]) < len(rule.mandatory_domains):
+        return False
+    else:
+        mandatories_in_architecture = (x for x in protein_architecture.domains if x.qname in [y.name for y in rule.mandatory_domains])
+        encountered_names = []
+
+        for protein_domain in mandatories_in_architecture:
+            for mandatory_domain in rule.mandatory_domains:
+                if protein_domain.qname == mandatory_domain.name and mandatory_domain.name not in encountered_names:
+                    if protein_domain.dom_ival <= mandatory_domain.ival:
+                        encountered_names.append(mandatory_domain.name)
+
+        if len(encountered_names) == len(rule.mandatory_domains):
+            return True
+        else:
+            return False
+
+
 class Match:
     palette = ['dodgerblue', 'orange', 'darkseagreen',
                'red', 'lightsalmon', 'steelblue',
@@ -282,26 +305,3 @@ class PlotProt:
     def close_figs(self):
         for i in self.plots:
             plt.close(self.plots[i]['fig'])
-
-
-def is_match(rule, protein):
-    protein_architecture = protein.best_architecture
-
-    if True in [x in [y.name for y in rule.forbidden_domains] for x in protein_architecture.domain_names()]:
-        return False
-    elif sum([x.name in protein_architecture.domain_names() for x in rule.mandatory_domains]) < len(rule.mandatory_domains):
-        return False
-    else:
-        mandatories_in_architecture = (x for x in protein_architecture.domains if x.qname in [y.name for y in rule.mandatory_domains])
-        encountered_names = []
-
-        for protein_domain in mandatories_in_architecture:
-            for mandatory_domain in rule.mandatory_domains:
-                if protein_domain.qname == mandatory_domain.name and mandatory_domain.name not in encountered_names:
-                    if protein_domain.dom_ival <= mandatory_domain.ival:
-                        encountered_names.append(mandatory_domain.name)
-
-        if len(encountered_names) == len(rule.mandatory_domains):
-            return True
-        else:
-            return False

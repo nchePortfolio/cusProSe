@@ -409,11 +409,18 @@ class Protein:
 
     def set_best_architecture(self):
         if not self.best_architecture:
-            arch_with_best_logscore = sorted([(x, x.get_logscore()) for x in self.architectures], key=lambda x: x[1])[-1][0]
-            self.best_architecture = arch_with_best_logscore
+            if not self.is_arch_with_ival_null():
+                arch_with_best_logscore = sorted([(x, x.get_logscore()) for x in self.architectures], key=lambda x: x[1])[-1][0]
+                self.best_architecture = arch_with_best_logscore
+            else:
+                arch_with_best_bitscore = sorted([(x, x.get_bitscore()) for x in self.architectures], key=lambda x: x[1])[-1][0]
+                self.best_architecture = arch_with_best_bitscore
 
     def get_sequence(self, fasta_dict):
         return fasta_dict[self.name]
+
+    def is_arch_with_ival_null(self):
+        return True in [x.is_ival_null() for x in self.architectures]
 
 
 class Architecture:
@@ -421,7 +428,7 @@ class Architecture:
         self._id = _id
         self.domains = domains
         self.domain_nb = len(domains)
-        self.logscore = self.get_logscore()
+        self.logscore = None
 
     def domain_names(self) -> list:
         """
@@ -436,3 +443,13 @@ class Architecture:
         @return: sum of -log(all domains ival)
         """
         return sum([-np.log(x.dom_ival) for x in self.domains])
+
+    def get_bitscore(self) -> float:
+        """
+
+        @return: sum of domain's score
+        """
+        return sum([x.dom_score for x in self.domains])
+
+    def is_ival_null(self):
+        return True in [x.dom_ival == 0. for x in self.domains]

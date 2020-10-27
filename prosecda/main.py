@@ -38,10 +38,7 @@ def main():
 
     matches = matching.Matches(param=param)
     matches.search(rules=rules, proteins=proteins)
-    print('\n'.join([' - ' + x for x in matches.get_rulenames()]))
     matches.report(fasta_dict=fasta_dict)
-
-    sys.exit(0)
 
 
 if __name__ == '__main__':
