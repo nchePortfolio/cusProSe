@@ -1,6 +1,6 @@
 import setuptools as st
 
-packages = ['iterhmmbuild', 'iterhmmbuild.lib', 'prosecda', 'prosecda.lib']
+packages = ['iterhmmbuild', 'iterhmmbuild.lib', 'prosecda', 'prosecda.lib', 'lib']
 
 st.setup(name='CustomProteinSearch',
          python_requires='>=3',
