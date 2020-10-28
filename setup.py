@@ -4,7 +4,6 @@ packages=['iterhmmbuild', 'iterhmmbuild.lib', 'prosecda', 'prosecda.lib']
 
 st.setup(name='CustomProteinSearch',
          python_requires='>=3',
-         version='0.0',
          packages=packages,
          install_requires=[
         'lxml>=4.5.2',
