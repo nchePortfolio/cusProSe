@@ -8,7 +8,6 @@ import os
 import argparse
 import datetime
 import prosecda.lib.seqio as seqio
-import prosecda.lib.rules as rules
 import lib.logHandler as logHandler
 
 date = datetime.datetime.now()
