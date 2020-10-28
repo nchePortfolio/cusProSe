@@ -11,7 +11,6 @@ from matplotlib.backends.backend_pdf import PdfPages
 import prosecda.lib.rules as Rules
 import lib.logHandler as logHandler
 
-
 logging.getLogger('matplotlib.font_manager').disabled = True
 logging.getLogger('matplotlib.backends.backend_pdf').disabled = True
 
@@ -73,10 +72,12 @@ def is_match(rule, protein):
 
     if True in [x in [y.name for y in rule.forbidden_domains] for x in protein_architecture.domain_names()]:
         return False
-    elif sum([x.name in protein_architecture.domain_names() for x in rule.mandatory_domains]) < len(rule.mandatory_domains):
+    elif sum([x.name in protein_architecture.domain_names() for x in rule.mandatory_domains]) < len(
+            rule.mandatory_domains):
         return False
     else:
-        mandatories_in_architecture = (x for x in protein_architecture.domains if x.qname in [y.name for y in rule.mandatory_domains])
+        mandatories_in_architecture = (x for x in protein_architecture.domains if
+                                       x.qname in [y.name for y in rule.mandatory_domains])
         encountered_names = []
 
         for protein_domain in mandatories_in_architecture:
