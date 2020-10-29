@@ -14,6 +14,7 @@ st.setup(name='CustomProteinSearch',
          entry_points={
              'console_scripts': [
                  'run_prosecda=prosecda.main:main',
-                 'run_iterhmmbuild=iterhmmbuild.main:main']
+                 'run_iterhmmbuild=iterhmmbuild.main:main',
+                 'create_rules=prosecda.']
          }
          )

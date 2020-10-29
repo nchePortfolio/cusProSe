@@ -6,6 +6,7 @@ Created on Sun Apr 19 15:14:00 2020
 """
 
 import tkinter as tk
+from tkinter import filedialog as fd
 
 
 class Framelist(tk.LabelFrame):
@@ -32,7 +33,6 @@ class Framelist(tk.LabelFrame):
 
         self.text = tk.Text(self, yscrollcommand=self.scrollb.set, bg='white')
         self.text.grid(row=0, column=0, sticky="nsew", padx=1, pady=1)
-        self.text.insert("end", 'test')
         
         self.scrollb.config(command=self.text.yview)
 
@@ -42,42 +42,103 @@ class Conditionframe(tk.LabelFrame):
         tk.LabelFrame.__init__(self, master, width=width, height=height, bd=bd,
                           bg='white', relief=tk.FLAT,
                           highlightbackground='black', highlightthickness=2,
-                          text='Condition', labelanchor='n')
-        self.master = master        
+                          text='Conditions', labelanchor='n')
+        self.master = master
+        self.grid_propagate(0)
         self.initialize()
         
     def initialize(self):
+        self.configure_grid()
+
         self.entries()
         self.buttons()
+        
+        self.mandatory_framelist = Framelist(master=self, title='Mandatory list')
+        self.mandatory_framelist.grid(row=2, column=1,
+                                      padx=2, pady=0,
+                                      rowspan=5, columnspan=2,
+                                      sticky='nw')
+        
+        self.forbidden_framelist = Framelist(master=self, title='Forbidden list')
+        self.forbidden_framelist.grid(row=2, column=3,
+                                      padx=2, pady=0,
+                                      rowspan=5, columnspan=2,
+                                      sticky='nw')
 
     def configure_grid(self):
-        for i in range(2):
+        for i in range(8):
             self.rowconfigure(i, weight=1)
-        for i in range(5):
+        for i in range(6):
             self.columnconfigure(i, weight=1)
             
     def entries(self):
         self.label_mandatory = tk.Label(self, text='Mandatory:', width=10, relief=tk.GROOVE)
-        self.label_mandatory.grid(row=0, column=0, padx=1, pady=0)
+        self.label_mandatory.grid(row=0, column=0, padx=1, pady=0, sticky='n')
         self.entry_mandatory = tk.Entry(self, width=10)
-        self.entry_mandatory.grid(row=0, column=1, padx=0, pady=0)
+        self.entry_mandatory.grid(row=0, column=1, padx=0, pady=0, sticky='n')
         
         self.label_score = tk.Label(self, text='Score:', width=10, relief=tk.GROOVE)
-        self.label_score.grid(row=0, column=2, padx=1, pady=0)
+        self.label_score.grid(row=0, column=2, padx=1, pady=0, sticky='n')
         self.entry_score = tk.Entry(self, width=10)
-        self.entry_score.grid(row=0, column=3, padx=0, pady=0)
+        self.entry_score.grid(row=0, column=3, padx=0, pady=0, sticky='n')
         
         self.label_forbidden = tk.Label(self, text='Forbidden:', width=10, relief=tk.GROOVE)
-        self.label_forbidden.grid(row=1, column=0, padx=1, pady=0)
+        self.label_forbidden.grid(row=1, column=0, padx=1, pady=0, sticky='n')
         self.entry_forbidden = tk.Entry(self, width=10)
-        self.entry_forbidden.grid(row=1, column=1, padx=0, pady=0)
+        self.entry_forbidden.grid(row=1, column=1, padx=0, pady=0, sticky='n')
         
     def buttons(self):
-        self.insert_mandatory = tk.Button(self, text='Insert')
-        self.insert_mandatory.grid(row=0, column=4, padx=5)
+        self.insert_mandatory = tk.Button(self, text='Insert',
+                                          font=("Helvetica", 11),
+                                                command=self.get_mandatory)
+        self.insert_mandatory.grid(row=0, column=4, padx=0, sticky='ne')
         
-        self.insert_forbidden = tk.Button(self, text='Insert')
-        self.insert_forbidden.grid(row=1, column=4, padx=5)
+        self.insert_forbidden = tk.Button(self, text='Insert',
+                                          font=("Helvetica", 11),
+                                                command=self.get_forbidden)
+        self.insert_forbidden.grid(row=1, column=4, padx=0, sticky='ne')
+        
+    def get_mandatory(self):
+        entry_mand = self.entry_mandatory.get()
+        entry_score = self.entry_score.get()
+        text = ''
+        
+        if entry_mand and entry_score:
+            text = '{}, {}\n'.format(entry_mand, entry_score)
+        elif entry_mand and not entry_score:
+            text = '{}\n'.format(entry_mand)
+            
+        self.mandatory_framelist.text.insert("end", text)
+        
+        self.entry_mandatory.delete(0, len(entry_mand))
+        self.entry_score.delete(0, len(entry_score))
+        
+    def get_forbidden(self):
+        entry_forb = self.entry_forbidden.get()
+        text = ''
+        
+        if entry_forb:
+            text = '{}\n'.format(entry_forb)
+            
+        self.forbidden_framelist.text.insert("end", text)
+        
+        self.entry_forbidden.delete(0, len(entry_forb))
+        
+    def clear(self):
+        entry_mand = self.entry_mandatory.get()
+        entry_score = self.entry_score.get()
+        if len(entry_mand) != 0:
+            self.entry_mandatory.delete(0, len(entry_mand))
+        if len(entry_score) != 0:
+            self.entry_score.delete(0, len(entry_score))
+            
+        self.mandatory_framelist.text.delete("1.0",'end')
+            
+        entry_forb = self.entry_forbidden.get()
+        if len(entry_forb) != 0:
+            self.entry_forbidden.delete(0, len(entry_forb))
+            
+        self.forbidden_framelist.text.delete("1.0",'end')
         
 
 class Ruleframe(tk.LabelFrame):
@@ -85,171 +146,140 @@ class Ruleframe(tk.LabelFrame):
         tk.LabelFrame.__init__(self, master, width=width, height=height, bd=bd,
                           bg='white', relief=tk.FLAT,
                           highlightbackground='black', highlightthickness=2,
-                          text='Rule', labelanchor='n')
+                          text='Rule definition', labelanchor='n')
         self.master = master
+        self.grid_propagate(0)
         self.initialize()
         
     def initialize(self):
         self.configure_grid()
-        
+
         self.entries()
-        
+
         self.conditionframe = Conditionframe(master=self)
-        self.conditionframe.grid(row=1, column=1, padx=2, pady=2, rowspan=2,
-                                 columnspan=4, sticky='n')
-                                 
-        self.mandatory_framelist = Framelist(master=self, title='Mandatory list')
-        self.mandatory_framelist.grid(row=3, column=1, padx=2, pady=0,
-                                      rowspan=2, columnspan=2, sticky='n')
-#        self.mandatory_framelist.grid_propagate(0)
-        
-        self.forbidden_framelist = Framelist(master=self, title='Forbidden list')
-        self.forbidden_framelist.grid(row=3, column=3, padx=2, pady=0,
-                                      rowspan=2, columnspan=2, sticky='n')
-#        self.forbidden_framelist.grid_propagate(0)
-        
+        self.conditionframe.grid(row=1, column=0, padx=10, pady=2, rowspan=5,
+                                 columnspan=6, sticky='nsew')
+
     def configure_grid(self):
         for i in range(6):
             self.rowconfigure(i, weight=1)
         for i in range(6):
             self.columnconfigure(i, weight=1)
-        
+
     def entries(self):
         self.label_name = tk.Label(self, text='Name:', width=5, relief=tk.GROOVE)
         self.label_name.grid(row=0, column=1, padx=1, pady=0, sticky='ew')
         self.entry_name = tk.Entry(self, width=6)
         self.entry_name.grid(row=0, column=2, padx=0, pady=0, sticky='ew')
-        
+
         self.label_comment = tk.Label(self, text='Comment:', width=10, relief=tk.GROOVE)
         self.label_comment.grid(row=0, column=3, padx=1, pady=0, sticky='ew')
         self.entry_comment = tk.Entry(self, width=6)
         self.entry_comment.grid(row=0, column=4, padx=0, pady=0, sticky='ew')
+
+    def get_conditions(self):
+        mand_list = self.conditionframe.mandatory_framelist.text.get("1.0",'end-1c')
+        forbid_list = self.conditionframe.forbidden_framelist.text.get("1.0",'end-1c')
+
+        return mand_list, forbid_list
         
+    def clear(self):
+        self.entry_name.delete(0, len(self.entry_name.get()))
+        self.entry_comment.delete(0, len(self.entry_comment.get()))
+        
+        self.conditionframe.clear()      
+
 
 class Mainframe(tk.LabelFrame):
     def __init__(self, master, width=600, height=400, bd=2):
         tk.LabelFrame.__init__(self, master, width=width, height=height, bd=bd,
                           bg='white', relief=tk.FLAT,
                           highlightbackground='black', highlightthickness=2,
-                          text='Set rules', labelanchor='n')
+                          labelanchor='n')
         self.master = master
-        self.configure_grid()
         self.initialize()
 
     def initialize(self):
+        self.configure_grid()
         self.grid(padx=5, pady=5)
         self.grid_propagate(0)
-        
+
         self.ruleframe = Ruleframe(master=self)
-        self.ruleframe.grid(row=0, column=0, padx=2, pady=1, rowspan=3,
-                            sticky='nsew')
+        self.ruleframe.grid(row=0, column=0,
+                            padx=2, pady=1,
+                            rowspan=4, sticky='nsew')
         self.ruleframe.grid_propagate(0)
+
+        self.rules_framelist = Framelist(master=self, title='Rule list')
+        self.rules_framelist.grid(row=2, column=1,
+                                      padx=2, pady=1,
+                                      rowspan=2, sticky='new')
+
+        self.buttons()
         
     def configure_grid(self):
-        for row in range(3):
+        for row in range(5):
             self.rowconfigure(row, weight=1)
             
         self.columnconfigure(0, weight=3)
         self.columnconfigure(1, weight=1)
-     
-
-master = tk.Tk()
-master.title("Creation of rules for ProSeCDA")
-app = Mainframe(master=master)
-app.mainloop()
-
-
-
-root = tk.Tk()
-
-scrollbar = tk.Scrollbar(root, text='scrollbar')
-scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-
-listbox = tk.Listbox(root)
-listbox.pack()
-
-for i in range(100):
-    listbox.insert(tk.END, i)
-
-# attach listbox to scrollbar
-listbox.config(yscrollcommand=scrollbar.set)
-scrollbar.config(command=listbox.yview)
-
-root.mainloop()
-
-
-
-
-
-
-class Create_rules(tk.Frame):
-    def __init__(self, width=500, height=500, bd=1, bg='white'):
-        tk.Frame.__init__(self, width=width, height=height)
-        self.pack()
         
-        self.label_name = tk.Label(self, text='Name:', width=10, relief=tk.GROOVE)
-        self.label_name.grid(row=0, column=0, padx=5, pady=15)
-        self.entry_name = tk.Entry(self, width=15)
-        self.entry_name.grid(row=0, column=1, padx=5, pady=15)
+    def buttons(self):
+        self.clear_rule = tk.Button(self, text='Clear rule', bg='grey',
+                                  fg='white', font=("Helvetica", 11, 'bold'),
+                                  command=self.clear)
+        self.clear_rule.grid(row=0, column=1, sticky='n')
         
-        self.label_comment = tk.Label(self, text='Comment:', width=10, relief=tk.GROOVE)
-        self.label_comment.grid(row=0, column=2, padx=5, pady=15)
-        self.entry_comment = tk.Entry(self, width=15)
-        self.entry_comment.grid(row=0, column=3, padx=5, pady=15)
+        self.add_rule = tk.Button(self, text='Add rule to the list', bg='grey',
+                                  fg='white', font=("Helvetica", 11, 'bold'),
+                                  command=self.get_rule)
+        self.add_rule.grid(row=1, column=1, sticky='n')
         
-        self.label_mandatory = tk.Label(self, text='Mandatory:', width=10, relief=tk.GROOVE)
-        self.label_mandatory.grid(row=1, column=0, padx=1, pady=2)
-        self.entry_mandatory = tk.Entry(self, width=10)
-        self.entry_mandatory.grid(row=1, column=1, padx=1, pady=2)
+        self.save_rules = tk.Button(self, text='Save rules', bg='grey',
+                                  fg='white', font=("Helvetica", 11, 'bold'),
+                                  command=self.save_as)
+        self.save_rules.grid(row=4, column=1, sticky='n')
+
+    def get_rule(self):
+        name = self.ruleframe.entry_name.get()
+        comment = self.ruleframe.entry_comment.get()
+        mand_list, forbid_list = self.ruleframe.get_conditions()
         
-        self.label_score = tk.Label(self, text='Score:', width=10, relief=tk.GROOVE)
-        self.label_score.grid(row=1, column=2, padx=1, pady=2)
-        self.entry_score = tk.Entry(self, width=10)
-        self.entry_score.grid(row=1, column=3, padx=1, pady=2)
+        mand_text = '\n'.join([ '  - '+x for x in mand_list.split('\n')[:-1]  ])
+        forbid_text = '\n'.join([ '  - '+x for x in forbid_list.split('\n')[:-1]  ])
+      
+        if name and mand_list:        
+            text = '{}:\n'.format(name.strip())
+            text += ' COMMENT: {}\n'.format(comment.strip())
+            text += ' CONDITION:\n'.format()
+            text += '  mandatory:\n{}'.format(mand_text+'\n')
+            text += '  forbidden:\n{}'.format(forbid_text+'\n')
+    
+            self.rules_framelist.text.insert('end', text+'\n')
+            
+            self.clear()
         
-        self.label_forbidden = tk.Label(self, text='Forbidden:', width=10, relief=tk.GROOVE)
-        self.label_forbidden.grid(row=2, column=0, padx=1, pady=2)
-        self.entry_forbidden = tk.Entry(self, width=10)
-        self.entry_forbidden.grid(row=2, column=1, padx=1, pady=2)
+    def clear(self):
+        self.ruleframe.clear()
+        
+    def save_as(self):
+        _file = fd.asksaveasfile(mode="w", defaultextension=".yaml")
+        
+        text = self.rules_framelist.text.get("1.0",'end')
+        if _file:
+            _file.write(text)
+            
+        _file.close()
 
-Create_rules().mainloop()
+if __name__ == '__main__':
+    master = tk.Tk()
+    master.title("Setting rules for ProSeCDA")
+    app = Mainframe(master=master)
+    app.mainloop()
 
-root = tk.Tk()
-
-frame1 = tk.Frame(root, width=250, height=250, bg='white')
-frame1.grid(row=0, padx=5, pady=5)
-frame1.grid_propagate(0)
-
-frame2 = tk.Frame(root, width=250, height=250, bg='white')
-frame2.grid(row=1, padx=5, pady=5)
-
-frame3 = tk.Frame(frame1, width=100, height=200, bg='red')
-frame3.grid(row=0, column=0, padx=10, pady=10)
-
-frame4 = tk.Frame(frame1, width=100, height=200, bg='blue')
-frame4.grid(row=0, column=1, padx=10, pady=10)
-
-frame5 = tk.Frame(root, width=250, height=250, bg='white')
-frame5.grid(row=1, padx=5, pady=5)
-
-root.mainloop()
+    
+    
 
 
 
-root = tk.Tk()
 
-MainFrame = tk.Frame(root, width=385, height=460, relief='raised', borderwidth=5)
-LabelFrame = tk.Frame(MainFrame, width=375, height=115, relief='raised', borderwidth=5)
-ButtonFrame = tk.Frame(MainFrame, width=375, height=330, relief='raised', borderwidth=5)
-
-some_label = tk.Label(LabelFrame, text='Simple Text')
-some_button = tk.Button(ButtonFrame, text='Quit', command=root.destroy)
-
-for frame in [MainFrame, LabelFrame, ButtonFrame]:
-    frame.pack(expand=True, fill='both')
-    frame.pack_propagate(0)
-
-for widget in [some_label, some_button]:
-    widget.pack(expand=True, fill='x', anchor='s')
-
-root.mainloop()

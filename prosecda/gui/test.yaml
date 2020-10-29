@@ -1,9 +1,0 @@
-A:
- COMMENT: none
- CONDITION:
-  mandatory:
-  - A
-  forbidden:
-
-
-
