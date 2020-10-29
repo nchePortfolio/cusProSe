@@ -168,17 +168,157 @@ Three input files are required:
 
 
 #### Creating rules
+The first requirement to run prosecda is to have a file containing the rules that describe protein *families*
+based on user-defined specific domain architecture.
+To do so, rules must be written in a specific yaml format (that will be described/changed later). The simplest way
+is to use a simple GUI (interface) accessible by typing `create_rules`
 
+##### With Graphical user interface
+![](./doc/prosecda/images/gui_rules_1.png)
 
-Input examples are available in `cusProSe-x.x.x/iterhmmbuild/datas/`
+As shown in the above image, a rule is defined by different features:
+* `Name`: category/family name the proteins that'll match the rule will be assigned to
+* `Comment`: optional feature; can be used to describe the rule
+* `Mandatory list`: list of domain names the protein must contain
+* `Forbidden list`: optional list of domain names the protein must not contain
 
-The command below will learn and build an HMM profile describing the seed sequence in A.fa by learning iteratively from
-the set *magnaporthe orizae* proteins:
+In order to add mandatory/forbidden domain name into its proper list:
+* type its name (in `Mandatory` or `Forbidden`)
+* optionally add a threshold score value the domain must match the protein sequence (3.0 by default)
+* click on `insert`
+
+Once your rule is defined, click on `Add rule to the list`. Repeat the procedure to create and a rule to the list.
+
+Once all your desired rules are defined, save them in a yaml format by clicking on `Save rules`.
+
+This yaml file will look like below:
+
+```yaml
+PKS:
+ COMMENT: Polyketide Synthase
+ CONDITION:
+  mandatory:
+  - KS
+  - AT
+  - PP-binding, 15
+  forbidden:
+  - C
+
+PKS-like:
+ COMMENT: Polyketide Synthase like
+ CONDITION:
+  mandatory:
+  - KS
+  - AT
+  forbidden:
+
+PKS_type3.0:
+ COMMENT: Polyketide Syntase type III
+ CONDITION:
+  mandatory:
+  - CHS_like
+  forbidden:
+
 ```
-run_iterhmmbuild -fa A.fa -protdb mgg_70-15_8.fasta
+
+
+#### Running prosecda
+
+Input examples are available in `cusProSe-x.x.x/prosecda/datas/`
+
+The command below will search in the *f. fujikuroi* proteomes all proteins matching the rules defined in rules.yaml
+from the HMM profile database databaseKGall_terpenes_selec.hmm:
+```
+run_prosecda -proteome fusarium_fujikuroi_IMI58289_V2_protein.fasta -hmmdb databaseKGall_terpenes_selec.hmm -rules rules.yaml
 ```
 
 An output directory will be generated in a generic format: 
-`iterhmmbuild_year-month-day_hour-min-sec/`
+`prosecda_year-month-day_hour-min-sec/`
 
 This directory content will be like the one below:
+
+<pre><font color="#3465A4"><b>prosecda_2020-10-29_15-55-24/</b></font>
+├── fusarium_fujikuroi_IMI58289_V2_protein.domtblout
+├── info.log
+└── <font color="#3465A4"><b>matches</b></font>
+    ├── <font color="#3465A4"><b>DMATS</b></font>
+    │   ├── XP_023429775.1.fa
+    │   ├── XP_023429775.1.xml
+    │   ├── XP_023436063.1.fa
+    │   └── XP_023436063.1.xml
+    ├── DMATS.pdf
+    ├── <font color="#3465A4"><b>Ent_kaurene_synthase</b></font>
+    │   ├── XP_023431478.1.fa
+    │   └── XP_023431478.1.xml
+    ├── Ent_kaurene_synthase.pdf
+    ├── <font color="#3465A4"><b>NRPS-PKS</b></font>
+    │   ├── XP_023427367.1.fa
+    │   ├── XP_023427367.1.xml
+    │   ├── XP_023429959.1.fa
+    │   ├── XP_023429959.1.xml
+    │   ├── XP_023434892.1.fa
+    │   ├── XP_023434892.1.xml
+    │   ├── XP_023435338.1.fa
+    │   └── XP_023435338.1.xml
+    └── NRPS-PKS.pdf
+</pre>
+
+with:
+* fusarium_fujikuroi_IMI58289_V2_protein.domtblout: output file of hmmsearch
+* matches: directory containing different output files for rules matching proteins
+
+The content of `matches` directory is as follow:
+
+<pre>
+<font color="#3465A4"><b>matches</b></font>
+    ├── <font color="#3465A4"><b>DMATS</b></font>
+    │   ├── XP_023429775.1.fa
+    │   ├── XP_023429775.1.xml
+    │   ├── XP_023436063.1.fa
+    │   └── XP_023436063.1.xml
+    ├── DMATS.pdf
+    ├── <font color="#3465A4"><b>Ent_kaurene_synthase</b></font>
+    │   ├── XP_023431478.1.fa
+    │   └── XP_023431478.1.xml
+    ├── Ent_kaurene_synthase.pdf
+    ├── <font color="#3465A4"><b>NRPS-PKS</b></font>
+    │   ├── XP_023427367.1.fa
+    │   ├── XP_023427367.1.xml
+    │   ├── XP_023429959.1.fa
+    │   ├── XP_023429959.1.xml
+    │   ├── XP_023434892.1.fa
+    │   ├── XP_023434892.1.xml
+    │   ├── XP_023435338.1.fa
+    │   └── XP_023435338.1.xml
+    └── NRPS-PKS.pdf
+</pre>
+
+with:
+* DMATS, Ent_kaurene_synthase and NRPS-PKS: subdirectories containing output files for proteins matching the given rule
+  * protein.fa: protein sequence in fasta file format
+  * protein.xml: informations about the protein and its domain(s)
+* pdf files: graphical representation of the most likely domain architecture of the protein
+
+```xml
+<protein>
+  <id>XP_023431478.1</id>
+  <sequence_length>952</sequence_length>
+  <class_name>Ent_kaurene_synthase</class_name>
+  <domain_architecture>
+    <domain name="ent_kaurene">
+      <cval>0.0</cval>
+      <ival>0.0</ival>
+      <score>1074.3</score>
+      <start>10</start>
+      <end>952</end>
+      <domain_length>943</domain_length>
+    </domain>
+  </domain_architecture>
+</protein>
+```
+
+Example of the output pdf file for XP_023431478.1 in NRPS-PKS:
+![](./doc/prosecda/images/xp_023427367.1.png)
+
+
+## More later...

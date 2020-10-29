@@ -4,7 +4,7 @@ Created on Sun Apr 19 15:14:00 2020
 
 @author: nicolas
 """
-
+import sys
 import tkinter as tk
 from tkinter import filedialog as fd
 
@@ -271,12 +271,15 @@ class Mainframe(tk.LabelFrame):
             
         _file.close()
 
-if __name__ == '__main__':
+
+def main():
     master = tk.Tk()
     master.title("Setting rules for ProSeCDA")
     app = Mainframe(master=master)
     app.mainloop()
 
+if __name__ == '__main__':
+    sys.exit(main())
     
     
 

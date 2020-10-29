@@ -2,7 +2,7 @@ import setuptools as st
 
 packages = ['iterhmmbuild', 'iterhmmbuild.lib', 'prosecda', 'prosecda.lib', 'lib']
 
-st.setup(name='CustomProteinSearch',
+st.setup(name='cusProSe',
          python_requires='>=3',
          packages=packages,
          install_requires=[
@@ -15,6 +15,6 @@ st.setup(name='CustomProteinSearch',
              'console_scripts': [
                  'run_prosecda=prosecda.main:main',
                  'run_iterhmmbuild=iterhmmbuild.main:main',
-                 'create_rules=prosecda.']
+                 'create_rules=prosecda.gui.create_rules:main']
          }
          )
