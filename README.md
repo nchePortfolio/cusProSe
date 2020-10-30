@@ -187,7 +187,7 @@ In order to add mandatory/forbidden domain name into its proper list:
 * optionally add a threshold score value the domain must match the protein sequence (3.0 by default)
 * click on `insert`
 
-Once your rule is defined, click on `Add rule to the list`. Repeat the procedure to create and a rule to the list.
+Once your rule is defined, click on `Add rule to the list`. Repeat the procedure to create and add rule to the list.
 
 Once all your desired rules are defined, save them in a yaml format by clicking on `Save rules`.
 
