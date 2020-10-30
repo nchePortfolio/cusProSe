@@ -8,6 +8,8 @@ import os
 import sys
 import numpy as np
 import lib.logHandler as logHandler
+from lxml import etree
+from prosecda.lib.rules import Rule
 
 
 class Usearch:
@@ -421,6 +423,77 @@ class Protein:
 
     def is_arch_with_ival_null(self):
         return True in [x.is_ival_null() for x in self.architectures]
+
+    def write_fasta(self, outdir: str, fasta_dict: dict):
+        fasta_sequence = self.get_fasta(fasta_dict)
+        with open(outdir + self.name + '.fa', 'w') as o_fasta:
+            o_fasta.write(fasta_sequence)
+
+    def get_fasta(self, fasta_dict: dict) -> str:
+        header = '>' + self.name + '\n'
+        sequence_ori = fasta_dict[self.name]
+        sequence = '\n'.join([sequence_ori[x:x + 80] for x in range(0, len(sequence_ori), 80)])
+
+        return header + sequence + '\n'
+
+    def write_xml(self, outdir: str, rule: Rule):
+        with open(outdir + self.name + '.xml', 'w') as o_xml:
+            o_xml.write(self.get_xml(rule=rule))
+
+    def get_xml(self, rule: Rule):
+
+        protein_element = etree.Element('protein')
+
+        protein_id = etree.SubElement(protein_element, 'id')
+        protein_id.text = self.name
+
+        sequence_length = etree.SubElement(protein_element, 'sequence_length')
+        sequence_length.text = str(self.length)
+
+        class_name = etree.SubElement(protein_element, 'class_name')
+        class_name.text = rule.name
+
+        domain_architecture = etree.SubElement(protein_element, 'most_likely_architecture')
+        for domain in self.best_architecture.domains:
+            _domain = etree.SubElement(domain_architecture, "domain")
+            _domain.set('name', domain.qname)
+
+            _domain_cval = etree.SubElement(_domain, "cval")
+            _domain_cval.text = str(domain.dom_cval)
+            _domain_ival = etree.SubElement(_domain, "ival")
+            _domain_ival.text = str(domain.dom_ival)
+            _domain_score = etree.SubElement(_domain, "score")
+            _domain_score.text = str(domain.dom_score)
+
+            _domain_start = etree.SubElement(_domain, "start")
+            _domain_start.text = str(domain.env_from)
+            _domain_end = etree.SubElement(_domain, "end")
+            _domain_end.text = str(domain.env_to)
+            _domain_length = etree.SubElement(_domain, "domain_length")
+            _domain_length.text = str(domain.env_to - domain.env_from + 1)
+
+        other_domains = [x for x in self.domains if x not in self.best_architecture.domains]
+        if other_domains:
+            _other_domains = etree.SubElement(protein_element, 'other_matching_domains')
+            for domain in other_domains:
+                _domain = etree.SubElement(_other_domains, "domain")
+                _domain.set('name', domain.qname)
+
+                _domain_cval = etree.SubElement(_domain, "cval")
+                _domain_cval.text = str(domain.dom_cval)
+                _domain_ival = etree.SubElement(_domain, "ival")
+                _domain_ival.text = str(domain.dom_ival)
+                _domain_score = etree.SubElement(_domain, "score")
+                _domain_score.text = str(domain.dom_score)
+
+                _domain_start = etree.SubElement(_domain, "start")
+                _domain_start.text = str(domain.env_from)
+                _domain_end = etree.SubElement(_domain, "end")
+                _domain_end.text = str(domain.env_to)
+                _domain_length = etree.SubElement(_domain, "domain_length")
+                _domain_length.text = str(domain.env_to - domain.env_from + 1)
+
+        return etree.tostring(protein_element, pretty_print=True, encoding="utf-8").decode()
 
 
 class Architecture:

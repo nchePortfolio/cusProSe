@@ -1,7 +1,4 @@
 import os
-
-from lxml import etree
-
 import logging
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
@@ -9,6 +6,7 @@ import matplotlib.patches as patches
 from matplotlib.backends.backend_pdf import PdfPages
 
 import prosecda.lib.rules as Rules
+from lib.external import Protein
 import lib.logHandler as logHandler
 
 logging.getLogger('matplotlib.font_manager').disabled = True
@@ -166,76 +164,17 @@ class Match:
 
         for protein in self.proteins:
             self.logger.info(' - {}'.format(protein.name))
-            with open(outpath + protein.name + '.fa', 'w') as o_fasta:
-                header = '>' + protein.name + '\n'
-                sequence_ori = fasta_dict[protein.name]
-                sequence = '\n'.join([sequence_ori[x:x + 80] for x in range(0, len(sequence_ori), 80)])
-                o_fasta.write(header + sequence + '\n')
 
-            with open(outpath + protein.name + '.xml', 'w') as o_xml:
-                o_xml.write(self.get_xml(protein=protein))
-
-            visual_protein = PlotProt(protein=protein, colors=self.domain_colors)
-            visual_protein.draw()
-            visual_protein.save(pdf_pages=pdf_pages)
-            visual_protein.close_figs()
+            protein.write_fasta(outdir=outpath, fasta_dict=fasta_dict)
+            protein.write_xml(outdir=outpath, rule=self.rule)
+            self.plot_protein(protein=protein, pdf_pages=pdf_pages)
 
         pdf_pages.close()
 
-    def get_xml(self, protein):
-
-        protein_element = etree.Element('protein')
-
-        protein_id = etree.SubElement(protein_element, 'id')
-        protein_id.text = protein.name
-
-        sequence_length = etree.SubElement(protein_element, 'sequence_length')
-        sequence_length.text = str(protein.length)
-
-        class_name = etree.SubElement(protein_element, 'class_name')
-        class_name.text = self.rule.name
-
-        domain_architecture = etree.SubElement(protein_element, 'most_likely_architecture')
-        for domain in protein.best_architecture.domains:
-            _domain = etree.SubElement(domain_architecture, "domain")
-            _domain.set('name', domain.qname)
-
-            _domain_cval = etree.SubElement(_domain, "cval")
-            _domain_cval.text = str(domain.dom_cval)
-            _domain_ival = etree.SubElement(_domain, "ival")
-            _domain_ival.text = str(domain.dom_ival)
-            _domain_score = etree.SubElement(_domain, "score")
-            _domain_score.text = str(domain.dom_score)
-
-            _domain_start = etree.SubElement(_domain, "start")
-            _domain_start.text = str(domain.env_from)
-            _domain_end = etree.SubElement(_domain, "end")
-            _domain_end.text = str(domain.env_to)
-            _domain_length = etree.SubElement(_domain, "domain_length")
-            _domain_length.text = str(domain.env_to - domain.env_from + 1)
-
-        other_domains = [x for x in protein.domains if x not in protein.best_architecture.domains]
-        if other_domains:
-            _other_domains = etree.SubElement(protein_element, 'other_matching_domains')
-            for domain in other_domains:
-                _domain = etree.SubElement(_other_domains, "domain")
-                _domain.set('name', domain.qname)
-
-                _domain_cval = etree.SubElement(_domain, "cval")
-                _domain_cval.text = str(domain.dom_cval)
-                _domain_ival = etree.SubElement(_domain, "ival")
-                _domain_ival.text = str(domain.dom_ival)
-                _domain_score = etree.SubElement(_domain, "score")
-                _domain_score.text = str(domain.dom_score)
-
-                _domain_start = etree.SubElement(_domain, "start")
-                _domain_start.text = str(domain.env_from)
-                _domain_end = etree.SubElement(_domain, "end")
-                _domain_end.text = str(domain.env_to)
-                _domain_length = etree.SubElement(_domain, "domain_length")
-                _domain_length.text = str(domain.env_to - domain.env_from + 1)
-
-        return etree.tostring(protein_element, pretty_print=True, encoding="utf-8").decode()
+    def plot_protein(self, protein: Protein, pdf_pages: PdfPages):
+        visual_protein = PlotProt(protein=protein, colors=self.domain_colors)
+        visual_protein.draw()
+        visual_protein.save(pdf_pages=pdf_pages)
 
 
 class PlotProt:
@@ -357,6 +296,7 @@ class PlotProt:
     def save(self, pdf_pages):
         for i in self.plots:
             pdf_pages.savefig(self.plots[i]['fig'])
+            plt.close(self.plots[i]['fig'])
 
     def close_figs(self):
         for i in self.plots:
