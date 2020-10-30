@@ -16,7 +16,16 @@ logging.getLogger('matplotlib.backends.backend_pdf').disabled = True
 
 
 class Matches:
+    """
+
+    Container used to search and deal with all Match instances
+
+    """
     def __init__(self, param):
+        """
+
+        @param param: instance of prosecda.lib.parameters
+        """
         self.param = param
         self.list = []
         self.outdir = param.outdirname + 'matches/'
@@ -54,7 +63,13 @@ class Matches:
     def is_match_in_list(self, name: str):
         return name in self.get_rulenames()
 
-    def get_rulenames(self):
+    def get_rulenames(self) -> list:
+        """
+
+        Get all name of rules present in self.list
+
+        @return: list
+        """
         if self.list:
             return sorted([x.rule.name for x in self.list])
         else:
@@ -93,6 +108,12 @@ def is_match(rule, protein):
 
 
 class Match:
+    """
+
+    Container to deal with all proteins matching a given rule.
+
+    """
+
     palette = ['dodgerblue', 'orange', 'darkseagreen',
                'red', 'lightsalmon', 'steelblue',
                'cyan', 'teal', 'darkkhaki',
@@ -100,6 +121,10 @@ class Match:
                'midnightblue', 'tan', 'rosybrown']
 
     def __init__(self, rule: Rules.Rule):
+        """
+
+        @param rule: instance of Rule
+        """
         self.rule = rule
         self.proteins = []
 
@@ -116,10 +141,19 @@ class Match:
         if len(domains_set) <= len(self.palette):
             self.domain_colors = {x: self.palette[i] for i, x in enumerate(self.list_domains())}
 
-    def list_domains(self):
+    def list_domains(self) -> list:
+        """
+
+        Get a non-redundant list of all domain names of protein's best architectures in self.proteins
+
+        @return: list
+        """
         all_lists = [x.best_architecture.domain_names() for x in self.proteins]
 
-        return sorted(set([item for sublist in all_lists for item in sublist]))
+        if all_lists:
+            return sorted(set([item for sublist in all_lists for item in sublist]))
+        else:
+            return []
 
     def report(self, fasta_dict: dict, outdir: str):
         self.set_colors()
@@ -161,7 +195,7 @@ class Match:
         class_name = etree.SubElement(protein_element, 'class_name')
         class_name.text = self.rule.name
 
-        domain_architecture = etree.SubElement(protein_element, 'domain_architecture')
+        domain_architecture = etree.SubElement(protein_element, 'most_likely_architecture')
         for domain in protein.best_architecture.domains:
             _domain = etree.SubElement(domain_architecture, "domain")
             _domain.set('name', domain.qname)
@@ -179,6 +213,27 @@ class Match:
             _domain_end.text = str(domain.env_to)
             _domain_length = etree.SubElement(_domain, "domain_length")
             _domain_length.text = str(domain.env_to - domain.env_from + 1)
+
+        other_domains = [x for x in protein.domains if x not in protein.best_architecture.domains]
+        if other_domains:
+            _other_domains = etree.SubElement(protein_element, 'other_matching_domains')
+            for domain in other_domains:
+                _domain = etree.SubElement(_other_domains, "domain")
+                _domain.set('name', domain.qname)
+
+                _domain_cval = etree.SubElement(_domain, "cval")
+                _domain_cval.text = str(domain.dom_cval)
+                _domain_ival = etree.SubElement(_domain, "ival")
+                _domain_ival.text = str(domain.dom_ival)
+                _domain_score = etree.SubElement(_domain, "score")
+                _domain_score.text = str(domain.dom_score)
+
+                _domain_start = etree.SubElement(_domain, "start")
+                _domain_start.text = str(domain.env_from)
+                _domain_end = etree.SubElement(_domain, "end")
+                _domain_end.text = str(domain.env_to)
+                _domain_length = etree.SubElement(_domain, "domain_length")
+                _domain_length.text = str(domain.env_to - domain.env_from + 1)
 
         return etree.tostring(protein_element, pretty_print=True, encoding="utf-8").decode()
 

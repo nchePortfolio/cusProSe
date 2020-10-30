@@ -241,27 +241,7 @@ This directory content will be like the one below:
 ├── fusarium_fujikuroi_IMI58289_V2_protein.domtblout
 ├── info.log
 └── <font color="#3465A4"><b>matches</b></font>
-    ├── <font color="#3465A4"><b>DMATS</b></font>
-    │   ├── XP_023429775.1.fa
-    │   ├── XP_023429775.1.xml
-    │   ├── XP_023436063.1.fa
-    │   └── XP_023436063.1.xml
-    ├── DMATS.pdf
-    ├── <font color="#3465A4"><b>Ent_kaurene_synthase</b></font>
-    │   ├── XP_023431478.1.fa
-    │   └── XP_023431478.1.xml
-    ├── Ent_kaurene_synthase.pdf
-    ├── <font color="#3465A4"><b>NRPS-PKS</b></font>
-    │   ├── XP_023427367.1.fa
-    │   ├── XP_023427367.1.xml
-    │   ├── XP_023429959.1.fa
-    │   ├── XP_023429959.1.xml
-    │   ├── XP_023434892.1.fa
-    │   ├── XP_023434892.1.xml
-    │   ├── XP_023435338.1.fa
-    │   └── XP_023435338.1.xml
-    └── NRPS-PKS.pdf
-</pre>
+ </pre>
 
 with:
 * fusarium_fujikuroi_IMI58289_V2_protein.domtblout: output file of hmmsearch
@@ -299,6 +279,8 @@ with:
   * protein.xml: informations about the protein and its domain(s)
 * pdf files: graphical representation of the most likely domain architecture of the protein
 
+
+Example of the output pdf file for XP_023431478.1 in NRPS-PKS:
 ```xml
 <protein>
   <id>XP_023431478.1</id>

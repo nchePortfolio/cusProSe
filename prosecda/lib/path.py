@@ -41,7 +41,7 @@ class Path:
         max_coor = max([dom.env_to for dom in self.domains])
         virtual_end.env_from, virtual_end.env_to = max_coor + 5, max_coor + 10
 
-        self.domains.append(virtual_start)
+        self.domains.insert(0, virtual_start)
         self.domains.append(virtual_end)
         self.domains = [x[0] for x in sorted([(x, x.env_from) for x in self.domains], key=lambda x: x[1])]
 
@@ -140,7 +140,9 @@ class Path:
 
     def search(self):
         """
+
         Finds all possible combinations/architectures of non-overlapping domains.
+
         """
         self.add_virtual_domains()
         self.get_edges()
@@ -155,7 +157,6 @@ class Path:
         paths = (path for path in nx.all_simple_paths(graph, source=source, target=target))
         paths = sorted([x for x in paths], key=lambda x: len(x))
 
-        # removal of virtual_domains
         self.rm_virtual_domains()
         longest_paths = self.get_longest_paths(paths=paths)
 
