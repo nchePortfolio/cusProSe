@@ -306,7 +306,7 @@ class PlotProt:
 
         mean_ax_lim = (ax.get_ylim()[1] - ax.get_ylim()[0]) / 2.
         width = self.protein.length
-        height = 0.2  # mean_ax_lim * 0.025
+        height = 0.2
         x = 1
         y = mean_ax_lim - height / 2.
 

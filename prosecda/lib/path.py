@@ -1,6 +1,7 @@
 import lib.logHandler as logHandler
-from lib.external import HmmerDomtbl, Architecture
+from lib.external import HmmerDomtbl, Architecture, Protein
 import networkx as nx
+# import matplotlib.pyplot as plt
 
 
 class Path:
@@ -9,14 +10,13 @@ class Path:
     Container used to search possible domain architectures.
 
     """
-    def __init__(self, domains: list):
+    def __init__(self, protein: Protein):
         """
 
-        @param domains: list of HmmerDomtbl instances
+        @param protein: instance of Protein
         """
-        self.domains = domains
+        self.protein = protein
         self.edges = []
-        self.architectures = []
 
         self.logger = logHandler.Logger(name=__name__)
 
@@ -38,12 +38,12 @@ class Path:
         virtual_start.dom_id, virtual_end.dom_id = 1, 1
         virtual_start.env_from, virtual_start.env_to = -10, -5
 
-        max_coor = max([dom.env_to for dom in self.domains])
+        max_coor = max([dom.env_to for dom in self.protein.domains])
         virtual_end.env_from, virtual_end.env_to = max_coor + 5, max_coor + 10
 
-        self.domains.insert(0, virtual_start)
-        self.domains.append(virtual_end)
-        self.domains = [x[0] for x in sorted([(x, x.env_from) for x in self.domains], key=lambda x: x[1])]
+        self.protein.domains = [x[0] for x in sorted([(x, x.env_from) for x in self.protein.domains], key=lambda x: x[1])]
+        self.protein.domains.insert(0, virtual_start)
+        self.protein.domains.append(virtual_end)
 
     def get_edges(self) -> list:
         """
@@ -52,8 +52,8 @@ class Path:
 
         Returns: list of tuple of HmmerDomTbl instances
         """
-        for i, dom_i in enumerate(self.domains):
-            for j, dom_j in enumerate(self.domains):
+        for i, dom_i in enumerate(self.protein.domains):
+            for j, dom_j in enumerate(self.protein.domains):
                 if j > i:
                     if self.is_edge(domain_i=dom_i, domain_j=dom_j):
                         self.edges.append((dom_i, dom_j))
@@ -131,7 +131,7 @@ class Path:
         x_domain_j = domain_j.env_from
 
         is_contiguous = True
-        for domain in self.domains:
+        for domain in self.protein.domains:
             if domain.env_to < x_domain_j and domain.env_from > y_domain_i:
                 is_contiguous = False
                 break
@@ -149,10 +149,15 @@ class Path:
 
         graph = nx.DiGraph()
         graph.add_edges_from(self.edges)
-        # nx.draw(graph, with_labels=True)
 
-        source = self.domains[0]  # 'virtual_start' domain
-        target = self.domains[-1]  # 'virtual_end' domain
+        # H = nx.relabel_nodes(graph, {x: x.qname + '-' + str(x.dom_id) for x in list(graph.nodes)})
+        #
+        # f = plt.figure()
+        # nx.draw(H, ax=f.add_subplot(111), with_labels=True)
+        # f.savefig(self.protein.name + '.png')
+
+        source = self.protein.domains[0]  # 'virtual_start' domain
+        target = self.protein.domains[-1]  # 'virtual_end' domain
 
         paths = (path for path in nx.all_simple_paths(graph, source=source, target=target))
         paths = sorted([x for x in paths], key=lambda x: len(x))
@@ -162,7 +167,7 @@ class Path:
 
         for i, path in enumerate(longest_paths, start=1):
             domains = [x for x in path if x.qname not in ['virtual_start', 'virtual_end']]
-            self.architectures.append(Architecture(_id=str(i), domains=domains))
+            self.protein.architectures.append(Architecture(_id=str(i), domains=domains))
 
     def rm_virtual_domains(self):
         """
@@ -171,7 +176,7 @@ class Path:
 
         @return: None
         """
-        [self.domains.remove(x) for x in self.domains if x.qname in ['virtual_start', 'virtual_end']]
+        [self.protein.domains.remove(x) for x in self.protein.domains if x.qname in ['virtual_start', 'virtual_end']]
 
     def get_longest_paths(self, paths):
         return (x for x in paths if x not in self.get_subpaths(paths=paths))

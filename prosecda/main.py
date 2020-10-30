@@ -28,12 +28,9 @@ def main():
     proteins = hmmsearch.get_proteins()
 
     for protein in proteins:
-        domains_architecture = path.Path(domains=protein.domains)
-        domains_architecture.search()
-        protein.architectures = domains_architecture.architectures
+        protein_architecture_path = path.Path(protein=protein)
+        protein_architecture_path.search()
         protein.set_best_architecture()
-
-    sys.exit()
 
     fasta_dict = seqio.get_fasta_dict(fasta_filename=param.proteome_filename,
                                       protein_ids=[x.name for x in proteins])
