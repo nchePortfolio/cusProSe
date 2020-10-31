@@ -142,11 +142,18 @@ class Match:
     def list_domains(self) -> list:
         """
 
-        Get a non-redundant list of all domain names of protein's best architectures in self.proteins
+        Get a non-redundant list of all domain names of proteins in self.proteins
 
         @return: list
         """
-        all_lists = [x.best_architecture.domain_names() for x in self.proteins]
+        # all_lists = [x.best_architecture.domain_names() for x in self.proteins]
+        #
+        # if all_lists:
+        #     return sorted(set([item for sublist in all_lists for item in sublist]))
+        # else:
+        #     return []
+
+        all_lists = [x.list_domains() for x in self.proteins]
 
         if all_lists:
             return sorted(set([item for sublist in all_lists for item in sublist]))
@@ -167,27 +174,39 @@ class Match:
 
             protein.write_fasta(outdir=outpath, fasta_dict=fasta_dict)
             protein.write_xml(outdir=outpath, rule=self.rule)
-            self.plot_protein(protein=protein, pdf_pages=pdf_pages)
+            self.plot_protein_best_architecture(protein=protein, pdf_pages=pdf_pages)
+            self.plot_protein_all_domains(protein=protein, outpath=outpath)
 
         pdf_pages.close()
 
-    def plot_protein(self, protein: Protein, pdf_pages: PdfPages):
-        visual_protein = PlotProt(protein=protein, colors=self.domain_colors)
-        visual_protein.draw()
-        visual_protein.save(pdf_pages=pdf_pages)
+    def plot_protein_best_architecture(self, protein: Protein, pdf_pages: PdfPages):
+        protein_best_architecture = PlotProt(protein=protein, colors=self.domain_colors)
+        protein_best_architecture.draw()
+        protein_best_architecture.save(pdf_pages=pdf_pages)
+
+    def plot_protein_all_domains(self, protein: Protein, outpath: str):
+        protein_all_domains = PlotProt(protein=protein, colors=self.domain_colors, _type='all')
+        protein_all_domains.draw()
+        protein_all_domains.save(outpath=outpath)
 
 
 class PlotProt:
-    def __init__(self, protein, colors=None):
+    def __init__(self, protein, colors=None, _type='architecture'):
         self.protein = protein
-        self.domains = protein.best_architecture.domains
-        self.domains_nb = len(self.domains)
-
         self.colors = colors
-        self.delta = self.protein.length * 0.01
+        self.type = _type
 
+        if self.type == 'architecture':
+            self.domains = protein.best_architecture.domains
+            self.start_domain_plot = 1
+        elif self.type == 'all':
+            self.domains = protein.domains
+            self.start_domain_plot = 0
+
+        self.domains_nb = len(self.domains)
+        self.delta = self.protein.length * 0.01
         self.n_max_rows = 20 + 1
-        self.gs = gridspec.GridSpec(nrows=self.n_max_rows, ncols=5)
+        self.gs = gridspec.GridSpec(nrows=self.n_max_rows, ncols=6)
 
         self.plots = self.create_fig()
 
@@ -196,29 +215,38 @@ class PlotProt:
         plots = {}
         for i in range(n_figs):
             figure = plt.figure(figsize=(8, 10))
-            axs_draw = [figure.add_subplot(self.gs[x, :-2]) for x in range(self.n_max_rows)]
+            figure.subplots_adjust(left=0.075, bottom=0.1, right=0.925, top=0.9, wspace=0.105, hspace=0.2)
+
+            axs_draw = [figure.add_subplot(self.gs[x, :-3]) for x in range(self.n_max_rows)]
             [x.set_axis_off() for x in axs_draw]
 
-            axs_text = [figure.add_subplot(self.gs[x, -2:]) for x in range(self.n_max_rows)]
+            axs_text = [figure.add_subplot(self.gs[x, -3:]) for x in range(self.n_max_rows)]
             [x.set_axis_off() for x in axs_text]
             start = i * (self.n_max_rows - 1)
             end = start + self.n_max_rows - 1
+
+            if n_figs == 1:
+                title = self.protein.name
+            else:  # n_figs > 1
+                title = self.protein.name + '_part-' + str(n_figs + 1)
 
             plots[i] = {'fig': figure,
                         'axs_draw': axs_draw,
                         'axs_text': axs_text,
                         'domains_idx': (start, end),
+                        'title': title
                         }
 
         return plots
 
     def draw(self):
         for i in self.plots:
-            self.draw_protein(ax=self.plots[i]['axs_draw'][0])
+            if self.type == 'architecture':
+                self.draw_protein(ax=self.plots[i]['axs_draw'][0])
 
             start = self.plots[i]['domains_idx'][0]
             end = self.plots[i]['domains_idx'][1]
-            for j, domain in enumerate(self.domains[start:end], start=1):
+            for j, domain in enumerate(self.domains[start:end], start=self.start_domain_plot):
                 self.draw_sequence(ax=self.plots[i]['axs_draw'][j])
                 self.draw_domain(domain=domain, ax=self.plots[i]['axs_draw'][j])
 
@@ -229,7 +257,8 @@ class PlotProt:
 
                 self.plot_text(domain=domain, ax_text=self.plots[i]['axs_text'][j])
 
-                self.plots[i]['fig'].suptitle(self.protein.name, fontsize=12, fontweight='bold')
+                suptitle = self.plots[i]['title']
+                self.plots[i]['fig'].suptitle(suptitle, fontsize=12, fontweight='bold')
 
     def draw_protein(self, ax):
         self.draw_sequence(ax=ax)
@@ -293,11 +322,12 @@ class PlotProt:
         text = ' i_val = {}, score = {}'.format(domain.dom_ival, domain.dom_score)
         ax_text.text(0.055, 0.35, domain_name + text, fontsize=9)
 
-    def save(self, pdf_pages):
-        for i in self.plots:
-            pdf_pages.savefig(self.plots[i]['fig'])
-            plt.close(self.plots[i]['fig'])
-
-    def close_figs(self):
-        for i in self.plots:
-            plt.close(self.plots[i]['fig'])
+    def save(self, pdf_pages=None, outpath=None):
+        if pdf_pages:
+            for i in self.plots:
+                pdf_pages.savefig(self.plots[i]['fig'])
+                plt.close(self.plots[i]['fig'])
+        elif outpath:
+            for i in self.plots:
+                self.plots[i]['fig'].savefig(outpath + self.plots[i]['title'] + '.png')
+                plt.close(self.plots[i]['fig'])
