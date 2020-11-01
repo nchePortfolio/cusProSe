@@ -144,6 +144,8 @@ class Path:
         Finds all possible combinations/architectures of non-overlapping domains.
 
         """
+        self.logger.info(' - starting path search for {}'.format(self.protein.name))
+
         self.add_virtual_domains()
         self.get_edges()
 
@@ -161,9 +163,16 @@ class Path:
 
         paths = (path for path in nx.all_simple_paths(graph, source=source, target=target))
         paths = sorted([x for x in paths], key=lambda x: len(x))
+        # self.logger.info('  - {} total path found'.format(len(paths)))
 
         self.rm_virtual_domains()
         longest_paths = self.get_longest_paths(paths=paths)
+        if len(longest_paths) != len(paths):
+            self.logger.info('  - total paths number : {}'.format(len(paths)))
+            self.logger.info('  - longest paths number : {}'.format(len(longest_paths)))
+            for p in paths:
+                print([x.qname+str(x.dom_id) for x in p])
+                print([x.env_coors() for x in p])
 
         for i, path in enumerate(longest_paths, start=1):
             domains = [x for x in path if x.qname not in ['virtual_start', 'virtual_end']]
@@ -179,7 +188,7 @@ class Path:
         [self.protein.domains.remove(x) for x in self.protein.domains if x.qname in ['virtual_start', 'virtual_end']]
 
     def get_longest_paths(self, paths):
-        return (x for x in paths if x not in self.get_subpaths(paths=paths))
+        return [x for x in paths if x not in self.get_subpaths(paths=paths)]
 
     @staticmethod
     def get_subpaths(paths):

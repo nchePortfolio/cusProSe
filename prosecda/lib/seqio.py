@@ -64,13 +64,13 @@ def seqnumber(msafile=None):
         print('Error: msa file required...'.format())
 
 
-def get_files(directory: str = None, ext: str = None) -> list:
+def get_files(directory: str = None, extension: str = None) -> list:
     """
     Returns a list of files having extension ext in directory.
 
     @param directory: directory to search files.ext in
-    @param ext: extension of the requested files
+    @param extension: extension of the requested files
     @return: list of str
     """
 
-    return [os.path.join(directory, file) for file in os.listdir(directory) if file.endswith(ext)]
+    return [os.path.join(directory, file) for file in os.listdir(directory) if file.endswith(extension)]

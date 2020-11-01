@@ -27,14 +27,18 @@ def main():
     hmmsearch.run()
     proteins = hmmsearch.get_proteins()
 
+    logger.title('Searching for possible domain architectures...')
     for protein in proteins:
         protein_architecture_path = path.Path(protein=protein)
         protein_architecture_path.search()
         protein.set_best_architecture()
 
+    sys.exit()
+
     fasta_dict = seqio.get_fasta_dict(fasta_filename=param.proteome_filename,
                                       protein_ids=[x.name for x in proteins])
 
+    logger.title('Searching for proteins matching rules...')
     matches = matching.Matches(param=param)
     matches.search(rules=rules, proteins=proteins)
     matches.report(fasta_dict=fasta_dict)

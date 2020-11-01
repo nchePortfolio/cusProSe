@@ -6,10 +6,10 @@ import prosecda.lib.seqio as seqio
 def main():
     args = get_arguments()
     hmmdir = args.hmmdir if args.hmmdir[-1] == '/' else args.hmmdir + '/'
-    outpath = args.out if args.out[-1] == '/' else args.out + '/'
+    outpath = args.outdir if args.outdir[-1] == '/' else args.outdir + '/'
     dbname = outpath + args.dbname
 
-    hmm_profiles = seqio.get_files(directory=hmmdir)
+    hmm_profiles = seqio.get_files(directory=hmmdir, extension='.hmm')
 
     if hmm_profiles:
         seqio.concat_file(outputfile=dbname, inputfilelist=hmm_profiles)
