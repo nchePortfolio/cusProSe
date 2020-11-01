@@ -116,11 +116,15 @@ class Path:
         -----------------------------x_domain_j_y----------------------
         -------------------------------------------------x_domain_y----
 
-        Case where domains i and j are not contiguous:
+        Cases where domains i and j are not contiguous:
 
         --x_domain_i_y-------------------------------------------------
         -----------------------------x_domain_j_y----------------------
         -----------------x_domain_y------------------------------------
+
+        --x_domain_i_y-------------------------------------------------
+        -----------------x_domain_j_y----------------------------------
+        ----------x_domain_y-------------------------------------------
 
 
         @param domain_i: domain on the left of domain_j
@@ -144,7 +148,7 @@ class Path:
         Finds all possible combinations/architectures of non-overlapping domains.
 
         """
-        self.logger.info(' - starting path search for {}'.format(self.protein.name))
+        self.logger.debug(' - starting path search for {}...'.format(self.protein.name))
 
         self.add_virtual_domains()
         self.get_edges()
@@ -163,16 +167,10 @@ class Path:
 
         paths = (path for path in nx.all_simple_paths(graph, source=source, target=target))
         paths = sorted([x for x in paths], key=lambda x: len(x))
-        # self.logger.info('  - {} total path found'.format(len(paths)))
+        self.logger.debug('  - {} total path found'.format(len(paths)))
 
         self.rm_virtual_domains()
         longest_paths = self.get_longest_paths(paths=paths)
-        if len(longest_paths) != len(paths):
-            self.logger.info('  - total paths number : {}'.format(len(paths)))
-            self.logger.info('  - longest paths number : {}'.format(len(longest_paths)))
-            for p in paths:
-                print([x.qname+str(x.dom_id) for x in p])
-                print([x.env_coors() for x in p])
 
         for i, path in enumerate(longest_paths, start=1):
             domains = [x for x in path if x.qname not in ['virtual_start', 'virtual_end']]

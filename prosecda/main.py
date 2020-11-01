@@ -33,8 +33,6 @@ def main():
         protein_architecture_path.search()
         protein.set_best_architecture()
 
-    sys.exit()
-
     fasta_dict = seqio.get_fasta_dict(fasta_filename=param.proteome_filename,
                                       protein_ids=[x.name for x in proteins])
 
