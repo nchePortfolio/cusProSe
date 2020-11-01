@@ -1,6 +1,6 @@
 import setuptools as st
 
-packages = ['iterhmmbuild', 'iterhmmbuild.lib', 'prosecda', 'prosecda.lib', 'lib']
+packages = ['iterhmmbuild', 'iterhmmbuild.lib', 'prosecda', 'prosecda.lib', 'lib', 'scripts']
 
 st.setup(name='cusProSe',
          python_requires='>=3',
@@ -14,7 +14,8 @@ st.setup(name='cusProSe',
          entry_points={
              'console_scripts': [
                  'run_prosecda=prosecda.main:main',
+                 'create_rules=prosecda.gui.create_rules:main',
                  'run_iterhmmbuild=iterhmmbuild.main:main',
-                 'create_rules=prosecda.gui.create_rules:main']
+                 'create_hmmdb=scripts.concat2hmmdb:main']
          }
          )

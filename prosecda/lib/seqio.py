@@ -5,6 +5,8 @@ Created on Wed Apr  1 17:43:14 2020
 @author: nicolas
 """
 import shutil
+import os
+
 
 def read_fasta(sequences=None):
     """
@@ -14,13 +16,13 @@ def read_fasta(sequences=None):
     if sequences is not None:
         fasta = {}
         with open(sequences, 'r') as sequences_file:
-            for l in sequences_file:
-                if l.startswith('>'):
-                    seq_name = l.split()[0].split('>')[-1]
+            for line in sequences_file:
+                if line.startswith('>'):
+                    seq_name = line.split()[0].split('>')[-1]
                     if seq_name not in fasta:
                         fasta[seq_name] = ''
                     continue
-                sequence = l.strip().replace('*','')
+                sequence = line.strip().replace('*', '')
                 fasta[seq_name] = fasta[seq_name]+sequence
                 
         return fasta
@@ -43,9 +45,9 @@ def write_fasta(seqfasta=None, output=None):
 
 
 def concat_file(outputfile, inputfilelist):    
-    with open(outputfile,'wb') as wfd:
+    with open(outputfile, 'wb') as wfd:
         for f in inputfilelist:
-            with open(f,'rb') as fd:
+            with open(f, 'rb') as fd:
                 shutil.copyfileobj(fd, wfd, 1024*1024*10)
 
 
@@ -55,10 +57,20 @@ def seqnumber(msafile=None):
         with open(msafile, 'r') as msa:
             for line in msa:
                 if line.startswith('>'):
-                    nb+=1
+                    nb += 1
         
         return nb
     else:
         print('Error: msa file required...'.format())
 
 
+def get_files(directory: str = None, ext: str = None) -> list:
+    """
+    Returns a list of files having extension ext in directory.
+
+    @param directory: directory to search files.ext in
+    @param ext: extension of the requested files
+    @return: list of str
+    """
+
+    return [os.path.join(directory, file) for file in os.listdir(directory) if file.endswith(ext)]
