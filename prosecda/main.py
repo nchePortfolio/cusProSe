@@ -5,7 +5,7 @@ import lib.logHandler as logHandler
 import lib.external as external
 import lib.seqio as seqio
 import prosecda.lib.parameters as parameters
-import prosecda.lib.rules as Rules
+import prosecda.lib.rule_parser as rule_parser
 import prosecda.lib.path as path
 import prosecda.lib.match as matching
 
@@ -15,7 +15,7 @@ def main():
     logger = logHandler.Logger(name='prosecda', outpath=param.outdirname)
     param.description()
 
-    rules = Rules.parse_yaml(input_filename=param.yamlrules, co_ival=param.ival)
+    rules = rule_parser.parse_yaml(input_filename=param.yamlrules, co_ival=param.ival)
     for rule in rules:
         print(rule.description())
 
