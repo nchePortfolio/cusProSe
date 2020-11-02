@@ -5,7 +5,7 @@ import matplotlib.gridspec as gridspec
 import matplotlib.patches as patches
 from matplotlib.backends.backend_pdf import PdfPages
 
-import prosecda.lib.rules as Rules
+import prosecda.lib.rule_parser as rule_parser
 from lib.external import Protein
 import lib.logHandler as logHandler
 
@@ -118,7 +118,7 @@ class Match:
                'firebrick', 'greenyellow', 'mediumvioletred',
                'midnightblue', 'tan', 'rosybrown']
 
-    def __init__(self, rule: Rules.Rule):
+    def __init__(self, rule: rule_parser.Rule):
         """
 
         @param rule: instance of Rule

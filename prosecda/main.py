@@ -15,17 +15,18 @@ def main():
     logger = logHandler.Logger(name='prosecda', outpath=param.outdirname)
     param.description()
 
-    rules = rule_parser.parse_yaml(input_filename=param.yamlrules, co_ival=param.ival)
-    for rule in rules:
-        print(rule.description())
+    rules = rule_parser.Parser(input_filename=param.yamlrules, co_ival=param.ival)
+    rules.description()
 
     # Runs hmmsearch and gets hits from its output (.domtblout format)
     logger.title('Running hmmsearch...')
     hmmsearch = external.HmmSearch(input_hmm=param.hmmdb, input_db=param.proteome_filename,
                                    parameters=param, outdir=param.outdirname,
-                                   basename=os.path.basename(param.proteome_filename))
+                                   basename=os.path.basename(param.proteome_filename),
+                                   domains=rules.list_alldomains())
     hmmsearch.run()
     proteins = hmmsearch.get_proteins()
+    sys.exit()
 
     logger.title('Searching for possible domain architectures...')
     for protein in proteins:
@@ -38,7 +39,7 @@ def main():
 
     logger.title('Searching for proteins matching rules...')
     matches = matching.Matches(param=param)
-    matches.search(rules=rules, proteins=proteins)
+    matches.search(rules=rules.rules, proteins=proteins)
     matches.report(fasta_dict=fasta_dict)
 
 

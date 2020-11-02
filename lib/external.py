@@ -9,7 +9,7 @@ import sys
 import numpy as np
 import lib.logHandler as logHandler
 from lxml import etree
-from prosecda.lib.rules import Rule
+from prosecda.lib.rule_parser import Rule
 
 
 class Usearch:
@@ -123,8 +123,8 @@ class HmmSearch:
         @param outdir: output directory
         @param **kwargs: optional argument(s):
             - 'basename': desired name of the output file
+            - 'domains': list of domain names to be fetched from input_hmm to a temporary new hmmdb
         """
-        self.input_hmm = input_hmm
         if 'basename' not in kwargs:
             self.basename = '.'.join(os.path.basename(input_hmm).split('.')[0:-1])
         else:
@@ -133,6 +133,15 @@ class HmmSearch:
         self.input_db = input_db
         self.outdir = outdir
         self.output = outdir + self.basename + '.domtblout'
+
+        self.hmmfetch = False
+        if 'domains' not in kwargs:
+            self.input_hmm = input_hmm
+        else:
+            self.hmmfetch = True
+            self.domains = kwargs['domains']
+            self.input_hmm = hmmfetch(hmmdb=input_hmm, keys=self.domains, outdir=self.outdir)
+
         self.hits = None
 
         self.logger = logHandler.Logger(name=__name__)
@@ -147,6 +156,9 @@ class HmmSearch:
         cmd = 'hmmsearch' + ' -o /dev/null ' + '--domtblout ' + self.output + ' ' + self.input_hmm + ' ' + self.input_db
         self.logger.info('Running {}'.format(cmd.replace(self.outdir, '')))
         os.system(cmd)
+
+        if self.hmmfetch:
+            os.remove(self.input_hmm)
 
         self.get_hits()
 
@@ -167,6 +179,27 @@ class HmmSearch:
 
     def get_proteins(self):
         return self.hits.get_proteins()
+
+
+def hmmfetch(hmmdb: str, keys: list, outdir: str) -> str:
+    """
+
+    @param hmmdb: HMM profile database
+    @param keys: list of domain names to fetch from hmmdb
+    @param outdir: output directory of the new HMM profile database
+    @return: the filename of the new HMM profile database
+    """
+    keys_file = outdir + 'domains.lst'
+    outfile = outdir + hmmdb.replace('.hmm', '_tmp.hmm')
+
+    with open(keys_file, 'w') as _file:
+        _file.write('\n'.join(keys) + '\n')
+
+    cmd = 'hmmfetch -f ' + hmmdb + ' ' + keys_file + ' > ' + outfile
+    os.system(cmd)
+    os.remove(keys_file)
+
+    return outfile
 
 
 class HmmerDomtbl:
