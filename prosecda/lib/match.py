@@ -46,8 +46,6 @@ class Matches:
         @param proteins: list of external.Protein instances
         @return: None
         """
-        self.logger.info('Searching for proteins matching rules...')
-
         match = None
         for rule in rules:
             for protein in proteins:
@@ -73,11 +71,11 @@ class Matches:
         else:
             return []
 
-    def report(self, fasta_dict: dict):
+    def report(self):
         if self.list:
             os.makedirs(self.outdir, exist_ok=True)
             for match in self.list:
-                match.report(fasta_dict=fasta_dict, outdir=self.outdir)
+                match.report(outdir=self.outdir)
 
 
 def is_match(rule, protein):
@@ -153,7 +151,7 @@ class Match:
         else:
             return []
 
-    def report(self, fasta_dict: dict, outdir: str):
+    def report(self, outdir: str):
         self.set_colors()
 
         outpath = outdir + self.rule.name + '/'
@@ -165,7 +163,7 @@ class Match:
         for protein in self.proteins:
             self.logger.info(' - {}'.format(protein.name))
 
-            protein.write_fasta(outdir=outpath, fasta_dict=fasta_dict)
+            protein.write_fasta(outdir=outpath)
             protein.write_xml(outdir=outpath, rule=self.rule)
             self.plot_protein_best_architecture(protein=protein, pdf_pages=pdf_pages)
             self.plot_protein_all_domains(protein=protein, outpath=outpath)

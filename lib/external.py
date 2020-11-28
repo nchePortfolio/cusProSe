@@ -404,6 +404,7 @@ class Protein:
         self.architectures = []
         self.best_architecture = None
         self.length = domains[0].tlen
+        self.sequence = None
 
         self.logger = logHandler.Logger(name=__name__)
 
@@ -451,21 +452,16 @@ class Protein:
                 arch_with_best_bitscore = sorted([(x, x.get_bitscore()) for x in self.architectures], key=lambda x: x[1])[-1][0]
                 self.best_architecture = arch_with_best_bitscore
 
-    def get_sequence(self, fasta_dict):
-        return fasta_dict[self.name]
-
     def is_arch_with_ival_null(self):
         return True in [x.is_ival_null() for x in self.architectures]
 
-    def write_fasta(self, outdir: str, fasta_dict: dict):
-        fasta_sequence = self.get_fasta(fasta_dict)
+    def write_fasta(self, outdir: str):
         with open(outdir + self.name + '.fa', 'w') as o_fasta:
-            o_fasta.write(fasta_sequence)
+            o_fasta.write(self.get_fasta())
 
-    def get_fasta(self, fasta_dict: dict) -> str:
+    def get_fasta(self) -> str:
         header = '>' + self.name + '\n'
-        sequence_ori = fasta_dict[self.name]
-        sequence = '\n'.join([sequence_ori[x:x + 80] for x in range(0, len(sequence_ori), 80)])
+        sequence = '\n'.join([self.sequence[x:x + 80] for x in range(0, len(self.sequence), 80)])
 
         return header + sequence + '\n'
 
@@ -479,6 +475,9 @@ class Protein:
 
         protein_id = etree.SubElement(protein_element, 'id')
         protein_id.text = self.name
+
+        sequence = etree.SubElement(protein_element, 'sequence')
+        sequence.text = self.sequence[:5]
 
         sequence_length = etree.SubElement(protein_element, 'sequence_length')
         sequence_length.text = str(self.length)
