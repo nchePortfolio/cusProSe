@@ -317,7 +317,8 @@ class PlotProt:
             )
         )
 
-    def plot_text(self, domain, ax_text):
+    @staticmethod
+    def plot_text(domain, ax_text):
         domain_name = r'$\bf{' + domain.qname.replace('_', '\_') + ':' + '}$'
         text = ' i_val = {}, score = {}'.format(domain.dom_ival, domain.dom_score)
         ax_text.text(0.055, 0.35, domain_name + text, fontsize=9)
