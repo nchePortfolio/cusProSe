@@ -17,6 +17,8 @@ def main():
     logger = logHandler.Logger(name='main', outpath=param.outdirname)
     param.description()
 
+    sys.exit()
+
     iterhmmbuilder = pipeline.IterHmmBuilder(_input=param.fasta_fname, input_db=param.protdb, param=param)
     logger.title("Running iterHmmBuilder")
     iterhmmbuilder.run()
