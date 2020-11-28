@@ -146,13 +146,6 @@ class Match:
 
         @return: list
         """
-        # all_lists = [x.best_architecture.domain_names() for x in self.proteins]
-        #
-        # if all_lists:
-        #     return sorted(set([item for sublist in all_lists for item in sublist]))
-        # else:
-        #     return []
-
         all_lists = [x.list_domains() for x in self.proteins]
 
         if all_lists:
