@@ -26,7 +26,7 @@ def main():
                                    domains=rules.list_alldomains())
     hmmsearch.run()
     proteins = hmmsearch.get_proteins()
-    sys.exit()
+    # sys.exit()
 
     logger.title('Searching for possible domain architectures...')
     for protein in proteins:

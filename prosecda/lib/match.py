@@ -167,7 +167,7 @@ class Match:
         os.makedirs(outpath, exist_ok=True)
 
         pdf_pages = PdfPages(filename=outpath[:-1] + '.pdf')
-        self.logger.info('Creating plots for proteins matching {}:'.format(self.rule.name))
+        self.logger.title('Creating plots for proteins matching {}:'.format(self.rule.name))
 
         for protein in self.proteins:
             self.logger.info(' - {}'.format(protein.name))
@@ -255,7 +255,10 @@ class PlotProt:
                 self.plots[i]['axs_draw'][j].text(pos_from, 7, str(domain.env_from), fontsize=7, ha='right')
                 self.plots[i]['axs_draw'][j].text(pos_to, 7, str(domain.env_to), fontsize=7)
 
-                self.plot_text(domain=domain, ax_text=self.plots[i]['axs_text'][j])
+                # plots text to annote the domains
+                domain_name = r'$\bf{' + domain.qname.replace('_', '\_') + ':' + '}$'
+                text = ' i_val = {}, score = {}'.format(domain.dom_ival, domain.dom_score)
+                self.plots[i]['axs_text'][j].text(0.055, 0.35, domain_name + text, fontsize=9)
 
                 suptitle = self.plots[i]['title']
                 self.plots[i]['fig'].suptitle(suptitle, fontsize=12, fontweight='bold')
@@ -317,12 +320,6 @@ class PlotProt:
             )
         )
 
-    @staticmethod
-    def plot_text(domain, ax_text):
-        domain_name = r'$\bf{' + domain.qname.replace('_', '\_') + ':' + '}$'
-        text = ' i_val = {}, score = {}'.format(domain.dom_ival, domain.dom_score)
-        ax_text.text(0.055, 0.35, domain_name + text, fontsize=9)
-
     def save(self, pdf_pages=None, outpath=None):
         if pdf_pages:
             for i in self.plots:
@@ -330,5 +327,5 @@ class PlotProt:
                 plt.close(self.plots[i]['fig'])
         elif outpath:
             for i in self.plots:
-                self.plots[i]['fig'].savefig(outpath + self.plots[i]['title'] + '.png')
+                self.plots[i]['fig'].savefig(outpath + self.plots[i]['title'] + '.pdf')
                 plt.close(self.plots[i]['fig'])
