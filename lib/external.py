@@ -477,7 +477,7 @@ class Protein:
         protein_id.text = self.name
 
         sequence = etree.SubElement(protein_element, 'sequence')
-        sequence.text = self.sequence[:5]
+        sequence.text = self.sequence
 
         sequence_length = etree.SubElement(protein_element, 'sequence_length')
         sequence_length.text = str(self.length)
