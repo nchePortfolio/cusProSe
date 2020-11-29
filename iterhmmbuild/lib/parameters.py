@@ -62,7 +62,7 @@ def get_args():
 
     parser = argparse.ArgumentParser(description='Iterative building of hmm profiles')
     parser.add_argument("-fa", required=True, nargs="?",
-                        help="Sequence(s) used as first seed (fasta format)")
+                        help="Fasta file of sequence(s) used as first seed or directory containing such files")
     parser.add_argument("-protdb", required=True, nargs="?",
                         help="Sequences used to learn the hmm profile (fasta format)")
     parser.add_argument("-name", required=False, nargs="?", type=str,

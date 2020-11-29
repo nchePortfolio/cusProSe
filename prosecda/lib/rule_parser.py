@@ -8,6 +8,30 @@ import yaml
 import lib.logHandler as logHandler
 
 
+class Parser:
+    def __init__(self, input_filename: str, co_ival=None):
+        self.input_filename = input_filename
+        self.co_ival = co_ival
+        self.rules = parse_yaml(input_filename=input_filename, co_ival=co_ival)
+
+        self.logger = logHandler.Logger(name=__name__)
+
+    def description(self):
+        self.logger.title('Description of the rules')
+
+        for rule in self.rules:
+            rule.description()
+
+    def list_alldomains(self) -> list:
+        """
+
+        @return: A non-redundant list of all domain names in all rules
+        """
+        mx_format = [x.list_domains() for x in self.rules]
+
+        return sorted(set([val for sublist in mx_format for val in sublist]))
+
+
 def parse_yaml(input_filename: str, co_ival=None):
     """
     Parses yaml file rules. Reading of yaml file returns a dictionary.
@@ -20,7 +44,7 @@ def parse_yaml(input_filename: str, co_ival=None):
         - param: instance of parameters
     
     Return:
-        - list of Family_rules instances
+        - list of Rule instances
     """
     with open(input_filename, 'r') as input_file:
         yaml_data = yaml.load(input_file, Loader=yaml.FullLoader)
@@ -64,7 +88,7 @@ class Rule:
     def parse_mandatory(self) -> list:
         """
 
-        @return: a list of tuple (domain name, domain ival). A default ival value is assigned if none is provided.
+        @return: a list of Domain instances
         """
         mandatories = []
 
@@ -100,26 +124,30 @@ class Rule:
                 forbidden.append(domain)
 
             return forbidden
+
+    def list_domains(self) -> list:
+        """
+
+        @return: list of all domain names in the Rule (both mandatory and forbidden ones)
+        """
+        return [x.name for x in self.mandatory_domains] + [x.name for x in self.forbidden_domains]
             
     def description(self):
-        log = []
-        txt = '# Summary for the rule {}'.format(self.name)
-        log.append(txt)
-        log.append(len(txt)*'-')
-        log.append('Comment: {}'.format(self.comment))
-        log.append('Mandatories:')
+        subtitle = '# Summary for the rule {}'.format(self.name)
+        self.logger.info(subtitle)
+        self.logger.info(len(subtitle) * '-')
+        self.logger.info('Comment: {}'.format(self.comment))
+        self.logger.info('Mandatories:')
         for domain in self.mandatory_domains:
-            log.append(' - {} ({})'.format(domain.name, domain.ival))
-        log.append('Forbidden:')
+            self.logger.info(' - {} ({})'.format(domain.name, domain.ival))
+        self.logger.info('Forbidden:')
         if not self.forbidden_domains:
-            log.append(' - None')
+            self.logger.info(' - None')
         else:
             for domain in self.forbidden_domains:
-                log.append(' - {}'.format(domain.name))
-        log.append('')
+                self.logger.info(' - {}'.format(domain.name))
+        self.logger.info('')
         
-        return '\n'.join(log)
-
 
 class Domain:
     def __init__(self, name=None, ival=None):

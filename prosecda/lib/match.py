@@ -5,7 +5,7 @@ import matplotlib.gridspec as gridspec
 import matplotlib.patches as patches
 from matplotlib.backends.backend_pdf import PdfPages
 
-import prosecda.lib.rules as Rules
+import prosecda.lib.rule_parser as rule_parser
 from lib.external import Protein
 import lib.logHandler as logHandler
 
@@ -46,8 +46,6 @@ class Matches:
         @param proteins: list of external.Protein instances
         @return: None
         """
-        self.logger.info('Searching for proteins matching rules...')
-
         match = None
         for rule in rules:
             for protein in proteins:
@@ -73,11 +71,11 @@ class Matches:
         else:
             return []
 
-    def report(self, fasta_dict: dict):
+    def report(self):
         if self.list:
             os.makedirs(self.outdir, exist_ok=True)
             for match in self.list:
-                match.report(fasta_dict=fasta_dict, outdir=self.outdir)
+                match.report(outdir=self.outdir)
 
 
 def is_match(rule, protein):
@@ -118,7 +116,7 @@ class Match:
                'firebrick', 'greenyellow', 'mediumvioletred',
                'midnightblue', 'tan', 'rosybrown']
 
-    def __init__(self, rule: Rules.Rule):
+    def __init__(self, rule: rule_parser.Rule):
         """
 
         @param rule: instance of Rule
@@ -146,13 +144,6 @@ class Match:
 
         @return: list
         """
-        # all_lists = [x.best_architecture.domain_names() for x in self.proteins]
-        #
-        # if all_lists:
-        #     return sorted(set([item for sublist in all_lists for item in sublist]))
-        # else:
-        #     return []
-
         all_lists = [x.list_domains() for x in self.proteins]
 
         if all_lists:
@@ -160,19 +151,19 @@ class Match:
         else:
             return []
 
-    def report(self, fasta_dict: dict, outdir: str):
+    def report(self, outdir: str):
         self.set_colors()
 
         outpath = outdir + self.rule.name + '/'
         os.makedirs(outpath, exist_ok=True)
 
         pdf_pages = PdfPages(filename=outpath[:-1] + '.pdf')
-        self.logger.info('Creating plots for proteins matching {}:'.format(self.rule.name))
+        self.logger.title('Creating plots for proteins matching {}:'.format(self.rule.name))
 
         for protein in self.proteins:
             self.logger.info(' - {}'.format(protein.name))
 
-            protein.write_fasta(outdir=outpath, fasta_dict=fasta_dict)
+            protein.write_fasta(outdir=outpath)
             protein.write_xml(outdir=outpath, rule=self.rule)
             self.plot_protein_best_architecture(protein=protein, pdf_pages=pdf_pages)
             self.plot_protein_all_domains(protein=protein, outpath=outpath)
@@ -255,7 +246,10 @@ class PlotProt:
                 self.plots[i]['axs_draw'][j].text(pos_from, 7, str(domain.env_from), fontsize=7, ha='right')
                 self.plots[i]['axs_draw'][j].text(pos_to, 7, str(domain.env_to), fontsize=7)
 
-                self.plot_text(domain=domain, ax_text=self.plots[i]['axs_text'][j])
+                # plots text to annote the domains
+                domain_name = r'$\bf{' + domain.qname.replace('_', '\_') + ':' + '}$'
+                text = ' i_val = {}, score = {}'.format(domain.dom_ival, domain.dom_score)
+                self.plots[i]['axs_text'][j].text(0.055, 0.35, domain_name + text, fontsize=9)
 
                 suptitle = self.plots[i]['title']
                 self.plots[i]['fig'].suptitle(suptitle, fontsize=12, fontweight='bold')
@@ -317,11 +311,6 @@ class PlotProt:
             )
         )
 
-    def plot_text(self, domain, ax_text):
-        domain_name = r'$\bf{' + domain.qname.replace('_', '\_') + ':' + '}$'
-        text = ' i_val = {}, score = {}'.format(domain.dom_ival, domain.dom_score)
-        ax_text.text(0.055, 0.35, domain_name + text, fontsize=9)
-
     def save(self, pdf_pages=None, outpath=None):
         if pdf_pages:
             for i in self.plots:
@@ -329,5 +318,5 @@ class PlotProt:
                 plt.close(self.plots[i]['fig'])
         elif outpath:
             for i in self.plots:
-                self.plots[i]['fig'].savefig(outpath + self.plots[i]['title'] + '.png')
+                self.plots[i]['fig'].savefig(outpath + self.plots[i]['title'] + '.pdf')
                 plt.close(self.plots[i]['fig'])

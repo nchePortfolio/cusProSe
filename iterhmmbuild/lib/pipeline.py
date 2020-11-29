@@ -143,6 +143,12 @@ class IterHmmBuilder:
         self.output_hmm = self.param.outdirname + self.param.hmm_name + '.hmm'
         os.rename(hmmbuilder.output, self.output_hmm)
 
+        self.logger.title('Output files for {} HMM profile'.format(self.param.hmm_name))
+        self.logger.info('HMM profile file:   \t{}'.format(self.output_hmm))
+        self.logger.info('Fasta seed file:    \t{}'.format(self.output_fasta))
+        self.logger.info('Alignment seed file:\t{}'.format(self.output_muscle))
+        self.logger.info('')
+
     def merge_fasta(self, seed_filename: str, hits_fasta: list) -> None:
         """
         Function used to create the enriched fasta file after the hmmsearch scan. This enriched fasta file contains:

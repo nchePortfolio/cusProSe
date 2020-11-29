@@ -15,31 +15,34 @@ def main():
     logger = logHandler.Logger(name='prosecda', outpath=param.outdirname)
     param.description()
 
-    rules = rule_parser.parse_yaml(input_filename=param.yamlrules, co_ival=param.ival)
-    for rule in rules:
-        print(rule.description())
+    rules = rule_parser.Parser(input_filename=param.yamlrules, co_ival=param.ival)
+    rules.description()
 
     # Runs hmmsearch and gets hits from its output (.domtblout format)
     logger.title('Running hmmsearch...')
     hmmsearch = external.HmmSearch(input_hmm=param.hmmdb, input_db=param.proteome_filename,
                                    parameters=param, outdir=param.outdirname,
-                                   basename=os.path.basename(param.proteome_filename))
+                                   basename=os.path.basename(param.proteome_filename),
+                                   domains=rules.list_alldomains())
     hmmsearch.run()
     proteins = hmmsearch.get_proteins()
-
-    logger.title('Searching for possible domain architectures...')
-    for protein in proteins:
-        protein_architecture_path = path.Path(protein=protein)
-        protein_architecture_path.search()
-        protein.set_best_architecture()
 
     fasta_dict = seqio.get_fasta_dict(fasta_filename=param.proteome_filename,
                                       protein_ids=[x.name for x in proteins])
 
+    logger.title('Searching for possible domain architectures...')
+    for protein in proteins:
+        protein.sequence = fasta_dict[protein.name]
+        fasta_dict.pop(protein.name, None)  # remove protein.name key from fasta_dict
+
+        protein_architecture_path = path.Path(protein=protein)
+        protein_architecture_path.search()
+        protein.set_best_architecture()
+
     logger.title('Searching for proteins matching rules...')
     matches = matching.Matches(param=param)
-    matches.search(rules=rules, proteins=proteins)
-    matches.report(fasta_dict=fasta_dict)
+    matches.search(rules=rules.rules, proteins=proteins)
+    matches.report()
 
 
 if __name__ == '__main__':
