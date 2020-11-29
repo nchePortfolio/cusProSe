@@ -58,7 +58,7 @@ unzip cusProSe-x.x.x.zip
 
 If you downloaded the *.tar.gz* file:
 ```
-gunzip cusProSe-x.x.x.tar.gz | tar xvf
+gunzip tar xzvf cusProSe-x.x.x.tar.gz
 ```
 
 #### Go to the cusProSe directory
