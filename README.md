@@ -2,7 +2,7 @@
 
 A python library containing two main tools:
 1. iterhmmbuild: an HMM profile building based on iterative learning process from seed sequence and a fasta proteic database 
-2. prosecda: a specific protein search tool based on user-defined domain architecture
+2. prosecda: a specific protein search tool based on user-defined domain architecture.
 
 
 ## External dependencies
