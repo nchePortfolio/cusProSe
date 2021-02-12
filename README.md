@@ -58,7 +58,7 @@ unzip cusProSe-x.x.x.zip
 
 If you downloaded the *.tar.gz* file:
 ```
-gunzip tar xzvf cusProSe-x.x.x.tar.gz
+tar xzvf cusProSe-x.x.x.tar.gz
 ```
 
 #### Go to the cusProSe directory
@@ -68,6 +68,7 @@ cd cusProSe-x.x.x/
 ```
 
 #### Install 
+Make sure your virtual environment is activated and type the command below: 
 
 ```python
 python setup.py install
