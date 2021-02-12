@@ -1,6 +1,6 @@
 import setuptools as st
 
-packages = ['iterhmmbuild', 'iterhmmbuild.lib', 'prosecda', 'prosecda.lib', 'lib', 'scripts']
+packages = ['iterhmmbuild', 'iterhmmbuild.lib', 'prosecda', 'prosecda.lib', 'lib', 'scripts', 'prosecda.gui']
 
 st.setup(name='cusProSe',
          python_requires='>=3',
