@@ -8,6 +8,9 @@ A python library containing two main tools:
 
 
 ## External dependencies
+iterhmmbuild relies on three external tools: hmmer, muscle and usearch.
+The first two can be easily installed from the following commands:
+
 * [hmmer](http://hmmer.org/download.html) (tested with version 3.3)
 ``` bash
 sudo apt install hmmer
@@ -16,7 +19,27 @@ sudo apt install hmmer
 ``` bash
 sudo apt install muscle
 ```
-* [usearch](https://www.drive5.com/usearch/download.html) (tested with version v10.0.240)
+
+For usearch, you first need to download it here:
+[usearch](https://www.drive5.com/usearch/download.html) (tested with version v10.0.240)
+
+Next, you will have to rename it and make it accessible from anywhere in your system:
+``` bash
+# rename to usearch
+mv usearchXX.X.XXX_i86xxxx.gz usearch
+
+# make usearch executable
+chmod +x usearch
+
+# make usearch easily accessible
+mkdir ~/bin
+mv usearch ~/bin
+```
+
+Finally, copy the following line in your .bashrc file (or .bash_profile for macos users)
+``` bash
+export PATH=$PATH:~/bin 
+```
 
 
 ## Installation
