@@ -191,7 +191,7 @@ class Ruleframe(tk.LabelFrame):
 
 
 class Mainframe(tk.LabelFrame):
-    def __init__(self, master, width=600, height=400, bd=2):
+    def __init__(self, master, width=1000, height=680, bd=2):
         tk.LabelFrame.__init__(self, master, width=width, height=height, bd=bd,
                           bg='white', relief=tk.FLAT,
                           highlightbackground='black', highlightthickness=2,
@@ -201,7 +201,7 @@ class Mainframe(tk.LabelFrame):
 
     def initialize(self):
         self.configure_grid()
-        self.grid(padx=5, pady=5)
+        self.grid(padx=5, pady=5, sticky='nswe')
         self.grid_propagate(0)
 
         self.ruleframe = Ruleframe(master=self)

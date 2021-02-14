@@ -1,8 +1,10 @@
 # CustomProteinSearch
 
 A python library containing two main tools:
-1. iterhmmbuild: an HMM profile building based on iterative learning process from seed sequence and a fasta proteic database 
-2. prosecda: a specific protein search tool based on user-defined domain architecture.
+1. iterhmmbuild: an HMM profile building based on iterative learning process from seed sequence and a fasta proteic database
+![](./doc/iterhmmbuild/iterhmmbuild_pipeline.png)
+
+2. prosecda: a specific protein search tool based on user-defined domain architecture
 
 
 ## External dependencies
@@ -58,7 +60,7 @@ unzip cusProSe-x.x.x.zip
 
 If you downloaded the *.tar.gz* file:
 ```
-gunzip tar xzvf cusProSe-x.x.x.tar.gz
+tar xzvf cusProSe-x.x.x.tar.gz
 ```
 
 #### Go to the cusProSe directory
@@ -68,6 +70,7 @@ cd cusProSe-x.x.x/
 ```
 
 #### Install 
+Make sure your virtual environment is activated and type the command below: 
 
 ```python
 python setup.py install
