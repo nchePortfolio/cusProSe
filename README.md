@@ -1,7 +1,9 @@
 # CustomProteinSearch
 
 A python library containing two main tools:
-1. iterhmmbuild: an HMM profile building based on iterative learning process from seed sequence and a fasta proteic database 
+1. iterhmmbuild: an HMM profile building based on iterative learning process from seed sequence and a fasta proteic database
+![](./doc/iterhmmbuild/iterhmmbuild_pipeline.png)
+
 2. prosecda: a specific protein search tool based on user-defined domain architecture
 
 
