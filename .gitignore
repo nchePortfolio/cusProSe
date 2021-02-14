@@ -3,6 +3,7 @@ iterhmmbuild/datas/*
 */__pycache__/
 test.html
 venv
+env_debug
 .idea
 prosecda/datas/prosecda_*
 scripts/__pycache__/*.pyc
