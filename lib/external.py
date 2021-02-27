@@ -118,7 +118,7 @@ class HmmSearch:
         """
 
         @param input_hmm: hmm profile filename
-        @param input_db: name of the fasta to scan against the HMM profile for the enrichment process
+        @param input_db: name of the fasta to scan against the HMM profile
         @param parameters: Param instance
         @param outdir: output directory
         @param **kwargs: optional argument(s):
@@ -148,7 +148,6 @@ class HmmSearch:
 
     def run(self):
         """
-
         Method used to run hmmsearch.
 
         @return: None
@@ -204,8 +203,7 @@ def hmmfetch(hmmdb: str, keys: list, outdir: str) -> str:
 
 class HmmerDomtbl:
     """
-
-    Container used to describe any hmmer hit in a domtblout format from either hmmsearch or hmmscan.
+    Object used to describe any hmmer hit in a domtblout format from either hmmsearch or hmmscan.
 
     """
 
@@ -281,18 +279,24 @@ class HmmerDomtbl:
 
 
 class HmmerHits:
+    """
+    Object used to deal with domains that found a math with proteins.
+
+    The domains are HmmDomTbl instances that are added in a list after filtering or not. 
+    """
+
     def __init__(self, parameters: any):
         """
 
-        @param parameters: Param instance
+        @param parameters:  Param instance. Those parameters are from hmmmer paramaters (cval, ival, acc)
+                            and are used to filter hits.
         """
         self.param = parameters
         self.list = []
 
     def add(self, hit: HmmerDomtbl, filtering: bool):
         """
-
-        Adds an hit to self.list
+        Adds domain hits to self.list
 
         @param hit: HmmerDomtbl instance
         @param filtering: boolean, True if hit requires a filtering, False otherwise
@@ -307,7 +311,6 @@ class HmmerHits:
 
     def filter(self, hit: HmmerDomtbl):
         """
-
         Checks if hit pass the following criteria:
             - 1: hmm profile env length has to be >= to X % of the hmm profile length (X % = param.cov)
             - 2: if hit passes criteria 1, the other criteria are:
@@ -317,7 +320,7 @@ class HmmerHits:
                 else:
                     - hit doesn't pass the filter
 
-        @todo: replace (hit.env_to - hit.env_from + 1) by (hit.hmm_to - hit.hmm_from + 1)
+        @TODO: replace (hit.env_to - hit.env_from + 1) by (hit.hmm_to - hit.hmm_from + 1)
 
         @param hit: HmmerDomtbl instance
         @return: boolean, True if hmmer hit pass criteria, False otherwise
@@ -332,6 +335,10 @@ class HmmerHits:
         return is_relevant
 
     def get_dict(self) -> dict:
+        """ 
+        Returns a dictionary with protein names (tname) as keys
+        and a list of their matching domains (HmmDomTbl instances) as values. 
+        """
         _dict = {}
         for x in self.list:
             if x.tname not in _dict:
@@ -342,6 +349,9 @@ class HmmerHits:
         return _dict
 
     def get_proteins(self) -> list:
+        """
+        Returns a list of Protein instances 
+        """
         _dict = self.get_dict()
         proteins = []
         for protein_name in sorted(_dict):
@@ -351,8 +361,9 @@ class HmmerHits:
 
     def get_fasta(self, fasta_dict: dict) -> list:
         """
+        Returns a list of fasta hits.
 
-        @param fasta_dict:
+        @param fasta_dict: dictionary with protein names as keys and sequence as values
         @return: list of fasta hits
         """
         fasta_hits = []
@@ -368,9 +379,10 @@ class HmmerHits:
 
     def write_fasta(self, fasta_dict: dict, output: str):
         """
+        Writes fasta file from a dictionary in a given output file.
 
-        @param fasta_dict: dictionary (keys=protein ids, values=sequences)
-        @param output: string of the output filename
+        @param fasta_dict: dictionary with protein names as keys and sequence as values
+        @param output: output filename
         @return: None
         """
         with open(output, 'w+') as enriched_fasta_file:
@@ -385,8 +397,15 @@ class HmmerHits:
 
 class Protein:
     """
+    Object used to deal with proteins and their domain architecture.
 
-    Container to deal with protein
+    A Protein object has multiple attributes:
+        - a name
+        - domain(s)
+        - architectures (a list of possible domain architectures if some domain overlaps)
+        - a best architecture (the best scored doamin architecture if multiple architectures exist)
+        - a length
+        - a sequence of amino acids
 
     """
     def __init__(self, name: str, domains: list, check_duplicates=False):
@@ -410,6 +429,10 @@ class Protein:
 
     def rm_duplicates(self, domains: list) -> list:
         """
+        Method used to remove redundant domains if exist.
+        Domains are considered redundant if they have the same length and same ival.
+
+        @TODO: check if really functional
 
         @param domains: list of HmmDomTbl instances
         @return: list of non-redundant domains
@@ -433,6 +456,11 @@ class Protein:
 
     @staticmethod
     def is_duplicate(domain_i: HmmerDomtbl, domain_j: HmmerDomtbl):
+        """ 
+        Compares two parameteres between two domains: length and ival 
+
+        Returns true if parameters are equal, false otherwise.
+        """
         flag = False
         if domain_i.dom_ival == domain_j.dom_ival:
             if domain_i.env_from == domain_j.env_from and domain_i.env_to == domain_j.env_to:
@@ -441,9 +469,26 @@ class Protein:
         return flag
 
     def list_domains(self):
+        """ 
+        Returns a list of the domain names.
+        """
         return [x.qname for x in self.domains]
 
     def set_best_architecture(self):
+        """ 
+        Assigns 'best_architecture' attribute with the most likely domain architecture for the protein.
+
+        For each possible domain architecture of the protein, a score is computed in order to define 
+        the most likely domain architecture. By default, the hmmer ival value of each domain in a given
+        architecture is used as follow to define the score: 
+            - sum([-np.log(x.dom_ival) for x in self.domains])
+
+        However, some domain ival can have a value of 0. which prohibits the log score computation.
+        If any domain in a given protein architecture have an ival equal to 0. then the bit score is 
+        used instead. In that scenario, the most likely architecture is the one with the highest 
+        bit score defined as follow:
+            - sum([x.dom_score for x in self.domains]).
+        """
         if not self.best_architecture:
             if not self.is_arch_with_ival_null():
                 arch_with_best_logscore = sorted([(x, x.get_logscore()) for x in self.architectures], key=lambda x: x[1])[-1][0]
@@ -453,6 +498,9 @@ class Protein:
                 self.best_architecture = arch_with_best_bitscore
 
     def is_arch_with_ival_null(self):
+        """ 
+        Returns True if there is an architecture with a domain ival = 0., false otherwise.
+        """
         return True in [x.is_ival_null() for x in self.architectures]
 
     def write_fasta(self, outdir: str):
@@ -470,7 +518,6 @@ class Protein:
             o_xml.write(self.get_xml(rule=rule))
 
     def get_xml(self, rule: Rule):
-
         protein_element = etree.Element('protein')
 
         protein_id = etree.SubElement(protein_element, 'id')
@@ -529,6 +576,10 @@ class Protein:
 
 
 class Architecture:
+    """
+    Object used to describe a domain architecture of a protein.
+
+    """
     def __init__(self, _id: str, domains: list):
         self._id = _id
         self.domains = domains
@@ -537,21 +588,18 @@ class Architecture:
 
     def domain_names(self) -> list:
         """
-
         @return: list of domain names
         """
         return [x.qname for x in self.domains]
 
     def get_logscore(self) -> float:
         """
-
         @return: sum of -log(all domains ival)
         """
         return sum([-np.log(x.dom_ival) for x in self.domains])
 
     def get_bitscore(self) -> float:
         """
-
         @return: sum of domain's score
         """
         return sum([x.dom_score for x in self.domains])

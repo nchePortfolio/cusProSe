@@ -18,13 +18,24 @@ def main():
     rules = rule_parser.Parser(input_filename=param.yamlrules, co_ival=param.ival)
     rules.description()
 
-    # Runs hmmsearch and gets hits from its output (.domtblout format)
+
+    """ Runs hmmsearch and gets hits from its output (.domtblout format) """
     logger.title('Running hmmsearch...')
-    hmmsearch = external.HmmSearch(input_hmm=param.hmmdb, input_db=param.proteome_filename,
-                                   parameters=param, outdir=param.outdirname,
-                                   basename=os.path.basename(param.proteome_filename),
-                                   domains=rules.list_alldomains())
+
+    # create an HmmSearch instance
+    hmmsearch = external.HmmSearch(
+        input_hmm=param.hmmdb,
+        input_db=param.proteome_filename,
+        parameters=param,
+        outdir=param.outdirname,
+        basename=os.path.basename(param.proteome_filename),
+        domains=rules.list_alldomains()
+    )
+
+    # run hmmsearch
     hmmsearch.run()
+
+    # retrieve proteins
     proteins = hmmsearch.get_proteins()
 
     fasta_dict = seqio.get_fasta_dict(fasta_filename=param.proteome_filename,
