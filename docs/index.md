@@ -1,17 +1,15 @@
-# Welcome to MkDocs
+# Welcome to CustomProteinSearch
+<figure>
+    <img src="./img/cusprose_scheme.png"
+      alt="Overview of the CusProSe package functionalities">
+    <figcaption>
+<b>Figure 1: Overview of the CusProSe package functionalities</b> 
+    </figcaption>
+</figure>
+<!-- ![](./img/cusprose_scheme.png) -->
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+CustomProteinSearch is a python package containing two independent but complementary programs whose overall objective is to help users to search for specific proteins of interest based on their domain composition: ** IterHMMBuild ** and ** ProSeCDA **.
 
-## Commands
+<b>IterHMMBuild</b> is an iterative search method based on the hmmer program, the aim of which is to provide users with a representative HMM protein profile of interest constructed by an iterative enrichment process starting from a small initial set of related protein sequences.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+<b>ProSeCDA</b> is a tool that allows to search in a given protein database multiple proteins of interest defined by a user-specified set of domains.

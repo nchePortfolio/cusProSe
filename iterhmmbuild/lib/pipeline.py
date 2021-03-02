@@ -226,7 +226,7 @@ class Convergence:
 
         number_diff = self.number_iter_j - self.number_iter_i
 
-        if abs(number_diff) == self.delta:
+        if abs(number_diff) <= self.delta:
             self.counter += 1
             self.logger.info('')
             self.logger.info('The difference in sequence number is equal to {}, incrementing convergence counter to {}'.format(str(self.delta), str(self.counter)))

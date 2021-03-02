@@ -70,7 +70,7 @@ def get_args():
     parser.add_argument("-out", required=False, nargs="?", default='./', type=str,
                         help="Output directory")
     parser.add_argument("-id", required=False, default=0.9, type=float,
-                        help="Sequence identity threshold to remove redundancy in seeds'sequences")
+                        help="Sequence identity threshold to remove redundancy in seeds'sequences (0.9)")
     parser.add_argument("-cov", required=False, default=0.0, type=float,
                         help="Minimum percentage of coverage alignment between hmm hit and hmm profile (0.0)")
     parser.add_argument("-cval", required=False, default=0.01, type=float,
