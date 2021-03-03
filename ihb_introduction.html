@@ -76,16 +76,14 @@
     </li>
     </ul>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="ihb_usage.html">Usage</a>
+                    <li class="toctree-l1"><a class="reference internal" href="ihb_usage.html">Usage guideline</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Prosecda</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="psd_introduction.html">Introduction</a>
+                    <li class="toctree-l1"><a class="reference internal" href="psd_introduction.html">Overall procedure</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="psd_description.html">Description</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="psd_usage.html">Usage</a>
+                    <li class="toctree-l1"><a class="reference internal" href="psd_usage.html">Usage guideline</a>
                     </li>
                 </ul>
       </div>
@@ -140,7 +138,7 @@
 <h2 id="iterhmmbuild-procedure-step-by-step">IterHMMBuild procedure step by step<a class="headerlink" href="#iterhmmbuild-procedure-step-by-step" title="Permanent link">#</a></h2>
 <h3 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">#</a></h3>
 <p>Two inputs are required for IterHMMBuild.</p>
-<p>The first input is either a fasta file with at least one protein sequence (Figure xxx) OR a directory location where multiple individual fasta files are stored (Figure xxx). In the first case, the output will contain an HMM profile representative of the sequences in the fasta file given as input; if a directory is given as input then the HMM profile in the output will be a concatenation of HMM profiles, each corresponding to the fasta files present in the directory.</p>
+<p>The first input is either a fasta file with at least one protein sequence (Figure 2) OR a directory location where multiple individual fasta files are stored (Figure 1). In the first case, the output will contain an HMM profile representative of the sequences in the fasta file given as input; if a directory is given as input then the HMM profile in the output will be a concatenation of HMM profiles, each corresponding to the fasta files present in the directory.</p>
 <p>The second input a fasta file of protein database used to enrich initial protein sequence(s) of interest.</p>
 <h3 id="hmm-building-step">HMM building step<a class="headerlink" href="#hmm-building-step" title="Permanent link">#</a></h3>
 <p>The HMM building is a two-step procedure: a multiple sequence alignment is performed on the input sequences using muscle and the hmmbuild command from hmmer is then used to build the HMM profile from this alignment. However, at the first iteration the usearch command is performed on the input sequences to ensure that thoses sequences share no more than 90% (default value) of identity.</p>
@@ -172,7 +170,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ihb_usage.html" class="btn btn-neutral float-right" title="Usage">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="ihb_usage.html" class="btn btn-neutral float-right" title="Usage guideline">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="installation.html" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
