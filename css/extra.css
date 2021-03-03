@@ -28,19 +28,19 @@ pre {
     font-size: 12px;
 }
 
-table {
+table.mytable {
     width: 100%;
     margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
 }
 
-th {
+.t-header {
     border-bottom: solid black 0.25px !important;
 
 }
 
-th, td {
+.t-header, .t-data {
     padding: 10px 5px 10px 5px;
     vertical-align: middle;
 }
