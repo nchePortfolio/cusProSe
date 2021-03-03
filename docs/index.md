@@ -3,10 +3,9 @@
     <img src="./img/cusprose_scheme.png"
       alt="Overview of the CusProSe package functionalities">
     <figcaption>
-<b>Figure 1: Overview of the CusProSe package functionalities</b> 
+<b id="fig-1">Figure 1: Overview of the CusProSe package functionalities</b> 
     </figcaption>
 </figure>
-<!-- ![](./img/cusprose_scheme.png) -->
 
 CustomProteinSearch is a python package containing two independent but complementary programs whose overall objective is to help users to search for specific proteins of interest based on their domain composition: ** IterHMMBuild ** and ** ProSeCDA **.
 

@@ -15,9 +15,9 @@ st.setup(
         ],
         entry_points={
             'console_scripts': [
-                'run_prosecda=prosecda.main:main',
+                'prosecda=prosecda.main:main',
                 'create_rules=prosecda.gui.create_rules:main',
-                'run_iterhmmbuild=iterhmmbuild.main:main',
+                'iterhmmbuild=iterhmmbuild.main:main',
                 'create_hmmdb=scripts.concat2hmmdb:main'
                 ]
             }

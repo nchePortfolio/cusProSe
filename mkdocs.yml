@@ -4,11 +4,10 @@ nav:
     - Installation: installation.md
     - Iterhmmbuild:
       - Overall procedure: ihb_introduction.md
-      - Usage: ihb_usage.md
+      - Usage guideline: ihb_usage.md
     - Prosecda:
-      - Introduction: psd_introduction.md
-      - Description: psd_description.md
-      - Usage: psd_usage.md
+      - Overall procedure: psd_introduction.md
+      - Usage guideline: psd_usage.md
 
 theme: readthedocs
 markdown_extensions:
@@ -18,4 +17,3 @@ markdown_extensions:
         permalink: "#"
 use_directory_urls: false
 extra_css: [css/extra.css]
-  # - css/extra.css
