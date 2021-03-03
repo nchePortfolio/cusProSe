@@ -44,3 +44,18 @@ table.mytable {
     padding: 10px 5px 10px 5px;
     vertical-align: middle;
 }
+
+img.align-right {
+    width: 45%;
+    float: right;
+}
+
+table.t-description {
+    width: 100%;
+    margin-top: -8px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+

@@ -65,6 +65,14 @@
     <li class="toctree-l2"><a class="reference internal" href="#running-iterhmmbuild">Running IterHMMBuild</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#output-of-iterhmmbuild">Output of IterHMMBuild</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#output-content-from-a-single-fasta-file-used-as-input">Output content from a single fasta file used as input</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#output-content-from-a-directory-with-multiple-fasta-files-used-as-input">Output content from a directory with multiple fasta files used as input</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#parameters-of-iterhmmbuild">Parameters of IterHMMBuild</a>
     </li>
     </ul>
                     </li>
@@ -127,7 +135,7 @@
 └── mgg_70-15_8.fasta
 </pre>
 
-<p>All fasta files in the <code>inputs/</code> directory contain sequences of a three different protein domains. There is also the <em>magnaporthe orizae</em> proteome (mgg_70-15_8.fasta) that will be used as the protein database for the examples below.</p>
+<p>All fasta files in the <code>inputs/</code> directory contain sequences of three different protein domains. There is also the <em>magnaporthe orizae</em> proteome (mgg_70-15_8.fasta) that will be used as the protein database for the examples below.</p>
 <h2 id="running-iterhmmbuild">Running IterHMMBuild<a class="headerlink" href="#running-iterhmmbuild" title="Permanent link">#</a></h2>
 <p>If you want to run IterHMMBuild in order to build an HMM profile representing the A domain, type in the terminal:</p>
 <pre><code class="language-bash">iterhmmbuild -fa inputs/A.fa -protdb mgg_70-15_8.fasta
@@ -138,73 +146,70 @@
 <h2 id="output-of-iterhmmbuild">Output of IterHMMBuild<a class="headerlink" href="#output-of-iterhmmbuild" title="Permanent link">#</a></h2>
 <p>After running IterHMMBuild an output directory will be generated in the following generic format: 
 <code>iterhmmbuild_year-month-day_hour-min-sec/</code></p>
-<p>This directory content generated from <code>A.fa</code> used as input will be as follow:</p>
+<h3 id="output-content-from-a-single-fasta-file-used-as-input">Output content from a single fasta file used as input<a class="headerlink" href="#output-content-from-a-single-fasta-file-used-as-input" title="Permanent link">#</a></h3>
+<p>The directory content generated from <code>A.fa</code> used as input will be as follow:</p>
 <pre><b>iterhmmbuild_2020-10-29_13-13-04/</b>
 ├── A.hmm
 ├── A_seed.clw
 ├── A_seed.fa
 ├── info.log
-├── <b>iter_1</b>
-│   ├── A_enriched_nr.fasta
-│   ├── A_nr.clw
-│   ├── A_nr.domtblout
-│   ├── A_nr.fa
-│   └── A_nr.hmm
+├── <b>iter_1/</b>
+├── <b>iter_2/</b>
 ├── <b>...</b>
-└── <b>iter_6</b>
-    ├── A_enriched_nr.clw
-    ├── A_enriched_nr.domtblout
-    ├── A_enriched_nr.fasta
-    └── A_enriched_nr.hmm
+└── <b>iter_6/</b>
 </pre>
 
-<p><br>
-The table below describes the content of the output directory:</p>
-<table class="mytable">
+<p>The three main files of interest are:</p>
+<table class="t-description">
     <tr>
-        <th class="t-header">File name</th>
-        <th class="t-header">Description</th>
-    </tr>
-    <tr>
-        <td class="t-data">A.hmm</td> 
+        <td class="t-data"><b>A.hmm</b></td> 
         <td class="t-data">Final HMM profile</td> 
     </tr>
     <tr>
-        <td class="t-data">A_seed.fa</td> 
+        <td class="t-data"><b>A.seed.clw</b></td> 
         <td class="t-data">Final sequences used to build A.hmm</td> 
     </tr>
     <tr>
-        <td class="t-data">A_seed.clw</td> 
+        <td class="t-data"><b>A.seed.fa</b></td> 
         <td class="t-data">Multiple alignment (clustal W format) of A_seed.fa</td> 
     </tr>
-    <tr>
-        <td class="t-data">iter_1/A_nr.fa</td> 
-        <td class="t-data">Non redundant sequences coming from usearch applied on the input A.fa 
-        (see <a href="./ihb_introduction.html#hmm-building-step">IterHMMBuild procedure</a>)
-        </td>
-    </tr>
-    <tr>
-        <td class="t-data">iter_1/A_nr.clw</td> 
-        <td class="t-data">Multiple alignment of sequences in A_nr.fa
-        </td>
-    </tr>
-    <tr>
-        <td class="t-data">iter_1/A_nr.hmm</td> 
-        <td class="t-data">HMM profile built with A_nr.clw as input
-        </td>
-    </tr>
-    <tr>
-        <td class="t-data">iter_1/A_nr.domtblout</td> 
-        <td class="t-data">Output file of the hmmsearch command
-        </td>
-    </tr>
-    <tr>
-        <td class="t-data">iter_1/A_enriched_nr.fasta</td> 
-        <td class="t-data">Non redundant sequences coming from homologous sequences identified
-        with hmmsearch and initial sequences in A.fa 
-        </td>
-    </tr>
 </table>
+
+<p><code>info.log</code> is a log summary of the computation. The subdirectories <code>iter_i/</code> contains files obtained at each iteration and are described in section <a href="./ihb_introduction.html#outputs">Overall procedure</a>.</p>
+<h3 id="output-content-from-a-directory-with-multiple-fasta-files-used-as-input">Output content from a directory with multiple fasta files used as input<a class="headerlink" href="#output-content-from-a-directory-with-multiple-fasta-files-used-as-input" title="Permanent link">#</a></h3>
+<p>The directory content generated from <code>inputs/</code> will be a list of subdirectories such as the output described above. You will find at its root the file <code>hmm_database.hmm</code>, a concatenation of the HMM profiles of protein domains used as inputs. </p>
+<pre><b>iterhmmbuild_2021-03-02_12-39-38</b>
+├── hmm_database.hmm
+├── info.log
+├── <b>A</b>
+│   ├── A.hmm
+│   ├── A_seed.clw
+│   └── A_seed.fa
+├── <b>KS</b>
+│   ├── KS.hmm
+│   ├── KS_seed.clw
+│   └── KS_seed.fa
+└── <b>PP</b>
+    ├── PP.hmm
+    ├── PP_seed.clw
+    └── PP_seed.fa
+</pre>
+
+<h2 id="parameters-of-iterhmmbuild">Parameters of IterHMMBuild<a class="headerlink" href="#parameters-of-iterhmmbuild" title="Permanent link">#</a></h2>
+<pre>
+<code class="language-bash">
+  -fa [FA]          Fasta file of sequence(s) used as first seed or directory containing such files
+  -protdb [PROTDB]  Sequences used to learn the hmm profile (fasta format)
+  -name [NAME]      Name for the HMM profile (fasta name by default).
+  -out [OUT]        Output directory
+  -id ID            Sequence identity threshold to remove redundancy in seed sequences (0.9)
+  -cov COV          Minimum percentage of coverage alignment between hmm hit and hmm profile (0.0)
+  -cval CVAL        hmmer conditional e-value cutoff (0.01)
+  -ival IVAL        hmmer independant e-value cutoff (0.01)
+  -acc ACC          hmmer mean probability of the alignment accuracy between each residues of the
+                    target and the corresponding hmm state (0.6)
+</code>
+</pre>
               
             </div>
           </div>
