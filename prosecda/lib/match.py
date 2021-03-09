@@ -157,7 +157,7 @@ class Match:
         outpath = outdir + self.rule.name + '/'
         os.makedirs(outpath, exist_ok=True)
 
-        pdf_pages = PdfPages(filename=outpath[:-1] + '.pdf')
+        pdf_pages = PdfPages(filename=outpath + 'all_' + self.rule.name + '.pdf')
         self.logger.title('Creating plots for proteins matching {}:'.format(self.rule.name))
 
         for protein in self.proteins:
@@ -248,7 +248,7 @@ class PlotProt:
 
                 # plots text to annote the domains
                 domain_name = r'$\bf{' + domain.qname.replace('_', '\_') + ':' + '}$'
-                text = ' i_val = {}, score = {}'.format(domain.dom_ival, domain.dom_score)
+                text = ' e-value = {}, score = {}'.format(domain.dom_ival, domain.dom_score)
                 self.plots[i]['axs_text'][j].text(0.055, 0.35, domain_name + text, fontsize=9)
 
                 suptitle = self.plots[i]['title']
