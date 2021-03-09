@@ -59,3 +59,14 @@ table.t-description {
     border: none;
 }
 
+.fig-prosecda {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 80%;
+
+}
+
+sup {
+    margin-left: 2px;
+}

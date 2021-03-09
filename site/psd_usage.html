@@ -68,6 +68,30 @@
                     <li class="toctree-l1"><a class="reference internal" href="psd_introduction.html">Overall procedure</a>
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="psd_usage.html">Usage guideline</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#inputs">Inputs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#rules-creation-to-model-proteins-of-interest">Rules creation to model proteins of interest</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#edit-rules-from-gui">Edit rules from GUI</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#running-prosecda">Running ProSeCDA</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#output-of-prosecda">Output of ProSeCDA</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#global-architecture">Global architecture</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pdf-files">PDF files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#xml-file">XML file</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                     </li>
                 </ul>
       </div>
@@ -106,7 +130,144 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="prosecda-usage-guideline">ProSeCDA usage guideline<a class="headerlink" href="#prosecda-usage-guideline" title="Permanent link">#</a></h1>
+<p>This tool allows you to detect in a proteome proteins matching specific given domain architectures
+rules.</p>
+<h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">#</a></h2>
+<p>Three input files are required:</p>
+<ul>
+<li>a protein database in a fasta format the user wants to scan to identify proteins of interests</li>
+<li>an HMM domain profile database use to annotate proteins </li>
+<li>a YAML file in which proteins of interest are described based on the presence/absence of specific domains</li>
+</ul>
+<h3 id="rules-creation-to-model-proteins-of-interest">Rules creation to model proteins of interest<a class="headerlink" href="#rules-creation-to-model-proteins-of-interest" title="Permanent link">#</a></h3>
+<p>The proteins the user is interested in must be described in a file containing simple rules defining for each protein of interest which domains are mandatory and/or which one are forbidden. An E-value (corresponding to the independent domain E-value from hmmsearch) can also be specified for each mandatory domains. In that case, a mandatory domain must match a sequence with an E-value at least below the one specified. If no E-value is defined for mandatory domains, an E-value of 0.01 is used by default.</p>
+<h4 id="edit-rules-from-gui">Edit rules from GUI<a class="headerlink" href="#edit-rules-from-gui" title="Permanent link">#</a></h4>
+<p>The file in which rules are edited must respect a specific syntax in a YAML format. To make it simpler, a Graphical User Interface (GUI) has been implemented. You can access it through the command <code>create_rules</code></p>
+<figure class="fig-prosecda">
+    <img src="./prosecda/images/gui_rules_1.png"
+      alt="Graphical User Interface to edit rules.">
+    <figcaption>
+<b>Figure 3: Graphical User Interface to edit rules</b> 
+    </figcaption>
+</figure>
+
+<p>As shown in the above image, a rule can be defined by five different inputs:</p>
+<ul>
+<li><code>Name</code> (required): category/family name the proteins that'll match the rule will be assigned to</li>
+<li><code>Comment</code> (optional): can be used to describe the rule</li>
+<li><code>Mandatory</code> (required): domain name the protein must contain</li>
+<li><code>E-value</code> (optional): minimal E-value the associated domain must match a sequence (0.01 if not specified)</li>
+<li><code>Forbidden</code> (optional): domain name the protein must not contain</li>
+</ul>
+<p>Once you have added all your mandatory/forbidden domains describing the domain architecture your proteins of interest must match, click on <code>Add rule to the list</code> to validate the rule. You'll see it listed in the 'Rule list' panel. Repeat the procedure to create as many rules as you want. </p>
+<p>Once all your desired rules are defined, click on <code>Save rules</code> to save them in a YAML file. This YAML file will look like the one described below:</p>
+<pre><code class="language-yaml">PKS:
+ COMMENT: Polyketide Synthase
+ CONDITION:
+  mandatory:
+  - KS
+  - AT
+  - PP-binding, 0.0001
+  forbidden:
+  - C
+
+PKS-like:
+ COMMENT: Polyketide Synthase like
+ CONDITION:
+  mandatory:
+  - KS
+  - AT
+  forbidden:
+
+PKS_type3.0:
+ COMMENT: Polyketide Syntase type III
+ CONDITION:
+  mandatory:
+  - CHS_like
+  forbidden:
+
+</code></pre>
+<h2 id="running-prosecda">Running ProSeCDA<a class="headerlink" href="#running-prosecda" title="Permanent link">#</a></h2>
+<p>Input examples are available in <code>cusProSe-x.x.x/prosecda/datas/</code></p>
+<p>The command below will search in the <em>f. fujikuroi</em> proteomes all proteins matching the rules defined in rules.yaml from the HMM profile database databaseKGall_terpenes_selec.hmm:</p>
+<pre><code class="language-bash">run_prosecda -proteome fusarium_fujikuroi_IMI58289_V2_protein.fasta -hmmdb databaseKGall_terpenes_selec.hmm -rules rules.yaml
+</code></pre>
+<h2 id="output-of-prosecda">Output of ProSeCDA<a class="headerlink" href="#output-of-prosecda" title="Permanent link">#</a></h2>
+<h3 id="global-architecture">Global architecture<a class="headerlink" href="#global-architecture" title="Permanent link">#</a></h3>
+<p>An output directory will be generated in a generic format: 
+<code>prosecda_year-month-day_hour-min-sec/</code></p>
+<p>This directory content will be like the one below:</p>
+<pre><b>prosecda_2020-10-29_15-55-24/</b></font>
+├── fusarium_fujikuroi_IMI58289_V2_protein.domtblout
+├── info.log
+└── <b>matches/</b></font>
+ </pre>
+
+<p>with:</p>
+<ul>
+<li><code>fusarium_fujikuroi_IMI58289_V2_protein.domtblout</code>: output file of hmmsearch</li>
+<li><code>matches/</code>: directory containing different output files for rules matching proteins</li>
+</ul>
+<p>The content of <code>matches/</code> directory is as follow:</p>
+<pre>
+<b>matches/</b></font>
+    ├── <b>DMATS/</b></font>
+    │   ├── XP_023429775.1.fa
+    │   ├── XP_023429775.1.xml
+    │   ├── XP_023436063.1.fa
+    │   └── XP_023436063.1.xml
+    ├── DMATS.pdf
+    ├── <b>Ent_kaurene_synthase/</b></font>
+    │   ├── XP_023431478.1.fa
+    │   └── XP_023431478.1.xml
+    ├── Ent_kaurene_synthase.pdf
+    ├── <b>NRPS-PKS/</b></font>
+    │   ├── XP_023427367.1.fa
+    │   ├── XP_023427367.1.xml
+    │   ├── XP_023429959.1.fa
+    │   ├── XP_023429959.1.xml
+    │   ├── XP_023434892.1.fa
+    │   ├── XP_023434892.1.xml
+    │   ├── XP_023435338.1.fa
+    │   └── XP_023435338.1.xml
+    └── NRPS-PKS.pdf
+</pre>
+
+<p>with:</p>
+<ul>
+<li>DMATS, Ent_kaurene_synthase and NRPS-PKS: subdirectories containing output files for proteins matching the given rule</li>
+<li>protein.fa: protein sequence in fasta file format</li>
+<li>protein.xml: informations about the protein and its domain(s)</li>
+<li>pdf files: graphical representation of the most likely domain architecture of the protein</li>
+</ul>
+<h3 id="pdf-files">PDF files<a class="headerlink" href="#pdf-files" title="Permanent link">#</a></h3>
+<p>Example of the output pdf file for XP_023431478.1 in NRPS-PKS:</p>
+<figure >
+    <img src="./prosecda/images/xp_023427367.1.png"
+      alt="IterHMMBuild pipeline overview.">
+    <figcaption>
+<b>Output</b> 
+    </figcaption>
+</figure>
+
+<h3 id="xml-file">XML file<a class="headerlink" href="#xml-file" title="Permanent link">#</a></h3>
+<pre><code class="language-xml">&lt;protein&gt;
+  &lt;id&gt;XP_023431478.1&lt;/id&gt;
+  &lt;sequence_length&gt;952&lt;/sequence_length&gt;
+  &lt;class_name&gt;Ent_kaurene_synthase&lt;/class_name&gt;
+  &lt;domain_architecture&gt;
+    &lt;domain name=&quot;ent_kaurene&quot;&gt;
+      &lt;cval&gt;0.0&lt;/cval&gt;
+      &lt;ival&gt;0.0&lt;/ival&gt;
+      &lt;score&gt;1074.3&lt;/score&gt;
+      &lt;start&gt;10&lt;/start&gt;
+      &lt;end&gt;952&lt;/end&gt;
+      &lt;domain_length&gt;943&lt;/domain_length&gt;
+    &lt;/domain&gt;
+  &lt;/domain_architecture&gt;
+&lt;/protein&gt;
+</code></pre>
               
             </div>
           </div>

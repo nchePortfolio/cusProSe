@@ -73,12 +73,12 @@ Click here for the latest release:
 
 ### Uncompress the archive
 If you downloaded the *.zip* file:
-```
+```bash
 unzip cusProSe-x.x.x.zip
 ```
 
 If you downloaded the *.tar.gz* file:
-```
+```bash
 tar xzvf cusProSe-x.x.x.tar.gz
 ```
 

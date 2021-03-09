@@ -1,4 +1,4 @@
-# Usage guideline
+# IterHMMBuild usage guideline
 Two inputs are required for IterHMMBuild, both in a fasta format:
 
 * either a fasta file with at least one protein sequence OR a directory location where multiple individual fasta files are stored
@@ -61,7 +61,7 @@ The three main files of interest are:
     </tr>
 </table>
 
-`info.log` is a log summary of the computation. The subdirectories `iter_i/` contains files obtained at each iteration and are described in section <a href="./ihb_introduction.html#outputs">Overall procedure</a>.
+`info.log` is a log summary of the computation. The subdirectories `iter_i/` contain files obtained at each iteration and are described in section <a href="./ihb_introduction.html#outputs">Overall procedure</a>.
 
 ### Output content from a directory with multiple fasta files used as input
 The directory content generated from `inputs/` will be a list of subdirectories such as the output described above. You will find at its root the file `hmm_database.hmm`, a concatenation of the HMM profiles of protein domains used as inputs. 
