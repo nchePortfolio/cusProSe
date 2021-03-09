@@ -60,7 +60,7 @@ class Param:
         self.logger.info('- Proteome (.fasta): {}'.format(self.proteome_filename))
         self.logger.info('- Rules (.yaml): {}'.format(self.yamlrules))
         self.logger.info('- Output path: {}'.format(self.outdirname))
-        self.logger.info('- Score cutoff for domain match: {}'.format(self.score_co))
+        self.logger.info('- E-value cutoff for domain match: {}'.format(self.ival))
         self.logger.info('')
 
 
