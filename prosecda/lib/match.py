@@ -26,7 +26,7 @@ class Matches:
         """
         self.param = param
         self.list = []
-        self.outdir = param.outdirname + 'matches/'
+        self.outdir = param.outdirname + 'results/'
 
         self.logger = logHandler.Logger(name=__name__)
 
