@@ -1,4 +1,4 @@
-# Welcome to CustomProteinSearch
+# Welcome to Test CustomProteinSearch
 <figure>
     <img src="./img/cusprose_scheme.png"
       alt="Overview of the CusProSe package functionalities">
