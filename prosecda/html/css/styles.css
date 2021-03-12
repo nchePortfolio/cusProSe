@@ -1,0 +1,99 @@
+header, section, footer, aside, nav, figure, figcaption {
+    display: block;
+}
+
+body {
+    color: #666666;
+    background-color: white;
+    width: 95%;
+    height: 100%;
+    margin: 25px;
+}
+
+header {
+    border: dashed black 1px;
+    height: 100px;
+}
+
+section, aside {
+    display: block;
+}
+
+
+section {
+    margin: 5px 0px 5px;
+    border: dashed black 1px;
+    height: 550px;
+    float: right;
+    width: 75%;
+}
+
+aside {
+    margin: 5px 0px 5px 0px;
+    border: dashed black 1px;
+    height: 550px;
+    float: left;
+    width: 22%;
+    background-color: lightcyan;
+}
+
+nav, footer {
+    clear: both;
+}
+
+nav a {
+    display: block;
+    font-style: normal;
+    color: black;
+    text-decoration: none;
+    padding-top: 10px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+nav a:hover {
+    background-color: cyan;
+}
+
+footer {
+    border: dashed black 1px;
+    height: 80px;
+}
+
+figure.header-right {
+    float: right;
+    margin-right: 15px;
+    margin-top: 2px;
+    height: 95px;
+}
+
+img.logo-i2bc{
+    height: 75px;
+}
+
+figure.header-left {
+    float: left;
+    margin-left: 15px;
+    margin-top: 2px;
+    height: 95px;
+}
+
+header h1 {
+    text-align: center;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.component .tooltip {visibility: hidden}
+.component:hover .tooltip {
+    visibility: visible;
+}
+.tooltip text {
+    fill: black;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.tooltip rect {
+    fill: yellow;
+    stroke: blue;
+}
