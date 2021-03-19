@@ -4,80 +4,37 @@
         <meta charset="utf-8" />
         <link href="./css/styles.css" rel="stylesheet" type="text/css">
         <title>ProSeCDA</title>
-        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="./js/d3.v6.min.js"></script>
 
     </head>
     
     <body>
-        <p id="p1">First paragraph</p>
-        <p id="p2">Second paragraph</p>
-
         <header>
             <h1>ProSeCDA Results Page</h1>
         </header>
 
         <section>
-            
-            <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="50">
-                <g class="component">
-                    <line x1="100" y1="25" x2="1100" y2="25" stroke="black"/>
-                    <rect   x=110 y="15" 
-                            width=500 
-                            height="20" 
-                            fill="blue" 
-                            stroke="black" 
-                            fill-opacity="75%">
-                    </rect>
+            <div class="rule-summary">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Mandatories</td>
+                            <td id="mandatory"></td>
+                        </tr>
+                        <tr>
+                            <td>Forbidden</td>
+                            <td id="forbidden"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                    <g class="tooltip" transform="translate(20,20)" opacity="0.9">
-                        <rect rx="5" width="100" height="25"></rect>
-                        <text x="15" y="16">Hello</text>
-                    </g>
-                </g>                               
-            </svg>
-            
-            <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="50">
-                <g class="component">
-                    <line x1="100" y1="25" x2="1100" y2="25" stroke="black"/>
-                    <rect   x=250 y="15" 
-                            width=700 
-                            height="20" 
-                            fill="blue" 
-                            stroke="black" 
-                            fill-opacity="75%">
-                    </rect>
-
-                    <g class="tooltip" transform="translate(20,20)" opacity="0.9">
-                        <rect rx="5" width="100" height="25"></rect>
-                        <text x="15" y="16">Hello</text>
-                    </g>
-                </g>                               
-            </svg>
-            
-            <svg xmlns="http://www.w3.org/2000/svg" width="1500" height="50">
-                <g class="component">
-                    <line x1="100" y1="25" x2="1100" y2="25" stroke="black"/>
-                    <rect   x=650 y="15" 
-                            width=125 
-                            height="20" 
-                            fill="blue" 
-                            stroke="black" 
-                            fill-opacity="75%">
-                    </rect>
-
-                    <g class="tooltip" transform="translate(20,20)" opacity="0.9">
-                        <rect rx="5" width="100" height="25"></rect>
-                        <text x="15" y="16">Hello</text>
-                    </g>
-                </g>                               
-            </svg>
-            
+            <div class="my_dataviz">
+            </div>
         </section>    
 
         <aside>
             <nav>
-                <a href="#">Summary</a>
-                <a href="#">Results</a>
             </nav>
         </aside>
 

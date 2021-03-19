@@ -12,6 +12,14 @@ import lib.logHandler as logHandler
 logging.getLogger('matplotlib.font_manager').disabled = True
 logging.getLogger('matplotlib.backends.backend_pdf').disabled = True
 
+try:
+    import importlib.resources as pkg_resources
+except ImportError:
+    # Try backported to PY<37 `importlib_resources`.
+    import importlib_resources as pkg_resources
+
+from .. import html  # relative-import the *package* containing the templates
+
 
 class Matches:
     """
@@ -72,10 +80,17 @@ class Matches:
             return []
 
     def report(self):
-        if self.list:
-            os.makedirs(self.outdir, exist_ok=True)
-            for match in self.list:
-                match.report(outdir=self.outdir)
+
+        # if self.list:
+        #     os.makedirs(self.outdir, exist_ok=True)
+        #     for match in self.list:
+        #         match.report(outdir=self.outdir)
+
+        template = pkg_resources.read_text(html, 'index.html')
+        with pkg_resources.path(html, "index.html") as p:
+            package_path = p
+
+        print(package_path)
 
 
 def is_match(rule, protein):
@@ -157,18 +172,18 @@ class Match:
         outpath = outdir + self.rule.name + '/'
         os.makedirs(outpath, exist_ok=True)
 
-        pdf_pages = PdfPages(filename=outpath + 'all_' + self.rule.name + '.pdf')
-        self.logger.title('Creating plots for proteins matching {}:'.format(self.rule.name))
+        # pdf_pages = PdfPages(filename=outpath + 'all_' + self.rule.name + '.pdf')
+        # self.logger.title('Creating plots for proteins matching {}:'.format(self.rule.name))
 
-        for protein in self.proteins:
-            self.logger.info(' - {}'.format(protein.name))
+        # for protein in self.proteins:
+        #     self.logger.info(' - {}'.format(protein.name))
 
-            protein.write_fasta(outdir=outpath)
-            protein.write_xml(outdir=outpath, rule=self.rule)
-            self.plot_protein_best_architecture(protein=protein, pdf_pages=pdf_pages)
-            self.plot_protein_all_domains(protein=protein, outpath=outpath)
+        #     protein.write_fasta(outdir=outpath)
+        #     protein.write_xml(outdir=outpath, rule=self.rule)
+        #     self.plot_protein_best_architecture(protein=protein, pdf_pages=pdf_pages)
+        #     self.plot_protein_all_domains(protein=protein, outpath=outpath)
 
-        pdf_pages.close()
+        # pdf_pages.close()
 
     def plot_protein_best_architecture(self, protein: Protein, pdf_pages: PdfPages):
         protein_best_architecture = PlotProt(protein=protein, colors=self.domain_colors)

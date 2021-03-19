@@ -1,0 +1,159 @@
+var myData = ["Domain A", "Domain B", "Domain C"];
+var families = [
+    {
+        "name": "A1",
+        "rules": {
+            "mandatories": ["A, B, C"],
+            "forbidden": ["D", "E"]
+        }
+    },
+    {
+        "name": "A2",
+        "rules": {
+            "mandatories": ["G, F, D"],
+            "forbidden": ["Q", "A"]
+        }
+    },
+];
+
+
+var proteins = [
+    {
+        "id": "XP_001",
+        "length": "1000",
+        "domains": [
+            {
+                "name": "KH",
+                "start": "10",
+                "length": "250",
+                "color": "green"
+            },
+            {
+                "name": "C",
+                "start": "300",
+                "length": "55",
+                "color": "yellow"
+            }
+        ]
+    },
+    {
+        "id": "XP_002",
+        "length": "2360",
+        "domains": [
+            {
+                "name": "NRPS",
+                "start": "150",
+                "length": "300",
+                "color": "blue"
+            },
+            {
+                "name": "PP",
+                "start": "850",
+                "length": "100",
+                "color": "pink"
+            }
+        ]
+    }
+]
+
+
+d3.select("section")
+    .append("div")
+    .attr("id", "family-summary")
+
+buttonFamilies = d3.select("aside nav").selectAll("button")
+    .data(families)
+    .enter()
+    .append("button")
+    .style("display", "block")
+    .text(function (d) {
+        return d.name;
+    })
+    .on("click", function(d) {
+        // console.log(d3.entries(d.rules));
+        d3.select("#family-summary").selectAll("p").remove()
+        d3.select("#family-summary")
+            .selectAll("p")
+            .data(d3.entries(d.rules))
+            .enter()
+            .append("p")
+            .text(function(d) {
+                console.log(d3.values(d)[1]);
+                return (`${d3.values(d)[0]}: ${d3.values(d)[1]}`);
+            
+            })
+    })
+
+
+var width = 1000;
+var height = 50;
+
+var protein_length = proteins.map(function(d) {return +d.length;})
+
+var scale = d3.scaleLinear()
+    .domain([1, d3.max(protein_length)])
+    .range([1, 1000]);
+
+var svg = d3.select(".my_dataviz").selectAll("svg")
+            .data(proteins)
+            .enter().append("svg")
+                .attr("width", width)
+                .attr("height", height)
+
+var g = svg.append("g")
+            .attr("transform", function(d, i) {
+                return "translate(0,0)";
+            })
+
+var line = g.append("line")
+                .attr("x1", 1)
+                .attr("y1", 25)
+                .attr("x2", d => scale(+d.length))
+                .attr("y2", 25)
+                .attr("stroke", "black")
+
+var rect = g.selectAll("rect")
+            .data(d => d.domains)
+            .enter().append("rect")
+                .attr("x", d => scale(d.start))
+                .attr("y", 15)
+                .attr("height", "20")
+                .attr("width", d => scale(d.length))
+                .attr("fill", d => d.color)
+                .attr("stroke", "black")
+                .attr("fill-opacity", "0.75")
+  
+var tooltip = d3.select("body")
+    .append("div")
+    .attr("class", "my-tooltip")
+    .style("position", "absolute")
+    .style("visibility", "hidden")
+    .style("background", "white")
+    .style("color", "black")
+    .style("border", "0.5px solid")
+    .style("z-index", "100")
+    .style("width", "100px")
+    .style("height", "25px")
+    .style("text-align", "center")
+    .style("vertical-align", "middle")
+    .style("font-weight", "bold")
+
+
+d3.selectAll("rect")
+    .data(myData)
+    .on("mouseover", function(event, d, i){
+        d3.select(this).style('fill-opacity', '.60')
+        
+        return tooltip.transition()
+                .style("visibility", "visible")
+                .text(d);
+        })
+    .on("mousemove", function(event){
+        return tooltip.style("top", (event.pageY+30)+"px").style("left",(event.pageX-50)+"px");
+    })
+    .on("mouseout", function(){
+        d3.select(this).style("fill-opacity", "0.75")
+        return tooltip.style("visibility", "hidden");
+    })
+
+

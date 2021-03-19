@@ -84,16 +84,18 @@ header h1 {
     padding-bottom: auto;
 }
 
-.component .tooltip {visibility: hidden}
-.component:hover .tooltip {
-    visibility: visible;
+.protein-component {
 }
-.tooltip text {
-    fill: black;
-    font-size: 12px;
-    font-family: sans-serif;
+
+div.foreign-table {
+    color: black;
+    overflow: auto;
 }
-.tooltip rect {
-    fill: yellow;
-    stroke: blue;
+
+.my-tooltip {
+    padding-top: 5px;
+}
+
+.mydiv {
+    border-bottom: dashed black 1px;
 }

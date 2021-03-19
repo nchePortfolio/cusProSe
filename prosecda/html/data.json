@@ -1,0 +1,100 @@
+[
+    {
+        "name": "A1",
+        "rules": [
+            {
+                "mandatories": ["A", "B", "C"]
+            },
+            {
+                "forbidden": ["D", "E"]
+            }
+        ],
+        "proteins": [
+            {
+                "id": "XP_001",
+                "length": "1000",
+                "domains": [
+                    {
+                        "name": "KH",
+                        "start": "10",
+                        "length": "250",
+                        "color": "green"
+                    },
+                    {
+                        "name": "C",
+                        "start": "300",
+                        "length": "55",
+                        "color": "yellow"
+                    }
+                ]
+            },
+            {
+                "id": "XP_002",
+                "length": "2360",
+                "domains": [
+                    {
+                        "name": "NRPS",
+                        "start": "150",
+                        "length": "300",
+                        "color": "blue"
+                    },
+                    {
+                        "name": "PP",
+                        "start": "850",
+                        "length": "100",
+                        "color": "pink"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "A2",
+        "rules": [
+            {
+                "mandatories": ["Q", "F", "G"]
+            },
+            {
+                "forbidden": ["M", "P"]
+            }
+        ],
+        "proteins": [
+            {
+                "id": "XP_008",
+                "length": "1565",
+                "domains": [
+                    {
+                        "name": "RAS",
+                        "start": "455",
+                        "length": "300",
+                        "color": "pink"
+                    },
+                    {
+                        "name": "DMATS",
+                        "start": "923",
+                        "length": "111",
+                        "color": "violet"
+                    }
+                ]
+            },
+            {
+                "id": "XP_009",
+                "length": "985",
+                "domains": [
+                    {
+                        "name": "NRPS",
+                        "start": "95",
+                        "length": "300",
+                        "color": "blue"
+                    },
+                    {
+                        "name": "PP",
+                        "start": "633",
+                        "length": "100",
+                        "color": "pink"
+                    }
+                ]
+            }
+        ]
+    }
+]

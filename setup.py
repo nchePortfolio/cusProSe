@@ -1,11 +1,20 @@
 import setuptools as st
 
-packages = ['iterhmmbuild', 'iterhmmbuild.lib', 'prosecda', 'prosecda.lib', 'lib', 'scripts', 'prosecda.gui']
+packages = [
+    'iterhmmbuild',
+    'iterhmmbuild.lib',
+    'prosecda',
+    'prosecda.lib',
+    'lib',
+    'scripts',
+    'prosecda.gui',
+    ]
 
 st.setup(
     name='cusProSe',
     python_requires='>=3.7',
     packages=packages,
+    include_package_data=True,
     install_requires=[
         'lxml>=4.5.2',
         'matplotlib>=3.3.2',
