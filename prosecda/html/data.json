@@ -1,97 +1,3369 @@
 [
     {
-        "name": "A1",
+        "name": "DMATS",
         "rules": [
             {
-                "mandatories": ["A", "B", "C"]
+                "mandatories": [
+                    "Trp_DMAT"
+                ]
             },
             {
-                "forbidden": ["D", "E"]
+                "forbidden": [
+                    "None"
+                ]
             }
         ],
         "proteins": [
             {
-                "id": "XP_001",
-                "length": "1000",
+                "id": "MGG_06540T0",
+                "length": 410,
                 "domains": [
                     {
-                        "name": "KH",
-                        "start": "10",
-                        "length": "250",
-                        "color": "green"
-                    },
-                    {
-                        "name": "C",
-                        "start": "300",
-                        "length": "55",
-                        "color": "yellow"
+                        "name": "Trp_DMAT",
+                        "start": 47,
+                        "length": 353,
+                        "color": "darkgreen"
                     }
                 ]
             },
             {
-                "id": "XP_002",
-                "length": "2360",
+                "id": "MGG_10953T0",
+                "length": 460,
                 "domains": [
                     {
-                        "name": "NRPS",
-                        "start": "150",
-                        "length": "300",
-                        "color": "blue"
-                    },
+                        "name": "Trp_DMAT",
+                        "start": 91,
+                        "length": 361,
+                        "color": "darkgreen"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_12480T0",
+                "length": 405,
+                "domains": [
                     {
-                        "name": "PP",
-                        "start": "850",
-                        "length": "100",
-                        "color": "pink"
+                        "name": "Trp_DMAT",
+                        "start": 14,
+                        "length": 350,
+                        "color": "darkgreen"
                     }
                 ]
             }
         ]
     },
     {
-        "name": "A2",
+        "name": "Ent_kaurene_synthase",
         "rules": [
             {
-                "mandatories": ["Q", "F", "G"]
+                "mandatories": [
+                    "ent_kaurene"
+                ]
             },
             {
-                "forbidden": ["M", "P"]
+                "forbidden": [
+                    "None"
+                ]
             }
         ],
         "proteins": [
             {
-                "id": "XP_008",
-                "length": "1565",
+                "id": "MGG_01949T0",
+                "length": 963,
                 "domains": [
                     {
-                        "name": "RAS",
-                        "start": "455",
-                        "length": "300",
-                        "color": "pink"
-                    },
-                    {
-                        "name": "DMATS",
-                        "start": "923",
-                        "length": "111",
-                        "color": "violet"
+                        "name": "ent_kaurene",
+                        "start": 2,
+                        "length": 961,
+                        "color": "royalblue"
                     }
                 ]
             },
             {
-                "id": "XP_009",
-                "length": "985",
+                "id": "MGG_14722T0",
+                "length": 955,
                 "domains": [
                     {
-                        "name": "NRPS",
-                        "start": "95",
-                        "length": "300",
-                        "color": "blue"
+                        "name": "ent_kaurene",
+                        "start": 1,
+                        "length": 947,
+                        "color": "royalblue"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Fusicocadiene_synthase",
+        "rules": [
+            {
+                "mandatories": [
+                    "fusicocadiene"
+                ]
+            },
+            {
+                "forbidden": [
+                    "None"
+                ]
+            }
+        ],
+        "proteins": [
+            {
+                "id": "MGG_00026T0",
+                "length": 406,
+                "domains": [
+                    {
+                        "name": "fusicocadiene",
+                        "start": 64,
+                        "length": 342,
+                        "color": "darkorchid"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_00758T0",
+                "length": 413,
+                "domains": [
+                    {
+                        "name": "fusicocadiene",
+                        "start": 45,
+                        "length": 367,
+                        "color": "darkorchid"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_01701T0",
+                "length": 635,
+                "domains": [
+                    {
+                        "name": "fusicocadiene",
+                        "start": 16,
+                        "length": 619,
+                        "color": "darkorchid"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_03343T0",
+                "length": 454,
+                "domains": [
+                    {
+                        "name": "fusicocadiene",
+                        "start": 184,
+                        "length": 261,
+                        "color": "darkorchid"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_03432T0",
+                "length": 712,
+                "domains": [
+                    {
+                        "name": "fusicocadiene",
+                        "start": 7,
+                        "length": 705,
+                        "color": "darkorchid"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_07506T0",
+                "length": 758,
+                "domains": [
+                    {
+                        "name": "fusicocadiene",
+                        "start": 21,
+                        "length": 732,
+                        "color": "darkorchid"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_09448T0",
+                "length": 372,
+                "domains": [
+                    {
+                        "name": "fusicocadiene",
+                        "start": 5,
+                        "length": 367,
+                        "color": "darkorchid"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_13405T0",
+                "length": 729,
+                "domains": [
+                    {
+                        "name": "fusicocadiene",
+                        "start": 7,
+                        "length": 722,
+                        "color": "darkorchid"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "NRPS",
+        "rules": [
+            {
+                "mandatories": [
+                    "C",
+                    "A",
+                    "PP-binding"
+                ]
+            },
+            {
+                "forbidden": [
+                    "None"
+                ]
+            }
+        ],
+        "proteins": [
+            {
+                "id": "MGG_00022T0",
+                "length": 4068,
+                "domains": [
+                    {
+                        "name": "C",
+                        "start": 5,
+                        "length": 133,
+                        "color": "salmon"
                     },
                     {
-                        "name": "PP",
-                        "start": "633",
-                        "length": "100",
-                        "color": "pink"
+                        "name": "A",
+                        "start": 320,
+                        "length": 492,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 847,
+                        "length": 69,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 938,
+                        "length": 295,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 1424,
+                        "length": 478,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "A",
+                        "start": 2317,
+                        "length": 69,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2411,
+                        "length": 67,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2494,
+                        "length": 315,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 2994,
+                        "length": 483,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3506,
+                        "length": 68,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 3632,
+                        "length": 285,
+                        "color": "salmon"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_02351T0",
+                "length": 5286,
+                "domains": [
+                    {
+                        "name": "A",
+                        "start": 59,
+                        "length": 457,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "C",
+                        "start": 553,
+                        "length": 279,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 1030,
+                        "length": 491,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1552,
+                        "length": 69,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 1621,
+                        "length": 241,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 2052,
+                        "length": 491,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2570,
+                        "length": 68,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2683,
+                        "length": 276,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3144,
+                        "length": 493,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3667,
+                        "length": 68,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 3779,
+                        "length": 273,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 4241,
+                        "length": 489,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 4761,
+                        "length": 69,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 4875,
+                        "length": 290,
+                        "color": "salmon"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_03401T0",
+                "length": 2882,
+                "domains": [
+                    {
+                        "name": "PP-binding",
+                        "start": 41,
+                        "length": 69,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 291,
+                        "length": 69,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 376,
+                        "length": 301,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "C",
+                        "start": 858,
+                        "length": 292,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 1333,
+                        "length": 479,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1851,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 1997,
+                        "length": 281,
+                        "color": "salmon"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_03810T0",
+                "length": 4256,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 13,
+                        "length": 432,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 573,
+                        "length": 338,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2558,
+                        "length": 75,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2740,
+                        "length": 305,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3234,
+                        "length": 512,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3787,
+                        "length": 74,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_07803T0",
+                "length": 1729,
+                "domains": [
+                    {
+                        "name": "C",
+                        "start": 151,
+                        "length": 298,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 629,
+                        "length": 458,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1145,
+                        "length": 71,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "KS",
+                        "start": 1264,
+                        "length": 449,
+                        "color": "palegreen"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_07858T0",
+                "length": 4778,
+                "domains": [
+                    {
+                        "name": "C",
+                        "start": 4,
+                        "length": 119,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 293,
+                        "length": 492,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 818,
+                        "length": 71,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 930,
+                        "length": 282,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 1390,
+                        "length": 482,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1907,
+                        "length": 71,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2059,
+                        "length": 270,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 2513,
+                        "length": 485,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3032,
+                        "length": 69,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 3146,
+                        "length": 279,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3620,
+                        "length": 483,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 4146,
+                        "length": 69,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 4285,
+                        "length": 311,
+                        "color": "salmon"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_09589T0",
+                "length": 3867,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 4,
+                        "length": 461,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 584,
+                        "length": 328,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2573,
+                        "length": 69,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2751,
+                        "length": 311,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3254,
+                        "length": 504,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3785,
+                        "length": 76,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_12175T0",
+                "length": 5034,
+                "domains": [
+                    {
+                        "name": "A",
+                        "start": 61,
+                        "length": 487,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 574,
+                        "length": 66,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 677,
+                        "length": 276,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 1141,
+                        "length": 479,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1654,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 1771,
+                        "length": 283,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2225,
+                        "length": 69,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2333,
+                        "length": 290,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 2807,
+                        "length": 479,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3318,
+                        "length": 71,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 3431,
+                        "length": 280,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3880,
+                        "length": 67,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 3994,
+                        "length": 295,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 4473,
+                        "length": 69,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 4583,
+                        "length": 303,
+                        "color": "salmon"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_12447T0",
+                "length": 4035,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 12,
+                        "length": 435,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 560,
+                        "length": 319,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2432,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2607,
+                        "length": 294,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3088,
+                        "length": 488,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3604,
+                        "length": 71,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_14767T0",
+                "length": 2056,
+                "domains": [
+                    {
+                        "name": "A",
+                        "start": 294,
+                        "length": 521,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 846,
+                        "length": 68,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 959,
+                        "length": 270,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 1374,
+                        "length": 115,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1508,
+                        "length": 69,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 1630,
+                        "length": 294,
+                        "color": "salmon"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_14897T0",
+                "length": 4270,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 3,
+                        "length": 440,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 584,
+                        "length": 321,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2527,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2705,
+                        "length": 316,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3220,
+                        "length": 526,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3793,
+                        "length": 76,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_14943T0",
+                "length": 3973,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 10,
+                        "length": 215,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "KS",
+                        "start": 225,
+                        "length": 193,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 525,
+                        "length": 328,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2367,
+                        "length": 75,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2456,
+                        "length": 293,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 2916,
+                        "length": 487,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3431,
+                        "length": 71,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_14967T0",
+                "length": 5950,
+                "domains": [
+                    {
+                        "name": "A",
+                        "start": 26,
+                        "length": 469,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "C",
+                        "start": 615,
+                        "length": 327,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1139,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 1281,
+                        "length": 304,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 1781,
+                        "length": 462,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2267,
+                        "length": 73,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2375,
+                        "length": 285,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2878,
+                        "length": 69,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2980,
+                        "length": 300,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3482,
+                        "length": 507,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 4052,
+                        "length": 75,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 4148,
+                        "length": 289,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "C",
+                        "start": 4609,
+                        "length": 90,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "C",
+                        "start": 4711,
+                        "length": 162,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 5090,
+                        "length": 494,
+                        "color": "darkslateblue"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_15097T0",
+                "length": 4121,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 7,
+                        "length": 435,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 556,
+                        "length": 319,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2428,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2679,
+                        "length": 299,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3164,
+                        "length": 485,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3677,
+                        "length": 73,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_15248T0",
+                "length": 1612,
+                "domains": [
+                    {
+                        "name": "PP-binding",
+                        "start": 10,
+                        "length": 66,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 152,
+                        "length": 274,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 606,
+                        "length": 447,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1075,
+                        "length": 72,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 1166,
+                        "length": 281,
+                        "color": "salmon"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "NRPS-PKS",
+        "rules": [
+            {
+                "mandatories": [
+                    "C",
+                    "KS",
+                    "PP-binding"
+                ]
+            },
+            {
+                "forbidden": [
+                    "None"
+                ]
+            }
+        ],
+        "proteins": [
+            {
+                "id": "MGG_03810T0",
+                "length": 4256,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 13,
+                        "length": 432,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 573,
+                        "length": 338,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2558,
+                        "length": 75,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2740,
+                        "length": 305,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3234,
+                        "length": 512,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3787,
+                        "length": 74,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_07803T0",
+                "length": 1729,
+                "domains": [
+                    {
+                        "name": "C",
+                        "start": 151,
+                        "length": 298,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 629,
+                        "length": 458,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1145,
+                        "length": 71,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "KS",
+                        "start": 1264,
+                        "length": 449,
+                        "color": "palegreen"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_09589T0",
+                "length": 3867,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 4,
+                        "length": 461,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 584,
+                        "length": 328,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2573,
+                        "length": 69,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2751,
+                        "length": 311,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3254,
+                        "length": 504,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3785,
+                        "length": 76,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_12447T0",
+                "length": 4035,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 12,
+                        "length": 435,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 560,
+                        "length": 319,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2432,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2607,
+                        "length": 294,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3088,
+                        "length": 488,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3604,
+                        "length": 71,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_14897T0",
+                "length": 4270,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 3,
+                        "length": 440,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 584,
+                        "length": 321,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2527,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2705,
+                        "length": 316,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3220,
+                        "length": 526,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3793,
+                        "length": 76,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_14943T0",
+                "length": 3973,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 10,
+                        "length": 215,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "KS",
+                        "start": 225,
+                        "length": 193,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 525,
+                        "length": 328,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2367,
+                        "length": 75,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2456,
+                        "length": 293,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 2916,
+                        "length": 487,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3431,
+                        "length": 71,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_15097T0",
+                "length": 4121,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 7,
+                        "length": 435,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 556,
+                        "length": 319,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2428,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2679,
+                        "length": 299,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3164,
+                        "length": 485,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3677,
+                        "length": 73,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_15100T0",
+                "length": 3002,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 13,
+                        "length": 432,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 558,
+                        "length": 320,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2433,
+                        "length": 71,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2573,
+                        "length": 292,
+                        "color": "salmon"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_15272T0",
+                "length": 2912,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 5,
+                        "length": 428,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 542,
+                        "length": 312,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2364,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2492,
+                        "length": 294,
+                        "color": "salmon"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "NRPS-like.1",
+        "rules": [
+            {
+                "mandatories": [
+                    "C",
+                    "PP-binding"
+                ]
+            },
+            {
+                "forbidden": [
+                    "A"
+                ]
+            }
+        ],
+        "proteins": [
+            {
+                "id": "MGG_15100T0",
+                "length": 3002,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 13,
+                        "length": 432,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 558,
+                        "length": 320,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2433,
+                        "length": 71,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2573,
+                        "length": 292,
+                        "color": "salmon"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_15272T0",
+                "length": 2912,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 5,
+                        "length": 428,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 542,
+                        "length": 312,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2364,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2492,
+                        "length": 294,
+                        "color": "salmon"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "NRPS-like.3",
+        "rules": [
+            {
+                "mandatories": [
+                    "A",
+                    "PP-binding"
+                ]
+            },
+            {
+                "forbidden": [
+                    "C"
+                ]
+            }
+        ],
+        "proteins": [
+            {
+                "id": "MGG_00385T0",
+                "length": 1107,
+                "domains": [
+                    {
+                        "name": "A",
+                        "start": 46,
+                        "length": 500,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 604,
+                        "length": 81,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_02611T0",
+                "length": 1189,
+                "domains": [
+                    {
+                        "name": "A",
+                        "start": 51,
+                        "length": 559,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 638,
+                        "length": 71,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_03290T0",
+                "length": 1281,
+                "domains": [
+                    {
+                        "name": "A",
+                        "start": 34,
+                        "length": 480,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 539,
+                        "length": 69,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_05491T0",
+                "length": 1050,
+                "domains": [
+                    {
+                        "name": "A",
+                        "start": 47,
+                        "length": 165,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 565,
+                        "length": 77,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_16971T0",
+                "length": 1055,
+                "domains": [
+                    {
+                        "name": "A",
+                        "start": 48,
+                        "length": 352,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 556,
+                        "length": 67,
+                        "color": "indigo"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Oxidosqualene_synthase",
+        "rules": [
+            {
+                "mandatories": [
+                    "oxidosqualene"
+                ]
+            },
+            {
+                "forbidden": [
+                    "None"
+                ]
+            }
+        ],
+        "proteins": [
+            {
+                "id": "MGG_11702T0",
+                "length": 756,
+                "domains": [
+                    {
+                        "name": "oxidosqualene",
+                        "start": 18,
+                        "length": 738,
+                        "color": "peru"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "PKS",
+        "rules": [
+            {
+                "mandatories": [
+                    "KS",
+                    "AT",
+                    "PP-binding"
+                ]
+            },
+            {
+                "forbidden": [
+                    "None"
+                ]
+            }
+        ],
+        "proteins": [
+            {
+                "id": "MGG_00233T0",
+                "length": 2386,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 12,
+                        "length": 423,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 554,
+                        "length": 308,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2308,
+                        "length": 70,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_00241T0",
+                "length": 2153,
+                "domains": [
+                    {
+                        "name": "AT",
+                        "start": 61,
+                        "length": 306,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "KS",
+                        "start": 381,
+                        "length": 424,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 914,
+                        "length": 347,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1727,
+                        "length": 69,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_00428T0",
+                "length": 2174,
+                "domains": [
+                    {
+                        "name": "AT",
+                        "start": 27,
+                        "length": 338,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "KS",
+                        "start": 413,
+                        "length": 429,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 973,
+                        "length": 312,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1758,
+                        "length": 71,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_00806T0",
+                "length": 2759,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 155,
+                        "length": 108,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "KS",
+                        "start": 253,
+                        "length": 238,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 700,
+                        "length": 344,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2677,
+                        "length": 70,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_03810T0",
+                "length": 4256,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 13,
+                        "length": 432,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 573,
+                        "length": 338,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2558,
+                        "length": 75,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2740,
+                        "length": 305,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3234,
+                        "length": 512,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3787,
+                        "length": 74,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_04775T0",
+                "length": 2156,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 63,
+                        "length": 146,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "KS",
+                        "start": 204,
+                        "length": 177,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 495,
+                        "length": 314,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2075,
+                        "length": 70,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_04775T1",
+                "length": 1936,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 1,
+                        "length": 160,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 275,
+                        "length": 314,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1855,
+                        "length": 70,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_05589T0",
+                "length": 2253,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 67,
+                        "length": 422,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 595,
+                        "length": 315,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2174,
+                        "length": 70,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_07219T0",
+                "length": 2182,
+                "domains": [
+                    {
+                        "name": "AT",
+                        "start": 38,
+                        "length": 332,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "KS",
+                        "start": 389,
+                        "length": 431,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 920,
+                        "length": 301,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1667,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1794,
+                        "length": 70,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_08236T0",
+                "length": 2617,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 8,
+                        "length": 421,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 570,
+                        "length": 319,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2537,
+                        "length": 70,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_08281T0",
+                "length": 1861,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 47,
+                        "length": 479,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 661,
+                        "length": 316,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1424,
+                        "length": 70,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_08285T0",
+                "length": 2361,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 13,
+                        "length": 400,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 525,
+                        "length": 327,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2282,
+                        "length": 70,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_09589T0",
+                "length": 3867,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 4,
+                        "length": 461,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 584,
+                        "length": 328,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2573,
+                        "length": 69,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2751,
+                        "length": 311,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3254,
+                        "length": 504,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3785,
+                        "length": 76,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_09645T0",
+                "length": 2127,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 52,
+                        "length": 412,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 576,
+                        "length": 295,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2028,
+                        "length": 76,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_10011T0",
+                "length": 2308,
+                "domains": [
+                    {
+                        "name": "AT",
+                        "start": 63,
+                        "length": 322,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "KS",
+                        "start": 405,
+                        "length": 422,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 947,
+                        "length": 307,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1756,
+                        "length": 70,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_10912T0",
+                "length": 2572,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 53,
+                        "length": 431,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 609,
+                        "length": 323,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2495,
+                        "length": 70,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_11638T0",
+                "length": 2480,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 10,
+                        "length": 437,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 592,
+                        "length": 315,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2400,
+                        "length": 71,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_12214T0",
+                "length": 2626,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 8,
+                        "length": 419,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 612,
+                        "length": 321,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2545,
+                        "length": 70,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_12447T0",
+                "length": 4035,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 12,
+                        "length": 435,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 560,
+                        "length": 319,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2432,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2607,
+                        "length": 294,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3088,
+                        "length": 488,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3604,
+                        "length": 71,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_12613T0",
+                "length": 2475,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 20,
+                        "length": 414,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 571,
+                        "length": 309,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2401,
+                        "length": 61,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_13591T0",
+                "length": 2320,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 1,
+                        "length": 360,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 483,
+                        "length": 327,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2238,
+                        "length": 70,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_13767T0",
+                "length": 2641,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 10,
+                        "length": 429,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 579,
+                        "length": 326,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2559,
+                        "length": 70,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_14831T0",
+                "length": 2585,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 37,
+                        "length": 421,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 608,
+                        "length": 313,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2505,
+                        "length": 69,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_14897T0",
+                "length": 4270,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 3,
+                        "length": 440,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 584,
+                        "length": 321,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2527,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2705,
+                        "length": 316,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3220,
+                        "length": 526,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3793,
+                        "length": 76,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_14943T0",
+                "length": 3973,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 10,
+                        "length": 215,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "KS",
+                        "start": 225,
+                        "length": 193,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 525,
+                        "length": 328,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2367,
+                        "length": 75,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2456,
+                        "length": 293,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 2916,
+                        "length": 487,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3431,
+                        "length": 71,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_15097T0",
+                "length": 4121,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 7,
+                        "length": 435,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 556,
+                        "length": 319,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2428,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2679,
+                        "length": 299,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3164,
+                        "length": 485,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3677,
+                        "length": 73,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_15100T0",
+                "length": 3002,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 13,
+                        "length": 432,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 558,
+                        "length": 320,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2433,
+                        "length": 71,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2573,
+                        "length": 292,
+                        "color": "salmon"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_15272T0",
+                "length": 2912,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 5,
+                        "length": 428,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 542,
+                        "length": 312,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2364,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2492,
+                        "length": 294,
+                        "color": "salmon"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "PKS-NRPS.0",
+        "rules": [
+            {
+                "mandatories": [
+                    "KS",
+                    "AT",
+                    "C",
+                    "PP-binding"
+                ]
+            },
+            {
+                "forbidden": [
+                    "None"
+                ]
+            }
+        ],
+        "proteins": [
+            {
+                "id": "MGG_03810T0",
+                "length": 4256,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 13,
+                        "length": 432,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 573,
+                        "length": 338,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2558,
+                        "length": 75,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2740,
+                        "length": 305,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3234,
+                        "length": 512,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3787,
+                        "length": 74,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_09589T0",
+                "length": 3867,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 4,
+                        "length": 461,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 584,
+                        "length": 328,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2573,
+                        "length": 69,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2751,
+                        "length": 311,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3254,
+                        "length": 504,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3785,
+                        "length": 76,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_12447T0",
+                "length": 4035,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 12,
+                        "length": 435,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 560,
+                        "length": 319,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2432,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2607,
+                        "length": 294,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3088,
+                        "length": 488,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3604,
+                        "length": 71,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_14897T0",
+                "length": 4270,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 3,
+                        "length": 440,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 584,
+                        "length": 321,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2527,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2705,
+                        "length": 316,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3220,
+                        "length": 526,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3793,
+                        "length": 76,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_14943T0",
+                "length": 3973,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 10,
+                        "length": 215,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "KS",
+                        "start": 225,
+                        "length": 193,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 525,
+                        "length": 328,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2367,
+                        "length": 75,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2456,
+                        "length": 293,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 2916,
+                        "length": 487,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3431,
+                        "length": 71,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_15097T0",
+                "length": 4121,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 7,
+                        "length": 435,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 556,
+                        "length": 319,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2428,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2679,
+                        "length": 299,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3164,
+                        "length": 485,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3677,
+                        "length": 73,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_15100T0",
+                "length": 3002,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 13,
+                        "length": 432,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 558,
+                        "length": 320,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2433,
+                        "length": 71,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2573,
+                        "length": 292,
+                        "color": "salmon"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_15272T0",
+                "length": 2912,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 5,
+                        "length": 428,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 542,
+                        "length": 312,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2364,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2492,
+                        "length": 294,
+                        "color": "salmon"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "PKS-NRPS.1",
+        "rules": [
+            {
+                "mandatories": [
+                    "KS",
+                    "A",
+                    "PP-binding"
+                ]
+            },
+            {
+                "forbidden": [
+                    "None"
+                ]
+            }
+        ],
+        "proteins": [
+            {
+                "id": "MGG_03810T0",
+                "length": 4256,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 13,
+                        "length": 432,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 573,
+                        "length": 338,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2558,
+                        "length": 75,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2740,
+                        "length": 305,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3234,
+                        "length": 512,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3787,
+                        "length": 74,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_07803T0",
+                "length": 1729,
+                "domains": [
+                    {
+                        "name": "C",
+                        "start": 151,
+                        "length": 298,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 629,
+                        "length": 458,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1145,
+                        "length": 71,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "KS",
+                        "start": 1264,
+                        "length": 449,
+                        "color": "palegreen"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_09589T0",
+                "length": 3867,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 4,
+                        "length": 461,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 584,
+                        "length": 328,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2573,
+                        "length": 69,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2751,
+                        "length": 311,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3254,
+                        "length": 504,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3785,
+                        "length": 76,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_12447T0",
+                "length": 4035,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 12,
+                        "length": 435,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 560,
+                        "length": 319,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2432,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2607,
+                        "length": 294,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3088,
+                        "length": 488,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3604,
+                        "length": 71,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_14897T0",
+                "length": 4270,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 3,
+                        "length": 440,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 584,
+                        "length": 321,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2527,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2705,
+                        "length": 316,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3220,
+                        "length": 526,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3793,
+                        "length": 76,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_14943T0",
+                "length": 3973,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 10,
+                        "length": 215,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "KS",
+                        "start": 225,
+                        "length": 193,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 525,
+                        "length": 328,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2367,
+                        "length": 75,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2456,
+                        "length": 293,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 2916,
+                        "length": 487,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3431,
+                        "length": 71,
+                        "color": "indigo"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_15097T0",
+                "length": 4121,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 7,
+                        "length": 435,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 556,
+                        "length": 319,
+                        "color": "olive"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 2428,
+                        "length": 70,
+                        "color": "indigo"
+                    },
+                    {
+                        "name": "C",
+                        "start": 2679,
+                        "length": 299,
+                        "color": "salmon"
+                    },
+                    {
+                        "name": "A",
+                        "start": 3164,
+                        "length": 485,
+                        "color": "darkslateblue"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 3677,
+                        "length": 73,
+                        "color": "indigo"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "PKS-like",
+        "rules": [
+            {
+                "mandatories": [
+                    "KS",
+                    "AT"
+                ]
+            },
+            {
+                "forbidden": [
+                    "PP-binding"
+                ]
+            }
+        ],
+        "proteins": [
+            {
+                "id": "MGG_14945T0",
+                "length": 2209,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 108,
+                        "length": 421,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 723,
+                        "length": 326,
+                        "color": "olive"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_18133T0",
+                "length": 808,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 1,
+                        "length": 369,
+                        "color": "palegreen"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 505,
+                        "length": 295,
+                        "color": "olive"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "PKS_type3.0",
+        "rules": [
+            {
+                "mandatories": [
+                    "CHS_like"
+                ]
+            },
+            {
+                "forbidden": [
+                    "None"
+                ]
+            }
+        ],
+        "proteins": [
+            {
+                "id": "MGG_04643T0",
+                "length": 464,
+                "domains": [
+                    {
+                        "name": "CHS_like",
+                        "start": 13,
+                        "length": 380,
+                        "color": "lightsalmon"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_06254T0",
+                "length": 318,
+                "domains": [
+                    {
+                        "name": "CHS_like",
+                        "start": 1,
+                        "length": 312,
+                        "color": "lightsalmon"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Sesquiterp_synthase",
+        "rules": [
+            {
+                "mandatories": [
+                    "sesquiterpene"
+                ]
+            },
+            {
+                "forbidden": [
+                    "None"
+                ]
+            }
+        ],
+        "proteins": [
+            {
+                "id": "MGG_03833T0",
+                "length": 380,
+                "domains": [
+                    {
+                        "name": "sesquiterpene",
+                        "start": 15,
+                        "length": 335,
+                        "color": "indianred"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_04631T0",
+                "length": 356,
+                "domains": [
+                    {
+                        "name": "sesquiterpene",
+                        "start": 4,
+                        "length": 330,
+                        "color": "indianred"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_10671T0",
+                "length": 480,
+                "domains": [
+                    {
+                        "name": "sesquiterpene",
+                        "start": 100,
+                        "length": 346,
+                        "color": "indianred"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Squalene_hopene_cyclase",
+        "rules": [
+            {
+                "mandatories": [
+                    "squalene_hopene"
+                ]
+            },
+            {
+                "forbidden": [
+                    "None"
+                ]
+            }
+        ],
+        "proteins": [
+            {
+                "id": "MGG_00792T0",
+                "length": 681,
+                "domains": [
+                    {
+                        "name": "squalene_hopene",
+                        "start": 4,
+                        "length": 677,
+                        "color": "green"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Squalene_synthase",
+        "rules": [
+            {
+                "mandatories": [
+                    "squalene"
+                ]
+            },
+            {
+                "forbidden": [
+                    "None"
+                ]
+            }
+        ],
+        "proteins": [
+            {
+                "id": "MGG_09239T0",
+                "length": 466,
+                "domains": [
+                    {
+                        "name": "squalene",
+                        "start": 1,
+                        "length": 465,
+                        "color": "red"
                     }
                 ]
             }

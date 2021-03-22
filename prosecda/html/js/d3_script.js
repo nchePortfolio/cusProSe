@@ -1,105 +1,105 @@
-families = [
-    {
-        "name": "A1",
-        "rules": [
-            {
-                "mandatories": ["A", "B", "C"]
-            },
-            {
-                "forbidden": ["D", "E"]
-            }
-        ],
-        "proteins": [
-            {
-                "id": "XP_001",
-                "length": "1000",
-                "domains": [
-                    {
-                        "name": "KH",
-                        "start": "10",
-                        "length": "250",
-                        "color": "green"
-                    },
-                    {
-                        "name": "C",
-                        "start": "300",
-                        "length": "55",
-                        "color": "yellow"
-                    }
-                ]
-            },
-            {
-                "id": "XP_002",
-                "length": "2360",
-                "domains": [
-                    {
-                        "name": "NRPS",
-                        "start": "150",
-                        "length": "300",
-                        "color": "blue"
-                    },
-                    {
-                        "name": "PP",
-                        "start": "850",
-                        "length": "100",
-                        "color": "pink"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "A2",
-        "rules": [
-            {
-                "mandatories": ["Q", "F", "G"]
-            },
-            {
-                "forbidden": ["M", "P"]
-            }
-        ],
-        "proteins": [
-            {
-                "id": "XP_008",
-                "length": "1565",
-                "domains": [
-                    {
-                        "name": "RAS",
-                        "start": "455",
-                        "length": "300",
-                        "color": "pink"
-                    },
-                    {
-                        "name": "DMATS",
-                        "start": "923",
-                        "length": "111",
-                        "color": "violet"
-                    }
-                ]
-            },
-            {
-                "id": "XP_009",
-                "length": "985",
-                "domains": [
-                    {
-                        "name": "NRPS",
-                        "start": "95",
-                        "length": "300",
-                        "color": "blue"
-                    },
-                    {
-                        "name": "PP",
-                        "start": "633",
-                        "length": "100",
-                        "color": "pink"
-                    }
-                ]
-            }
-        ]
-    }
-]
+// families = [
+//     {
+//         "name": "A1",
+//         "rules": [
+//             {
+//                 "mandatories": ["A", "B", "C"]
+//             },
+//             {
+//                 "forbidden": ["D", "E"]
+//             }
+//         ],
+//         "proteins": [
+//             {
+//                 "id": "XP_001",
+//                 "length": "1000",
+//                 "domains": [
+//                     {
+//                         "name": "KH",
+//                         "start": "10",
+//                         "length": "250",
+//                         "color": "green"
+//                     },
+//                     {
+//                         "name": "C",
+//                         "start": "300",
+//                         "length": "55",
+//                         "color": "yellow"
+//                     }
+//                 ]
+//             },
+//             {
+//                 "id": "XP_002",
+//                 "length": "2360",
+//                 "domains": [
+//                     {
+//                         "name": "NRPS",
+//                         "start": "150",
+//                         "length": "300",
+//                         "color": "blue"
+//                     },
+//                     {
+//                         "name": "PP",
+//                         "start": "850",
+//                         "length": "100",
+//                         "color": "pink"
+//                     }
+//                 ]
+//             }
+//         ]
+//     },
+//     {
+//         "name": "A2",
+//         "rules": [
+//             {
+//                 "mandatories": ["Q", "F", "G"]
+//             },
+//             {
+//                 "forbidden": ["M", "P"]
+//             }
+//         ],
+//         "proteins": [
+//             {
+//                 "id": "XP_008",
+//                 "length": "1565",
+//                 "domains": [
+//                     {
+//                         "name": "RAS",
+//                         "start": "455",
+//                         "length": "300",
+//                         "color": "pink"
+//                     },
+//                     {
+//                         "name": "DMATS",
+//                         "start": "923",
+//                         "length": "111",
+//                         "color": "violet"
+//                     }
+//                 ]
+//             },
+//             {
+//                 "id": "XP_009",
+//                 "length": "985",
+//                 "domains": [
+//                     {
+//                         "name": "NRPS",
+//                         "start": "95",
+//                         "length": "300",
+//                         "color": "blue"
+//                     },
+//                     {
+//                         "name": "PP",
+//                         "start": "633",
+//                         "length": "100",
+//                         "color": "pink"
+//                     }
+//                 ]
+//             }
+//         ]
+//     }
+// ]
 
-// d3.json("./data.json").then(function(families) {
+d3.json("./data.json").then(function(families) {
 
 
     var tooltip = d3.select("body")
@@ -115,20 +115,38 @@ families = [
         .style("text-align", "center")
         .style("vertical-align", "middle")
         .style("font-weight", "bold")
+        .style("overflow", "hidden")
+        .style("text-overflow", "ellipsis")
 
 
     d3.select("section")
         .append("div")
         .attr("id", "family-summary")
 
-    var buttons = d3.select("aside nav").selectAll("button")
+    var buttons = d3.select("#nav-content").selectAll("div")
         .data(families)
-        .enter().append("button")
+        .enter().append("div")
+            .attr("class", "nav-famlist")
             .style("display", "block")
-            .style("text-align", "center")
+            .style("text-align", "left")
             .text(function (d) {
                 return d.name;
             })
+
+    buttons.on("mouseover", function () {
+        d3.select(this)
+            .style("cursor", "pointer")
+            .style("font-size", "14px")
+            .style("font-style", "italic")
+    }) 
+
+    buttons.on("mouseout", function () {
+        d3.select(this).style("color", "black")
+            .style("font-size", "12px")
+            .style("font-style", "normal")
+    })
+
+        
 
     d3.select("#mandatory").selectAll("text")
         .data(families[0].rules[0].mandatories)
@@ -139,7 +157,6 @@ families = [
         .data(families[0].rules[1].forbidden)
         .enter().append("text")
             .text(function(d) {return `${d} `})
-
 
 
     var width = 1000;
@@ -283,4 +300,4 @@ families = [
         
     })
                 
-// });
+});

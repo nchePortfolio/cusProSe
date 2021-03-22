@@ -147,6 +147,23 @@ class Rule:
             for domain in self.forbidden_domains:
                 self.logger.info(' - {}'.format(domain.name))
         self.logger.info('')
+
+    def jsonify(self):
+        mandatory_names = [x.name for x in self.mandatory_domains]
+        forbidden_names = ['None'] if not self.forbidden_domains else [x.name for x in self.forbidden_domains]
+        json_rule = {
+            "name": self.name,
+            "rules": [
+                {
+                    "mandatories": mandatory_names
+                },
+                {
+                    "forbidden": forbidden_names
+                }
+                ]
+            }
+
+        return json_rule
         
 
 class Domain:

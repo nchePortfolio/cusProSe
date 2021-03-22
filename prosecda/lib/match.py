@@ -1,9 +1,11 @@
-import os
+import json
 import logging
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import matplotlib.patches as patches
 from matplotlib.backends.backend_pdf import PdfPages
+import os
+
 
 import prosecda.lib.rule_parser as rule_parser
 from lib.external import Protein
@@ -12,13 +14,7 @@ import lib.logHandler as logHandler
 logging.getLogger('matplotlib.font_manager').disabled = True
 logging.getLogger('matplotlib.backends.backend_pdf').disabled = True
 
-try:
-    import importlib.resources as pkg_resources
-except ImportError:
-    # Try backported to PY<37 `importlib_resources`.
-    import importlib_resources as pkg_resources
-
-from .. import html  # relative-import the *package* containing the templates
+from ..lib import html
 
 
 class Matches:
@@ -80,17 +76,16 @@ class Matches:
             return []
 
     def report(self):
+        json_all_match = []
+        if self.list:
+            os.makedirs(self.outdir, exist_ok=True)
+            for match in self.list:
+                match.report(outdir=self.outdir)
+                json_all_match.append(match.jsonify())
 
-        # if self.list:
-        #     os.makedirs(self.outdir, exist_ok=True)
-        #     for match in self.list:
-        #         match.report(outdir=self.outdir)
-
-        template = pkg_resources.read_text(html, 'index.html')
-        with pkg_resources.path(html, "index.html") as p:
-            package_path = p
-
-        print(package_path)
+        html.generate_html(self.outdir)
+        with open(self.outdir + '/data.json', 'w') as _jsonfile:
+            _jsonfile.write(json.dumps(json_all_match, indent=4))
 
 
 def is_match(rule, protein):
@@ -120,9 +115,12 @@ def is_match(rule, protein):
 
 class Match:
     """
+    Object used to deal with all proteins matching a given rule.
 
-    Container to deal with all proteins matching a given rule.
-
+    Attributes:
+        - rule: instance of rule_parser.Rule
+        - proteins: list containing all Protein instances matching the rule
+        - domain_colors: variable used to store assigned colors to domains in proteins
     """
 
     palette = ['dodgerblue', 'orange', 'darkseagreen',
@@ -133,7 +131,6 @@ class Match:
 
     def __init__(self, rule: rule_parser.Rule):
         """
-
         @param rule: instance of Rule
         """
         self.rule = rule
@@ -194,6 +191,26 @@ class Match:
         protein_all_domains = PlotProt(protein=protein, colors=self.domain_colors, _type='all')
         protein_all_domains.draw()
         protein_all_domains.save(outpath=outpath)
+
+    def jsonify(self):
+        mandatory_names = [x.name for x in self.rule.mandatory_domains]
+        forbidden_names = ['None'] if not self.rule.forbidden_domains else [x.name for x in self.rule.forbidden_domains]
+        proteins = [protein.jsonify() for protein in self.proteins]
+
+        json_match = {
+            "name": self.rule.name,
+            "rules": [
+                {
+                    "mandatories": mandatory_names
+                },
+                {
+                    "forbidden": forbidden_names
+                }
+                ],
+            "proteins": proteins
+            }
+
+        return json_match
 
 
 class PlotProt:

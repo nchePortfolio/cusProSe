@@ -11,6 +11,23 @@ import lib.logHandler as logHandler
 from lxml import etree
 from prosecda.lib.rule_parser import Rule
 
+import matplotlib.colors as mcolors
+from random import shuffle
+
+# COLORS = list(mcolors.CSS4_COLORS.keys())
+COLORS = [
+    'indianred', 'salmon', 'lightsalmon', 'red', 'firebrick',
+    'hotpink', 'mediumvioletred', 'pink',
+    'coral', 'orangered', 'orange',
+    'yellow', 'gold', 'lemonchiffon', 'papayawhip', 'mocassin', 'peachpuff', 'khaki', 'darkkhaki',
+    'lavender', 'thistle', 'plum', 'violet', 'mediumorchid', 'fuchsia', 'mediumpurple', 'blueviolet', 'darkorchid', 'purple', 'rebeccapurple', 'indigo', 'mediumslateblue', 'slateblue', 'darkslateblue',
+    'chartreuse', 'greenyellow', 'limegreen', 'palegreen', 'springgreen', 'mediumspringgreen', 'mediumseagreen', 'seagreen', 'green', 'darkgreen', 'yellowgreen', 'olive', 'darkseagreen', 'teal',
+    'aqua', 'paleturquoise', 'aquamarine', 'darkturquoise', 'steelblue', 'lightsteelblue', 'powderblue', 'lightskyblue', 'deepskyblue', 'dodgerblue', 'royalblue', 'blue', 'mediumblue', 'navy',
+    'bisque', 'navajowhite', 'burlywood', 'sandybrown', 'darkgoldenrod', 'peru', 'chocolate', 'sienna', 'maroon',
+    'lightslategray', 'darkslategray'
+]
+shuffle(COLORS)
+DOMAIN_COLORS = {}
 
 class Usearch:
     """
@@ -240,6 +257,13 @@ class HmmerDomtbl:
         self.env_to = int(cols[20]) if cols else None
         self.acc = float(cols[21]) if cols else None
 
+        self._set_color()
+
+    def _set_color(self):
+        if self.qname not in DOMAIN_COLORS:
+            color = COLORS.pop()
+            DOMAIN_COLORS[self.qname] = color
+
     def ali_coors(self):
         return self.ali_from, self.ali_to
 
@@ -276,6 +300,16 @@ class HmmerDomtbl:
                          'cval:' + str(self.dom_cval),
                          'ival:' + str(self.dom_ival),
                          'score:' + str(self.dom_score)])
+
+    def jsonify(self):
+        json_domain = {
+            "name": self.qname,
+            "start": self.env_from,
+            "length": self.env_to - self.env_from + 1,
+            "color": DOMAIN_COLORS[self.qname]
+            }
+
+        return json_domain
 
 
 class HmmerHits:
@@ -516,6 +550,16 @@ class Protein:
     def write_xml(self, outdir: str, rule: Rule):
         with open(outdir + self.name + '.xml', 'w') as o_xml:
             o_xml.write(self.get_xml(rule=rule))
+
+    def jsonify(self):
+        domains = [x.jsonify() for x in self.best_architecture.domains]
+        json_protein = {
+            "id": self.name,
+            "length": self.length,
+            "domains": domains
+        }
+
+        return json_protein
 
     def get_xml(self, rule: Rule):
         protein_element = etree.Element('protein')
