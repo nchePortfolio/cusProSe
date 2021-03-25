@@ -1,129 +1,6 @@
-// families = [
-//     {
-//         "name": "A1",
-//         "rules": [
-//             {
-//                 "mandatories": ["A", "B", "C"]
-//             },
-//             {
-//                 "forbidden": ["D", "E"]
-//             }
-//         ],
-//         "proteins": [
-//             {
-//                 "id": "XP_001",
-//                 "length": "1000",
-//                 "domains": [
-//                     {
-//                         "name": "KH",
-//                         "start": "10",
-//                         "length": "250",
-//                         "color": "green"
-//                     },
-//                     {
-//                         "name": "C",
-//                         "start": "300",
-//                         "length": "55",
-//                         "color": "yellow"
-//                     }
-//                 ]
-//             },
-//             {
-//                 "id": "XP_002",
-//                 "length": "2360",
-//                 "domains": [
-//                     {
-//                         "name": "NRPS",
-//                         "start": "150",
-//                         "length": "300",
-//                         "color": "blue"
-//                     },
-//                     {
-//                         "name": "PP",
-//                         "start": "850",
-//                         "length": "100",
-//                         "color": "pink"
-//                     }
-//                 ]
-//             }
-//         ]
-//     },
-//     {
-//         "name": "A2",
-//         "rules": [
-//             {
-//                 "mandatories": ["Q", "F", "G"]
-//             },
-//             {
-//                 "forbidden": ["M", "P"]
-//             }
-//         ],
-//         "proteins": [
-//             {
-//                 "id": "XP_008",
-//                 "length": "1565",
-//                 "domains": [
-//                     {
-//                         "name": "RAS",
-//                         "start": "455",
-//                         "length": "300",
-//                         "color": "pink"
-//                     },
-//                     {
-//                         "name": "DMATS",
-//                         "start": "923",
-//                         "length": "111",
-//                         "color": "violet"
-//                     }
-//                 ]
-//             },
-//             {
-//                 "id": "XP_009",
-//                 "length": "985",
-//                 "domains": [
-//                     {
-//                         "name": "NRPS",
-//                         "start": "95",
-//                         "length": "300",
-//                         "color": "blue"
-//                     },
-//                     {
-//                         "name": "PP",
-//                         "start": "633",
-//                         "length": "100",
-//                         "color": "pink"
-//                     }
-//                 ]
-//             }
-//         ]
-//     }
-// ]
-
 d3.json("./data.json").then(function(families) {
 
-
-    var tooltip = d3.select("body")
-        .append("div")
-        .style("position", "absolute")
-        .style("visibility", "hidden")
-        .style("background", "white")
-        .style("color", "black")
-        .style("border", "0.5px solid")
-        .style("z-index", "1")
-        .style("width", "100px")
-        .style("height", "25px")
-        .style("text-align", "center")
-        .style("vertical-align", "middle")
-        .style("font-weight", "bold")
-        .style("overflow", "hidden")
-        .style("text-overflow", "ellipsis")
-
-
-    d3.select("section")
-        .append("div")
-        .attr("id", "family-summary")
-
-    var buttons = d3.select("#nav-content").selectAll("div")
+    var famList = d3.select("#nav-content").selectAll("div")
         .data(families)
         .enter().append("div")
             .attr("class", "nav-famlist")
@@ -133,96 +10,32 @@ d3.json("./data.json").then(function(families) {
                 return d.name;
             })
 
-    buttons.on("mouseover", function () {
+    famList.on("mouseover", function () {
         d3.select(this)
             .style("cursor", "pointer")
-            .style("font-size", "14px")
+            .style("font-size", "12px")
             .style("font-style", "italic")
     }) 
 
-    buttons.on("mouseout", function () {
+    famList.on("mouseout", function () {
         d3.select(this).style("color", "black")
-            .style("font-size", "12px")
+            .style("font-size", "10px")
             .style("font-style", "normal")
     })
 
-        
-
-    d3.select("#mandatory").selectAll("text")
-        .data(families[0].rules[0].mandatories)
-        .enter().append("text")
-            .text(function(d) {return `${d} `})
-
-    d3.select("#forbidden").selectAll("text")
-        .data(families[0].rules[1].forbidden)
-        .enter().append("text")
-            .text(function(d) {return `${d} `})
-
-
-    var width = 1000;
-    var height = 50;
-
-    var proteins = families[0].proteins
-    var protein_length = proteins.map(function(d) {return +d.length;})
-
-    var scale = d3.scaleLinear()
-        .domain([1, d3.max(protein_length)])
-        .range([1, 1000]);
-
-    var div = d3.select(".my_dataviz").selectAll("div")
-                .data(proteins)
-                .enter().append("div")
-                    .attr("class", "mydiv")
-                    // .style("background-color", function(d, i) {
-                    //     if (i % 2 == 0) {
-                    //         return "lightgray";
-                    //     } else {
-                    //         return "gray";
-                    //     }
-                    // })
-
-    var svg = div.append("svg")
-                    .attr("width", width)
-                    .attr("height", height)
-
-    var g = svg.append("g")
-                .attr("transform", function(d, i) {
-                    return "translate(0,0)";
-                })
-
-    var line = g.append("line")
-                    .attr("x1", 1)
-                    .attr("y1", 25)
-                    .attr("x2", d => scale(+d.length))
-                    .attr("y2", 25)
-                    .attr("stroke", "black")
-
-    var rect = g.selectAll("rect")
-                .data(d => d.domains)
-                .enter().append("rect")
-                    .attr("x", d => scale(d.start))
-                    .attr("y", 15)
-                    .attr("height", "20")
-                    .attr("width", d => scale(d.length))
-                    .attr("fill", d => d.color)
-                    .attr("stroke", "black")
-                    .attr("fill-opacity", "0.75")
-                    .on("mouseover", function(event, d) {
-                        tooltip.html(d.name)
-                            .style("left", `${event.pageX - 30}px`)     
-                            .style("top", `${event.pageY + 30}px`)
-
-                        tooltip.style("visibility", "visible")
-                            .style("opacity", 0.95)
-                            
-                    })
-                    .on("mouseout", function(d) {
-                        tooltip.transition()
-                            .duration(200)
-                            .style("opacity", 0);
-                    });
+    initPage(families[0]);
+    drawProteins(families[0].proteins);
     
-    buttons.on("click", function() {
+    famList.on("click", function() {
+        d3.select("#rule-summary .subtitle-header span").select("text").remove()
+        d3.select("#rule-summary .subtitle-header span")
+        .text(this.__data__.name)
+        
+        d3.select("#proteins-container .subtitle-header span").select("text").remove()
+        d3.select("#proteins-container .subtitle-header span")
+        .text(this.__data__.name)
+
+        
         // Update rule summary header
         var mand = this.__data__.rules.map(d => d.mandatories)
         var forb = this.__data__.rules.map(d => d.forbidden)
@@ -239,65 +52,163 @@ d3.json("./data.json").then(function(families) {
             .enter().append("text")
                 .text(function(d) {return `${d} `})
 
-
-        // Update protein plots
-        var proteins = this.__data__.proteins
-        // console.log(proteins)
-        var protein_length = proteins.map(function(d) {return +d.length;})
-
-        var scale = d3.scaleLinear()
-            .domain([1, d3.max(protein_length)])
-            .range([1, 1000]);
-            
-        //rejoin data
-        d3.select(".my_dataviz").selectAll("div").remove()
-        var div = d3.select(".my_dataviz").selectAll("div")
-        .data(proteins)
-        .enter().append("div")
-            .attr("class", "mydiv")
-
-        var svg = div.append("svg")
-                .attr("width", width)
-                .attr("height", height)
-
-        var g = svg.append("g")
-            .attr("transform", function(d, i) {
-                return "translate(0,0)";
-            })
-
-        var line = g.append("line")
-                .attr("x1", 1)
-                .attr("y1", 25)
-                .attr("x2", d => scale(+d.length))
-                .attr("y2", 25)
-                .attr("stroke", "black")
-
-        var rect = g.selectAll("rect")
-            .data(d => d.domains)
-            .enter().append("rect")
-                .attr("x", d => scale(d.start))
-                .attr("y", 15)
-                .attr("height", "20")
-                .attr("width", d => scale(d.length))
-                .attr("fill", d => d.color)
-                .attr("stroke", "black")
-                .attr("fill-opacity", "0.75")
-                    .on("mouseover", function(event, d) {
-                        tooltip.html(d.name)
-                            .style("left", `${event.pageX - 30}px`)     
-                            .style("top", `${event.pageY + 30}px`)
-
-                        tooltip.style("visibility", "visible")
-                            .style("opacity", 0.95)
-                            
-                    })
-                    .on("mouseout", function(d) {
-                        tooltip.transition()
-                            .duration(200)
-                            .style("opacity", 0);
-                    });
-
-        
+        rmProteins();
+        drawProteins(this.__data__.proteins);
+        updateDetails(this.__data__.proteins[0]);
+       
     })
                 
 });
+
+
+function rmProteins() {
+    d3.select("#proteins-draw").selectAll(".protein").remove()
+}
+
+function drawProteins(data) {
+    var width = 850;
+    var height = 80;
+
+    var proteins = data
+    var protein_length = proteins.map(function(d) {return +d.length;})
+
+    var scale = d3.scaleLinear()
+        .domain([1, d3.max(protein_length)])
+        .range([1, 800]);
+
+    var div = d3.select("#proteins-draw").selectAll("div")
+                .data(proteins)
+                .enter().append("div")
+                    .attr("class", "protein")
+
+    var subdiv = div.append("div")
+        .attr("class", "protein-descr")
+        .text(d => {
+            return `${d.id} (${d.length} aa)`;
+        })
+        .style("font-weight", "bold")
+        .style("border-bottom", "1px solid")
+
+    d3.select(".protein-descr ").classed("selected", true);
+
+    var svg = subdiv.append("svg")
+                    .attr("width", width)
+                    .attr("height", height)
+
+    var g = svg.append("g")
+                .attr("transform", function() {
+                    return "translate(25,0)";
+                })
+
+    g.append("line")
+        .attr("x1", 1)
+        .attr("y1", 40)
+        .attr("x2", d => scale(+d.length))
+        .attr("y2", 40)
+        .attr("stroke", "black")
+        .attr("stroke-width", "2")
+
+    var rect = g.selectAll("rect")
+                .data(d => d.domains)
+                .enter().append("rect")
+                    .attr("x", d => scale(d.start))
+                    .attr("y", 32)
+                    .attr("height", "16")
+                    .attr("width", d => scale(d.length))
+                    .attr("fill", d => d.color)
+                    .attr("stroke", "black")
+                    .attr("fill-opacity", "0.85")
+                    .attr("rx", "8")
+                    .attr("ry", "8")
+
+    rect.append("title")
+        .text(d => `${d.name} (${d.length} aa)`)
+
+    subdiv.on("click", function(d) {
+        d3.selectAll(".selected").classed("selected", false);
+        var _this = d3.select(this);
+        if (_this.classed("selected")) {
+            _this.classed("selected", false);
+        } else {
+            _this.classed("selected", true);    
+        }
+
+        updateDetails(this.__data__);
+
+        var protein = this.__data__
+        d3.select("#p-id").text(protein.id)
+        d3.select("#p-length").text(`${protein.length} aa`)
+        d3.select("#p-archNb").text(`${protein.architectures_nb}`)
+
+        d3.select("#detail-hmmdomtbl tbody").selectAll("tr").remove()
+        var rows = d3.select("#detail-hmmdomtbl tbody").selectAll("tr")
+            .data(protein.domains)
+            .enter().append("tr")
+                .attr("id", function(d) {return `${d.name}-${d.start}` })
+
+        rows.append("td").text(function(d) {return d.name})
+        rows.append("td").text( d => d.start)
+        rows.append("td").text( d => (d.start+d.length-1))
+        rows.append("td").text( d => d.cevalue)
+        rows.append("td").text( d => d.ievalue)
+        rows.append("td").text( d => d.score)
+    })
+
+    rect.on("mouseenter", function(event, d) {
+        d3.select(`#${d.name}-${d.start}`).selectAll("td")
+            // .style("border-color", this.__data__.color)
+            .style("border-color", "black")
+            .style("border-width", "2px")
+            .style("font-weight", "bold")
+            .classed("rect-hovered", true)
+    })
+    rect.on("mouseleave", function(event, d) {   
+        d3.select(`#${d.name}-${d.start}`).selectAll("td")
+        .style("border-width", "1px")
+        .style("font-weight", "normal")
+        .classed("rect-hovered", false);
+    })
+
+}
+
+function initPage(data) {
+
+    d3.select("#sp-rulename1")
+        .text(data.name);
+
+    d3.select("#sp-rulename2")
+        .text(data.name);
+
+
+    // d3.select("#mandatory").selectAll("text")
+    //     .data(data.rules[0].mandatories)
+    //     .enter().append("text")
+    //         .text(function(d) {return `${d} `})
+
+    // d3.select("#forbidden").selectAll("text")
+    //     .data(data.rules[1].forbidden)
+    //     .enter().append("text")
+    //         .text(function(d) {return `${d} `})
+
+    updateDetails(data.proteins[0]);
+}
+
+function updateDetails(protein){
+    d3.select("#p-id").text(protein.id)
+    d3.select("#p-length").text(`${protein.length} aa`)
+    d3.select("#p-archNb").text(`${protein.architectures_nb}`)
+
+    d3.select("#detail-hmmdomtbl tbody").selectAll("tr").remove()
+    var rows = d3.select("#detail-hmmdomtbl tbody").selectAll("tr")
+        .data(protein.domains)
+        .enter().append("tr")
+            .attr("id", function(d) {return `${d.name}-${d.start}` })
+
+    rows.append("td").text(function(d) {return d.name})
+    rows.append("td").text( d => d.start)
+    rows.append("td").text( d => (d.start+d.length-1))
+    rows.append("td").text( d => d.cevalue)
+    rows.append("td").text( d => d.ievalue)
+    rows.append("td").text( d => d.score)
+}
+

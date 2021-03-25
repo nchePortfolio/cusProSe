@@ -16,12 +16,12 @@ header {
     height: 100px;
 }
 
-section, aside {
+/* section, aside {
     display: inline;
-}
+} */
 
 
-section {
+/* section {
     margin: 5px 0px 5px;
     border: dashed black 1px;
     height: 600px;
@@ -29,6 +29,14 @@ section {
     width: 84%;
     clear: both;
     border-top-left-radius: 8px;
+} */
+
+section {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    background-color: rgba(199, 235, 0, 0.342);
+    border: 1px solid;
 }
 
 aside {
@@ -41,9 +49,9 @@ aside {
 
 }
 
-nav, footer {
+/* nav, footer {
     clear: both;
-}
+} */
 
 aside nav {
     height: 100%;

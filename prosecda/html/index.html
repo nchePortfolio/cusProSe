@@ -2,10 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link href="./css/styles.css" rel="stylesheet" type="text/css">
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
         <title>ProSeCDA</title>
-        <script src="./js/d3.v6.min.js"></script>
-
+        <script type="text/javascript" src="./js/d3.v6.min.js"></script>
     </head>
     
     <body>
@@ -14,36 +13,84 @@
         </header>
 
         <section>
-            <div class="rule-summary">
-                <div id="title-summary">
-                    
-                </div>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Mandatories</td>
-                            <td id="mandatory"></td>
-                        </tr>
-                        <tr>
-                            <td>Forbidden</td>
-                            <td id="forbidden"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <aside>
+                <div class="subtitle-header">List of protein families</div>
+                <div id="nav-content"></div>          
+            </aside>
 
-            <div class="my_dataviz">
-            </div>
-        </section>    
-
-        <aside>
-            <nav>
-                <div id="nav-title-bg">
-                    <div id="nav-title">List of protein families</div>
+            <div id="container">
+                 <div id="rule-summary">
+                    <div class="subtitle-header">Rule definition for the family <span id="sp-rulename1"></span></div>
+                    <div id="rule-content">
+                        <p>The tables below summarizes the rules defining the protein family with:
+                            <ul>
+                                <li>- Legend: Legend of the domains</li>
+                                <li>- Name: Name of the domains</li>
+                                <li>- E-value cutoff: Minimum E-value the domain must match a sequence</li>
+                            </ul>
+                        </p>
+                    </div>
                 </div>
-                <div id="nav-content"></div>               
-            </nav>
-        </aside>
+
+                <div id="proteins-container">
+                    <div class="subtitle-header">
+                        Most-likely domain architectures matching <span id="sp-rulename2"></span> family rule
+                    </div>
+                    <div id="proteins-draw"></div>
+                </div>
+            </div>
+            
+            <div id="detail-container">
+                <div class="subtitle-header">Details</div>
+                <div id="detail-description">
+                    <p><b>Protein ID: </b><span id="p-id"></span></p>
+                         
+                    <p><b>Length: </b><span id="p-length"></span></p>
+                    <p><b>Number of architectures found: </b><span id="p-archNb"></span></p>
+                </div>
+
+                <div id="detail-hmmdomtbl">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th id="th-name">Name</th>
+                                <th id="th-start">Start</th>
+                                <th id="th-end">End</th>
+                                <th>c-Evalue</th>
+                                <th>i-Evalue</th>
+                                <th id="th-score">Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- <div class="tooltip">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2" id="tt-name">CHS-like</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tt-col1">Coordinates</td>
+                        <td id="tt-coor"></td>
+                    </tr>
+                    <tr>
+                        <td class="tt-col1">E-value</td>
+                        <td id="tt-eval"></td>
+                    </tr>
+                    <tr>
+                        <td class="tt-col1">BitScore</td>
+                        <td id="tt-score"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> -->
 
         <footer>
             <figure class="header-left">

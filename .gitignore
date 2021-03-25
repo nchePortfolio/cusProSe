@@ -13,3 +13,8 @@ iterhmmbuild/__pycache__/main.cpython-38.pyc
 **.pyc
 **/__pycache__/
 .vscode/
+
+**.bak
+**package-lock.json
+**/node_modules/
+**d3-tip.js

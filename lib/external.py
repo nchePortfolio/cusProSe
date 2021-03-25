@@ -306,6 +306,12 @@ class HmmerDomtbl:
             "name": self.qname,
             "start": self.env_from,
             "length": self.env_to - self.env_from + 1,
+            "cevalue": self.dom_cval,
+            "ievalue": self.dom_ival,
+            "score": self.dom_score,
+            "hmm_length": self.qlen,
+            "hmm_start": self.hmm_from,
+            "hmm_end": self.hmm_to,
             "color": DOMAIN_COLORS[self.qname]
             }
 
@@ -556,6 +562,7 @@ class Protein:
         json_protein = {
             "id": self.name,
             "length": self.length,
+            "architectures_nb": len(self.architectures),
             "domains": domains
         }
 
