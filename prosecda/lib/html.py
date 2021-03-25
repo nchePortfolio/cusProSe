@@ -21,9 +21,10 @@ def get_html_path():
 def generate_html(outdir: str):
     html_files = [
         ('/index.html', ''),
-        ('/css/styles.css', 'css/'), 
+        ('/css/style.css', 'css/'), 
         ('/js/d3.v6.min.js', 'js/'),
-        ('/js/d3_script.js', 'js/')
+        ('/js/d3_script.js', 'js/'),
+        ('/images/i2bc.jpg', 'images/'),
         ]
 
     html_path = get_html_path()
@@ -31,6 +32,8 @@ def generate_html(outdir: str):
     # create js/ and css/ directory in outdir
     os.makedirs(outdir + '/js/', exist_ok=True)
     os.makedirs(outdir + '/css/', exist_ok=True)
+    os.makedirs(outdir + '/images/', exist_ok=True)
+
 
     # copy index.html, js/ css/ in outdir
     for _file, dest in html_files:
