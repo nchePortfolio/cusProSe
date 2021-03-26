@@ -17,13 +17,13 @@ d3.json("./data.json").then(function(families) {
     famList.on("mouseover", function () {
         d3.select(this)
             .style("cursor", "pointer")
-            .style("font-size", "12px")
+            .style("font-size", "14px")
             .style("font-style", "italic")
     }) 
 
     famList.on("mouseout", function () {
         d3.select(this).style("color", "black")
-            .style("font-size", "10px")
+            .style("font-size", "13px")
             .style("font-style", "normal")
     })
 
