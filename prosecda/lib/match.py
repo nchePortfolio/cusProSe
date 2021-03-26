@@ -8,7 +8,7 @@ import os
 
 
 import prosecda.lib.rule_parser as rule_parser
-from lib.external import Protein
+from lib.external import Protein, DOMAIN_COLORS
 import lib.logHandler as logHandler
 
 logging.getLogger('matplotlib.font_manager').disabled = True
@@ -193,20 +193,18 @@ class Match:
         protein_all_domains.save(outpath=outpath)
 
     def jsonify(self):
-        mandatory_names = [x.name for x in self.rule.mandatory_domains]
-        forbidden_names = ['None'] if not self.rule.forbidden_domains else [x.name for x in self.rule.forbidden_domains]
         proteins = [protein.jsonify() for protein in self.proteins]
+        json_rule = self.rule.jsonify()
+
+        for mandatory in json_rule["mandatories"]:
+            mandatory["color"] = DOMAIN_COLORS[mandatory["name"]]
+
+        for forbidden in json_rule["forbidden"]:
+            forbidden["color"] = DOMAIN_COLORS[forbidden["name"]]
 
         json_match = {
             "name": self.rule.name,
-            "rules": [
-                {
-                    "mandatories": mandatory_names
-                },
-                {
-                    "forbidden": forbidden_names
-                }
-                ],
+            "rules": json_rule,
             "proteins": proteins
             }
 

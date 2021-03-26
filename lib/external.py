@@ -27,7 +27,7 @@ COLORS = [
     'lightslategray', 'darkslategray'
 ]
 shuffle(COLORS)
-DOMAIN_COLORS = {}
+DOMAIN_COLORS = {"None": "None"}
 
 class Usearch:
     """

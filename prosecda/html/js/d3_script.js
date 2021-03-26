@@ -1,5 +1,7 @@
 d3.json("./data.json").then(function(families) {
 
+    initPage(families[0]);
+
     var famList = d3.select("#nav-content").selectAll("div")
         .data(families)
         .enter().append("div")
@@ -23,8 +25,6 @@ d3.json("./data.json").then(function(families) {
             .style("font-style", "normal")
     })
 
-    initPage(families[0]);
-    drawProteins(families[0].proteins);
     
     famList.on("click", function() {
         d3.select("#rule-summary .subtitle-header span").select("text").remove()
@@ -37,20 +37,21 @@ d3.json("./data.json").then(function(families) {
 
         
         // Update rule summary header
-        var mand = this.__data__.rules.map(d => d.mandatories)
-        var forb = this.__data__.rules.map(d => d.forbidden)
+        // var mand = this.__data__.rules.map(d => d.mandatories)
+        // var forb = this.__data__.rules.map(d => d.forbidden)
+        console.log(this.__data__.rules.mandatories)
 
-        d3.select("#mandatory").selectAll("text").remove()
-        d3.select("#mandatory").selectAll("text")
-            .data(mand[0])
-            .enter().append("text")
-                .text(function(d) {return `${d} `})
+        // d3.select("#mandatory").selectAll("text").remove()
+        // d3.select("#mandatory").selectAll("text")
+        //     .data(mand[0])
+        //     .enter().append("text")
+        //         .text(function(d) {return `${d} `})
 
-        d3.select("#forbidden").selectAll("text").remove()
-        d3.select("#forbidden").selectAll("text")
-            .data(forb[1])
-            .enter().append("text")
-                .text(function(d) {return `${d} `})
+        // d3.select("#forbidden").selectAll("text").remove()
+        // d3.select("#forbidden").selectAll("text")
+        //     .data(forb[1])
+        //     .enter().append("text")
+        //         .text(function(d) {return `${d} `})
 
         rmProteins();
         drawProteins(this.__data__.proteins);
@@ -61,9 +62,19 @@ d3.json("./data.json").then(function(families) {
 });
 
 
-function rmProteins() {
-    d3.select("#proteins-draw").selectAll(".protein").remove()
+function initPage(data) {
+
+    d3.select("#sp-rulename1")
+        .text(data.name);
+
+    d3.select("#sp-rulename2")
+        .text(data.name);
+
+    updateDetails(data.proteins[0]);
+    drawProteins(data.proteins);
+
 }
+
 
 function drawProteins(data) {
     var width = 850;
@@ -171,27 +182,11 @@ function drawProteins(data) {
 
 }
 
-function initPage(data) {
 
-    d3.select("#sp-rulename1")
-        .text(data.name);
-
-    d3.select("#sp-rulename2")
-        .text(data.name);
-
-
-    // d3.select("#mandatory").selectAll("text")
-    //     .data(data.rules[0].mandatories)
-    //     .enter().append("text")
-    //         .text(function(d) {return `${d} `})
-
-    // d3.select("#forbidden").selectAll("text")
-    //     .data(data.rules[1].forbidden)
-    //     .enter().append("text")
-    //         .text(function(d) {return `${d} `})
-
-    updateDetails(data.proteins[0]);
+function rmProteins() {
+    d3.select("#proteins-draw").selectAll(".protein").remove()
 }
+
 
 function updateDetails(protein){
     d3.select("#p-id").text(protein.id)

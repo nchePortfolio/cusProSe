@@ -1,18 +1,21 @@
 [
     {
         "name": "DMATS",
-        "rules": [
-            {
-                "mandatories": [
-                    "Trp_DMAT"
-                ]
-            },
-            {
-                "forbidden": [
-                    "None"
-                ]
-            }
-        ],
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "Trp_DMAT",
+                    "evalue": 0.01,
+                    "color": "hotpink"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "None",
+                    "color": "None"
+                }
+            ]
+        },
         "proteins": [
             {
                 "id": "MGG_06540T0",
@@ -29,7 +32,7 @@
                         "hmm_length": 350,
                         "hmm_start": 1,
                         "hmm_end": 350,
-                        "color": "firebrick"
+                        "color": "hotpink"
                     }
                 ]
             },
@@ -48,7 +51,7 @@
                         "hmm_length": 350,
                         "hmm_start": 1,
                         "hmm_end": 342,
-                        "color": "firebrick"
+                        "color": "hotpink"
                     }
                 ]
             },
@@ -67,7 +70,7 @@
                         "hmm_length": 350,
                         "hmm_start": 1,
                         "hmm_end": 350,
-                        "color": "firebrick"
+                        "color": "hotpink"
                     }
                 ]
             }
@@ -75,18 +78,21 @@
     },
     {
         "name": "Ent_kaurene_synthase",
-        "rules": [
-            {
-                "mandatories": [
-                    "ent_kaurene"
-                ]
-            },
-            {
-                "forbidden": [
-                    "None"
-                ]
-            }
-        ],
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "ent_kaurene",
+                    "evalue": 0.01,
+                    "color": "powderblue"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "None",
+                    "color": "None"
+                }
+            ]
+        },
         "proteins": [
             {
                 "id": "MGG_01949T0",
@@ -103,7 +109,7 @@
                         "hmm_length": 955,
                         "hmm_start": 1,
                         "hmm_end": 954,
-                        "color": "darkkhaki"
+                        "color": "powderblue"
                     }
                 ]
             },
@@ -122,7 +128,7 @@
                         "hmm_length": 955,
                         "hmm_start": 1,
                         "hmm_end": 955,
-                        "color": "darkkhaki"
+                        "color": "powderblue"
                     }
                 ]
             }
@@ -130,18 +136,21 @@
     },
     {
         "name": "Fusicocadiene_synthase",
-        "rules": [
-            {
-                "mandatories": [
-                    "fusicocadiene"
-                ]
-            },
-            {
-                "forbidden": [
-                    "None"
-                ]
-            }
-        ],
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "fusicocadiene",
+                    "evalue": 0.01,
+                    "color": "navy"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "None",
+                    "color": "None"
+                }
+            ]
+        },
         "proteins": [
             {
                 "id": "MGG_00026T0",
@@ -158,7 +167,7 @@
                         "hmm_length": 714,
                         "hmm_start": 402,
                         "hmm_end": 711,
-                        "color": "mediumorchid"
+                        "color": "navy"
                     }
                 ]
             },
@@ -177,7 +186,7 @@
                         "hmm_length": 714,
                         "hmm_start": 412,
                         "hmm_end": 699,
-                        "color": "mediumorchid"
+                        "color": "navy"
                     }
                 ]
             },
@@ -196,7 +205,7 @@
                         "hmm_length": 714,
                         "hmm_start": 135,
                         "hmm_end": 713,
-                        "color": "mediumorchid"
+                        "color": "navy"
                     }
                 ]
             },
@@ -215,7 +224,7 @@
                         "hmm_length": 714,
                         "hmm_start": 453,
                         "hmm_end": 691,
-                        "color": "mediumorchid"
+                        "color": "navy"
                     }
                 ]
             },
@@ -234,7 +243,7 @@
                         "hmm_length": 714,
                         "hmm_start": 3,
                         "hmm_end": 713,
-                        "color": "mediumorchid"
+                        "color": "navy"
                     }
                 ]
             },
@@ -253,7 +262,7 @@
                         "hmm_length": 714,
                         "hmm_start": 10,
                         "hmm_end": 696,
-                        "color": "mediumorchid"
+                        "color": "navy"
                     }
                 ]
             },
@@ -272,7 +281,7 @@
                         "hmm_length": 714,
                         "hmm_start": 414,
                         "hmm_end": 711,
-                        "color": "mediumorchid"
+                        "color": "navy"
                     }
                 ]
             },
@@ -291,7 +300,7 @@
                         "hmm_length": 714,
                         "hmm_start": 3,
                         "hmm_end": 712,
-                        "color": "mediumorchid"
+                        "color": "navy"
                     }
                 ]
             }
@@ -299,20 +308,31 @@
     },
     {
         "name": "NRPS",
-        "rules": [
-            {
-                "mandatories": [
-                    "C",
-                    "A",
-                    "PP-binding"
-                ]
-            },
-            {
-                "forbidden": [
-                    "None"
-                ]
-            }
-        ],
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "C",
+                    "evalue": 0.01,
+                    "color": "greenyellow"
+                },
+                {
+                    "name": "A",
+                    "evalue": 0.01,
+                    "color": "mediumvioletred"
+                },
+                {
+                    "name": "PP-binding",
+                    "evalue": 0.01,
+                    "color": "maroon"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "None",
+                    "color": "None"
+                }
+            ]
+        },
         "proteins": [
             {
                 "id": "MGG_00022T0",
@@ -329,7 +349,7 @@
                         "hmm_length": 284,
                         "hmm_start": 169,
                         "hmm_end": 280,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -341,7 +361,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 474,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -353,7 +373,7 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -365,7 +385,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -377,7 +397,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 448,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "A",
@@ -389,7 +409,7 @@
                         "hmm_length": 475,
                         "hmm_start": 435,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -401,7 +421,7 @@
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -413,7 +433,7 @@
                         "hmm_length": 284,
                         "hmm_start": 4,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -425,7 +445,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -437,7 +457,7 @@
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -449,7 +469,7 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 281,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     }
                 ]
             },
@@ -468,7 +488,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 405,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "C",
@@ -480,7 +500,7 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -492,7 +512,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -504,7 +524,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -516,7 +536,7 @@
                         "hmm_length": 284,
                         "hmm_start": 37,
                         "hmm_end": 284,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -528,7 +548,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -540,7 +560,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -552,7 +572,7 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -564,7 +584,7 @@
                         "hmm_length": 475,
                         "hmm_start": 2,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -576,7 +596,7 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -588,7 +608,7 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -600,7 +620,7 @@
                         "hmm_length": 475,
                         "hmm_start": 3,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -612,7 +632,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -624,7 +644,7 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     }
                 ]
             },
@@ -643,7 +663,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "PP-binding",
@@ -655,7 +675,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -667,7 +687,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 281,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "C",
@@ -679,7 +699,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -691,7 +711,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -703,7 +723,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -715,7 +735,7 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     }
                 ]
             },
@@ -734,7 +754,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 417,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -746,7 +766,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -758,7 +778,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -770,7 +790,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 279,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -782,7 +802,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -794,7 +814,7 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -813,7 +833,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -825,7 +845,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -837,7 +857,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "KS",
@@ -849,7 +869,7 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     }
                 ]
             },
@@ -868,7 +888,7 @@
                         "hmm_length": 284,
                         "hmm_start": 173,
                         "hmm_end": 260,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -880,7 +900,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -892,7 +912,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -904,7 +924,7 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -916,7 +936,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 474,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -928,7 +948,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -940,7 +960,7 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -952,7 +972,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -964,7 +984,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 67,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -976,7 +996,7 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -988,7 +1008,7 @@
                         "hmm_length": 475,
                         "hmm_start": 2,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -1000,7 +1020,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1012,7 +1032,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     }
                 ]
             },
@@ -1031,7 +1051,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -1043,7 +1063,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -1055,7 +1075,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1067,7 +1087,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -1079,7 +1099,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -1091,7 +1111,7 @@
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -1110,7 +1130,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -1122,7 +1142,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1134,7 +1154,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -1146,7 +1166,7 @@
                         "hmm_length": 475,
                         "hmm_start": 2,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -1158,7 +1178,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1170,7 +1190,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "PP-binding",
@@ -1182,7 +1202,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1194,7 +1214,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 280,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -1206,7 +1226,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 474,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -1218,7 +1238,7 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1230,7 +1250,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 280,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "PP-binding",
@@ -1242,7 +1262,7 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1254,7 +1274,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "PP-binding",
@@ -1266,7 +1286,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1278,7 +1298,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     }
                 ]
             },
@@ -1297,7 +1317,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -1309,7 +1329,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -1321,7 +1341,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1333,7 +1353,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -1345,7 +1365,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -1357,7 +1377,7 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -1376,7 +1396,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -1388,7 +1408,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1400,7 +1420,7 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -1412,7 +1432,7 @@
                         "hmm_length": 475,
                         "hmm_start": 280,
                         "hmm_end": 372,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -1424,7 +1444,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1436,7 +1456,7 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     }
                 ]
             },
@@ -1455,7 +1475,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -1467,7 +1487,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -1479,7 +1499,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1491,7 +1511,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -1503,7 +1523,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -1515,7 +1535,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -1534,7 +1554,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 213,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "KS",
@@ -1546,7 +1566,7 @@
                         "hmm_length": 422,
                         "hmm_start": 244,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -1558,7 +1578,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -1570,7 +1590,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1582,7 +1602,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -1594,7 +1614,7 @@
                         "hmm_length": 475,
                         "hmm_start": 26,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -1606,7 +1626,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -1625,7 +1645,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "C",
@@ -1637,7 +1657,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 281,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "PP-binding",
@@ -1649,7 +1669,7 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1661,7 +1681,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -1673,7 +1693,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -1685,7 +1705,7 @@
                         "hmm_length": 70,
                         "hmm_start": 7,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1697,7 +1717,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "PP-binding",
@@ -1709,7 +1729,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1721,7 +1741,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -1733,7 +1753,7 @@
                         "hmm_length": 475,
                         "hmm_start": 2,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -1745,7 +1765,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1757,7 +1777,7 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "C",
@@ -1769,7 +1789,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 76,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "C",
@@ -1781,7 +1801,7 @@
                         "hmm_length": 284,
                         "hmm_start": 139,
                         "hmm_end": 284,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -1793,7 +1813,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     }
                 ]
             },
@@ -1812,7 +1832,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -1824,7 +1844,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -1836,7 +1856,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1848,7 +1868,7 @@
                         "hmm_length": 284,
                         "hmm_start": 4,
                         "hmm_end": 284,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -1860,7 +1880,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -1872,7 +1892,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -1891,7 +1911,7 @@
                         "hmm_length": 70,
                         "hmm_start": 8,
                         "hmm_end": 66,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1903,7 +1923,7 @@
                         "hmm_length": 284,
                         "hmm_start": 87,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -1915,7 +1935,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -1927,7 +1947,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -1939,7 +1959,7 @@
                         "hmm_length": 284,
                         "hmm_start": 5,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     }
                 ]
             }
@@ -1947,20 +1967,31 @@
     },
     {
         "name": "NRPS-PKS",
-        "rules": [
-            {
-                "mandatories": [
-                    "C",
-                    "KS",
-                    "PP-binding"
-                ]
-            },
-            {
-                "forbidden": [
-                    "None"
-                ]
-            }
-        ],
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "C",
+                    "evalue": 0.01,
+                    "color": "greenyellow"
+                },
+                {
+                    "name": "KS",
+                    "evalue": 0.01,
+                    "color": "bisque"
+                },
+                {
+                    "name": "PP-binding",
+                    "evalue": 0.01,
+                    "color": "maroon"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "None",
+                    "color": "None"
+                }
+            ]
+        },
         "proteins": [
             {
                 "id": "MGG_03810T0",
@@ -1977,7 +2008,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 417,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -1989,7 +2020,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -2001,7 +2032,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -2013,7 +2044,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 279,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -2025,7 +2056,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -2037,7 +2068,7 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -2056,7 +2087,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -2068,7 +2099,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -2080,7 +2111,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "KS",
@@ -2092,7 +2123,7 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     }
                 ]
             },
@@ -2111,7 +2142,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -2123,7 +2154,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -2135,7 +2166,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -2147,7 +2178,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -2159,7 +2190,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -2171,7 +2202,7 @@
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -2190,7 +2221,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -2202,7 +2233,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -2214,7 +2245,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -2226,7 +2257,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -2238,7 +2269,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -2250,7 +2281,7 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -2269,7 +2300,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -2281,7 +2312,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -2293,7 +2324,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -2305,7 +2336,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -2317,7 +2348,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -2329,7 +2360,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -2348,7 +2379,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 213,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "KS",
@@ -2360,7 +2391,7 @@
                         "hmm_length": 422,
                         "hmm_start": 244,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -2372,7 +2403,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -2384,7 +2415,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -2396,7 +2427,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -2408,7 +2439,7 @@
                         "hmm_length": 475,
                         "hmm_start": 26,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -2420,7 +2451,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -2439,7 +2470,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -2451,7 +2482,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -2463,7 +2494,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -2475,7 +2506,7 @@
                         "hmm_length": 284,
                         "hmm_start": 4,
                         "hmm_end": 284,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -2487,7 +2518,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -2499,7 +2530,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -2518,7 +2549,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -2530,7 +2561,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -2542,7 +2573,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -2554,7 +2585,7 @@
                         "hmm_length": 284,
                         "hmm_start": 6,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     }
                 ]
             },
@@ -2573,7 +2604,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -2585,7 +2616,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -2597,7 +2628,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -2609,7 +2640,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     }
                 ]
             }
@@ -2617,19 +2648,26 @@
     },
     {
         "name": "NRPS-like.1",
-        "rules": [
-            {
-                "mandatories": [
-                    "C",
-                    "PP-binding"
-                ]
-            },
-            {
-                "forbidden": [
-                    "A"
-                ]
-            }
-        ],
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "C",
+                    "evalue": 0.01,
+                    "color": "greenyellow"
+                },
+                {
+                    "name": "PP-binding",
+                    "evalue": 0.01,
+                    "color": "maroon"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "A",
+                    "color": "mediumvioletred"
+                }
+            ]
+        },
         "proteins": [
             {
                 "id": "MGG_15100T0",
@@ -2646,7 +2684,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -2658,7 +2696,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -2670,7 +2708,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -2682,7 +2720,7 @@
                         "hmm_length": 284,
                         "hmm_start": 6,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     }
                 ]
             },
@@ -2701,7 +2739,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -2713,7 +2751,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -2725,7 +2763,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -2737,7 +2775,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     }
                 ]
             }
@@ -2745,19 +2783,26 @@
     },
     {
         "name": "NRPS-like.3",
-        "rules": [
-            {
-                "mandatories": [
-                    "A",
-                    "PP-binding"
-                ]
-            },
-            {
-                "forbidden": [
-                    "C"
-                ]
-            }
-        ],
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "A",
+                    "evalue": 0.01,
+                    "color": "mediumvioletred"
+                },
+                {
+                    "name": "PP-binding",
+                    "evalue": 0.01,
+                    "color": "maroon"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "C",
+                    "color": "greenyellow"
+                }
+            ]
+        },
         "proteins": [
             {
                 "id": "MGG_00385T0",
@@ -2774,7 +2819,7 @@
                         "hmm_length": 475,
                         "hmm_start": 33,
                         "hmm_end": 429,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -2786,7 +2831,7 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 50,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -2805,7 +2850,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -2817,7 +2862,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -2836,7 +2881,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -2848,7 +2893,7 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 64,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -2867,7 +2912,7 @@
                         "hmm_length": 475,
                         "hmm_start": 2,
                         "hmm_end": 145,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -2879,7 +2924,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 48,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -2898,7 +2943,7 @@
                         "hmm_length": 475,
                         "hmm_start": 4,
                         "hmm_end": 293,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -2910,7 +2955,7 @@
                         "hmm_length": 70,
                         "hmm_start": 21,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             }
@@ -2918,18 +2963,21 @@
     },
     {
         "name": "Oxidosqualene_synthase",
-        "rules": [
-            {
-                "mandatories": [
-                    "oxidosqualene"
-                ]
-            },
-            {
-                "forbidden": [
-                    "None"
-                ]
-            }
-        ],
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "oxidosqualene",
+                    "evalue": 0.01,
+                    "color": "orange"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "None",
+                    "color": "None"
+                }
+            ]
+        },
         "proteins": [
             {
                 "id": "MGG_11702T0",
@@ -2946,7 +2994,7 @@
                         "hmm_length": 739,
                         "hmm_start": 2,
                         "hmm_end": 736,
-                        "color": "darkslategray"
+                        "color": "orange"
                     }
                 ]
             }
@@ -2954,20 +3002,31 @@
     },
     {
         "name": "PKS",
-        "rules": [
-            {
-                "mandatories": [
-                    "KS",
-                    "AT",
-                    "PP-binding"
-                ]
-            },
-            {
-                "forbidden": [
-                    "None"
-                ]
-            }
-        ],
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "KS",
+                    "evalue": 0.01,
+                    "color": "bisque"
+                },
+                {
+                    "name": "AT",
+                    "evalue": 0.01,
+                    "color": "dodgerblue"
+                },
+                {
+                    "name": "PP-binding",
+                    "evalue": 0.01,
+                    "color": "maroon"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "None",
+                    "color": "None"
+                }
+            ]
+        },
         "proteins": [
             {
                 "id": "MGG_00233T0",
@@ -2984,7 +3043,7 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -2996,7 +3055,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3008,7 +3067,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3027,7 +3086,7 @@
                         "hmm_length": 310,
                         "hmm_start": 84,
                         "hmm_end": 294,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "KS",
@@ -3039,7 +3098,7 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3051,7 +3110,7 @@
                         "hmm_length": 310,
                         "hmm_start": 2,
                         "hmm_end": 308,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3063,7 +3122,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 66,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3082,7 +3141,7 @@
                         "hmm_length": 310,
                         "hmm_start": 14,
                         "hmm_end": 270,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "KS",
@@ -3094,7 +3153,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3106,7 +3165,7 @@
                         "hmm_length": 310,
                         "hmm_start": 2,
                         "hmm_end": 309,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3118,7 +3177,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 66,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3137,7 +3196,7 @@
                         "hmm_length": 422,
                         "hmm_start": 4,
                         "hmm_end": 105,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "KS",
@@ -3149,7 +3208,7 @@
                         "hmm_length": 422,
                         "hmm_start": 185,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3161,7 +3220,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3173,7 +3232,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3192,7 +3251,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 417,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3204,7 +3263,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3216,7 +3275,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -3228,7 +3287,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 279,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -3240,7 +3299,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -3252,7 +3311,7 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3271,7 +3330,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 144,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "KS",
@@ -3283,7 +3342,7 @@
                         "hmm_length": 422,
                         "hmm_start": 248,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3295,7 +3354,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3307,7 +3366,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3326,7 +3385,7 @@
                         "hmm_length": 422,
                         "hmm_start": 263,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3338,7 +3397,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3350,7 +3409,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3369,7 +3428,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3381,7 +3440,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3393,7 +3452,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3412,7 +3471,7 @@
                         "hmm_length": 310,
                         "hmm_start": 14,
                         "hmm_end": 296,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "KS",
@@ -3424,7 +3483,7 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 421,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3436,7 +3495,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 296,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3448,7 +3507,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "PP-binding",
@@ -3460,7 +3519,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3479,7 +3538,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3491,7 +3550,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 308,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3503,7 +3562,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3522,7 +3581,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3534,7 +3593,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3546,7 +3605,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3565,7 +3624,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3577,7 +3636,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3589,7 +3648,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3608,7 +3667,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3620,7 +3679,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3632,7 +3691,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -3644,7 +3703,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -3656,7 +3715,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -3668,7 +3727,7 @@
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3687,7 +3746,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3699,7 +3758,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3711,7 +3770,7 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3730,7 +3789,7 @@
                         "hmm_length": 310,
                         "hmm_start": 60,
                         "hmm_end": 296,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "KS",
@@ -3742,7 +3801,7 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3754,7 +3813,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 296,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3766,7 +3825,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3785,7 +3844,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3797,7 +3856,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3809,7 +3868,7 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3828,7 +3887,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3840,7 +3899,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3852,7 +3911,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3871,7 +3930,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3883,7 +3942,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3895,7 +3954,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3914,7 +3973,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -3926,7 +3985,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -3938,7 +3997,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -3950,7 +4009,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -3962,7 +4021,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -3974,7 +4033,7 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -3993,7 +4052,7 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -4005,7 +4064,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -4017,7 +4076,7 @@
                         "hmm_length": 70,
                         "hmm_start": 21,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -4036,7 +4095,7 @@
                         "hmm_length": 422,
                         "hmm_start": 65,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -4048,7 +4107,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -4060,7 +4119,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -4079,7 +4138,7 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -4091,7 +4150,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -4103,7 +4162,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -4122,7 +4181,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -4134,7 +4193,7 @@
                         "hmm_length": 310,
                         "hmm_start": 2,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -4146,7 +4205,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -4165,7 +4224,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -4177,7 +4236,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -4189,7 +4248,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -4201,7 +4260,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -4213,7 +4272,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -4225,7 +4284,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -4244,7 +4303,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 213,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "KS",
@@ -4256,7 +4315,7 @@
                         "hmm_length": 422,
                         "hmm_start": 244,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -4268,7 +4327,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -4280,7 +4339,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -4292,7 +4351,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -4304,7 +4363,7 @@
                         "hmm_length": 475,
                         "hmm_start": 26,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -4316,7 +4375,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -4335,7 +4394,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -4347,7 +4406,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -4359,7 +4418,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -4371,7 +4430,7 @@
                         "hmm_length": 284,
                         "hmm_start": 4,
                         "hmm_end": 284,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -4383,7 +4442,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -4395,7 +4454,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -4414,7 +4473,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -4426,7 +4485,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -4438,7 +4497,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -4450,7 +4509,7 @@
                         "hmm_length": 284,
                         "hmm_start": 6,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     }
                 ]
             },
@@ -4469,7 +4528,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -4481,7 +4540,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -4493,7 +4552,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -4505,7 +4564,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     }
                 ]
             }
@@ -4513,21 +4572,36 @@
     },
     {
         "name": "PKS-NRPS.0",
-        "rules": [
-            {
-                "mandatories": [
-                    "KS",
-                    "AT",
-                    "C",
-                    "PP-binding"
-                ]
-            },
-            {
-                "forbidden": [
-                    "None"
-                ]
-            }
-        ],
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "KS",
+                    "evalue": 0.01,
+                    "color": "bisque"
+                },
+                {
+                    "name": "AT",
+                    "evalue": 0.01,
+                    "color": "dodgerblue"
+                },
+                {
+                    "name": "C",
+                    "evalue": 0.01,
+                    "color": "greenyellow"
+                },
+                {
+                    "name": "PP-binding",
+                    "evalue": 0.01,
+                    "color": "maroon"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "None",
+                    "color": "None"
+                }
+            ]
+        },
         "proteins": [
             {
                 "id": "MGG_03810T0",
@@ -4544,7 +4618,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 417,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -4556,7 +4630,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -4568,7 +4642,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -4580,7 +4654,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 279,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -4592,7 +4666,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -4604,7 +4678,7 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -4623,7 +4697,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -4635,7 +4709,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -4647,7 +4721,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -4659,7 +4733,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -4671,7 +4745,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -4683,7 +4757,7 @@
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -4702,7 +4776,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -4714,7 +4788,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -4726,7 +4800,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -4738,7 +4812,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -4750,7 +4824,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -4762,7 +4836,7 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -4781,7 +4855,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -4793,7 +4867,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -4805,7 +4879,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -4817,7 +4891,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -4829,7 +4903,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -4841,7 +4915,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -4860,7 +4934,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 213,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "KS",
@@ -4872,7 +4946,7 @@
                         "hmm_length": 422,
                         "hmm_start": 244,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -4884,7 +4958,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -4896,7 +4970,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -4908,7 +4982,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -4920,7 +4994,7 @@
                         "hmm_length": 475,
                         "hmm_start": 26,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -4932,7 +5006,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -4951,7 +5025,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -4963,7 +5037,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -4975,7 +5049,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -4987,7 +5061,7 @@
                         "hmm_length": 284,
                         "hmm_start": 4,
                         "hmm_end": 284,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -4999,7 +5073,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -5011,7 +5085,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -5030,7 +5104,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -5042,7 +5116,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -5054,7 +5128,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -5066,7 +5140,7 @@
                         "hmm_length": 284,
                         "hmm_start": 6,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     }
                 ]
             },
@@ -5085,7 +5159,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -5097,7 +5171,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -5109,7 +5183,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -5121,7 +5195,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     }
                 ]
             }
@@ -5129,20 +5203,31 @@
     },
     {
         "name": "PKS-NRPS.1",
-        "rules": [
-            {
-                "mandatories": [
-                    "KS",
-                    "A",
-                    "PP-binding"
-                ]
-            },
-            {
-                "forbidden": [
-                    "None"
-                ]
-            }
-        ],
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "KS",
+                    "evalue": 0.01,
+                    "color": "bisque"
+                },
+                {
+                    "name": "A",
+                    "evalue": 0.01,
+                    "color": "mediumvioletred"
+                },
+                {
+                    "name": "PP-binding",
+                    "evalue": 0.01,
+                    "color": "maroon"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "None",
+                    "color": "None"
+                }
+            ]
+        },
         "proteins": [
             {
                 "id": "MGG_03810T0",
@@ -5159,7 +5244,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 417,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -5171,7 +5256,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -5183,7 +5268,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -5195,7 +5280,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 279,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -5207,7 +5292,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -5219,7 +5304,7 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -5238,7 +5323,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -5250,7 +5335,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -5262,7 +5347,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "KS",
@@ -5274,7 +5359,7 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     }
                 ]
             },
@@ -5293,7 +5378,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -5305,7 +5390,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -5317,7 +5402,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -5329,7 +5414,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -5341,7 +5426,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -5353,7 +5438,7 @@
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -5372,7 +5457,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -5384,7 +5469,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -5396,7 +5481,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -5408,7 +5493,7 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -5420,7 +5505,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -5432,7 +5517,7 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -5451,7 +5536,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -5463,7 +5548,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -5475,7 +5560,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -5487,7 +5572,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -5499,7 +5584,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -5511,7 +5596,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -5530,7 +5615,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 213,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "KS",
@@ -5542,7 +5627,7 @@
                         "hmm_length": 422,
                         "hmm_start": 244,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -5554,7 +5639,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -5566,7 +5651,7 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -5578,7 +5663,7 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 283,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -5590,7 +5675,7 @@
                         "hmm_length": 475,
                         "hmm_start": 26,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -5602,7 +5687,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             },
@@ -5621,7 +5706,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -5633,7 +5718,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     },
                     {
                         "name": "PP-binding",
@@ -5645,7 +5730,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "khaki"
+                        "color": "maroon"
                     },
                     {
                         "name": "C",
@@ -5657,7 +5742,7 @@
                         "hmm_length": 284,
                         "hmm_start": 4,
                         "hmm_end": 284,
-                        "color": "yellow"
+                        "color": "greenyellow"
                     },
                     {
                         "name": "A",
@@ -5669,7 +5754,7 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "maroon"
+                        "color": "mediumvioletred"
                     },
                     {
                         "name": "PP-binding",
@@ -5681,7 +5766,7 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "khaki"
+                        "color": "maroon"
                     }
                 ]
             }
@@ -5689,19 +5774,26 @@
     },
     {
         "name": "PKS-like",
-        "rules": [
-            {
-                "mandatories": [
-                    "KS",
-                    "AT"
-                ]
-            },
-            {
-                "forbidden": [
-                    "PP-binding"
-                ]
-            }
-        ],
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "KS",
+                    "evalue": 0.01,
+                    "color": "bisque"
+                },
+                {
+                    "name": "AT",
+                    "evalue": 0.01,
+                    "color": "dodgerblue"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "PP-binding",
+                    "color": "maroon"
+                }
+            ]
+        },
         "proteins": [
             {
                 "id": "MGG_14945T0",
@@ -5718,7 +5810,7 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -5730,7 +5822,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     }
                 ]
             },
@@ -5749,7 +5841,7 @@
                         "hmm_length": 422,
                         "hmm_start": 96,
                         "hmm_end": 422,
-                        "color": "plum"
+                        "color": "bisque"
                     },
                     {
                         "name": "AT",
@@ -5761,7 +5853,7 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "lightsteelblue"
+                        "color": "dodgerblue"
                     }
                 ]
             }
@@ -5769,18 +5861,21 @@
     },
     {
         "name": "PKS_type3.0",
-        "rules": [
-            {
-                "mandatories": [
-                    "CHS_like"
-                ]
-            },
-            {
-                "forbidden": [
-                    "None"
-                ]
-            }
-        ],
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "CHS_like",
+                    "evalue": 0.01,
+                    "color": "paleturquoise"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "None",
+                    "color": "None"
+                }
+            ]
+        },
         "proteins": [
             {
                 "id": "MGG_04643T0",
@@ -5797,7 +5892,7 @@
                         "hmm_length": 380,
                         "hmm_start": 1,
                         "hmm_end": 380,
-                        "color": "springgreen"
+                        "color": "paleturquoise"
                     }
                 ]
             },
@@ -5816,7 +5911,7 @@
                         "hmm_length": 380,
                         "hmm_start": 69,
                         "hmm_end": 380,
-                        "color": "springgreen"
+                        "color": "paleturquoise"
                     }
                 ]
             }
@@ -5824,18 +5919,21 @@
     },
     {
         "name": "Sesquiterp_synthase",
-        "rules": [
-            {
-                "mandatories": [
-                    "sesquiterpene"
-                ]
-            },
-            {
-                "forbidden": [
-                    "None"
-                ]
-            }
-        ],
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "sesquiterpene",
+                    "evalue": 0.01,
+                    "color": "darkslateblue"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "None",
+                    "color": "None"
+                }
+            ]
+        },
         "proteins": [
             {
                 "id": "MGG_03833T0",
@@ -5852,7 +5950,7 @@
                         "hmm_length": 369,
                         "hmm_start": 61,
                         "hmm_end": 354,
-                        "color": "lightslategray"
+                        "color": "darkslateblue"
                     }
                 ]
             },
@@ -5871,7 +5969,7 @@
                         "hmm_length": 369,
                         "hmm_start": 64,
                         "hmm_end": 368,
-                        "color": "lightslategray"
+                        "color": "darkslateblue"
                     }
                 ]
             },
@@ -5890,7 +5988,7 @@
                         "hmm_length": 369,
                         "hmm_start": 58,
                         "hmm_end": 362,
-                        "color": "lightslategray"
+                        "color": "darkslateblue"
                     }
                 ]
             }
@@ -5898,18 +5996,21 @@
     },
     {
         "name": "Squalene_hopene_cyclase",
-        "rules": [
-            {
-                "mandatories": [
-                    "squalene_hopene"
-                ]
-            },
-            {
-                "forbidden": [
-                    "None"
-                ]
-            }
-        ],
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "squalene_hopene",
+                    "evalue": 0.01,
+                    "color": "lemonchiffon"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "None",
+                    "color": "None"
+                }
+            ]
+        },
         "proteins": [
             {
                 "id": "MGG_00792T0",
@@ -5926,7 +6027,7 @@
                         "hmm_length": 720,
                         "hmm_start": 50,
                         "hmm_end": 711,
-                        "color": "darkgoldenrod"
+                        "color": "lemonchiffon"
                     }
                 ]
             }
@@ -5934,18 +6035,21 @@
     },
     {
         "name": "Squalene_synthase",
-        "rules": [
-            {
-                "mandatories": [
-                    "squalene"
-                ]
-            },
-            {
-                "forbidden": [
-                    "None"
-                ]
-            }
-        ],
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "squalene",
+                    "evalue": 0.01,
+                    "color": "darkkhaki"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "None",
+                    "color": "None"
+                }
+            ]
+        },
         "proteins": [
             {
                 "id": "MGG_09239T0",
@@ -5962,7 +6066,7 @@
                         "hmm_length": 479,
                         "hmm_start": 1,
                         "hmm_end": 479,
-                        "color": "mocassin"
+                        "color": "darkkhaki"
                     }
                 ]
             }
