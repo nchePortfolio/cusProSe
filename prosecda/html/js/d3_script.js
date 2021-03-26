@@ -36,23 +36,6 @@ d3.json("./data.json").then(function(families) {
         .text(this.__data__.name)
 
         updateRuleSummary(this.__data__.rules);
-        
-        // Update rule summary header
-        // var mand = this.__data__.rules.map(d => d.mandatories)
-        // var forb = this.__data__.rules.map(d => d.forbidden)
-
-        // d3.select("#mandatory").selectAll("text").remove()
-        // d3.select("#mandatory").selectAll("text")
-        //     .data(mand[0])
-        //     .enter().append("text")
-        //         .text(function(d) {return `${d} `})
-
-        // d3.select("#forbidden").selectAll("text").remove()
-        // d3.select("#forbidden").selectAll("text")
-        //     .data(forb[1])
-        //     .enter().append("text")
-        //         .text(function(d) {return `${d} `})
-
         rmProteins();
         drawProteins(this.__data__.proteins);
         updateDetails(this.__data__.proteins[0]);
@@ -70,7 +53,6 @@ function initPage(data) {
         .text(data.name);
 
     updateRuleSummary(data.rules);
-
     updateDetails(data.proteins[0]);
     drawProteins(data.proteins);
 }
@@ -208,6 +190,37 @@ function updateDetails(protein){
 
 
 function updateRuleSummary(rules) {
-    console.log(rules)
+    d3.select("#rule-table").selectAll("td").remove()
+
+    d3.select("#rule-table .tr-name").selectAll("td")
+        .data(rules.mandatories)
+        .enter().append("td")
+        .text(d => d.name)
+
+    var legend = d3.select("#rule-table .tr-legend").selectAll("td")
+    .data(rules.mandatories)
+    .enter().append("td")
+    // .text(d => d.color)
+
+    legend.append("svg")
+        .attr("width", 50)
+        .attr("height", 20)
+        .append("rect")
+            .attr("x", 9)
+            .attr("y", 4)
+            .attr("height", "14")
+            .attr("width", "40")
+            .attr("fill", d => d.color)
+            .attr("stroke", "black")
+            .attr("fill-opacity", "0.85")
+            .attr("rx", "8")
+            .attr("ry", "8")
+
+    d3.select("#rule-table .tr-cutoff").selectAll("td")
+    .data(rules.mandatories)
+    .enter().append("td")
+    .text(d => d.evalue)
+
+
 }
 

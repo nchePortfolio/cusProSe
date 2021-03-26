@@ -284,3 +284,13 @@ table th {
 #rule-content ul li {
     list-style-type: none;
 }
+
+
+#rule-table {
+    margin: 10px;
+    overflow-x: auto;
+}
+
+#rule-table th {
+    width: 120px;
+}
