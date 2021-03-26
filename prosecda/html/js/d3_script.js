@@ -12,6 +12,8 @@ d3.json("./data.json").then(function(families) {
                 return d.name;
             })
 
+    d3.select(".nav-famlist").classed("fam-selected", true);
+
     famList.on("mouseover", function () {
         d3.select(this)
             .style("cursor", "pointer")
@@ -27,6 +29,16 @@ d3.json("./data.json").then(function(families) {
 
     
     famList.on("click", function() {
+        d3.selectAll(".fam-selected").classed("fam-selected", false);
+        var _this = d3.select(this);
+        if (_this.classed("fam-selected")) {
+            _this.classed("fam-selected", false);
+        } else {
+            _this.classed("fam-selected", true);    
+        }
+
+
+
         d3.select("#rule-summary .subtitle-header span").select("text").remove()
         d3.select("#rule-summary .subtitle-header span")
         .text(this.__data__.name)
@@ -149,7 +161,6 @@ function drawProteins(data) {
 
     rect.on("mouseenter", function(event, d) {
         d3.select(`#${d.name}-${d.start}`).selectAll("td")
-            // .style("border-color", this.__data__.color)
             .style("border-color", "black")
             .style("border-width", "2px")
             .style("font-weight", "bold")
@@ -200,7 +211,6 @@ function updateRuleSummary(rules) {
     var legend = d3.select("#rule-table .tr-legend").selectAll("td")
     .data(rules.mandatories)
     .enter().append("td")
-    // .text(d => d.color)
 
     legend.append("svg")
         .attr("width", 50)

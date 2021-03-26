@@ -117,6 +117,16 @@ aside .nav-famlist:hover {
     box-shadow: 10px 5px 5px gray;
 }
 
+.fam-selected {
+    background-color: rgba(106, 202, 189, 0.185);
+}
+
+.fam-selected:hover {
+    background-color: rgba(106, 202, 189, 0.135) !important;
+}
+
+
+
 
 footer {
     border: dashed black 1px;
