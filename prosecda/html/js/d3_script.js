@@ -35,11 +35,11 @@ d3.json("./data.json").then(function(families) {
         d3.select("#proteins-container .subtitle-header span")
         .text(this.__data__.name)
 
+        updateRuleSummary(this.__data__.rules);
         
         // Update rule summary header
         // var mand = this.__data__.rules.map(d => d.mandatories)
         // var forb = this.__data__.rules.map(d => d.forbidden)
-        console.log(this.__data__.rules.mandatories)
 
         // d3.select("#mandatory").selectAll("text").remove()
         // d3.select("#mandatory").selectAll("text")
@@ -63,16 +63,16 @@ d3.json("./data.json").then(function(families) {
 
 
 function initPage(data) {
-
     d3.select("#sp-rulename1")
         .text(data.name);
 
     d3.select("#sp-rulename2")
         .text(data.name);
 
+    updateRuleSummary(data.rules);
+
     updateDetails(data.proteins[0]);
     drawProteins(data.proteins);
-
 }
 
 
@@ -179,7 +179,6 @@ function drawProteins(data) {
         .style("font-weight", "normal")
         .classed("rect-hovered", false);
     })
-
 }
 
 
@@ -205,5 +204,10 @@ function updateDetails(protein){
     rows.append("td").text( d => d.cevalue)
     rows.append("td").text( d => d.ievalue)
     rows.append("td").text( d => d.score)
+}
+
+
+function updateRuleSummary(rules) {
+    console.log(rules)
 }
 

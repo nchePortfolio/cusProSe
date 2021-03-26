@@ -8,6 +8,7 @@ packages = [
     'lib',
     'scripts',
     'prosecda.gui',
+    'prosecda.html'
     ]
 
 st.setup(
