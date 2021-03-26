@@ -56,9 +56,10 @@ section {
 
 #rule-summary {
     width: 100%;
-    height: 30%;
+    height: 40%;
     border: 1px solid;
     border-top-left-radius: 8px;
+    overflow: auto;
 }
 
 #proteins-container {
@@ -279,7 +280,7 @@ table th {
 }
 
 #rule-content {
-    font-size: small;
+    font-size: 12px;
 }
 
 #rule-content p {
@@ -297,10 +298,48 @@ table th {
 
 
 #rule-table {
+    width: 50%;
+    height: 100px;
+    /* border: 1px solid; */
     margin: 10px;
-    overflow-x: auto;
+    overflow-x: scroll;
 }
 
-#rule-table th {
-    width: 120px;
+#rule-table table {
+    max-width: 100%;
+    height: 100%;
+}
+
+
+#rule-table th{
+    width: 100px !important;
+    min-width: 100px;
+    max-width: 100px;
+    font-style: italic;
+    height: 100%;
+}
+
+#rule-table td{
+    width: 90px;
+    height: 100%;
+    min-width: 90px;
+    max-width: 90px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+/* #rule-table .th-title {
+    width: 10px;
+    transform: rotate(-90deg); 
+} */
+
+#rule-table .th-title {
+    font-style: normal;
+    padding-left: 7px;
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    writing-mode: sideways-lr;
 }
