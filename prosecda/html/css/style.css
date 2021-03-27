@@ -6,7 +6,6 @@ html, body {
 body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     color: black;
-    background-color: white;
 }
 
 header, section, footer {
@@ -14,12 +13,13 @@ header, section, footer {
 }
 
 header {
-    border: dashed black 1px;
-    /* height: 90; */
+    /* border: dashed black 1px; */
+    height: 90px;
 }
 
 header h1 {
     text-align: center;
+    margin-top: 20px;
 }
 
 section {
@@ -126,12 +126,9 @@ aside .nav-famlist:hover {
     background-color: rgba(106, 202, 189, 0.135) !important;
 }
 
-
-
-
 footer {
-    border: dashed black 1px;
-    margin-top: 5px;
+    /* border: dashed black 1px; */
+    margin-top: 15px;
     height: 90px;
 }
 

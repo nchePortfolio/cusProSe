@@ -69,17 +69,20 @@ function initPage(data) {
     drawProteins(data.proteins);
 }
 
+const margin = {"top": 0, "right": 5, "bottom": 0, "left": 10};
+const width = 800 - margin.left - margin.right;
+const height = 60 - margin.top - margin.bottom;
+const y_line = (height + margin.top + margin.bottom)/2;
+const rect_height = 12;
+const y_rect = y_line - rect_height/2;
 
 function drawProteins(data) {
-    var width = 850;
-    var height = 80;
-
     var proteins = data
     var protein_length = proteins.map(function(d) {return +d.length;})
 
     var scale = d3.scaleLinear()
-        .domain([1, d3.max(protein_length)])
-        .range([1, 800]);
+        .domain([0, d3.max(protein_length)])
+        .range([0, width]);
 
     var div = d3.select("#proteins-draw").selectAll("div")
                 .data(proteins)
@@ -97,19 +100,17 @@ function drawProteins(data) {
     d3.select(".protein-descr ").classed("selected", true);
 
     var svg = subdiv.append("svg")
-                    .attr("width", width)
-                    .attr("height", height)
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
 
     var g = svg.append("g")
-                .attr("transform", function() {
-                    return "translate(25,0)";
-                })
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     g.append("line")
-        .attr("x1", 1)
-        .attr("y1", 40)
+        .attr("x1", scale(1))
+        .attr("y1", y_line)
         .attr("x2", d => scale(+d.length))
-        .attr("y2", 40)
+        .attr("y2", y_line)
         .attr("stroke", "black")
         .attr("stroke-width", "2")
 
@@ -117,8 +118,8 @@ function drawProteins(data) {
                 .data(d => d.domains)
                 .enter().append("rect")
                     .attr("x", d => scale(d.start))
-                    .attr("y", 32)
-                    .attr("height", "16")
+                    .attr("y", y_rect)
+                    .attr("height", rect_height)
                     .attr("width", d => scale(d.length))
                     .attr("fill", d => d.color)
                     .attr("stroke", "black")
