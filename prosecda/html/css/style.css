@@ -296,22 +296,25 @@ table th {
     list-style-type: none;
 }
 
+#div-tables {
+    display: flex;
+}
 
-#rule-table {
-    width: 50%;
+.rule-table {
+    width: 40%;
     height: 100px;
     /* border: 1px solid; */
     margin: 10px;
     overflow-x: scroll;
 }
 
-#rule-table table {
+.rule-table table {
     max-width: 100%;
     height: 100%;
 }
 
 
-#rule-table th{
+.rule-table th{
     width: 100px !important;
     min-width: 100px;
     max-width: 100px;
@@ -319,7 +322,7 @@ table th {
     height: 100%;
 }
 
-#rule-table td{
+.rule-table td{
     width: 90px;
     height: 100%;
     min-width: 90px;
@@ -330,12 +333,14 @@ table th {
 
 }
 
-/* #rule-table .th-title {
+/* .rule-table .th-title {
     width: 10px;
     transform: rotate(-90deg); 
 } */
 
-#rule-table .th-title {
+.rule-table .th-title {
+    background-color: black;
+    color: white;
     font-style: normal;
     padding-left: 7px;
     width: 20px;

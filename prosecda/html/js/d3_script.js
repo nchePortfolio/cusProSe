@@ -201,14 +201,14 @@ function updateDetails(protein){
 
 
 function updateRuleSummary(rules) {
-    d3.select("#rule-table").selectAll("td").remove()
+    d3.selectAll(".rule-table").selectAll("td").remove()
 
-    d3.select("#rule-table .tr-name").selectAll("td")
+    d3.select(".rule-table .tr-name").selectAll("td")
         .data(rules.mandatories)
         .enter().append("td")
         .text(d => d.name)
 
-    var legend = d3.select("#rule-table .tr-legend").selectAll("td")
+    var legend = d3.select(".rule-table .tr-legend").selectAll("td")
     .data(rules.mandatories)
     .enter().append("td")
 
@@ -226,10 +226,35 @@ function updateRuleSummary(rules) {
             .attr("rx", "8")
             .attr("ry", "8")
 
-    d3.select("#rule-table .tr-cutoff").selectAll("td")
+    d3.select(".rule-table .tr-cutoff").selectAll("td")
     .data(rules.mandatories)
     .enter().append("td")
     .text(d => d.evalue)
+
+    if (rules.forbidden[0].name != "None") {
+        d3.select(".rule-table .tr-name-forb").selectAll("td")
+        .data(rules.forbidden)
+        .enter().append("td")
+        .text(d => d.name)
+
+        var legend = d3.select(".rule-table .tr-legend-forb").selectAll("td")
+        .data(rules.forbidden)
+        .enter().append("td")
+
+        legend.append("svg")
+            .attr("width", 50)
+            .attr("height", 20)
+            .append("rect")
+                .attr("x", 9)
+                .attr("y", 4)
+                .attr("height", "14")
+                .attr("width", "40")
+                .attr("fill", d => d.color)
+                .attr("stroke", "black")
+                .attr("fill-opacity", "0.85")
+                .attr("rx", "8")
+                .attr("ry", "8")
+    }
 
 
 }
