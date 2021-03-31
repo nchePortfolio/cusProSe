@@ -2,7 +2,7 @@
 <figure style="margin-left: auto; margin-right: auto; text-align: center;">
     <img src="docs/img/cusprose_scheme.png"
       alt="Overview of the CusProSe package functionalities"
-      width=75%>
+      style="width: 75%; margin-left: auto; margin-right: auto; text-align: center;">
 </figure>
 
 ## Description
@@ -19,6 +19,6 @@ CustomProteinSearch is a python package containing two independent but complemen
 </p>
 
 ## Documentation and installation
-Please see our [documentation](https://nchenche.github.io/cusProSe/) for details about the package and how to install it.
+Please see our [documentation](https://nchenche.github.io/cusProSe/) for details about the package and how to [install](https://nchenche.github.io/cusProSe/installation.html) it.
 
 Note: CusProSE is actually not supported on Windows, we'll fix this later.
