@@ -99,3 +99,22 @@ or
 ```python
 pip install .
 ```
+
+<div class="admonition tip" style="margin-top: 30px;">
+    <p class="first admonition-title">
+        If the installation was successful:
+    </p>
+  - typing <code>iterhmmbuild</code> should display:
+<pre class="parameters">usage: iterhmmbuild [-h] -fa [FA] -protdb [PROTDB] [-name [NAME]] [-out [OUT]] [-id ID]
+        [-cov COV] [-cval CVAL] [-ival IVAL] [-acc ACC]
+</pre>
+
+- typing <code>prosecda</code> should display:
+<pre class="parameters">usage: prosecda [-h] -proteome [PROTEOME] -hmmdb [HMMDB] -rules [RULES] [-out [OUT]] 
+        [-cov COV] [-cval CVAL] [-ival IVAL] [-score SCORE] [-acc ACC] [-pdf]
+</pre>
+
+ - typing <code>create_hmmdb</code> should display:
+<pre class="parameters">usage: create_hmmdb [-h] -hmmdir [HMMDIR] [-dbname [DBNAME]] [-outdir [OUTDIR]]
+</pre>
+</div>
