@@ -14,24 +14,20 @@ The IterHMMBuild procedure starts building an HMM profile from either a set of r
 ## Inputs
 Two inputs are required for IterHMMBuild.
 
-The first input is either a fasta file with at least one protein sequence  (<a href="#overall-procedure">Figure 2</a>) OR a directory location where multiple individual fasta files are stored (<a href="./index.html#fig-1">Figure 1</a>). In the first case, the output will contain an HMM profile representative of the sequences in the fasta file given as input; if a directory is given as input then the HMM profile in the output will be a concatenation of HMM profiles, each corresponding to the fasta files present in the directory.
+The first input is either a fasta file with at least one protein sequence  (<a href="#iterhmmbuild-overall-procedure">Figure 2</a>) OR a directory location where multiple individual fasta files are stored (<a href="./index.html#fig-1">Figure 1</a>). In the first case, the output will contain an HMM profile representative of the sequences in the fasta file given as input; if a directory is given as input then the HMM profile in the output will be a concatenation of HMM profiles, each corresponding to the fasta files present in the directory.
 
 The second input is a fasta file of protein database used to enrich initial protein sequence(s) of interest.
 
 ## HMM building step
-
 <figure>
 <img class="align-right" src="./img/step_hmmbuilding_enrichment.png">
 </figure>
 <p>
-
 The HMM building is a two-step procedure: a multiple sequence alignment is performed on the input sequences using muscle and the hmmbuild command from hmmer is then used to build the HMM profile from this alignment. However, note that at the first iteration the usearch command is performed on the input sequences to ensure that thoses sequences share no more than 90% (default value) of identity.
 </p>
 
-
-
 ## Sequence enrichment step
-The previously built HMM profile is searched against the protein database given as input. All matching sequences with a E-values<sup>a</sup> less than 0.01 (default value) and an expected accuracy per residue of the alignment<sup>b</sup> above or equal to 0.6 (default value) are retrieved. Those sequences are then merged to the initial input sequences. To ensure that sequences are not redundant, usearch is applied with a threshold identity value of 0.90.
+The previously built HMM profile is searched against the protein database given as input using the hmmsearch command from hmmer. All matching sequences with a E-values<sup>a</sup> less than 0.01 (default value) and an expected accuracy per residue of the alignment<sup>b</sup> above or equal to 0.6 (default value) are retrieved. Those sequences are then merged to the initial input sequences. To ensure that sequences are not redundant, usearch is applied with a threshold identity value of 0.90.
 
 <div class="admonition note">
     <p class="first admonition-title">

@@ -9,7 +9,7 @@
 
 ProSeCDA is a tool that allows to search in a given protein database multiple proteins of interest defined by a user-specified set of domains.
 
-The first step in ProSeCDA is to annotate a protein database of interest with domains from a user-specified HMM profile database. In the next step the annotated proteins are filtered following a set of rules defined by the user. The rule consists to define one or a set of protein families based on the presence and/or absence of domains. All proteins matching thoses rules are then finally accesible in the output. 
+The first step in ProSeCDA is to annotate a protein database of interest with domains from a user-specified HMM profile database. In the next step the annotated proteins are filtered following a set of rules defined by the user. The rule consists to define one or a set of protein families based on the presence and/or absence of domains. All proteins matching thoses rules are then finally accessible in the output. 
 
 ## Inputs
 ProSeCDA requires three inputs:
