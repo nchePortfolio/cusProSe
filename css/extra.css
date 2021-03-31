@@ -70,3 +70,34 @@ table.t-description {
 sup {
     margin-left: 2px;
 }
+
+pre.parameters {
+    border-style: solid;
+    border-color: rgb(172, 172, 172);
+    border-width: 0.5px;
+    padding: 8px;
+    background-color: rgba(228, 228, 228, 0.377);
+    margin-bottom: 24px;
+}
+
+.myul {
+    margin-top: -10px !important;
+}
+
+.myul li {
+    padding-bottom: 8px;
+    text-align: justify;
+    list-style-type: circle !important;
+}
+
+code.inside {
+    background: #f8f8f8 !important;
+    padding: 10px;
+    width: 100% !important;
+    display: block;
+    border: solid 1px #e1e4e5 !important;
+}
+
+.io {
+    color: #E74C3C !important;
+}

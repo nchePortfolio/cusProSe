@@ -62,17 +62,23 @@
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="ihb_usage.html">Usage guideline</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#running-iterhmmbuild">Running IterHMMBuild</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#output-of-iterhmmbuild">Output of IterHMMBuild</a>
+    <li class="toctree-l2"><a class="reference internal" href="#quick-start-examples">Quick start examples</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#output-content-from-a-single-fasta-file-used-as-input">Output content from a single fasta file used as input</a>
+    <li class="toctree-l3"><a class="reference internal" href="#build-a-single-hmm-profile">Build a single HMM profile</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#output-content-from-a-directory-with-multiple-fasta-files-used-as-input">Output content from a directory with multiple fasta files used as input</a>
+    <li class="toctree-l3"><a class="reference internal" href="#build-an-hmm-profile-database">Build an HMM profile database</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#command-line-and-parameters">Command line and parameters</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#parameters-of-iterhmmbuild">Parameters of IterHMMBuild</a>
+    <li class="toctree-l2"><a class="reference internal" href="#output-of-iterhmmbuild">Output of IterHMMBuild</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#output-from-the-generation-of-a-single-hmm-profile">Output from the generation of a single HMM profile</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#output-from-the-generation-of-an-hmm-profile-database">Output from the generation of an HMM profile database</a>
+    </li>
+        </ul>
     </li>
     </ul>
                     </li>
@@ -121,33 +127,101 @@
             <div class="section">
               
                 <h1 id="iterhmmbuild-usage-guideline">IterHMMBuild usage guideline<a class="headerlink" href="#iterhmmbuild-usage-guideline" title="Permanent link">#</a></h1>
-<p>Two inputs are required for IterHMMBuild, both in a fasta format:</p>
-<ul>
-<li>either a fasta file with at least one protein sequence OR a directory location where multiple individual fasta files are stored</li>
-<li>a fasta file of protein database used to enrich initial protein sequence(s) of interest</li>
-</ul>
-<p>To guide the user, input data examples can be found in <code>cusProSe-x.x.x/iterhmmbuild/datas/</code>:</p>
-<pre><b>datas/</b>
-├── inputs
-│   ├── A.fa
-│   ├── KS.fa
-│   └── PP.fa
-└── mgg_70-15_8.fasta
-</pre>
+<div class="admonition tip">
+    <p class="first admonition-title">
+        Tip
+    </p>
+    <p>
+    To guide the user, input data examples can be found in `cusProSe-x.x.x/iterhmmbuild/datas/`:
+    <pre style="line-height: 15px;"><b>datas/</b>
+    ├── inputs
+    │   ├── A.fa
+    │   ├── KS.fa
+    │   └── PP.fa
+    └── mgg_70-15_8.fasta
+    </pre>
 
-<p>All fasta files in the <code>inputs/</code> directory contain sequences of three different protein domains. There is also the <em>magnaporthe orizae</em> proteome (mgg_70-15_8.fasta) that will be used as the protein database for the examples below.</p>
-<h2 id="running-iterhmmbuild">Running IterHMMBuild<a class="headerlink" href="#running-iterhmmbuild" title="Permanent link">#</a></h2>
-<p>If you want to run IterHMMBuild in order to build an HMM profile representing the A domain, type in the terminal:</p>
+    All fasta files in the <code>inputs/</code> directory contain sequences of three different protein domains. There is also the *magnaporthe orizae* proteome (<code>mgg_70-15_8.fasta</code>) that will be used as the protein database for the examples below.
+    </p>
+</div>
+
+<h2 id="quick-start-examples">Quick start examples<a class="headerlink" href="#quick-start-examples" title="Permanent link">#</a></h2>
+<h3 id="build-a-single-hmm-profile">Build a single HMM profile<a class="headerlink" href="#build-a-single-hmm-profile" title="Permanent link">#</a></h3>
+<div>
+Command to build a single HMM profile from the <i>magnaporthe orizae</i> proteome and representative of the A domain sequences:
+
 <pre><code class="language-bash">iterhmmbuild -fa inputs/A.fa -protdb mgg_70-15_8.fasta
 </code></pre>
-<p>If you want to run IterHMMBuild in order to build an HMM profile database representing all domains in <code>inputs/</code> type:</p>
+
+</div>
+
+<h3 id="build-an-hmm-profile-database">Build an HMM profile database<a class="headerlink" href="#build-an-hmm-profile-database" title="Permanent link">#</a></h3>
+<div>
+Command to build an HMM profile database specific to the <i>magnaporthe orizae</i> proteome with each profiles representative of the domain sequences present in the directory `inputs/`:
+
 <pre><code class="language-bash">iterhmmbuild -fa inputs/ -protdb mgg_70-15_8.fasta
 </code></pre>
+
+</div>
+
+<div class="admonition note">
+    <p class="first admonition-title">Note</p>
+    <p>
+    Please note that the user can also create an HMM profile database from a set of individual HMM profiles through the command <code class="io">create_hmmdb</code>. Those HMM profiles must be placed in a unique directory that is given as an input.
+    </p>
+    <p>
+    For instance, let's say we have the following directory containing three HMM profiles:
+        <pre style="line-height: 15px;"><b>my_hmm_dir/</b>
+        ├── A.hmm
+        ├── KS.hmm
+        └── PP.hmm
+        </pre>
+    Then the following command will generate an HMM profile database (that is a simple concatenation of the three HMM profiles) called <code class="io">mydb.hmm</code> in an output directory named <code class="io">databases/</code>: 
+    </p>
+    <p>
+    <code class="inside">create_hmmdb -hmmdir my_hmm_dir/ -dbname mydb.hmm -outdir databases/</code>
+    </p>
+</div>
+
+<h3 id="command-line-and-parameters">Command line and parameters<a class="headerlink" href="#command-line-and-parameters" title="Permanent link">#</a></h3>
+<p>As illustrated by the commands above, two arguments are mandatory for IterHMMBuild: <code>-fa</code> and <code>-protdb</code>.</p>
+<ul class="myul">
+<li>
+The input following <code>-fa</code> can be either a fasta file with at least one protein sequence OR a directory location where multiple individual fasta files are stored. The former can be used when the user wants to build a single HMM profile representative of the sequence(s) given as input. The latter should be used when the user wants to build a set of HMM profiles concatenated into an HMM profile database, with each HMM profile being representative of each related fasta files present in the directory given as input.
+</li>
+<li>
+The input following <code>-protdb</code> is a fasta file of the protein database used to enrich initial protein sequence(s) of interest.
+</li>
+</ul>
+
+<p>Help about the usage of IterHMMBuild and its parameters can be shown with the following command: <code>iterhmmbuild -h</code></p>
+<pre class="parameters">usage: iterhmmbuild [-h] -fa [FA] -protdb [PROTDB] [-name [NAME]] [-out [OUT]] [-id ID]
+                    [-cov COV] [-cval CVAL] [-ival IVAL] [-acc ACC]
+
+Iterative building of hmm profiles
+
+optional arguments:
+  -h, --help        show this help message and exit
+  -fa [FA]          Fasta file of sequence(s) used as first seed or directory containing
+                    such files
+  -protdb [PROTDB]  Sequences used to learn the hmm profile (fasta format)
+  -name [NAME]      Name for the HMM profile (fasta name by default).
+  -out [OUT]        Output directory
+  -id ID            Sequence identity threshold to remove redundancy in seeds&apos;sequences
+                    (0.9)
+  -cov COV          Minimum percentage of coverage alignment between hmm hit and hmm
+                    profile (0.0)
+  -cval CVAL        hmmer conditional e-value cutoff (0.01)
+  -ival IVAL        hmmer independant e-value cutoff (0.01)
+  -acc ACC          hmmer mean probability of the alignment accuracy between each residues
+                    of the target and the corresponding hmm state (0.6)
+</pre>
+
 <h2 id="output-of-iterhmmbuild">Output of IterHMMBuild<a class="headerlink" href="#output-of-iterhmmbuild" title="Permanent link">#</a></h2>
 <p>After running IterHMMBuild an output directory will be generated in the following generic format: 
 <code>iterhmmbuild_year-month-day_hour-min-sec/</code></p>
-<h3 id="output-content-from-a-single-fasta-file-used-as-input">Output content from a single fasta file used as input<a class="headerlink" href="#output-content-from-a-single-fasta-file-used-as-input" title="Permanent link">#</a></h3>
-<p>The directory content generated from <code>A.fa</code> used as input will be as follow:</p>
+<h3 id="output-from-the-generation-of-a-single-hmm-profile">Output from the generation of a single HMM profile<a class="headerlink" href="#output-from-the-generation-of-a-single-hmm-profile" title="Permanent link">#</a></h3>
+<p>The output directory generated from the <a href="#build-a-single-hmm-profile">command run in the quick start examples</a> will have the following architecture:</p>
 <pre><b>iterhmmbuild_2020-10-29_13-13-04/</b>
 ├── A.hmm
 ├── A_seed.clw
@@ -176,8 +250,8 @@
 </table>
 
 <p><code>info.log</code> is a log summary of the computation. The subdirectories <code>iter_i/</code> contain files obtained at each iteration and are described in section <a href="./ihb_introduction.html#outputs">Overall procedure</a>.</p>
-<h3 id="output-content-from-a-directory-with-multiple-fasta-files-used-as-input">Output content from a directory with multiple fasta files used as input<a class="headerlink" href="#output-content-from-a-directory-with-multiple-fasta-files-used-as-input" title="Permanent link">#</a></h3>
-<p>The directory content generated from <code>inputs/</code> will be a list of subdirectories such as the output described above. You will find at its root the file <code>hmm_database.hmm</code>, a concatenation of the HMM profiles of protein domains used as inputs. </p>
+<h3 id="output-from-the-generation-of-an-hmm-profile-database">Output from the generation of an HMM profile database<a class="headerlink" href="#output-from-the-generation-of-an-hmm-profile-database" title="Permanent link">#</a></h3>
+<p>The output directory generated from the <a href="#build-an-hmm-profile-database">command run in the quick start examples</a> will be a list of subdirectories such as the output described above. You will find at its root the file <code>hmm_database.hmm</code>, a concatenation of the HMM profiles of protein domains used as inputs. </p>
 <pre><b>iterhmmbuild_2021-03-02_12-39-38</b>
 ├── hmm_database.hmm
 ├── info.log
@@ -193,22 +267,6 @@
     ├── PP.hmm
     ├── PP_seed.clw
     └── PP_seed.fa
-</pre>
-
-<h2 id="parameters-of-iterhmmbuild">Parameters of IterHMMBuild<a class="headerlink" href="#parameters-of-iterhmmbuild" title="Permanent link">#</a></h2>
-<pre>
-<code class="language-bash">
-  -fa [FA]          Fasta file of sequence(s) used as first seed or directory containing such files
-  -protdb [PROTDB]  Sequences used to learn the hmm profile (fasta format)
-  -name [NAME]      Name for the HMM profile (fasta name by default).
-  -out [OUT]        Output directory
-  -id ID            Sequence identity threshold to remove redundancy in seed sequences (0.9)
-  -cov COV          Minimum percentage of coverage alignment between hmm hit and hmm profile (0.0)
-  -cval CVAL        hmmer conditional e-value cutoff (0.01)
-  -ival IVAL        hmmer independant e-value cutoff (0.01)
-  -acc ACC          hmmer mean probability of the alignment accuracy between each residues of the
-                    target and the corresponding hmm state (0.6)
-</code>
 </pre>
               
             </div>

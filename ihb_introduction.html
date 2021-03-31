@@ -131,19 +131,18 @@
 <p>The IterHMMBuild procedure starts building an HMM profile from either a set of related protein sequences or a single query sequence. This initial profile is then used to identify homologous sequences in any user-specified protein sequence database. If sequences are found, they are added to the initial query sequences and a new HMM profile model is built. This process is repeated until no new sequences are found (i.e. convergence is reached).</p>
 <h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">#</a></h2>
 <p>Two inputs are required for IterHMMBuild.</p>
-<p>The first input is either a fasta file with at least one protein sequence  (<a href="#overall-procedure">Figure 2</a>) OR a directory location where multiple individual fasta files are stored (<a href="./index.html#fig-1">Figure 1</a>). In the first case, the output will contain an HMM profile representative of the sequences in the fasta file given as input; if a directory is given as input then the HMM profile in the output will be a concatenation of HMM profiles, each corresponding to the fasta files present in the directory.</p>
+<p>The first input is either a fasta file with at least one protein sequence  (<a href="#iterhmmbuild-overall-procedure">Figure 2</a>) OR a directory location where multiple individual fasta files are stored (<a href="./index.html#fig-1">Figure 1</a>). In the first case, the output will contain an HMM profile representative of the sequences in the fasta file given as input; if a directory is given as input then the HMM profile in the output will be a concatenation of HMM profiles, each corresponding to the fasta files present in the directory.</p>
 <p>The second input is a fasta file of protein database used to enrich initial protein sequence(s) of interest.</p>
 <h2 id="hmm-building-step">HMM building step<a class="headerlink" href="#hmm-building-step" title="Permanent link">#</a></h2>
 <figure>
 <img class="align-right" src="./img/step_hmmbuilding_enrichment.png">
 </figure>
 <p>
-
 The HMM building is a two-step procedure: a multiple sequence alignment is performed on the input sequences using muscle and the hmmbuild command from hmmer is then used to build the HMM profile from this alignment. However, note that at the first iteration the usearch command is performed on the input sequences to ensure that thoses sequences share no more than 90% (default value) of identity.
 </p>
 
 <h2 id="sequence-enrichment-step">Sequence enrichment step<a class="headerlink" href="#sequence-enrichment-step" title="Permanent link">#</a></h2>
-<p>The previously built HMM profile is searched against the protein database given as input. All matching sequences with a E-values<sup>a</sup> less than 0.01 (default value) and an expected accuracy per residue of the alignment<sup>b</sup> above or equal to 0.6 (default value) are retrieved. Those sequences are then merged to the initial input sequences. To ensure that sequences are not redundant, usearch is applied with a threshold identity value of 0.90.</p>
+<p>The previously built HMM profile is searched against the protein database given as input using the hmmsearch command from hmmer. All matching sequences with a E-values<sup>a</sup> less than 0.01 (default value) and an expected accuracy per residue of the alignment<sup>b</sup> above or equal to 0.6 (default value) are retrieved. Those sequences are then merged to the initial input sequences. To ensure that sequences are not redundant, usearch is applied with a threshold identity value of 0.90.</p>
 <div class="admonition note">
     <p class="first admonition-title">
         Note
