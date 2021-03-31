@@ -76,6 +76,7 @@ pre.parameters {
     border-color: rgb(172, 172, 172);
     border-width: 0.5px;
     padding: 8px;
+    padding-bottom: 0px;
     background-color: rgba(228, 228, 228, 0.377);
     margin-bottom: 24px;
 }
