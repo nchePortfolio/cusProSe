@@ -277,6 +277,21 @@ class HmmerDomtbl:
                          'ival:' + str(self.dom_ival),
                          'score:' + str(self.dom_score)])
 
+    def description2(self):
+        """
+
+        @return: a formatted string describing the hit attributes
+        """
+        return ' | '.join(
+            [
+                str(self.tlen) + 'aa',
+                'domain {} [{}:{}] ({}aa)'.format(
+                    self.qname, self.env_from, self.env_to, str(self.env_to - self.env_from + 1)
+                ),
+                'score: {}'.format(self.dom_score),
+                'i-evalue: {}'.format(self.dom_ival)
+            ])
+
 
 class HmmerHits:
     """
@@ -372,7 +387,7 @@ class HmmerHits:
             sequence = hit.env_sequence(sequence=fasta_dict[protein_id])
             sequence_splitted = [sequence[i:i + 80] for i in range(0, len(sequence), 80)]
 
-            header = '>' + ';'.join([protein_id, hit.description()]) + '\n'
+            header = '>' + ' | '.join([protein_id, hit.description2()]) + '\n'
             fasta_hits.append(header + '\n'.join(sequence_splitted) + '\n')
 
         return fasta_hits
@@ -391,7 +406,7 @@ class HmmerHits:
                 sequence = hit.env_sequence(sequence=fasta_dict[protein_id])
                 sequence_splitted = [sequence[i:i+80] for i in range(0, len(sequence), 80)]
 
-                header = '>' + ';'.join([protein_id, hit.description()]) + '\n'
+                header = '>' + ' | '.join([protein_id, hit.description2()]) + '\n'
                 enriched_fasta_file.write(header + '\n'.join(sequence_splitted) + '\n')
 
 

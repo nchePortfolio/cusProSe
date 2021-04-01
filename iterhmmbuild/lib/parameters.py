@@ -16,7 +16,7 @@ class Param:
 
     def __init__(self, args):
         self.fasta_fname = args.fa
-        self.hmm_name = args.name if args.name else '.'.join(args.fa.split('.')[0:-1])
+        self.hmm_name = args.name if args.name else '.'.join(os.path.basename(args.fa).split('.')[0:-1])
         self.protdb = args.protdb
         self.id = args.id
         self.cov = args.cov
