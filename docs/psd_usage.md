@@ -67,7 +67,6 @@ PKS_type3.0:
 ```
 
 ## Running ProSeCDA
-
 Input examples are available in `cusProSe-x.x.x/prosecda/datas/`
 
 The command below will search in the *f. fujikuroi* proteomes all proteins matching the rules defined in rules.yaml from the HMM profile database databaseKGall_terpenes_selec.hmm:
@@ -75,6 +74,30 @@ The command below will search in the *f. fujikuroi* proteomes all proteins match
 ```bash
 run_prosecda -proteome fusarium_fujikuroi_IMI58289_V2_protein.fasta -hmmdb databaseKGall_terpenes_selec.hmm -rules rules.yaml
 ```
+<br>
+Help about the usage of ProSeCDA and its parameters can be shown with the following command: `prosecda -h
+`:
+<pre class="parameters">usage: prosecda [-h] -proteome [PROTEOME] -hmmdb [HMMDB] -rules [RULES] [-out [OUT]] 
+                [-cov COV] [-cevalue CEVALUE] [-ievalue IEVALUE] [-score SCORE] [-acc ACC]
+                [--nopdf]
+
+Search proteins matching rules.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -proteome [PROTEOME]  Proteome file (.fasta)
+  -hmmdb [HMMDB]        HMM profile database
+  -rules [RULES]        Rules&apos;file (.yaml)
+  -out [OUT]            Output directory
+  -cov COV              Minimum ratio between the length of the HMM profile stretch that 
+                        matches a sequence and the overall length of the HMM profile (0.0)
+  -cevalue CEVALUE      HMMER conditional e-value cutoff (0.01)
+  -ievalue IEVALUE      HMMER independant e-value cutoff (0.01)
+  -score SCORE          HMMER score cutoff (3.0)
+  -acc ACC              HMMER mean probability of the alignment accuracy between each residues
+                        of the target and the corresponding hmm state (0.6)
+  --nopdf               Deactivate the generation of the pdf results (False)
+</pre>
 
 ## Output of ProSeCDA
 ### Global architecture

@@ -67,28 +67,29 @@ The input following <code>-protdb</code> is a fasta file of the protein database
 
 Help about the usage of IterHMMBuild and its parameters can be shown with the following command: `iterhmmbuild -h
 `
-<pre class="parameters">usage: iterhmmbuild [-h] -fa [FA] -protdb [PROTDB] [-name [NAME]] [-out [OUT]] [-id ID]
-                    [-cov COV] [-cval CVAL] [-ival IVAL] [-acc ACC]
+<pre class="parameters">usage: iterhmmbuild [-h] -fa [FA] -protdb [PROTDB] [-name [NAME]] [-out [OUT]] [-id ID] 
+                    [-cov COV] [-cval CVAL] [-ival IVAL] [-acc ACC] [-delta DELTA]
+                    [-maxcount MAXCOUNT]
 
 Iterative building of hmm profiles
 
 optional arguments:
-  -h, --help        show this help message and exit
-  -fa [FA]          Fasta file of sequence(s) used as first seed or directory containing
-                    such files
-  -protdb [PROTDB]  Sequences used to learn the hmm profile (fasta format)
-  -name [NAME]      Name for the HMM profile (fasta name by default).
-  -out [OUT]        Output directory
-  -id ID            Sequence identity threshold to remove redundancy in seeds&apos;sequences
-                    (0.9)
-  -cov COV          Minimum percentage of coverage alignment between hmm hit and hmm
-                    profile (0.0)
-  -cval CVAL        hmmer conditional e-value cutoff (0.01)
-  -ival IVAL        hmmer independant e-value cutoff (0.01)
-  -acc ACC          hmmer mean probability of the alignment accuracy between each residues
-                    of the target and the corresponding hmm state (0.6)
+  -h, --help          show this help message and exit
+  -fa [FA]            Fasta file of sequence(s) used as first seed or directory containing such files
+  -protdb [PROTDB]    Sequences used to learn the hmm profile (fasta format)
+  -name [NAME]        Name for the HMM profile (fasta name by default).
+  -out [OUT]          Output directory
+  -id ID              Sequence identity threshold to remove redundancy in seeds&apos;sequences (0.9)
+  -cov COV            Minimum percentage of coverage alignment between hmm hit and hmm profile (0.0)
+  -cval CVAL          HMMER conditional e-value cutoff (0.01)
+  -ival IVAL          HMMER independant e-value cutoff (0.01)
+  -acc ACC            HMMER mean probability of the alignment accuracy between each residues of the target and the 
+                      corresponding hmm state (0.6)
+  -delta DELTA        Convergence criteria: difference in the number of sequences found between two consecutive iterations            
+                      to consider a non-significant change between between two consecutive iterations (1)
+  -maxcount MAXCOUNT  Convergence criteria: maximum number of times a non-significant change (conv_delta) is accepted before
+                      considering a convergence (3)
 </pre>
-
 
 ## Output of IterHMMBuild
 After running IterHMMBuild an output directory will be generated in the following generic format: 

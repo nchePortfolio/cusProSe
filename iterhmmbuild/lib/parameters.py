@@ -23,6 +23,8 @@ class Param:
         self.cval = args.cval
         self.ival = args.ival
         self.acc = args.acc
+        self.delta = args.delta
+        self.maxcount = args.maxcount
 
         outpath = args.out if args.out[-1] == '/' else args.out + '/'
         default_mainname = 'iterhmmbuild_' + date + '/'
@@ -51,6 +53,8 @@ class Param:
         self.logger.info('- ival: ' + str(self.ival))
         self.logger.info('- acc: ' + str(self.acc))
         self.logger.info('- out: ' + self.outdirname)
+        self.logger.info('- delta: ' + str(str(self.delta)))
+        self.logger.info('- maxcount: ' + str(self.maxcount))
         self.logger.info('')
 
 
@@ -60,7 +64,11 @@ def get_args():
         Parameters
     """
 
-    parser = argparse.ArgumentParser(description='Iterative building of hmm profiles')
+    parser = argparse.ArgumentParser(
+        description='Iterative building of hmm profiles',
+        formatter_class=argparse.RawTextHelpFormatter
+        )
+
     parser.add_argument("-fa", required=True, nargs="?",
                         help="Fasta file of sequence(s) used as first seed or directory containing such files")
     parser.add_argument("-protdb", required=True, nargs="?",
@@ -74,11 +82,18 @@ def get_args():
     parser.add_argument("-cov", required=False, default=0.0, type=float,
                         help="Minimum percentage of coverage alignment between hmm hit and hmm profile (0.0)")
     parser.add_argument("-cval", required=False, default=0.01, type=float,
-                        help="hmmer conditional e-value cutoff (0.01)")
+                        help="HMMER conditional e-value cutoff (0.01)")
     parser.add_argument("-ival", required=False, default=0.01, type=float,
-                        help="hmmer independant e-value cutoff (0.01)")
+                        help="HMMER independant e-value cutoff (0.01)")
     parser.add_argument("-acc", required=False, default=0.6, type=float,
-                        help="hmmer mean probability of the alignment accuracy between each residues of the target and the corresponding hmm state (0.6)")
+                        help='''HMMER mean probability of the alignment accuracy between each residues of the target and the 
+corresponding hmm state (0.6)''')
+    parser.add_argument("-delta", required=False, default=1, type=int,
+                        help='''Convergence criteria: difference in the number of sequences found between two consecutive iterations            
+to consider a non-significant change between between two consecutive iterations (1)''')
+    parser.add_argument("-maxcount", required=False, default=3, type=int,
+                        help='''Convergence criteria: maximum number of times a non-significant change (conv_delta) is accepted before
+considering a convergence (3)''')
 
     args = parser.parse_args()
 

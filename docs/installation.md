@@ -116,8 +116,8 @@ pip install .
   <li>
     <code>prosecda</code> should display:
     <pre class="parameters">usage: prosecda [-h] -proteome [PROTEOME] -hmmdb [HMMDB] -rules [RULES] [-out [OUT]] 
-                        [-cov COV] [-cval CVAL] [-ival IVAL] [-score SCORE] [-acc ACC]
-                        [-pdf]
+                    [-cov COV] [-cevalue CVAL] [-ievalue IVAL] [-score SCORE] [-acc ACC]
+                    [--nopdf]
     </pre>
   </li>
 

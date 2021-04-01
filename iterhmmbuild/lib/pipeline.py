@@ -94,7 +94,7 @@ class IterHmmBuilder:
         self.param = param
         self.iter_index = 1
         self.outdir_base = self.param.outdirname
-        self.convergence_status = Convergence()
+        self.convergence_status = Convergence(delta=self.param.delta, max_count=self.param.maxcount)
         self.outdir = None
         self.output_fasta_enriched = None
         self.is_usearch_on = True
