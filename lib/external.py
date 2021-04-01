@@ -327,7 +327,8 @@ class HmmerHits:
     def filter(self, hit: HmmerDomtbl):
         """
         Checks if hit pass the following criteria:
-            - 1: hmm profile env length has to be >= to X % of the hmm profile length (X % = param.cov)
+            - 1:the length of the HMM profile matching portion (hmm_to - hmm_from + 1) must be at 
+                least X% (param.cov) of the overall HMM profile length(qlen) 
             - 2: if hit passes criteria 1, the other criteria are:
                     - domain cval <= param.cval
                     - domain ival <= param.ival
@@ -335,15 +336,13 @@ class HmmerHits:
                 else:
                     - hit doesn't pass the filter
 
-        @TODO: replace (hit.env_to - hit.env_from + 1) by (hit.hmm_to - hit.hmm_from + 1)
-
         @param hit: HmmerDomtbl instance
         @return: boolean, True if hmmer hit pass criteria, False otherwise
 
         """
         is_relevant = False
 
-        if float(hit.env_to - hit.env_from + 1) >= hit.qlen * self.param.cov:
+        if float(hit.hmm_to - hit.hmm_from + 1) >= hit.qlen * self.param.cov:
             if hit.dom_cval <= self.param.cval and hit.dom_ival <= self.param.ival and hit.acc >= self.param.acc:
                 is_relevant = True
 
@@ -552,9 +551,9 @@ class Protein:
             _domain = etree.SubElement(domain_architecture, "domain")
             _domain.set('name', domain.qname)
 
-            _domain_cval = etree.SubElement(_domain, "cval")
+            _domain_cval = etree.SubElement(_domain, "c-evalue")
             _domain_cval.text = str(domain.dom_cval)
-            _domain_ival = etree.SubElement(_domain, "ival")
+            _domain_ival = etree.SubElement(_domain, "i-evalue")
             _domain_ival.text = str(domain.dom_ival)
             _domain_score = etree.SubElement(_domain, "score")
             _domain_score.text = str(domain.dom_score)
@@ -573,9 +572,9 @@ class Protein:
                 _domain = etree.SubElement(_other_domains, "domain")
                 _domain.set('name', domain.qname)
 
-                _domain_cval = etree.SubElement(_domain, "cval")
+                _domain_cval = etree.SubElement(_domain, "c-evalue")
                 _domain_cval.text = str(domain.dom_cval)
-                _domain_ival = etree.SubElement(_domain, "ival")
+                _domain_ival = etree.SubElement(_domain, "i-evalue")
                 _domain_ival.text = str(domain.dom_ival)
                 _domain_score = etree.SubElement(_domain, "score")
                 _domain_score.text = str(domain.dom_score)

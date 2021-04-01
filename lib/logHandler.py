@@ -17,11 +17,9 @@ class Logger:
     def title(self, log):
         self.logger.info('')
         self.logger.info('')
-        self.logger.info('')
         deco = self.deco(log)
         self.logger.info(log.upper())
         self.logger.info(deco)
-        self.logger.info('')
 
     def debug(self, log):
         self.logger.debug(log)

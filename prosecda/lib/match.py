@@ -75,7 +75,7 @@ class Matches:
         if self.list:
             os.makedirs(self.outdir, exist_ok=True)
             for match in self.list:
-                match.report(outdir=self.outdir)
+                match.report(outdir=self.outdir, nopdf=self.param.nopdf)
 
 
 def is_match(rule, protein):
@@ -151,24 +151,29 @@ class Match:
         else:
             return []
 
-    def report(self, outdir: str):
+    def report(self, outdir: str, nopdf: bool):
         self.set_colors()
 
         outpath = outdir + self.rule.name + '/'
         os.makedirs(outpath, exist_ok=True)
 
-        pdf_pages = PdfPages(filename=outpath + 'all_' + self.rule.name + '.pdf')
-        self.logger.title('Creating plots for proteins matching {}:'.format(self.rule.name))
+        self.logger.title('Proteins matching {} rule:'.format(self.rule.name))
+
+        if not nopdf:
+            pdf_pages = PdfPages(filename=outpath + 'all_' + self.rule.name + '.pdf')
 
         for protein in self.proteins:
             self.logger.info(' - {}'.format(protein.name))
 
             protein.write_fasta(outdir=outpath)
             protein.write_xml(outdir=outpath, rule=self.rule)
-            self.plot_protein_best_architecture(protein=protein, pdf_pages=pdf_pages)
-            self.plot_protein_all_domains(protein=protein, outpath=outpath)
 
-        pdf_pages.close()
+            if not nopdf:
+                self.plot_protein_best_architecture(protein=protein, pdf_pages=pdf_pages)
+                self.plot_protein_all_domains(protein=protein, outpath=outpath)
+
+        if not nopdf:
+            pdf_pages.close()
 
     def plot_protein_best_architecture(self, protein: Protein, pdf_pages: PdfPages):
         protein_best_architecture = PlotProt(protein=protein, colors=self.domain_colors)
@@ -248,7 +253,7 @@ class PlotProt:
 
                 # plots text to annote the domains
                 domain_name = r'$\bf{' + domain.qname.replace('_', '\_') + ':' + '}$'
-                text = ' e-value = {}, score = {}'.format(domain.dom_ival, domain.dom_score)
+                text = ' i-evalue = {}, score = {}'.format(domain.dom_ival, domain.dom_score)
                 self.plots[i]['axs_text'][j].text(0.055, 0.35, domain_name + text, fontsize=9)
 
                 suptitle = self.plots[i]['title']

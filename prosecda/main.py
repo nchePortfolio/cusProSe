@@ -14,6 +14,7 @@ def main():
     param = parameters.Param(parameters.get_arguments())
     logger = logHandler.Logger(name='prosecda', outpath=param.outdirname)
     param.description()
+    # sys.exit(0)
 
     rules = rule_parser.Parser(input_filename=param.yamlrules, co_ival=param.ival)
     rules.description()

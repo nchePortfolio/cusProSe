@@ -37,10 +37,10 @@ class Param:
 
         self.score_co = args.score
         self.cov = args.cov
-        self.cval = args.cval
-        self.ival = args.ival
+        self.cval = args.cevalue
+        self.ival = args.ievalue
         self.acc = args.acc
-        self.pdf = args.pdf
+        self.nopdf = args.nopdf
         # self.rules = rules.parse_rules(filename=self.yamlrules, score_co=self.score_co)
 
         self.logger = logHandler.Logger(name=__name__)
@@ -60,7 +60,11 @@ class Param:
         self.logger.info('- Proteome (.fasta): {}'.format(self.proteome_filename))
         self.logger.info('- Rules (.yaml): {}'.format(self.yamlrules))
         self.logger.info('- Output path: {}'.format(self.outdirname))
-        self.logger.info('- E-value cutoff for domain match: {}'.format(self.ival))
+        self.logger.info('- HMM coverage: {}'.format(self.cov))
+        self.logger.info('- i-Evalue cutoff for domain match: {}'.format(self.ival))
+        self.logger.info('- c-Evalue cutoff for domain match: {}'.format(self.cval))
+        self.logger.info('- HMMER accuracy: {}'.format(self.acc))
+        self.logger.info('- --nopdf: {}'.format(self.nopdf))
         self.logger.info('')
 
 
@@ -74,23 +78,23 @@ def get_arguments():
     parser.add_argument("-proteome", required=True, nargs="?",
                         help="Proteome file (.fasta) ")
     parser.add_argument("-hmmdb", required=True, nargs="?",
-                        help="hmmsearch output (.domtblout)")
+                        help="HMM profile database")
     parser.add_argument("-rules", required=True, nargs="?",
                         help="Rules'file (.yaml)")
     parser.add_argument("-out", required=False, nargs="?", default='./', type=str,
                         help="Output directory")
 
     parser.add_argument("-cov", required=False, default=0.0, type=float,
-                        help="Minimum percentage of coverage alignment between hmm hit and hmm profile (0.2)")
-    parser.add_argument("-cval", required=False, default=0.01, type=float,
-                        help="hmmer conditional e-value cutoff (0.01)")
-    parser.add_argument("-ival", required=False, default=0.01, type=float,
-                        help="hmmer independant e-value cutoff (0.01)")
+                        help="Minimum ratio between the length of the HMM profile stretch that matches a sequence and the overall length of the HMM profile. (0.0)")
+    parser.add_argument("-cevalue", required=False, default=0.01, type=float,
+                        help="HMMER conditional e-value cutoff (0.01)")
+    parser.add_argument("-ievalue", required=False, default=0.01, type=float,
+                        help="HMMER independant e-value cutoff (0.01)")
     parser.add_argument("-score", required=False, default=3.0, type=float,
-                        help="hmmer score cutoff (3.0)")
+                        help="HMMER score cutoff (3.0)")
     parser.add_argument("-acc", required=False, default=0.6, type=float,
-                        help="hmmer mean probability of the alignment accuracy between each residues of the target and the corresponding hmm state (0.6)")
-    parser.add_argument("-pdf", required=False, action='store_true', help="True to generate pdf results (False)")
+                        help="HMMER mean probability of the alignment accuracy between each residues of the target and the corresponding hmm state (0.6)")
+    parser.add_argument("--nopdf", required=False, action='store_true', help="Deactivate the generation of the pdf results (False)")
     args = parser.parse_args()
 
     return args
