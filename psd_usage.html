@@ -69,17 +69,13 @@
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="psd_usage.html">Usage guideline</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#inputs">Inputs</a>
+    <li class="toctree-l2"><a class="reference internal" href="#quick-start-example">Quick start example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-rules">Creating rules</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#rules-creation-to-model-proteins-of-interest">Rules creation to model proteins of interest</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#edit-rules-from-gui">Edit rules from GUI</a>
+    <li class="toctree-l3"><a class="reference internal" href="#edit-rules-from-gui">Edit rules from GUI</a>
     </li>
         </ul>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#running-prosecda">Running ProSeCDA</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#output-of-prosecda">Output of ProSeCDA</a>
         <ul>
@@ -131,21 +127,65 @@
             <div class="section">
               
                 <h1 id="prosecda-usage-guideline">ProSeCDA usage guideline<a class="headerlink" href="#prosecda-usage-guideline" title="Permanent link">#</a></h1>
-<p>This tool allows you to detect in a proteome proteins matching specific given domain architectures
-rules.</p>
-<h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">#</a></h2>
-<p>Three input files are required:</p>
-<ul>
-<li>a protein database in a fasta format the user wants to scan to identify proteins of interests</li>
-<li>an HMM domain profile database use to annotate proteins </li>
-<li>a YAML file in which proteins of interest are described based on the presence/absence of specific domains</li>
-</ul>
-<h3 id="rules-creation-to-model-proteins-of-interest">Rules creation to model proteins of interest<a class="headerlink" href="#rules-creation-to-model-proteins-of-interest" title="Permanent link">#</a></h3>
+<div class="admonition tip">
+    <p class="first admonition-title">
+        Tip
+    </p>
+    <p>
+    To guide the user, input data files can be found in <code>cusProSe/prosecda/datas/</code>:
+    <pre style="line-height: 15px;"><b>cusProSe/prosecda/datas/</b>
+      ├── database.hmm
+      ├── mgg_70-15_8.fasta
+      └── rules.yaml
+    </pre>
+    <ul>
+    Those are the three mandatory files required as inputs to run prosecda:
+    <li><code>rules.yaml</code> is a YAML file in which proteins of interest are described based on the presence/absence of specific domains</li>
+    <li><code>database.hmm</code> is a customized HMM profile database made of 24 HMM protein domain models</li>
+    <li><code>mgg_70-15_8.fasta</code> is the <i>magnaporthe orizae</i> proteome that will be scanned against proteins of interest defined in the YAML rules file</li>
+    </ul>
+    </p>
+</div>
+
+<h2 id="quick-start-example">Quick start example<a class="headerlink" href="#quick-start-example" title="Permanent link">#</a></h2>
+<div>
+The command below will search in the <i>magnaporthe orizae</i> proteome all proteins defined in <code>rules.yaml</code> (the HMM profile database <code>database.hmm</code> is used to find domains of interest matching proteins in the <i>magnaporthe orizae</i> proteome):
+
+<pre><code class="language-bash">prosecda -proteome mgg_70-15_8.fasta -hmmdb database.hmm -rules rules.yaml
+</code></pre>
+
+</div>
+
+<p><br>
+Help about the usage of ProSeCDA and its parameters can be shown with the following command: <code>prosecda -h</code>:</p>
+<pre class="parameters">usage: prosecda [-h] -proteome [PROTEOME] -hmmdb [HMMDB] -rules [RULES] [-out [OUT]] 
+                [-cov COV] [-cevalue CEVALUE] [-ievalue IEVALUE] [-score SCORE] [-acc ACC]
+                [--nopdf]
+
+Search proteins matching rules.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -proteome [PROTEOME]  Proteome file (.fasta)
+  -hmmdb [HMMDB]        HMM profile database
+  -rules [RULES]        Rules&apos;file (.yaml)
+  -out [OUT]            Output directory
+  -cov COV              Minimum ratio between the length of the HMM profile stretch that 
+                        matches a sequence and the overall length of the HMM profile (0.0)
+  -cevalue CEVALUE      HMMER conditional e-value cutoff (0.01)
+  -ievalue IEVALUE      HMMER independant e-value cutoff (0.01)
+  -score SCORE          HMMER score cutoff (3.0)
+  -acc ACC              HMMER mean probability of the alignment accuracy between each residues
+                        of the target and the corresponding hmm state (0.6)
+  --nopdf               Deactivate the generation of the pdf results (False)
+</pre>
+
+<h2 id="creating-rules">Creating rules<a class="headerlink" href="#creating-rules" title="Permanent link">#</a></h2>
 <p>The proteins the user is interested in must be described in a file containing simple rules defining for each protein of interest which domains are mandatory and/or which one are forbidden. An E-value (corresponding to the independent domain E-value from hmmsearch) can also be specified for each mandatory domains. In that case, a mandatory domain must match a sequence with an E-value at least below the one specified. If no E-value is defined for mandatory domains, an E-value of 0.01 is used by default.</p>
 <h4 id="edit-rules-from-gui">Edit rules from GUI<a class="headerlink" href="#edit-rules-from-gui" title="Permanent link">#</a></h4>
 <p>The file in which rules are edited must respect a specific syntax in a YAML format. To make it simpler, a Graphical User Interface (GUI) has been implemented. You can access it through the command <code>create_rules</code></p>
 <figure class="fig-prosecda">
-    <img src="./prosecda/images/gui_rules_1.png"
+    <img src="./img/prosecda_rules.png"
       alt="Graphical User Interface to edit rules.">
     <figcaption>
 <b>Figure 3: Graphical User Interface to edit rules</b> 
@@ -188,35 +228,6 @@ PKS_type3.0:
   forbidden:
 
 </code></pre>
-<h2 id="running-prosecda">Running ProSeCDA<a class="headerlink" href="#running-prosecda" title="Permanent link">#</a></h2>
-<p>Input examples are available in <code>cusProSe-x.x.x/prosecda/datas/</code></p>
-<p>The command below will search in the <em>f. fujikuroi</em> proteomes all proteins matching the rules defined in rules.yaml from the HMM profile database databaseKGall_terpenes_selec.hmm:</p>
-<pre><code class="language-bash">run_prosecda -proteome fusarium_fujikuroi_IMI58289_V2_protein.fasta -hmmdb databaseKGall_terpenes_selec.hmm -rules rules.yaml
-</code></pre>
-<p><br>
-Help about the usage of ProSeCDA and its parameters can be shown with the following command: <code>prosecda -h</code>:</p>
-<pre class="parameters">usage: prosecda [-h] -proteome [PROTEOME] -hmmdb [HMMDB] -rules [RULES] [-out [OUT]] 
-                [-cov COV] [-cevalue CEVALUE] [-ievalue IEVALUE] [-score SCORE] [-acc ACC]
-                [--nopdf]
-
-Search proteins matching rules.
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -proteome [PROTEOME]  Proteome file (.fasta)
-  -hmmdb [HMMDB]        HMM profile database
-  -rules [RULES]        Rules&apos;file (.yaml)
-  -out [OUT]            Output directory
-  -cov COV              Minimum ratio between the length of the HMM profile stretch that 
-                        matches a sequence and the overall length of the HMM profile (0.0)
-  -cevalue CEVALUE      HMMER conditional e-value cutoff (0.01)
-  -ievalue IEVALUE      HMMER independant e-value cutoff (0.01)
-  -score SCORE          HMMER score cutoff (3.0)
-  -acc ACC              HMMER mean probability of the alignment accuracy between each residues
-                        of the target and the corresponding hmm state (0.6)
-  --nopdf               Deactivate the generation of the pdf results (False)
-</pre>
-
 <h2 id="output-of-prosecda">Output of ProSeCDA<a class="headerlink" href="#output-of-prosecda" title="Permanent link">#</a></h2>
 <h3 id="global-architecture">Global architecture<a class="headerlink" href="#global-architecture" title="Permanent link">#</a></h3>
 <p>An output directory will be generated in a generic format: 
