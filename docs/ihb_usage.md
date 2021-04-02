@@ -4,8 +4,8 @@
         Tip
     </p>
     <p>
-    To guide the user, input data examples can be found in `cusProSe-x.x.x/iterhmmbuild/datas/`:
-    <pre style="line-height: 15px;"><b>datas/</b>
+    To guide the user, input data examples can be found in <code>cusProSe/iterhmmbuild/datas/</code>:
+    <pre style="line-height: 15px;"><b>cusProSe/iterhmmbuild/datas/</b>
     ├── inputs
     │   ├── A.fa
     │   ├── KS.fa
@@ -13,12 +13,12 @@
     └── mgg_70-15_8.fasta
     </pre>
 
-    All fasta files in the <code>inputs/</code> directory contain sequences of three different protein domains. There is also the *magnaporthe orizae* proteome (<code>mgg_70-15_8.fasta</code>) that will be used as the protein database for the examples below.
+    All fasta files in the <code>inputs/</code> directory contain sequences of three different protein domains. There is also the <i>magnaporthe orizae</i> proteome (<code>mgg_70-15_8.fasta</code>) that will be used as the protein database for the examples below.
     </p>
 </div>
 
 ## Quick start examples
-### Build a single HMM profile
+#### Build a single HMM profile
 <div>
 Command to build a single HMM profile from the <i>magnaporthe orizae</i> proteome and representative of the A domain sequences:
 ```bash
@@ -26,7 +26,7 @@ iterhmmbuild -fa inputs/A.fa -protdb mgg_70-15_8.fasta
 ```
 </div>
 
-### Build an HMM profile database
+#### Build an HMM profile database
 <div>
 Command to build an HMM profile database specific to the <i>magnaporthe orizae</i> proteome with each profiles representative of the domain sequences present in the directory `inputs/`:
 ```bash
@@ -53,7 +53,7 @@ iterhmmbuild -fa inputs/ -protdb mgg_70-15_8.fasta
     </p>
 </div>
 
-### Command line and parameters
+#### Command line and parameters
 As illustrated by the commands above, two arguments are mandatory for IterHMMBuild: `-fa` and `-protdb`.
 
 <ul class="myul">
@@ -95,7 +95,7 @@ optional arguments:
 After running IterHMMBuild an output directory will be generated in the following generic format: 
 `iterhmmbuild_year-month-day_hour-min-sec/`
 
-### Output from the generation of a single HMM profile
+#### Output from the generation of a single HMM profile
 The output directory generated from the [command run in the quick start examples](#build-a-single-hmm-profile) will have the following architecture:
 
 <pre><b>iterhmmbuild_2020-10-29_13-13-04/</b>
@@ -127,7 +127,7 @@ The three main files of interest are:
 
 `info.log` is a log summary of the computation. The subdirectories `iter_i/` contain files obtained at each iteration and are described in section <a href="./ihb_introduction.html#outputs">Overall procedure</a>.
 
-### Output from the generation of an HMM profile database
+#### Output from the generation of an HMM profile database
 The output directory generated from the [command run in the quick start examples](#build-an-hmm-profile-database) will be a list of subdirectories such as the output described above. You will find at its root the file `hmm_database.hmm`, a concatenation of the HMM profiles of protein domains used as inputs. 
 
 <pre><b>iterhmmbuild_2021-03-02_12-39-38</b>

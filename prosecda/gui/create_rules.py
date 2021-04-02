@@ -77,7 +77,7 @@ class Conditionframe(tk.LabelFrame):
         self.entry_mandatory = tk.Entry(self, width=10)
         self.entry_mandatory.grid(row=0, column=1, padx=0, pady=0, sticky='n')
         
-        self.label_score = tk.Label(self, text='Score:', width=10, relief=tk.GROOVE)
+        self.label_score = tk.Label(self, text='E-value:', width=10, relief=tk.GROOVE)
         self.label_score.grid(row=0, column=2, padx=1, pady=0, sticky='n')
         self.entry_score = tk.Entry(self, width=10)
         self.entry_score.grid(row=0, column=3, padx=0, pady=0, sticky='n')

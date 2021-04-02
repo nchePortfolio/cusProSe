@@ -1,17 +1,60 @@
 # ProSeCDA usage guideline
 
-This tool allows you to detect in a proteome proteins matching specific given domain architectures
-rules.
+<div class="admonition tip">
+    <p class="first admonition-title">
+        Tip
+    </p>
+    <p>
+    To guide the user, input data files can be found in <code>cusProSe/prosecda/datas/</code>:
+    <pre style="line-height: 15px;"><b>cusProSe/prosecda/datas/</b>
+      ├── database.hmm
+      ├── mgg_70-15_8.fasta
+      └── rules.yaml
+    </pre>
+    <ul>
+    Those are the three mandatory files required as inputs to run prosecda:
+    <li><code>rules.yaml</code> is a YAML file in which proteins of interest are described based on the presence/absence of specific domains</li>
+    <li><code>database.hmm</code> is a customized HMM profile database made of 24 HMM protein domain models</li>
+    <li><code>mgg_70-15_8.fasta</code> is the <i>magnaporthe orizae</i> proteome that will be scanned against proteins of interest defined in the YAML rules file</li>
+    </ul>
+    </p>
+</div>
 
-## Inputs
-Three input files are required:
+## Quick start example
+<div>
+The command below will search in the <i>magnaporthe orizae</i> proteome all proteins defined in <code>rules.yaml</code> (the HMM profile database <code>database.hmm</code> is used to find domains of interest matching proteins in the <i>magnaporthe orizae</i> proteome):
+```bash
+prosecda -proteome mgg_70-15_8.fasta -hmmdb database.hmm -rules rules.yaml
+```
+</div>
 
-* a protein database in a fasta format the user wants to scan to identify proteins of interests
-* an HMM domain profile database use to annotate proteins 
-* a YAML file in which proteins of interest are described based on the presence/absence of specific domains
+<br>
+Help about the usage of ProSeCDA and its parameters can be shown with the following command: `prosecda -h
+`:
+<pre class="parameters">usage: prosecda [-h] -proteome [PROTEOME] -hmmdb [HMMDB] -rules [RULES] [-out [OUT]] 
+                [-cov COV] [-cevalue CEVALUE] [-ievalue IEVALUE] [-score SCORE] [-acc ACC]
+                [--nopdf]
+
+Search proteins matching rules.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -proteome [PROTEOME]  Proteome file (.fasta)
+  -hmmdb [HMMDB]        HMM profile database
+  -rules [RULES]        Rules&apos;file (.yaml)
+  -out [OUT]            Output directory
+  -cov COV              Minimum ratio between the length of the HMM profile stretch that 
+                        matches a sequence and the overall length of the HMM profile (0.0)
+  -cevalue CEVALUE      HMMER conditional e-value cutoff (0.01)
+  -ievalue IEVALUE      HMMER independant e-value cutoff (0.01)
+  -score SCORE          HMMER score cutoff (3.0)
+  -acc ACC              HMMER mean probability of the alignment accuracy between each residues
+                        of the target and the corresponding hmm state (0.6)
+  --nopdf               Deactivate the generation of the pdf results (False)
+</pre>
 
 
-### Rules creation to model proteins of interest
+## Creating rules
 The proteins the user is interested in must be described in a file containing simple rules defining for each protein of interest which domains are mandatory and/or which one are forbidden. An E-value (corresponding to the independent domain E-value from hmmsearch) can also be specified for each mandatory domains. In that case, a mandatory domain must match a sequence with an E-value at least below the one specified. If no E-value is defined for mandatory domains, an E-value of 0.01 is used by default.
 
 #### Edit rules from GUI
@@ -19,7 +62,7 @@ The file in which rules are edited must respect a specific syntax in a YAML form
 
 
 <figure class="fig-prosecda">
-    <img src="./prosecda/images/gui_rules_1.png"
+    <img src="./img/prosecda_rules.png"
       alt="Graphical User Interface to edit rules.">
     <figcaption>
 <b>Figure 3: Graphical User Interface to edit rules</b> 
@@ -65,39 +108,6 @@ PKS_type3.0:
   forbidden:
 
 ```
-
-## Running ProSeCDA
-Input examples are available in `cusProSe-x.x.x/prosecda/datas/`
-
-The command below will search in the *f. fujikuroi* proteomes all proteins matching the rules defined in rules.yaml from the HMM profile database databaseKGall_terpenes_selec.hmm:
-
-```bash
-run_prosecda -proteome fusarium_fujikuroi_IMI58289_V2_protein.fasta -hmmdb databaseKGall_terpenes_selec.hmm -rules rules.yaml
-```
-<br>
-Help about the usage of ProSeCDA and its parameters can be shown with the following command: `prosecda -h
-`:
-<pre class="parameters">usage: prosecda [-h] -proteome [PROTEOME] -hmmdb [HMMDB] -rules [RULES] [-out [OUT]] 
-                [-cov COV] [-cevalue CEVALUE] [-ievalue IEVALUE] [-score SCORE] [-acc ACC]
-                [--nopdf]
-
-Search proteins matching rules.
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -proteome [PROTEOME]  Proteome file (.fasta)
-  -hmmdb [HMMDB]        HMM profile database
-  -rules [RULES]        Rules&apos;file (.yaml)
-  -out [OUT]            Output directory
-  -cov COV              Minimum ratio between the length of the HMM profile stretch that 
-                        matches a sequence and the overall length of the HMM profile (0.0)
-  -cevalue CEVALUE      HMMER conditional e-value cutoff (0.01)
-  -ievalue IEVALUE      HMMER independant e-value cutoff (0.01)
-  -score SCORE          HMMER score cutoff (3.0)
-  -acc ACC              HMMER mean probability of the alignment accuracy between each residues
-                        of the target and the corresponding hmm state (0.6)
-  --nopdf               Deactivate the generation of the pdf results (False)
-</pre>
 
 ## Output of ProSeCDA
 ### Global architecture
