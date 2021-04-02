@@ -193,6 +193,30 @@ PKS_type3.0:
 <p>The command below will search in the <em>f. fujikuroi</em> proteomes all proteins matching the rules defined in rules.yaml from the HMM profile database databaseKGall_terpenes_selec.hmm:</p>
 <pre><code class="language-bash">run_prosecda -proteome fusarium_fujikuroi_IMI58289_V2_protein.fasta -hmmdb databaseKGall_terpenes_selec.hmm -rules rules.yaml
 </code></pre>
+<p><br>
+Help about the usage of ProSeCDA and its parameters can be shown with the following command: <code>prosecda -h</code>:</p>
+<pre class="parameters">usage: prosecda [-h] -proteome [PROTEOME] -hmmdb [HMMDB] -rules [RULES] [-out [OUT]] 
+                [-cov COV] [-cevalue CEVALUE] [-ievalue IEVALUE] [-score SCORE] [-acc ACC]
+                [--nopdf]
+
+Search proteins matching rules.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -proteome [PROTEOME]  Proteome file (.fasta)
+  -hmmdb [HMMDB]        HMM profile database
+  -rules [RULES]        Rules&apos;file (.yaml)
+  -out [OUT]            Output directory
+  -cov COV              Minimum ratio between the length of the HMM profile stretch that 
+                        matches a sequence and the overall length of the HMM profile (0.0)
+  -cevalue CEVALUE      HMMER conditional e-value cutoff (0.01)
+  -ievalue IEVALUE      HMMER independant e-value cutoff (0.01)
+  -score SCORE          HMMER score cutoff (3.0)
+  -acc ACC              HMMER mean probability of the alignment accuracy between each residues
+                        of the target and the corresponding hmm state (0.6)
+  --nopdf               Deactivate the generation of the pdf results (False)
+</pre>
+
 <h2 id="output-of-prosecda">Output of ProSeCDA<a class="headerlink" href="#output-of-prosecda" title="Permanent link">#</a></h2>
 <h3 id="global-architecture">Global architecture<a class="headerlink" href="#global-architecture" title="Permanent link">#</a></h3>
 <p>An output directory will be generated in a generic format: 

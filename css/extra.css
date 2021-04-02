@@ -79,6 +79,8 @@ pre.parameters {
     padding-bottom: 0px;
     background-color: rgba(228, 228, 228, 0.377);
     margin-bottom: 24px;
+    line-height: 20px;
+    overflow-x: auto;
 }
 
 .myul {
