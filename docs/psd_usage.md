@@ -77,7 +77,7 @@ As shown in the above image, a rule can be defined by five different inputs:
 * `E-value` (optional): minimal E-value the associated domain must match a sequence (0.01 if not specified)
 * `Forbidden` (optional): domain name the protein must not contain
 
-Once you have added all your mandatory/forbidden domains describing the domain architecture your proteins of interest must match, click on `Add rule to the list` to validate the rule. You'll see it listed in the 'Rule list' panel. Repeat the procedure to create as many rules as you want. 
+Once you have added all your mandatory/forbidden domains describing the domain architecture your proteins of interest must match, click on `Add rule to the list` to validate the rule. You'll see it listed in the `Rule list` panel. Repeat the procedure to create as many rules as you want. 
 
 Once all your desired rules are defined, click on `Save rules` to save them in a YAML file. This YAML file will look like the one described below:
 
@@ -110,55 +110,62 @@ PKS_type3.0:
 ```
 
 ## Output of ProSeCDA
-### Global architecture
-An output directory will be generated in a generic format: 
-`prosecda_year-month-day_hour-min-sec/`
+#### Overall architecture
+The output directory generated from the command run in the [Quick start example](#quick-start-example) will be as described below:
 
-This directory content will be like the one below:
-
-<pre><b>prosecda_2020-10-29_15-55-24/</b></font>
-├── fusarium_fujikuroi_IMI58289_V2_protein.domtblout
+<pre><b>prosecda_year-month-day_hour-min-sec/</b>
+├── <b>css/</b>
+├── <b>images/</b>
+├── index.html
 ├── info.log
-└── <b>matches/</b></font>
+├── <b>js/</b>
+├── mgg_70-15_8.domtblout
+└── <b>results/</b>
  </pre>
 
 with:
+<ul class="myul2">
+  <li><code>index.html</code>: an interactive web page allowing to visualize the results (described <a href="#a">here</a>)</li>
+  <li><code>css/</code>, <code>js/</code> and <code>images/</code>: folders containing files read by index.html</li>
+  <li><code>info.log</code>: summary log of the computation run</li>
+  <li><code>mgg_70-15_8.domtblout</code>: output file of hmmsearch</li>
+  <li><code>results/</code>: directory containing different output files for rules matching proteins</li>
+</ul>
 
-* `fusarium_fujikuroi_IMI58289_V2_protein.domtblout`: output file of hmmsearch
-* `matches/`: directory containing different output files for rules matching proteins
+#### Content of the results/ directory
+The `results/` directory contains a list of subdirectories, each one corresponding to a user-defined protein family for which match has been found (`DMATS/`, `Ent_kaurene_synthase/` ...):
 
-The content of `matches/` directory is as follow:
-
-<pre>
-<b>matches/</b></font>
-    ├── <b>DMATS/</b></font>
-    │   ├── XP_023429775.1.fa
-    │   ├── XP_023429775.1.xml
-    │   ├── XP_023436063.1.fa
-    │   └── XP_023436063.1.xml
-    ├── DMATS.pdf
-    ├── <b>Ent_kaurene_synthase/</b></font>
-    │   ├── XP_023431478.1.fa
-    │   └── XP_023431478.1.xml
-    ├── Ent_kaurene_synthase.pdf
-    ├── <b>NRPS-PKS/</b></font>
-    │   ├── XP_023427367.1.fa
-    │   ├── XP_023427367.1.xml
-    │   ├── XP_023429959.1.fa
-    │   ├── XP_023429959.1.xml
-    │   ├── XP_023434892.1.fa
-    │   ├── XP_023434892.1.xml
-    │   ├── XP_023435338.1.fa
-    │   └── XP_023435338.1.xml
-    └── NRPS-PKS.pdf
+<pre><b>results/</b>
+├── <b>DMATS</b>
+│   ├── all_DMATS.pdf
+│   ├── MGG_06540T0.fa
+│   ├── MGG_06540T0.pdf
+│   ├── MGG_06540T0.xml
+│   ├── MGG_10953T0.fa
+│   ├── MGG_10953T0.pdf
+│   ├── MGG_10953T0.xml
+│   ├── MGG_12480T0.fa
+│   ├── MGG_12480T0.pdf
+│   └── MGG_12480T0.xml
+├── <b>Ent_kaurene_synthase</b>
+│   ├── all_Ent_kaurene_synthase.pdf
+│   ├── MGG_01949T0.fa
+│   ├── MGG_01949T0.pdf
+│   ├── MGG_01949T0.xml
+|   ...
+... 
 </pre>
 
-with:
+Inside each protein family folder, three files with the related protein ID as the basename are generated for each protein matching the user-defined family rule:
+<ul class="myul2">
+  <li><code>MGG_xxx.fa</code>: the protein sequence in fasta format</li>
+  <li><code>MGG_xxx.xml</code>: details in XML format about the proteins and its matching domains</li>
+  <li><code>MGG_xxx.pdf</code>: a graphical representation of all of the domains that matched the protein</li>
+</ul>
 
-* DMATS, Ent_kaurene_synthase and NRPS-PKS: subdirectories containing output files for proteins matching the given rule
-* protein.fa: protein sequence in fasta file format
-* protein.xml: informations about the protein and its domain(s)
-* pdf files: graphical representation of the most likely domain architecture of the protein
+The file whose basename follows the syntax `all_FamilyName.pdf` is a graphical representation of the most-likely domains architecture for all the proteins that have been found to match the user-defined family rule. Please note that for a given protein the graphical representation in this file will be different from the one found in `MGG_xxx.pdf`, the latter representing all the domains that have been found to match the protein. Some of those domains might not be visible in the most-likely domain architecture. This will be the case for a domain <i>i</i> that overlaps with a domain <i>j</i> and if any architecture in which domain <i>i</i> is present is not the most-likely architecture, that is the one with the highest score (see <a href="./psd_introduction.html#resolving-overlapping-domains">here</a> for details about how the score is assigned).
+
+## Illustration of the output files
 
 ### PDF files
 Example of the output pdf file for XP_023431478.1 in NRPS-PKS:
