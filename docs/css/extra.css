@@ -1,3 +1,10 @@
+h2 {
+    margin-top: 35px;
+    margin-bottom: 25px;
+    padding: 5px;
+    border-bottom: 2px solid;
+}
+
 ul .note-ref {
     list-style: none !important;
 }
