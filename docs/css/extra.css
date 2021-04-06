@@ -8,6 +8,7 @@ figure {
 }
 
 figcaption {
+    margin-top: 5px;
     font-style: italic;
     padding-left: 5px;
     text-align: left;

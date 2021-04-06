@@ -20,7 +20,7 @@ ProSeCDA requires three inputs:
 
 ## Annotation
 ### Selection of matching domains
-The annotation step is required to assign domains from the HMM profile database matching sequences in the protein database. The annotation procedure uses hmmsearch to search for each of the HMM domain profile present in the YAML rules file against the protein database of interest. All matching sequences with an E-values<sup>a</sup> less than 0.01 (default value) and an expected accuracy per residue of the alignment<sup>b</sup> above or equal to 0.6 (default value) are then retrieved.
+The annotation step is required to assign domains from the HMM profile database matching sequences in the protein database. The annotation procedure uses hmmsearch to search for each of the HMM domain profile present in the YAML rules file against the protein database of interest. All matching sequences with an E-value<sup>a</sup> less than 0.01 (default value) and an expected accuracy per residue of the alignment<sup>b</sup> above or equal to 0.6 (default value) are then retrieved.
 
 <div class="admonition note">
     <p class="first admonition-title">
