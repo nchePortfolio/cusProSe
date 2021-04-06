@@ -79,9 +79,17 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#output-of-prosecda">Output of ProSeCDA</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#global-architecture">Global architecture</a>
+    <li class="toctree-l3"><a class="reference internal" href="#overall-architecture">Overall architecture</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#pdf-files">PDF files</a>
+    <li class="toctree-l3"><a class="reference internal" href="#content-of-the-results-directory">Content of the results/ directory</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#illustration-of-the-output-files">Illustration of the output files</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#the-all_familynamepdf-file">The all_familyName.pdf file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#all_familynamepdf-vs-mgg_xxxpdf">all_familyName.pdf VS MGG_xxx.pdf</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#xml-file">XML file</a>
     </li>
@@ -200,7 +208,7 @@ optional arguments:
 <li><code>E-value</code> (optional): minimal E-value the associated domain must match a sequence (0.01 if not specified)</li>
 <li><code>Forbidden</code> (optional): domain name the protein must not contain</li>
 </ul>
-<p>Once you have added all your mandatory/forbidden domains describing the domain architecture your proteins of interest must match, click on <code>Add rule to the list</code> to validate the rule. You'll see it listed in the 'Rule list' panel. Repeat the procedure to create as many rules as you want. </p>
+<p>Once you have added all your mandatory/forbidden domains describing the domain architecture your proteins of interest must match, click on <code>Add rule to the list</code> to validate the rule. You'll see it listed in the <code>Rule list</code> panel. Repeat the procedure to create as many rules as you want. </p>
 <p>Once all your desired rules are defined, click on <code>Save rules</code> to save them in a YAML file. This YAML file will look like the one described below:</p>
 <pre><code class="language-yaml">PKS:
  COMMENT: Polyketide Synthase
@@ -229,63 +237,81 @@ PKS_type3.0:
 
 </code></pre>
 <h2 id="output-of-prosecda">Output of ProSeCDA<a class="headerlink" href="#output-of-prosecda" title="Permanent link">#</a></h2>
-<h3 id="global-architecture">Global architecture<a class="headerlink" href="#global-architecture" title="Permanent link">#</a></h3>
-<p>An output directory will be generated in a generic format: 
-<code>prosecda_year-month-day_hour-min-sec/</code></p>
-<p>This directory content will be like the one below:</p>
-<pre><b>prosecda_2020-10-29_15-55-24/</b></font>
-├── fusarium_fujikuroi_IMI58289_V2_protein.domtblout
+<h4 id="overall-architecture">Overall architecture<a class="headerlink" href="#overall-architecture" title="Permanent link">#</a></h4>
+<p>The output directory generated from the command run in the <a href="#quick-start-example">Quick start example</a> will be as described below:</p>
+<pre><b>prosecda_year-month-day_hour-min-sec/</b>
+├── <b>css/</b>
+├── <b>images/</b>
+├── index.html
 ├── info.log
-└── <b>matches/</b></font>
+├── <b>js/</b>
+├── mgg_70-15_8.domtblout
+└── <b>results/</b>
  </pre>
 
 <p>with:</p>
-<ul>
-<li><code>fusarium_fujikuroi_IMI58289_V2_protein.domtblout</code>: output file of hmmsearch</li>
-<li><code>matches/</code>: directory containing different output files for rules matching proteins</li>
+<ul class="myul2">
+  <li><code>index.html</code>: an interactive web page allowing to visualize the results (described <a href="#a">here</a>)</li>
+  <li><code>css/</code>, <code>js/</code> and <code>images/</code>: folders containing files read by index.html</li>
+  <li><code>info.log</code>: summary log of the computation run</li>
+  <li><code>mgg_70-15_8.domtblout</code>: output file of hmmsearch</li>
+  <li><code>results/</code>: directory containing different output files for rules matching proteins</li>
 </ul>
-<p>The content of <code>matches/</code> directory is as follow:</p>
-<pre>
-<b>matches/</b></font>
-    ├── <b>DMATS/</b></font>
-    │   ├── XP_023429775.1.fa
-    │   ├── XP_023429775.1.xml
-    │   ├── XP_023436063.1.fa
-    │   └── XP_023436063.1.xml
-    ├── DMATS.pdf
-    ├── <b>Ent_kaurene_synthase/</b></font>
-    │   ├── XP_023431478.1.fa
-    │   └── XP_023431478.1.xml
-    ├── Ent_kaurene_synthase.pdf
-    ├── <b>NRPS-PKS/</b></font>
-    │   ├── XP_023427367.1.fa
-    │   ├── XP_023427367.1.xml
-    │   ├── XP_023429959.1.fa
-    │   ├── XP_023429959.1.xml
-    │   ├── XP_023434892.1.fa
-    │   ├── XP_023434892.1.xml
-    │   ├── XP_023435338.1.fa
-    │   └── XP_023435338.1.xml
-    └── NRPS-PKS.pdf
+
+<h4 id="content-of-the-results-directory">Content of the results/ directory<a class="headerlink" href="#content-of-the-results-directory" title="Permanent link">#</a></h4>
+<p>The <code>results/</code> directory contains a list of subdirectories, each one corresponding to a user-defined protein family for which match has been found (<code>DMATS/</code>, <code>Ent_kaurene_synthase/</code> ...):</p>
+<pre><b>results/</b>
+├── <b>DMATS/</b>
+│   ├── all_DMATS.pdf
+│   ├── MGG_06540T0.fa
+│   ├── MGG_06540T0.pdf
+│   ├── MGG_06540T0.xml
+│   ├── MGG_10953T0.fa
+│   ├── MGG_10953T0.pdf
+│   ├── MGG_10953T0.xml
+│   ├── MGG_12480T0.fa
+│   ├── MGG_12480T0.pdf
+│   └── MGG_12480T0.xml
+├── <b>Ent_kaurene_synthase/</b>
+│   ├── all_Ent_kaurene_synthase.pdf
+│   ├── MGG_01949T0.fa
+│   ├── MGG_01949T0.pdf
+│   ├── MGG_01949T0.xml
+|   ...
+... 
 </pre>
 
-<p>with:</p>
-<ul>
-<li>DMATS, Ent_kaurene_synthase and NRPS-PKS: subdirectories containing output files for proteins matching the given rule</li>
-<li>protein.fa: protein sequence in fasta file format</li>
-<li>protein.xml: informations about the protein and its domain(s)</li>
-<li>pdf files: graphical representation of the most likely domain architecture of the protein</li>
+<p>Inside each protein family folder, three files with the related protein ID as the basename are generated for each protein matching the user-defined family rule:</p>
+<ul class="myul2">
+  <li><code>MGG_xxx.fa</code>: the protein sequence in fasta format</li>
+  <li><code>MGG_xxx.xml</code>: details in XML format about the proteins and its matching domains</li>
+  <li><code>MGG_xxx.pdf</code>: a graphical representation of all of the domains that matched the protein</li>
 </ul>
-<h3 id="pdf-files">PDF files<a class="headerlink" href="#pdf-files" title="Permanent link">#</a></h3>
-<p>Example of the output pdf file for XP_023431478.1 in NRPS-PKS:</p>
+
+<p>The file whose basename follows the syntax <code>all_familyName.pdf</code> is a graphical representation of the most-likely domains architecture for all the proteins that have been found to match the user-defined family rule. Please note that for a given protein the graphical representation in this file will be different from the one found in <code>MGG_xxx.pdf</code>, the latter representing all the domains that have been found to match the protein. Some of those domains might not be visible in the most-likely domain architecture. This will be the case for a domain <i>i</i> that overlaps with a domain <i>j</i> and if any architecture in which domain <i>i</i> is present is not the most-likely architecture, that is the one with the highest score (see <a href="./psd_introduction.html#resolving-overlapping-domains">here</a> for details about how the score is assigned).</p>
+<h2 id="illustration-of-the-output-files">Illustration of the output files<a class="headerlink" href="#illustration-of-the-output-files" title="Permanent link">#</a></h2>
+<h4 id="the-all_familynamepdf-file">The all_familyName.pdf file<a class="headerlink" href="#the-all_familynamepdf-file" title="Permanent link">#</a></h4>
+<p>The file whose basename follows the syntax <code>all_familyName.pdf</code> is a multipage pdf file containing graphical representations of the most-likely domain architecture of all the proteins that have been found to match the user-defined family rule.</p>
+<p>An example of the first page of <code>all_PKS.pdf</code> is shown below:</p>
 <figure >
-    <img src="./prosecda/images/xp_023427367.1.png"
+    <img src="./img/pks_mla_examples.png"
+      alt="IterHMMBuild pipeline overview.">
+</figure>
+
+<p>The first line of the figure represents all domains composing the most-likely domain architecture found for the protein MGG_00233T0. The next lines represent details information about each domain, namely its amino acid positions, name, independant e-value (i-evalue) and its score.</p>
+<h4 id="all_familynamepdf-vs-mgg_xxxpdf">all_familyName.pdf VS MGG_xxx.pdf<a class="headerlink" href="#all_familynamepdf-vs-mgg_xxxpdf" title="Permanent link">#</a></h4>
+<p>At the difference of the <code>all_familyName.pdf</code>, the graphical representation found for a given protein in the file <code>MGG_xxx.pdf</code> does not show any domain architecture but instead represents all the domains that matched the protein sequence during the <a href="psd_introduction.html#annotation">annotation step</a>. It can be helpful to visualize overlapping domains that have not been retained to be a part of the most-likely domain architecture. It thus provides the user a way to check the validity for a protein to really belong to the assigned protein family.</p>
+<p>To illustrate that point, let's compare both graphical representations for the protein MGG_01949T0 that has been assigned to the Ent_kaurene_synthase family:</p>
+<figure>
+    <img  style="border: 1px solid" src="./img/ent_kaurene_MLA_VS_domains.png"
       alt="IterHMMBuild pipeline overview.">
     <figcaption>
-<b>Output</b> 
+    <b>Figure 4:</b> Comparison of the graphical representations of the protein MGG_1949T0 found in (<b>A</b>) <code>all_Ent_kaurene_synthase.pdf</code> and (<b>B</b>) <code>MGG_01949T0.pdf</code>.
     </figcaption>
 </figure>
 
+<p>The figure 4A shows the most-likely domain architecture assigned to the protein MGG_01949T0 (found in <code>all_Ent_kaurene_synthase.pdf</code>) which is composed of only one domain: the <i>ent_kaurene</i> domain. </p>
+<p>The figure 4B shows all the domains that matched the protein sequence during the annotation step. We can see in this representation that both the <i>ent_kaurene</i> domain and the <i>diterpene</i> domain matched the protein sequence with an e-value equals to 0.0 and a really high score. Although the former has been retained in the most-likely domain architecture (based on its slightly higher score) and thus made the protein assigned as an Ent_kaurene_synthase, this choice might be questionable based on the similarly high score for the latter domain. </p>
 <h3 id="xml-file">XML file<a class="headerlink" href="#xml-file" title="Permanent link">#</a></h3>
 <pre><code class="language-xml">&lt;protein&gt;
   &lt;id&gt;XP_023431478.1&lt;/id&gt;
