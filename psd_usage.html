@@ -87,11 +87,11 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#illustration-of-the-output-files">Illustration of the output files</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#the-all_familynamepdf-file">The all_familyName.pdf file</a>
+    <li class="toctree-l3"><a class="reference internal" href="#the-all_xxxpdf-file">The all_xxx.pdf file</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#all_familynamepdf-vs-mgg_xxxpdf">all_familyName.pdf VS MGG_xxx.pdf</a>
+    <li class="toctree-l3"><a class="reference internal" href="#the-protein_idpdf-file">The protein_ID.pdf file</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#xml-file">XML file</a>
+    <li class="toctree-l3"><a class="reference internal" href="#the-protein_idxml-file">The protein_ID.xml file</a>
     </li>
         </ul>
     </li>
@@ -281,17 +281,17 @@ PKS_type3.0:
 ... 
 </pre>
 
-<p>Inside each protein family folder, three files with the related protein ID as the basename are generated for each protein matching the user-defined family rule:</p>
+<p>Inside each protein family folder, three files with the related protein ID as the basename (<i>e.g.</i> MGG_06540T0) are generated for each protein matching the user-defined family rule:</p>
 <ul class="myul2">
-  <li><code>MGG_xxx.fa</code>: the protein sequence in fasta format</li>
-  <li><code>MGG_xxx.xml</code>: details in XML format about the proteins and its matching domains</li>
-  <li><code>MGG_xxx.pdf</code>: a graphical representation of all of the domains that matched the protein</li>
+  <li><code>protein_ID.fa</code>: the protein sequence in fasta format</li>
+  <li><code>protein_ID.xml</code>: details in XML format about the proteins and its matching domains</li>
+  <li><code>protein_ID.pdf</code>: a graphical representation of all of the domains that matched the protein</li>
 </ul>
 
-<p>The file whose basename follows the syntax <code>all_familyName.pdf</code> is a graphical representation of the most-likely domains architecture for all the proteins that have been found to match the user-defined family rule. Please note that for a given protein the graphical representation in this file will be different from the one found in <code>MGG_xxx.pdf</code>, the latter representing all the domains that have been found to match the protein. Some of those domains might not be visible in the most-likely domain architecture. This will be the case for a domain <i>i</i> that overlaps with a domain <i>j</i> and if any architecture in which domain <i>i</i> is present is not the most-likely architecture, that is the one with the highest score (see <a href="./psd_introduction.html#resolving-overlapping-domains">here</a> for details about how the score is assigned).</p>
+<p>The file whose basename follows the syntax <code>all_xxx.pdf</code> (where xxx stands for the family name) is a graphical representation of the most-likely domains architecture for all the proteins that have been found to match the user-defined family rule. Please note that for a given protein the graphical representation in this file will be different from the one found in <code>protein_ID.pdf</code>, the latter representing all the domains that have been found to match the protein. Some of those domains might not be visible in the most-likely domain architecture. This will be the case for a domain <i>i</i> that overlaps with a domain <i>j</i> and if any architecture in which domain <i>i</i> is present is not the most-likely architecture, that is the one with the highest score (see <a href="./psd_introduction.html#resolving-overlapping-domains">here</a> for details about how the score is assigned).</p>
 <h2 id="illustration-of-the-output-files">Illustration of the output files<a class="headerlink" href="#illustration-of-the-output-files" title="Permanent link">#</a></h2>
-<h4 id="the-all_familynamepdf-file">The all_familyName.pdf file<a class="headerlink" href="#the-all_familynamepdf-file" title="Permanent link">#</a></h4>
-<p>The file whose basename follows the syntax <code>all_familyName.pdf</code> is a multipage pdf file containing graphical representations of the most-likely domain architecture of all the proteins that have been found to match the user-defined family rule.</p>
+<h4 id="the-all_xxxpdf-file">The all_xxx.pdf file<a class="headerlink" href="#the-all_xxxpdf-file" title="Permanent link">#</a></h4>
+<p>The file whose basename follows the syntax <code>all_xxx.pdf</code> is a multipage pdf file containing graphical representations of the most-likely domain architecture of all the proteins that have been found to match the user-defined family rule.</p>
 <p>An example of the first page of <code>all_PKS.pdf</code> is shown below:</p>
 <figure >
     <img src="./img/pks_mla_examples.png"
@@ -299,8 +299,8 @@ PKS_type3.0:
 </figure>
 
 <p>The first line of the figure represents all domains composing the most-likely domain architecture found for the protein MGG_00233T0. The next lines represent details information about each domain, namely its amino acid positions, name, independant e-value (i-evalue) and its score.</p>
-<h4 id="all_familynamepdf-vs-mgg_xxxpdf">all_familyName.pdf VS MGG_xxx.pdf<a class="headerlink" href="#all_familynamepdf-vs-mgg_xxxpdf" title="Permanent link">#</a></h4>
-<p>At the difference of the <code>all_familyName.pdf</code>, the graphical representation found for a given protein in the file <code>MGG_xxx.pdf</code> does not show any domain architecture but instead represents all the domains that matched the protein sequence during the <a href="psd_introduction.html#annotation">annotation step</a>. It can be helpful to visualize overlapping domains that have not been retained to be a part of the most-likely domain architecture. It thus provides the user a way to check the validity for a protein to really belong to the assigned protein family.</p>
+<h4 id="the-protein_idpdf-file">The protein_ID.pdf file<a class="headerlink" href="#the-protein_idpdf-file" title="Permanent link">#</a></h4>
+<p>The graphical representation found for a given protein in the file <code>protein_ID.pdf</code> does not show any domain architecture; instead it represents all the domains that matched the protein sequence during the <a href="psd_introduction.html#annotation">annotation step</a>. The main function of this file is to keep track of domains that may have not been retained to be part of the most-likely architecture. It thus provides the user a way to check the validity for a protein to really belong to the assigned protein family.</p>
 <p>To illustrate that point, let's compare both graphical representations for the protein MGG_01949T0 that has been assigned to the Ent_kaurene_synthase family:</p>
 <figure>
     <img  style="border: 1px solid" src="./img/ent_kaurene_MLA_VS_domains.png"
@@ -311,24 +311,37 @@ PKS_type3.0:
 </figure>
 
 <p>The figure 4A shows the most-likely domain architecture assigned to the protein MGG_01949T0 (found in <code>all_Ent_kaurene_synthase.pdf</code>) which is composed of only one domain: the <i>ent_kaurene</i> domain. </p>
-<p>The figure 4B shows all the domains that matched the protein sequence during the annotation step. We can see in this representation that both the <i>ent_kaurene</i> domain and the <i>diterpene</i> domain matched the protein sequence with an e-value equals to 0.0 and a really high score. Although the former has been retained in the most-likely domain architecture (based on its slightly higher score) and thus made the protein assigned as an Ent_kaurene_synthase, this choice might be questionable based on the similarly high score for the latter domain. </p>
-<h3 id="xml-file">XML file<a class="headerlink" href="#xml-file" title="Permanent link">#</a></h3>
+<p>The figure 4B shows all the domains that matched the protein sequence during the annotation step. We can see in this representation that both the <i>ent_kaurene</i> domain and the <i>diterpene</i> domain matched the protein sequence with an e-value equals to 0.0 and a really high score. Although the former has been retained in the most-likely domain architecture (based on its slightly higher score) and thus made the protein assigned as an Ent_kaurene_synthase, this choice might appear arguable based on the similarly high score for the latter domain. The graphical representation allows the user to inspect such cases.</p>
+<h3 id="the-protein_idxml-file">The protein_ID.xml file<a class="headerlink" href="#the-protein_idxml-file" title="Permanent link">#</a></h3>
+<p>The protein_ID.xml file contains the main information about the protein. An example of the content of this xml file is shown below for the protein MGG_01949T0:</p>
 <pre><code class="language-xml">&lt;protein&gt;
-  &lt;id&gt;XP_023431478.1&lt;/id&gt;
-  &lt;sequence_length&gt;952&lt;/sequence_length&gt;
+  &lt;id&gt;MGG_01949T0&lt;/id&gt;
+  &lt;sequence&gt;MKRAKSVPAMASPTLKLAAKGLIARLSSINDPKYAFSTASVEIYDTAWVAMVTKRSGEQKRWLFPESFYHLLKSQADDGSWGYHPQTKASGVLGTGAAVLALYKHLKEPLQLHDVSSEEIRKRIILGSESLRTQLQNWDDVLSTNHIGIEIVAPALLDYLKQEDPALDFEFPAQAGLREMNAQKMSRFKPEHLYEAKVSTAAHSLEAFVGKIDFDRVRGHLWRGSMMASPSSTAAYLMYASVWDDEAEGFLQHVLKAGAGHGDGSMPGTFPTSYFEYSWTVVTLLQGGFSITDLGVKELNIIADHLEAGFKEEGGIIGFAPRAPDADDTAKGLLALDLLGRHLSPDRMIKVFEGRNHFTTFGSERDPSLTSNCHILLALLQQPDVAKYYPQIIKTANFVCEYWWSSDRRIRDKWHLSHMYPTMLMAEAFTELLRHFDNGTYPKAADGQLIWRVCICLFQACHRTLLEQGEDGSWEGMPEQTSYAILALAQARKLSLFDGLGKQVQAAIDRGAHYLKTRKVGHHDASWTSKSAYRVAIVAEAYELAALNVQKATRDGAPAVGRSIELPISGPRLDGYVDLVAKTPLFSDVPQWQLRASLVEASLFVPLLRDRRLSVFSRDEFDASEDKYLEMIPFTWVSCSNRGGSFMATSWLYDMMLVSMLSYQADEFIHKSAAPALRGISALSRLIDGVFDELASESKHVNGKSSSSSSSSSSSTTTTTTTTSEVEKKVRAELLRFVGHLLGHPSLARSSHWDLEALRRELRACLQANVAQIEENSRLAKHPSSPVLHTRARRTFFDWVRTTASDRTAIAFPFYFACCHFSSSQTPGEDVFATAAEKYLVDAAIRHLATKGRLMNDFGSTGRDSAEGNVNSVHFPELQRCSAAAASSTPAAKKDVLKRLIEFEEHCCSRALELLSQACLDGHQRRESLHLQKRKVVMATVYRDVSELYGQLYMLKGAAELD&lt;/sequence&gt;
+  &lt;sequence_length&gt;963&lt;/sequence_length&gt;
   &lt;class_name&gt;Ent_kaurene_synthase&lt;/class_name&gt;
-  &lt;domain_architecture&gt;
+  &lt;most_likely_architecture&gt;
     &lt;domain name=&quot;ent_kaurene&quot;&gt;
-      &lt;cval&gt;0.0&lt;/cval&gt;
-      &lt;ival&gt;0.0&lt;/ival&gt;
-      &lt;score&gt;1074.3&lt;/score&gt;
-      &lt;start&gt;10&lt;/start&gt;
-      &lt;end&gt;952&lt;/end&gt;
-      &lt;domain_length&gt;943&lt;/domain_length&gt;
+      &lt;c-evalue&gt;0.0&lt;/c-evalue&gt;
+      &lt;i-evalue&gt;0.0&lt;/i-evalue&gt;
+      &lt;score&gt;1717.5&lt;/score&gt;
+      &lt;start&gt;2&lt;/start&gt;
+      &lt;end&gt;962&lt;/end&gt;
+      &lt;domain_length&gt;961&lt;/domain_length&gt;
     &lt;/domain&gt;
-  &lt;/domain_architecture&gt;
+  &lt;/most_likely_architecture&gt;
+  &lt;other_matching_domains&gt;
+    &lt;domain name=&quot;diterpene&quot;&gt;
+      &lt;c-evalue&gt;0.0&lt;/c-evalue&gt;
+      &lt;i-evalue&gt;0.0&lt;/i-evalue&gt;
+      &lt;score&gt;1570.7&lt;/score&gt;
+      &lt;start&gt;5&lt;/start&gt;
+      &lt;end&gt;962&lt;/end&gt;
+      &lt;domain_length&gt;958&lt;/domain_length&gt;
+    &lt;/domain&gt;
+  &lt;/other_matching_domains&gt;
 &lt;/protein&gt;
 </code></pre>
+<p>Please note that if domains matched the protein sequence during the annotation step but don't belong to the most-likely architecture, those domains will be listed in the xml file under the tag <code>&lt;other_matching_domains></code>.</p>
               
             </div>
           </div>
