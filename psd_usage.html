@@ -73,7 +73,9 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#creating-rules">Creating rules</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#edit-rules-from-gui">Edit rules from GUI</a>
+    <li class="toctree-l3"><a class="reference internal" href="#editing-rules-from-gui">Editing rules from GUI</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#updating-an-existing-rule-file">Updating an existing rule file</a>
     </li>
         </ul>
     </li>
@@ -190,7 +192,7 @@ optional arguments:
 
 <h2 id="creating-rules">Creating rules<a class="headerlink" href="#creating-rules" title="Permanent link">#</a></h2>
 <p>The proteins the user is interested in must be described in a file containing simple rules defining for each protein of interest which domains are mandatory and/or which one are forbidden. An E-value (corresponding to the independent domain E-value from hmmsearch) can also be specified for each mandatory domains. In that case, a mandatory domain must match a sequence with an E-value at least below the one specified. If no E-value is defined for mandatory domains, an E-value of 0.01 is used by default.</p>
-<h4 id="edit-rules-from-gui">Edit rules from GUI<a class="headerlink" href="#edit-rules-from-gui" title="Permanent link">#</a></h4>
+<h4 id="editing-rules-from-gui">Editing rules from GUI<a class="headerlink" href="#editing-rules-from-gui" title="Permanent link">#</a></h4>
 <p>The file in which rules are edited must respect a specific syntax in a YAML format. To make it simpler, a Graphical User Interface (GUI) has been implemented. You can access it through the command <code>create_rules</code></p>
 <figure class="fig-prosecda">
     <img src="./img/prosecda_rules.png"
@@ -210,32 +212,36 @@ optional arguments:
 </ul>
 <p>Once you have added all your mandatory/forbidden domains describing the domain architecture your proteins of interest must match, click on <code>Add rule to the list</code> to validate the rule. You'll see it listed in the <code>Rule list</code> panel. Repeat the procedure to create as many rules as you want. </p>
 <p>Once all your desired rules are defined, click on <code>Save rules</code> to save them in a YAML file. This YAML file will look like the one described below:</p>
-<pre><code class="language-yaml">PKS:
- COMMENT: Polyketide Synthase
- CONDITION:
-  mandatory:
-  - KS
-  - AT
-  - PP-binding, 0.0001
-  forbidden:
-  - C
+<pre class="parameters">
+<font color="#3465A4"><b>PKS:</b></font>
+<font color="#3465A4"><b> COMMENT:</b></font> Polyketide Synthase
+<font color="#3465A4"><b> CONDITION:</b></font>
+<font color="#3465A4"><b>  mandatory:</b></font>
+<font color="#3465A4"><b>  - </b></font>KS
+<font color="#3465A4"><b>  - </b></font>AT
+<font color="#3465A4"><b>  - </b></font>PP-binding, 0.0001
+<font color="#3465A4"><b>  forbidden:</b></font>
+<font color="#3465A4"><b>  - </b></font>C
 
-PKS-like:
- COMMENT: Polyketide Synthase like
- CONDITION:
-  mandatory:
-  - KS
-  - AT
-  forbidden:
+<font color="#3465A4"><b>PKS-like:</b></font>
+<font color="#3465A4"><b> COMMENT:</b></font> Polyketide Synthase like
+<font color="#3465A4"><b> CONDITION:</b></font>
+<font color="#3465A4"><b>  mandatory:</b></font>
+<font color="#3465A4"><b>  - </b></font>KS
+<font color="#3465A4"><b>  - </b></font>AT
+<font color="#3465A4"><b>  forbidden:</b></font>
 
-PKS_type3.0:
- COMMENT: Polyketide Syntase type III
- CONDITION:
-  mandatory:
-  - CHS_like
-  forbidden:
+<font color="#3465A4"><b>PKS_type3.0:</b></font>
+<font color="#3465A4"><b> COMMENT:</b></font> Polyketide Syntase type III
+<font color="#3465A4"><b> CONDITION:</b></font>
+<font color="#3465A4"><b>  mandatory:</b></font>
+<font color="#3465A4"><b>  - </b></font>CHS_like
+<font color="#3465A4"><b>  forbidden:</b></font>
 
-</code></pre>
+</pre>
+
+<h4 id="updating-an-existing-rule-file">Updating an existing rule file<a class="headerlink" href="#updating-an-existing-rule-file" title="Permanent link">#</a></h4>
+<p>If the user wants to update an already existing rule file, he will have to manually edit it. In that case be aware that a YAML file must respect a <a href="https://en.wikipedia.org/wiki/YAML">specific syntax</a>. The simplest way to add new rules in an already existing file might to copy paste an exisitng rule and to adapt its content. Note that all characters in blue in the above YAML file are required, and whitespace indentations must be respected.</p>
 <h2 id="output-of-prosecda">Output of ProSeCDA<a class="headerlink" href="#output-of-prosecda" title="Permanent link">#</a></h2>
 <h4 id="overall-architecture">Overall architecture<a class="headerlink" href="#overall-architecture" title="Permanent link">#</a></h4>
 <p>The output directory generated from the command run in the <a href="#quick-start-example">Quick start example</a> will be as described below:</p>
@@ -301,42 +307,42 @@ PKS_type3.0:
 <p>The first line of the figure represents all domains composing the most-likely domain architecture found for the protein MGG_00233T0. The next lines represent details information about each domain, namely its amino acid positions, name, independant e-value (i-evalue) and its score.</p>
 <h4 id="the-protein_idpdf-file">The protein_ID.pdf file<a class="headerlink" href="#the-protein_idpdf-file" title="Permanent link">#</a></h4>
 <p>The graphical representation found for a given protein in the file <code>protein_ID.pdf</code> does not show any domain architecture; instead it represents all the domains that matched the protein sequence during the <a href="psd_introduction.html#annotation">annotation step</a>. The main function of this file is to keep track of domains that may have not been retained to be part of the most-likely architecture. It thus provides the user a way to check the validity for a protein to really belong to the assigned protein family.</p>
-<p>To illustrate that point, let's compare both graphical representations for the protein MGG_01949T0 that has been assigned to the Ent_kaurene_synthase family:</p>
+<p>To illustrate that point, let's compare both graphical representations for the protein MGG_04631T0 that has been assigned to the Sesquiterp_synthase family:</p>
 <figure>
-    <img  style="border: 1px solid" src="./img/ent_kaurene_MLA_VS_domains.png"
+    <img  style="border: 1px solid" src="./img/sesquiterpene_MLA_VS_domains.png"
       alt="IterHMMBuild pipeline overview.">
     <figcaption>
-    <b>Figure 4:</b> Comparison of the graphical representations of the protein MGG_1949T0 found in (<b>A</b>) <code>all_Ent_kaurene_synthase.pdf</code> and (<b>B</b>) <code>MGG_01949T0.pdf</code>.
+    <b>Figure 4:</b> Comparison of the graphical representations of the protein MGG_04631T0 found in (<b>A</b>) <code>all_Sesquiterp_synthase.pdf</code> and (<b>B</b>) <code>MGG_04631T0.pdf</code>.
     </figcaption>
 </figure>
 
-<p>The figure 4A shows the most-likely domain architecture assigned to the protein MGG_01949T0 (found in <code>all_Ent_kaurene_synthase.pdf</code>) which is composed of only one domain: the <i>ent_kaurene</i> domain. </p>
-<p>The figure 4B shows all the domains that matched the protein sequence during the annotation step. We can see in this representation that both the <i>ent_kaurene</i> domain and the <i>diterpene</i> domain matched the protein sequence with an e-value equals to 0.0 and a really high score. Although the former has been retained in the most-likely domain architecture (based on its slightly higher score) and thus made the protein assigned as an Ent_kaurene_synthase, this choice might appear arguable based on the similarly high score for the latter domain. The graphical representation allows the user to inspect such cases.</p>
+<p>The figure 4A shows the most-likely domain architecture assigned to the protein MGG_04631T0 (found in <code>all_Sesquiterp_synthase.pdf</code>) which is composed of only one domain: the <i>sesquiterpene</i> domain. </p>
+<p>The figure 4B shows all the domains that matched the protein sequence during the annotation step. We can see in this representation that both the <i>sesquiterpene</i> domain and the <i>fusicocadiene</i> domain matched the protein sequence. Only the sesquiterpene domain has been retained in the most-likely domain architecture based on its most favorable i-evalue and thus made the protein assigned as an Sesquiterp_synthase.</p>
 <h3 id="the-protein_idxml-file">The protein_ID.xml file<a class="headerlink" href="#the-protein_idxml-file" title="Permanent link">#</a></h3>
-<p>The protein_ID.xml file contains the main information about the protein. An example of the content of this xml file is shown below for the protein MGG_01949T0:</p>
+<p>The protein_ID.xml file contains the main information about the protein. An example of the content of this xml file is shown below for the protein MGG_04631T0:</p>
 <pre><code class="language-xml">&lt;protein&gt;
-  &lt;id&gt;MGG_01949T0&lt;/id&gt;
-  &lt;sequence&gt;MKRAKSVPAMASPTLKLAAKGLIARLSSINDPKYAFSTASVEIYDTAWVAMVTKRSGEQKRWLFPESFYHLLKSQADDGSWGYHPQTKASGVLGTGAAVLALYKHLKEPLQLHDVSSEEIRKRIILGSESLRTQLQNWDDVLSTNHIGIEIVAPALLDYLKQEDPALDFEFPAQAGLREMNAQKMSRFKPEHLYEAKVSTAAHSLEAFVGKIDFDRVRGHLWRGSMMASPSSTAAYLMYASVWDDEAEGFLQHVLKAGAGHGDGSMPGTFPTSYFEYSWTVVTLLQGGFSITDLGVKELNIIADHLEAGFKEEGGIIGFAPRAPDADDTAKGLLALDLLGRHLSPDRMIKVFEGRNHFTTFGSERDPSLTSNCHILLALLQQPDVAKYYPQIIKTANFVCEYWWSSDRRIRDKWHLSHMYPTMLMAEAFTELLRHFDNGTYPKAADGQLIWRVCICLFQACHRTLLEQGEDGSWEGMPEQTSYAILALAQARKLSLFDGLGKQVQAAIDRGAHYLKTRKVGHHDASWTSKSAYRVAIVAEAYELAALNVQKATRDGAPAVGRSIELPISGPRLDGYVDLVAKTPLFSDVPQWQLRASLVEASLFVPLLRDRRLSVFSRDEFDASEDKYLEMIPFTWVSCSNRGGSFMATSWLYDMMLVSMLSYQADEFIHKSAAPALRGISALSRLIDGVFDELASESKHVNGKSSSSSSSSSSSTTTTTTTTSEVEKKVRAELLRFVGHLLGHPSLARSSHWDLEALRRELRACLQANVAQIEENSRLAKHPSSPVLHTRARRTFFDWVRTTASDRTAIAFPFYFACCHFSSSQTPGEDVFATAAEKYLVDAAIRHLATKGRLMNDFGSTGRDSAEGNVNSVHFPELQRCSAAAASSTPAAKKDVLKRLIEFEEHCCSRALELLSQACLDGHQRRESLHLQKRKVVMATVYRDVSELYGQLYMLKGAAELD&lt;/sequence&gt;
-  &lt;sequence_length&gt;963&lt;/sequence_length&gt;
-  &lt;class_name&gt;Ent_kaurene_synthase&lt;/class_name&gt;
+  &lt;id&gt;MGG_04631T0&lt;/id&gt;
+  &lt;sequence&gt;MADRTCVTLPDMFRGFIVQEPKVNKHYEAVKPVSEKWLARICAFSPMMQKRVGACDFSYFCSIAAPEAPIHKLRTMCDWGNWVFPFDDMFDSGDLRSDLIVTRHVLDSLLADMKGHKFRGLKIPVVLAHDDIYRRLSEVETKNPSISGVQRRFARAMELYALGVAQHVQDFTESGLPCPQEMLETRRLSVGVAPLYHLVEYAHSIRLPDEVFEDPAIQTLERLGADMVIMSNDMLSYQKEEASTNNEGCPFNMVAACRMSGQSAQEAFDTVGALLEESYYEWEETMRQVPARGGDVERDVQRYIKGIQDVVQANITWSFRSKRYLGVHAPEVRRTKKFDVMTHPPYLDKDMAELR&lt;/sequence&gt;
+  &lt;sequence_length&gt;356&lt;/sequence_length&gt;
+  &lt;class_name&gt;Sesquiterp_synthase&lt;/class_name&gt;
   &lt;most_likely_architecture&gt;
-    &lt;domain name=&quot;ent_kaurene&quot;&gt;
-      &lt;c-evalue&gt;0.0&lt;/c-evalue&gt;
-      &lt;i-evalue&gt;0.0&lt;/i-evalue&gt;
-      &lt;score&gt;1717.5&lt;/score&gt;
-      &lt;start&gt;2&lt;/start&gt;
-      &lt;end&gt;962&lt;/end&gt;
-      &lt;domain_length&gt;961&lt;/domain_length&gt;
+    &lt;domain name=&quot;sesquiterpene&quot;&gt;
+      &lt;c-evalue&gt;2e-36&lt;/c-evalue&gt;
+      &lt;i-evalue&gt;3.3e-33&lt;/i-evalue&gt;
+      &lt;score&gt;114.4&lt;/score&gt;
+      &lt;start&gt;4&lt;/start&gt;
+      &lt;end&gt;333&lt;/end&gt;
+      &lt;domain_length&gt;330&lt;/domain_length&gt;
     &lt;/domain&gt;
   &lt;/most_likely_architecture&gt;
   &lt;other_matching_domains&gt;
-    &lt;domain name=&quot;diterpene&quot;&gt;
-      &lt;c-evalue&gt;0.0&lt;/c-evalue&gt;
-      &lt;i-evalue&gt;0.0&lt;/i-evalue&gt;
-      &lt;score&gt;1570.7&lt;/score&gt;
-      &lt;start&gt;5&lt;/start&gt;
-      &lt;end&gt;962&lt;/end&gt;
-      &lt;domain_length&gt;958&lt;/domain_length&gt;
+    &lt;domain name=&quot;fusicocadiene&quot;&gt;
+      &lt;c-evalue&gt;7.9e-06&lt;/c-evalue&gt;
+      &lt;i-evalue&gt;0.0093&lt;/i-evalue&gt;
+      &lt;score&gt;13.5&lt;/score&gt;
+      &lt;start&gt;43&lt;/start&gt;
+      &lt;end&gt;343&lt;/end&gt;
+      &lt;domain_length&gt;301&lt;/domain_length&gt;
     &lt;/domain&gt;
   &lt;/other_matching_domains&gt;
 &lt;/protein&gt;
