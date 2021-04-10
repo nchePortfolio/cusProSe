@@ -40,7 +40,8 @@ The previously built HMM profile is searched against the protein database given 
 </div>
 
 ## Convergence
-Basically, the convergence is reached when the number of sequences at iteration i+1 (Nseq<sub>i+1</sub>) is equal to the number of sequences at iteration i (Nseq<sub>i</sub>). However, Nseq<sub>i+1</sub> can sometimes be below than Nseq<sub>i</sub>. Thus, to ensure that the pipeline does not run indefinitely, a counter is incremented each time the absolute difference between Nseq<sub>i+1</sub> and Nseq<sub>i</sub> is less or equal to 1 (default value). The convergence is then also reached when the value of this counter is equal to 3 (default value).
+Basically, the convergence is reached when the number of sequences at iteration i+1 (Nseq<sub>i+1</sub>) is strictly equal to the number of sequences at iteration i (Nseq<sub>i</sub>). However, because the number of new sequences found after multiple consecutive iterations can be really low, or even negative, a counter is also used to evaluate the convergence status in order to prevent unnecessay iterations (i.e. iterations that will increase the computation time without significantly enrich the number of new sequences). This counter is incremented each time the difference between Nseq<sub>i+1</sub> and Nseq<sub>i</sub> is negative or equal to 1 (default value). The convergence is then also reached when the value of this counter is equal to 3 (default value).
+
 
 ## Outputs
 An example output is as shown below:

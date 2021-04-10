@@ -57,7 +57,7 @@ optional arguments:
 ## Creating rules
 The proteins the user is interested in must be described in a file containing simple rules defining for each protein of interest which domains are mandatory and/or which one are forbidden. An E-value (corresponding to the independent domain E-value from hmmsearch) can also be specified for each mandatory domains. In that case, a mandatory domain must match a sequence with an E-value at least below the one specified. If no E-value is defined for mandatory domains, an E-value of 0.01 is used by default.
 
-#### Edit rules from GUI
+#### Editing rules from GUI
 The file in which rules are edited must respect a specific syntax in a YAML format. To make it simpler, a Graphical User Interface (GUI) has been implemented. You can access it through the command `create_rules`
 
 
@@ -81,33 +81,37 @@ Once you have added all your mandatory/forbidden domains describing the domain a
 
 Once all your desired rules are defined, click on `Save rules` to save them in a YAML file. This YAML file will look like the one described below:
 
-```yaml
-PKS:
- COMMENT: Polyketide Synthase
- CONDITION:
-  mandatory:
-  - KS
-  - AT
-  - PP-binding, 0.0001
-  forbidden:
-  - C
+<pre class="parameters">
+<font color="#3465A4"><b>PKS:</b></font>
+<font color="#3465A4"><b> COMMENT:</b></font> Polyketide Synthase
+<font color="#3465A4"><b> CONDITION:</b></font>
+<font color="#3465A4"><b>  mandatory:</b></font>
+<font color="#3465A4"><b>  - </b></font>KS
+<font color="#3465A4"><b>  - </b></font>AT
+<font color="#3465A4"><b>  - </b></font>PP-binding, 0.0001
+<font color="#3465A4"><b>  forbidden:</b></font>
+<font color="#3465A4"><b>  - </b></font>C
 
-PKS-like:
- COMMENT: Polyketide Synthase like
- CONDITION:
-  mandatory:
-  - KS
-  - AT
-  forbidden:
+<font color="#3465A4"><b>PKS-like:</b></font>
+<font color="#3465A4"><b> COMMENT:</b></font> Polyketide Synthase like
+<font color="#3465A4"><b> CONDITION:</b></font>
+<font color="#3465A4"><b>  mandatory:</b></font>
+<font color="#3465A4"><b>  - </b></font>KS
+<font color="#3465A4"><b>  - </b></font>AT
+<font color="#3465A4"><b>  forbidden:</b></font>
 
-PKS_type3.0:
- COMMENT: Polyketide Syntase type III
- CONDITION:
-  mandatory:
-  - CHS_like
-  forbidden:
+<font color="#3465A4"><b>PKS_type3.0:</b></font>
+<font color="#3465A4"><b> COMMENT:</b></font> Polyketide Syntase type III
+<font color="#3465A4"><b> CONDITION:</b></font>
+<font color="#3465A4"><b>  mandatory:</b></font>
+<font color="#3465A4"><b>  - </b></font>CHS_like
+<font color="#3465A4"><b>  forbidden:</b></font>
 
-```
+</pre>
+
+#### Updating an existing rule file
+If the user wants to update an already existing rule file, he will have to manually edit it. In that case be aware that a YAML file must respect a [specific syntax](https://en.wikipedia.org/wiki/YAML). The simplest way to add new rules in an already existing file might to copy paste an exisitng rule and to adapt its content. Note that all characters in blue in the above YAML file are required, and whitespace indentations must be respected.
+
 
 ## Output of ProSeCDA
 #### Overall architecture
