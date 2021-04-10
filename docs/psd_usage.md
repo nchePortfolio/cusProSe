@@ -186,47 +186,47 @@ The first line of the figure represents all domains composing the most-likely do
 #### The protein_ID.pdf file
 The graphical representation found for a given protein in the file `protein_ID.pdf` does not show any domain architecture; instead it represents all the domains that matched the protein sequence during the [annotation step](psd_introduction.html#annotation). The main function of this file is to keep track of domains that may have not been retained to be part of the most-likely architecture. It thus provides the user a way to check the validity for a protein to really belong to the assigned protein family.
 
-To illustrate that point, let's compare both graphical representations for the protein MGG_01949T0 that has been assigned to the Ent_kaurene_synthase family:
+To illustrate that point, let's compare both graphical representations for the protein MGG_04631T0 that has been assigned to the Sesquiterp_synthase family:
 
 <figure>
-    <img  style="border: 1px solid" src="./img/ent_kaurene_MLA_VS_domains.png"
+    <img  style="border: 1px solid" src="./img/sesquiterpene_MLA_VS_domains.png"
       alt="IterHMMBuild pipeline overview.">
     <figcaption>
-    <b>Figure 4:</b> Comparison of the graphical representations of the protein MGG_1949T0 found in (<b>A</b>) <code>all_Ent_kaurene_synthase.pdf</code> and (<b>B</b>) <code>MGG_01949T0.pdf</code>.
+    <b>Figure 4:</b> Comparison of the graphical representations of the protein MGG_04631T0 found in (<b>A</b>) <code>all_Sesquiterp_synthase.pdf</code> and (<b>B</b>) <code>MGG_04631T0.pdf</code>.
     </figcaption>
 </figure>
 
-The figure 4A shows the most-likely domain architecture assigned to the protein MGG_01949T0 (found in <code>all_Ent_kaurene_synthase.pdf</code>) which is composed of only one domain: the <i>ent_kaurene</i> domain. 
+The figure 4A shows the most-likely domain architecture assigned to the protein MGG_04631T0 (found in <code>all_Sesquiterp_synthase.pdf</code>) which is composed of only one domain: the <i>sesquiterpene</i> domain. 
 
-The figure 4B shows all the domains that matched the protein sequence during the annotation step. We can see in this representation that both the <i>ent_kaurene</i> domain and the <i>diterpene</i> domain matched the protein sequence with an e-value equals to 0.0 and a really high score. Although the former has been retained in the most-likely domain architecture (based on its slightly higher score) and thus made the protein assigned as an Ent_kaurene_synthase, this choice might appear arguable based on the similarly high score for the latter domain. The graphical representation allows the user to inspect such cases.
+The figure 4B shows all the domains that matched the protein sequence during the annotation step. We can see in this representation that both the <i>sesquiterpene</i> domain and the <i>fusicocadiene</i> domain matched the protein sequence. Only the sesquiterpene domain has been retained in the most-likely domain architecture based on its most favorable i-evalue and thus made the protein assigned as an Sesquiterp_synthase.
 
 ### The protein_ID.xml file
-The protein_ID.xml file contains the main information about the protein. An example of the content of this xml file is shown below for the protein MGG_01949T0:
+The protein_ID.xml file contains the main information about the protein. An example of the content of this xml file is shown below for the protein MGG_04631T0:
 
 ```xml
 <protein>
-  <id>MGG_01949T0</id>
-  <sequence>MKRAKSVPAMASPTLKLAAKGLIARLSSINDPKYAFSTASVEIYDTAWVAMVTKRSGEQKRWLFPESFYHLLKSQADDGSWGYHPQTKASGVLGTGAAVLALYKHLKEPLQLHDVSSEEIRKRIILGSESLRTQLQNWDDVLSTNHIGIEIVAPALLDYLKQEDPALDFEFPAQAGLREMNAQKMSRFKPEHLYEAKVSTAAHSLEAFVGKIDFDRVRGHLWRGSMMASPSSTAAYLMYASVWDDEAEGFLQHVLKAGAGHGDGSMPGTFPTSYFEYSWTVVTLLQGGFSITDLGVKELNIIADHLEAGFKEEGGIIGFAPRAPDADDTAKGLLALDLLGRHLSPDRMIKVFEGRNHFTTFGSERDPSLTSNCHILLALLQQPDVAKYYPQIIKTANFVCEYWWSSDRRIRDKWHLSHMYPTMLMAEAFTELLRHFDNGTYPKAADGQLIWRVCICLFQACHRTLLEQGEDGSWEGMPEQTSYAILALAQARKLSLFDGLGKQVQAAIDRGAHYLKTRKVGHHDASWTSKSAYRVAIVAEAYELAALNVQKATRDGAPAVGRSIELPISGPRLDGYVDLVAKTPLFSDVPQWQLRASLVEASLFVPLLRDRRLSVFSRDEFDASEDKYLEMIPFTWVSCSNRGGSFMATSWLYDMMLVSMLSYQADEFIHKSAAPALRGISALSRLIDGVFDELASESKHVNGKSSSSSSSSSSSTTTTTTTTSEVEKKVRAELLRFVGHLLGHPSLARSSHWDLEALRRELRACLQANVAQIEENSRLAKHPSSPVLHTRARRTFFDWVRTTASDRTAIAFPFYFACCHFSSSQTPGEDVFATAAEKYLVDAAIRHLATKGRLMNDFGSTGRDSAEGNVNSVHFPELQRCSAAAASSTPAAKKDVLKRLIEFEEHCCSRALELLSQACLDGHQRRESLHLQKRKVVMATVYRDVSELYGQLYMLKGAAELD</sequence>
-  <sequence_length>963</sequence_length>
-  <class_name>Ent_kaurene_synthase</class_name>
+  <id>MGG_04631T0</id>
+  <sequence>MADRTCVTLPDMFRGFIVQEPKVNKHYEAVKPVSEKWLARICAFSPMMQKRVGACDFSYFCSIAAPEAPIHKLRTMCDWGNWVFPFDDMFDSGDLRSDLIVTRHVLDSLLADMKGHKFRGLKIPVVLAHDDIYRRLSEVETKNPSISGVQRRFARAMELYALGVAQHVQDFTESGLPCPQEMLETRRLSVGVAPLYHLVEYAHSIRLPDEVFEDPAIQTLERLGADMVIMSNDMLSYQKEEASTNNEGCPFNMVAACRMSGQSAQEAFDTVGALLEESYYEWEETMRQVPARGGDVERDVQRYIKGIQDVVQANITWSFRSKRYLGVHAPEVRRTKKFDVMTHPPYLDKDMAELR</sequence>
+  <sequence_length>356</sequence_length>
+  <class_name>Sesquiterp_synthase</class_name>
   <most_likely_architecture>
-    <domain name="ent_kaurene">
-      <c-evalue>0.0</c-evalue>
-      <i-evalue>0.0</i-evalue>
-      <score>1717.5</score>
-      <start>2</start>
-      <end>962</end>
-      <domain_length>961</domain_length>
+    <domain name="sesquiterpene">
+      <c-evalue>2e-36</c-evalue>
+      <i-evalue>3.3e-33</i-evalue>
+      <score>114.4</score>
+      <start>4</start>
+      <end>333</end>
+      <domain_length>330</domain_length>
     </domain>
   </most_likely_architecture>
   <other_matching_domains>
-    <domain name="diterpene">
-      <c-evalue>0.0</c-evalue>
-      <i-evalue>0.0</i-evalue>
-      <score>1570.7</score>
-      <start>5</start>
-      <end>962</end>
-      <domain_length>958</domain_length>
+    <domain name="fusicocadiene">
+      <c-evalue>7.9e-06</c-evalue>
+      <i-evalue>0.0093</i-evalue>
+      <score>13.5</score>
+      <start>43</start>
+      <end>343</end>
+      <domain_length>301</domain_length>
     </domain>
   </other_matching_domains>
 </protein>
