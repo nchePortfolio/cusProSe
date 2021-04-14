@@ -147,6 +147,48 @@ class Rule:
             for domain in self.forbidden_domains:
                 self.logger.info(' - {}'.format(domain.name))
         self.logger.info('')
+
+    def jsonify_mandatories(self):
+        mandatories = []
+        for domain in self.mandatory_domains:
+            mandatories.append(
+                {
+                    "name": domain.name,
+                    "evalue": domain.ival,
+                    "color": None
+                }
+            )
+
+        return mandatories
+
+    def jsonify_forbidden(self):
+        if not self.forbidden_domains:
+            return [
+                {
+                    "name": "None",
+                    "color": "None"
+                }
+            ]
+
+        else:
+            forbidden = []
+            for domain in self.forbidden_domains:
+                forbidden.append(
+                    {
+                        "name": domain.name,
+                        "color": None
+                    }
+                )
+
+            return forbidden
+
+    def jsonify(self):
+        json_rule = {
+                "mandatories": self.jsonify_mandatories(),
+                "forbidden": self.jsonify_forbidden()
+                }
+
+        return json_rule
         
 
 class Domain:

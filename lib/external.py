@@ -11,6 +11,23 @@ import lib.logHandler as logHandler
 from lxml import etree
 from prosecda.lib.rule_parser import Rule
 
+import matplotlib.colors as mcolors
+from random import shuffle
+
+# COLORS = list(mcolors.CSS4_COLORS.keys())
+COLORS = [
+    'indianred', 'salmon', 'lightsalmon', 'red', 'firebrick',
+    'hotpink', 'mediumvioletred', 'pink',
+    'coral', 'orangered', 'orange',
+    'yellow', 'gold', 'lemonchiffon', 'papayawhip', 'mocassin', 'peachpuff', 'khaki', 'darkkhaki',
+    'lavender', 'thistle', 'plum', 'violet', 'mediumorchid', 'fuchsia', 'mediumpurple', 'blueviolet', 'darkorchid', 'purple', 'rebeccapurple', 'indigo', 'mediumslateblue', 'slateblue', 'darkslateblue',
+    'chartreuse', 'greenyellow', 'limegreen', 'palegreen', 'springgreen', 'mediumspringgreen', 'mediumseagreen', 'seagreen', 'green', 'darkgreen', 'yellowgreen', 'olive', 'darkseagreen', 'teal',
+    'aqua', 'paleturquoise', 'aquamarine', 'darkturquoise', 'steelblue', 'lightsteelblue', 'powderblue', 'lightskyblue', 'deepskyblue', 'dodgerblue', 'royalblue', 'blue', 'mediumblue', 'navy',
+    'bisque', 'navajowhite', 'burlywood', 'sandybrown', 'darkgoldenrod', 'peru', 'chocolate', 'sienna', 'maroon',
+    'lightslategray', 'darkslategray'
+]
+shuffle(COLORS)
+DOMAIN_COLORS = {"None": "None"}
 
 class Usearch:
     """
@@ -205,6 +222,9 @@ class HmmerDomtbl:
     """
     Object used to describe any hmmer hit in a domtblout format from either hmmsearch or hmmscan.
 
+    The 'status' attribute is used to assign a domain status as "likely" or "unlikely". It is used 
+    to discriminate overlapping domains; the "likely" status will be assigned for domains found in the 
+    most-likely architecture, and the "unlikely" status for other domains.
     """
 
     def __init__(self, cols: list, hmmer_type: str):
@@ -239,6 +259,14 @@ class HmmerDomtbl:
         self.env_from = int(cols[19]) if cols else None
         self.env_to = int(cols[20]) if cols else None
         self.acc = float(cols[21]) if cols else None
+
+        self._set_color()
+        self.status = None
+
+    def _set_color(self):
+        if self.qname not in DOMAIN_COLORS:
+            color = COLORS.pop()
+            DOMAIN_COLORS[self.qname] = color
 
     def ali_coors(self):
         return self.ali_from, self.ali_to
@@ -291,6 +319,23 @@ class HmmerDomtbl:
                 'score: {}'.format(self.dom_score),
                 'i-evalue: {}'.format(self.dom_ival)
             ])
+
+    def jsonify(self):
+        json_domain = {
+            "name": self.qname,
+            "start": self.env_from,
+            "length": self.env_to - self.env_from + 1,
+            "cevalue": self.dom_cval,
+            "ievalue": self.dom_ival,
+            "score": self.dom_score,
+            "hmm_length": self.qlen,
+            "hmm_start": self.hmm_from,
+            "hmm_end": self.hmm_to,
+            "color": DOMAIN_COLORS[self.qname],
+            "status": self.status
+            }
+
+        return json_domain
 
 
 class HmmerHits:
@@ -415,8 +460,8 @@ class Protein:
 
     A Protein object has multiple attributes:
         - a name
-        - domain(s)
-        - architectures (a list of possible domain architectures if some domain overlaps)
+        - a list of domains
+        - architectures (a list of different sets on non-overlapping domains)
         - a best architecture (the best scored doamin architecture if multiple architectures exist)
         - a length
         - a sequence of amino acids
@@ -510,12 +555,20 @@ class Protein:
             else:
                 arch_with_best_bitscore = sorted([(x, x.get_bitscore()) for x in self.architectures], key=lambda x: x[1])[-1][0]
                 self.best_architecture = arch_with_best_bitscore
+        self._set_domain_status()
 
     def is_arch_with_ival_null(self):
         """ 
         Returns True if there is an architecture with a domain ival = 0., false otherwise.
         """
         return True in [x.is_ival_null() for x in self.architectures]
+
+    def _set_domain_status(self):
+        for domain in self.domains:
+            if domain not in self.best_architecture.domains:
+                domain.status = "unlikely"
+            else:
+                domain.status = "likely"
 
     def write_fasta(self, outdir: str):
         with open(outdir + self.name + '.fa', 'w') as o_fasta:
@@ -530,6 +583,17 @@ class Protein:
     def write_xml(self, outdir: str, rule: Rule):
         with open(outdir + self.name + '.xml', 'w') as o_xml:
             o_xml.write(self.get_xml(rule=rule))
+
+    def jsonify(self):
+        json_domains = [x.jsonify() for x in self.domains]
+        json_protein = {
+            "id": self.name,
+            "length": self.length,
+            "architectures_nb": len(self.architectures),
+            "domains": json_domains
+        }
+
+        return json_protein
 
     def get_xml(self, rule: Rule):
         protein_element = etree.Element('protein')
