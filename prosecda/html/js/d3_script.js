@@ -1,7 +1,19 @@
+// constant variables used to draw svg proteins
+const margin = {"top": 0, "right": 5, "bottom": 0, "left": 10};
+const width = 800 - margin.left - margin.right;
+const height = 60 - margin.top - margin.bottom;
+const y_line = (height + margin.top + margin.bottom)/2;
+const rect_height = 12;
+const y_rect = y_line - rect_height/2;
+
+
 d3.json("./data.json").then(function(families) {
 
+    // initialize the page with the content of the 1st element of families 
     initPage(families[0]);
 
+    // list all family names in the panel "List of protein families"
+    // each element is a <div class="nav-famlist"> 
     var famList = d3.select("#nav-content").selectAll("div")
         .data(families)
         .enter().append("div")
@@ -12,8 +24,10 @@ d3.json("./data.json").then(function(families) {
                 return d.name;
             })
 
+    // add the class "fam-selected" to the first element of the class "nav-famlist"
     d3.select(".nav-famlist").classed("fam-selected", true);
 
+    // change text size and style of nav-famlist elements when hovering over
     famList.on("mouseover", function () {
         d3.select(this)
             .style("cursor", "pointer")
@@ -21,28 +35,25 @@ d3.json("./data.json").then(function(families) {
             .style("font-style", "italic")
     }) 
 
+    // restaure text size and style of nav-famlist elements when mouse out
     famList.on("mouseout", function () {
         d3.select(this).style("color", "black")
             .style("font-size", "13px")
             .style("font-style", "normal")
     })
 
-    
+    // manage click event happening on nav-famlist elements
     famList.on("click", function() {
+        // add fam-selected class to the element clicked only
         d3.selectAll(".fam-selected").classed("fam-selected", false);
-        var _this = d3.select(this);
-        if (_this.classed("fam-selected")) {
-            _this.classed("fam-selected", false);
-        } else {
-            _this.classed("fam-selected", true);    
-        }
+        d3.select(this).classed("fam-selected", true)
 
-
-
+        // write name of the family in rule definition header 
         d3.select("#rule-summary .subtitle-header span").select("text").remove()
         d3.select("#rule-summary .subtitle-header span")
         .text(this.__data__.name)
-        
+
+        // write name of the family in domain architecture header
         d3.select("#proteins-container .subtitle-header span").select("text").remove()
         d3.select("#proteins-container .subtitle-header span")
         .text(this.__data__.name)
@@ -69,12 +80,6 @@ function initPage(data) {
     drawProteins(data.proteins);
 }
 
-const margin = {"top": 0, "right": 5, "bottom": 0, "left": 10};
-const width = 800 - margin.left - margin.right;
-const height = 60 - margin.top - margin.bottom;
-const y_line = (height + margin.top + margin.bottom)/2;
-const rect_height = 12;
-const y_rect = y_line - rect_height/2;
 
 function drawProteins(data) {
     var proteins = data
@@ -84,6 +89,7 @@ function drawProteins(data) {
         .domain([0, d3.max(protein_length)])
         .range([0, width]);
 
+    // proteins-draw is the container in which proteins are drawn
     var div = d3.select("#proteins-draw").selectAll("div")
                 .data(proteins)
                 .enter().append("div")
@@ -104,7 +110,8 @@ function drawProteins(data) {
                 .attr("height", height + margin.top + margin.bottom)
 
     var g = svg.append("g")
-                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+                .attr("class", d => d.id)
 
     g.append("line")
         .attr("x1", scale(1))
@@ -123,55 +130,49 @@ function drawProteins(data) {
                     .attr("width", d => scale(d.length))
                     .attr("fill", d => d.color)
                     .attr("stroke", "black")
-                    .attr("fill-opacity", "0.85")
+                    .attr("stroke-width", "1.25")
+                    .attr("fill-opacity", 0.85)
                     .attr("rx", "8")
                     .attr("ry", "8")
+                    .attr("id", function(d) {
+                        var end = d.start + d.length - 1;
+                        return `rect_${d.name}_${d.start}-${end}`; 
+                    })
+                    .style("visibility", function(d) {
+                        if (d.status) {
+                            if (d.status === "unlikely") {
+                                return "hidden";
+                            } else {
+                                return "visible";
+                            }
+                        } else {
+                            return "visible";
+                    }})
+        
 
     rect.append("title")
         .text(d => `${d.name} (${d.length} aa)`)
 
-    subdiv.on("click", function(d) {
+    subdiv.on("click", function() {
         d3.selectAll(".selected").classed("selected", false);
-        var _this = d3.select(this);
-        if (_this.classed("selected")) {
-            _this.classed("selected", false);
-        } else {
-            _this.classed("selected", true);    
-        }
+        d3.select(this).classed("selected", true);
 
         updateDetails(this.__data__);
-
-        var protein = this.__data__
-        d3.select("#p-id").text(protein.id)
-        d3.select("#p-length").text(`${protein.length} aa`)
-        d3.select("#p-archNb").text(`${protein.architectures_nb}`)
-
-        d3.select("#detail-hmmdomtbl tbody").selectAll("tr").remove()
-        var rows = d3.select("#detail-hmmdomtbl tbody").selectAll("tr")
-            .data(protein.domains)
-            .enter().append("tr")
-                .attr("id", function(d) {return `${d.name}-${d.start}` })
-
-        rows.append("td").text(function(d) {return d.name})
-        rows.append("td").text( d => d.start)
-        rows.append("td").text( d => (d.start+d.length-1))
-        rows.append("td").text( d => d.cevalue)
-        rows.append("td").text( d => d.ievalue)
-        rows.append("td").text( d => d.score)
     })
-
+    
     rect.on("mouseenter", function(event, d) {
         d3.select(`#${d.name}-${d.start}`).selectAll("td")
             .style("border-color", "black")
             .style("border-width", "2px")
             .style("font-weight", "bold")
             .classed("rect-hovered", true)
-    })
+        })
+
     rect.on("mouseleave", function(event, d) {   
         d3.select(`#${d.name}-${d.start}`).selectAll("td")
-        .style("border-width", "1px")
-        .style("font-weight", "normal")
-        .classed("rect-hovered", false);
+            .style("border-width", "1px")
+            .style("font-weight", "normal")
+            .classed("rect-hovered", false);
     })
 }
 
@@ -191,6 +192,7 @@ function updateDetails(protein){
         .data(protein.domains)
         .enter().append("tr")
             .attr("id", function(d) {return `${d.name}-${d.start}` })
+            .attr("class", d => d.status)
 
     rows.append("td").text(function(d) {return d.name})
     rows.append("td").text( d => d.start)
@@ -198,6 +200,55 @@ function updateDetails(protein){
     rows.append("td").text( d => d.cevalue)
     rows.append("td").text( d => d.ievalue)
     rows.append("td").text( d => d.score)
+
+    rows.on("mouseenter", function(event, d) {
+        d3.select(this).selectAll("td")
+            .style("border-color", "black")
+            .style("border-width", "2px")
+            .style("font-weight", "bold")
+            .classed("rect-hovered", true)
+
+        d3.select(`g.${protein.id}`).selectAll("rect")
+            .attr("opacity", "0.185")
+
+        d3.select(`g.${protein.id}`).select("line")
+            .attr("opacity", "0.5")
+
+        var end = d.start + d.length - 1;
+        d3.select(`#rect_${d.name}_${d.start}-${end}`)
+            .attr("stroke-width", "2")
+            .attr("opacity", "0.95")
+            .style("visibility", "visible")
+    })
+
+    rows.on("mouseout", function(event, d) {
+        d3.select(this).selectAll("td")
+        .style("border-width", "1px")
+        .style("font-weight", "normal")
+        .classed("rect-hovered", false);
+        
+        d3.select(`g.${protein.id}`).selectAll("rect")
+            .attr("opacity", "1")
+            .attr("fill-opacity", "0.85")
+
+        d3.select(`g.${protein.id}`).select("line")
+            .attr("opacity", "1")
+
+        var end = d.start + d.length - 1;
+        d3.select(`#rect_${d.name}_${d.start}-${end}`)
+            .attr("stroke-width", "1.25")
+            .style("visibility", function(d) {
+                if (d.status) {
+                    if (d.status === "unlikely") {
+                        return "hidden";
+                    } else {
+                        return "visible";
+                    }
+                } else {
+                    return "visible";
+            }})
+    })
+
 }
 
 
@@ -228,11 +279,14 @@ function updateRuleSummary(rules) {
             .attr("ry", "8")
 
     d3.select(".rule-table .tr-cutoff").selectAll("td")
-    .data(rules.mandatories)
-    .enter().append("td")
-    .text(d => d.evalue)
+        .data(rules.mandatories)
+        .enter().append("td")
+        .text(d => d.evalue)
 
     if (rules.forbidden[0].name != "None") {
+        d3.select('.rule-table.forbidden-list')
+        .style("visibility", "visible")
+
         d3.select(".rule-table .tr-name-forb").selectAll("td")
         .data(rules.forbidden)
         .enter().append("td")
@@ -255,8 +309,9 @@ function updateRuleSummary(rules) {
                 .attr("fill-opacity", "0.85")
                 .attr("rx", "8")
                 .attr("ry", "8")
+    } else {
+        d3.select('.rule-table.forbidden-list')
+            .style("visibility", "hidden")
     }
-
-
 }
 

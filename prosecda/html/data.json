@@ -6,7 +6,7 @@
                 {
                     "name": "Trp_DMAT",
                     "evalue": 0.01,
-                    "color": "hotpink"
+                    "color": "darkslategray"
                 }
             ],
             "forbidden": [
@@ -32,7 +32,8 @@
                         "hmm_length": 350,
                         "hmm_start": 1,
                         "hmm_end": 350,
-                        "color": "hotpink"
+                        "color": "darkslategray",
+                        "status": "likely"
                     }
                 ]
             },
@@ -51,7 +52,8 @@
                         "hmm_length": 350,
                         "hmm_start": 1,
                         "hmm_end": 342,
-                        "color": "hotpink"
+                        "color": "darkslategray",
+                        "status": "likely"
                     }
                 ]
             },
@@ -70,7 +72,8 @@
                         "hmm_length": 350,
                         "hmm_start": 1,
                         "hmm_end": 350,
-                        "color": "hotpink"
+                        "color": "darkslategray",
+                        "status": "likely"
                     }
                 ]
             }
@@ -83,7 +86,7 @@
                 {
                     "name": "ent_kaurene",
                     "evalue": 0.01,
-                    "color": "powderblue"
+                    "color": "mediumvioletred"
                 }
             ],
             "forbidden": [
@@ -109,7 +112,21 @@
                         "hmm_length": 955,
                         "hmm_start": 1,
                         "hmm_end": 954,
-                        "color": "powderblue"
+                        "color": "mediumvioletred",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "diterpene",
+                        "start": 5,
+                        "length": 958,
+                        "cevalue": 0.0,
+                        "ievalue": 0.0,
+                        "score": 1570.7,
+                        "hmm_length": 961,
+                        "hmm_start": 2,
+                        "hmm_end": 959,
+                        "color": "mediumslateblue",
+                        "status": "unlikely"
                     }
                 ]
             },
@@ -128,7 +145,21 @@
                         "hmm_length": 955,
                         "hmm_start": 1,
                         "hmm_end": 955,
-                        "color": "powderblue"
+                        "color": "mediumvioletred",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "diterpene",
+                        "start": 4,
+                        "length": 944,
+                        "cevalue": 0.0,
+                        "ievalue": 0.0,
+                        "score": 1604.4,
+                        "hmm_length": 961,
+                        "hmm_start": 2,
+                        "hmm_end": 960,
+                        "color": "mediumslateblue",
+                        "status": "unlikely"
                     }
                 ]
             }
@@ -141,7 +172,7 @@
                 {
                     "name": "fusicocadiene",
                     "evalue": 0.01,
-                    "color": "navy"
+                    "color": "darkturquoise"
                 }
             ],
             "forbidden": [
@@ -167,7 +198,21 @@
                         "hmm_length": 714,
                         "hmm_start": 402,
                         "hmm_end": 711,
-                        "color": "navy"
+                        "color": "darkturquoise",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "paxC_like",
+                        "start": 93,
+                        "length": 282,
+                        "cevalue": 1.3e-24,
+                        "ievalue": 1.9e-21,
+                        "score": 75.6,
+                        "hmm_length": 338,
+                        "hmm_start": 29,
+                        "hmm_end": 248,
+                        "color": "orangered",
+                        "status": "unlikely"
                     }
                 ]
             },
@@ -186,7 +231,21 @@
                         "hmm_length": 714,
                         "hmm_start": 412,
                         "hmm_end": 699,
-                        "color": "navy"
+                        "color": "darkturquoise",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "paxC_like",
+                        "start": 106,
+                        "length": 261,
+                        "cevalue": 4.1e-34,
+                        "ievalue": 6e-31,
+                        "score": 106.9,
+                        "hmm_length": 338,
+                        "hmm_start": 31,
+                        "hmm_end": 252,
+                        "color": "orangered",
+                        "status": "unlikely"
                     }
                 ]
             },
@@ -195,6 +254,19 @@
                 "length": 635,
                 "architectures_nb": 2,
                 "domains": [
+                    {
+                        "name": "sesquiterpene",
+                        "start": 8,
+                        "length": 225,
+                        "cevalue": 2.4e-18,
+                        "ievalue": 4e-15,
+                        "score": 55.0,
+                        "hmm_length": 369,
+                        "hmm_start": 172,
+                        "hmm_end": 361,
+                        "color": "blueviolet",
+                        "status": "unlikely"
+                    },
                     {
                         "name": "fusicocadiene",
                         "start": 16,
@@ -205,7 +277,21 @@
                         "hmm_length": 714,
                         "hmm_start": 135,
                         "hmm_end": 713,
-                        "color": "navy"
+                        "color": "darkturquoise",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "paxC_like",
+                        "start": 302,
+                        "length": 282,
+                        "cevalue": 1.4e-26,
+                        "ievalue": 2e-23,
+                        "score": 82.1,
+                        "hmm_length": 338,
+                        "hmm_start": 3,
+                        "hmm_end": 266,
+                        "color": "orangered",
+                        "status": "unlikely"
                     }
                 ]
             },
@@ -214,6 +300,19 @@
                 "length": 454,
                 "architectures_nb": 2,
                 "domains": [
+                    {
+                        "name": "paxC_like",
+                        "start": 159,
+                        "length": 260,
+                        "cevalue": 2.6e-07,
+                        "ievalue": 0.00038,
+                        "score": 18.8,
+                        "hmm_length": 338,
+                        "hmm_start": 68,
+                        "hmm_end": 259,
+                        "color": "orangered",
+                        "status": "unlikely"
+                    },
                     {
                         "name": "fusicocadiene",
                         "start": 184,
@@ -224,7 +323,8 @@
                         "hmm_length": 714,
                         "hmm_start": 453,
                         "hmm_end": 691,
-                        "color": "navy"
+                        "color": "darkturquoise",
+                        "status": "likely"
                     }
                 ]
             },
@@ -243,7 +343,34 @@
                         "hmm_length": 714,
                         "hmm_start": 3,
                         "hmm_end": 713,
-                        "color": "navy"
+                        "color": "darkturquoise",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "sesquiterpene",
+                        "start": 63,
+                        "length": 274,
+                        "cevalue": 1.7e-24,
+                        "ievalue": 2.7e-21,
+                        "score": 75.2,
+                        "hmm_length": 369,
+                        "hmm_start": 109,
+                        "hmm_end": 361,
+                        "color": "blueviolet",
+                        "status": "unlikely"
+                    },
+                    {
+                        "name": "paxC_like",
+                        "start": 399,
+                        "length": 264,
+                        "cevalue": 3.6e-24,
+                        "ievalue": 5.2e-21,
+                        "score": 74.2,
+                        "hmm_length": 338,
+                        "hmm_start": 31,
+                        "hmm_end": 265,
+                        "color": "orangered",
+                        "status": "unlikely"
                     }
                 ]
             },
@@ -262,7 +389,34 @@
                         "hmm_length": 714,
                         "hmm_start": 10,
                         "hmm_end": 696,
-                        "color": "navy"
+                        "color": "darkturquoise",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "sesquiterpene",
+                        "start": 80,
+                        "length": 268,
+                        "cevalue": 1.1e-23,
+                        "ievalue": 1.8e-20,
+                        "score": 72.5,
+                        "hmm_length": 369,
+                        "hmm_start": 112,
+                        "hmm_end": 360,
+                        "color": "blueviolet",
+                        "status": "unlikely"
+                    },
+                    {
+                        "name": "paxC_like",
+                        "start": 444,
+                        "length": 245,
+                        "cevalue": 9.5e-23,
+                        "ievalue": 1.4e-19,
+                        "score": 69.5,
+                        "hmm_length": 338,
+                        "hmm_start": 49,
+                        "hmm_end": 248,
+                        "color": "orangered",
+                        "status": "unlikely"
                     }
                 ]
             },
@@ -281,7 +435,21 @@
                         "hmm_length": 714,
                         "hmm_start": 414,
                         "hmm_end": 711,
-                        "color": "navy"
+                        "color": "darkturquoise",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "paxC_like",
+                        "start": 61,
+                        "length": 283,
+                        "cevalue": 5.6e-30,
+                        "ievalue": 8.2e-27,
+                        "score": 93.3,
+                        "hmm_length": 338,
+                        "hmm_start": 31,
+                        "hmm_end": 254,
+                        "color": "orangered",
+                        "status": "unlikely"
                     }
                 ]
             },
@@ -300,7 +468,34 @@
                         "hmm_length": 714,
                         "hmm_start": 3,
                         "hmm_end": 712,
-                        "color": "navy"
+                        "color": "darkturquoise",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "sesquiterpene",
+                        "start": 56,
+                        "length": 281,
+                        "cevalue": 2e-24,
+                        "ievalue": 3.2e-21,
+                        "score": 75.0,
+                        "hmm_length": 369,
+                        "hmm_start": 112,
+                        "hmm_end": 360,
+                        "color": "blueviolet",
+                        "status": "unlikely"
+                    },
+                    {
+                        "name": "paxC_like",
+                        "start": 395,
+                        "length": 288,
+                        "cevalue": 2.7e-23,
+                        "ievalue": 3.9e-20,
+                        "score": 71.3,
+                        "hmm_length": 338,
+                        "hmm_start": 35,
+                        "hmm_end": 266,
+                        "color": "orangered",
+                        "status": "unlikely"
                     }
                 ]
             }
@@ -313,17 +508,17 @@
                 {
                     "name": "C",
                     "evalue": 0.01,
-                    "color": "greenyellow"
+                    "color": "fuchsia"
                 },
                 {
                     "name": "A",
                     "evalue": 0.01,
-                    "color": "mediumvioletred"
+                    "color": "orange"
                 },
                 {
                     "name": "PP-binding",
                     "evalue": 0.01,
-                    "color": "maroon"
+                    "color": "papayawhip"
                 }
             ],
             "forbidden": [
@@ -349,7 +544,8 @@
                         "hmm_length": 284,
                         "hmm_start": 169,
                         "hmm_end": 280,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -361,7 +557,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 474,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -373,7 +570,8 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -385,7 +583,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -397,7 +596,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 448,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -409,7 +609,8 @@
                         "hmm_length": 475,
                         "hmm_start": 435,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -421,7 +622,8 @@
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -433,7 +635,8 @@
                         "hmm_length": 284,
                         "hmm_start": 4,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -445,7 +648,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -457,7 +661,8 @@
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -469,7 +674,8 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 281,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     }
                 ]
             },
@@ -488,7 +694,21 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 405,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 445,
+                        "length": 65,
+                        "cevalue": 3.2e-17,
+                        "ievalue": 9.1e-15,
+                        "score": 54.1,
+                        "hmm_length": 70,
+                        "hmm_start": 12,
+                        "hmm_end": 69,
+                        "color": "papayawhip",
+                        "status": "unlikely"
                     },
                     {
                         "name": "C",
@@ -500,7 +720,8 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -512,7 +733,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -524,7 +746,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -536,7 +759,8 @@
                         "hmm_length": 284,
                         "hmm_start": 37,
                         "hmm_end": 284,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -548,7 +772,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -560,7 +785,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -572,7 +798,8 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -584,7 +811,8 @@
                         "hmm_length": 475,
                         "hmm_start": 2,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -596,7 +824,8 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -608,7 +837,8 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -620,7 +850,8 @@
                         "hmm_length": 475,
                         "hmm_start": 3,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -632,7 +863,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -644,7 +876,8 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     }
                 ]
             },
@@ -663,7 +896,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -675,7 +909,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -687,7 +922,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 281,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -699,7 +935,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -711,7 +948,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -723,7 +961,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -735,7 +974,8 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     }
                 ]
             },
@@ -754,7 +994,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 417,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -766,7 +1007,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -778,7 +1020,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -790,7 +1033,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 279,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -802,7 +1046,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -814,7 +1059,8 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -833,7 +1079,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -845,7 +1092,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -857,7 +1105,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "KS",
@@ -869,7 +1118,8 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     }
                 ]
             },
@@ -888,7 +1138,8 @@
                         "hmm_length": 284,
                         "hmm_start": 173,
                         "hmm_end": 260,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -900,7 +1151,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -912,7 +1164,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -924,7 +1177,8 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -936,7 +1190,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 474,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -948,7 +1203,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -960,7 +1216,8 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -972,7 +1229,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -984,7 +1242,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 67,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -996,7 +1255,8 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -1008,7 +1268,8 @@
                         "hmm_length": 475,
                         "hmm_start": 2,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1020,7 +1281,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1032,7 +1294,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     }
                 ]
             },
@@ -1051,7 +1314,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -1063,7 +1327,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1075,7 +1340,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1087,7 +1353,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -1099,7 +1366,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1111,7 +1379,8 @@
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -1130,7 +1399,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1142,7 +1412,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1154,7 +1425,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -1166,7 +1438,8 @@
                         "hmm_length": 475,
                         "hmm_start": 2,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1178,7 +1451,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1190,7 +1464,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1202,7 +1477,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1214,7 +1490,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 280,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -1226,7 +1503,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 474,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1238,7 +1516,8 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1250,7 +1529,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 280,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1262,7 +1542,8 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1274,7 +1555,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1286,7 +1568,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1298,7 +1581,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     }
                 ]
             },
@@ -1317,7 +1601,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -1329,7 +1614,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1341,7 +1627,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1353,7 +1640,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -1365,7 +1653,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1377,7 +1666,8 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -1396,7 +1686,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1408,7 +1699,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1420,7 +1712,8 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -1432,7 +1725,8 @@
                         "hmm_length": 475,
                         "hmm_start": 280,
                         "hmm_end": 372,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1444,7 +1738,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1456,7 +1751,8 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     }
                 ]
             },
@@ -1475,7 +1771,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -1487,7 +1784,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1499,7 +1797,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1511,7 +1810,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -1523,7 +1823,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1535,7 +1836,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -1554,7 +1856,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 213,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "KS",
@@ -1566,7 +1869,8 @@
                         "hmm_length": 422,
                         "hmm_start": 244,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -1578,7 +1882,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1590,7 +1895,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1602,7 +1908,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -1614,7 +1921,8 @@
                         "hmm_length": 475,
                         "hmm_start": 26,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1626,7 +1934,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -1645,7 +1954,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1657,7 +1967,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 281,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1669,7 +1980,8 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1681,7 +1993,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -1693,7 +2006,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1705,7 +2019,8 @@
                         "hmm_length": 70,
                         "hmm_start": 7,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1717,7 +2032,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1729,7 +2045,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1741,7 +2058,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -1753,7 +2071,8 @@
                         "hmm_length": 475,
                         "hmm_start": 2,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1765,7 +2084,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1777,7 +2097,8 @@
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1789,7 +2110,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 76,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1801,7 +2123,8 @@
                         "hmm_length": 284,
                         "hmm_start": 139,
                         "hmm_end": 284,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -1813,7 +2136,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     }
                 ]
             },
@@ -1832,7 +2156,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -1844,7 +2169,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1856,7 +2182,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1868,7 +2195,8 @@
                         "hmm_length": 284,
                         "hmm_start": 4,
                         "hmm_end": 284,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -1880,7 +2208,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1892,7 +2221,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -1911,7 +2241,8 @@
                         "hmm_length": 70,
                         "hmm_start": 8,
                         "hmm_end": 66,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1923,7 +2254,8 @@
                         "hmm_length": 284,
                         "hmm_start": 87,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -1935,7 +2267,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -1947,7 +2280,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -1959,7 +2293,8 @@
                         "hmm_length": 284,
                         "hmm_start": 5,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     }
                 ]
             }
@@ -1972,17 +2307,17 @@
                 {
                     "name": "C",
                     "evalue": 0.01,
-                    "color": "greenyellow"
+                    "color": "fuchsia"
                 },
                 {
                     "name": "KS",
                     "evalue": 0.01,
-                    "color": "bisque"
+                    "color": "mediumspringgreen"
                 },
                 {
                     "name": "PP-binding",
                     "evalue": 0.01,
-                    "color": "maroon"
+                    "color": "papayawhip"
                 }
             ],
             "forbidden": [
@@ -2008,7 +2343,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 417,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -2020,7 +2356,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2032,7 +2369,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -2044,7 +2382,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 279,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -2056,7 +2395,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2068,7 +2408,8 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -2087,7 +2428,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -2099,7 +2441,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2111,7 +2454,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "KS",
@@ -2123,7 +2467,8 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     }
                 ]
             },
@@ -2142,7 +2487,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -2154,7 +2500,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2166,7 +2513,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -2178,7 +2526,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -2190,7 +2539,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2202,7 +2552,8 @@
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -2221,7 +2572,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -2233,7 +2585,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2245,7 +2598,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -2257,7 +2611,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -2269,7 +2624,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2281,7 +2637,8 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -2300,7 +2657,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -2312,7 +2670,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2324,7 +2683,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -2336,7 +2696,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -2348,7 +2709,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2360,7 +2722,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -2379,7 +2742,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 213,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "KS",
@@ -2391,7 +2755,8 @@
                         "hmm_length": 422,
                         "hmm_start": 244,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -2403,7 +2768,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2415,7 +2781,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -2427,7 +2794,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -2439,7 +2807,8 @@
                         "hmm_length": 475,
                         "hmm_start": 26,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2451,7 +2820,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -2470,7 +2840,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -2482,7 +2853,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2494,7 +2866,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -2506,7 +2879,8 @@
                         "hmm_length": 284,
                         "hmm_start": 4,
                         "hmm_end": 284,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -2518,7 +2892,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2530,7 +2905,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -2549,7 +2925,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -2561,7 +2938,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2573,7 +2951,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -2585,7 +2964,8 @@
                         "hmm_length": 284,
                         "hmm_start": 6,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     }
                 ]
             },
@@ -2604,7 +2984,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -2616,7 +2997,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2628,7 +3010,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -2640,7 +3023,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     }
                 ]
             }
@@ -2653,18 +3037,18 @@
                 {
                     "name": "C",
                     "evalue": 0.01,
-                    "color": "greenyellow"
+                    "color": "fuchsia"
                 },
                 {
                     "name": "PP-binding",
                     "evalue": 0.01,
-                    "color": "maroon"
+                    "color": "papayawhip"
                 }
             ],
             "forbidden": [
                 {
                     "name": "A",
-                    "color": "mediumvioletred"
+                    "color": "orange"
                 }
             ]
         },
@@ -2684,7 +3068,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -2696,7 +3081,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2708,7 +3094,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -2720,7 +3107,8 @@
                         "hmm_length": 284,
                         "hmm_start": 6,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     }
                 ]
             },
@@ -2739,7 +3127,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -2751,7 +3140,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2763,7 +3153,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -2775,7 +3166,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     }
                 ]
             }
@@ -2788,18 +3180,18 @@
                 {
                     "name": "A",
                     "evalue": 0.01,
-                    "color": "mediumvioletred"
+                    "color": "orange"
                 },
                 {
                     "name": "PP-binding",
                     "evalue": 0.01,
-                    "color": "maroon"
+                    "color": "papayawhip"
                 }
             ],
             "forbidden": [
                 {
                     "name": "C",
-                    "color": "greenyellow"
+                    "color": "fuchsia"
                 }
             ]
         },
@@ -2819,7 +3211,8 @@
                         "hmm_length": 475,
                         "hmm_start": 33,
                         "hmm_end": 429,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2831,7 +3224,8 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 50,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -2850,7 +3244,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2862,7 +3257,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -2881,7 +3277,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2893,7 +3290,8 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 64,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -2912,7 +3310,8 @@
                         "hmm_length": 475,
                         "hmm_start": 2,
                         "hmm_end": 145,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2924,7 +3323,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 48,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -2943,7 +3343,8 @@
                         "hmm_length": 475,
                         "hmm_start": 4,
                         "hmm_end": 293,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -2955,7 +3356,8 @@
                         "hmm_length": 70,
                         "hmm_start": 21,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             }
@@ -2968,7 +3370,7 @@
                 {
                     "name": "oxidosqualene",
                     "evalue": 0.01,
-                    "color": "orange"
+                    "color": "royalblue"
                 }
             ],
             "forbidden": [
@@ -2994,7 +3396,21 @@
                         "hmm_length": 739,
                         "hmm_start": 2,
                         "hmm_end": 736,
-                        "color": "orange"
+                        "color": "royalblue",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "squalene_hopene",
+                        "start": 23,
+                        "length": 732,
+                        "cevalue": 0.0,
+                        "ievalue": 0.0,
+                        "score": 1067.8,
+                        "hmm_length": 720,
+                        "hmm_start": 7,
+                        "hmm_end": 713,
+                        "color": "peachpuff",
+                        "status": "unlikely"
                     }
                 ]
             }
@@ -3007,17 +3423,17 @@
                 {
                     "name": "KS",
                     "evalue": 0.01,
-                    "color": "bisque"
+                    "color": "mediumspringgreen"
                 },
                 {
                     "name": "AT",
                     "evalue": 0.01,
-                    "color": "dodgerblue"
+                    "color": "aqua"
                 },
                 {
                     "name": "PP-binding",
                     "evalue": 0.01,
-                    "color": "maroon"
+                    "color": "papayawhip"
                 }
             ],
             "forbidden": [
@@ -3043,7 +3459,8 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3055,7 +3472,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3067,7 +3485,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3086,7 +3505,8 @@
                         "hmm_length": 310,
                         "hmm_start": 84,
                         "hmm_end": 294,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "KS",
@@ -3098,7 +3518,8 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3110,7 +3531,8 @@
                         "hmm_length": 310,
                         "hmm_start": 2,
                         "hmm_end": 308,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3122,7 +3544,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 66,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3141,7 +3564,8 @@
                         "hmm_length": 310,
                         "hmm_start": 14,
                         "hmm_end": 270,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "KS",
@@ -3153,7 +3577,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3165,7 +3590,8 @@
                         "hmm_length": 310,
                         "hmm_start": 2,
                         "hmm_end": 309,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3177,7 +3603,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 66,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3196,7 +3623,8 @@
                         "hmm_length": 422,
                         "hmm_start": 4,
                         "hmm_end": 105,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "KS",
@@ -3208,7 +3636,8 @@
                         "hmm_length": 422,
                         "hmm_start": 185,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3220,7 +3649,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3232,7 +3662,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3251,7 +3682,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 417,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3263,7 +3695,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3275,7 +3708,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -3287,7 +3721,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 279,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -3299,7 +3734,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3311,7 +3747,8 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3330,7 +3767,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 144,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "KS",
@@ -3342,7 +3780,8 @@
                         "hmm_length": 422,
                         "hmm_start": 248,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3354,7 +3793,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3366,7 +3806,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3385,7 +3826,8 @@
                         "hmm_length": 422,
                         "hmm_start": 263,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3397,7 +3839,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3409,7 +3852,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3428,7 +3872,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3440,7 +3885,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3452,7 +3898,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3471,7 +3918,8 @@
                         "hmm_length": 310,
                         "hmm_start": 14,
                         "hmm_end": 296,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "KS",
@@ -3483,7 +3931,8 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 421,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3495,7 +3944,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 296,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3507,7 +3957,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3519,7 +3970,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3538,7 +3990,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3550,7 +4003,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 308,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3562,7 +4016,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3581,7 +4036,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3593,7 +4049,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3605,7 +4062,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3624,7 +4082,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3636,7 +4095,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3648,7 +4108,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3667,7 +4128,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3679,7 +4141,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3691,7 +4154,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -3703,7 +4167,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -3715,7 +4180,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3727,7 +4193,8 @@
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3746,7 +4213,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3758,7 +4226,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3770,7 +4239,8 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3789,7 +4259,8 @@
                         "hmm_length": 310,
                         "hmm_start": 60,
                         "hmm_end": 296,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "KS",
@@ -3801,7 +4272,8 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3813,7 +4285,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 296,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3825,7 +4298,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3844,7 +4318,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3856,7 +4331,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3868,7 +4344,8 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3887,7 +4364,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3899,7 +4377,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3911,7 +4390,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3930,7 +4410,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3942,7 +4423,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3954,7 +4436,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -3973,7 +4456,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -3985,7 +4469,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -3997,7 +4482,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -4009,7 +4495,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -4021,7 +4508,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4033,7 +4521,8 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -4052,7 +4541,8 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -4064,7 +4554,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4076,7 +4567,8 @@
                         "hmm_length": 70,
                         "hmm_start": 21,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -4095,7 +4587,8 @@
                         "hmm_length": 422,
                         "hmm_start": 65,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -4107,7 +4600,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4119,7 +4613,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -4138,7 +4633,8 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -4150,7 +4646,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4162,7 +4659,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -4181,7 +4679,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -4193,7 +4692,8 @@
                         "hmm_length": 310,
                         "hmm_start": 2,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4205,7 +4705,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -4224,7 +4725,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -4236,7 +4738,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4248,7 +4751,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -4260,7 +4764,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -4272,7 +4777,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4284,7 +4790,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -4303,7 +4810,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 213,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "KS",
@@ -4315,7 +4823,8 @@
                         "hmm_length": 422,
                         "hmm_start": 244,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -4327,7 +4836,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4339,7 +4849,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -4351,7 +4862,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -4363,7 +4875,8 @@
                         "hmm_length": 475,
                         "hmm_start": 26,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4375,7 +4888,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -4394,7 +4908,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -4406,7 +4921,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4418,7 +4934,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -4430,7 +4947,8 @@
                         "hmm_length": 284,
                         "hmm_start": 4,
                         "hmm_end": 284,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -4442,7 +4960,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4454,7 +4973,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -4473,7 +4993,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -4485,7 +5006,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4497,7 +5019,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -4509,7 +5032,8 @@
                         "hmm_length": 284,
                         "hmm_start": 6,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     }
                 ]
             },
@@ -4528,7 +5052,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -4540,7 +5065,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4552,7 +5078,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -4564,7 +5091,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     }
                 ]
             }
@@ -4577,22 +5105,22 @@
                 {
                     "name": "KS",
                     "evalue": 0.01,
-                    "color": "bisque"
+                    "color": "mediumspringgreen"
                 },
                 {
                     "name": "AT",
                     "evalue": 0.01,
-                    "color": "dodgerblue"
+                    "color": "aqua"
                 },
                 {
                     "name": "C",
                     "evalue": 0.01,
-                    "color": "greenyellow"
+                    "color": "fuchsia"
                 },
                 {
                     "name": "PP-binding",
                     "evalue": 0.01,
-                    "color": "maroon"
+                    "color": "papayawhip"
                 }
             ],
             "forbidden": [
@@ -4618,7 +5146,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 417,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -4630,7 +5159,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4642,7 +5172,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -4654,7 +5185,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 279,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -4666,7 +5198,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4678,7 +5211,8 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -4697,7 +5231,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -4709,7 +5244,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4721,7 +5257,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -4733,7 +5270,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -4745,7 +5283,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4757,7 +5296,8 @@
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -4776,7 +5316,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -4788,7 +5329,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4800,7 +5342,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -4812,7 +5355,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -4824,7 +5368,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4836,7 +5381,8 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -4855,7 +5401,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -4867,7 +5414,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4879,7 +5427,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -4891,7 +5440,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -4903,7 +5453,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4915,7 +5466,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -4934,7 +5486,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 213,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "KS",
@@ -4946,7 +5499,8 @@
                         "hmm_length": 422,
                         "hmm_start": 244,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -4958,7 +5512,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -4970,7 +5525,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -4982,7 +5538,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -4994,7 +5551,8 @@
                         "hmm_length": 475,
                         "hmm_start": 26,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5006,7 +5564,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -5025,7 +5584,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -5037,7 +5597,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5049,7 +5610,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -5061,7 +5623,8 @@
                         "hmm_length": 284,
                         "hmm_start": 4,
                         "hmm_end": 284,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -5073,7 +5636,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5085,7 +5649,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -5104,7 +5669,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -5116,7 +5682,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5128,7 +5695,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -5140,7 +5708,8 @@
                         "hmm_length": 284,
                         "hmm_start": 6,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     }
                 ]
             },
@@ -5159,7 +5728,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -5171,7 +5741,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5183,7 +5754,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -5195,7 +5767,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     }
                 ]
             }
@@ -5208,17 +5781,17 @@
                 {
                     "name": "KS",
                     "evalue": 0.01,
-                    "color": "bisque"
+                    "color": "mediumspringgreen"
                 },
                 {
                     "name": "A",
                     "evalue": 0.01,
-                    "color": "mediumvioletred"
+                    "color": "orange"
                 },
                 {
                     "name": "PP-binding",
                     "evalue": 0.01,
-                    "color": "maroon"
+                    "color": "papayawhip"
                 }
             ],
             "forbidden": [
@@ -5244,7 +5817,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 417,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -5256,7 +5830,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5268,7 +5843,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -5280,7 +5856,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 279,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -5292,7 +5869,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5304,7 +5882,8 @@
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -5323,7 +5902,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -5335,7 +5915,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5347,7 +5928,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "KS",
@@ -5359,7 +5941,8 @@
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     }
                 ]
             },
@@ -5378,7 +5961,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -5390,7 +5974,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5402,7 +5987,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -5414,7 +6000,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -5426,7 +6013,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5438,7 +6026,8 @@
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -5457,7 +6046,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -5469,7 +6059,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5481,7 +6072,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -5493,7 +6085,8 @@
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -5505,7 +6098,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5517,7 +6111,8 @@
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -5536,7 +6131,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -5548,7 +6144,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5560,7 +6157,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -5572,7 +6170,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -5584,7 +6183,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5596,7 +6196,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -5615,7 +6216,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 213,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "KS",
@@ -5627,7 +6229,8 @@
                         "hmm_length": 422,
                         "hmm_start": 244,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -5639,7 +6242,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5651,7 +6255,8 @@
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -5663,7 +6268,8 @@
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 283,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -5675,7 +6281,8 @@
                         "hmm_length": 475,
                         "hmm_start": 26,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5687,7 +6294,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             },
@@ -5706,7 +6314,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -5718,7 +6327,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5730,7 +6340,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     },
                     {
                         "name": "C",
@@ -5742,7 +6353,8 @@
                         "hmm_length": 284,
                         "hmm_start": 4,
                         "hmm_end": 284,
-                        "color": "greenyellow"
+                        "color": "fuchsia",
+                        "status": "likely"
                     },
                     {
                         "name": "A",
@@ -5754,7 +6366,8 @@
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "mediumvioletred"
+                        "color": "orange",
+                        "status": "likely"
                     },
                     {
                         "name": "PP-binding",
@@ -5766,7 +6379,8 @@
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "maroon"
+                        "color": "papayawhip",
+                        "status": "likely"
                     }
                 ]
             }
@@ -5779,18 +6393,18 @@
                 {
                     "name": "KS",
                     "evalue": 0.01,
-                    "color": "bisque"
+                    "color": "mediumspringgreen"
                 },
                 {
                     "name": "AT",
                     "evalue": 0.01,
-                    "color": "dodgerblue"
+                    "color": "aqua"
                 }
             ],
             "forbidden": [
                 {
                     "name": "PP-binding",
-                    "color": "maroon"
+                    "color": "papayawhip"
                 }
             ]
         },
@@ -5810,7 +6424,8 @@
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -5822,7 +6437,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     }
                 ]
             },
@@ -5841,7 +6457,8 @@
                         "hmm_length": 422,
                         "hmm_start": 96,
                         "hmm_end": 422,
-                        "color": "bisque"
+                        "color": "mediumspringgreen",
+                        "status": "likely"
                     },
                     {
                         "name": "AT",
@@ -5853,7 +6470,8 @@
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "dodgerblue"
+                        "color": "aqua",
+                        "status": "likely"
                     }
                 ]
             }
@@ -5866,7 +6484,7 @@
                 {
                     "name": "CHS_like",
                     "evalue": 0.01,
-                    "color": "paleturquoise"
+                    "color": "limegreen"
                 }
             ],
             "forbidden": [
@@ -5892,7 +6510,8 @@
                         "hmm_length": 380,
                         "hmm_start": 1,
                         "hmm_end": 380,
-                        "color": "paleturquoise"
+                        "color": "limegreen",
+                        "status": "likely"
                     }
                 ]
             },
@@ -5911,7 +6530,8 @@
                         "hmm_length": 380,
                         "hmm_start": 69,
                         "hmm_end": 380,
-                        "color": "paleturquoise"
+                        "color": "limegreen",
+                        "status": "likely"
                     }
                 ]
             }
@@ -5924,7 +6544,7 @@
                 {
                     "name": "sesquiterpene",
                     "evalue": 0.01,
-                    "color": "darkslateblue"
+                    "color": "blueviolet"
                 }
             ],
             "forbidden": [
@@ -5950,7 +6570,8 @@
                         "hmm_length": 369,
                         "hmm_start": 61,
                         "hmm_end": 354,
-                        "color": "darkslateblue"
+                        "color": "blueviolet",
+                        "status": "likely"
                     }
                 ]
             },
@@ -5969,7 +6590,21 @@
                         "hmm_length": 369,
                         "hmm_start": 64,
                         "hmm_end": 368,
-                        "color": "darkslateblue"
+                        "color": "blueviolet",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "fusicocadiene",
+                        "start": 43,
+                        "length": 301,
+                        "cevalue": 7.9e-06,
+                        "ievalue": 0.0093,
+                        "score": 13.5,
+                        "hmm_length": 714,
+                        "hmm_start": 179,
+                        "hmm_end": 325,
+                        "color": "darkturquoise",
+                        "status": "unlikely"
                     }
                 ]
             },
@@ -5988,7 +6623,8 @@
                         "hmm_length": 369,
                         "hmm_start": 58,
                         "hmm_end": 362,
-                        "color": "darkslateblue"
+                        "color": "blueviolet",
+                        "status": "likely"
                     }
                 ]
             }
@@ -6001,7 +6637,7 @@
                 {
                     "name": "squalene_hopene",
                     "evalue": 0.01,
-                    "color": "lemonchiffon"
+                    "color": "peachpuff"
                 }
             ],
             "forbidden": [
@@ -6027,7 +6663,21 @@
                         "hmm_length": 720,
                         "hmm_start": 50,
                         "hmm_end": 711,
-                        "color": "lemonchiffon"
+                        "color": "peachpuff",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "oxidosqualene",
+                        "start": 10,
+                        "length": 670,
+                        "cevalue": 5.1e-44,
+                        "ievalue": 3.3e-40,
+                        "score": 137.5,
+                        "hmm_length": 739,
+                        "hmm_start": 115,
+                        "hmm_end": 727,
+                        "color": "royalblue",
+                        "status": "unlikely"
                     }
                 ]
             }
@@ -6040,7 +6690,7 @@
                 {
                     "name": "squalene",
                     "evalue": 0.01,
-                    "color": "darkkhaki"
+                    "color": "rebeccapurple"
                 }
             ],
             "forbidden": [
@@ -6066,7 +6716,21 @@
                         "hmm_length": 479,
                         "hmm_start": 1,
                         "hmm_end": 479,
-                        "color": "darkkhaki"
+                        "color": "rebeccapurple",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "phytoene",
+                        "start": 108,
+                        "length": 201,
+                        "cevalue": 2.9e-08,
+                        "ievalue": 0.00038,
+                        "score": 18.4,
+                        "hmm_length": 594,
+                        "hmm_start": 394,
+                        "hmm_end": 499,
+                        "color": "teal",
+                        "status": "unlikely"
                     }
                 ]
             }
