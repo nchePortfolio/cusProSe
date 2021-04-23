@@ -6,3 +6,13 @@ include prosecda/html/css
 include prosecda/html/css/*
 include prosecda/html/images/
 include prosecda/html/images/*
+include prosecda/datas/
+include prosecda/datas/mgg_70-15_8.fasta
+include prosecda/datas/database.hmm
+include prosecda/datas/rules.yaml
+include iterhmmbuild/datas/inputs/
+include iterhmmbuild/datas/inputs/*
+include iterhmmbuild/datas/mgg_70-15_8.fasta
+
+
+
