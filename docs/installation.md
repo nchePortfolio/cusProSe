@@ -62,10 +62,26 @@ source my_env/bin/activate
 ```
 
 Once activated, any python library you'll install using pip will be installed solely in this isolated environment.
-Every time you'll need to work with libraries installed in this environment (i.e. work on your project), you'll have
-to activate it. 
 
-Once you're done working on your project, simply type `deactivate` to exit the environment.
+<div class="admonition note">
+    <p class="first admonition-title">
+        Note
+    </p>
+    <p class="last">
+Every time you'll need to work with libraries installed in this environment (e.g. work on your project), you'll have
+to activate it.
+    </p>
+</div>
+
+
+### Exit the activated environment
+Once you're done working on your project, simply type the following command to exit the environment.
+```bash
+deactivate
+```
+
+
+
 
 ## Download and install the latest release of CusProSe
 Click here for the latest release: 
@@ -92,11 +108,6 @@ cd cusProSe-x.x.x/
 Make sure your virtual environment is activated and type the following command: 
 
 ```python
-python setup.py install
-```
-
-or 
-```python
 pip install .
 ```
 
@@ -110,7 +121,7 @@ pip install .
   <code>iterhmmbuild</code> should display:
     <pre class="parameters">usage: iterhmmbuild [-h] -fa [FA] -protdb [PROTDB] [-name [NAME]] [-out [OUT]] [-id ID]
                     [-cov COV] [-cval CVAL] [-ival IVAL] [-acc ACC]
-    </pre>
+iterhmmbuild: error: the following arguments are required: -fa, -protdb</pre>
   </li>
 
   <li>
@@ -118,13 +129,13 @@ pip install .
     <pre class="parameters">usage: prosecda [-h] -proteome [PROTEOME] -hmmdb [HMMDB] -rules [RULES] [-out [OUT]] 
                     [-cov COV] [-cevalue CVAL] [-ievalue IVAL] [-score SCORE] [-acc ACC]
                     [--nopdf]
-    </pre>
+prosecda: error: the following arguments are required: -proteome, -hmmdb, -rules</pre>
   </li>
 
   <li>
     <code>create_hmmdb</code> should display:
     <pre class="parameters">usage: create_hmmdb [-h] -hmmdir [HMMDIR] [-dbname [DBNAME]] [-outdir [OUTDIR]]
-    </pre>
+create_hmmdb: error: the following arguments are required: -hmmdir</pre>
   </li>
 </ul>
 
