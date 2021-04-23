@@ -116,3 +116,10 @@ code.inside {
 .io {
     color: #E74C3C !important;
 }
+
+p.caption {
+    color: #bebebe;
+    border-bottom: 1px solid;
+    font-weight: bolder !important;
+    font-size: 15px !important;
+}

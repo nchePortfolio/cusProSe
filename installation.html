@@ -65,6 +65,8 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#activate-the-created-environment">Activate the created environment</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exit-the-activated-environment">Exit the activated environment</a>
+    </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#download-and-install-the-latest-release-of-cusprose">Download and install the latest release of CusProSe</a>
@@ -176,10 +178,21 @@ mv usearch ~/bin
 <h3 id="activate-the-created-environment">Activate the created environment<a class="headerlink" href="#activate-the-created-environment" title="Permanent link">#</a></h3>
 <pre><code class="language-bash">source my_env/bin/activate
 </code></pre>
-<p>Once activated, any python library you'll install using pip will be installed solely in this isolated environment.
-Every time you'll need to work with libraries installed in this environment (i.e. work on your project), you'll have
-to activate it. </p>
-<p>Once you're done working on your project, simply type <code>deactivate</code> to exit the environment.</p>
+<p>Once activated, any python library you'll install using pip will be installed solely in this isolated environment.</p>
+<div class="admonition note">
+    <p class="first admonition-title">
+        Note
+    </p>
+    <p class="last">
+Every time you'll need to work with libraries installed in this environment (e.g. work on your project), you'll have
+to activate it.
+    </p>
+</div>
+
+<h3 id="exit-the-activated-environment">Exit the activated environment<a class="headerlink" href="#exit-the-activated-environment" title="Permanent link">#</a></h3>
+<p>Once you're done working on your project, simply type the following command to exit the environment.</p>
+<pre><code class="language-bash">deactivate
+</code></pre>
 <h2 id="download-and-install-the-latest-release-of-cusprose">Download and install the latest release of CusProSe<a class="headerlink" href="#download-and-install-the-latest-release-of-cusprose" title="Permanent link">#</a></h2>
 <p>Click here for the latest release: 
 <a href="https://github.com/nchenche/cusProSe/releases/latest/"> <img alt="" src="icons/download-flat/16x16.png" title="Click to download the latest release" /></a></p>
@@ -195,9 +208,6 @@ to activate it. </p>
 </code></pre>
 <h3 id="install-cusprose-on-your-virtual-environment">Install CusProSe on your virtual environment<a class="headerlink" href="#install-cusprose-on-your-virtual-environment" title="Permanent link">#</a></h3>
 <p>Make sure your virtual environment is activated and type the following command: </p>
-<pre><code class="language-python">python setup.py install
-</code></pre>
-<p>or </p>
 <pre><code class="language-python">pip install .
 </code></pre>
 <div class="admonition tip" style="margin-top: 30px;">
@@ -210,7 +220,7 @@ to activate it. </p>
   <code>iterhmmbuild</code> should display:
     <pre class="parameters">usage: iterhmmbuild [-h] -fa [FA] -protdb [PROTDB] [-name [NAME]] [-out [OUT]] [-id ID]
                     [-cov COV] [-cval CVAL] [-ival IVAL] [-acc ACC]
-    </pre>
+iterhmmbuild: error: the following arguments are required: -fa, -protdb</pre>
   </li>
 
   <li>
@@ -218,13 +228,13 @@ to activate it. </p>
     <pre class="parameters">usage: prosecda [-h] -proteome [PROTEOME] -hmmdb [HMMDB] -rules [RULES] [-out [OUT]] 
                     [-cov COV] [-cevalue CVAL] [-ievalue IVAL] [-score SCORE] [-acc ACC]
                     [--nopdf]
-    </pre>
+prosecda: error: the following arguments are required: -proteome, -hmmdb, -rules</pre>
   </li>
 
   <li>
     <code>create_hmmdb</code> should display:
     <pre class="parameters">usage: create_hmmdb [-h] -hmmdir [HMMDIR] [-dbname [DBNAME]] [-outdir [OUTDIR]]
-    </pre>
+create_hmmdb: error: the following arguments are required: -hmmdir</pre>
   </li>
 </ul>
 
