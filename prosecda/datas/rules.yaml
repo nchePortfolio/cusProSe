@@ -6,7 +6,8 @@ PKS:
   - AT
   - PP-binding
   forbidden:
-
+  - C
+  - A
 
 PKS-like:
  COMMENT: Polyketide Synthase like
@@ -17,7 +18,25 @@ PKS-like:
   forbidden:
   - PP-binding
 
-PKS_type3.0:
+PKS-like.2:
+ COMMENT: Polyketide Synthase like
+ CONDITION:
+  mandatory:
+  - KS
+  - PP-binding
+  forbidden:
+  - AT
+
+PKS-like.3:
+ COMMENT: Polyketide Synthase like
+ CONDITION:
+  mandatory:
+  - AT
+  - PP-binding
+  forbidden:
+  - KS
+
+PKS_type3:
  COMMENT: Polyketide Syntase type III
  CONDITION:
   mandatory:
@@ -25,8 +44,8 @@ PKS_type3.0:
   forbidden:
 
 
-PKS_type3.1:
- COMMENT: Polyketide Syntase type III bis
+PKS_type3.2:
+ COMMENT: Polyketide Syntase type III
  CONDITION:
   mandatory:
   - Chal_sti_synt_C
@@ -42,10 +61,12 @@ NRPS:
   - A
   - PP-binding
   forbidden:
+  - KS
+  - AT
 
 
-NRPS-like.0:
- COMMENT: Non-Ribosomal Peptide Synthase like 1
+NRPS-like:
+ COMMENT: Non-Ribosomal Peptide Synthase like
  CONDITION:
   mandatory:
   - C
@@ -53,7 +74,8 @@ NRPS-like.0:
   forbidden:
   - PP-binding
 
-NRPS-like.1:
+
+NRPS-like.2:
  COMMENT: Non-Ribosomal Peptide Synthase like
  CONDITION:
   mandatory:
@@ -61,6 +83,7 @@ NRPS-like.1:
   - PP-binding
   forbidden:
   - A
+
 
 NRPS-like.3:
  COMMENT: Non-Ribosomal Peptide Synthase like
@@ -71,18 +94,8 @@ NRPS-like.3:
   forbidden:
   - C
 
-NRPS-PKS:
- COMMENT: Hybrides NRPS-PKS 1
- CONDITION:
-  mandatory:
-  - C
-  - KS
-  - PP-binding
-  forbidden:
-
-
-PKS-NRPS.0:
- COMMENT: Hybrides PKS-NRPS 2
+PKS-NRPS:
+ COMMENT: Hybrides PKS-NRPS
  CONDITION:
   mandatory:
   - KS
@@ -92,17 +105,18 @@ PKS-NRPS.0:
   forbidden:
 
 
-PKS-NRPS.1:
- COMMENT: Hybrides PKS-NRPS 3
+PKS-NRPS.2:
+ COMMENT: Hybrides PKS-NRPS
  CONDITION:
   mandatory:
   - KS
   - A
   - PP-binding
   forbidden:
+  - AT
+  - C
 
-
-PKS-NRPS-like.0:
+PKS-NRPS-like:
  COMMENT: Hybrides PKS-NRPS like
  CONDITION:
   mandatory:
@@ -136,7 +150,7 @@ Ent_kaurene_synthase:
   forbidden:
 
 
-Sesquiterp_synthase:
+Sesquiterpene_synthase:
  COMMENT: Sesquiterpene_Synthase
  CONDITION:
   mandatory:
@@ -152,11 +166,12 @@ PaxC_like_synthase:
   forbidden:
 
 
-Fusicocadiene_synthase:
- COMMENT: Fusicocadiene_Synthase
+Chimeric_TS:
+ COMMENT: Chimeric_Terpene_Synthase
  CONDITION:
   mandatory:
-  - fusicocadiene
+  - N_ter_TCdom
+  - C_ter_PTdom
   forbidden:
 
 
@@ -165,6 +180,14 @@ Squalene_synthase:
  CONDITION:
   mandatory:
   - squalene
+  forbidden:
+
+
+Sesquiterpene_synthase:
+ COMMENT: Sesquiterpene_synthase
+ CONDITION:
+  mandatory:
+  - sesquiterpene
   forbidden:
 
 
