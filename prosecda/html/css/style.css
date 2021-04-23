@@ -44,6 +44,97 @@ section {
     text-overflow: ellipsis;
 }
 
+
+.subtitle-header .infobox {
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+}
+
+.bi {
+    position: relative;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.bi-info-circle {
+    cursor: pointer;
+}
+
+.infobox .infotext {
+    visibility: hidden;
+    width: 250px;
+    background-color: rgba(94, 119, 141, 0.95);
+    color: #fff;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 0px 10px;
+    border-radius: 6px;
+    border: 1px solid black;
+    /* box-shadow: 2px 2px 4px rgb(95, 95, 95); */
+
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    margin-top: 12px;
+    margin-left: -125px;
+    z-index: 5;
+  }
+
+
+.infobox .infotext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -12px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.infobox .infotext.info-detail {
+    width: 300px;
+    margin-left: -285px;
+}
+
+.infobox .infotext.info-detail::after {
+    margin-left: 124px;
+}
+
+
+.hiding-panel {
+    /* Should take whole screen */
+    position: fixed;
+    top: 0; bottom: 0; left: 0; right: 0;
+    
+    /* Semi-transparent black */
+    background: black;
+    opacity: 0.0;
+    
+    /* Initial settings */
+    z-index: -1;
+    display: none;
+}
+
+.info-header {
+    height: 100px;
+    margin: 20px;
+}
+
+.hiding-panel .close {
+    color: rgba(175, 212, 214, 0.932);
+    width: 5em;
+    height: 5em;
+    float: right;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+
 #container {
     display: flex;
     flex-direction: column;
@@ -84,10 +175,11 @@ section {
 #detail-container {
     margin-left: 10px;
     max-width: 100%;
-    width: 70%;
+    width: 85%;
     height: 100%;
     border: 1px solid;
     border-top-left-radius: 8px;
+    overflow-x: auto;
 }
 
 aside {
@@ -224,7 +316,7 @@ table th {
 }
 
 #detail-description {
-    padding-left: 50px;
+    padding-left: 10px;
     border-bottom: 2px solid black;
 }
 
@@ -239,12 +331,14 @@ table th {
 }
 
 #detail-hmmdomtbl {
+    max-width: 100%;
     margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 #detail-hmmdomtbl table {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #detail-hmmdomtbl table th{
@@ -252,10 +346,13 @@ table th {
     color: white;
     background-color: black;
     border-color: whitesmoke;
+
 }
 
 #detail-hmmdomtbl table td {
-    padding-left: 15px;
+    /* text-align: right;
+    padding-right: 10px; */
+    padding-left: 10px;
     height: 30px;
 }
 
@@ -274,7 +371,6 @@ table th {
 
 #th-score {
     width: 55px !important;
-    border-right: black;
 }
 
 #rule-content {
@@ -344,6 +440,22 @@ table th {
 }
 
 .unlikely {
+    font-style: italic;
     color: red;
     z-index: 0;
+}
+
+ul.dashed {
+    margin-top: 8px;
+    list-style-type: none;
+}
+
+ul.dashed > li {
+    text-indent: -28px;
+    padding-bottom: 4px;
+}
+
+ul.dashed > li:before {
+    content: "- ";
+    text-indent: -5px;
 }

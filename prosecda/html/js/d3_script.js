@@ -62,17 +62,59 @@ d3.json("./data.json").then(function(families) {
         rmProteins();
         drawProteins(this.__data__.proteins);
         updateDetails(this.__data__.proteins[0]);
-       
+
     })
+
+    d3.selectAll(".infobox").on("click", function() {
+        var infobox = this;
+        var duration_time = 275;
+        var grandParent = this.parentNode.parentNode
+
+        var selected_fam = d3.select("#rule-summary .subtitle-header span").text()
+        d3.selectAll(".infobox .sp-rulename")
+            .text(selected_fam);
+
+        d3.select(infobox).select(".infotext")
+            .style("visibility", "visible")
+
+        d3.select(".hiding-panel")
+            .style("z-index", "2")
+            .style("display", "initial")
+            .transition().duration(duration_time)
+                .style("opacity", "0.65")
+
+        d3.select(grandParent)
+            .style("z-index", "5")
+            // .style("opacity", "1")
+            .style("background-color", "white")
+    
+        if (d3.select(".hiding-panel").style("display") == "initial") {
+            
+            d3.select(".hiding-panel").on("click", function() {
+                d3.select(grandParent)
+                .style("z-index", "1")
                 
+                d3.select(".hiding-panel")
+                    .transition().duration(duration_time)
+                        .style("z-index", "-1")
+                        .style("opacity", "0.0")
+
+                d3.select(infobox).select(".infotext")
+                .transition().duration(duration_time)
+                    .style("visibility", "hidden");
+
+                setTimeout(function () {
+                    d3.select(".hiding-panel")
+                        .style("display", "none");
+                    }, duration_time);        
+                })
+            }
+    })                
 });
 
 
 function initPage(data) {
-    d3.select("#sp-rulename1")
-        .text(data.name);
-
-    d3.select("#sp-rulename2")
+    d3.selectAll(".sp-rulename")
         .text(data.name);
 
     updateRuleSummary(data.rules);
@@ -147,8 +189,7 @@ function drawProteins(data) {
                             }
                         } else {
                             return "visible";
-                    }})
-        
+                    }})        
 
     rect.append("title")
         .text(d => `${d.name} (${d.length} aa)`)
@@ -183,9 +224,19 @@ function rmProteins() {
 
 
 function updateDetails(protein){
-    d3.select("#p-id").text(protein.id)
-    d3.select("#p-length").text(`${protein.length} aa`)
-    d3.select("#p-archNb").text(`${protein.architectures_nb}`)
+    var domNbMLA = d3.sum(protein.domains.map(function(d) {
+        if (d.status === "likely") {
+            return 1;
+        }
+        else { return 0; }
+    }))
+
+    d3.selectAll(".p-id").text(protein.id)
+    d3.select("#p-length").text(`${protein.length} amino acids`)
+    d3.select("#p-domainInArch").text(domNbMLA)
+    
+    d3.select("#p-totalDomain").text(`${protein.domains.length}`)
+
 
     d3.select("#detail-hmmdomtbl tbody").selectAll("tr").remove()
     var rows = d3.select("#detail-hmmdomtbl tbody").selectAll("tr")
@@ -200,6 +251,10 @@ function updateDetails(protein){
     rows.append("td").text( d => d.cevalue)
     rows.append("td").text( d => d.ievalue)
     rows.append("td").text( d => d.score)
+    rows.append("td").text( d => d.hmm_length)
+    rows.append("td").text( d => d.hmm_start)
+    rows.append("td").text( d => d.hmm_end)
+
 
     rows.on("mouseenter", function(event, d) {
         d3.select(this).selectAll("td")
@@ -209,15 +264,15 @@ function updateDetails(protein){
             .classed("rect-hovered", true)
 
         d3.select(`g.${protein.id}`).selectAll("rect")
-            .attr("opacity", "0.185")
+            .attr("opacity", "0.175")
 
         d3.select(`g.${protein.id}`).select("line")
-            .attr("opacity", "0.5")
+            .attr("opacity", "0.4")
 
         var end = d.start + d.length - 1;
         d3.select(`#rect_${d.name}_${d.start}-${end}`)
             .attr("stroke-width", "2")
-            .attr("opacity", "0.95")
+            .attr("opacity", "0.985")
             .style("visibility", "visible")
     })
 
