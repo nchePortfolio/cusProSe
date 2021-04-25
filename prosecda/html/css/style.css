@@ -95,18 +95,18 @@ section {
 }
 
 .infobox .infotext.info-detail {
-    width: 300px;
-    margin-left: -285px;
+    width: 500px;
+    margin-left: -485px;
 }
 
 .infobox .infotext.info-detail::after {
-    margin-left: 124px;
+    margin-left: 224px;
 }
 
 
 .hiding-panel {
     /* Should take whole screen */
-    position: fixed;
+    position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
     
     /* Semi-transparent black */
@@ -122,6 +122,18 @@ section {
     height: 100px;
     margin: 20px;
 }
+
+.infobox-footer {
+    border-top: 1px solid whitesmoke;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: right;
+    font-weight: 800;
+}
+
+.infobox-footer span:hover {
+    cursor: pointer;
+} 
 
 .hiding-panel .close {
     color: rgba(175, 212, 214, 0.932);
@@ -445,17 +457,21 @@ table th {
     z-index: 0;
 }
 
-ul.dashed {
-    margin-top: 8px;
-    list-style-type: none;
+.container {
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
+  
+.container span.title{
+    display: inline-block;
+    margin-left: 20px;
+    width: 85px;
+    font-weight: bold;
+    padding: 4px;
+  }
 
-ul.dashed > li {
-    text-indent: -28px;
-    padding-bottom: 4px;
-}
-
-ul.dashed > li:before {
+  .container span.title:before {
     content: "- ";
     text-indent: -5px;
-}
+  }
+
