@@ -12,7 +12,7 @@ from lxml import etree
 from prosecda.lib.rule_parser import Rule
 
 import matplotlib.colors as mcolors
-from random import shuffle
+import random
 
 # COLORS = list(mcolors.CSS4_COLORS.keys())
 COLORS = [
@@ -26,7 +26,7 @@ COLORS = [
     'bisque', 'navajowhite', 'burlywood', 'sandybrown', 'darkgoldenrod', 'peru', 'chocolate', 'sienna', 'maroon',
     'lightslategray', 'darkslategray'
 ]
-shuffle(COLORS)
+random.Random(111).shuffle(COLORS)
 DOMAIN_COLORS = {"None": "None"}
 
 class Usearch:
