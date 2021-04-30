@@ -11,6 +11,7 @@ import prosecda.lib.match as matching
 
 
 def main():
+    print("************* test mise à jour **********")
     param = parameters.Param(parameters.get_arguments())
     logger = logHandler.Logger(name='prosecda', outpath=param.outdirname)
     param.description()
