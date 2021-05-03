@@ -208,7 +208,7 @@ The protein_ID.xml file contains the main information about the protein. An exam
   <id>MGG_04631T0</id>
   <sequence>MADRTCVTLPDMFRGFIVQEPKVNKHYEAVKPVSEKWLARICAFSPMMQKRVGACDFSYFCSIAAPEAPIHKLRTMCDWGNWVFPFDDMFDSGDLRSDLIVTRHVLDSLLADMKGHKFRGLKIPVVLAHDDIYRRLSEVETKNPSISGVQRRFARAMELYALGVAQHVQDFTESGLPCPQEMLETRRLSVGVAPLYHLVEYAHSIRLPDEVFEDPAIQTLERLGADMVIMSNDMLSYQKEEASTNNEGCPFNMVAACRMSGQSAQEAFDTVGALLEESYYEWEETMRQVPARGGDVERDVQRYIKGIQDVVQANITWSFRSKRYLGVHAPEVRRTKKFDVMTHPPYLDKDMAELR</sequence>
   <sequence_length>356</sequence_length>
-  <class_name>Sesquiterp_synthase</class_name>
+  <class_name>Sesquiterpene_synthase</class_name>
   <most_likely_architecture>
     <domain name="sesquiterpene">
       <c-evalue>2e-36</c-evalue>
@@ -220,13 +220,13 @@ The protein_ID.xml file contains the main information about the protein. An exam
     </domain>
   </most_likely_architecture>
   <other_matching_domains>
-    <domain name="fusicocadiene">
-      <c-evalue>7.9e-06</c-evalue>
-      <i-evalue>0.0093</i-evalue>
-      <score>13.5</score>
-      <start>43</start>
-      <end>343</end>
-      <domain_length>301</domain_length>
+    <domain name="N_ter_TCdom">
+      <c-evalue>1.1e-10</c-evalue>
+      <i-evalue>2.1e-07</i-evalue>
+      <score>29.9</score>
+      <start>28</start>
+      <end>331</end>
+      <domain_length>304</domain_length>
     </domain>
   </other_matching_domains>
 </protein>
