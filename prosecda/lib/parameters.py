@@ -56,7 +56,7 @@ class Param:
         """
         self.logger.info('')
         self.logger.info('# Summary of input files used parameters:')
-        self.logger.info('- Output of hmmscan (.domtblout): {}'.format(self.hmmdb))
+        self.logger.info('- Output of hmmsearch (.domtblout): {}'.format(self.hmmdb))
         self.logger.info('- Proteome (.fasta): {}'.format(self.proteome_filename))
         self.logger.info('- Rules (.yaml): {}'.format(self.yamlrules))
         self.logger.info('- Output path: {}'.format(self.outdirname))
