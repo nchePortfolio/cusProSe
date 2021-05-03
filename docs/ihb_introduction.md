@@ -18,16 +18,24 @@ The first input is either a fasta file with at least one protein sequence  (<a h
 
 The second input is a fasta file of protein database used to enrich initial protein sequence(s) of interest.
 
-## HMM building step
-<figure>
+<h2>HMM building step</h2>
+<!-- <figure>
 <img class="align-right" src="./img/step_hmmbuilding_enrichment.png">
+<figcaption>test</figcaption>
+</figure> -->
+
+<figure style="float: right; width: 55%; text-align: center; margin-top: 95px; padding-left: 10px; margin-bottom: 105px">
+<img style="border: 1px solid black;" src="./img/step_hmmbuilding_enrichment.png">
+<figcaption style="font-weight: bold; ">Figure 3: Detailed pipeline of the IterHMMbuild enrichment procedure</figcaption>
 </figure>
+
+
 <p>
 The HMM building is a two-step procedure: a multiple sequence alignment is performed on the input sequences using muscle and the hmmbuild command from hmmer is then used to build the HMM profile from this alignment. However, note that at the first iteration the usearch command is performed on the input sequences to ensure that thoses sequences share no more than 90% (default value) of identity.
 </p>
 
-## Sequence enrichment step
-The previously built HMM profile is searched against the protein database given as input using the hmmsearch command from hmmer. All matching sequences with a E-values<sup>a</sup> less than 0.01 (default value) and an expected accuracy per residue of the alignment<sup>b</sup> above or equal to 0.6 (default value) are retrieved. Those sequences are then merged to the initial input sequences. To ensure that sequences are not redundant, usearch is applied with a threshold identity value of 0.90.
+<h2 style="width: 40%">Sequence enrichment step</h2>
+The previously built HMM profile is searched against the protein database given as input using the hmmsearch command from hmmer. All matching sequences with a E-values<sup>a</sup> less than 0.01 (default value) and an expected accuracy per residue of the alignment<sup>b</sup> above or equal to 0.6 (default value) are retrieved. Those sequences are then merged to the initial input sequences. To ensure that sequences are not redundant, usearch is applied with a threshold identity value of 90%.
 
 <div class="admonition note">
     <p class="first admonition-title">

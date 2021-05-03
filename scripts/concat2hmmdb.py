@@ -24,7 +24,7 @@ def get_arguments():
     parser = argparse.ArgumentParser(description='Creating an HMM profile database data from multiple HMM profiles')
     parser.add_argument("-hmmdir", required=True, nargs="?",
                         help="Directory containing HMM profiles")
-    parser.add_argument("-dbname", required=False, nargs="?", default='hmm_database.hmm',
+    parser.add_argument("-dbname", required=False, nargs="?", default='database.hmm',
                         help="Name for the output HMM database.")
     parser.add_argument("-outdir", required=False, nargs="?", default='./', type=str,
                         help="Output directory")
