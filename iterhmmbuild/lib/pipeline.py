@@ -221,29 +221,75 @@ class Convergence:
         """
         self.logger.info('')
         self.logger.info('Evaluating Convergence:')
-        self.logger.info(' - Sequence number before: ' + str(self.number_iter_i))
-        self.logger.info(' - Sequence number after: ' + str(self.number_iter_j))
+        self.logger.info(' - Sequence number at the start of this iteration: ' + str(self.number_iter_i))
+        self.logger.info(' - Sequence number at the end of this iteration: ' + str(self.number_iter_j))
 
         number_diff = self.number_iter_j - self.number_iter_i
 
-        if abs(number_diff) <= self.delta:
-            self.counter += 1
+        if number_diff == 0:
+            self.is_converged = True
             self.logger.info('')
-            self.logger.info('The difference in sequence number is equal to {}, incrementing convergence counter to {}'.format(str(self.delta), str(self.counter)))
+            self.logger.info(' => No new sequence have been found.')
         elif number_diff < 0:
             self.counter += 1
             self.logger.info('')
-            self.logger.info('The difference in sequence number is negative, incrementing convergence counter to {}'.format(str(self.counter)))
+            if abs(number_diff) == 1:
+                self.logger.info(' => {} sequence has been lost. The convergence counter is now equal to {}.'.format(str(abs(number_diff)), str(self.counter)))
+            else:
+                self.logger.info(' => {} sequences have been lost. The convergence counter is now equal to {}.'.format(str(abs(number_diff)), str(self.counter)))
+        elif number_diff <= self.delta:
+            self.counter += 1
+            self.logger.info('')
+            if number_diff == 1:
+                self.logger.info(' => Only {} sequence has been found; it is below the number of sequences to be considered as a significant change relative to the previous iteration (delta = {}).'.format(str(number_diff), str(self.delta)))
+                self.logger.info('    The convergence counter is now equal to {}.'.format(str(self.counter)))
+            else:
+                self.logger.info(' => Only {} sequences have been found; it is below the number of sequences to be considered as a significant change relative to the previous iteration (delta = {}).'.format(str(number_diff), str(self.delta)))
+                self.logger.info('    The convergence counter is now equal to {}.'.format(str(self.counter)))
+        else:
+            self.logger.info('')
+            self.logger.info(' => {} new sequences have been found.'.format(str(number_diff)))
 
-        if self.counter > self.max_count:
+        if self.counter == self.max_count:
             self.is_converged = True
-            self.logger.info('')
-            self.logger.info('The convergence counter reached its maximum {}, no more iteration.'.format(str(self.counter)))
-        elif self.number_iter_j - self.number_iter_i == 0:
-            self.is_converged = True
-            self.logger.info('')
-            self.logger.info('No new sequences have been found, no more iteration.')
 
         if not self.is_converged:
             self.logger.info('')
-            self.logger.info('Convergence criteria not reached, going for a new iteration.')
+            self.logger.info('Convergence status: convergence criteria have not been reached, a new iteration will start.')
+        else:
+            self.logger.info('')
+            self.logger.info('Convergence status: convergence criteria have been reached, no more iteration.')
+
+    # def evaluate(self):
+    #     """
+
+    #     @return: None
+    #     """
+    #     self.logger.info('')
+    #     self.logger.info('Evaluating Convergence:')
+    #     self.logger.info(' - Sequence number at the start of this iteration: ' + str(self.number_iter_i))
+    #     self.logger.info(' - Sequence number at the end of this iteration: ' + str(self.number_iter_j))
+
+    #     number_diff = self.number_iter_j - self.number_iter_i
+
+    #     if abs(number_diff) <= self.delta:
+    #         self.counter += 1
+    #         self.logger.info('')
+    #         self.logger.info('The difference in sequence number is equal to {}, incrementing convergence counter to {}'.format(str(self.delta), str(self.counter)))
+    #     elif number_diff < 0:
+    #         self.counter += 1
+    #         self.logger.info('')
+    #         self.logger.info('The difference in sequence number is negative, incrementing convergence counter to {}'.format(str(self.counter)))
+
+    #     if self.counter > self.max_count:
+    #         self.is_converged = True
+    #         self.logger.info('')
+    #         self.logger.info('The convergence counter reached its maximum {}, no more iteration.'.format(str(self.counter)))
+    #     elif self.number_iter_j - self.number_iter_i == 0:
+    #         self.is_converged = True
+    #         self.logger.info('')
+    #         self.logger.info('No new sequences have been found, no more iteration.')
+
+    #     if not self.is_converged:
+    #         self.logger.info('')
+    #         self.logger.info('Convergence criteria not reached, going for a new iteration.')
