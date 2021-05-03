@@ -186,7 +186,7 @@ The first line of the figure represents all domains composing the most-likely do
 #### The protein_ID.pdf file
 The graphical representation found for a given protein in the file `protein_ID.pdf` does not show any domain architecture; instead it represents all the domains that matched the protein sequence during the [annotation step](psd_introduction.html#annotation). The main function of this file is to keep track of domains that may have not been retained to be part of the most-likely architecture. It thus provides the user a way to check the validity for a protein to really belong to the assigned protein family.
 
-To illustrate that point, let's compare both graphical representations for the protein MGG_04631T0 that has been assigned to the Sesquiterp_synthase family:
+To illustrate that point, let's compare both graphical representations for the protein MGG_04631T0 that has been assigned to the Sesquiterpene_synthase family:
 
 <figure>
     <img  style="border: 1px solid" src="./img/sesquiterpene_MLA_VS_domains.png"
@@ -196,9 +196,9 @@ To illustrate that point, let's compare both graphical representations for the p
     </figcaption>
 </figure>
 
-The figure 4A shows the most-likely domain architecture assigned to the protein MGG_04631T0 (found in <code>all_Sesquiterp_synthase.pdf</code>) which is composed of only one domain: the <i>sesquiterpene</i> domain. 
+The figure 4A shows the most-likely domain architecture assigned to the protein MGG_04631T0 (found in <code>all_Sesquiterpene_synthase.pdf</code>) which is composed of only one domain: the <i>sesquiterpene</i> domain. 
 
-The figure 4B shows all the domains that matched the protein sequence during the annotation step. We can see in this representation that both the <i>sesquiterpene</i> domain and the <i>fusicocadiene</i> domain matched the protein sequence. Only the sesquiterpene domain has been retained in the most-likely domain architecture based on its most favorable i-evalue and thus made the protein assigned as an Sesquiterp_synthase.
+The figure 4B shows all the domains that matched the protein sequence during the annotation step. We can see in this representation that both the <i>sesquiterpene</i> domain and the <i>N_ter_TCdom</i> domain matched the protein sequence. Only the sesquiterpene domain has been retained in the most-likely domain architecture based on its most favorable i-evalue and thus made the protein assigned as a Sesquiterpene_synthase.
 
 ### The protein_ID.xml file
 The protein_ID.xml file contains the main information about the protein. An example of the content of this xml file is shown below for the protein MGG_04631T0:
