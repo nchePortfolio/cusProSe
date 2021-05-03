@@ -5,7 +5,10 @@
         Note
     </p>
     <p class="last">
-        CusProSe requires a python version >= 3.7
+        - CusProSe requires a python version >= 3.7
+    </p>
+    <p class="last">
+        - CusProse has only been tested on Linux and MacOS systems. 
     </p>
 </div>
 
@@ -28,7 +31,7 @@ For usearch, you first need to download it here:
 Next, you will have to rename it and make it accessible from anywhere in your system:
 ``` bash
 # rename to usearch
-mv usearchXX.X.XXX_i86xxxx.gz usearch
+mv usearchXX.X.XXX_i86xxxx usearch
 
 # make usearch executable
 chmod +x usearch
@@ -38,9 +41,9 @@ mkdir ~/bin
 mv usearch ~/bin
 ```
 
-Finally, copy the following line in your .bashrc file (or .bash_profile for macos users)
+Finally, execute the following command that will make usearch accessible to the system
 ``` bash
-export PATH=$PATH:~/bin 
+echo -e "\n\n# Add usearch to PATH\nexport PATH=$PATH:~/bin" >> ~/.bashrc
 ```
 
 ## Create an isolated environment
@@ -104,8 +107,21 @@ tar xzvf cusProSe-x.x.x.tar.gz
 cd cusProSe-x.x.x/
 ```
 
+You should have at this location the following architecture:
+<pre style="margin-top: -8px"><font color="#3465A4"><b>  .</b></font>
+  ├── <font color="#3465A4"><b>docs</b></font>
+  ├── <font color="#3465A4"><b>iterhmmbuild</b></font>
+  ├── <font color="#3465A4"><b>lib</b></font>
+  ├── MANIFEST.in
+  ├── mkdocs.yml
+  ├── <font color="#3465A4"><b>prosecda</b></font>
+  ├── README.md
+  ├── <font color="#3465A4"><b>scripts</b></font>
+  └── setup.py
+</pre>
+
 ### Install CusProSe on your virtual environment
-Make sure your virtual environment is activated and type the following command: 
+Make sure that your virtual environment is activated and you are at the same level as the setup.py. Then type the following command: 
 
 ```python
 pip install .
@@ -138,5 +154,7 @@ prosecda: error: the following arguments are required: -proteome, -hmmdb, -rules
 create_hmmdb: error: the following arguments are required: -hmmdir</pre>
   </li>
 </ul>
+
+  Note that all of those commands are accessible from anywhere in your system as long as your virtual environment is activated. 
 
 </div>
