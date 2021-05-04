@@ -307,7 +307,7 @@ optional arguments:
 <p>The first line of the figure represents all domains composing the most-likely domain architecture found for the protein MGG_00233T0. The next lines represent details information about each domain, namely its amino acid positions, name, independant e-value (i-evalue) and its score.</p>
 <h4 id="the-protein_idpdf-file">The protein_ID.pdf file<a class="headerlink" href="#the-protein_idpdf-file" title="Permanent link">#</a></h4>
 <p>The graphical representation found for a given protein in the file <code>protein_ID.pdf</code> does not show any domain architecture; instead it represents all the domains that matched the protein sequence during the <a href="psd_introduction.html#annotation">annotation step</a>. The main function of this file is to keep track of domains that may have not been retained to be part of the most-likely architecture. It thus provides the user a way to check the validity for a protein to really belong to the assigned protein family.</p>
-<p>To illustrate that point, let's compare both graphical representations for the protein MGG_04631T0 that has been assigned to the Sesquiterp_synthase family:</p>
+<p>To illustrate that point, let's compare both graphical representations for the protein MGG_04631T0 that has been assigned to the Sesquiterpene_synthase family:</p>
 <figure>
     <img  style="border: 1px solid" src="./img/sesquiterpene_MLA_VS_domains.png"
       alt="IterHMMBuild pipeline overview.">
@@ -316,15 +316,15 @@ optional arguments:
     </figcaption>
 </figure>
 
-<p>The figure 4A shows the most-likely domain architecture assigned to the protein MGG_04631T0 (found in <code>all_Sesquiterp_synthase.pdf</code>) which is composed of only one domain: the <i>sesquiterpene</i> domain. </p>
-<p>The figure 4B shows all the domains that matched the protein sequence during the annotation step. We can see in this representation that both the <i>sesquiterpene</i> domain and the <i>fusicocadiene</i> domain matched the protein sequence. Only the sesquiterpene domain has been retained in the most-likely domain architecture based on its most favorable i-evalue and thus made the protein assigned as an Sesquiterp_synthase.</p>
+<p>The figure 4A shows the most-likely domain architecture assigned to the protein MGG_04631T0 (found in <code>all_Sesquiterpene_synthase.pdf</code>) which is composed of only one domain: the <i>sesquiterpene</i> domain. </p>
+<p>The figure 4B shows all the domains that matched the protein sequence during the annotation step. We can see in this representation that both the <i>sesquiterpene</i> domain and the <i>N_ter_TCdom</i> domain matched the protein sequence. Only the sesquiterpene domain has been retained in the most-likely domain architecture based on its most favorable i-evalue and thus made the protein assigned as a Sesquiterpene_synthase.</p>
 <h3 id="the-protein_idxml-file">The protein_ID.xml file<a class="headerlink" href="#the-protein_idxml-file" title="Permanent link">#</a></h3>
 <p>The protein_ID.xml file contains the main information about the protein. An example of the content of this xml file is shown below for the protein MGG_04631T0:</p>
 <pre><code class="language-xml">&lt;protein&gt;
   &lt;id&gt;MGG_04631T0&lt;/id&gt;
   &lt;sequence&gt;MADRTCVTLPDMFRGFIVQEPKVNKHYEAVKPVSEKWLARICAFSPMMQKRVGACDFSYFCSIAAPEAPIHKLRTMCDWGNWVFPFDDMFDSGDLRSDLIVTRHVLDSLLADMKGHKFRGLKIPVVLAHDDIYRRLSEVETKNPSISGVQRRFARAMELYALGVAQHVQDFTESGLPCPQEMLETRRLSVGVAPLYHLVEYAHSIRLPDEVFEDPAIQTLERLGADMVIMSNDMLSYQKEEASTNNEGCPFNMVAACRMSGQSAQEAFDTVGALLEESYYEWEETMRQVPARGGDVERDVQRYIKGIQDVVQANITWSFRSKRYLGVHAPEVRRTKKFDVMTHPPYLDKDMAELR&lt;/sequence&gt;
   &lt;sequence_length&gt;356&lt;/sequence_length&gt;
-  &lt;class_name&gt;Sesquiterp_synthase&lt;/class_name&gt;
+  &lt;class_name&gt;Sesquiterpene_synthase&lt;/class_name&gt;
   &lt;most_likely_architecture&gt;
     &lt;domain name=&quot;sesquiterpene&quot;&gt;
       &lt;c-evalue&gt;2e-36&lt;/c-evalue&gt;
@@ -336,13 +336,13 @@ optional arguments:
     &lt;/domain&gt;
   &lt;/most_likely_architecture&gt;
   &lt;other_matching_domains&gt;
-    &lt;domain name=&quot;fusicocadiene&quot;&gt;
-      &lt;c-evalue&gt;7.9e-06&lt;/c-evalue&gt;
-      &lt;i-evalue&gt;0.0093&lt;/i-evalue&gt;
-      &lt;score&gt;13.5&lt;/score&gt;
-      &lt;start&gt;43&lt;/start&gt;
-      &lt;end&gt;343&lt;/end&gt;
-      &lt;domain_length&gt;301&lt;/domain_length&gt;
+    &lt;domain name=&quot;N_ter_TCdom&quot;&gt;
+      &lt;c-evalue&gt;1.1e-10&lt;/c-evalue&gt;
+      &lt;i-evalue&gt;2.1e-07&lt;/i-evalue&gt;
+      &lt;score&gt;29.9&lt;/score&gt;
+      &lt;start&gt;28&lt;/start&gt;
+      &lt;end&gt;331&lt;/end&gt;
+      &lt;domain_length&gt;304&lt;/domain_length&gt;
     &lt;/domain&gt;
   &lt;/other_matching_domains&gt;
 &lt;/protein&gt;

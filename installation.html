@@ -134,7 +134,10 @@
         Note
     </p>
     <p class="last">
-        CusProSe requires a python version >= 3.7
+        - CusProSe requires a python version >= 3.7
+    </p>
+    <p class="last">
+        - CusProse has only been tested on Linux and MacOS systems. 
     </p>
 </div>
 
@@ -155,7 +158,7 @@ The first two can be easily installed from the following commands:</p>
 <a href="https://www.drive5.com/usearch/download.html">usearch</a> (tested with version v10.0.240)</p>
 <p>Next, you will have to rename it and make it accessible from anywhere in your system:</p>
 <pre><code class="language-bash"># rename to usearch
-mv usearchXX.X.XXX_i86xxxx.gz usearch
+mv usearchXX.X.XXX_i86xxxx usearch
 
 # make usearch executable
 chmod +x usearch
@@ -164,8 +167,8 @@ chmod +x usearch
 mkdir ~/bin
 mv usearch ~/bin
 </code></pre>
-<p>Finally, copy the following line in your .bashrc file (or .bash_profile for macos users)</p>
-<pre><code class="language-bash">export PATH=$PATH:~/bin 
+<p>Finally, execute the following command that will make usearch accessible to the system</p>
+<pre><code class="language-bash">echo -e &quot;\n\n# Add usearch to PATH\nexport PATH=$PATH:~/bin&quot; &gt;&gt; ~/.bashrc
 </code></pre>
 <h2 id="create-an-isolated-environment">Create an isolated environment<a class="headerlink" href="#create-an-isolated-environment" title="Permanent link">#</a></h2>
 <p>Although not indispensable, this step is highly recommended (it will allow you to work on different projects avoiding potential conflicts between different versions of some python libraries).</p>
@@ -206,8 +209,21 @@ to activate it.
 <h3 id="go-to-the-cusprose-directory">Go to the cusProSe directory<a class="headerlink" href="#go-to-the-cusprose-directory" title="Permanent link">#</a></h3>
 <pre><code class="language-bash">cd cusProSe-x.x.x/
 </code></pre>
+<p>You should have at this location the following architecture:</p>
+<pre style="margin-top: -8px"><font color="#3465A4"><b>  .</b></font>
+  ├── <font color="#3465A4"><b>docs</b></font>
+  ├── <font color="#3465A4"><b>iterhmmbuild</b></font>
+  ├── <font color="#3465A4"><b>lib</b></font>
+  ├── MANIFEST.in
+  ├── mkdocs.yml
+  ├── <font color="#3465A4"><b>prosecda</b></font>
+  ├── README.md
+  ├── <font color="#3465A4"><b>scripts</b></font>
+  └── setup.py
+</pre>
+
 <h3 id="install-cusprose-on-your-virtual-environment">Install CusProSe on your virtual environment<a class="headerlink" href="#install-cusprose-on-your-virtual-environment" title="Permanent link">#</a></h3>
-<p>Make sure your virtual environment is activated and type the following command: </p>
+<p>Make sure that your virtual environment is activated and you are at the same level as the setup.py. Then type the following command: </p>
 <pre><code class="language-python">pip install .
 </code></pre>
 <div class="admonition tip" style="margin-top: 30px;">
@@ -237,6 +253,8 @@ prosecda: error: the following arguments are required: -proteome, -hmmdb, -rules
 create_hmmdb: error: the following arguments are required: -hmmdir</pre>
   </li>
 </ul>
+
+  Note that all of those commands are accessible from anywhere in your system as long as your virtual environment is activated. 
 
 </div>
               
