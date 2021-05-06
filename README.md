@@ -7,7 +7,7 @@
 
 ## Description
 <p>
-CustomProteinSearch is a python package containing two independent but complementary programs <b>IterHMMBuild</b> and <b>ProSeCDA</b> whose overall objective is to help users to search for specific proteins of interest based on their domain composition.
+CustomProteinSearch is a python package containing two independent but complementary programs (<b>IterHMMBuild</b> and <b>ProSeCDA</b>) whose overall objective is to help users to search for specific proteins of interest based on their domain composition.
 </p>
 <br>
 
