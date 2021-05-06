@@ -17,8 +17,12 @@
             </div> -->
         </div>
         
-        <header>
+        <header>    
             <h1>PROSECDA Results</h1>
+
+            <figure class="header-left">
+                <img class="logo-i2bc" src="./images/i2bc.jpg" alt="logo IBC">
+            </figure>
         </header>
 
         <section>
@@ -181,6 +185,17 @@
                     <p>- Protein length: <span id="p-length"></span></p>
                     <p>- Domains in the most-likely architecture: <span id="p-domainInArch"></span></p>
                     <p>- All domains that matched the protein sequence: <span id="p-totalDomain"></span></p>
+
+                    <p>
+                        - Protein sequence: click to see
+                    </p>
+                    <div class="tooltip-sequence">
+                        <p>
+                            ANNEVITAIVRY                        
+                        </p>
+                        <textarea name="" id="" cols="80" rows="10"></textarea>
+                    </div>
+
                 </div>
 
                 <div id="detail-hmmdomtbl">
@@ -209,12 +224,6 @@
                 </div>
             </div>
         </section>
-
-        <footer>
-            <figure class="header-left">
-                <img class="logo-i2bc" src="./images/i2bc.jpg" alt="logo IBC">
-            </figure>
-        </footer>
 
         <script type="text/javascript" src="./js/d3_script.js"></script>            
     </body>

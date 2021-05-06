@@ -19,6 +19,7 @@ $FAM_LIST = [
         "proteins": [
             {
                 "id": "MGG_06540T0",
+                "sequence": "ANNEVITAIVRYAVECNCHENCHE",
                 "length": 410,
                 "architectures_nb": 1,
                 "domains": [
@@ -166,7 +167,7 @@ $FAM_LIST = [
         ]
     },
     {
-        "name": "Fusicocadiene_synthase",
+        "name": "Fusicocadiene_synthaseaaaaaaaaaaaaaaaaa",
         "rules": {
             "mandatories": [
                 {
@@ -6735,14 +6736,260 @@ $FAM_LIST = [
                 ]
             }
         ]
+    },
+    {"name": "DMATS",
+    "rules": {
+        "mandatories": [
+            {
+                "name": "Trp_DMAT",
+                "evalue": 0.01,
+                "color": "darkslategray"
+            }
+        ],
+        "forbidden": [
+            {
+                "name": "None",
+                "color": "None"
+            }
+        ]
+    },
+    "proteins": [
+        {
+            "id": "MGG_06540T0",
+            "length": 410,
+            "architectures_nb": 1,
+            "domains": [
+                {
+                    "name": "Trp_DMAT",
+                    "start": 47,
+                    "length": 353,
+                    "cevalue": 1.4e-122,
+                    "ievalue": 6.2e-119,
+                    "score": 396.7,
+                    "hmm_length": 350,
+                    "hmm_start": 1,
+                    "hmm_end": 350,
+                    "color": "darkslategray",
+                    "status": "likely"
+                }
+            ]
+        },
+        {
+            "id": "MGG_10953T0",
+            "length": 460,
+            "architectures_nb": 1,
+            "domains": [
+                {
+                    "name": "Trp_DMAT",
+                    "start": 91,
+                    "length": 361,
+                    "cevalue": 4.2e-120,
+                    "ievalue": 1.8e-116,
+                    "score": 388.6,
+                    "hmm_length": 350,
+                    "hmm_start": 1,
+                    "hmm_end": 342,
+                    "color": "darkslategray",
+                    "status": "likely"
+                }
+            ]
+        },
+        {
+            "id": "MGG_12480T0",
+            "length": 405,
+            "architectures_nb": 1,
+            "domains": [
+                {
+                    "name": "Trp_DMAT",
+                    "start": 14,
+                    "length": 350,
+                    "cevalue": 1e-109,
+                    "ievalue": 4.4e-106,
+                    "score": 354.5,
+                    "hmm_length": 350,
+                    "hmm_start": 1,
+                    "hmm_end": 350,
+                    "color": "darkslategray",
+                    "status": "likely"
+                }
+            ]
+        }
+    ]
+},
+{
+    "name": "Ent_kaurene_synthase",
+    "rules": {
+        "mandatories": [
+            {
+                "name": "ent_kaurene",
+                "evalue": 0.01,
+                "color": "mediumvioletred"
+            }
+        ],
+        "forbidden": [
+            {
+                "name": "None",
+                "color": "None"
+            }
+        ]
+    },
+    "proteins": [
+        {
+            "id": "MGG_01949T0",
+            "length": 963,
+            "architectures_nb": 2,
+            "domains": [
+                {
+                    "name": "ent_kaurene",
+                    "start": 2,
+                    "length": 961,
+                    "cevalue": 0.0,
+                    "ievalue": 0.0,
+                    "score": 1717.5,
+                    "hmm_length": 955,
+                    "hmm_start": 1,
+                    "hmm_end": 954,
+                    "color": "mediumvioletred",
+                    "status": "likely"
+                },
+                {
+                    "name": "diterpene",
+                    "start": 5,
+                    "length": 958,
+                    "cevalue": 0.0,
+                    "ievalue": 0.0,
+                    "score": 1570.7,
+                    "hmm_length": 961,
+                    "hmm_start": 2,
+                    "hmm_end": 959,
+                    "color": "mediumslateblue",
+                    "status": "unlikely"
+                }
+            ]
+        },
+        {
+            "id": "MGG_14722T0",
+            "length": 955,
+            "architectures_nb": 2,
+            "domains": [
+                {
+                    "name": "ent_kaurene",
+                    "start": 1,
+                    "length": 947,
+                    "cevalue": 0.0,
+                    "ievalue": 0.0,
+                    "score": 1722.0,
+                    "hmm_length": 955,
+                    "hmm_start": 1,
+                    "hmm_end": 955,
+                    "color": "mediumvioletred",
+                    "status": "likely"
+                },
+                {
+                    "name": "diterpene",
+                    "start": 4,
+                    "length": 944,
+                    "cevalue": 0.0,
+                    "ievalue": 0.0,
+                    "score": 1604.4,
+                    "hmm_length": 961,
+                    "hmm_start": 2,
+                    "hmm_end": 960,
+                    "color": "mediumslateblue",
+                    "status": "unlikely"
+                }
+            ]
+        }
+    ]
+},
+{"name": "DMATS",
+"rules": {
+    "mandatories": [
+        {
+            "name": "Trp_DMAT",
+            "evalue": 0.01,
+            "color": "darkslategray"
+        }
+    ],
+    "forbidden": [
+        {
+            "name": "None",
+            "color": "None"
+        }
+    ]
+},
+"proteins": [
+    {
+        "id": "MGG_06540T0",
+        "length": 410,
+        "architectures_nb": 1,
+        "domains": [
+            {
+                "name": "Trp_DMAT",
+                "start": 47,
+                "length": 353,
+                "cevalue": 1.4e-122,
+                "ievalue": 6.2e-119,
+                "score": 396.7,
+                "hmm_length": 350,
+                "hmm_start": 1,
+                "hmm_end": 350,
+                "color": "darkslategray",
+                "status": "likely"
+            }
+        ]
+    },
+    {
+        "id": "MGG_10953T0",
+        "length": 460,
+        "architectures_nb": 1,
+        "domains": [
+            {
+                "name": "Trp_DMAT",
+                "start": 91,
+                "length": 361,
+                "cevalue": 4.2e-120,
+                "ievalue": 1.8e-116,
+                "score": 388.6,
+                "hmm_length": 350,
+                "hmm_start": 1,
+                "hmm_end": 342,
+                "color": "darkslategray",
+                "status": "likely"
+            }
+        ]
+    },
+    {
+        "id": "MGG_12480T0",
+        "length": 405,
+        "architectures_nb": 1,
+        "domains": [
+            {
+                "name": "Trp_DMAT",
+                "start": 14,
+                "length": 350,
+                "cevalue": 1e-109,
+                "ievalue": 4.4e-106,
+                "score": 354.5,
+                "hmm_length": 350,
+                "hmm_start": 1,
+                "hmm_end": 350,
+                "color": "darkslategray",
+                "status": "likely"
+            }
+        ]
     }
+]
+},
+
+
 ]
 
 var families = $FAM_LIST
 
 // constant variables used to draw svg proteins
 const margin = {"top": 0, "right": 5, "bottom": 0, "left": 10};
-const width = 800 - margin.left - margin.right;
+const width = 650 - margin.left - margin.right;
 const height = 60 - margin.top - margin.bottom;
 const y_line = (height + margin.top + margin.bottom)/2;
 const rect_height = 12;
@@ -6894,13 +7141,21 @@ function drawProteins(data) {
                 .enter().append("div")
                     .attr("class", "protein")
 
+    // var subdiv = div.append("div")
+    //     .attr("class", "protein-descr")
+    //     .text(d => {
+    //         return `${d.id} (${d.length} aa)`;
+    //     })
+    //     .style("font-weight", "bold")
+
     var subdiv = div.append("div")
         .attr("class", "protein-descr")
+
+    subdiv.append("div")
         .text(d => {
             return `${d.id} (${d.length} aa)`;
         })
         .style("font-weight", "bold")
-        .style("border-bottom", "1px solid")
 
     d3.select(".protein-descr ").classed("selected", true);
 
@@ -6981,6 +7236,8 @@ function rmProteins() {
 
 
 function updateDetails(protein){
+    console.log(protein.sequence)
+
     var domNbMLA = d3.sum(protein.domains.map(function(d) {
         if (d.status === "likely") {
             return 1;
