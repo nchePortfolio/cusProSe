@@ -36,7 +36,7 @@ header h1 {
 section {
     display: flex;
     /* justify-content: right; */
-    height: 800px; 
+    height: 820px; 
     /* border: 1px solid; */
     /* margin-left: 26px; */
 }
@@ -241,11 +241,12 @@ section {
 
 #proteins-container {
     width: 100%;
-    height: 100%;
+    height: 68%;
+    max-height: 68%;
     margin-top: 10px;
     margin-bottom: -2px;
     border: 1px solid;
-    overflow: auto;
+    /* overflow: auto; */
     /* overflow-x: hidden; */
     border-top-left-radius: 8px;
 }
@@ -254,8 +255,9 @@ section {
 #proteins-draw {
     width: 100%;
     height: 100%;
-    margin-top: 10px;
-    /* overflow: auto; */
+    max-height: 92%;
+    margin-top: 2px;
+    overflow: auto;
 }
 
 #detail-container {
