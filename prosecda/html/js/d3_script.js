@@ -1,12 +1,17 @@
-$FAM_LIST = [
+var families = [
     {
-        "name": "DMATS",
+        "name": "Chimeric_TS",
         "rules": {
             "mandatories": [
                 {
-                    "name": "Trp_DMAT",
+                    "name": "N_ter_TCdom",
                     "evalue": 0.01,
-                    "color": "darkslategray"
+                    "color": "sienna"
+                },
+                {
+                    "name": "C_ter_PTdom",
+                    "evalue": 0.01,
+                    "color": "plum"
                 }
             ],
             "forbidden": [
@@ -17,244 +22,25 @@ $FAM_LIST = [
             ]
         },
         "proteins": [
-            {
-                "id": "MGG_06540T0",
-                "sequence": "ANNEVITAIVRYAVECNCHENCHE",
-                "length": 410,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "Trp_DMAT",
-                        "start": 47,
-                        "length": 353,
-                        "cevalue": 1.4e-122,
-                        "ievalue": 6.2e-119,
-                        "score": 396.7,
-                        "hmm_length": 350,
-                        "hmm_start": 1,
-                        "hmm_end": 350,
-                        "color": "darkslategray",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_10953T0",
-                "length": 460,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "Trp_DMAT",
-                        "start": 91,
-                        "length": 361,
-                        "cevalue": 4.2e-120,
-                        "ievalue": 1.8e-116,
-                        "score": 388.6,
-                        "hmm_length": 350,
-                        "hmm_start": 1,
-                        "hmm_end": 342,
-                        "color": "darkslategray",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_12480T0",
-                "length": 405,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "Trp_DMAT",
-                        "start": 14,
-                        "length": 350,
-                        "cevalue": 1e-109,
-                        "ievalue": 4.4e-106,
-                        "score": 354.5,
-                        "hmm_length": 350,
-                        "hmm_start": 1,
-                        "hmm_end": 350,
-                        "color": "darkslategray",
-                        "status": "likely"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "Ent_kaurene_synthase",
-        "rules": {
-            "mandatories": [
-                {
-                    "name": "ent_kaurene",
-                    "evalue": 0.01,
-                    "color": "mediumvioletred"
-                }
-            ],
-            "forbidden": [
-                {
-                    "name": "None",
-                    "color": "None"
-                }
-            ]
-        },
-        "proteins": [
-            {
-                "id": "MGG_01949T0",
-                "length": 963,
-                "architectures_nb": 2,
-                "domains": [
-                    {
-                        "name": "ent_kaurene",
-                        "start": 2,
-                        "length": 961,
-                        "cevalue": 0.0,
-                        "ievalue": 0.0,
-                        "score": 1717.5,
-                        "hmm_length": 955,
-                        "hmm_start": 1,
-                        "hmm_end": 954,
-                        "color": "mediumvioletred",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "diterpene",
-                        "start": 5,
-                        "length": 958,
-                        "cevalue": 0.0,
-                        "ievalue": 0.0,
-                        "score": 1570.7,
-                        "hmm_length": 961,
-                        "hmm_start": 2,
-                        "hmm_end": 959,
-                        "color": "mediumslateblue",
-                        "status": "unlikely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_14722T0",
-                "length": 955,
-                "architectures_nb": 2,
-                "domains": [
-                    {
-                        "name": "ent_kaurene",
-                        "start": 1,
-                        "length": 947,
-                        "cevalue": 0.0,
-                        "ievalue": 0.0,
-                        "score": 1722.0,
-                        "hmm_length": 955,
-                        "hmm_start": 1,
-                        "hmm_end": 955,
-                        "color": "mediumvioletred",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "diterpene",
-                        "start": 4,
-                        "length": 944,
-                        "cevalue": 0.0,
-                        "ievalue": 0.0,
-                        "score": 1604.4,
-                        "hmm_length": 961,
-                        "hmm_start": 2,
-                        "hmm_end": 960,
-                        "color": "mediumslateblue",
-                        "status": "unlikely"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "Fusicocadiene_synthaseaaaaaaaaaaaaaaaaa",
-        "rules": {
-            "mandatories": [
-                {
-                    "name": "fusicocadiene",
-                    "evalue": 0.01,
-                    "color": "darkturquoise"
-                }
-            ],
-            "forbidden": [
-                {
-                    "name": "None",
-                    "color": "None"
-                }
-            ]
-        },
-        "proteins": [
-            {
-                "id": "MGG_00026T0",
-                "length": 406,
-                "architectures_nb": 2,
-                "domains": [
-                    {
-                        "name": "fusicocadiene",
-                        "start": 64,
-                        "length": 342,
-                        "cevalue": 4.9e-84,
-                        "ievalue": 5.8e-81,
-                        "score": 272.0,
-                        "hmm_length": 714,
-                        "hmm_start": 402,
-                        "hmm_end": 711,
-                        "color": "darkturquoise",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "paxC_like",
-                        "start": 93,
-                        "length": 282,
-                        "cevalue": 1.3e-24,
-                        "ievalue": 1.9e-21,
-                        "score": 75.6,
-                        "hmm_length": 338,
-                        "hmm_start": 29,
-                        "hmm_end": 248,
-                        "color": "orangered",
-                        "status": "unlikely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_00758T0",
-                "length": 413,
-                "architectures_nb": 2,
-                "domains": [
-                    {
-                        "name": "fusicocadiene",
-                        "start": 45,
-                        "length": 367,
-                        "cevalue": 2.4e-65,
-                        "ievalue": 2.8e-62,
-                        "score": 210.2,
-                        "hmm_length": 714,
-                        "hmm_start": 412,
-                        "hmm_end": 699,
-                        "color": "darkturquoise",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "paxC_like",
-                        "start": 106,
-                        "length": 261,
-                        "cevalue": 4.1e-34,
-                        "ievalue": 6e-31,
-                        "score": 106.9,
-                        "hmm_length": 338,
-                        "hmm_start": 31,
-                        "hmm_end": 252,
-                        "color": "orangered",
-                        "status": "unlikely"
-                    }
-                ]
-            },
             {
                 "id": "MGG_01701T0",
+                "sequence": "MPIVAAHAEHLDLYEAMNFSDSRVLDLGSQSTKIKDLVSTVILECMRVDRVCALRMLEAYRKRWQAIIETRDTDKIESLEEYLESRANNGSMGAYYAMLEFSLGIVITQEEYSLLAAPMRHWKRCMLLTNDYWSWLRARQQTKNQLVGRVVNTIWFLIKQNPTYTDEQAKSKVAEMVVAEEAKWVQSKNRLYAENPKLRDDLVKFLENLHTALAGNDYWSSQRYRHNDWTHVPTQPEPDHPRIHELAGFGRTLVVEESRILARPSSSSSPSHSLGASASSSSGWASSSSQGDLSSPLSSASSTFDNVDRDRLKHKVTKATTTTAATAEEVISAPIRYIQSMPSKGFRAALVDCYNMWLDVPQREMEIIKTVINCLHDSSLLLDDIEDDSKLRRGFPATHLVYGPAATINSATYLYVQAVQAVHNLGSRKLMDVLLLRLQQLFFGQSLDLHWTFNRECPTKTQYFNMIEQKTGAFLSLVAELMMVVSAASDYESSTDSPENIFQTFSYQSGLYFQVRDDYLNITSADYADKKGFAEDLDEQKFSYILVHLAHSRPDLMVQVEGIFKAMRSGKTENAETKKYLVSLLHKSGAVEATKELLVRWQDDIVKEIDVLENHFGKPNPSLRLLMQTLWIDA",
                 "length": 635,
-                "architectures_nb": 2,
+                "architectures_nb": 4,
                 "domains": [
+                    {
+                        "name": "N_ter_TCdom",
+                        "start": 8,
+                        "length": 225,
+                        "cevalue": 4.3e-21,
+                        "ievalue": 7.9e-18,
+                        "score": 64.2,
+                        "hmm_length": 334,
+                        "hmm_start": 133,
+                        "hmm_end": 328,
+                        "color": "sienna",
+                        "status": "likely"
+                    },
                     {
                         "name": "sesquiterpene",
                         "start": 8,
@@ -269,16 +55,16 @@ $FAM_LIST = [
                         "status": "unlikely"
                     },
                     {
-                        "name": "fusicocadiene",
-                        "start": 16,
-                        "length": 619,
-                        "cevalue": 1.5e-97,
-                        "ievalue": 1.8e-94,
-                        "score": 316.6,
-                        "hmm_length": 714,
-                        "hmm_start": 135,
-                        "hmm_end": 713,
-                        "color": "darkturquoise",
+                        "name": "C_ter_PTdom",
+                        "start": 251,
+                        "length": 382,
+                        "cevalue": 1.8e-94,
+                        "ievalue": 2.3e-91,
+                        "score": 306.2,
+                        "hmm_length": 382,
+                        "hmm_start": 33,
+                        "hmm_end": 380,
+                        "color": "plum",
                         "status": "likely"
                     },
                     {
@@ -291,60 +77,28 @@ $FAM_LIST = [
                         "hmm_length": 338,
                         "hmm_start": 3,
                         "hmm_end": 266,
-                        "color": "orangered",
+                        "color": "yellow",
                         "status": "unlikely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_03343T0",
-                "length": 454,
-                "architectures_nb": 2,
-                "domains": [
-                    {
-                        "name": "paxC_like",
-                        "start": 159,
-                        "length": 260,
-                        "cevalue": 2.6e-07,
-                        "ievalue": 0.00038,
-                        "score": 18.8,
-                        "hmm_length": 338,
-                        "hmm_start": 68,
-                        "hmm_end": 259,
-                        "color": "orangered",
-                        "status": "unlikely"
-                    },
-                    {
-                        "name": "fusicocadiene",
-                        "start": 184,
-                        "length": 261,
-                        "cevalue": 6.6e-12,
-                        "ievalue": 7.8e-09,
-                        "score": 33.6,
-                        "hmm_length": 714,
-                        "hmm_start": 453,
-                        "hmm_end": 691,
-                        "color": "darkturquoise",
-                        "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_03432T0",
+                "sequence": "MLSHEELYPYSEPVARETVVASGALTSLPVRIHRHDELADAGAICLTGDWGRIMKDGQDKKSNGSPCRVGNWGSFIWPESEPDRLGLLCYLLDVGCFHDDACEEMSIAAAHIEHMDLDAAMDVSDDRSLSADSRSAKTKDLVSTAILECVRVDRVGALRMLEAYRKKWLAIMENYDTEKIEALDEYFESRANNGGMGAYYAMLEFSLGIVVTDEEYAMMAVPIQHVERCMLLTNDYWSWPREREQAKTQEAGKVFNTVWFMMKQNPTWTEEQAKRRVAEMVVEEETKWVQSKDALYAQYPALSPHLVKLLENLHTALAGNDYWSSQCYRHNDWTHVPEQPAPGHPQVHELAGLGRAVMPLAESPEGSAADGVKTPLSEGKSGSPLTSPSSVFSSVVVEATKQPPVHSRAEEVIQAPIRYIQSMPSKGFRSALVDCYSRWLDVPAREMESIKSVINCLHDSSLILDDIEDNSRLRRGFPATHVVYGAGPAINSATYLYVQAVAAINSLDNREMMDVLLRQLQNLFLGQSLDLHWTANRQCPTRDEYLGMVGQKTGAFISMVAELMIAASNVNSPEKTRAAFAAFSHLSGLYYQVRDDYLNITSAEYADKKGFAEDLDEQKFSYMLVHLARARPDMMVQVEGVFRSMRDGKAEVAESKRYLVGLLRASGTVDATRKLLLGWQDAIVREIDALQAHFGAPNPSLRLLMESLWIE",
                 "length": 712,
-                "architectures_nb": 2,
+                "architectures_nb": 4,
                 "domains": [
                     {
-                        "name": "fusicocadiene",
+                        "name": "N_ter_TCdom",
                         "start": 7,
-                        "length": 705,
-                        "cevalue": 2.3e-106,
-                        "ievalue": 2.8e-103,
-                        "score": 345.8,
-                        "hmm_length": 714,
-                        "hmm_start": 3,
-                        "hmm_end": 713,
-                        "color": "darkturquoise",
+                        "length": 332,
+                        "cevalue": 4e-34,
+                        "ievalue": 7.4e-31,
+                        "score": 107.0,
+                        "hmm_length": 334,
+                        "hmm_start": 4,
+                        "hmm_end": 328,
+                        "color": "sienna",
                         "status": "likely"
                     },
                     {
@@ -361,6 +115,19 @@ $FAM_LIST = [
                         "status": "unlikely"
                     },
                     {
+                        "name": "C_ter_PTdom",
+                        "start": 358,
+                        "length": 353,
+                        "cevalue": 5.6e-94,
+                        "ievalue": 7.3e-91,
+                        "score": 304.5,
+                        "hmm_length": 382,
+                        "hmm_start": 49,
+                        "hmm_end": 380,
+                        "color": "plum",
+                        "status": "likely"
+                    },
+                    {
                         "name": "paxC_like",
                         "start": 399,
                         "length": 264,
@@ -370,27 +137,28 @@ $FAM_LIST = [
                         "hmm_length": 338,
                         "hmm_start": 31,
                         "hmm_end": 265,
-                        "color": "orangered",
+                        "color": "yellow",
                         "status": "unlikely"
                     }
                 ]
             },
             {
                 "id": "MGG_07506T0",
+                "sequence": "MTVTTAMTATTKNHQDCGPMGYESSIPVPACLYENNAYPSRFRPRISKHNDVADKACWEACDDFENVTGLKLKADSVGCINPVSGNVNALWFPEAIPERLRIISYLSELLFRHDDLTDDAVTPEQFDEVHGPLARFLGSESKQSDHTTKHNAMNTMQARVAIEALEQDEGLGKLVIEKWKGIVSVRGQDAFMEHKTLDSYLHVRHYDAGAYSVWSQILFCCDVRLTDEELTGLEPLTWLAFTQMILWHDYCSWDKEAATYLEREEGGSNMSAVQVYMAMYSLDQHAAKDFLLSEIERIEDEYCTRKASYMAECSPAHHITHYIGLIEMCMAGNTLWHLSSRRYCPAAPLPRREDMGKVNLGPLDVSEVGMPVNGARSDSGILTPVSSRCGAERLRPFWNNQRTEYTTMTPAETSSDSKKKMNKAKASSSHHQTRADLLTVAPCAWPAEADEEDILAAYLYTAARPASGARDKLMDALDNWYRVPPETLATIRTIVRIMHNASLMLDDVHDNSPLRRGSPSAHIVFGTAQTINSAGYVTIKCVDLARRRLGDDALSCLLSELGQLHLGQSHDLAWTFHCRAPSMAGYYSHLEQKTGGLFRLAARMMRASATQNRHLDACGLMSLLGRLYQLRDDYQDITSETLSTYDDLDEGSFTLPLIHALEREDKHGGVQLRSILQSARAARSASAAASSDGARLPAETKLLVREILEEAGSLEYTRAVIRDLYDETRAALAALENEAGPGGKNWMLRLITFQLKM",
                 "length": 758,
-                "architectures_nb": 2,
+                "architectures_nb": 4,
                 "domains": [
                     {
-                        "name": "fusicocadiene",
-                        "start": 21,
-                        "length": 732,
-                        "cevalue": 7.7e-82,
-                        "ievalue": 9.1e-79,
-                        "score": 264.8,
-                        "hmm_length": 714,
-                        "hmm_start": 10,
-                        "hmm_end": 696,
-                        "color": "darkturquoise",
+                        "name": "N_ter_TCdom",
+                        "start": 20,
+                        "length": 330,
+                        "cevalue": 1.4e-26,
+                        "ievalue": 2.5e-23,
+                        "score": 82.3,
+                        "hmm_length": 334,
+                        "hmm_start": 3,
+                        "hmm_end": 329,
+                        "color": "sienna",
                         "status": "likely"
                     },
                     {
@@ -407,6 +175,19 @@ $FAM_LIST = [
                         "status": "unlikely"
                     },
                     {
+                        "name": "C_ter_PTdom",
+                        "start": 388,
+                        "length": 370,
+                        "cevalue": 1.8e-84,
+                        "ievalue": 2.3e-81,
+                        "score": 273.3,
+                        "hmm_length": 382,
+                        "hmm_start": 39,
+                        "hmm_end": 381,
+                        "color": "plum",
+                        "status": "likely"
+                    },
+                    {
                         "name": "paxC_like",
                         "start": 444,
                         "length": 245,
@@ -416,60 +197,28 @@ $FAM_LIST = [
                         "hmm_length": 338,
                         "hmm_start": 49,
                         "hmm_end": 248,
-                        "color": "orangered",
-                        "status": "unlikely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_09448T0",
-                "length": 372,
-                "architectures_nb": 2,
-                "domains": [
-                    {
-                        "name": "fusicocadiene",
-                        "start": 5,
-                        "length": 367,
-                        "cevalue": 7.9e-71,
-                        "ievalue": 9.3e-68,
-                        "score": 228.4,
-                        "hmm_length": 714,
-                        "hmm_start": 414,
-                        "hmm_end": 711,
-                        "color": "darkturquoise",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "paxC_like",
-                        "start": 61,
-                        "length": 283,
-                        "cevalue": 5.6e-30,
-                        "ievalue": 8.2e-27,
-                        "score": 93.3,
-                        "hmm_length": 338,
-                        "hmm_start": 31,
-                        "hmm_end": 254,
-                        "color": "orangered",
+                        "color": "yellow",
                         "status": "unlikely"
                     }
                 ]
             },
             {
                 "id": "MGG_13405T0",
+                "sequence": "MMDRRDIYPYSIPVDREEVTRSGALTTLPVRIHRHNHLADAGALCLVNDWRHTMKDGQETRSNGSPCVVGNWASFIWPESDPERLGLLTYLLDVGCFHDDACEEMTMASAHEEHLDLAGAMDVEDKRMLSKDSRSLRTKQLVSKAVLECIKIDRQGAMRMLEAYRKKWLRIMETYNTDEIDGIDDYFLARANNGGMGAYYAMLEFSLGISVSDDEYAAMAEPITHVERCMLLTNDYWSWPRERDQAEHQESGKVFNVVWFLMRKEQCSEADAMDRVRQLIHAEERAWTAAKERLYDQCPKLRPDLVRLLESLETALAGNDYWSSRCYRHHDWRHVAVRPVQDGPEIHELAGMGKALAMNLAADNDRTRSGASSPESSSSAAGSSSSHTAEMMPHSPLSSVKSTPTSATSEGSLPGMQAAPVFEPARYIRQMPSKNMRSQLMDCFNLWLEVPQPSLAAIKETIDCLHHSSLILDDIEDGSDLRRGLPAAHIVYGVGQAINSATHLHVQAVANMHAMASREGRPQMMDVFLHHLNQLFIGQSWDLHWTFHRRCPTEEKYLNMIDQKTGAMLQMLLELMQTAAAAAKQGVLKDGKHLLWEFTRLFGRFFQVRDDYMNTLSTEYERQKGFASDLNEQKLSYMLVHMFEVYPETRDKVEGVFNTMRRGGVSEGAVDVAKTYILSMMEETGTNNFTYKLLQKWHGQVLESIGALEKHFGVENGMLRLLVETLRV",
                 "length": 729,
-                "architectures_nb": 2,
+                "architectures_nb": 4,
                 "domains": [
                     {
-                        "name": "fusicocadiene",
+                        "name": "N_ter_TCdom",
                         "start": 7,
-                        "length": 722,
-                        "cevalue": 9.5e-94,
-                        "ievalue": 1.1e-90,
-                        "score": 304.1,
-                        "hmm_length": 714,
+                        "length": 329,
+                        "cevalue": 8.3e-37,
+                        "ievalue": 1.5e-33,
+                        "score": 115.9,
+                        "hmm_length": 334,
                         "hmm_start": 3,
-                        "hmm_end": 712,
-                        "color": "darkturquoise",
+                        "hmm_end": 326,
+                        "color": "sienna",
                         "status": "likely"
                     },
                     {
@@ -486,6 +235,19 @@ $FAM_LIST = [
                         "status": "unlikely"
                     },
                     {
+                        "name": "C_ter_PTdom",
+                        "start": 350,
+                        "length": 379,
+                        "cevalue": 7.1e-88,
+                        "ievalue": 9.2e-85,
+                        "score": 284.5,
+                        "hmm_length": 382,
+                        "hmm_start": 29,
+                        "hmm_end": 382,
+                        "color": "plum",
+                        "status": "likely"
+                    },
+                    {
                         "name": "paxC_like",
                         "start": 395,
                         "length": 288,
@@ -495,7 +257,178 @@ $FAM_LIST = [
                         "hmm_length": 338,
                         "hmm_start": 35,
                         "hmm_end": 266,
-                        "color": "orangered",
+                        "color": "yellow",
+                        "status": "unlikely"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "DMATS",
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "Trp_DMAT",
+                    "evalue": 0.01,
+                    "color": "olive"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "None",
+                    "color": "None"
+                }
+            ]
+        },
+        "proteins": [
+            {
+                "id": "MGG_06540T0",
+                "sequence": "MPLPGSTADLDLAYPPSPRSVPLGIRAATANNLIASFDQPHDPEQKWWWSRCAPLFYTILNASGSYTPEQMAEHMRVVRDVVIPSLGPRPSKAAAKGLITLDGTPFEPSWNFTRGRSVVRYAFEPLWDTGSNPEEPFGGRQVPEFARVLSRVAAPDTHLGWFDQIWARWNVAGDEAARAKRALIAHGKPASARVPQLFLAFDHHGAERRLKSYHFPILKHLATGVSTEKLVLDMMTDLRPGGDELRAAAAKMKTFFDRTKYPAAAEMLSIDCVDPRTARVKIYARTQSNSLDTVRETMTLAGLQTDEQTMEGVARVAKFWHLLLDERGGMERGQNKELRVKATHHTGICFVFEIRPGSDRVSVKPQMPWCQTNGTDARGAENFAAVLKMFGWEDHVDRFEKGVMAAASL",
+                "length": 410,
+                "architectures_nb": 1,
+                "domains": [
+                    {
+                        "name": "Trp_DMAT",
+                        "start": 47,
+                        "length": 353,
+                        "cevalue": 1.4e-122,
+                        "ievalue": 6.2e-119,
+                        "score": 396.7,
+                        "hmm_length": 350,
+                        "hmm_start": 1,
+                        "hmm_end": 350,
+                        "color": "olive",
+                        "status": "likely"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_10953T0",
+                "sequence": "MLTAQQQPLHTHLGTVAKCERSISKRQASREILREVARQAMHNNVLESPLSTKIHHNPQPSIAPRAKPLDRSTPWSSINALMRFNSKDHQFWWNTTGRFFATLLEQAGYSATEQYRELFFYAMHVAPELGPAPDSQGNVQRWRSPGTPDSTPIDFSWEWGLDGNGVVRYSFEPIGPNAGTPLDPLNSHATEDWINRLDRQGLVQGLDLEWYKYFTKTLLFAPEDDSRTSKTTEDFIEETTPRAGTVVALDLEKRGPVMKIYIYPGLKAAEMGIDALELVARSIRGLPPAQYASLRDNVEPLLEYLQGRGAQKWGFETGILSIDLLDPAEARIKIYVRAPHTSVEYLMDALTLGGKLDLSEAGGYSKKALADLVDFWNMLLGDSPDELPPDHPGRARPGFYYTVKAGRPVSPKVYVSPFWFVKSDKEVMQRMRNYLSTREDEPDMLGQMARYEGALESYL",
+                "length": 460,
+                "architectures_nb": 1,
+                "domains": [
+                    {
+                        "name": "Trp_DMAT",
+                        "start": 91,
+                        "length": 361,
+                        "cevalue": 4.2e-120,
+                        "ievalue": 1.8e-116,
+                        "score": 388.6,
+                        "hmm_length": 350,
+                        "hmm_start": 1,
+                        "hmm_end": 342,
+                        "color": "olive",
+                        "status": "likely"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_12480T0",
+                "sequence": "MGASKYNLSPDQQYWWQFVEPSLSSMLEYAGQYTPEEQDSHLEWYATQVTPIFGIQPSEETPDPNPFTHDSSPCHISINWCSKGKPTVRSGMTRPHDVFNSQAFVDELQPAMETSDQPDRAIFDGLAKSLFLKDPQEIAKVKAVVPPHLHTRIPNIGIAWDLVGAKRKLKLYHNPQAKKLATSRTGNDIIVSSIRALANDGYNYNEAMDVLERYVTELNPEKLELIIIGMDAAEPTLPTTRIKPYGIVAEANSWETVKNIYTLGGQVLNQERKQGLDILRSIWDLMRCHRGQRLADDYHMPKNDSSSTRGVLTPSFEVKPGQSLPDVKVYVSQWQFAKTDREIAECTVEIFKRLGWQKEADSYFNLLQKALSMKIPGRAVGEVATNGKLFEGKYTGWPAHLDSA",
+                "length": 405,
+                "architectures_nb": 1,
+                "domains": [
+                    {
+                        "name": "Trp_DMAT",
+                        "start": 14,
+                        "length": 350,
+                        "cevalue": 1e-109,
+                        "ievalue": 4.4e-106,
+                        "score": 354.5,
+                        "hmm_length": 350,
+                        "hmm_start": 1,
+                        "hmm_end": 350,
+                        "color": "olive",
+                        "status": "likely"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Ent_kaurene_synthase",
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "ent_kaurene",
+                    "evalue": 0.01,
+                    "color": "lightsteelblue"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "None",
+                    "color": "None"
+                }
+            ]
+        },
+        "proteins": [
+            {
+                "id": "MGG_01949T0",
+                "sequence": "MKRAKSVPAMASPTLKLAAKGLIARLSSINDPKYAFSTASVEIYDTAWVAMVTKRSGEQKRWLFPESFYHLLKSQADDGSWGYHPQTKASGVLGTGAAVLALYKHLKEPLQLHDVSSEEIRKRIILGSESLRTQLQNWDDVLSTNHIGIEIVAPALLDYLKQEDPALDFEFPAQAGLREMNAQKMSRFKPEHLYEAKVSTAAHSLEAFVGKIDFDRVRGHLWRGSMMASPSSTAAYLMYASVWDDEAEGFLQHVLKAGAGHGDGSMPGTFPTSYFEYSWTVVTLLQGGFSITDLGVKELNIIADHLEAGFKEEGGIIGFAPRAPDADDTAKGLLALDLLGRHLSPDRMIKVFEGRNHFTTFGSERDPSLTSNCHILLALLQQPDVAKYYPQIIKTANFVCEYWWSSDRRIRDKWHLSHMYPTMLMAEAFTELLRHFDNGTYPKAADGQLIWRVCICLFQACHRTLLEQGEDGSWEGMPEQTSYAILALAQARKLSLFDGLGKQVQAAIDRGAHYLKTRKVGHHDASWTSKSAYRVAIVAEAYELAALNVQKATRDGAPAVGRSIELPISGPRLDGYVDLVAKTPLFSDVPQWQLRASLVEASLFVPLLRDRRLSVFSRDEFDASEDKYLEMIPFTWVSCSNRGGSFMATSWLYDMMLVSMLSYQADEFIHKSAAPALRGISALSRLIDGVFDELASESKHVNGKSSSSSSSSSSSTTTTTTTTSEVEKKVRAELLRFVGHLLGHPSLARSSHWDLEALRRELRACLQANVAQIEENSRLAKHPSSPVLHTRARRTFFDWVRTTASDRTAIAFPFYFACCHFSSSQTPGEDVFATAAEKYLVDAAIRHLATKGRLMNDFGSTGRDSAEGNVNSVHFPELQRCSAAAASSTPAAKKDVLKRLIEFEEHCCSRALELLSQACLDGHQRRESLHLQKRKVVMATVYRDVSELYGQLYMLKGAAELD",
+                "length": 963,
+                "architectures_nb": 2,
+                "domains": [
+                    {
+                        "name": "ent_kaurene",
+                        "start": 2,
+                        "length": 961,
+                        "cevalue": 0.0,
+                        "ievalue": 0.0,
+                        "score": 1717.5,
+                        "hmm_length": 955,
+                        "hmm_start": 1,
+                        "hmm_end": 954,
+                        "color": "lightsteelblue",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "diterpene",
+                        "start": 5,
+                        "length": 958,
+                        "cevalue": 0.0,
+                        "ievalue": 0.0,
+                        "score": 1570.7,
+                        "hmm_length": 961,
+                        "hmm_start": 2,
+                        "hmm_end": 959,
+                        "color": "aquamarine",
+                        "status": "unlikely"
+                    }
+                ]
+            },
+            {
+                "id": "MGG_14722T0",
+                "sequence": "MGSLTFPETANADREAALLTQHLLDNYDSVHGAGFMSCTVYDTAWLSLVKKENVDGQQRWLFPECFQYILDNQQNDGSWEAYQSEIDGILNTAASLLALQRHSVNPLQIDVLSPGELCRRVELARAALERKLSCWNVSETTHVGFEIIVPTLLRLLDEEGISFQFEGKATLMEINAAKMSRFKPEYLYGKTQLTALHSLEALSGMIDYTKVAHHKTGGGFMGSPSATAAYLIGLPPSKWDNEAEGYLRHVLQRSPGKDSVPSAFPSTNFEFSWVLSTLLHAGFTEKQLGPAAREVANVLNRVFETENGVVGFVPSIMADADDTAKTLSALNMMGFRKPATRMIEDFETETHFRTYPSERDSSFSANCNVLLALLHHPAPSQHTSQIKKVAGFLCNKWWNTDGAIKDKWNLSPLYPSMLMVQAFVELLHLVEGGRLPLSILDEEVGIKYAIAIYRSCVQAIQEQDDETGSWSDSVEITGYAVVLLSMAAQVMFVDPIRPELLNAVRRGCEYLQPKQSPSGDYLWIEKVTYGSPVLSQVYRLAALKLSSSIAPTSHIGRILNIPTSSPRAESFIKLYKATPLFSTTPEWKLRSAMAEGSLFLPLLKRRRDDVFTREAMTEDKYLEMIPFTWTACDLRAKSGASPSFLWEMMHISMLSYQGDEYMESVAAPAFAGDMDSLRHIVHNLIPGIANGIGHGGSYSDSEGTIQRVKDSTGRDAALKPLKCFVDFIMNHWAVVASSPADRASMSRELQGYLLAQIQQLEDNGQLAQAAKQPANLAFNVPFSLWVRTTSADHSSAPCYFAFVACLLTSIVAPPSNGNAGDCFQTVEQKYFAAAANRHLATMCRMYNDYGSVSRDAAESNLNSLDFPEFSACGAESPKASLFSLAQYERACLEDSLSRLEKECNRGSGGACQKATQMRRMTYWRLFCDVTDLYGQIYVIRDMSSNVKKAAAANM",
+                "length": 955,
+                "architectures_nb": 2,
+                "domains": [
+                    {
+                        "name": "ent_kaurene",
+                        "start": 1,
+                        "length": 947,
+                        "cevalue": 0.0,
+                        "ievalue": 0.0,
+                        "score": 1722.0,
+                        "hmm_length": 955,
+                        "hmm_start": 1,
+                        "hmm_end": 955,
+                        "color": "lightsteelblue",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "diterpene",
+                        "start": 4,
+                        "length": 944,
+                        "cevalue": 0.0,
+                        "ievalue": 0.0,
+                        "score": 1604.4,
+                        "hmm_length": 961,
+                        "hmm_start": 2,
+                        "hmm_end": 960,
+                        "color": "aquamarine",
                         "status": "unlikely"
                     }
                 ]
@@ -509,29 +442,34 @@ $FAM_LIST = [
                 {
                     "name": "C",
                     "evalue": 0.01,
-                    "color": "fuchsia"
+                    "color": "navajowhite"
                 },
                 {
                     "name": "A",
                     "evalue": 0.01,
-                    "color": "orange"
+                    "color": "darkorchid"
                 },
                 {
                     "name": "PP-binding",
                     "evalue": 0.01,
-                    "color": "papayawhip"
+                    "color": "maroon"
                 }
             ],
             "forbidden": [
                 {
-                    "name": "None",
-                    "color": "None"
+                    "name": "KS",
+                    "color": "peru"
+                },
+                {
+                    "name": "AT",
+                    "color": "mediumseagreen"
                 }
             ]
         },
         "proteins": [
             {
                 "id": "MGG_00022T0",
+                "sequence": "MGSIDDSELILSHQGLSASNHDQVSDRTTAFWRQKFEGLEASVFPTLPSSGIDVLRPERQSEHFVSYDTAVAADLEPAVQAFIPRAALAVLLSRYSNSSEALFGIAINQPHPVANDPKQSAGTRPEWLLVPTRINCDSDLKGADLLRHVAADDAAIQEFNASTLDLESIRHMSEYGSVACGFQTVLRVVVTGQTDAQAAASAGATTGALGIASDRALLIDCYMGIGSTFIRAQYDDRAIDGLQVARVLRQLGLLIEQLQTGSVQLPISKLNATTPSDLEEISSWNSTPMQKNEICIHDYALAYGRKFPDAIAISSWDGEWTYAQLDKVTSDLADHILTLGEVEVGQVVALCFERSKWTVAAMLAVNKAGLAFTLVDPSLPPARIANMCEQTSAKLAFTSQSNWATLNAIVDRCIVLDQEFVERIPQTPEDSGSRKLKQQTRKPQPSDLAYVIFSSGSTGEPKGSMVAHWSFTSSASELFPALGLDHTTRTIQFASYAFATSLVETFATLGHGGCVCIPSADERINDTAGFINRSKANWAIFTPSFISSLRPEDVPSLTTLVVGGEPLSTATRDAWASKVRLFNGYGLSESSGMAAVHRVQPAVPEPHIITRTVCLRIWLTDPNDVGKLAPVGAIGEITVETPCLALGYLPSSSAEARSRFLQEAPKWRRERGAPYEAEPFRMFRTGDLGRYKSDGSIVYLGRSDLQVKIRGQRVEMGDVETNLRRFLPSDTPIPIVEAIPRPDGRMTLVAFLTGPLGKGDKERTEETYVIADSAARQSITSKLLKVLPQYCVPTHFIRLKELPKTVTGKTSRKDLRAIGARLLSTAAQEGSAIVAIPEPNGDLGSEKAIALRRAWSQAFDLNPQVPVSDSVNFLDLGGDSITAIKLVNLAREQGVTLKVTDLMRGATLASLADKVQRQVGAATAAASRIPVMAATHEGPVQQSFAQGRMWFLHQLNPDSTWYLTPVAMRLRGTLRIDALEAALNAIEERHETLRTTFEDKDGLAIQVVHPMRHKKLRIVDVDEATLAATLREEQTKVFDLTSDPAWRVCLFRVVDDDNVISIVMHHIISDGWSMDILRQELAQLYSAAVMGPLNSPLPPLPLQYWDFSVWQRQPEQTVKQRKQLEYWKGQLTDSSPAELLLDRPRPTMPSGRAGVIDLSIQGRTYKQVIEFAKLHRTTPFAVMFAAFRAAHYRLVAAEDATIAVPTAARTHAELEPLIGFFVNTLCIRTFVDGDQDNFESLVRNQVHPAIMAAFDNQDVPFEHIVNAVLPAAERDTSRNPLAQLSFVMHSGPDIGTLQLEGVEVEPVTGGLAGVGSTTRFDLEMHLFHRQQDKKITGHAMYATDLFERETAQALVDVFQEVLRQGLAQPRTPISVLPLVEIPGLSIFDIEPTPYPRDSSIVDIFRQQVAAFPDAIAACDSAGRMTYSELDDKSDKLAAWLRHRGIPAETPVGILSPRSCQTLVAMIGVLKANLACLPLNVDYSTTRIKHMLSSAKLVNTKTQPTAEYGGRSLVLLGSKVSLPKGLDDLPDTEIVAIEDALKSAHEKGLTATDSGNPTATSLAAIIFTSGSTGKPKGSMLEHRSIVRLVKDSNVVAKVPPAAAVAHVANISFDVSMWEMYTPLLNGGTVVCIDYLTTLDIPALAQVFARERVSAALLSPVLVKQILQRMPSMLAGLEVLILSGDRFDVRDAKQARALVANLYNSLGPSECCVLNVIYRIDEEDELASGVVPLGRPVSNDGLVVMDSQQNPVPAGVMGELVVFGDGLSRGYTNSALDKNRFIHIDLESRGLTRAYRSGDRVRVSPKARQIEFFGRMDMQVKIRGHRVEPAEVEQVMLALPVVRDAVVVVRQGEDEGEKELVAFVVADDKAVAQQTQQQDQGKKQLGDSSQVEEQVKGWSEHFDVGLYTELSTVQASAIGRDFLGWKSMYDGSAIPLDEMTEWLDDTMRTILDGHRPAGHVLEIGTGSGMILFNLGQGLKSYAGLEPSETAATFVNKTIDSIPTLRGKAQVHVGTATDASRILQCQGSSPSSMPELVILNSVVQYFPTIDYLADVMETLTSMPGARRIVLGDLRSYPLNRQFLVSRALRSLGRGEAATKAAVRRKVMELEDREEELLVDPAFFTALAKRFSSRVSHVEILPKVMRATNELSAYRFAAVVHVREAEQGADDKTSSESAGSDLIDINAAQWVDFSASGMDRESLVRLLKESAAAGRTSPSDDSPPLVAVCNIPNSKNIAEGHLVKVLEGENGQGAGEEEDDESEDWVALARSRAESSTSLSAADLVELAQEAGLRVGLSWARQRSQQGGIDAVFYRDSRNVRFRFPVDGDTTASGSQSLPLANRPLQRQEHRRIVASINESIRTILPSYMVPAQIVVMAKMPFNPNGKVDRKALRSMAHVVPKTQTAGERVEPRNEVEAILCEEFSDVLGVQVGVSDNFFTAGGHSLLAQRLAARLSSRLDTRVSVKNVFDRPVVGQLAAIIRRGSTPDEPIPSLGHRQPTELSFGQNRLWFIEQVNPDASVRIPLAVHLSGPLNMEALESALASLQERHETLRTTFKQSDDGVAMQFVHPASELKTTLKVVDMTTWQNQVPAGALDKEKAPSSTLTQAIKDMQNQPFDLSSEPAWRSSLLRYGPEDNVLVIILHHIIYDGGSIEILTRELELFYAAALRSQDPLSTVEPLPIQYRDFAAWQKQGAELAKHERQLEYWSKTLHDSTPAELFTDFHRPAMLSGRADIVPFVIDGPLYDRLRTFSRTHQITTFATLLAVFRAAHYRLTGAADATIAMPISNRSRPELENLMGFFVNTLCIRIPVGGHQTFAELAQQVRNTTTASFSNQDVPFERVVSTMMPGSTDMSRNPLAQILFAVHSQQDLGKIKLEGLASESLPLTAITQMDVEFHVFQEVGRLKGQVMFSTDLFRAETISNLVLNFKEVLRRCLDDTQLSLAAIPLTDGVPRLDKLGMLEPQMNDYPRDSNVVEVFRAQVAKKPSATAVTDLSYSLTYQQLDEQSDRLASWLRRRHLAPEALVAVLSPRACETVVAFLGVLKANLAYIPLDVNAPPGRIDTILSCVPGSKLVLLGAQVPQSSELKAIANVELVRIGDAVESGEHEAGDQNLNLDMAGPSATSLAYTIFTSGSTGKPKGVMLEHRAILRIALDSNLCDYFPESPVVSNVCNLGFDVSVQEIWTALLRGGTLVCVDHFTLLDSRQLEEVFMKNKVSVAILTPALIRQCLTHAPDIIRRLAVLISVADKMDPGDAMKASKLVSRAVLNGYGPTENGMLSTIYEVDKTTVYPAGIPIGHAITNSGAVVMDSQQRIVSPGVIGELVVTGDGLARGYADPVLNRDRFVDVTIKGRLVRAYRTGDRVRWRPDDYEIDYFGREGQLLKIRGHLVEPAEVEAALLAAHEAVESAAVVGLSKPGSDTDLVGFIRLHGSDNRAAAAAAAASSIESQTLKALRMVLPTYMVPVRVVVLEEWPLNASGKLDRKQLGVMAENVSVERQSEAVERDYVAPSNEVEAALCQEFANAIGLTEMGVTHNFFELGGNSLGAMKLAARISRRFKTHITVKTIFDHPVPRDMASSLPQLDASTLVDGENGTGDDSDPPASQYESFQLCPVDDVQHFVKSEICPRLDHKYRDRVVDVYPASTTQGFYANDPPTGKPRSFNTFSVDFPAGADPSRVIEAFEAVMQHYDSLRTVIVRAQGRFWQVVLDRLEEPVETLELPEGETDFEPAVQQIIAADKQNPPNLGQAFIRVALLRTRDGPLRLMFRMSHAIWDGMSLGPFMKTFHSLYKDLAVPPSPRFALYLESLSKIREQGISHWSKVLQGSSVTVMQSIRESRKLMPVDRAAFMSRVVHIPPEAQAPLGGGITQATIFTAACATVIAKETNCSDLLFGNVVSGRQFLPTHLQNNLVGHCGNLMPVRIVGVDEGAEPRALVKQVQDQYLEGLAYEAITFDDIKENAGVEWRSDADRFGLATAFMNFEQHPESTIGDSTISIHHIPPEIRMRKSTVSGEDLLLILQPDPTTHDMEFVAFPEPDGRNFRLGVTANLRLCESGEVDHLIEKVCDAFVAMNKSLR",
                 "length": 4068,
                 "architectures_nb": 1,
                 "domains": [
@@ -545,7 +483,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 169,
                         "hmm_end": 280,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -558,7 +496,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 474,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -571,7 +509,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -584,7 +522,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 283,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -597,7 +535,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 448,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -610,7 +548,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 435,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -623,7 +561,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -636,7 +574,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 4,
                         "hmm_end": 283,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -649,7 +587,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -662,7 +600,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 68,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -675,13 +613,14 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 281,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_02351T0",
+                "sequence": "MDESEKVEALAPSRRELDQIWHRNASVLDQMPGLVHDLISEVAAAQPGALAVCAWDGDLTYRQLDELSTSLARRLVGLGAAPRSTVPVLFPKSRWTSVAMLAVVKAGCSAVALDGTQPDSRLRSIVGQTRPPLVVAAAKYRGRAAGLAGGVPVVQLDDSFLEAGAGDAVAKLPAVSASDTVYISFTSGTTGQPKGACISHANVRSAVHYQGRDLGFSRESRVFDFAPYSFDVAWSNFLHTLCAGGCLCVASEDDMLADLSAAISAMGATLINITPTVLRTMRVVPPSLQSVLLSGETPYRENVTQWAGRVRLVNTYGPTECTFKCAFAEIDPAQQDRPHLGMGAAFALWIVDPADATKLAPVGSAGELYLEGPLVGQGYLADPDKTASAFVHDPPWLLAGSSTHPGRRGRLYKTGDLFRYDAQGNLLFVGRKDTSQLKIRGQRVEIGDVEHDVLSLDASCISTNDGFLRLGGDSISAMRVVAAARAEDMSITVADLFQRPTLAEVAEAARTRICSPDEQPVLPFTLLKGSRDPVSICEDVASLCGVASADVEDVYPCTPLQEGMLATSAKSAGSQTQSDATDYISRVAYELPAEIDLDEFKEAWARTVQRASIVRTRIVDIPSEGLVQVLIRRPIPLDRFSSVDEFLQTSTPMGLATPLCRSGVVVAKSSPRHLLLLEMHHAIFDGWVTKLIVEALESALVKSTPERPLAPFQPFIRHVLASDTPEAAAFWQNQLADSTAAQFPPPPPPSHQPCQKLDLSHAVRELQWARRSGITPSTVVRTALALLLASHTNSSEVVFGATVSGRTAPLNNIESIAGPTIATVPVRVRLDWDQTARALQRQVQQQALDTNRHEQYGLSRIRRINDEASRFQLLLVVQPGGRDRSYLFGQAKSIVRTADDAGSDDVQLVAKDGDMDSVGMHNPYAMMIICQLQSAGLVLRVNYDPGAVETAAVGRMCVQLEQLIRQLCDEQLAESTLRSISPITKQDLGQIWRWNRAVPKAAVGFVTSMIDEWATTNPDGLAVASWDRSLTYRQLRDLSEHLAYRLLHQGGGVGPGSLVVLNFDKSSWLVVCMMATLKMGATALPLSSPATTHRALEIIEAVQPKLVLTSGPAEESPFYTKVPTMSVSDLTPNEEWLHVPEPHTVTPSDPALVLFTSGSTGTPKSILWSHETLSSNICAARDSFGITAQSRVLQFAGYEFDVSTVESLAVLSAGGTLCIPSEADRTNRLGEAVTEFQASWVCLTPSVSETLDPRELSSLKTLVFAGEKLQRKTASRWVGTLEAVYNWYGPAEASVATCCLLQKSETCNSSPSPLTIGKSSSRGLVWLVDPKDRNLLSPIGAVSELCIEGPIVAQYAGQNSQRLNEESFFSPRWLQEGHEELEMSGREARLYQTGDLVRYDGCGRVVFIGRKHESQRKLRGQRVELGEIELRVHEFLAGRLEATVVAEIFCPDKSDKETLALFVSPLSLPDDADNVTDHLKRALPVDELEQALLESLPPHMIPKVYVPLAKMPTNHSGKTDRRRLRQMGSSIARAELAAMQPSRKAARQPSTAMERRLQQLWADVIGIEAGAIHAGDNFLRLGGDSITAMRLVASARHQGLALTVADVFRSPLLEDMAECVRKDCLLWGRESMGNPERLAVAWSATVANLPLLRTRIIDLPGQGLVQVVLDDLPLQPVDDLDAFLRRDQETPMGLGTELCRAAMVDRNFALTMHHCTYDGNTLKMILEELERQYLGRPGLSTTPFQNFIHHVGKMDKAKSAEFWKQQLSGSEAAQFPALPRATYKPQADQRLQHDIALTWPRAGVTPSTVARSAWALLAAQHTRCDDVLFAVTVSGRQAGMRGIESCAGPTICTIPVAVRIDWAETIGGFLARRQSAMAEATAHEQLGLQNIYRAAGDGLDPRHVQTLLVVQPVAEGRALDRDGLLFRARCFASSLDTLGVDPFNNYPLQVVCELRPDGMRLRVSFDAGVLDPLQVRRMAGQFETVLRQLCDEGMAAVRLGAIQTASDEDLAVFWAQNAQVPRGADALVHDSIALAARTQPGSTAVDAWDGRFTYRELDELSTQMAHALAGMGVVEGSVVAICSEKSKWVPLVQVAVYKAGGVTVLQSVAVPELRMAKVFERIGVKLAVVSESRLEVMSRHARCCTIDQLLRISSPDSQDKTQQPAALPLLRMSSPAAILVSSGSTGEPKQVLWSHGTLSSNAKAHGEYLGVDAGTRVLQFASYDFDVSTIETASTLVHAGCLCIPSEAERLDGLGGAINRLRTDFVNITPSTAKALRPEDVAGTLRTLVLSGENLAGEDVRRWKGTCPVLNWYGPAEHPATVLTASDESWYTGVIGQVCSRQPALCWLVDPEHPDRLVPFGTVGEIALEGPLGADGYVANDAMTRQRFHETPRFLAAGHGEVPGRQGRIYYSGDLGRYDSAGNLVYMGRKDAQLKIRGQLVAPEEVEAQIRTWLNDNNNNNNNNISNSNSNNNSKPEVVVDVVSRAGSKHTLVAYITAETAELELMTSALTTKLEATLPRYAVPSYYIPVPAIPTNASGKKDRKRLREIGSAYEPPRSTPASGRWEPTTTAERTLRELWSTVLKMDPEAISAGDSFLRVGDSIQAMRLVGLARQQGLVLTVADVFEHPVLEDMAKCVRNRVDKDGDDEDGVAPFTLLREGTDQQAVRREAAEACGVDEDDVQDVFPCTPLQEGLLALTIKSPGAYTGRNVLQLTPALDLDRFKQSWEGVCAMMPILRTRIVHLPDQGLVQVVIREKDCWWTDAADVEEHISKDQKTPMGLGSRLVRCAVISGAASESGQGCFYFALTMHHSVYDGLTMPVILEALENIYHGSTPLQPLPFQTFVKYIQERDKEAEATFWKSQFSGLEAAPFPSLPAPDYEPATDSQLTHHVADVSWRADDASPSTTLRAAFALLCSRYFSSADVVFGAVVAGRKAPVGGIERVVGPTIATLPVRVRLDAEATVLRLLEAVQRQATDMIPWEQAGLSSIRQLGEEASRACQFQTLLVVQPGAQQTFQEGGLFVSEAENQRSDSGAFDSYALSLVCTLEAGRLSLDFRFDSRVVDRDTIERAAHHLEHLVRRLCTSELDQTPLGEIALTTDRDLNQIWRWNAEDFARVDACVHDLVSQTARAHPQAVAVSAWDGEVRYHELDAVSTVLAARLVEMGVVRNTVVPLVFEKSMYGMVALLSVLKAGAGVLLLDSTLPESRLQAIITQTNPAVVVSSVANQDLTSRLVQPTTKTMPLGPDSYATLRGTTRTSDLPLQRCLDKLPRVAPSDLLYAVFTSGSTGTPKGCQIEHGSFCSAVVYQERVIAPLRPGARVYDLSSYSFDASIWMILRSLAAGATLCVPSEQERRDDLEGSMRRFRTTDVAMTPSTARLLHPPRLPTLRHLHVGGEAVTRADAARWTPFAAVFVGYGPSECNAAAVWYRVPAVDAPSPLPIGKGTGVSTWVLDPASSERLMPVGAVGELYLQGPLVGRGYLGDHETTAAAFIDSPGWLVRGSPDGSVPGRSGARLYKTGDLVRYNADDGSLVFLGRKDAQVKLRGQRIELGEVEHHLRQCLAAEFAEPSVAAEVVVPAATGSATLAAFVQIPAGERPRFQEAIRGLEDALKKRLPTYMVPSAYIPLEAIPLAPSGKTDRKALRGLGVGLTLEQLDGGGDDDENAEVTGLAIRLREMWAALLPVPIDKIRANSSFLRVGGDSISAMRLAALARTGGFSLSVANILRNPVLCKMAETMADLRQQDGDLENMAIPAFSLLKTTKDAALAVLTSQCRVEASQIQDAFPCTGVQKSLLSMTAKSEGSSYIARFLLRLRPGTDARRLRQAWEDVSRTAAPILRYRIVDLPREGLVQVQIDEALEWDAYESVEACLGRDGQRGMGLGDRLTRLALVQDEEGPCCVLTQHHAIYDGYSMDLLLDQVARAYAGTDDEGPLAPFQAFVKEYVVDANQQEARDFWRGQFAESEAVPFPALPSADYRPRADSTVKRHIGGLAWPKRNATASTVIRAAWSVLTSRYTDSHDVVFGAMVTGRQGSLPGIGRMIAPLINAVPLRVRLDPAARLEQLLDQLQSQAVAMIPHEHTEVLDIRRLGGPAEQASRFNTLLVVQPAGRPEYTAGGADGPFAAAPESLSSRDGLDDFNPNAVMVMCQLAGGGEVDIELSFDSGVIDPVQMARLAAQFEHVLRQFCSGGAASVRDVDLVSPQDLAEVWRWNAQVPAAVPRCVHELVEATARRQPEDCAVCAWDGSLLYSELEALSRRLALRLAALGVGRGTTVPLCFEKSVWYPVAALAVMRAGGACLAMDSTQPEARLRSIVQQVGPKLILSSASTEELASRLSDDAVVLSVDAHKIKQLPESTVDGDPSLPKTSPTDVLYIVFTSGSTGVPKGIVTTHQNFASAAAHQADMLHIRRGTRVFDFVSYNFDVSWSNHLQTLISGGCLCIPSESDRRNDIAGAFNRLRCDYSYFTPSVAKSLDPSALPGLRTLAMGGEPIQNTEVARWTSAQVETVIGIYGPAECAQALTFALLTPATRNNHVGRPYGANVWLVEPGRPDRLAGVGTTAELAIEGPTLSSGYFGDAAGSAAAYVETPAWLSHGAEGHAPRRGTVYMTGDLARYGADGSLDFIGRKDALVKLRGQRVELAEVEYHVAACLREGGPCVGIAAEIVTPKNGSSPILTVFLSVGDSETPKETEPQETEAKLVQILQDLEQLPDRVPQYMVPGAYISIPQIPMTTTNKTDRRALRELGGSKTLEELTRLQLRGRDRRAPDTPMERRLRDLWSAVLQIDPASIGADSSFLRIGGESIAAMRLVAAARAAGLSLTVAHIFKAPRLCDLALLVKEVGSGADEQIPRVRPFALLKTQDPEAFVARYIAPAVEGGRPAVQDVVPATDFQEQSVADALQDPPGRYPHWTFDLPTDVDFARLRQACVELVNHYDILRSVFVRAEGRLWQVVLASLDPAYDTIDAGDADMATLVNSVCEQDIKRPRVLGRSFIRFIAVKHASGRHKFIFRISHAQFDGFSWVSVLETLWSIYRGDPPAAGPSFTQYVAHAESTRAEAQSYWRSLLRGSPAPVGTRPNLPSAAAGSSSNLCSPANHLTVKETIAVRSSAQDRSRDGASLATLFHAACALVLARRHKLREVVFGRLVTGRSMLPGRLQEVVGPTMAEVPIRAVVEADDTVAAVAARLQAQFIEGAAHEAVGMVRIIEGCSGWAAEGVRDFGWRTAFQQPEDGRSSFLGRPSGVGFYEGAVPSRVRSEIYATPVHGDRLELEFEGNKRFVSEEDVREVFAGLRDALS",
                 "length": 5286,
                 "architectures_nb": 2,
                 "domains": [
@@ -695,7 +634,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 405,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -708,7 +647,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 12,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "unlikely"
                     },
                     {
@@ -721,7 +660,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -734,7 +673,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -747,7 +686,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -760,7 +699,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 37,
                         "hmm_end": 284,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -773,7 +712,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -786,7 +725,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -799,7 +738,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -812,7 +751,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 2,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -825,7 +764,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -838,7 +777,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -851,7 +790,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 3,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -864,7 +803,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -877,13 +816,14 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_03401T0",
+                "sequence": "MSAFIQPALGSPKPLLPRIDTTNTRYEHESNPKTFNSANESVEARLVWAIGDILGIDSTSIQMVDSFTDLGGCERTAARLSTTCRDLGLEVDSSDIMNCFTLAELQTRITPCSREVSPQNVPTSGSLAIQPLKLRTDNVAASQARYSVAPSTAISEVHFDHESFICDEESVSRAVIIKPRAGFFDGKQVVFLSLAGLQVPGTPTSDIEVIPQTKMFLAGTKVASIRHDLEAAAIATDLPDIWIVLRQLPVTEHGALDRRKLRTWLQNINQETYQHIMSLDTEETLQQPLTDSERALQKAVSNALQAPREEIGMNFSFAQLGGDEVSAMQVVARSKSDGIFLSATELLQNSSLAQLAAMATSRGEMPRGWDGEPEGEHFDLSPMQQLYFMTTMGGDSRYRVGKDGNYRYNQSLLLRVKKNFGFDNISAAVQALVGHHTMLRSRFYRTAEGGWTQRTVAPSNNSYAMQFSTIGNNKELEIVIARSQAMIDIESGPVFAVDHIQTTDDYQMIYLVAHHLVVDLLSWRVILDDLNELLMSGSLLSHRSMPFQKWNELQKKEIEQTEITSPLPAGTPVGNYAYWGLQDVSNTYADASELGFSLSPELTTILQSTCNRVFRTECADIYLAAILLSFSQTFHDRSVPVIWNQEHGREVSDPSIDISDTVGWFTTLSPVGSVLAGTGNDFIDVLRRLKDVRRALPRRGAQYFASKFFKFGGPDLFTEDWPFELIFNYAGSLERLEESNGVLEQIPFPGRTLASKTSNIGPNVGRIALFEVSAMVSQGSAHVKLVYNRRSRHQDLISQWIQNFEHLLLEAIGRLRYHTQELTMSDVPQLDVTYDGLRKLNYERTSLLNLTSVRDIEAVYPVTAVQQGILVKQAVDQEASYLHAIYEFSSLTGRPINISQLCAAWQNVTTKHAALRTVFIDSVTETGVYDQVVLRRTSPSMLFIDVTSGEDPSESLNNLPALPSRTSGQTQHRLAVCNTPTKTLVKLDINEALCDPQSLNVIFLDLRRAYTTNQPLPEPTGLTYPDYLKFLESARTSQSLDFWIGRLAGAEPCLFPRLTQESPKPVFENYSFDLEVDGSMFVEFARSRSVTPDAVLRLGWGLVLRVFSGKDNVCFGYRATGREAASGGPSMRNAVGCFSNTVACNFDLSPYNSLANVLAIVEEQYVASLRHQHVSIPEIHHVLGKRGNDQLFNSVVSFTNEPSELRSRHTGQADFELNSVSHRETSCYDLAINVRLGSGRLVVDIGSLSLVGEREAPNIANTLSKALRTIMEDPASSIQGINLFTDRDYAQVVAWANERAPPEPRVAVVHELVETNARGNPHAMAVCAWDGQLTYGKLDDLSTRLAQRLSEAGVTTGVTVPLLLEKSVWSPVAMLAVLKAGGAFVPIDSADLSMIQPIFDNISSRVAIECDNAGGVLRNLFDTVIVLNGELMTQLKLQAPRHVESLATEDDAACVFFTPSNSREVRGTAFTHGALSIALLTQGPAASINYGSRVMQLSSYNIDIAISEVFATLVNGGCVCIPNETERVFDYVGAVRRMEVNWSYMTPHLSRKLNLEHLPSLKTVCFRTRSLDEDTYAPWAGKKKVIFAYGAPDVCPLGISFMEVHGPHQLNRIGTPLAGNFWLVNPEDHRNLMPIGSIGELVVEGPTLGCSFARGQMDRTHWNAAEFSGSAPGKNTRYFKTGHRMRYTDGGALQLVSQKREDIEIDGSLVVLSEVEQSLRRCLGQGMDVVVEAIAFKGSKAPPVLTAFVELGSMFDGPEDLQRLSHVTRERIFKAKRVAETGMRNKVPHHMIPQIFVPVKDLPITSSLKVNRRRLQKTIHGLSREQLLSLSSVPNPNEVQTVGTTSLPLTQTEERMRRIWAHVLNIEDETTISAVDGFIKAGGDDILAAKLVVCCRQEDIAISIADVLRDMPLTDLCRPVTAGDSRSNVQSFSTASSTSTRPTSTSQAGSEDITPTQNNSHASVAPAIVDPEKKARDDRLRGVLATKVGVETKEIKDVAEASSMQSRYIESGMLRGRANINYFVFSFHGPVDHRKLEEACQTLITIHPILRTAFVPYKRRMYQVVLKTPPADFNRYLCPSWRLAAFAEKVIKKDQSTPIAFSAPMTKFILLDGGKQSTLLLRLSKAQYDDLSVALLVKDLKKLYDGAQNPPRRPTYAEFIRCAHISNKQGAEEYWKLLLDGANMTRVVAHSKPHQLTNHVKTIRQRIAVPSLAHLGISFETILKAGWAMTLAELSGTADVVFGEIVDGRQIRLSGGQSVAGVLGPTANTTAVRVRFPEGDGRLSPLDLLQYVHGQRIAGIPFENFGFLDLVERCTSWPYWMRFSTVVQHQYEETTVVPSESKLFHLGKGGDAGALCKFSIIESRAQDVPDMFIHSMARGGITANDNSNIELNITFCENRIPVSFAEETLRILIGNVAVLTSGSIMHVVIPSAAQYKSKRPQIPLPQMPSTTLTPSSPVSHRLPASDMEAIQRVISKCWAAASLDPSSLGVPEEHREHAAFYDLWGSLVPASQLASFLTREIPKLGLLGVGVDFGVTMEEIADNPTMARQLDLIVRKAALALPKSAPLPSSPSRNSHTYHLSLDSSRKVAAPLSSPSRNIASKAVSKLTSKLKGSSADKEASRSSLKLPTRQDQQVPFSAPPFKSSFDTSARTPSPPREQPPVPTGVAESPRLPYSAPYNAQDELERQLDRVLNEITAANENALNTGRSTRNASIDNDGVQMQRGGSTGTYSSGVDYSSGVDSLTDGSSTTTHSTTSSDFENAVYASLPGYFGGGSNVTVQKAPVVSPASSSARTPRTPRSTQYRQKFYGQNISIKPLPHTIPEGGIDDVVSPLSPPQGHRRFFSAGGGHSRYHHQRGDSSLVTPITTQGPPPPYMDYPRRG",
                 "length": 2882,
                 "architectures_nb": 1,
                 "domains": [
@@ -897,7 +837,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -910,7 +850,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -923,7 +863,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 281,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -936,7 +876,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -949,7 +889,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -962,7 +902,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -975,157 +915,14 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_03810T0",
-                "length": 4256,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 13,
-                        "length": 432,
-                        "cevalue": 6.1e-178,
-                        "ievalue": 2.1e-175,
-                        "score": 583.3,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 417,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 573,
-                        "length": 338,
-                        "cevalue": 1.1e-96,
-                        "ievalue": 4.2e-94,
-                        "score": 315.2,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2558,
-                        "length": 75,
-                        "cevalue": 2.8e-16,
-                        "ievalue": 7.8e-14,
-                        "score": 51.1,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 70,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2740,
-                        "length": 305,
-                        "cevalue": 4.3e-58,
-                        "ievalue": 2.5e-55,
-                        "score": 187.3,
-                        "hmm_length": 284,
-                        "hmm_start": 3,
-                        "hmm_end": 279,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3234,
-                        "length": 512,
-                        "cevalue": 2e-102,
-                        "ievalue": 5.1e-100,
-                        "score": 334.8,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3787,
-                        "length": 74,
-                        "cevalue": 3.6e-16,
-                        "ievalue": 1e-13,
-                        "score": 50.7,
-                        "hmm_length": 70,
-                        "hmm_start": 5,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_07803T0",
-                "length": 1729,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "C",
-                        "start": 151,
-                        "length": 298,
-                        "cevalue": 4.2e-32,
-                        "ievalue": 2.5e-29,
-                        "score": 102.1,
-                        "hmm_length": 284,
-                        "hmm_start": 2,
-                        "hmm_end": 283,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 629,
-                        "length": 458,
-                        "cevalue": 6.3e-126,
-                        "ievalue": 1.6e-123,
-                        "score": 412.3,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 1145,
-                        "length": 71,
-                        "cevalue": 6.1e-13,
-                        "ievalue": 1.7e-10,
-                        "score": 40.4,
-                        "hmm_length": 70,
-                        "hmm_start": 3,
-                        "hmm_end": 68,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "KS",
-                        "start": 1264,
-                        "length": 449,
-                        "cevalue": 3.6e-106,
-                        "ievalue": 1.2e-103,
-                        "score": 346.9,
-                        "hmm_length": 422,
-                        "hmm_start": 2,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "navajowhite",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_07858T0",
+                "sequence": "MSIINHTDSAKPRLSEAEADDWRRVFQEAPPCVFPQPRAGAPSASTPSASTVQSGSVLRRQIFLPNSGRSGFPLDAVLQAAWAFLNASYSDTEDVVFGMALVDEDTDDGEPRTALPFRFTLHPDQTIADCLEAVEAQELPLLSSSGIDLEAIAGLGPELRGATQFRNQLVVYPAIMANTDVLLDRPLNVECFLNPSGVLVQAFYDPEILEGVEVRQILATFEFLIQQFDDVSNLGRIISQVEIISPQDKGQLQKWGEHFPPAVEKCVHWLFQEKARETPCAEAVFSIAEKVSWTYKQLDTLTDKLAHLLVSKRVSPGKIVPLMFEKSVWTVVAAIAVLKAGGAFGYIEPNQPWEDVSRLLGACESTFVLCSAKYEGLLSTHDVESVIIDEALLSRLPSCGSVEDISQPADISYIIFTSGTTGRSKGIVSNHSSFCTSILAHGKAEFYGPESRCFAFSAYNFDVSVTDIFTTLAFGACICIPSDEEKMNALAATAARMRVTHITATPTVSQFINPGDVPTVKTFITGGEFASPEIIKKWVSAGRNYINIYGPAECNSRITHHSFKVGDSGSCIGRPSGCVVWITKSNDPNALVPLGAPGELLIEGHLVSNGYLKEEDKTAEAFIAAPDWLVRMFPDRASSRLYRTGDLAQWLPNGKLRLLGRRDTQMKIHGVRLEAAHIEFKLSAALPSGSQAVVEKITVGQDPKGGQESKGGQESKREKLAAFVTLPGPPTNDDTPSFLEPRQDLCDLLAGVQETMLANLPAWMCPNYILPLDKFPHGQSGKVNRKVLRDMVADWSEESLNRFTVSCPAGNKEVPIGAMEKAIAGLWAEVLHLPASLIGRQDTFFRLGGDSVAAMKVAAACNNRQNGLIISVADIFRHPKLSDLAANISTAVAISETTIAPFELIGGPSCLDQYTQALNQAGIDPSTVQDVFPCTPMQEGMMAETMLSPNTYKLQHVLRLDPLIDLPRLQGALDRLVQSFAILRTRIILMPRIKGVTGSSSYQVVVKGLEEYSPVQVKTVDKVKSALSAEKKAVKVGYGSELSRFALFIAEGGKYLVWTIHHAVTDGYTYNLILEKLQEMYNGTEPSTITPTPFAHFVKHLQDQDPERNAQIWRQMLDGGSSPQWPSCSDKAHEPIVTRTITKTFSLPANESGCTISTVIRAAWALVLSGLVQSPDVIMGLTLAGRDIELPGIDNCAGPCLNTVPFRVLVKNETCAEMLRAVQQLYADIIPHQHIGIKNIRRALSVSSEACDISNLLVIQPGYRVDQGLWTQEDDLSTDEELNFGFTLECILDSESKMTVLCGFDEIMVFETKAREILDMLSTAIDFLTPASNQGKLLTEMEGLHFVQRTKIPKLNIGMDAVEQCLHSLVEEQARSRPNAIMIDAWDAKLTYRETDEYATRLASFIAGLGVGPEVIVPFAFEKSAWTTVAILAILKAGGACVALDMSYPRSRLERIMQDVEAKTVLCSRRNEQALKTYKGLHSIVVDRNSIDCLPSEAFRSDVKPTNAAWVVYSSGSTGTPKGAVLEHRSLATTARTNSEVLGCGPDTRALSFASHSFDVAIEDNIIIPMFGGCICIPSDEDRFNDLAGVMTRMSVNWADLTPTVARMLSPSTVPTLRTMVLGGEALTQDIIDTWTPVDGFKLYNTYGPSECSVQSTCCLEPLGRDARGGNIGYPMNCNIFVVDSDNPNVLLPGGETGEMLIEGPIVGRGYLKNEDKTREAFVRGLVWAKDPARRFYRTGDLGVLNDDGSLSFISRKDTQIKLNGQRVELGEIEAVLLKTSNLAQVCVEAFSPQSSPRRKLLAAFIQLERRPSNEKAEASSALEFVDMTSSTREKLVSIKQNAANHLPEYMVPSLFIPVYSLPINASGKIERKVLRELASGFSQQQTVTYALRADAAVVDGPVAESAIAEVLMELWAEVLQIDLLSHAIGSDDSFLEMGGDSIAAMQLVSRAKMAGLELSVRGIMKTPTFANMVLSAKVIPGVELRPKRISTAKVSKFGLSLSIPTPTSAISRSLPTPSLAKDEPYSAFSLVPETLSRTTLLNEVLDSVLGEERRLVNDVYPCTPLQDSLMALTAKDSTAYVLREVFDLPEHTDINRFKQAWEDVVAANDIFRTRIFHVAGHGSFSVVLDTPLEWTEVETLDEYLALDTAKEKHMNYGTRLVRFGLVSNHGSPQFVWTIHHALYDGFSYGLTLEAVDQAYQGMGLPPTRPILDLVRYLGQLPQDGVADFWTGNLEACQAIPFPPVAPGQICIADNTVKHSVKFRRPPRSKFTAATVLKAAWSILMARVSESTDVVYGLTSFGRDVPIDDVDIINGPLLTTTPVRVQVDLDATVELFLGQVNLQSIEAGPFSHAGIHNIKKLNNSCRSACEFQNLLVIQPANNNADEDSLFCDRATHTTANIISGFGLVVECGLGEETIALTAHHDSSVLSALRAERLLRQFARIIEQLIRLPRSAAGITVGEIDVLSSKERQDLREWNKNCPAWMDACMHQLIKRHTLSKPEFPAIESRQVTLSYQQLDDLATHMAHQLCELGAAPERIIPISMEKSVNAIVAMLAVLKAGAAFVPINPEDPQDRRADLLAQVQAEIILVSPNTKDRYAPFNKLKVVVLPPLNVAEWGPLNTSPLPSPLNKVKPSNLAYVLFTSGSTGRPKGVMTEHRSVCASTAGHGAAMGFGDFPRRVLQFATYTFDACIGEIFTTLSHGGTICVPTEQERMDDLSGFIRDFRCDWAFFTPTFARLLKPESIPSIKTLVLGGEAVTAESVDTWADKLRLMNGYGPTETCVFCTTRDISKGDRAEKIGHMVSSVGWVVDPQDHNRLVPIGCTGELLVQGPGLSRGYLGQPDKTREVFVPAPAWLRDFGYSTDQVLYKTGDLVRQDLTDGSLLYLGRKDNQTKINGQRLEIGEIEAVLNGKDAAIEQVVVVAGKTTIDKNKQVLVAFVEFVSKSSNNDMLLELDDESRLKMKELETLARASLPKYMVPTLWIPVSKMPSLATSSKTDRKTLAFKIANLTPEQLTAYSLSTHANVSSRAPSTNMEISILNLVAQSLGRDATSIGVDDNFLALGGDSITAIQLTAAARAAGILLTHEDVFRHPCLADMAMVATFTDASAANAHDVTDRPFSLIPEDKRETLFSALETTYRIPRSTIADVLPCAPLQPGLIALTAKDSQAYVLREVYRLPAKLDVARFKQSWEAVARDAGILRTTIVNIDELNSFYQVIRGVNNKVIEWRTGKSVKGYLDEDKRLPFQLGTPFSRLAIVDTPFTGSYFIWSIHHSIYDGWSKNLILRRVQAAYESSSPQPVIEPTPPFSRFIAHLQQTDPEECKAFWQNQFKGISAPAWPPLPNQQFNPLLDGEVAITLPFERPAGSRFTTSTIIKAAWALVQGCHSGSPDDVLFGVIQSGRDTPVQGITEMVGPCITTVPLRIALDRTSTTVPQFLQMIQDQTTDMIKFEHAGLQNIQRMGRECRDACGFACVMVIQPPDVHDEASFLGAQKLSDEEKETLRFGMGIQIRIRRDNQLDVLGNFDHRITPEAVMRRILYQFKHVVEQIMEHAGESTMPVSDVDLFSPYDRDQVIAWNQPTELTPVDLEGHLAGGLTHELFHRTATVNEAREKSMAVNAWDVDFRYGDLDRITTKLAHHLRNTFNIGPEVIVPLCFEKSGWAIVALLSVIKAGGAVVFLDPSYPMARLNEILSQIEAKVILCSLAQVSLWRSSGLSVQVVDNVSIAALPDAGPELPITNATMSSSLYVIFTSGSTGVPKGCLIEHRAFLYSCQAQARIFGMRPDHRVLQGCPYSFDVSVMEILTTLLHGACVCVPNERAKNRSMVEVINDFHINWTFLTPSVVKFIDPAEVPTLETLILGGEAMTRQSIDIWAGKVRLINGYGPTECAISAAVNNNITLETDPANIGKAVGGMCWIVEAENHDRLAPVGTVGELIIEGPTLGRGYLKNPEKTAEAFINDPAWSLKLDGKHRRLYKSGDLAYYDADGCIIFCGRKDAQVKVRGQRMELGEIESHLSQNPEIQHAAVFYPASGPCKGQLVGLVSLKKVGAETNRDGIVELVDGQETSIAAAITSDATIQLSSLVPGYMIPNLWIPVKSFPLLPSEKLNRKCLAQWLNGMSDELHKRVCGISTANPDGSSVSPLAQVAEPFTDAEKTIHQVWCDVLNLQAKEVGITQDFVTLGGDSILAMAMASKLRKAGFQVSITDLLITRTIAKLAARIGHTAKSPRDKSMRPLGLRLVSPATESDLDNENDTGYESDNSDATTAATSISVASRGRAKAAHPALSQQPTELFDLTPMQQYYANLALGNDELSRQTDARFNHSFCIKLKRPINPAILSSAYSQLISRHMMLRVRLQRCGKEQAACGFRQFVSPDIKRSFRLREWSNVASVDDVKDRLEDARITLDLENGPISSLDLVSTTAGDSFLYIVAHHLVVDLVSWNSILRDFDDLLSKGAFSHEEPGPFPLWAQKQAEYARLHLDPKTTLPAPIPAADFAFWGMADADGNLVPNLARDAIHHTICIPEAATAMLLRESHAKHEAEPMDVLVSALTRSFFLVYGQTRESPPAIFRFGHGREDIEGLPDVSSTVGWFSTLSPLHVPVGLGGDCSAAGVLGRTVELRRRTPHNGWAYFAARYHHADGGAVFGGHERMEVAVNYLGVRDRQVRGADSAVFDLSRMVDGGLGAGGQDVKCMSLFGVTAEVRAGCLEVDLEWNRRVRGQGQVRAWWREFEACLKELASAGSPYVRSGSGEWGVVPSVGRRESLSREQRRMRSLSRQRSRQSSNV",
                 "length": 4778,
                 "architectures_nb": 1,
                 "domains": [
@@ -1139,7 +936,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 173,
                         "hmm_end": 260,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -1152,7 +949,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -1165,7 +962,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -1178,7 +975,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -1191,7 +988,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 474,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -1204,7 +1001,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -1217,7 +1014,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -1230,7 +1027,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -1243,7 +1040,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 67,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -1256,7 +1053,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -1269,7 +1066,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 2,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -1282,7 +1079,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -1295,98 +1092,14 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_09589T0",
-                "length": 3867,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 4,
-                        "length": 461,
-                        "cevalue": 2.7e-182,
-                        "ievalue": 9.1e-180,
-                        "score": 597.7,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 584,
-                        "length": 328,
-                        "cevalue": 3.4e-112,
-                        "ievalue": 1.3e-109,
-                        "score": 366.1,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2573,
-                        "length": 69,
-                        "cevalue": 1.9e-16,
-                        "ievalue": 5.3e-14,
-                        "score": 51.7,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 67,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2751,
-                        "length": 311,
-                        "cevalue": 1.8e-65,
-                        "ievalue": 1.1e-62,
-                        "score": 211.5,
-                        "hmm_length": 284,
-                        "hmm_start": 2,
-                        "hmm_end": 282,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3254,
-                        "length": 504,
-                        "cevalue": 6.1e-129,
-                        "ievalue": 1.5e-126,
-                        "score": 422.2,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3785,
-                        "length": 76,
-                        "cevalue": 9.3e-20,
-                        "ievalue": 2.6e-17,
-                        "score": 62.2,
-                        "hmm_length": 70,
-                        "hmm_start": 1,
-                        "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "navajowhite",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_12175T0",
+                "sequence": "MDVPSNDWNLASKEPSLSILNPAPKLLPGPSLLHNLISAVARHDGASAIHHYAGAQGATHLSYHSLHQRSNLLAARITAAVAGDTLAVKQLIVPVLLPQSPELYVALLAILKAGGAFCPLNLDAPPERVRFILEDVTARVVITSQTLANVFSEEQHDVKVIKLGSDWADSCWDNGCDLSDSISHRAATPSDLAYVMYTSGSTGTPKGVGVSHAAATQSLLAHDEHIPHFRRFLQFAAPTFDVSVFEIFFPLFRGVTLVSCDRRLMLDDLPAVLRQMEVDACELTPTVAGSLLRKRENAPGLKLLLTIGEMLTGPVVQEFGGGGEGQQDSILWAMYGPTEASIHCTLQPAVKPDMSVNCIGFPLSTVSAYIVAIQTEDDEPNQLSDGGLKDPTVLPVGEIGELVVGGYQLAEGYLNRPEQTASAFIDSKTYGRLYRTGDKARLRADGLLECLGRISDGQVKLRGQRMELGEVEAAILRVQGCHGAVAAVVNGSILVAFCLLDSLHGEDHTSAEPRITKACEDWLPKFMVPNEVLVLDEFPRLPSGKVDRKGMVAAYEQRRRETHVVASVPEYQSSVEQRLCQLAEKSLRVAVEPSLGLSSAGLDSLTAIKLASKIRASGFQVETLQVLQSKSIRDLAQLVRQLADGRQETEGQSEIEVSRPISEIPWLVHHAASQIQEVIRCTPVQESMLAETARNSDAYCNWIEWDIAESCSTQDVVKAVQKLAQANEVLRTGFAQSAKGQFLQIIWKQLECFDQSTDEATLTTPSGEDLPSSIIYTIRQQESSVRLTIKLHHALYDGWSMDIFVRDLNLALQGADLRPSSQYSSVVKYYNSPSYNTAKDNARQFWAGQLLGYQPSAFPILVTSRSPGPSGTRSDTFTIDIDPDRLRNLARDLEIGSQILFEACIIWVWSLIIGSSDVVIGTVTSGRTLPIPGVEDIMGPCLASVPTRAKLSDVRTVKELLSYLQATNRAMLPHSILPLAEIRKTSGLLPSQSLYDLLFVYQESLLSTSNYSTTSRVRQVAHQDYLETKLLFEVEPRPSDFLLRITYHTDAVPDNYIPVLAEQVRCLIHYMVENPDASMTCMRDALPSAMASRHNINPLSYQGCADLARMVEETATKFPDMPAVCFADIIPAAGDTQVQTISYQELNRQANRIAHLVIGSKVMPGMTVAIIMEKSISLYAGILGILKAGCAYLPLLPSTPLQRIETILGHSEAAACLCDASSIRNLRSIQTGCQFLDISKEEDLIRYPDSNPDITPDASRVANIIYTSGSTGIPKGVCVTQLNIMSNLDVLSRLYPLSEGTDKPGRLLQSCSQAFDVSVFEIFYAWKMGMCLCSAVNDTLFADLENAIRALRITHLSMTPTVAALVQPKNVPGVEFLVTSGEPMTEAVASKWAGILYQGYGPSETTNICTVKKMKAGDVIQHLGFAFENTSSFVVHKESRNGVDLVPFGCVGELCFGGDQVVQGYLGMPELTREKFVEHPEYGRLYRSGDLGRMLPDGSLVISGRVDDQIKLRGQRIELKEIDSVTRESESVNAAVTILVSRGTQKADQLATFYVPLATAETEKHAVSYQVLDDAQTARPAPESQAIFHLLTSRLPTYMIPNYLIPISVIPTTPSGKVDKARLRDTFAQLDQETLGRLSAVGGATEEAEEQWSELETAISRILATVLQIEQMAIRRWTPFPSLGVDSISAISVAKQLRDLVGAPVPVSQVLKSSCVARLGQMLENSSVQSASTKTIRFETQFFDQELLALIEQNFKAHQDNTAGECAEIDAILPCTPLQQGMLAASQATTASMGASYVNQMVFKLAADPDTMRSAWDTMVERHPILRTCFITTNSSIHAMVQVVIKRWKSQWHMFNDGESLDDCLKAMADGLAPPLDSFVPPASLGLARHDGRNTLIFTCHHALYDGNAIAALLDEVEQFIQVGSLPPLPTSYEPFLREMLSLPDSTDNFWKQQLSNFIPKTLPISGKSTEGPGAVSHVMGVSLETANNRLKELGFSLLAVCQASWAMALGIILDEPDVCFGNVTSGRSVPIDGIEKLVAPCFNTIPVRADLSGLRRNMDLVKLLQDSGIEALQYQFTPLRRIQSLNAYSNGATRLFDSIMLLQQPSQPLNPDIWSLERDEGSMDVPLVCEAIPEPRENTLVLKMHYDGVAASSPMASFLVQLFSHVFCEVLSYPSAVPLTQDALPDALRQQLEALGLQRSIATSTPKSDQNQLPVAAENYKVSETESSIRSIFANLATVPKSAILPNTTIFQLGLDSISAVQIASALRQEGFHVSSIDVIDHPTYSALAQFFEETKTRDSRSANPSYDLKAFQTECAKYVTENSRYRDTVEAILPCTPLQQAMLSEFINSDGCNYLNFLHLRLGDKTTASTDDVFKALKNCSGSFEMLRTGFIPIEHKDASFAMIRYCEWAGKVTSVPREAIADFSVDRWRSEVKSTVYNNLDQPPWEAVILEGEAGVEVHLAIHHVLYDAQSLKTILDSLAPSAADKRPAACNESVDVAIQEIISRSRVGKEDAETYWRSLATETVINRFPVMTPLRAEERSICVESHLSKAKVSLLESSLRKEGVTMQAAIQGAWTRILSSYLGESCMVFGTVLSGRSSGATRSAVFPCITTLPVVAENKSLNRSLVESMMERNKNLHRHQQVPMTQIQNWLGLPETRLFDTLVVYQKLQDDAGPGALNTWEVIEDKATVDYPLSLEIEPRGEHLHYQLTFFSDLLPQQQSALLLRQFDAVLTHLALEPEGCEDELRTGSPSLFSITPAAEPELPSNVRLLHQFVEEAARRYPQKTALEFVSALDGGDPVSRTWNFAELDQNGNRVANILAPYTKVGGIVAILFDKCPEAYFAILGILKSGCSFVALDPAAPAARRQFIIEDSGASALVTDMDRASNLDIDVSVPVVGLDDDFILSSPSTPLTDRQAELSPQDRSYCLYTSGTTGTPKGCEITHENAVQAMLAFQDLFSGHWDQDSKWLQFASFHFDVSVLEQYWSWSVGIALVAAPKDLILEDLITTISSLQITHIDLTPSLARLVHPDDVPSLCKGVFITGGEQLKQEILDAWGDQGVIYNAYGPTEATIGVTMYQRVPRNGRASNIGKQFLNVGSYVFKPGTEIPTLRGGIGELCVSGKLVGKGYLNRKDLTAERFPTLEYFGERVYRTGDLVRILHDGCFDFLGRADDQVKLRGQRLEIGEINHAIKTGISQVQDVATLVIRDESKQKDFLVSFVVADDQSDSSEAQSQTLEPIFSPDAATLARDVQDSCRAKLPGYMVPTYILKLPFMPLSSNNKAEVKMLRSLFSRLTQDQLVAASSAGSRTAADLNGDIARILIGTLGNMQFLSPGQEPTADVSIFELGIDSISVLRLSRALKRGGLAQATPALILKNPVLGDLVRALQSEVTANDAGAVLEARQLVEACQHLHRSRACRALGVSSEHIEYIAPCSALQHGMAMRCKTEEHRSTYFNVFTFELRPDVDIARLKSSWQIIVDSFAILRSKFLVSSEGFVQVALKEMQLPWTELETADDELESKLLGMHEQWLDRNSQNLTSPLELLLVKTAGKNLLRLHIFHGLYDANSLGMMIAKVAALYLGTEDIESRTTFIDALIHGPLRNFNHTKTFWEYHLSGVSLQNLPQLSERPSSHDIELSRTLSFAPLEPVRQRLNVTHSAVIQALWLSVLQPRYAKPLTLGVIVFGRAIDVENAEHVVGPLFNTLPFHSGSCTSGSGTWASLVRTCHSFNTATLPFQHVPLRDIQKWCSGGRPLFDTLFSCQREPLSSVAAAEQLWTEISASPAPISSDYPLAFEATLARDDRLELLLVAQKGFADEHVLSAMLDEFEHSMAMIAGNMDAMIGSSDGGLAPEIPSHEVRDGQATFSQAELGNTSFEWTDDASLIRNEVAALAGVSPEEVSESTSLLELGLDSIDTIKLSARLKKNGIVLTNSQLVKGQTIARFTETLGQVDKANNTSTSTTAGNDAASKVASMTELLRKHIASQVQNLDLDQVQTVLPPTPLQDAMVADMFQSGMRRYFNHDVLELPPNVDMERLGSAWQSVVDHSPILRTTFIEVESPEFDFAYCQVVHSKMQLSWSRREVASQGEFHQVIESIRRHAEETAGSDGLFKVTPVWLGQQRFIVLSIAHALYDGWSLELLLRDVQDAYNGDYSPRPEYLDYLGHILESATEESKDFWIDTLTGAYAKNIQPRKLQLGSRKANDGTKPRETLVHRAELKSAKPAAELSTFCRRRAVSPQVVGQVCWAAVLSRRVQSLDVTFGCVLSGRETESAESLLFPTMNTVAVRAVLHGTIGSLLRYFQETMAGVLQYQHFPLRKAQRLGGSRTPDGLFNTLFVMQKQRRASRTGPETGDLLMTSVDGTSAVEYPVCIEMEIVQDSVIWRTACSDDFLGKQDTEQLLRELDQVLAFLTESSPDLSVFRSTTSRPGVAGSDILVCGLDPFRLKAQNTASSTTAMSSQTDASTLIDVDSDEEWTDAEQKLRTALAEVSGLPQNAVKRSYNLYNIGLDSISAIKVSSLLRKVGVQIRVKDLLRAESLVDMAKMTGSAEQAAPKLPKSAVAFSAAAKLGAYEPLVVEAGLDEQSVQCIIPATAMQAHMISLWQKTDGAVFFPEFQYQLPAKYNDLTLGSLQHGWRDMVAELTILRTVFLATNNRDCPFVQVVLLPNTHYQQQTLSLGDNSGPVQSGVTSLPMVYFAAEREVEGSADSPWIITIKLHHSLYDAFSLQNIVRRYGELLAGRSSGQLLPVPDYTGNWNARITSEASQELRSSRQKFWVDYLQWATSLPFAGIPASLTSQAATDAKARVSKFVPGAVTAISDVQSECARRGVSFQALFIAAAAAVISAPAPADGAHPNDLVLGIYLGNRDDQDSDQLPYHPTLSLVPLRVRRASGRSLFGVAAEVQRDLHKISDAGNAAVGLWEIQDWTGLQVDCFVNFLGSTALDEQVEDRLKLLEPLGEAKAIDGVARAGAHPQNYHWLGENTVIDAFKDAVDIEAAFGGKDSLDIGVFGPEGMLKNEQGATHVISRLVEVINALGRNE",
                 "length": 5034,
                 "architectures_nb": 1,
                 "domains": [
@@ -1400,7 +1113,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -1413,7 +1126,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -1426,7 +1139,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -1439,7 +1152,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 2,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -1452,7 +1165,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -1465,7 +1178,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -1478,7 +1191,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -1491,7 +1204,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 280,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -1504,7 +1217,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 474,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -1517,7 +1230,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -1530,7 +1243,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 280,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -1543,7 +1256,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 68,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -1556,7 +1269,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -1569,7 +1282,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -1582,98 +1295,14 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_12447T0",
-                "length": 4035,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 12,
-                        "length": 435,
-                        "cevalue": 3.8e-188,
-                        "ievalue": 1.3e-185,
-                        "score": 617.0,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 560,
-                        "length": 319,
-                        "cevalue": 1.6e-103,
-                        "ievalue": 5.9e-101,
-                        "score": 337.7,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2432,
-                        "length": 70,
-                        "cevalue": 1.4e-13,
-                        "ievalue": 3.9e-11,
-                        "score": 42.5,
-                        "hmm_length": 70,
-                        "hmm_start": 3,
-                        "hmm_end": 66,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2607,
-                        "length": 294,
-                        "cevalue": 1.7e-63,
-                        "ievalue": 1e-60,
-                        "score": 205.0,
-                        "hmm_length": 284,
-                        "hmm_start": 2,
-                        "hmm_end": 283,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3088,
-                        "length": 488,
-                        "cevalue": 3e-119,
-                        "ievalue": 7.6e-117,
-                        "score": 390.3,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3604,
-                        "length": 71,
-                        "cevalue": 4.2e-13,
-                        "ievalue": 1.2e-10,
-                        "score": 40.9,
-                        "hmm_length": 70,
-                        "hmm_start": 4,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "navajowhite",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_14767T0",
+                "sequence": "MLQLTPQDPEALRSGRSDSAARGFQTRPSGSSSAGASATSTTLYTRTRDGFLTYCKPADIPLSAALLAWRLLVARSGEEDGVEALRLGRYVEDWTSHRDSPTTRSDGGAQTFTAQVAKFMVAPGATIQEAHAEAERLVQGTLGRADERVGANSTVYFTDAAQSDGRKGAVSQIAYNVCIKLKTSPGQLVISFEWTNSEITRWWAGRALQAYTRYLTAILSQVIMSKPGTSVDGQPGSARLVWDLIGPSNEDLNQIWFWNASMPPTVERCIHDLVSERSISTPDKVAVQAWDGEFTYRELESLSNTIARQLRAQAGVRVGDIVMLVFEKSRWTTPALLGVLKSGAAFVLTDPAQPEARLKTIASQTGAKAVVCSKLQADLARRIAQDGDEECSRQDKKQKQKQKQKPAVVLVASDDTTLQHAGWGVGASAGFLPVVPADSAMYVIFTSGSTGVPKGVVCSHANFVSGAIPRAEAVGYGETSRVFEFASYAFDVSIDCMLCTLMQGGTVCVPSEAGRVDNLGAAILASGANMAHMTPSVARVLEDPETVMRSLDVLGLGGEAVSAGDAAAWSRLTKVVIAYGPSECTVGCTINHEVCADNTTIGKGTGAVTWIVHPDDHNRLMPVGSVGELLIEGPVVGLGYLGQPDKTAEVFVRDPIWLRQGHTGSKGRRGLLYKTGDLVKYDANGYIVFVGRKDQQVKLRGQRIELSEIEYHLRKNLPPCVKIAAEVVRPSGAEPTLVVFVDEQQPVVNGTKTKTKKVKNDKVGLDDVVKLSPELGAIVADMDGLLGEELPRYMVPAAYIPLQSMPVLASAKIDRKRLKALGASMTREQIAKLRLLAPKPARPLSDLERSLASLWARVLGTDVEIGLRDSFFGIGGDSLRAMKLVSAARGEGIALTVAQVFDNHTLVDMAAVAVVDGDLGSSEPQNIAPFSLIEKTWTPEEARRAASKYCNVKESAVEDVYPCTPLQEGLMALSAKFPDSYVAQRVLRLADMTEARRLQGAFETAARESAILRTRIIQVPGHGLQQVVVQGPIEWRSGATVEAYLEADRDEPMDLGKPLVRYGLVRSADQVDFVLTMHHALYDGWAMPLVIDRVNRAYDGLATERPAEFKHFIRFLSEVDQGACEAYWRQQLEGATAVQFPALPHEGYMTQADSLLEMTVPAPPRSSGSATTTATIVRGAWALVAATFAGHDDVVFGETLTGRNAPVAGADLIEGPMITTVPIRVAVDRQCRVAEFLARIQDQTVRQIPFEHTGLQHIRRVSPDAMEACELRTGLVLHPAAADHPFDPAYPASRLVPANDAEAAREALKFNTYALMLVCALAADGYHVMASFDSRAVDVPTMQRVLQMLRDVTALLCEGLVDDRVSVGDVVRSVTAGSPAAVETLAELDLLGRGAVGSVDVGATVDRVWLVDPDTNQLLVPRGAVGEIVVDSPSALSLPAIDVPAWHIQVPAVDGEGAVHLHATGQLAKFDQQGKLVHMGRKGERVLPPRPVEDRSARVQKGSEQLSAKEVRLRSLWAQILYIEADGIGADDSFFKLGGDSIGAMKLVSEARPAGFKISVAQIFKTKTLAAMAEMAEDISMTANEAQGEGSGTNEPVATPFSLIEDVGDVDTFVDQQIKPKLSKPWKVSDAYPTRPLQTVAVTGSTQTPRFSMRYEAMYFDDHRGLDVARLQQVCREVVQRNEILRTVFATAQNKVCYGVVLDDMAAEFDHHDVAPGTDVQKFTHQLCNRDIEGDIPEGAAFVKWYLVRAQTSATSAPGALVLRISHAQYDEICLPLILRQLEALYTGQAAAAETIPFSRFVHHTLGTANPRSVGYWRELLAGSAPPTVLRPDLGAMTQVPAAGRRHYAVDRTLDISGAAGTAAGITVATIPTAAWALCLARRRGLADVLFGEVVSGRGTGFAAAERVVGPCWQYVPFRARFAPGVTTGADLLEAVQEQHAASSAHEGLALAEIARLCCPGWPAVDWFDTVVHQDVEHVEDLGFRGLGATTETIYPHQEPLREWKCQAFVADGGRRLTVEIVTFEAWREQADEVLAEVAACVEELVGRPGDVLRL",
                 "length": 2056,
                 "architectures_nb": 1,
                 "domains": [
@@ -1687,7 +1316,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -1700,7 +1329,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -1713,7 +1342,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 284,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -1726,7 +1355,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 280,
                         "hmm_end": 372,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -1739,7 +1368,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -1752,196 +1381,14 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_14897T0",
-                "length": 4270,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 3,
-                        "length": 440,
-                        "cevalue": 1.5e-181,
-                        "ievalue": 5.2e-179,
-                        "score": 595.2,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 584,
-                        "length": 321,
-                        "cevalue": 6.6e-112,
-                        "ievalue": 2.4e-109,
-                        "score": 365.2,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2527,
-                        "length": 70,
-                        "cevalue": 2.1e-17,
-                        "ievalue": 5.9e-15,
-                        "score": 54.7,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2705,
-                        "length": 316,
-                        "cevalue": 5.1e-60,
-                        "ievalue": 3e-57,
-                        "score": 193.6,
-                        "hmm_length": 284,
-                        "hmm_start": 3,
-                        "hmm_end": 282,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3220,
-                        "length": 526,
-                        "cevalue": 2.9e-125,
-                        "ievalue": 7.3e-123,
-                        "score": 410.1,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3793,
-                        "length": 76,
-                        "cevalue": 8.5e-18,
-                        "ievalue": 2.4e-15,
-                        "score": 56.0,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_14943T0",
-                "length": 3973,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 10,
-                        "length": 215,
-                        "cevalue": 1.7e-84,
-                        "ievalue": 5.7e-82,
-                        "score": 275.5,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 213,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "KS",
-                        "start": 225,
-                        "length": 193,
-                        "cevalue": 5.3e-79,
-                        "ievalue": 1.8e-76,
-                        "score": 257.4,
-                        "hmm_length": 422,
-                        "hmm_start": 244,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 525,
-                        "length": 328,
-                        "cevalue": 7.5e-94,
-                        "ievalue": 2.8e-91,
-                        "score": 305.9,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2367,
-                        "length": 75,
-                        "cevalue": 1e-12,
-                        "ievalue": 2.9e-10,
-                        "score": 39.7,
-                        "hmm_length": 70,
-                        "hmm_start": 3,
-                        "hmm_end": 66,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2456,
-                        "length": 293,
-                        "cevalue": 4.9e-58,
-                        "ievalue": 2.9e-55,
-                        "score": 187.1,
-                        "hmm_length": 284,
-                        "hmm_start": 3,
-                        "hmm_end": 283,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 2916,
-                        "length": 487,
-                        "cevalue": 2.8e-108,
-                        "ievalue": 7.1e-106,
-                        "score": 354.1,
-                        "hmm_length": 475,
-                        "hmm_start": 26,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3431,
-                        "length": 71,
-                        "cevalue": 1.6e-15,
-                        "ievalue": 4.6e-13,
-                        "score": 48.7,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "navajowhite",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_14967T0",
+                "sequence": "MWALFEEVVQSLPNAPAVQFETSAPWSYEELHKSASKFAEQLQRVVKSGQHVAVMLERSPAQVASILAIAKIGAVYVPVDHNLPRTRVHSIVASVEDCVILCDTNGNAILEEKMPRLLVTGEGRNLAIQPYHLASNAQATCVDPSEDDVAAVLFTSGSTGNAKGVQLTHRNLILPARFLAEREKIGPSSRVFQFARSSFDVHLIDIMCALLHGGLLLQVSQDKLMTDTAGWMRRLEVNTAHLTPSTISMLDPEQLPALQYLVTCGEPVTRGIIDRFASRVVLTNLYGPCEASSVVAKTLRPGDDVSVIGRPSPHASVMVITPGGYAAAEGTTGEIVVKGGSVFKGYSNRDVHPCFLDAVLFPGMQRVSGPWYCTGDYGYVEPSSGNVHLVGRMDDQVKVNGQRVELGDIEAVVSQYVGRCTVLAHSVGGRRRLFAVVSRKRDLSPPEEDVRRDFDGAALEKVVFNACSKCLPPYMIPRTIAVQAIPQSPSGKIDAKKIRSFIESLHQGDAHFFRSAHDSSLPLHQRITALVSERLQQHVPRGDSLLEWGFTSVDATALIKSALDISGREIRFRDFMADPSIDGICRLIESAETREKGVSRAAQVHTAMENFVCESWYRPTLAQESLFRASQMCGHHAYICSFAFEILSPIDVGRLIRSVESVYGRHDAFNTSFSDEHVPTGAEDPCIMARVRNRDFWARSRSRTVSYREVEHLMTATQKKSVADLLLAAFQADHPQEKSLDLAVDPPAWMTLYAADEKGSSWLAVFKFHHLVIDLHSFQRFWSDVITAYRQGPEDFARATPTPPLSFRHFAEMYRAQVLARRDRDMEWWTERARNFAPEPILQHADHGDDDKSSGEDYAASMLWQPMSTQIVAQFLSNRPAGTTAFGRWLGLCQIFMYRLTGAARFLMGVPGSVRTEQPRFSDVVGYGITLGVLPVSIPAEDHVRVADFLNAAARDYWDCHEHDQAIEDVVRCFPARPSAYSRVSPEPAKINFQFAYEDGARLQGRQEIEHGCSGSDGPAIVYKPLDVPPPNSHYALVIHVDDSAVSPRVGFHYQTRSFDERGLHSIVALFEDTLAAVTKGGNDLRIRDLRPDRPLYPVTYAANPTSVHQVDASPSLSLGTSPSQPSQPSQPSQPSQPSLMQILKECWADILGGSPNSLQDDRSFFRSGGDSISVIRFCSKARAKGVVGCTVGKVYASPTLAQMAKAFRLKEALTTALPMPQLCLGPQESLQEGPVQGRSLVGSQLPTAISAAAKVFPLLNMSSVGGALEAAGIAHSDVEAVYPATPMQSAMIWHMRSTPGTYVVQHILRIEGSVNCGRLEKAWERVVAAHPALRTVFVESPKATGDTPYFGIELKQGKDSVVCTTLQHPLVAAEMEDFLLKDRQSGFPVASKTACRLVLVRQSGAVDGNYTMILTMNHASIDGWSVGKILADLQDAYEGIKIRDGSSFSPNVAHMFGADQTQARVFWQSYLSNALVPKPGSGFSDEYGSESQPVIQVARITPENSIGANSLRLAASALNTTPFTLVQCAFSMAISCRAPTPATCSTKTKVMFWTTISGRGYREGDAEAVGNFINTIPCVVHQPGHDAELRLADWLRQEQDAFGGAVTHSHFPVSETMSFLDPGDATVNALLVFSNQSGLDSASARRSLRISHAGGHDYSNVAYTVVVTPTKDKVEFLAKYDARLVSEGEAMKILARTAALVNSMVSMAESSHNGALPSVCRLAHPELDHPAKHHVQSQVRSFKDFMAQASCSKDTLVSLFKNAVKSHPSAAAIESASFSMTYAELDRASDRVAVHMLTEMDLRRGLVALFFPRSVFMIIAMLGTLKAGLAYCPIEWEAPPARVARLLRQLNVSTIVSNNHGFEMLSSLDAVIEAINVDRIMALGIHPPTARPKTALPPIISPDSTCYVMLTSGSTGTPKPAILTHRAVTSAVQQAVKAYALGPSSRVLLCANYIFDASATDIYGSLITGATLVLRSDNELRTDLAATVLAYRINWLHVTPTVFKFMSPSAAYGLRTVVLGGEMLHRSLVRSLTAHVPLVIGAYGPTETAIQVLVSPVAGARGGDDDDVVVYDALPGNLVVLADQRGELCYINEPGEILVAGVQVFAGYEGEVASASQEYFIELRDFPGLKFYRTGDLARWLPDMRIQILGRRDAQLKVAGMRIHPAEIETVLESHPDVLRASVASCSGRLCAMVQAKDCASPSLEGRDLAAFCRTILPGRLVPSFISSVDRLPVLPSQKIDRAKVLAMIEQHLAQDGASADSRHLSRAEAALWSLVLQVTSASSGASVPDPNTALSDHGVDSLGFIQLRGILARDFGVVASYSELRKKGTIRAIAALIPSDRIPQEKSTRTRQTPADMQVLAHNEDRQKAKRVGSFPALPSQRTAWVAQQSLRDSRYNVQRVAEIRNFHGSRVLDGLMKVVSAVDLFRTVFKFDAKHCCLQQVLLPQPNVSVEYTVIREGEDPMSIIRETISSDTFVFDLEKGPMAKWKVFEAPENGTPRVFLYSNIHHILVDAHTTHQLGQLLGQAMQDQPLRLPTTHAVDLALELQKREVQQAKDMDRWKFTLRGARKFESVFCSTTPKSCHNKSFGSVLRTVSLPTMGQKGLMEPFLATFLLLIHHYTGSDDVTITTPVSSRGSVPEFSTVLGNLTNAVFLRSQIFATDTVESFARRVCAAIEFAIEANQPLEAVASACGLVLRDHSVQFVLHDERRTRCDGYVTDISVETLQSFTQSSKPKVNLAWHVFVRDETSFELLIEYETTQHNQAWIQSAADVYKTLVERLASAEFAQHHPSSVLAELKELVALEPESSRHSTHSDQEPLSASSSWSSNDGQIQTPSQSCMSWQSVNHEHDDDDDIRNKCSDETQVPPTSQAVKNGHDFEVLLTKTLQETLGAPTIDPEKPFHELGLDSFGAMAFISNIYEVAPELEVNIGDIMEHQTIQNLARWLAGSMDESATEAGEDQKNSQRVPHQDACPDDQQRQIAPASHIQRLFYLLQEQLGDTTYSVPALYRVHEIPIVAVLAAAQAIANTHDVFRTTFDVEDDEILQVVNANPDHKYSLYDFSSRPDLAVSIQEMRRICHQDCGTLFDLTTGPLVRFHGFLLPDRSQFFFVNFHHIIVDEQSLGCFIKHVEAVATGRQSVHEAIPKASYLDVTRRQNKLLQDPAHLAKATDFWRRALSDDKSHVAWGGVDTKDPSLSIFQPAKFVKRAMTLGGDSAGWAYPLGATSFGAHLFALQLLLALRKGNSTNTMLIPATCRNPRFGEQDMYGSFVNTLPVPLELHHDQDLRENLARFNRTLGGVLSYAHIPSQMIMDMSGRKFGQFDMMFVYHESCAPSESSRRTEPKRRPKLERAMEMLPASPPTTAKFPVTLNLNKVFNSEECTTLLQIYVEYNPGLVDEASAALFCRQFERLLGLLNGRDTAALSIGSLSAVLDDASSPAVPPHFHGRVDTALARENFIDVQILEQAERTPEALAAVFENDVARATYRELADMVYNARHIISSAKGGGIAHCTSLRGKRIAVVGDVSIERLAVLIAVMSLGAAYIPIDLANPLDWNKTIVKDCDPCCMVFMPEEAGSQREDSSANLWSYMGESVPTCTRVRIPAGLHAYGPFKNRNMLFPVQDRSDNDIAYVLYTSGSTGVPKGVPIKHGGLKNSVAEHRRCCMFSTATRLLGVAPWTFDVSVVDMFGPLSIGAQLVLGRRDYILSDLTGVVQYHSVSHISTTPTVASLLDPDEVPTIKSLALGGEPMTKATRDAWAPRIMLLNVYGPTEATVDVITRRCYPDTPISNIGRPLANVQAYILDDSAELQQVPAGEVGQLALGGVQVSPGYLRDPPGRPCPFIQHIKYGPLYLTGDLASFEPDGTIVCKGRMDNMINLRGLRVELGAVESVAEEVLVGRTGAGKCVTSKLLKNGSAQEVRVALFCAAEDTTTADADTRIKIGTVTARQTVTAKQQELISEMKAAVLKKLPKYFLPDYWVPVDGFPRNKNQKLDRKQVQAFVNGLSDVQLEAWHLDNYASAGHLMEQQGGEATMAKPPSPQPLSGRTIASTSTSPRSASTDLVIAAFEKILGAGKAIDAETNFFAVGGDSISVIRLCTALRAAVVAAGLGKITLRVRDIYAVPTPEELAGIIDKQTGKNVDSGGRQLKKPTPPDTFPITPIMDYFLRTGRANINWFNQGHAFQLAPGLTFDDFLAAWRRVVKMHPMLRMRLVTPPGQDPKALARLSIAEAEDANVKISRRVLGSLADLESETHIMQGSLDIEHGPISGIVGEFRDGSRVYCSAVVHHMAIDVVSWHIVCEDMENLLRRREPEPEVSSFKDWAEELFSRRPSHLIESCDIRSRTGFNLFVEDTSCLEKNTHATGFFLNVKAPLHVVQAAEKYGVDTVDLILATLVCAFGRWRDMDGVQLVFESHGRELSHEKLDLASTVGWFTYIIPILFQLPDPSSVSIPKYFAHVHETRVGSMARADFAAPILPVGGCSSQEPECLAVLNYLGHNTSGSADRALRRANEVNMGSWEDPLNKRPFVFEFESSIDDDCVNLGVFFSRAIHTEADMHKLLSLWDSTLREFATGSWIVDGLLDKAAQPRWIPQELTPHRDALEAALRKHKIQPSQVERLVPATDIQAAMVLASLGSRSYMHSYDYDVEVPDSKKLCAAWAAIFRRHSIFRTVFLPVARSVSAAPNTNLLQVVLKADSVADDQIVAMGPPPPKMRAAYGQILSKIFLYQDLEAFYRGSLPITCPAPQFADVAQHQSSMAGQVSQEEHLEFWTRYLKDVEDGGILVDHSIDPVMQKQLAEDRHQKVRLDLDLQRLVTVAAQRRTSVLNIVRASWALVLAAYGSSQDVVFGTVSAGRGIDVPGVDVAGVVGPLLGTSLLRVKVDWTATVDEFVDAVTDTCMDVAEHELGLSLRKILAAGTAGRKGSGGALFNTSIMMPVVGKPRLANQGEEKPREQESFKMTARDRDEVTDMPLIVTVEPGVSVPKTTVISGRMHGRDFDDKYIGRLLRSLGCVLSSFATALEYNSTVAQKIPERTAIRLCDIDLLDKEHATQIEQYATGPEYPPDAELTCWDILDMRARKSPRSVAIEFHTAKAKGKARTITYSALHELAEKGAAGLALQTSTLGKTLHGERVALYLDKSIETVATIFAAHRLCATYVPLDIESPPSRIRDLVGSIRPAAVVCELKDKQLLSGLLGSETIVVTIQDIFGGTAGGAAGSKGRLESTRPKLDEVAAILFTSGSTGLPKGVLMPHRQAAGFGVMMASALQYRTSDRVFAFARMLFDVALTDIFGTFYAGATLLLAPHAECVSRLLPLLQSTRATCVFCTPSVAGLLPGPDRTPLLRCMWIAGERATEAVIKKWTCPRRDGTKQAVRLVNGYGPTEGVVITWKLCRPNTDGSCVGRPAMGMKVRILDEYMRPVPIGTKGLIWCSGRQLSLGYFGRKDATDAVFRPDPWNAGNELIYNTGDIGAYNAEGELLYFSRNDRQVKIHGQRTELGEIESLLGSNDEQVVVILFNNGQGNNNSPRLIGFHAANSPARDHTVDGACEVKEDTSPIGQARTQMLQARARDKLAPFIVPNMLIAITAMPLNSNGKVNQSKLKSFYAARQGASPLSVNLPSPSTIEAHKPGSKDLEYPTPPNDALADCLVHFRSRKSSGPTQQRTIYGLFAVTGLSRQYRAIAERLTPDFNLVGVDNIFRDQPKHYPSIAGAMAADHAAAILHHLYPVDGGPWWNSVTEAPHASHSHWESAPGLEDGKNSIAFMSTLWRWASPGTNGGLSCGWTCTGCSPAFRSFLLALGTYTGADDVVGMLGGRDAILAGEDGCARRSTKRPFCGCGNARMRTGHGDFKAYHDRFNHQDANTSCAWCWKRTSPEHPVHCRFSWAVWRNWPWPDNDRPVGPPDRAQRRKFFQTSLGQPTSFQAFSIATNYFSARPRAARQRPARHERTLRLGTPIVNDSNSDEE",
                 "length": 5950,
                 "architectures_nb": 1,
                 "domains": [
@@ -1955,7 +1402,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -1968,7 +1415,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 281,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -1981,7 +1428,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -1994,7 +1441,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -2007,7 +1454,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -2020,7 +1467,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 7,
                         "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -2033,7 +1480,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -2046,7 +1493,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 68,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -2059,7 +1506,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -2072,7 +1519,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 2,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -2085,7 +1532,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -2098,7 +1545,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -2111,7 +1558,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 76,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -2124,7 +1571,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 139,
                         "hmm_end": 284,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -2137,98 +1584,14 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_15097T0",
-                "length": 4121,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 7,
-                        "length": 435,
-                        "cevalue": 7.1e-195,
-                        "ievalue": 2.4e-192,
-                        "score": 639.1,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 556,
-                        "length": 319,
-                        "cevalue": 9e-105,
-                        "ievalue": 3.3e-102,
-                        "score": 341.8,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2428,
-                        "length": 70,
-                        "cevalue": 4e-14,
-                        "ievalue": 1.1e-11,
-                        "score": 44.2,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 68,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2679,
-                        "length": 299,
-                        "cevalue": 2.7e-62,
-                        "ievalue": 1.6e-59,
-                        "score": 201.1,
-                        "hmm_length": 284,
-                        "hmm_start": 4,
-                        "hmm_end": 284,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3164,
-                        "length": 485,
-                        "cevalue": 6.5e-120,
-                        "ievalue": 1.6e-117,
-                        "score": 392.5,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3677,
-                        "length": 73,
-                        "cevalue": 1.8e-16,
-                        "ievalue": 5.1e-14,
-                        "score": 51.7,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "darkorchid",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_15248T0",
+                "sequence": "MDAAGHDGVICIDMLSCAALVLGKPLDDVDLQKSFVVNGGDSLRAILLQSMLREHGYNITREDLLTSPTIGDVFRDGACTRPPLDQATSWVSSSNNSHPDTDSSGRASSSSAASSSPVSASQWAGSLQSLGEAHLRAGQATDGSHRNQVYDLLTELQLSLVHETITHCGSNIITYSELHHPKSAETYRKAWIQVLNDEAIFKRCCLGPLFSKQGRAADADVAGLTLDGSTGLDSEWPGWSLEMCRAGKTTDDGMEELMEITFKVHHALIDASSLEALVSKVRARANGMQTKPGTSFWDWALLLRHHQQDHKAEGDKFWAQTMVKHPDAKGHMALPTPARTLQFEAEVKRHDFSVNAEAIQVRARGLGVTPAAIFYAGWALVVVTYADSDSVVFGSVLSGRGLGVPDSLDAIGPLINVLPLHVAVCRDAPLRDFVWGLFVDTVNLEALAWTSTENGFRRDYESALSVQLQLPEAVDGSHPAANTYQAMPVSHSSCQQSRVPISVTVKDASRVTIDFHSSRYGSRDARLVADCYERALDMMLTVDGKVDDAMQGLLSCQSYSQLMRWGNCITGLTTRASVKDDLVTLFEAAAEANSQRTALEKGDRTMTYAELQTRSTAICDVLAPVVTEGDVVCVHSDRSLEWICAIWGILKAGCTYCSLDPQLTAAWRESMAEAVSATAFITATTEQLDEWRPRHVRLAFSVESVPGCAQADASTTTPVPRTPRPHWPAYICFTSGSTGVPKPVVCTHAGLVAFQRDPTVRLGAKPGVRVSQIMSVAFDGSIHEIFSALTYGATLVLPACSRDVLSVLGKVDSAVFTPSIARALQPADFPGLQTVYLVGEPVPQAVADAWSACKDVYNMYGPTEATCGATIKRLRSGQDVNIGRPNPSTRVYVLNSSGGLSQPGMVGRIHLAGVQVSRGYHGMPEQTGAVFRPDQVMDNGEMSYDTGDMGYWDEHGDLVCVGRRDRQVKLRGYRVELNDLEIRIAETVPEANAVAVAVRKGLVDELLVMVQPGGLDIAAMRSRLEATFPRYLLPGHIVAVDAIPTTPAGKIDYKAIAQVEIGADAAVAPSAPAAGMEEVVAAAFCAVLQRPAARWPIDRNQSLGELGGHSMEQIKLARHLAKTLGIPVSLRTVISNPSIKALAGAIDQSRAGLSLASATTETPPVPESVTPIEADWLEKYRVSSGTSCFNVSSLHRFEPDRVDVDRLERALNGVLQRHPVLRGTYISSRAPRRPEYRRILTRHYPRVQRLRTVDVWLELNRPFQPHQEHPVRVVLADDTLLVVMSHIAADYTALATVLREASVLYTGAELPVPSAGAAYPAQQLCGVELTEETKKYWLSTLSDVPAPCGILSSVPRRTSYLGRSIVYELDKATSRQILACRSSHFVSLQHLGMAAVALGLVNQRPGEPKDHVDVMIGVPYINRGSTEQMETVGLFLQPLPVRIKYDRAPENVDTLLREVQQATQAALARGLPWHQLLDLARCIPDYPDHPLFDVMVSFHEPEMIQQLRMDIPTLEPCFAWSSGAKFKMMCEFTAVAGDCVVLRVEYDDGCINEESLRGFVEDVAAALHTLTSRSDARDPASSQRRGRLTGGFRDEKTLLGRRLSDWANLAT",
                 "length": 1612,
                 "architectures_nb": 1,
                 "domains": [
@@ -2242,7 +1605,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 8,
                         "hmm_end": 66,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -2255,7 +1618,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 87,
                         "hmm_end": 283,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -2268,7 +1631,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -2281,7 +1644,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -2294,7 +1657,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 5,
                         "hmm_end": 283,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     }
                 ]
@@ -2302,760 +1665,31 @@ $FAM_LIST = [
         ]
     },
     {
-        "name": "NRPS-PKS",
+        "name": "NRPS-like.2",
         "rules": {
             "mandatories": [
                 {
                     "name": "C",
                     "evalue": 0.01,
-                    "color": "fuchsia"
-                },
-                {
-                    "name": "KS",
-                    "evalue": 0.01,
-                    "color": "mediumspringgreen"
+                    "color": "navajowhite"
                 },
                 {
                     "name": "PP-binding",
                     "evalue": 0.01,
-                    "color": "papayawhip"
-                }
-            ],
-            "forbidden": [
-                {
-                    "name": "None",
-                    "color": "None"
-                }
-            ]
-        },
-        "proteins": [
-            {
-                "id": "MGG_03810T0",
-                "length": 4256,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 13,
-                        "length": 432,
-                        "cevalue": 6.1e-178,
-                        "ievalue": 2.1e-175,
-                        "score": 583.3,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 417,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 573,
-                        "length": 338,
-                        "cevalue": 1.1e-96,
-                        "ievalue": 4.2e-94,
-                        "score": 315.2,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2558,
-                        "length": 75,
-                        "cevalue": 2.8e-16,
-                        "ievalue": 7.8e-14,
-                        "score": 51.1,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 70,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2740,
-                        "length": 305,
-                        "cevalue": 4.3e-58,
-                        "ievalue": 2.5e-55,
-                        "score": 187.3,
-                        "hmm_length": 284,
-                        "hmm_start": 3,
-                        "hmm_end": 279,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3234,
-                        "length": 512,
-                        "cevalue": 2e-102,
-                        "ievalue": 5.1e-100,
-                        "score": 334.8,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3787,
-                        "length": 74,
-                        "cevalue": 3.6e-16,
-                        "ievalue": 1e-13,
-                        "score": 50.7,
-                        "hmm_length": 70,
-                        "hmm_start": 5,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_07803T0",
-                "length": 1729,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "C",
-                        "start": 151,
-                        "length": 298,
-                        "cevalue": 4.2e-32,
-                        "ievalue": 2.5e-29,
-                        "score": 102.1,
-                        "hmm_length": 284,
-                        "hmm_start": 2,
-                        "hmm_end": 283,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 629,
-                        "length": 458,
-                        "cevalue": 6.3e-126,
-                        "ievalue": 1.6e-123,
-                        "score": 412.3,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 1145,
-                        "length": 71,
-                        "cevalue": 6.1e-13,
-                        "ievalue": 1.7e-10,
-                        "score": 40.4,
-                        "hmm_length": 70,
-                        "hmm_start": 3,
-                        "hmm_end": 68,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "KS",
-                        "start": 1264,
-                        "length": 449,
-                        "cevalue": 3.6e-106,
-                        "ievalue": 1.2e-103,
-                        "score": 346.9,
-                        "hmm_length": 422,
-                        "hmm_start": 2,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_09589T0",
-                "length": 3867,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 4,
-                        "length": 461,
-                        "cevalue": 2.7e-182,
-                        "ievalue": 9.1e-180,
-                        "score": 597.7,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 584,
-                        "length": 328,
-                        "cevalue": 3.4e-112,
-                        "ievalue": 1.3e-109,
-                        "score": 366.1,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2573,
-                        "length": 69,
-                        "cevalue": 1.9e-16,
-                        "ievalue": 5.3e-14,
-                        "score": 51.7,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 67,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2751,
-                        "length": 311,
-                        "cevalue": 1.8e-65,
-                        "ievalue": 1.1e-62,
-                        "score": 211.5,
-                        "hmm_length": 284,
-                        "hmm_start": 2,
-                        "hmm_end": 282,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3254,
-                        "length": 504,
-                        "cevalue": 6.1e-129,
-                        "ievalue": 1.5e-126,
-                        "score": 422.2,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3785,
-                        "length": 76,
-                        "cevalue": 9.3e-20,
-                        "ievalue": 2.6e-17,
-                        "score": 62.2,
-                        "hmm_length": 70,
-                        "hmm_start": 1,
-                        "hmm_end": 70,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_12447T0",
-                "length": 4035,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 12,
-                        "length": 435,
-                        "cevalue": 3.8e-188,
-                        "ievalue": 1.3e-185,
-                        "score": 617.0,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 560,
-                        "length": 319,
-                        "cevalue": 1.6e-103,
-                        "ievalue": 5.9e-101,
-                        "score": 337.7,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2432,
-                        "length": 70,
-                        "cevalue": 1.4e-13,
-                        "ievalue": 3.9e-11,
-                        "score": 42.5,
-                        "hmm_length": 70,
-                        "hmm_start": 3,
-                        "hmm_end": 66,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2607,
-                        "length": 294,
-                        "cevalue": 1.7e-63,
-                        "ievalue": 1e-60,
-                        "score": 205.0,
-                        "hmm_length": 284,
-                        "hmm_start": 2,
-                        "hmm_end": 283,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3088,
-                        "length": 488,
-                        "cevalue": 3e-119,
-                        "ievalue": 7.6e-117,
-                        "score": 390.3,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3604,
-                        "length": 71,
-                        "cevalue": 4.2e-13,
-                        "ievalue": 1.2e-10,
-                        "score": 40.9,
-                        "hmm_length": 70,
-                        "hmm_start": 4,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_14897T0",
-                "length": 4270,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 3,
-                        "length": 440,
-                        "cevalue": 1.5e-181,
-                        "ievalue": 5.2e-179,
-                        "score": 595.2,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 584,
-                        "length": 321,
-                        "cevalue": 6.6e-112,
-                        "ievalue": 2.4e-109,
-                        "score": 365.2,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2527,
-                        "length": 70,
-                        "cevalue": 2.1e-17,
-                        "ievalue": 5.9e-15,
-                        "score": 54.7,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2705,
-                        "length": 316,
-                        "cevalue": 5.1e-60,
-                        "ievalue": 3e-57,
-                        "score": 193.6,
-                        "hmm_length": 284,
-                        "hmm_start": 3,
-                        "hmm_end": 282,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3220,
-                        "length": 526,
-                        "cevalue": 2.9e-125,
-                        "ievalue": 7.3e-123,
-                        "score": 410.1,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3793,
-                        "length": 76,
-                        "cevalue": 8.5e-18,
-                        "ievalue": 2.4e-15,
-                        "score": 56.0,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_14943T0",
-                "length": 3973,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 10,
-                        "length": 215,
-                        "cevalue": 1.7e-84,
-                        "ievalue": 5.7e-82,
-                        "score": 275.5,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 213,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "KS",
-                        "start": 225,
-                        "length": 193,
-                        "cevalue": 5.3e-79,
-                        "ievalue": 1.8e-76,
-                        "score": 257.4,
-                        "hmm_length": 422,
-                        "hmm_start": 244,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 525,
-                        "length": 328,
-                        "cevalue": 7.5e-94,
-                        "ievalue": 2.8e-91,
-                        "score": 305.9,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2367,
-                        "length": 75,
-                        "cevalue": 1e-12,
-                        "ievalue": 2.9e-10,
-                        "score": 39.7,
-                        "hmm_length": 70,
-                        "hmm_start": 3,
-                        "hmm_end": 66,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2456,
-                        "length": 293,
-                        "cevalue": 4.9e-58,
-                        "ievalue": 2.9e-55,
-                        "score": 187.1,
-                        "hmm_length": 284,
-                        "hmm_start": 3,
-                        "hmm_end": 283,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 2916,
-                        "length": 487,
-                        "cevalue": 2.8e-108,
-                        "ievalue": 7.1e-106,
-                        "score": 354.1,
-                        "hmm_length": 475,
-                        "hmm_start": 26,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3431,
-                        "length": 71,
-                        "cevalue": 1.6e-15,
-                        "ievalue": 4.6e-13,
-                        "score": 48.7,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_15097T0",
-                "length": 4121,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 7,
-                        "length": 435,
-                        "cevalue": 7.1e-195,
-                        "ievalue": 2.4e-192,
-                        "score": 639.1,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 556,
-                        "length": 319,
-                        "cevalue": 9e-105,
-                        "ievalue": 3.3e-102,
-                        "score": 341.8,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2428,
-                        "length": 70,
-                        "cevalue": 4e-14,
-                        "ievalue": 1.1e-11,
-                        "score": 44.2,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 68,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2679,
-                        "length": 299,
-                        "cevalue": 2.7e-62,
-                        "ievalue": 1.6e-59,
-                        "score": 201.1,
-                        "hmm_length": 284,
-                        "hmm_start": 4,
-                        "hmm_end": 284,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3164,
-                        "length": 485,
-                        "cevalue": 6.5e-120,
-                        "ievalue": 1.6e-117,
-                        "score": 392.5,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3677,
-                        "length": 73,
-                        "cevalue": 1.8e-16,
-                        "ievalue": 5.1e-14,
-                        "score": 51.7,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 70,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_15100T0",
-                "length": 3002,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 13,
-                        "length": 432,
-                        "cevalue": 1.9e-195,
-                        "ievalue": 6.6e-193,
-                        "score": 641.0,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 558,
-                        "length": 320,
-                        "cevalue": 5.9e-102,
-                        "ievalue": 2.2e-99,
-                        "score": 332.5,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2433,
-                        "length": 71,
-                        "cevalue": 7.8e-14,
-                        "ievalue": 2.2e-11,
-                        "score": 43.3,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 68,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2573,
-                        "length": 292,
-                        "cevalue": 3.5e-59,
-                        "ievalue": 2.1e-56,
-                        "score": 190.9,
-                        "hmm_length": 284,
-                        "hmm_start": 6,
-                        "hmm_end": 282,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_15272T0",
-                "length": 2912,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 5,
-                        "length": 428,
-                        "cevalue": 3.8e-192,
-                        "ievalue": 1.3e-189,
-                        "score": 630.1,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 542,
-                        "length": 312,
-                        "cevalue": 3.1e-104,
-                        "ievalue": 1.2e-101,
-                        "score": 340.0,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2364,
-                        "length": 70,
-                        "cevalue": 1.7e-13,
-                        "ievalue": 4.8e-11,
-                        "score": 42.2,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 68,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2492,
-                        "length": 294,
-                        "cevalue": 2e-54,
-                        "ievalue": 1.2e-51,
-                        "score": 175.3,
-                        "hmm_length": 284,
-                        "hmm_start": 3,
-                        "hmm_end": 282,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "NRPS-like.1",
-        "rules": {
-            "mandatories": [
-                {
-                    "name": "C",
-                    "evalue": 0.01,
-                    "color": "fuchsia"
-                },
-                {
-                    "name": "PP-binding",
-                    "evalue": 0.01,
-                    "color": "papayawhip"
+                    "color": "maroon"
                 }
             ],
             "forbidden": [
                 {
                     "name": "A",
-                    "color": "orange"
+                    "color": "darkorchid"
                 }
             ]
         },
         "proteins": [
             {
                 "id": "MGG_15100T0",
+                "sequence": "MTLNTTLSKPREPIAVVGTGCRFPGGANSPSKLWEILEKPRGLLKKVPAERFDVDSFYHPDGSFHGRTNAANAYFLDQNIRAFDANFFNIQHHEAEVTDPQHRLLLETVYEALATAGLRVEDLRGSSTAVYCGQMMNDYKDLVNFDQDRLPTYTATGTAASILSNRVSYFFDWHGPSMTIDTACSSSLVAVHHAVQQLRSGSSKVAIAAGANLILGPVPLIVESKMNMLSPTGRSSMWDEKANGYARGEGVAAVVLKTLSQALSDGDNIECVIRETGVNQDGRTPGITMPSHQAQEALIRETYAAAGLDLSRAEDRCQYFEAHGTGTPAGDPQEAEAISRSFFGHGERPPREEPLYVGSIKTVIGHTEGTAGVAGLIKASLAMQNRTIPPNMHFHKLSPKVAPFYQNLHVPTEAQPWPELAPGVPMRASVNSFGFGGTNAHAILEAYPNQGAGLKQTPQRSSAVPIWPIPISANSELSLKATMQDLLQYLKSASGVRVQDLAWTLTNRRSVLPVRRAVAAQTIPDVCAALEASIASIDKKEGHVVSGGSNREPRVLGIFTGQGAQWPAMGKMLISTLPHARDVISQLDQSLSSLPPRYRPSWALHDQLMLEGGSSNVHDARFSQPLCCAIQILLVQMLAAAGIKLEVVVGHSSGEIACAYAAGLVTASQAIRIAYLRGFVSDKASSPNGVEGAMLAAGCSYKDAQELCGLDMFRNRICVAASNAPDSVTISGDADAIEEAREVLEDEGKFARKVKVDKAYHSFHMEQCAEPYVRALLDSGCDAEATTEPSTIWLSSVRPGHCMRAQDVTADYWKDNLLSPVLFSQALEHATREHGPVDLAIEVGCHPALKGPCLKTMEACSEPGAPELPYVGCMRRGGDDVTALAEAFGYVWERFGSESVSLAGLKDVVPQTPVSSLAKTLPAYPWDRTRSYWLDSWRTRFFLGGGEAKRPHLLLGKLSADSTSTALHWRNSIRPRDMAWLDGHQLQGQTVFPGAGYVVMAAEAAMHVANGRSVRLVEFLDVEISKAVTFENEDGLVELNLSLQVDAGLSSAQHTAASFRIDCCLSREDAMSPSSSGRVIITYGPGAGDTLPTAQDEPPHMRSISVETFYEELAAVGYGYANDFRGISTIKRADFKACGSMRLPAPGPAADDRLLLHPVTLDNALQTLIAAVSAPGDGLMRSLLVPTSIGRIALNPWLCGEVSRSGGEVHYNAASTTRQVSSISGDVEVFHPETKQIVFHIEDFRIKAASAPTEASDHTMFMQWTWDRPVPERVLNKPERAATDADREVASAMERMVYFYMRSFLASAAAEKLADLAPHHQRQVRWFQCKMDEVKRGQSPFYQPEWEMDQQADVQGLLDQHNANANIRLVQRVGQGLEDVFFHGRNPFELMDHDGMLTEFYGSSSGFGPSYYYMQDVLAPIMHRYQNMDVLEIGAGTGGATRYILGQDPPPSFNSYTFTDISTSFFEKGHETFAQSDDRVDFRVLDVRRSPEEQGYTPHSYDLVVASNVLHATPNLQETMANVRTLLRPGGKVVVVELTCPRTLRVGFVFGLFADWWAGVDDDRVLQPFVSMDRWDAILKKTGFSGVASRYEDAEGEIFPTSVFQSDAVDDKVARLYEPLLFPAREQSPPIVVVGGATAKTSGILGEVQKLLPGRLFETLHRLEDVRAMIPPNHNCRKPTFLILSELDDPMFADMHQAKFEALKVLSESAGHMLWVTEDAWLDPVKAMAIGFLRTLRLECVDCGIQILDVDHTKNLSADLVADTLLRLEEGSDWEAAGILWTAEPEIYVSQGCARIPRLKPSKPMNDRLNSGRREILAGVDPTTTPVLLYQDIDAAYLQSNDNHGPQDINKGSGSSRLQVLHSLTRAVRLGNFGYLNVVHGILERSGQAVVALCEENGSLVDVFAGCIAHLPEQVQAQGRAGAALLLAVAADLLAQTMVSEVASGSNVIIHGAPDIYANRIAHRAKAKGIHATFVSTHSGPQGDKAAGEDSSSWVAVHENETQLGLSRKLPRPASAFYNLAVDQGPVGAGQVLSKYLTTQHCQTFQAGHLTSLKASVRTRQAGTSLKSMLDESLQACLAAADAGTLSLARTAEDLAATPPDELVALRRTVSHTAVIDWTVNGLVSARVRPVDSGRLFSDDKSYLLIGLTGDLGRSICRWMLGRGAKHVVLSSRNPQIESRWLEEMRVLGGNVMVLPMDISNEESVDAGLDKIRKSFPPIGGVAFGPLVLDDILLKNMRLDQMEAVMRPKVTGARLLQEKLDEQEHRLEFFVMFSSFVMVCGNPGQSAYSAANAYTHGLALQRRARGLAGSTIDIGAVWGVGYILKHDRVEEYESISFKFDKLSEREMHALFAEGVVAGRPGSSSAQRHDVELMTGMRFMDPKHRKLIAHFDDPRFSHFILSEKRERAAVGGAALASVKERLLEADSMGEACQIIADGLSEKLRATLQISHEGGVKLDVALIDQGVDSLSAVTIGTWFSKNLDLELPLLKILGGASVKDLAEEAVERLPPSAIPLIHNAWVNVPSAVQSSTDDSDGSLSPNSHVWSASSTSNSLSVSDSPTKDLEVVLPFERKSCMSLNQEQSWRLQMQTSDPTMFNSTLGMHMRGYMDLDRLARSFQAVLERHEIFRTRFPESGEAVQIIMEAPRIKFQAIPVADKASAEQGFKDVDGQSYNLAAGETLKLIDFYWASDEHMLIIAYNPLVCDGWTYERFFVELSQIYDGKSLPPVPQYADFATRQRTSYETGAMDADLTYWKSVHKTLPEPLPVFSVSSGSASEGPKPSPAWDQHTLDARLSSATAARIQDIARSSKVTPMQFYLASYYVLLSRLTGRADVAIGVADANRPDLDDLSTMGLFVNTLPLRLDHAAHDTFASTLSRTKERMRRATLHSRVPMHVILESLGVDAARPHEFLQAVFDYKQGQAESGSIGQAHMAGVLASRFSTPYDVTLEMRDDPSKTPLLTLKLQSSLYSLQDVHKVMGCYMSLLDGFSRDQGILVGEAELLC",
                 "length": 3002,
                 "architectures_nb": 1,
                 "domains": [
@@ -3069,7 +1703,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -3082,7 +1716,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -3095,7 +1729,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -3108,13 +1742,14 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 6,
                         "hmm_end": 282,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_15272T0",
+                "sequence": "MTPEPIAIIGSACRFPGDLSTPSDLWDFLQSPRDLQTEVPKDRFNADAFHHADGSHHGRTNARHGYFLNNVKTFDAQFFGVQAGEAESMDPQQRQLLEATYDALCAAGQTLGALKGSDTAVYVGIMTHDFELTKVGDLDAIPTYLATGAATSIASNRLSYFFDWHGPSMTIDTACSSSLVAVHHAVQQLRSGTSRVAVAAGANLMLSPLNFITESKLSMLSPTGRSRMWDAGADGYARGEGIACVVLKTLSQALADGDTIEALIRETGVGQDGRTTGITMPSNVAQASLIKATYARAGLDLNEPQGRPQFFEAHGTGTPAGDPQEAEAISKAFFSSGQDMQDLYVGSIKTVIGHTEGTAGIAGLLKCSLAVQNGIVPPNMLLQKLSPRVEPFTKHLRVPREATPWPAVQEGQPRRASVNSFGFGGTNAHAIVEQYIPSAATPTPRTATTTSANVLPLVFSARTKRSLKSSMASILSLAKTDPSLSVTDLAYTLLQKRTVLPLRHAVAAADLPGLVRALEAAGKEDVGVEHTPKNSSPRILGVFTGQGAQWPAMMKQLVVRVPSAARIVAELDVSLQTLPKQYRPGWTLMEQLMREGDESNVRLAAYSQPLCAAVQIVLVRLLAAAGVAFDAIVGHSSGEIGCAFAAGYVSAAQAIRIAYLRGFTSVHAGQDGAMLAAGMSLDDAKDLVELEDFAGKVCIAACNSPDSVTLSGDLDALEAVVEILQDEGKFARLLRVDKAYHSHHMLPCSEPYIAALEECGCATPDGQGNGVKWYSSVHEGRTMAAEHVTARYWSDNLVSPVLFRQALEQAGLENTFDAAVEVGPHPTLKAPATNTLAAVGAEDLPYTGCLQRGGDDVAALGDCLGYLWERFGAQGAVDAAKFVEDVHGTKPVDLSKRLPTYSWDHSRVYWAESRATQAALHGPRPHLILGTLLPSSTATRLQWRNFIRPRDHEWMQGHELQNQAVFPAAGYVILAMEGALHIAGDKPIGLVEVLDLTIDKAVTFDDADDMAELTLTANITSTTTEQIEMDFVIASCLSRENSLSVSAQGKIVVTLSDPVSLPAPGPAPPHANPVDIKLFYKELDSVGYSYSGNYRCIYSMERSTARAAGQMAHQRLADGAHPLVLHPANLDLAFQTVMAAYSSPGDKRLRSIYVPVGVDRIALVPRVCADTLDGLEGVRYNALNTYDGGDRLSGDVEVFDKASGAVLYTVEGMHLKPLAQPSDAEEHRPFTKTVWGPLDADKILDIERLWATDQDKHVIPIIERCVYYFVRQFLKECTEEDRKNASLGNQRYIAWHEHVVKIAREGKHLFYQPEWEEDTDEIINKLLEENWYHPHLRLAKLVSENCLSTIRENKNPFIWMDENGLLTEFYTSYLTSGPTWEYGQHLIEQIAHRFQNMDILEIGGGTGSATKSILAIPELGFNSYTFTDISAAFFEKAKEKFAPFLDRMDFRKLDITKPPAEQGFKTHAYDLIVASSVLHATPCLAETMANARTLLKPGGHVVICEATNKDHMRVGYLFGSFTDWWAGYDEGRTLDPFATREEWDAIFKKTGFSGIDSITTDRETHLFPNTLLSTHAITPEQLRLDAPLSAPVKPEQPQLVVVGGGEKSAPILAQIRELLPHRTPVVVPSLVDLPDLQSKATYVVLSELDAPVFEGLSDAKLAGLKKLFFGSSAAVLWLTEDAWVSNPVQAMGIGTLRTVRLENPDVPFQSLDVDRLAELDCKFLVEQILRLEEGLPENATWTLEPEICVVNGRPYIPRIKQDMTRNNRMNSTRRPILTEVDAAAVPVVLRDRELVTAATSRPLGVPLDATKVTVQVHHSTAKAIRVCGLGYLHVVTGTTAEGAVLALSESNASVVTVPAKQTFPIKDTTAATLSSAVAALVAQSIVEAPKGSSVLVYAAPAFCVDAVKQLAEARGVNVHLAGTDSSIPGSIVLHPRDTSRALKQKLPAGIASLYDLSADASANSLGQRLVSITGCAARDAEYIARDSASTVVFTESLEAAQLQLVADCISKAPPVVASATITSPADVAHRALDTVIDWQATPKLPARVSPVDNGTLFVDNKTYLLVGLSQSMGRSIASWIIKHGGRHVVLSSRNPEAPEAEWLSEMTRLGGQITVLAMDASKAESVDAGLAKLKDEFGLPPVGGIAYGPLVLRDALLNNMDLETMEIVLRSKVPGAKIFHDRFNDPKTNPLDFFVMFSSAALFGGNPGQANYTAANAYLQSLGQYRRSKGLAASTIHIGAVMGIGYLTRNAREAEFQEKSDVDTLGEAEFLSLFAEAVVSGRKVDGVDGVSAKSVIDMSEIEIGSGIPAFESRHKDTIKFYHDPRFGNLKTPEQRGDSADAGGSRLSVKELLAAATTMEEVQDIISQTLSEKMRGVLHIPPEESVNASAPLLDQGIDSLGAITVASWFSKQLLVEIPILRVLSGASIEELAAEGASRLSPAAIPLVADAQGPTAPSESGASSSEDPQSGALTPLTPMVQSDKAEKILDGVLRRAPMSLMQEYSHKRQLALSDVTISHNTIGVVMEGTLDTAKLDAAVTAAIQRHDIFRTAFKTVDGESSPLLNVLATPSWGLRTEAVASRAEAEAALAALQNEPYDLTAGETFKIVLFTWSPTSHLLVFAYHRLAGDGSTTENLVAELAQLYSGATLPPAPQYTDFAIKQRKSFVSGGMNADVAYWKALYTPVPSPLALLPLPGVKQDRSPVAWDQYTAITRLSPVMAYRIKERTKKLRTTPMNFYLAAYTTLLSELSGQDAVSIGLADTNRSSVADLSTMGYFANLLPLRLSPSAAFSGTVEATKESVRQAMAHSVVPHDLLTAELGLAVPPAEMTCAPLFQAVFDYRQGAAESGVIGGASITEVIASRERTPYDVVLEMSDDPTKEPLITVKLQKSIYQEGDAEVLMERYVEALKAFSQ",
                 "length": 2912,
                 "architectures_nb": 1,
                 "domains": [
@@ -3128,7 +1763,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -3141,7 +1776,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -3154,7 +1789,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -3167,7 +1802,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     }
                 ]
@@ -3181,24 +1816,25 @@ $FAM_LIST = [
                 {
                     "name": "A",
                     "evalue": 0.01,
-                    "color": "orange"
+                    "color": "darkorchid"
                 },
                 {
                     "name": "PP-binding",
                     "evalue": 0.01,
-                    "color": "papayawhip"
+                    "color": "maroon"
                 }
             ],
             "forbidden": [
                 {
                     "name": "C",
-                    "color": "fuchsia"
+                    "color": "navajowhite"
                 }
             ]
         },
         "proteins": [
             {
                 "id": "MGG_00385T0",
+                "sequence": "MSPALTIPYGRRLIPQVLDDLARTTPDREMFSVPRSDDPKDGWKTLSYGQVAGAVDRVAGYLLEQKKDILSRCASSSSSGNSQTNGSGDSRAQDEFPTLAYLGPSDARYVIFAVACVKAGMKALFISPRNPKAAQLNLFDKTNCNAIYYDPEYDHEVRLWLDERTTMMGVRVHSAQEWIDGWGADKGSKPAHVPYTKTFEEAEWDPFMVMHTSGSTGFPKPVFVRVGMLAVSDSFHSAPEFMGSPTIFSTSMAGRRILNPMPLFHAAGLYVSLLRAVYFAMPVALGITSRPVTPQSVMDALANVDVDMAILPPAILDEIAYIPEAVDALRRLDYVLFGGGPLNPEAGDRLSVREGVRLLNMIGYTEAAPLAYHVQRDPKLWQWFIVDSERMGNKWVPYGDLTDEGEVYEHVIKRKEKNDPPGSQGIFYTFPDLHEYPTKDLYIKHPTLPNHWKYHGRADDVIVFSNGEKLNPVSIEAAVASHPDLKAAMVVGAGRFQPALIVEPALPELSPKNDQEADRFVERIWPLVEEANRVSVAHGRIAKELILVASPHKPFPRAGKGTVQRPAAVKLYKLETDALYEKAGMEADGAADSSIPIDVSSKPKLAESIRELFEQLGEMNNKGKKLALDRDFFTAGVDSLQVLNAVRMIRRGLEAAGLPRPSPSVLAPRFIYAHPTAEKLAAYVFDTIIHGQQNGHANGNNNNNSGPSPDIQAMKAQLEKYTRGLRSDPASQKNKPAPSETDQTIILTGSTGALGSYILDMLQSSASVGKIICLNRGDDSGARQKKLSAERGLATSFAKVEFYNADLSRPDLGLDAETYDRLLRDTDRIVHNAWPVNFNMSVETFEPHVASARNFVDLALKAAKNVHVVFVSSIGTADGWTGAEAFPERRSDDLTLPSTGYGRSKLVSSLIFDEARERSGVSTAVVRVGQIAGPRGDKGAWNRQEWLPSIVASSLALGALPGSLGPMDDVEWTPTEDMAKLILEVADILPTREGWKHDNEGYFHGVNPRSSKWSELVPHVHDFYGDRIKEIVPIEKWVELLEKSASDTKNIEKNPGVKLLDFYQGLLHSRNIKFDMRRTCELSPTMASLEAVTPELMKNWCRQWEF",
                 "length": 1107,
                 "architectures_nb": 1,
                 "domains": [
@@ -3212,7 +1848,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 33,
                         "hmm_end": 429,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -3225,13 +1861,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 50,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_02611T0",
+                "sequence": "MAHQLPDPTVDLDWSGYVGAIHEIFATNAQKHPERVCVIETESSEAPERIFTYKQIFEASNVLAHYLHDAGVTNGDVVMIWAHRSVDLVVSIMGVLAAGATFSVLDPLYPPSRQQIYLEVSGPTALVQIARATDEAGPLAPLVRRYIDEELKLKAEVPSLRIGDDGHLSGGEINGADVFASVRGKASSPPADIEVGPDSNPTLSFTSGSEGRPKGVLGRHYSLAKYFRWMAETFGMGEESRFTLLSGIAHDPVQRDIFTPLYLGARLLVPSKENIAHERLAEWFKRFEPTVTHLTPAMGQILVGGATAQFPALKTAYFVGDVLTTRDCRSLRELAANVDIVNMYGTTETSRAVSYYKIPNRASDPDFLERLGKDTIPAGTGMENVQLLVVNREDRTKLCGIGEVGEIYVRAAGLAEGYKGDPALNEQKFLMNWFVDNNKWVEADRVHPTKDAAWRKYYKGPLDRLYRTGDLGKYLDSGDVECTGRADDQVKIRGFRIELNDIDSNLSQSSLIRDCKTLVRRDKNEEPKLVSYVVPELKQWPQWLKLHGYEDAEDDEGTQIGATKVYFKRYRRMQAELRDHLKSRLPTYAVPSIFIVLEKLPLNPNGKVDKPNLPFPDIAEQTAEASSEEIERWESLTETERAVATRWAALIQGLNEKSIAPDNHFFDLGGHSILAQQMLLDVRKQMGANVSINTLYENPTLGAFSLQIDKHLGAANDASTSQVEDEANSYAKARDDLVKKLPASYKTADPSSIRASSRPTIFLTGATGFLGAFLIRDILQRTSRQLKLIAHVRAKDQKAATERLTRSLQGYGIWRDEWAGRLSCVVGDLAKPQLGIDQPTWERLSNEVDVVIHNGATVHWVRRWQDMLAANVTSTIEAMRLCNEGKPKLFTFVSSTSVLDTEHYVQLSERQLSTGQGAVPESDDLEGSATGLGTGYGQTKWISEQLVREAGRRGLRGSVVRPGYILGDFESGCSNTDDFLIRFLKGCIQLGTRPRILNTVNAVPVNHVARVVVAAGLNPVPVQGNEGVHVVHVTGHPRLRMNEYLSLLEFYGYKVPEVPYDSWKEELEQYVSAGAGVERDQEQHALLPLFHLCISDLPANTKAPELEDQNAVAVLKADAEAWTGLDESAGYGIGREDVGRYLRYLAMIKFVPWPTSRGRPLPEVSISTEQVAAMGAGVGGRGGAGAGQ",
                 "length": 1189,
                 "architectures_nb": 1,
                 "domains": [
@@ -3245,7 +1882,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -3258,13 +1895,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_03290T0",
+                "sequence": "MTVLDMNKDLAALFCKQAAATPDAVALEDETTTLTYAELERQTGLLANRLRQQGVGRDSLVGVLLGRSADYVIACLAALRAGGAFLVLELAYPPQLLCDVIDDANPTVVVTHRAHAGLIKPEIPLVVLDEPNATPEDSAQPTGDANQELPADDDLDRLAFVCYTSGTTGRPKGIANPHRAPVRSYSLRFELSDLKPGDRVACNVFFIWEILRPLLRGATVVAVPDNVSYDPVALVDLLASRKITETLMTPTLLATVLSRHSKLGDRLPDLRTLWLNGEVVMADLARRTLSALPNTRLLNCYSASETHEIACGDIREMLTEDASVCPVGPPLDPKHTYILDENFQKVEPGSSGELFLGGHLLARGYLNLPETTAKSFLPDAFDLAPGARMYRTGDLARILPSGLLEITGRVGGMIKVRGYSVQPGAVESVVMKHLAVRHCAVVSHGEGLKRQLVSYFVRDKENPGDRVDPIVQESGYSPVARKTLSAHLAHYMIPALWIELTELPTHEVSGKIDLKRLPGPSGSKTNGNGRQQERNKEVKVETIIQNWAASLDLPPSVITPEHDFFDLGGHSLALADLARRLSDAFGFPVPVARLAGRPTLDGHVEVVRAARDGHTAAIQADLPAVLKADSILPDDIKPTKTAMCPLNEAKTILLTGVTGYLGAFLLKSLIENTSARILCLVRFARPSHGTESRGMARIRQNLLDLGIWDPSIMDRVEVVPGNLGRKGLGLSDEDFNELASDLDVIIHAGATVNLVYPYAAMRTANVGGTKEILRLASRSGATVHHVSTNGVLPPSSEGWSEDTILDVEEVAEKLLDGYGHTKWVAEQLVLEAGRRGLPVKIYRPGTISGHSVLGSTNTYDLLTALFVESIHLGHAPDIPNWLAEMTPVDFVSQAIITLSNHVDTDQKIYHIGDPKPVTATELLDDLAGLGYPTDLMGWDEWVANWNERRGNPGTSGDDSFTAGILRRGMPEVEFLRAVTVLNDAKTQSVLDLYDVKRPKIDSKLFETYTRDWYARGWLSHPPRRDGVALRVRAKGPLSGKVAVVTGASSGIGAAVATALSKEGVHVALAARRTEALDALKAKIATNGTKVIVHKTDVTDKAQVESLIKTASEELGPVDILVSCAGVMYFTMMANVQTDEWERTVDVNCKGLLHCLSSTVPSMLSRGKGHIVAISSDAGRKVFPGLGVYSASKFFVEATLQSLRVETAGTGLRVTSVQPGNTATELLGMSTDQEAIKKYGEPTGAKVLDAEDVANSIVYALRQPEHVAVNEVLIEPRDEPI",
                 "length": 1281,
                 "architectures_nb": 1,
                 "domains": [
@@ -3278,7 +1916,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -3291,13 +1929,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 64,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_05491T0",
+                "sequence": "MSTPHSGEVYGRRLVPHVIDSIANRDPRRECFSIPRSSNPKDGWRAVSYGQYASAIDRLAHHVVKTSGAPHPKAFPTLAYVGENNAVYLIFVIAAVKAGYKALFVSPQNSEETQLHLFQLTDCHVIYHDAMFQRSVQAWLGKRHGMTANLLAPLDFWLADEGAVAHFPYVRTAEEAEREPFVVLHTSGSTGPPQPIVVQHGLIMLGDKLHRLPVWNGSEPAVRGLARSRRNLTPMPFFHAGGLYTFFGFHVYWEKPVAFAITDGPLTADFILQQLAHAPADVDSISLPPLVLEELSTTDRGCEALGRMKFVFFGGGNLNEAAGKRLLDRGVVLQNSFGSTEYGMLPFYWQTNPQEYQWLPIHSEVLGAEWRPVAGEDDVFELVIVRKDDPSSIQGVFYTFPTLDEWSSGDLFKKHPTLPDHWKYHGRCDDLIVLSNGERLNPTAVENALSGHPKVRSAIVVGTMRSQPAVLIEPASHPSGTEEKEALLDEIWPIVLKANSELASHARISRQLILITKSDKPFHRLANDAVHRVPSIKLYEPEVDELYREAEAGWKDAQCSLDLGSEERLLQSVCRLFQTLTYSTIIEPDTDFFSAGIDSDQVVNACRLLRSELRDKSKRINLQSITPKIIHAKPSARRLTAELWGQHIGSVNPVTTDAEASRAMSGLVAKYTQDLPEAPLIKKPAARTSQQTVVLTGSTGRLGAYLLDMLVADPAVAKILCLNRSRDGRARQQRLDASRGLRTDLTGVDFLHADLARPDLGLGVEGYAQILANADRVVHAQWPADSNLALAAFEPHVRAVRNLADLCAGATRDVRLVLASTVRSATGWDGSDARRVPAGAYAQARRVAELVLDAAARRSGLSAAVVRFGQIAGPEDPAGLWSRDEWLPRLVASSVRSLGVLPRDLGAMSTVDWVTAEGAARLVLEAAAGQTKGVSGGCCYYYGVNPHAGHFSTLSEAIKGFYGERVRELVPWRDWVEALEESEMQGGNAESNPALQLLDFYRGTPDDEMIGDARVSFTLDETLEASTSMREMRPITPELMVQWCRRWDL",
                 "length": 1050,
                 "architectures_nb": 1,
                 "domains": [
@@ -3311,7 +1950,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 2,
                         "hmm_end": 145,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -3324,13 +1963,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 48,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_16971T0",
+                "sequence": "MSQRNGAHNTDHFTTVDDLIRDRAATIPDTPLITYPNSRARCADWVEYTARDLDAYADEAAKELSRLGLNPKHRKSTKSEVVALLGPSDLDYAISMLALTRMGFGVLFLSTRLAVEAYASLLDKTDCTRMLTTPKFVDNTVKAIREGRDLETWDIVEKSIYSRESTGKQFQKQTEIQDQANAVAFIVHSSGSTGLPKPIFQSHRACLGNYALGSGMRAFVTLPLFHNSGLANTFRSIVAGKCMALYNASIPMTSASLVEGLDHIKPETFNCVPYVLKILSETPEGLAALARCKMVVYAGAGCPDDLGDLLVEKGVNFVSHYGQTEMGQLMMSTRPPGDKAWNYVRPLPNTRQFIHMDPLGDGQYECVVLDGLETKVMSNSDSPPNSYRTRDIFVKHPTIPDAWKPVGRLDDRLTLVNGEKVLPIPMEGTISQSELVHQCLIFGVGRAFPGLLVVKSDKVPSGWTRERYLDAIWPSVQLANHNAEKFAQIDRDMVEVLEADANYPRTDKGTIIRAASYKRFADLIDAVYTRFEGGSLGPAGKNGTRQKTDVQGYKSYLTALFRERMGFKTLQLDTDFFSAGIDSLQAIMARSHMMRQLDLGGAVLGQNVVFEHPTINQLAEHLFVASRATRHTSPTTAPDDLSTFMYDLVAKYGNFDPFLPGTKTPQADTILLTGATGSLGAHILAQLLPFPHVRHVYCLVRAPDAAAATARVFSSLSDRGLGDCITPALSSKVIALPSDLSRPDLGLAPAVLSGLRSTLTGVIHSAWAVNFNLGVSSFAATHIAGVQNLLKLALSVPFRQPARFAFISSVSAASGTPLPARIAERYVADPRHAQGIGYAQSKWVAEHLVRRAAEGGGVAFRVLRTGQVVGDSRQGRWNATEAIPLMLRAAETMGALPRLDERPSWIPVDVCARAVVELSGVERPFGDAAEEAEDGAHVVYHVLNPRTFSWADELLPALRRPDCGLKFEEVGQREWVARLRAAAEADEAVGKHPTVKLLDFFAGKYDNDKPGRSGLVFETEKTGGRSRAIRQGFDVIGSGLMGKCVASWRSNDWK",
                 "length": 1055,
                 "architectures_nb": 1,
                 "domains": [
@@ -3344,7 +1984,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 4,
                         "hmm_end": 293,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -3357,7 +1997,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 21,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
@@ -3371,7 +2011,7 @@ $FAM_LIST = [
                 {
                     "name": "oxidosqualene",
                     "evalue": 0.01,
-                    "color": "royalblue"
+                    "color": "rebeccapurple"
                 }
             ],
             "forbidden": [
@@ -3384,6 +2024,7 @@ $FAM_LIST = [
         "proteins": [
             {
                 "id": "MGG_11702T0",
+                "sequence": "MGEAKATGVAIHSTDSNGVKRGSMKRSAATNAKDSGWKRPKLAEKTDTARWRMLDDEGRHTWHYLEDDEAVKEWPQSYADKWYLGLPMDLPTLPEPKKPLDAVVNGLDFFEKLQLPPGNWGCEYGGPMFLMPGLVISWYVTKTPIPWPVATEIKNYLFARANAEDGGWGLHIEGESTVFGTALNYTTLRIVGVDADHPAMVKARTTLHKLGGTTQAPHWAKFWLAVMGVVPWDLVNPVPPELWLLPDWVPFAPWRWWIHMRMVFLPMSYIYSKRWQGETTDLVKELRQELFAEPYEKINWAANRDSIAPRDNYHPKTWLLTAANWAIVNVWNPFLRPDFLKKRAEDWVSKLVDMEDENTDYADLAPVNGAMNMVVCYIKDGPDSYAVKRHRERSQEFLWVNKEGLMVNGTNGVQCWDTAFAIQAVMDAGLTEDRRWKPMLLKALEFLDDQQIRENSKWQDESYRHPCKGAWGFSNKDQGYAVSDCISEALKSVIILQKTPGYPQLISDRRIFDAIDTLLTYQTENGGCASYEPPRGSEKLEMLNAAEVFGRIMVEYLYPECTTACVTALSLFHKHWPDYRASEVKTFIHKAVNWIKTDQRPDGSWYGSWGICFTYAGMFALESLASIGETYRDSESSRKGCDFLVSKQREDGGWSESYRACEEAEYNEHPMGSLVVQTAWAIIGLMKADYPHIEPIRKGVKLIMQRQQPNGEWLQEAIEGVFNKSCMISYPNYKFTFTLKALGMFAKRYPNETVV",
                 "length": 756,
                 "architectures_nb": 2,
                 "domains": [
@@ -3397,7 +2038,7 @@ $FAM_LIST = [
                         "hmm_length": 739,
                         "hmm_start": 2,
                         "hmm_end": 736,
-                        "color": "royalblue",
+                        "color": "rebeccapurple",
                         "status": "likely"
                     },
                     {
@@ -3410,7 +2051,7 @@ $FAM_LIST = [
                         "hmm_length": 720,
                         "hmm_start": 7,
                         "hmm_end": 713,
-                        "color": "peachpuff",
+                        "color": "sandybrown",
                         "status": "unlikely"
                     }
                 ]
@@ -3424,29 +2065,34 @@ $FAM_LIST = [
                 {
                     "name": "KS",
                     "evalue": 0.01,
-                    "color": "mediumspringgreen"
+                    "color": "peru"
                 },
                 {
                     "name": "AT",
                     "evalue": 0.01,
-                    "color": "aqua"
+                    "color": "mediumseagreen"
                 },
                 {
                     "name": "PP-binding",
                     "evalue": 0.01,
-                    "color": "papayawhip"
+                    "color": "maroon"
                 }
             ],
             "forbidden": [
                 {
-                    "name": "None",
-                    "color": "None"
+                    "name": "C",
+                    "color": "navajowhite"
+                },
+                {
+                    "name": "A",
+                    "color": "darkorchid"
                 }
             ]
         },
         "proteins": [
             {
                 "id": "MGG_00233T0",
+                "sequence": "MERISINNDERSIAIIGLSCRFPGQAKDLDGFWEMLCRGTSAHSTVPKDRFNVEAFSSGPGGGINTSRTDGGHFLSSDIRRWDANFFGVTADEAIAMDPQQRLMMELAFEAFENAGVTPPQLDGSSTGVWMGVNSNDWRETLFRDAEAAPLHTWTGTGPEYISGRVSWFFNLRGPSMTVNTACSSSLVALHEARNAILAGDCKMALVGGANLIFNPEYYMYYSNQLFLSPDGRCKSFDASGDGFGRGEGLGAVILKPLKKALEDGDSIRAILRSSGVGQDGWTSGITLPNADAQADLIRAVYADAGLDPRMTGYVEAHGTGTRVGDPAELEAIAKAMGTVGRAKPLLVGSVKTNIGHLEAAAGIAGLVKSILMLENAQLPPTIGIKDPNPKIKWDEWKLQVNQALSPWHQEPGQPRRIGISSFGASGTIAHAIIDEGGTSSNDEHEPPIRPPFHTGPHYQLVTVSAADKDGIRRQAQALEQYLQQWLKRTLPSSQQEAAYLGRLAYTLGTKRADLSYRSFMVVDKIQDLCTQLVPDSSESSSDSDGSRLRIGMIFTGQGAQWARMGIELLRYEVFAQSLRRADEYFRESLGCAWSVLQELSADKDRSNLKRAEYSQPLCTALQVALVDLLDSWGIQPAAVAGHSSGEMAAAYAIGALSAEDAWAAAYWRGNLDGRTSQPRGAMLAAAMSEQAAQALIAQVPRSKGIVVVGCVNSPSSVTLSGDEAAVVAASQLITEQGVFNRRLHVDAAYHSPHQSRLSDEYLMRILHIAPKPIKAGRGMFSTVTGRAVLNERALGPTNWVRNLISPVLFAQAVEAMLVSKEANVQLLLEVGPHGALAAPCQNIMSKAGVTVPYLSVLSRDKDAVVTSLAAAGELWARGENIHMAAVNQPSLDGVPLQQLIDLPPYQWNHERSYWSESRLTTEHRHRQHAPSRFLGTPLPTLVEGEHLWRALIRPSDEDWLLDHKIQGVIVYPAVGYIAMAVEAARQLAADTTGQDGSGDSSSPKLRAFHFREVEFLAATTAPGEDQVIEITICVRPAPGSLGTSSDWHHYTISSCTDGKTITKVCTGLFKVEYEPAAGSAEAYELAEADREVQARLLRARADCRRRENPESFYMELSRIGLEFGPAFRNMSEIWMGKSQSYCTVDVVNPSSKRASDERRPFIIHPATFDPVLQTITAALGLPSRTPVPTAIEELVISADIPCEVGRRLHVCSNAVPRGNYDILSDICALEEESSRPVMLLRGFKASQLPPSDLVGALDKAHKICGRIEWRPSLELLLSRQEDLRNVILNRINGEGEALNEYMQILCHNFPEASVLEIGVDPDDSLAPKLSLPWHHVLDWETAVCTRDGIQYSSTAGGKDSSDKQVDVVVLRQLPPDGEFGALLTKITDKLDKESPLGFVCITTCIEVAEKALTERNARPLLSIHDPKTEQGLLVFKAAGKEPAPLLSKSRSAAVVLHSNQPSALEADVSRHLKKHLQQIGIDTTASRWEDVANIPANAHVVSLVEISSAVIETLDEADFAKVKTLVSNTSEILWITSETSESEGIAVRGAVDGFSRSLRSEEARVSFRVAHFGQRVEADAEKMAGVIMRLAMNKTRDHEFRVEVLGDDFVAFTSRVAQEEMLSDYVQKKTGTVSEARILPHHPHESPKQIPDKDRPVIKLDIAERGRLETLHFVEHQNESLELKEDEVEVQVEASGLNFKDIVIALGRVPGTMEGAEGSGIITRVGSSVAGLHVGDRVVCLCIGMHSSLVRVPSSACRKMPDSMSFAEAASLPVVHCTAYNAFVRIARMDENETTDVRPSVLIHAAAGGLGQVAIQYAQHFGMEVFATVGSAAKRELISRLYGIPDDHVLSSRDTSFAMAVKRMTGQRGVDMVLNSLSGEILRQSWQCLAPGGTFVEVGKAAIDSVRPPGNEVGATYTVFDLEHIVRRNPRLAGRLLDGALHYVRSGLVKPPSPCRVFPIGDVHEAFRLMQTGQHMGKMVFSWSGDTTVPVLKPNPFSVVASMPSRLDADATYLLVGGLGGIGRSISRMLVDMGARKLCFISRSGLSSPPARALVAELQALQCRVTAYACDAADASQLARTIASCQSDSGPVRGVVQCAMVLRDCTFANMEFSQWSDAVRPKIQASWNLHNILPDLEFFTMLASFAGYFGNTGQSNYGAGCAFQDSLARHRRSIGKPAVALDLGIVNDVGVLAETGLTDNLRDWAPHFGIRERQLQDLIRISILDQLTGRPAIPAQVPTGFASLRAADLAGIRRPVYLDDARFSVLAADGLLESQTASGRRPGRGSSFQHRLEAARVARAGGEVSAIVEEMLTHKVAQSLKVSADEIDPGKSLPSYGINSLVAIEIRNWIFKEIKANVAIFNIIAPVPLSKLVEDIATGLLVSN",
                 "length": 2386,
                 "architectures_nb": 1,
                 "domains": [
@@ -3460,7 +2106,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -3473,7 +2119,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -3486,13 +2132,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_00241T0",
+                "sequence": "MEPKANGQSMESTKLFLFGDQTIEFGSSLNKVVAAAKQKSPLARKFLSDALDTIRLEARQTGTHKLVELESLDTLLSSPERFDEVKDETGIIHTTFSCIARLGELILHAEQDPTLLSPKAHGPPVQAVGLCTGLLPAVALAAARDVRDLASVALAMVGVAFRLRLELHRRSRAVEGGDGIWGYLVVGQTPSEIEAALDSFHQAQRLPTHKRAYIAVAARSWSAVFGPPSTMSRLFHESSVLRQASVTELYRANGCVHASHLPGLDTAYILGANSELLKRQPSPAVSIMSTSKCRPFQARTLKDLLGQVLDDIATLRLDMDGTMDAAAESVPTGSELQVLLIGGANAVSALKNSLGSRDLTLTVVEGAVPRPQPALRNGSGRVAIVGVSGRFPDAESVDEFWQNLLAGRESHKLVPESRFGLDAWKHALGPDATLPYGCFLNSPGQFDAKLFNISPREAEQMEPMHRLQMLTTYEALEDAGYAPNATPSTDKTRISAFIAQSSDDWRDINHQHGIETHYVPSIARAFGAGRLHHYFKWEGPAFTVDAACGSSAVAIALACSSLVRGDCDTAVVGGSMLACSPDAMAGLAKGGFLSPTGSCKTFRDDVDGYCRGEAVGSVVLKRLEDAELDGDRILGVVDGWARNHSAYASSITHPHQPSQERVFHQAMRMADAAPEDVGYVEAHGTGTVAGDVCEVKAIANVIGGSRAPDNQLVLGAVKANVGHAEAGAAIVALIKVAMIFKNKGVIPPQPGFDNPVNPVRLNPEFPHLAGRHIHIANGRQHLAAGKKAILNCFDATGGNTCLVLSPPPSKLALPKSMGPGKHVKDPRTHHVVVCSGHTFNVMKRNERRILDYLISHKDASVADLAYTTSARRVKQHDVRAAWTVADTKELGRLLLKETSRTEHSAKRPGTVVFTFTGQGAAYRGMASQLFETSPQFRSGIMAAQRLCDLYGFPSVVEYIQGQEQHRGAAAAAAAPEVVAAQEQLSLVALQTALVDLLRFWGLRPDVGGMAQWLSAMAAPLDEEPSTAVRRILRAPEGTGPDVVMGHSLGEYAGLCAAGVLSLGDTLYLVGRRAGLLGQHCRAGDYGMLVLPVGSGEADKMIANSRGCCIACKNTPSATVVSGPLKEIHDLQAAVRRDRGIETTILPVQYGFHSSQMENIAEDLERLAEEVHFSSPQIPVASTLLGRIIKDGGTLGPKYLSRQTREAVDFVATVEAISAGGLADKDTIWVEIGPDAVNTSMVRKTLGIKDSNRLVPALKKGREVWATLSELVASAYCRGHHVDWHNYHRHYEPGLELLDMPSYSFDLVDYWRPYVHPTSTAFAVRDAKPMAPPPVVPEMTYLTSYLQYVKDEQVAADGTITAHFVSRVDHPEMVAAAQNHLVNGVPIFPGSAFCEMALAAAKYLISKHRNLVQPPEISSMVIQGLEMNRPLIISTASDASLLLTRAVCHGRGVRVEFSVRDGHDTLPLGAVGIAYEKGAALKTKAAPMFLFFVRNRLDGLVKAVAQGEGHLLRTSLIYQLFQRYVHYGKGFQGIQQCWLSQDGREAACTIRLPSSPSATGERDAFNMYWRDCVFHLAGYMLNGHPDGPTEEANIAVAVGEIVFEEELTDVDTYQAYTRIEPTEEGYVGDVFVFRGEKLVGICSDVVYKTVQVRRAGQKQVTAAPLVKDHQEMALTSLPDLGRKDHSAHSTSIPAQPREAAMDRTICPGYGSMTSAPVQSKAPSKPQVDVAEMLLDLISEETGWDKEEFDSVTNLADLGVDSLMNIVLASKMKSDKGIQISAAKFRTCLTVADIRREFGTTTTEEPSAARAPSPDQFEQERAESPCLSTPNDSSDAESGYDMFSSATEGSDSGMMVEIDPPSQQHKSTPTTITSVASTVTTTKLQDEFVVEDFLIQGEEQDGVPPLFLFPDGSGSVTSFVQLPNLASNIAVYGLHSPWVKEPERFDCTIEEATALYLAAIRARQPRGPYLLGGWSAGCVLAYECARLLGEAGDEVLGLVFIDMHCPRPLPQWIDTTRELWEYWCETTGLDKVFAPLPGGADLGAHLISNFRALNRYHPKPMTKTPRHGTLIIWAKKGMGNGLRKEDFPDMSDPLGVGEWFCFDRTEFGPNGWEKLVGDKVECVAVDGHHRSIMVPPDAYQMINVIDKALERFLS",
                 "length": 2153,
                 "architectures_nb": 1,
                 "domains": [
@@ -3506,7 +2153,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 84,
                         "hmm_end": 294,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -3519,7 +2166,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -3532,7 +2179,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 2,
                         "hmm_end": 308,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -3545,13 +2192,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 66,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_00428T0",
+                "sequence": "MAYPEQTFAHVFGDQSYDFLGLLRRLGHDNSDAVVSEFLDGSAVVLKKEISRLPPAQQAQCPRFSGIADLASRYSGSSSTTQNPVLSQALTCIAQLGLFIRLHGVGGRVYPTPHTSCVSGVCTGALAAAAVSCSQSISTLIEPALHAVAVAARLGAVAWNISGRIHNTGEAGGGSWCGSPASAAHHPSWSYLVHSPSAESLENALKAYAAESMLPITSTPYISSILGPHEFAVSGPPGIVTGFLSSAFAQALGHIKMKPLNIGAPYHSSVLYSEQDVQQILSVLPRTGLPRSSIPIVPSHDRGASSGPPATLRHALEEAVRDCLQRRVALGELPQRLVGSCAARSLFPRQLVVQPVAFQAADSLVSSVNCLLPVNNLVAAADRSRRGPASELEPAASSSSPNRGLTASKTKTPIAILSASGRFPGRADTMDAFWDLLVRGVDTHETVPTWRWDAATHVSDDPTGKKNVSGTGFGCWLHQAAQFDTAFFNMSPREAVQTDPAQRLALMTAAEVLEKAGIVPNRTGSTQKHRVGVWFGATSNDWMETNSAQNIDTYFIPGGNRAFIPGRINYHFKLSGPSYTIDTACSSSLAALQLACNALWRREVDTAVVGGTNVLTNPDMTAGLYRGRFLSRTGNCKTFDDSADGYCRGEAVVTVILKRLEDAVADKDPIEACIRGIATNQNAEAESITRPYPEAQMQLFEALLAETNTDPADISYVEMHGTGTQIGDVGETMSVVQTLAPAGSRAASNPLYIGAVKSNVGHGEAAAGVTSLAKVLLMMKHSMIPPHVGIHTKINHRLPDLALHNTHIATRPTIWPRPRGAVRRVLLNNFSAAGGNTAMILEDAPPLAVMSEAPLSEESDQHQQQGLRRHHVVALSAKTPESLVFNLRNMIGWLDRHVQDATSHDGNLLGKLSYTTTSRRMHHPHRIAVVAAGLGSLRSELQRQLDLRTSGDARMAPPPPPQRGAIGTGVILTFTGQGSFERGLCADLYDSCEFLRTDVQRCEHLVRAMGLPSILAAFQRPGVNSLDVSSRLLSPVALQLSHVCYQMALCNLWRHLGLAPKAVVGHSLGEYAALYAAGVLTQADTISLVAGRARLMEELLESSTVPHAMVAVMAPEASVTAALGGSNLAATHGVSVCCRNSANNVVLGGPTASVVKVKALLEFQGHRCRLLDVDMAFHTAQVDPILDAFLKVSSRTRLCDPKIPYISSTLAKVVRNASDFGSDYFSRHCRKPVDLLGAVIAAKAEGLVGERSIAVEIGPAPVVCRMVKEVIGAQMQTFTSLHRHSETWELLGKAAAGIHVAGLHLDWDKYHEDFPQYHQVLQLPTYAWTLKEYWIPYVNDWSLRKGEPAVIMSPIRFPYSSVYKVVKDLDLDHLGSGGSDGLVVVHLDLNSDEVQSMAQGHKVYDVPLCTPSVYADVAFMIGDYVSRVTGAPQQPVLISIDDMRIHSALVVNKNLGKKQILRSEARFDKETNSISCTFTSLDSIHRAVEHYASCKIHFSPAGALGADAALDEASSNALRCLKELRSGVGQGENTYRFSSSMIYKMIARLAEFDPKYRGLSEVTLNNDTLEAAGKISFKGLAADKDGGDDYWFSSPSRLDAISQLAGFVMNGNEGVDLDKDIFVNHGWNSMKLLGHKLHADRDYYSYVQMHEGENKIWTGTIYVFDEEYSLVCLVRGVELQGVPKRLMQYIVKSANKNMSAGVESATSQSMDQTAFLRAPATKPQAKAVVRRESSPAAAAAADEAPLIANSRQDNDGDRVWQAVLGIISEEVGIERDQVSEDRTPADLGIDSLLCLVICGRLRDELDLDLNENLVLQEGVSLADVKLHICRPKFDFSDTSSVACLDSESATTCNPATPSSDWSLDRDEKIECTSLQVSLQQGSVELLAPAWSIYLQGSRGKCDRTLFLFPDGCGAATSYMNLPTLGQNTALVAFNSQFVKNPSRMYDYTLEQVLDSYMVGLQRCQPSGPYHLGGWSAGGILAFAVAARLISSGEAVASLTLIDSPPPIDGLDCLPDRFYQHCVDVNIFANEMRRGFGPEDDGSAAKPTRPLPEWLMLHFRASTELLSQYRPIPLPAELTRGLRVNIIWAAECAFDGLHYPGLPPVAPGEVEVEGLKFLTEKRTDLGPGRWAELFPGVDIRTGVVQGEHHFSMMRGRGANKLTQLVRAGLDNFAS",
                 "length": 2174,
                 "architectures_nb": 1,
                 "domains": [
@@ -3565,7 +2213,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 14,
                         "hmm_end": 270,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -3578,7 +2226,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -3591,7 +2239,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 2,
                         "hmm_end": 309,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -3604,13 +2252,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 66,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_00806T0",
+                "sequence": "MFLKQQQQQPVEADFVDCQSTPRAGGPVAGTTFYTVPVRTFGVELGEYWYPGGSRGPVAFVETEKLATFPTRFCASDYAGSSHSSPQPTAVGVSRERLDRGRFLGKHGEMPTLPLDSIASCGVHRIPEYRWIGKWAEQVDDGASAVNIRRLFEASSPIIGLDARFPGDGDTAERFYDFLLAGRSARSEIPPERYNADAFWHPDGNRSGATRARAAHFLKGSISAFDAPLFSITPTEAAAMDPQQRGILESVYRALENGKFPLAVVGGCNLIISPEFALLLDAAGVLGPDGKSYSFDHRGNGYSRGEGFGVVVLKRLPDALRDGDVIRAVIRNSGSNSDGRSPGITQPTKAAQAALIKQVYANAGLDPSVTRFFEAHGTGTAVGDPIEASAIAEVFATHRSHKSPLWVGALKSNIGHLEGAAGVAAVIKGVLTLENGVIPPNTWFERKNPKILDSWNLQFPTEPVVWPQTGLRRMSINSFGVGGSNAHVVMDDALHFLQSYGLVGNHRTVALPRLPGSSSSRRVVSQADSGVEFTDSDSELKTPDGTHSPDSTAEHSKDMNFDSSCTNTDTLQTTDTNKQPKLSAIACPEVLSSSLSRLAVSDEEGRQSQIFVFSSSDKDGVSRVVNELADYLAKKAKQYKPNMRDQSKFLRDLSYTLACKRTRHAWRSFVVAKTQSSLSALLQAKSLATRAASEPQLAFVFTGQGAQWPTMGRGLMAYPTFRESLHEAEEYMTQTLRCPWSLTYELCKEAGASRINDAEFSQPVCTALQVALVDLLRTWKVRPHAVVGHSSGEIAAAYAAGQLSRQSSWRIAYYRGKLATKLIRSLRRRENSQDAHVKKTGMVAVGLDKEQTLAAISRVDSLVGEGSLEIACMNSQESHTVSGDMAKLDALVEVLKSENVFARKLSVGIGYHSRHMLPIADEYVRLIGDIGSDLPPSQGQSLPRYFSSLEGSEITLDRLQSPDYWANNLTSPVRFHEAVELMLRADLGCNSQGESSTVGKKTVTDLLEIGPHAALRGPIRSIVKQVHQTAEWKIGYATVLKRGDGAIENALGAAGSLFCRGFDVDLAAVNQHQVESSRQSIALNGGNNVLMLTDLPGYPFNHKKEYWAESRLSRNYRFRSAPRHELLGAPVPDWDKNDAVWRNYIRITENPWVEHHKVSGEILYPAAGMLVMAIEASRQLVDKDQQVAGFRFKDVSFHLALLIPTNDVGVETRFRLRSVSAGKLAGWSEFQLSTSENDDWKEHCRGFVRTEYSQTGSNTESDSSRLVHSQCEQEIVQAKKSCTSMVHADKVYRKLSNIGLDFGTTFRTLKDVKFDGTSRILARAESQVSHIKKSMPAEYLHSHLVHPSMLDAVLQANLIPIALGSSSRDSLVPVFASDFWVSAATKEGVDFHNSAYLISSHAKLTPGTADAEAALFGIHADTGEPLVTSSGLVFKTIPNTASSGQRNHHRPALNLDWKPDPNYLTEEDALRMFGAPAITQSSDEVSDDIGDCEILCLLYIRRFLASLDDTVVEKLDWHHLRYVSWMRHVVQTTTVKPAVDNISVMEARIAAAGTPEGKLIMAVGRNLANILVTGDVDPLDVIFGDKVAENVYREGLGSRRCYAQMCAYLDALAHVNPSMKILEVGGGTGGATGSIMETLMANGARRFDHYDFTDISPSFFEHAKEAFKQTAEHMSFRVLNIEKEPTDQGYDGQSYNLVLAANVLHATKSMERTLANVRKLLKPGGKLIVFELTNPAVLLGGFCFGVLPGWWLSDEADREWGPLMVVDTWRAYLERAGFSGVDAVFDDFPDAAHQTSSILVSTALPVADASKPVTAVDNLTRYCVLMGERPSVFQRQVADALLPALARTGSVETSTITASAGRDLKGSCCIVLSELDSPTLIDMTTDVFVALQGVLNSCRRIIWLSRSGDDIVAAPDRELVTGLARVVRAEREPPFSFVTVSFAEAERSETIVDKTLQVLDRGQETAENSFRVFNGVVHVPRLVEAGYLTDHISAEANPTSTQATTQEVKLGADPRDFVAQVQSTGLLQGAGTADVCFSEDHSRQQPLADDEVEFKVMACGVGAHDVAAEDSAAGESSLSDMGIQMAGFVTRLGSTAASKFSVGDRVTGISLEGAIKTRARTQAGLLAKISDKLAWNQAAQIPMAYFTACAIIQYMGVGDSDDILLVHRAAASAAGLAAVQVARSNGAKIFATVANAQERTALQGVGGLLTDQILDLDQNTTLSTIVKSKTGNRGVSMIIDSLPQSDVDHAASLVDCLAPFGRFVSLGDGPMPGISSRRNICLERFNGAELMALDYEKAQRIFLRAARFILDEPLAANAQVPVYKFSEVSEAFAQLGKGEDAVVLEPHDEDVVKVVTSQQSHTDFTSRFDPGASYMVVGGLGGLGRSVSRWMASKGAKSLVLVSRKGAVTPEAQVLVAELQDLGVKVTTPACDATDKMALRRALDQCVAHMPPIKGVIQCSMVLKDKRFFEMSLEEWNTAIRPKVDVSVNLHDALDTASLDFFIMLSSTVGLTGSVEQANYAAGGTFQDAFARSLAASQTASSGPVAVSLDLPVILDVGFVAEKPELMDQLRAAGWAYMEEEEFHAALGYHCFQRRQLDLPTSVLRAQVAPRLWLAQDTADEGTEPPAWVRDPLFSHLRPQSSETTGNGAAGGEAGKKEMKHTALLAAATSAAEAQAVVLDALLAKLSRVLSVELSDLDPACPLSRYGVDSLVAVSLRAWIGKELGAELSVFEMTDKPSIRALAAAVAGRSRLVSKALS",
                 "length": 2759,
                 "architectures_nb": 1,
                 "domains": [
@@ -3624,7 +2273,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 4,
                         "hmm_end": 105,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -3637,7 +2286,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 185,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -3650,7 +2299,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -3663,98 +2312,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_03810T0",
-                "length": 4256,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 13,
-                        "length": 432,
-                        "cevalue": 6.1e-178,
-                        "ievalue": 2.1e-175,
-                        "score": 583.3,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 417,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 573,
-                        "length": 338,
-                        "cevalue": 1.1e-96,
-                        "ievalue": 4.2e-94,
-                        "score": 315.2,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2558,
-                        "length": 75,
-                        "cevalue": 2.8e-16,
-                        "ievalue": 7.8e-14,
-                        "score": 51.1,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 70,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2740,
-                        "length": 305,
-                        "cevalue": 4.3e-58,
-                        "ievalue": 2.5e-55,
-                        "score": 187.3,
-                        "hmm_length": 284,
-                        "hmm_start": 3,
-                        "hmm_end": 279,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3234,
-                        "length": 512,
-                        "cevalue": 2e-102,
-                        "ievalue": 5.1e-100,
-                        "score": 334.8,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3787,
-                        "length": 74,
-                        "cevalue": 3.6e-16,
-                        "ievalue": 1e-13,
-                        "score": 50.7,
-                        "hmm_length": 70,
-                        "hmm_start": 5,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_04775T0",
+                "sequence": "MAPSRLYNFSSSGTSPTSSSAFTVPSVANSETDSAADMHPPMNGHRQFDGFSDPGMTPRAPMPIAIVGMACRMPGSVATPAEFWELCSRARSGYTKVPKERFNHDLFYHPNPGKTGAYHAQGGNFLDVDLAAFDAPFFGLTEKEAISMDPQQRLLLECTFEALENAGVPKHSIVGKDVGVFVGGSFAEYESHLFRDSDTIPMHQATDQAVRDNDTIRAVIMGTGINQDGKTPGITMPSGEAQEKLINQVYNNFGLDPMDCGYVEAHGTGTKVGDPIEATALHNALGQGRTAADPLFIGSVKSNIGHLEAASGLAGVIKAALMLERGFILPNHDFKKPNPKIPWKQWHMTVARSQRPWPRGKKYISVNNFGFGGTNAHVVLAKAPFTADTTVAAQLQNNDSRKPKQTKKLIVLTANDKDSLAGVMKKLVIYLEQRPEVFQADLMRNVAYTLGQRRSHLQWRLAVPVSTSFELVDTLNSGKVVSAKMQPEAPRIGFVFTGQGAQWHGMGRELYDSYPVYAAAMDRADAKLKELGATWSLLEELSKDGKTSKVSEAHISQPACTAVQLAITDLLKSWGVVPVAVAGHSSGEICAAYAAGIINFDSAVAIAYHRGRLIPVLKSRHPDLAGGMMAVGGSESDMQPMIDAVKRKQQEVRIACFNSPSSLTISGDASVLNDLERVIEEEQPEMFRRKLQVDVAYHSHHMNLVADEYRDSIEHLSKPRNTDVQFHSSLFGKRVEGYKCTASYWVENLTCPVRFSEALSGMLEAKPEDGVSTLIEIGPHSALQGPIKQILAAAGRPKLPYASALVRNKDAVDTALDLAGNLFMKGAFLNMDAVNFPSHLHAPATSTIPLNLHTSAAKQPTLLTDLPRYVWNHSSKYWHESRMTEMHKFRKFPRNDLIGVEAIYSTDVEPTWRNIVALDDLPWLRHHRIQSLTIFPFSGFVAMALEAAAQQALKREAKYDRFELRRVVVSKPLAMGDGDVEMDISLRPHSDSQKHQAGWRQFRIASWTKNGGWAEHCTGEVAALSDDDNEVDGERQKQAIRRRVEAASTMGEDAVDVAEVDMYNCLEDLGVTFGAAFQGVKACKASNTKASADIVATDIAVDMPNHYMTESVLHPSVLESLVQMYWPILGAGRTSPDTVYLPSSVGKVSISREVTAHTNAPGKTIRAFGKAEFAQPCEEPRATSVSVMATTQDGQLLVEIEDLKVAPIIDGEGETDSSTPRELCYKLEWEQVLKPALVNGTPADSNTLPEAEIVIVHGDTAFQHTLARALADIIEKATSTSPVAMGTLGHIETEGKVCIVLTEIDMPFLADPTEQQFEAVQKLIGSVQGLLWVVRGAYDKATSPDSNMVCGLSRSVRSETLLPFATLDLDSIEASTAHVSKSILDVFKIAFNGGLSATKEMEFMERGGKLFTPRILDDAETNAYVHKRTNPDILEKQPFAQEGRQLKMVGGKTLHFVDATIDTLGADEVEIEVKAVGVNASDAQQLAKSTAESPAPVGSEAAGIVTRVGANVTSVKKGDRVAALTLSSGAYSTVTRASAANTIPIPQAMDFSQAATLPFAYVTAHHALEQARLSSGQSVLIHSAASAVGQAAVCLAQLRDAEVFVTVSSAAEKKLIMTKFSVSEDRIFYNRGVGFGSAIREATAGEGVDVVISIRSDAEVVRESWDCLDRFGCLVNVSEGSSRLDLSTDGRPSNASFVNVDIQCLAAERPAILKRLVDSVAKLVGQGQATPVEATVFAVSEVQDALKSASKTSCGKSVVVLGADDMVMATPSKVTKKILRSDGTYLLIGGTGGLGRSMAKWMVDNGAGNVVLLSRSGSATGQVKQLIDAASEAGSQVIVKRCDVANKASVDELFKGLSDLPPVRGIVHGAMVLRDVLFEKMAYTDYTTVIESKVAGAWNFHHALAANSCPVDFFIAISSAAGAVGNRGQAAYAAANTFLNALVQHRLAAGLPAASLDLTAVSDAGYLADGDAERAAEVAKNLGADSTICEAEVLALIGACIEGKTNVCNGHVITGMRIPPTPTKPFWATDAKFKTLRLTAEAAELAANGGDSATASLSPGAAVKAATSLAEAEEAVCAGLVDKISSVLMMEADEIDVTRSLTHYPLDSLVAIEIRNFITREFEANMQVLELLSSGSVQTLTKAVCKKSKLCVGLS",
                 "length": 2156,
                 "architectures_nb": 1,
                 "domains": [
@@ -3768,7 +2333,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 144,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -3781,7 +2346,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 248,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -3794,7 +2359,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -3807,13 +2372,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_04775T1",
+                "sequence": "MGTGINQDGKTPGITMPSGEAQEKLINQVYNNFGLDPMDCGYVEAHGTGTKVGDPIEATALHNALGQGRTAADPLFIGSVKSNIGHLEAASGLAGVIKAALMLERGFILPNHDFKKPNPKIPWKQWHMTVARSQRPWPRGKKYISVNNFGFGGTNAHVVLAKAPFTADTTVAAQLQNNDSRKPKQTKKLIVLTANDKDSLAGVMKKLVIYLEQRPEVFQADLMRNVAYTLGQRRSHLQWRLAVPVSTSFELVDTLNSGKVVSAKMQPEAPRIGFVFTGQGAQWHGMGRELYDSYPVYAAAMDRADAKLKELGATWSLLEELSKDGKTSKVSEAHISQPACTAVQLAITDLLKSWGVVPVAVAGHSSGEICAAYAAGIINFDSAVAIAYHRGRLIPVLKSRHPDLAGGMMAVGGSESDMQPMIDAVKRKQQEVRIACFNSPSSLTISGDASVLNDLERVIEEEQPEMFRRKLQVDVAYHSHHMNLVADEYRDSIEHLSKPRNTDVQFHSSLFGKRVEGYKCTASYWVENLTCPVRFSEALSGMLEAKPEDGVSTLIEIGPHSALQGPIKQILAAAGRPKLPYASALVRNKDAVDTALDLAGNLFMKGAFLNMDAVNFPSHLHAPATSTIPLNLHTSAAKQPTLLTDLPRYVWNHSSKYWHESRMTEMHKFRKFPRNDLIGVEAIYSTDVEPTWRNIVALDDLPWLRHHRIQSLTIFPFSGFVAMALEAAAQQALKREAKYDRFELRRVVVSKPLAMGDGDVEMDISLRPHSDSQKHQAGWRQFRIASWTKNGGWAEHCTGEVAALSDDDNEVDGERQKQAIRRRVEAASTMGEDAVDVAEVDMYNCLEDLGVTFGAAFQGVKACKASNTKASADIVATDIAVDMPNHYMTESVLHPSVLESLVQMYWPILGAGRTSPDTVYLPSSVGKVSISREVTAHTNAPGKTIRAFGKAEFAQPCEEPRATSVSVMATTQDGQLLVEIEDLKVAPIIDGEGETDSSTPRELCYKLEWEQVLKPALVNGTPADSNTLPEAEIVIVHGDTAFQHTLARALADIIEKATSTSPVAMGTLGHIETEGKVCIVLTEIDMPFLADPTEQQFEAVQKLIGSVQGLLWVVRGAYDKATSPDSNMVCGLSRSVRSETLLPFATLDLDSIEASTAHVSKSILDVFKIAFNGGLSATKEMEFMERGGKLFTPRILDDAETNAYVHKRTNPDILEKQPFAQEGRQLKMVGGKTLHFVDATIDTLGADEVEIEVKAVGVNASDAQQLAKSTAESPAPVGSEAAGIVTRVGANVTSVKKGDRVAALTLSSGAYSTVTRASAANTIPIPQAMDFSQAATLPFAYVTAHHALEQARLSSGQSVLIHSAASAVGQAAVCLAQLRDAEVFVTVSSAAEKKLIMTKFSVSEDRIFYNRGVGFGSAIREATAGEGVDVVISIRSDAEVVRESWDCLDRFGCLVNVSEGSSRLDLSTDGRPSNASFVNVDIQCLAAERPAILKRLVDSVAKLVGQGQATPVEATVFAVSEVQDALKSASKTSCGKSVVVLGADDMVMATPSKVTKKILRSDGTYLLIGGTGGLGRSMAKWMVDNGAGNVVLLSRSGSATGQVKQLIDAASEAGSQVIVKRCDVANKASVDELFKGLSDLPPVRGIVHGAMVLRDVLFEKMAYTDYTTVIESKVAGAWNFHHALAANSCPVDFFIAISSAAGAVGNRGQAAYAAANTFLNALVQHRLAAGLPAASLDLTAVSDAGYLADGDAERAAEVAKNLGADSTICEAEVLALIGACIEGKTNVCNGHVITGMRIPPTPTKPFWATDAKFKTLRLTAEAAELAANGGDSATASLSPGAAVKAATSLAEAEEAVCAGLVDKISSVLMMEADEIDVTRSLTHYPLDSLVAIEIRNFITREFEANMQVLELLSSGSVQTLTKAVCKKSKLCVGLS",
                 "length": 1936,
                 "architectures_nb": 1,
                 "domains": [
@@ -3827,7 +2393,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 263,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -3840,7 +2406,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -3853,13 +2419,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_05589T0",
+                "sequence": "MAPSAVLPESPPAAESYWSRLKNAVTGSSTGPPLPELSSSHAASGSTAPDHADPPRQQQQQQQQHTPIAIVGMACRMPGAVSSPAEFWELLARCRSGFGPIPAATRFDPAAFQHPVPGRGGCFTPAGGSFLQCDVRAFDAAFFGLTEKEAVALDPQQRLLLECTFEALENAGMPRHAIVGRDVGVFVGGSFPEYESHLFRDSDAIPVHQATGCAYAMQSNRISHFFDLRGPSFTSDTACSSSMVAVHLACQSLRAGESSAALVGGCHLNMLPEFWISFSTSRLLSDTGRSIAFDNRGTGFGRGEGCAMMVLKPLDQAVRDKDAIRAVIVGTGINQDGRTPGITTPNGAAQEALMQQVYRKFGLSRRECGFVEAHGTGTRVGDPIEARAIYKALGRGRARRDPLLIGSVKSNIGHLEGASGMAGLLKAVLMMERGFVLPNCDFKEPNPSIRWREWNLRVPTMQTPFPPDKKYISVNNFGFGGTNGHVVIQAAPYAAKEELSNNLPEKQHRMFVFTANDRESLAAVMQGVVVYLERRPEVFEGALMRNLAYTLGQRRSLLQWRAAIHSRHSLELIDGLNDKRAVVRRESEAVRLGFVFNGQGAQWWAMGRELYEQYPVFAASIDLADGSLADLGATWSLVDELAKDEETTRVGEAHISQPACTAIQLALVDLLRGWGVHPTAVAGHSSGEIAAAYSAGIITFKSAMSIAYHRGRLIPMLKEQFPALQGRMMAVGGSKSDVQGMIDGLCEKQVRIACFNSPSSLTISGDEPALAELEKVVEDRQMFHRRLVVDVAYHSHHMDLVAEEYQAALAHLPDPSRSTGVKFYSSLYGRLAEGSELRASYWVENLTCPVRFSEAVENMLEPSETSKTGVTALVELGPHSALQGPIKQILKAVGGAATAVTYDSALVRKKDAVDTLMDLGVSLFTKGVNLDFEAVNFPKPDKEPTLLTDLPNYPWNHRTRYWQESRMTTRHKQRPHPRSDLLGVEAIYSTDVEPTWRNILRIDEVPWLRQHKVQGLVVYPFAAFVVMALEAVAQRAASQSRQVDSLEVRDVTIVKPLVVGDADVEIITALRSTQEGGEVLAGSWNRFRISSYSPDAGWTEHCVGLVSARAKEINEVDGDREVAAREEELQSIMDSMESPGTSIVQTGSMYSKMAKAGVDFGPLFQGLQDCRASETHSSGNIPIPDVAKEMPQGVLASPIIHPCLLESLIAMYWPIVTSGDATVKTVYLPSSLGKMSITTDAIRICKEPDHSLLAYCHANSPSGLSRPLKVNAFATNSTNPKRALIAIEELVVSPIVDSGAEAAVDVPRELCYKIQWEPVSDLVDPVASHTDNSTARNGQGIPSHFSSLSVAVVHDKSELQNSLASTLSVDIKALIGNTPDVCSLEDLEPDGKTLIVLCELDRPMLSQLSEAKFNLLRNALTKAKSCLWVVRGAYASSSNPEANMISGLSRTLRSETAIKFATLDLDGDDEISADHATAVVLQVFERVFGVGSTPTSELEFTERGGRLLTPRVVNDEDMNAYVHSETCSSVLEDRPFANGDRPLRLAVTAPSSTESLHFVDDIANGTLDDDNVEIEVKAIGMNSRDIMAVKGQTDDEAGYEISGTVIAVGASCRDVEVGDHVCALVRGGYASRVRTKEMTVMRVPKTISFDEAACLPLAYCTAYYGLFDLGRLEKGESVMIHGAASPVGQAAICLAQEHGAKMFATVSTSQEKELLMKEYGISEHQIFSSKISGLGPKIRAATCGRGVDVVLDSSAGDAVTEAWECLAKFGRLVNLSNRDSSRGARWDMAERSKNLSYASVDICALAEEKPSVIRRVLAKLRMLLESGAMRPPGPIHKFPISNLESAFKTLQTGRLLGKIAVVANTGDQVKATRSRRASNLLRPDATYVLVGGTGGLGRSMARWMVTNGARHIALVSRSGMVSDNITELIDEGIQVGAEIVVRRCNVAIKADVESLISDGLRGMPTVRGIVHGTMVLRDVLFENMTWEDYTTVIQGKVQGAWNLHHALRDTPLDFFVALSSAAGMVGNRGQAAYAAANCFLTALVQHRLARGLPASSLDLTMVTDSGYLAENEEKLAEVARNLGGDGIREREVLALLRAAISGRLAETCNNHTVTGMRITPAVQPFWTLDAKFKHLRLAMEAQLEQANPSAGTGGVVSFGAALKAAKTAEEAEGVVCAGLVGKISAVLMLEAEDMDVTRSLTHYHLDSLVAIEIRNFIAREFEASMQVMELLASGSILSLAKMVCGKSKLVSV",
                 "length": 2253,
                 "architectures_nb": 1,
                 "domains": [
@@ -3873,7 +2440,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -3886,7 +2453,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -3899,13 +2466,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_07219T0",
+                "sequence": "MLTTIKMADKLAFLLFGDQSLDTHGFLAEFYRHEDRGILAKAFLDQAAQALRKEIERLPRLERSRLPVFRTLQQLNERYHAQITKHSGLDGALLCVAQLAHYIDHAEKNHEDVTQHDKTYLVGLCSGLFAASAIASTPSLSSLVPVAVQTVLMAFRTGAHVAALAERLEPVSERSESWTYIVPGFTEEAAQKEIAGFHESHGIPQASQVYVSASSSANVAISGPPTTLKAFRAATSSLTKATAIPVYGPYHAPHLHRPEDVDNILGLNNPEMIDTFLNTKPRSSVMSCLTGTWFNESTTRALFAAVVSEILTQTLRFHNVLDGCLNLARGFDGKSCLIIPFGPTQHAATLANLLKAETNLDIILRKAPQISKESTDSVIGNHGRGSRDKLAIVGMAGRFPDAASHEKLWELLSKGLDVHRVVPADRFPVETHYDPNGKVINSSHTPYGCWIEKPGMFDPRFFNMSPREAFQTDPMQRMALTTAYEALEMSGYVPNRTPSTRLDRIGTFYGQTSDDWREINAAQEVDTYYITGGVRAFGPGRINYHLGFSGPSLNVDTACSSSAAAMNVACSSLWARDCDTAIVGGLSCMTNPDIFAGLSRGQFLSKKGPCATFDNNADGYCRGDSCASVIVKRLDDAIADHDRVLAVILGTATNHSADAISITHPHGPTQSLLSSAILDDAGVDPLDVDYVEMHGTGTQAGDGTEMVSVTNVFAPANRKRPADRPLYLGAVKANLGHGEAASGVTALCKVLLMLQKNAIPPHVGIKKGSVINKTFPKDLGERNVNIAFHLTPFKRSDGKPRRVFINNFSAAGGNTGLLLEDAPPVEPATQDPRNVHVITITGKSKSAMIHNAERLIQFMDDNDDTPISHVAYSTTARRIQHYWRMNVTAQDLGEAKQALKNRLQENFVPVSPEPPKVAFMFTGQGSHYAGLGKELYANHAVFRQAINEFDRISQIHGFPSFMPLVDGSEPDVAKLEPLIVQLGLCCFEMALAKLWASWGVKPAAVMGHSLGEYAALHVAGVLSASDTIYLVGARAKLLVEKCTAGTHAMLAVMGSVSTVQEALGERADSTNVACINGPRETVLSGEASEMAEIAQQLGAAGFKCTQLKVPFAFHSAQVDPILDDFEKLARSVRFNTPKVPVISPLLGKLVDDEPINPKYLRDHARDAVDFLGGLVSAQSAGAIDEKTVWLEVGPHPVCANMVKAAFGVSTVAVPTLRRNEATYKTLSASLCTLHTAGLNIDWNEYHNDFLSSVRHLDLPSYAFDEKNYWLQYEGDWCLSKNRIAKALPAAAAVAKPKLETTTVQKVVREEIKGDVAVVEIESNLSREDLRGVVSGHLVNGAPLCPSSLYGDMAITTCQYAYKLLRPESENIGVNVAHMEVPKTLIFDDAAESHILRLTVTANAAQNSADLVFHTGEGAKRVDHANCKVYFGNTEDWQGEFDRVSYLIKSRVDGLIDSEKDGKASKIGRGLAYKLFAALVDYTPRYRGMEEVVLDSETCEATAQVKFQTTEADGNYVFSPYWIDSLCHISGFIINGTDAVDSREQVFISHGWGSLRFSELPVASKKYRSYIRMQPIKGNKVYAGDVYVFDGEKIIGVCGDLKFQAIPRKVLNMMLPPRGAAAIAAPARAAPAPAAKPAAKEKKTSSTKEKSKSVTPKNIGKVNQKLASVVTQVLDILAKEVGVSHDELADNIAFTDLGVDSLMSLTVSGRIREDMDLSIDSHAFVDHPTIGAFKAFLAQFEGPGGAMEDSSSSSSSVSGDMDSESDVTTPADESDTASVKGEKMDGKATATDTNELQEAIRNTIATEMGMDVEEIIAAPDLASLGMDSLMSLQILGTLREKTGMDVPSDLFVSNPSLKDVERALGIVPAAPKRPAAQAAPAKSKASKSEKVKPCPPTTSIPPSQVTATIYKPPRPTEILDTMPHRKATSVLLHGSHKTATRHLFMVPDGSGCATSYTEMCNVGPNYAVWGLFSPFMKTPEEYNCGVYGMAAKFIEEMKRRQPVGPYSLAGWSAGGVIAFEIVNQLIKAGDEVENMIIIDAPCPVTIEPLPKSLHAWFASIGLLGDGDADKIPSWLLPHFAASVTALSNYTAEPIPKDKCPKVMAIWCEDGVCHLPTDPRPDPYPSGHALFLLDNRVDFGPNRWDEYLDGSKMTMRHMPGNHFSMMHGAMAKQLQGFMQEALQ",
                 "length": 2182,
                 "architectures_nb": 1,
                 "domains": [
@@ -3919,7 +2487,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 14,
                         "hmm_end": 296,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -3932,7 +2500,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 421,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -3945,7 +2513,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 296,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -3958,7 +2526,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -3971,13 +2539,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_08236T0",
+                "sequence": "MEADKCEPIAIIGLNLKFPEEAVTPQAFWEMLCDARNVATEPPEGRYNVDAFHHPDPARLDSLRVRKAHYLKEDPRAFDAPFFSMSVGEASIVDPMQRCLLEGAYRTFENAGITMDQAAGSKTSVFCANFARDQETIVARDPEYQSRYQSTATGYALLSNRISHFYDLRGPSLTLDTACSSGLYALHLAVQSILLGESEMSLVCGANTCMTPEAIAVVLDNANFLSKDGRCFSFDHRANGYGRGEGFGFVLLKPLGAAIRDGDCIRAVVRGTGANQDGRTPSITQPGAEAQRALIRDTYERAGLGYDQTEFVEAHGTGTLVGDPIEAAAIGETFKPHRKEPLYIGSVKSNIGHLEGASGLAGLTKIILALEKGIIPPNADFEKVHPGLDLDGWGVKIPVKAVPWPTDGLRRASVSSFGYGGSNAHAVLDDAYNYLKLRGLEAVHKTVDKYREKDLGNGHINGNITDSHTIRDSADSWAIIPFSAHDEGGTGRQAEALQSHMSESESILTTDDRHSFLPDLCHTLFARRSVLNWRSAAVVSSISDASTNLSSRLSKAIFTLASRSPVLTFVFTGQGAQYARMAMGLLDRYQTFRSSINECDAFLSNELRCPWSVIEELGRDVKTSKVDQPLYSQPLCTAIQVALVDLFNSWGLTPSSVIGHSSGEIAAAYSAGAITRHSAWRIAYQRGVVSEKLVADSIASPTTMMSVGLSQEEVASYLAGTDVTVACINSPINVTVSGPVKSIEELYTRLDAAEIFAKRLPVKIGYHSSVMRRGSQEYEASLRGKIEAPSPSRQSGSGGPVRTVMYSSVTGKAIGLGDLNQPEYWVDNLVSAVKFAPALTALTSEAKAGNRFFIELGPQSGLRRPIKDTLARAAKDLKWRYSPVLSSTDHDIKTLLEAVGQLWSHGVDVDLDKVNASSVTPIKRAPRVMVDLPSYPFSRAKWYWDESRISKKYAFRPFRRHALLGIRDTDWNESEGSWKHTITMDENPWIRDHGLNGSPIYPGSGMLVMAIEAVRQLAHPHKDRVKGYHLSSVRMLRPIQVDSSEHGAEAKIHLRPRKLMAPTGQMPWYDFRIYTIQAEEWTEVAFGSVKVDLEPEELTRQQKEAARIREAKFAAELRDEYESTARTCTLIAHSKQFYTNLSTKSGFDYGPYFQLLQNIAYDRSGHVTATLNLRDYAKHMEYAGEDPCVVHPTTLDAICQSQMVGLSRGGWYTIPTMMFTHVDNLWVSHKLFTATGNPKLQVASRETTRGFRECICRTIALFEDTKEPAIICDGQRGTAISSLATTVTSDSEATGRMAYTIDFAPHVPLVRELQELRPFLQAGAGRNESLETEKNRTNRSDAIMLHYAKQVVAKIEADGGKKPWVAGHYFDRYLAFLRNVVDNQAKWQPAGRGLTGVTMKQILDEADLDPGCALNKHVGDQVLGILEGKVSPLQVIFENNLVDAFYHADLTSLLNRVIGEYAKVLSHNDPTLRFLELGAGTGSSTAKVLPALVHNLGNGQEAVRCGEYMYTDISSAFFEKARERFSYAAAAIKFAKLDIEADPTAQGFEEGSYDVVIAGNVLHVTKDLVQTLGNVRKLLKPGGSLCLAELVNVHSMRHTFVFGLLPGWWLRPAPEGHGYSDQGPLLSASQWDQAFRAAGFSGLQLEFQDFEDPLYRQVSILITTNPGDPPSPPTKALTMSSDIGRYVVVAAADSEQQASLCRELHARFGPSPIYTLLDMTNLSDADLQDTTVISLVELSCPVLAKATEGEFAGIKRLSTRSKMTFWLTSDLGPIAKNPDGEVTIGFGRTVCSERADQCFVIVSLERPFADAQASVETLSRVLSDTRTRDAASRETEYIEANGVLHTPRLVPAGHLNAEMLLRTKKRDLETYTIGSTDAASKPHVYLTIETPGLLDTLYYTEEDLVVTGDDCLKPGYCEVEIKVAGLQFRDVMTALGQVPGDSFGCDGAGVITRSNPGSRFQPGDRVIYCSNDGKGFGTYAHYLEQDLTLIPAGMSFQTAAAISAVWRTAVYSFDYLARLRKGQSVLIHAGAGGVGQAAIQLAKLREAGAIYVTVGTVEKRDLVKSLYGIPDENIFHSRDATFKDDLLRATNGRGVDVILNCVGGELLQASWDCIAPLGTFIEIGKGDAIQNNNLPMGPFSRNVSFVCVDLSLVSRVDPALMTSVMGDVLDLFAKHPELHEPRPLQIYAADKIEEAFRLVQSSKNTGKVLVDYESAGTAVRYQPAVKPSHTFASAATYVIAGGLGGLGREITRWMVERGARHFLLLNPRGVNSSGEVMSFLKELDDMSVRHLEPACDCADAAALDAVLKSAAAAGFPPVRGCIQGAMKLDDDAVANMPVSKLHAALDPKRVASWNLHKLLPKDLDFFVLLSSFCGVFGNPGQSNYAAGGSFEDAFARYRTSLGQKAVSIDLALVAEAGWANDNYEMVASNLRTYGGMHNDQLMALLDVVCDPDYECATANNSQVVTIIDTPRQIYTLTEEGRIVWPTKPLFRHLLRIGETTDDGPAAANGAGDDGEAAALDYIAMVRSAPTLEEAGEIVARGLVQKLTKSLSVDGETLDVAKPAYMLGVDSLIAVELRYWFMRKCGIEVPVFIILKNQPLSDLCTYAAEKVLEAVIT",
                 "length": 2617,
                 "architectures_nb": 1,
                 "domains": [
@@ -3991,7 +2560,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -4004,7 +2573,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 308,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -4017,13 +2586,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_08281T0",
+                "sequence": "MINTLKDKAKQPLVVFHATPGGSRMVEEDQQQQQQQQQQQDGLPRGRIAVIGMGGRGPDSSANDGLDQFWEIIREGRDVARKIPEERFNADGLFQTEAAGAGLSSSSSSSSSSSSLCRSSTDYGCFLRDPGHFDSRYFRLSPREASLLDPCSRLFLMAACEAVEMSGYSDGRSRSVHPGRIGVVYGQSNEDGYMTTHHERGCDAYTLQTVQRAFAPGRVAHHFGWEGPTWSVDSACSTSSSILHLATGMLAAGEVDMVVAGASNVISSPHGWCALSKSGVLSATGNCKPFRDDADGYCRGEFVGAVVLKRLEDAVAHHDQVLAVIAATGKNQSGNAASITTPDAGAQERLFRRVLRTAGVAPTDISYVEAHGTGTPVGDPCEMTAIAGALARPGSRGKGKGKGKGKGKGKGKGKGKGKGKGKGMGKGEEERLVVGAVKANIGHSEAASGIASLIKGVFMFRHQLVPPQAGMPHTLNPRLLPLLDQAGIVIPSSTRLGAFESAPGRPRRILINNVDAAGGNACFLLEDPAGVLPKRTTPPTALTTLTNITNITNITNPQDSPYHVVTVSARTEASFHKNKRRLVDWLETNPNVRLADLAYTTTARRTHHSPFRFACAASSIKEVVGSLVADMAATQIESAKACDTAVASRSTTPKARPVVWVFSGQGSEYPDMGSELYQTSPVFRDTVDRCVHLCANQGFPSFSDMMLSDGAGAKHDSSGVDRTVKKHLALVTLELALAAFWRHAGVEPSVVVGHSLGEYAALHVAGVLSLADVLHLVGNRARRLAAVCEPGACGMLAVSASADAVGAFLHRRRGGLLSSCSIACINAPNAVVVSGSAADLLAAQEALGQKGIRSQRLAVDFGYHSAQMDAVTSDLERLTAAVSFSAPKLAVASTMLASVVKASDKITINADYLALQTRRPVNFVGAVQAANASLGGTDKAIWLEMGPRAVCASLVRSILPVSGRASTLVLSTLNHHKQASGWCSVSSCLADMYANGVEIDWLRLYASRQGHHDLLVTLPLYAWDLEDYWVRWTEKKPSPEVAFYKTPGEESQTMHYTCAQHLDEKTPTHVTLRSRLAHPALKQIIDGHRVQGVPVCPGSVYCDAALAAAAHLLGDDDQSSKDKGLGLAIVDMNLIRPLTESLVGSDGGLLIKATIQKSCIVSVSFKASPIGSSPRARQICLGTCTVARQDPVAVRAGWERNSYYIKSRIDAISQSAKSGRGHWVQPDLFYSLLSRTFEYHHECFKAVAEAHVAQDFGDATARVVLSEVPRDTRYVSSPYWGEALVHLAGFLVNCRPGRPASSISIMHGIGRIEQLAALEAGGEYTTYARVCTSSGQESNCDVFVFDAAGDMILACLDMCFREMSTAVMAQALAYCDQDQGPVLAVSARGANEAPEASMPAAHKSLSNQATNNNPEPKREGKDKNVVNAIIQSIATETGCPVSRLTDDQNLADLGVDSIMAIQITSSVMAETGYDLAPSIFLECLTINHLRSLFSSSPDTKSPPSEGGGDGSNDEAPGIFSPQTGCESGDLVDSWDRQTVQASPVEEAQAARVTLLRKSTKPSNNSTQATPRRLYLMADGFGSVSSYIHLVGHKFSADLYGIDSPYLRCPEQLTTEVRIQDVAGLMVDALLQHQPVGPFTLGGFSGGGILAYEMSCQLTAAGHEVQGLLVIDMRCPLPPPGDRLQLACSDRVVPPDIVQNLTNHTFALTSVCWNPDSDAARHLVRFLDAVGRYCPAAPASREERLDVPAAVLWCERGMVGHLARHPDLQARVVEHGIPLEPFPGFMQDAKLGHLLWSLLDKTPADLGPNGWDDYVGGVEKGREILCLSVAANHQEILQPAFARKTAEAIEKSLVFFLEHAM",
                 "length": 1861,
                 "architectures_nb": 1,
                 "domains": [
@@ -4037,7 +2607,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -4050,7 +2620,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -4063,13 +2633,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_08285T0",
+                "sequence": "MSSSTSRGGCDVPVAIIGMACRFPGEATNPCKFWELLKEGKDAFSEPDRFNASAFYHANSSGRQNVLPCKGAHFLKGDPYAFDAAFFNMTPGEALASDPRQRLALEVAYEALENAGMTLQRVAGSRTACFVGAAANMAEYRDGIVRDFGNQPQHTIMGVSEELMSNRLSHFFDLHGPSATVETACSSSLVAVHLACQSLRLGESEMAVAGGVNLLLSPDTFMQLQNLSVLSPEGRSRSFDDEGRGYGRGEGCGIVVLKPLAAALRDGDPIRAVIRGTGSNSDGWTKGMAMPSGESQMHLIKDVYETFGLDYAETHTIGRAARNQRLIMGSVKPNIGHLEPAAGIAGLIKGVLALERGLIPPNIHLNKINRKIPLDEWNMEVPTRLTAWPVTQQRPMSISSFGLGGTNAHVVMEAHNAAAAVDDQDSRPKSSKRVFFLSSQDQGGFARIASSLLEHLDGLGPLAARPLYLADLAYTLATARAGLGWVSSFVAESLADVRDQLTAGVGREAVRRRSSGRKQPRLAFVFTGQGAQWAGMGIQLLSRPVFAASVAASTAYLARLGCEWEPVRELEKRGDESRLGRAEVSQAICTVLQIALVDELRSWGVRPARVIGHSSGEIAAAYCLGALSHSDAIAAAYFRGKASAAVAEASSKQATEMGMMAVGCSREQAQELIAGQNGCVDVTVACVNSPESITLSGHATELEKMAEVLQEHSIFHRRLKVEIAYHSPLMAAVSDKYLSYISHIEPREASDAMSEPAPIMVSSVTASEATPDMLGPYYWLANMMSPVLFSDGIVELVRPCIDGNHTREEEVNTIDMMIEIGPHSTLAGPVDQTLSRHGLRDMEYHSVLLRGRDAVDTALDLARSLFHAGVEINAARANGDVGAKLLTDLPPYPWNHDRAFDATSRIHHEYLHRKMPRRGLLGAPMPSTDQAQRVWRGFIRLDEEPWLRGHKVGGTVLLPAAAMLSIAIEGGRQLAEPGRTLHAVRLRDVSFFAALALPESAATEVVLTMRPHLLGTAGHNSTTSWWELLISSSAGTGPLRDNCRGLLSLDYKEDRGEHMEREDGHIAAERLDGYRRVLDECGSDSYAEEDFYEHLAGLGFQYSGHFRSVQDIHPGDGCSTFGVRLSSLENDTFSAGQLQQDQLLSRPFLAHGATLDAIFQAWISSTLRDGHVQSQRPYAPTFVAEMEVSADFPEPKGQLLPGVCHSRRSGFKEWSVDTSLFDESRTVPCLSFTDFRLSELDDGTGGVAAVGSTAVPRSLMARVRWDDALDLMTPAEVMNAVSSRGLSTEAESLSRLVRLVLHGLNPGATTVELVRNAVEPRLLADLSVSGSGSGSPEVVVIPSWVNDMGTEELDEVLQRLLGLAAPEAAVVLATDIRGVTSTLESRGFTCSFATAGAPMLYRRRETPPPSQMQNGAPTNDVVVVEPAAASLTDPAVQRIIDTLLEDLSSNGKIVRHQWAAAGGQPPTTNEAVFAGKTVISLLELQQPFLESMTAADLQAAKAMMQRSARLLWVTRGDDPSLHVVDGLVRCVRSENPTADVRVLHLGSESESESDSDQVEKAPRQIARLATAELTSKDREFRAAQGRLQVARIVEDPEGDSLVAEHLADSKRLVTLSELDFPVKLAIGQPGLLDTFCFVNDAAVMTEPLGDLDVQVQVHAASLNFKDVMAAMGMIALPALGSEASGIVIRAGSGVTNVQAGDRVAILCPLGTHKTLVNVKSSLATKLPDSLTFEEAVSVPVAYITAYHALVNVARLSAGQSVLVHAATGAVGQAAIQIALLRGLVVYATAGSPEKRAFLTERYGIAPSNIFHSRDASFAKAVARVTGKRGVDCVLNSLSGELLRASWDCVAPSGSLVELGLRDVVNNTRLDMKPFGKSISFSFFDVKDLPETTQAGLLGTVFELVRSGRLTPVSPITTYPIDRVEEAYRTMQQGKHRGKIVLTFPAAARVPVLFPAKDSLTLDRKAAYLLVGGLGGLGRSLSQLLASCGARHLVFLSRSGADASPAARDQIKKLQAAGVQVHVLRGDVADDESFLAAMQQYERRADLPPIRGVVHLAAVLRDAVLDNMTHDDWAAALRPKVRGSRNLDRYFDHSRPLDFLVLCASVAGLWGNAGQAAYAAANTYQDALASSRRARGLSGVAVDLGIVRDVGMAAEQSFGARFDQWAKVVGIPRDVFLALMKSLIRGQKQLLLQQQSGASSDWPPPQVCSGLGSAEMWATHDIVPPPAYHSDPRFSALTGGAARWGSRPQSAEGSDGSRSSSSSSSSLASLLAGATTKPQAAEYVTEALVHKAAGILQIPPVEVDPSHPLYEYGVDSLVAIEVRNWINLAMNANIALLEIMGGESISQFAVKVAERSTLVSV",
                 "length": 2361,
                 "architectures_nb": 1,
                 "domains": [
@@ -4083,7 +2654,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -4096,7 +2667,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -4109,98 +2680,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_09589T0",
-                "length": 3867,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 4,
-                        "length": 461,
-                        "cevalue": 2.7e-182,
-                        "ievalue": 9.1e-180,
-                        "score": 597.7,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 584,
-                        "length": 328,
-                        "cevalue": 3.4e-112,
-                        "ievalue": 1.3e-109,
-                        "score": 366.1,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2573,
-                        "length": 69,
-                        "cevalue": 1.9e-16,
-                        "ievalue": 5.3e-14,
-                        "score": 51.7,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 67,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2751,
-                        "length": 311,
-                        "cevalue": 1.8e-65,
-                        "ievalue": 1.1e-62,
-                        "score": 211.5,
-                        "hmm_length": 284,
-                        "hmm_start": 2,
-                        "hmm_end": 282,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3254,
-                        "length": 504,
-                        "cevalue": 6.1e-129,
-                        "ievalue": 1.5e-126,
-                        "score": 422.2,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3785,
-                        "length": 76,
-                        "cevalue": 9.3e-20,
-                        "ievalue": 2.6e-17,
-                        "score": 62.2,
-                        "hmm_length": 70,
-                        "hmm_start": 1,
-                        "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_09645T0",
+                "sequence": "MEHTEYYDDSEAASSATGMQTPKSTPSASLDGQPPAGSAASTTSSSHASFPPIAIVGMGMRLPGGIHDAEAYWDLLVNGRTTRTPIPRSRFDVDAWHNVASRHGHFLTDETLRRLDAGFFSSLSRQEAEMMDPRQRLLLEVVHEAFETAGETRWRGADVGVYVGQMGDEWDNMAMLDRQRARSVRPEVSGDYIAANRVSYEFDLRGPSMVVRTACSSSLVALHLACQDINSGNCSAAIVAGVNLALSPSEWSVMTEHGVLSPSGECRSFDAAGDGFLRGEAVSAIYIKPLAEAVRDGDPLRAVIRGTCASNDGRGVAGGITVPDSASQERTMRRAYAMAGIHDLESTAMVECHATGTKVGDPLEAAAVAQIWGEKGIIIGSVKPNLGHGEGASGISSIIKMVLSLEARKIPPNINFETPNPLIPWKAAKLTVPTQALEWPADRKERVSINSFGIAGTNAHVILESAACAGVGDYCQRSPGSSDSTTSRLLAFSAKHPASLKNVVDATKTYINTRSASLTDVAHTLCLGRIPHGYRAFSVVGQERPDAGGLEVTYQAQDASGALPTASMETPRVVWVFTGQGAQWAQMGAELVDKEPVTNRKGELSKPKSESRLSEAQFSQPVLAALQIALVDLLRSWGVQPSAVVGHSSGETPAAYAAGALTAEDAFLLAYHRGAFKPLLRAAHSGGMAAVGLGRTDIERGGFLRPGVMVACDNSPSSVTLSGEADVLPAVMADIAARATPGVLCRRLDVESAYHYADHMWTVMPEFAAGVGGVDGIRSAYRPLQVPMYSSVTAGRIDQVSTAYYIRNMVSPVLFDGAVRALLRDFGTATPPIFVEVGPHSAFAGPIRQIFQSEPARGATARYIPTLIRHRHDAAALLRETAGNLWLAGVDVDLAAVNPAGRRLADLPTYKWHYEPGREYWTEARMSRDLRRAGEGHHEILGGRVVETGDACPSWRCRLQVEDVPWLRDHVVAGEAVFPAAAYVVMAGEALRRLAGAAGAGQGVSMQGVDFVEPLVLSGESVEVVTALMPVDLRVSSSVAGKWFSFSISSLGCNGSQWVTHATGRCRMGCATDASSTEHIQASEQQLPRAVDPHGFYQTWKRYGLEYGPMFQRLMRASSEVGEMRATGTINTWCAPEERKLYYPAIHPTVLDSSLHVSIVAACRGLQRNFDSVAVPKSIEELYIGVCDDQADLHVTAECHSGSYQTSHVTGVCNGKVAFHIRGLEVAPMSFGTSLGDQDPHAGHVLEWKADVDLFRAGLGQPDNTENETSIGLGELLDLLGHKNPNMTILEIRPGAGSRNTATILSILGSGTQARRYGTYIIACATEDALTATKGSVQGQVPGLQFARVDLSQGSWPEDTLKHLSCDLVIVDPLAITSISSEAANGQLNVLENIKRLLRPGGRLLVHESSGSSEGNGPATSCYGSRLYDRNLLNEKVWSELQASTGCNLSADTDHKPQSDKITIAASPLPQDKQRPKKRLSILAHDTSHPTVVAAAQHVAAHGNDSLGYDLDWFSPGQLLPTCQPVVSLLDLEEQSFFDEMTADKWVMIKTSILSLQDTVGGEAAKMLWVTGLSQIDCVDPQYSLALGFLRSAKRETGADIVTVELESFGDEGWHAVAKVLDHRFGTSTRAAATPVAEAVDLDCEYVFCRGEVKIPRFRRVVISHELVIKPDCETNHNKELSPERRDISEVIDKSILPAPAPHGSGQTRRQASIRPDRTYVIVGGLGGLGLSSARLLAERGARHVVFFSRSAESYLASHPEILTEFTAMRCRIHAISGSVDSPADVDAMVATASQPPIGGVIHSAMVLQDEALADMTFAQWRAVLDPKVKGVRNLHAALAAHQRRSGQAPPDFFVLFSSLNGLGGQARQANYAAANGFLDAFAQFRRGRGLVCSVVDIGLVEDVGVLSRDARRLAALRAGALHCLRERELLDALELAVLRSSSSSVVNGGRRGSFVSAAQVAIGLGSVASLRRAADRSGWTRDPRLLVHHVGASKAAVESDGDDDLGRLRGLLQCCAQGDVPISVAEEAASLLARQIAVILGGFLMQGESGAVDVDASMRRLGVDSLVSIELRNLLRRKFGLPGLQVQDVRDSATPTELAKLAIERMLLAAGENPRSRMPAGVPPV",
                 "length": 2127,
                 "architectures_nb": 1,
                 "domains": [
@@ -4214,7 +2701,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -4227,7 +2714,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -4240,13 +2727,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_10011T0",
+                "sequence": "MASSPSAATKPLLLVFGPLPLSIDISTISGICELANNSNQGWLLDISFNLVKDYSTARPVLSSLGQDKSCHETGAAQLDSLSRFVDRNATAQERARAARSISFPLANKLLIPLVLVAQLAQYGEFLVRAGMGHGLQSSGPESSDSVQVEAVGYCVGLLSAFVVTSSRNEAQFRMYAAAAIRLGMLIGSVVDIHEGPGGPKSGALSISWQQLEADGGVPSALESILKSFPETYMSNWFDRNSATVTGPLHTLPSLRHSLKAASIQSTIVSGLHGRYHDTHHTDPTAKLEAFCDAHPEFQLPDASACCLPPRLNDGKGAVRQGRLHQHALRAILVDTLRWFETFRTVEREFLRDGEVVVFGLERPIPPSRVSELASRVRYNYMSRHAAGTGPADYCSPDATPYSKDDIAIVGMSAKVAGADSLEEFWDLLCAGKSQHVPVPRDRFGVYDKTMLRTPDQSRRWFANLLSAPEEFDHRFFGKTPRESAAMDPQQRLMLQVAYQAVEQAGYLNNNNSNNSSSSDRVGCFVGCSTCDYEQNVACHAPTAFSATGQLRAFAVGRVSHFFGWTGPSVTLDTACSSSAVAVHQACRAILAGDCDAALAGGAFVMCGPQWFQDLGAASFLSPTGQCKPFDAAADGYCRGDGVAAVFLKRMDKALADGDEILGVIGATVVQQNRNSTPIVVPNESSLSDLFSTALDKAGVDASHVSVIEAHGTGTAVGDPAEYGAIRQVFGGSKRHTPLSLGSVKGTIGHTECTAGVISLIKVVLMMCTAKIPPQVSFNTINPSLKASPADMIDIQNTGSVKAWDVPNKVALVNSYGASGSNTCILVKQPPRAVKTRLAVNVEESGDRQYPFWLSAHDEQALRRCAGALQKFISKLRDNSSAGIAPPSLAKISASASRQRDRTLPRSLFTKASTLDELERKLQAFRDDVQPHADASTPAPVHKPVILCFGGQVSTSVGLDRDVFDRTAILRTHLDEVDAVARAQGAGSIYPAIFQTTPLADPVQLQVALLALQYATARCWMDCGVEPASVVGHSFGEFAAACVAGVLSLRDTVRLVACRARLVRDRWGADRGRMLAVEADLADVRDAVAGSGGQAAVACYNGPRSFTLSGTTAAVEAVARDLDLKGRAASGASKSVKVKLLNVSHAFHSPLVEPHLVEGLGRCAQTLTFSKQTIHVEKAVEFEAGDERLDATYFPSQMRNPVYFHHAVKRLADRYQSTGAIFLEAGSASTITNMASRVLVGQPDGHFKFQPIAITSGGPATKSTKCWDGLVDATLNLWRAGAGPATQFWAHHPLQARSDPSPPLLLPPYQFEPSRHWLDRLPFPGDLPGAAGDEAMHNASPSGLVYFDGLVDGDSDKIRFRVNNKHPRYKKLMDGHLMARTAAVCPVFVQLDLVVQALSMTICTPPGLQDNRDSSSLLSALGKQPLISDVVCSAPLCDNPDQMVWLEMPPASTQCSLLRSKNNGDDRYVDRDHGDRSEFHFEVYSTDKLESASGPGLHNKIVHTTGKITLASRGDPAVGREVAQFARLVDMGQVERLLHGSAMDLDNSLSHNSVYHMFEDVVEYCAEYRGIQRLISRDRQTAAIVNRRLDDDDHAGQASWIKPCTADTLAQVAGMWMNCLAVDRDPTCIYVFSGLERWLRVPGPEDHRPPSDMHVLATHHRTSDRSAVSDVFAFDASTGKLLEVMLGVSWAKVPRSNMQRTLARCAGASRPEPTRHMPKSHSAVTVPFANTADHGRPEARHAAKSDSAATGSAKKQEVARTLINILVQLSGLDACDVTHDSELVNLGIDSLMNMELASDIRGALKLEVDEGALMEARTVAELISYVQNLVELQSPSTRKPPSGLLVTGHSFHQSPKSEESILASTVSAVDAYSADTSPTRSEPDLSTPLWPPSSAVVMDYVRTMTQGWATPLELEAATKQSTGPRAARTQDRVVVVTGGTGGLGAHLVARLVTDPSVARVICLNRRKPHSDAAARQHQAVLAKTGLDLDDPRHSSARSKLVVWETDLSQPALGLDDAAYEDLTHSAGEIVHNGWLMTLSRGVDGFEPQLRVMRRVLDLARDAALRQPAAVVVFQFVSSVAVVGRAPAGAVCEERVRGVESVLPAGYAEAKWACELMVDATLHDGRWGGAFRPMAVRLGQIAASRATGYWNAAEHVSFMIKSSLTLGVLPRLGGVLSWTPVEDVAGTLVDLLAAPRPYPVYHVDNPVRQPWGDMIALLGQELGLHGECTVPFGEWVRRVRELGAGAGNPAYVLVDFLEANFEHISCGGMLLETSHSQEHSETMRQVRPFDAGLVRLFIQRWRESGFLPL",
                 "length": 2308,
                 "architectures_nb": 1,
                 "domains": [
@@ -4260,7 +2748,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 60,
                         "hmm_end": 296,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -4273,7 +2761,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -4286,7 +2774,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 296,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -4299,13 +2787,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_10912T0",
+                "sequence": "MSPIFLGDSEDAATCRCGPPSSPSPELSGTETALTSDSDGPELLNPGPQGPEPIAIIGMGCRLPGGASTPSKLWELLEAGRSAQGRLPADRYNMDAFYHPNGDRPGSMNTSGGYFIQEDVRGFDNSMFGINHLEAMYMDPQQRKLLEVTFEAFEAAGLSLDAVSGANVGCYVGNFVTDFITMQLKDAEYTHRYTATGSGTTILANRISHVFNLKGPSFVIDTACSSSLYSLHAACSALWQRECDAAVVAGANLIQSPEQQLATMKAGVLSGTSTCHTFDASADGYGRADGIGVLLVKRLSDAIRDNDPIRSVIRSTAVNSNGKTNGITLPSADGQEAVIRKAYALAGLGYGDTDYVECHGTGTAVGDPIEVEALSRVFRRQPGSQPLLIGSVKTNLGHSEAASGISSLLKVAMALECGRIPPTIGISSLNPKLKLDEWNMRIVTENTEWPQNRTPNGQQGGRALRRAGVNSFGYGGANAHCILESPDSHVPRGYRERGAATRLTNTTTGAPRTALLLPVSSKSASSLEQKSADIASYVAAKTASSADLQASELAYTLGVRRSHLSSRGFWIAAPDSLSEDVVVGSDAASSKLHTRIPGRAYGRHPLAFVFTGQGAQWAGMGRELMDEFPSFRRTVQMLDSTLQLLPHPPTWTLRGALLEPPESSSINLASRSQPVCTAVQLALVRLLRDWGVAPGFAVGHSSGEIAAAYAAGRLTARQAIAVAYYRGYAVERSTTVGAMMAAGLSQDEADGDIAALGLAGKIRVACVNSPESVTISGDTDGIDEYKAVLDGRGVFARLLKTDGRAYHSHHMAAIGGLYEDLVVEALASPAVQNDLDDAGQQNSSPAQWISSVTGQVVGDDMPTAEPSYWRANLESPVLFAQVVEKLLSPGTPVHLVEIGPHSALEMPIKQTRTKVGIDAAKTPYNSALLRGKNSTTTMLTLAGELFLHGHPIAFGAVNNTTTAHTHSRYPPTKPGMLLSARQPQVLTDLPRHVWEYDGGAGFHEPRSSIEWRNRTHARHDLLGSRVPGGDGITRQWRNVLRAADLAWLVGHKLDTTTVLPAAGYLAMAVEAACQSTGLSLERYGRGSPRCSFALRHVHVEKALMVPDDQQSGIEVFTTLQPTTAPRTATAGSGGWYKFIVSSFVAGESTRHAHGLVKLTQNEDRPPARRLPVEDEAMEQSAPRTWYRRFVQEGLNFSGPLQSLSRIETHRRRGEMHLLAQTSLSPGLGGESAYALHPIAIDALFQSGPIACTRGVVRDFTAKVPVYIKDMELRMPSRSLLSGSFVSPSGDESAEATAQQGSIRTICKSAGLGAISVDSQLFDGDDLVLCVSGCRMVPYSSGTAVGAAAGDGYERHPMLHVAWKPDVERLADAGIEHGASALTAYLSQFQGTTVIGDDADGVAGVLGAAKLAGGVLDLVVHKRPTLHVLLASDSTQDDGAAKHMRELLGVGTAFQRCLSLWKRSTDEDGAVHFQDLSAKEDTTANGTATAASSAPPSIFDVLVILDLDTSTKGSTSADLASYSSLVDEKKGTLIWSGPPSSASTASSGSIPAKLSPLGFSCMEAQQSHGTPVLEVVLAQRGLPDKKQELGQQEVLIVERNPDHKLNSELALHVAELTNKPAKRVTLDQLTPDLATAHATVIATVELEDALLADVKDGDFAQIKTLTDHCTNLIWVTGGGLADGTRPEQAVVFGLSRALMMEQPSLRFFVVGVDGECVAAETTARQVLGVARQALLDDAEPDFEFVQDGRAGGALQVSRFVPDDAMNSTFRQRQPNATETLEMRLGDAHPCRLSLAGPVAANMSDAFVFTRDLTHKNNDHGIGQDEVEVQVLTVGLHARDLRAMTGETSDGDGDTQPHAVTSQYVGRVVRVGSAVEGLGVDDSVLVMAPGRCATVERIPASSCSVLRDGEDPAAMASIPLPACTALYALRDRARLQPGETVLVCYREADAHGRDRSGPAAVHIARALGANVFAVVVVDDGDDEAKQEQRSEIVGDLGLPETHVSFVKVGDGAGFGSDMLSSHGRVQVVANFCTDRWPLSNVAALCADDARIVHVGRGTVLGELVTTDPTILRKNIALSTFDVNLLLTPVPSSPSTTRSGLLLDDVLSLWRQGKLNGLLGTQPRLFDVANLAEAFRALSGSTTKAGHTTPRGAVSVSFEATSLVRVAPPNYHTVFNPDKSYLLVGCLGGLGRSMSRWMLSRGARKFTFLGRSGTDREPAARLVQYLELCGASVTVVRGDVVDASDVERAVAASAAAGPIGGVVQAAMGLDEALFTAMPAAYWRKGLAPKVRGSLNLHAALAGRDADLDFFLMTSSVSGSVGTATESNYCAANYFLDVFARHRRGLGLPATSVGLGMISEVGYLHENPEIEAMLLRKGIQAISEDEMLNMIDISLSASSSSRTRGSPAAAWRGTDHALAHTLTGLEPIGVRELRAQGFDVSSPVLGDPRASLLAAALAADENESAGAGAGGASTSSGGLPAGLAQAVAGGSAGAVAAQALELVADKFSNLVLVPRDRLDLLRPLSDVGVDSMLAAEFRGWIYQQLKVNVPYLTMLASTTTLTMLSELIAGKLLEA",
                 "length": 2572,
                 "architectures_nb": 1,
                 "domains": [
@@ -4319,7 +2808,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -4332,7 +2821,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -4345,13 +2834,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_11638T0",
+                "sequence": "MSYSIPPNEPVAVVGSSCRFAGGVSKPSELWELLKNPQDLSQTIPPSRFSATGFFHEDGEYHGTTNSTKAYFVQGDHRAFDASFFNIAPKEAEAIDPQQRMLLETVYESLESAGYTLKQFSGEKVSVFSGVMTADYDTLCQRDDITSSQYFATGNARSTISNRLSYFFNFCGPSMTIDTACSASLVALHQAVQSLRSGESIMACVTGSNLILTPEQFITESSLHMLSPTGLCRMWDTDANGYARGEGVAALLLKPLSKALADGDTIQAIIRETGVNSDGRTQGITMPNPLAQAALIRETYQKTGLDPTDASDRCQYFEAHGTGTQAGDPREAQAIADAFFPSNVTTQDPTMVAKSKLLVGSVKTVIGHTEGAAGLAGTLKVIQAMRNKTVPPNMHLRKVNPKVEPFYKHLEIPTSCTDWPAPASGHPLRASVNSFGFGGTNSHAIVELYTSEIHDPIGKHFAEKGLAVAGAAAGSESSVVEENKVDVQLPLVLSAASKKTLYQVASAFKDFMSLPDIQEKLSNREELNKLLHLLLTNRSPFPYRLSVTGATCQDLMQALEKAIDGIPAGGPQEIGALALKQIAKGPLKILGIFTGQGAQWAQMSKHLLINCPIFKQTIHQLEDVLRECPTPPDWTISQELSADAENSRINIAAISQPLCTAVQIALVNVLRAIGINFHTVVGHSSGEVAAAYAAGRITAPNAILIAYYRGLYAHVAGAPGSGVKGGMLAAGLSKLEAERLCALDNWRGRLSAAASNSHTSVTLSGDLDAVKEMAQYLTEQGKFARKLIVDTAYHSAHMLAPAEKYGESLSTFEIEASEGNSTKWISSVYGDDRILELGELKSTYWTDNMVKPVLFREAIESAVSGNNLYDVAVEVGPHPALKGPATETIKAATGSTIPYFGVLDRKKNDMVALSDFIGSMWTSFDHSAVRLPVLPAANSFSTSPQQSWSEKLPQYPWDHSQIHYRESRISQQYHFRADPPHELLGVRTRDDTEFELRWRNIIKLETVPWIEHHCFQGQALLPASAYCVMALDAARVLLKGRDAMMVELENLEFLSGMTVEAGNYGVETLFTLTVLPPSKDHQDESTITANFTLTSAYADGSSPMRMNFRGSMTITLGAPSSDALPFKVAIQPETTSVSPEGFYQMMKDLDLEYTGPFQGIKTIDRRYNFATTTLLKSHPDDTTSLAVSPATLDTCFQACFSAFASPGDGSLWTTFLPTFVSAMRFNMAVCDLKDGQDQTIKVDASLTEFKPTSKNGAATINADMAIYNDQGQAEIQIECMTVASFAATKAEDDYELYLHTVTQLDPEDAIVGPQAPLDVNSPEFRSLVESCDRVAAFFCQDYKSWPRETKDGLKAFVKTSPHSAALELLMQLGKNLPHGVLQAMAAPVVQESLDMLSMQRQVSAIVGQVAHRYPRMKVLVVTEPGLGLKEHVLAGLNSSFTSLTVAGKVEPSFEQRVLHAANDAVRDRIFTKSLDNEDEKWDKHDLVVVSTAVGGDSVALLKRMHALMNPGAYLVLVDMSLSPLRERLRRCSGQTVDSSSNITPPDYPDVLEECGFVNASKNGDQQHIPGFSITVRQTESPLKDVLRAPLSGGPGSPSLTSKLLVIGGSNNRTTSLMNHITTGLEPFCERLVSAKSFEDADHEDLATCTAAIVLADLDAPVLSTMTAARLESIRTLMRPETTVLWITYHSRDSNPEHAATFGFARTLLAEIPNLNLQLLDLEVLNGAGQIINENFGRLCQRKLTTGEGRKMLWTHEPEIHIEKGRRLVPRVLPYRPAIDRVNAPRRVITSTVNTTEQCVDIVPVAAAPAGATQHEIKLHSGIVSTGHMAKPNSLTHPPIQVLYSSSQPIDVGTYKGYLCFGRELSLNGKGRSVVLFSDTNASMVQPAPGQVVFDVPETTVTSAACAAWALRTLAVMACMDKPQGGTIILVEPDMCLYTVITQLFTSSQYQICVFTSDRAAAMANPGWTFVHRYQSRAPIEHVFARMPKFSVYNFLDESSPVSALIRGAIASRGDYYPGGQLLKYTITEMRNCDLEDVIEFADMKSLQIHPSCDEPVSASAISVPSLLDSTSPAKSPFQVVDWRAERDVSYLAPPVVGTSMLSPDKTYLLVGITRDLGQSLCQLLAEQGARHIVLSSRSPPDNAQTVWRHELRARTGCTVLMEKLDVTDRASVLALKARLTSTCPPVGGVVNGAMVLDDRVFAQMSIETLQRVMRPKTVGSSNLDAVFDSPDLDFFIMTSSFAAIGGHAGQSNYAAANMYMNGLAADRRRRGLAASVLNIGVIYGLGFLHREKDDLYASLEREGYPPISERDVHHMFLEAMAAGKPSARKPGAAVADLTTGLSRYNMEDAEPLHWHRDPRFSHYTIQQAGRGIGSAKAAGDRQSIKDQVELAQTAAEVQQVVAAGLEAKLRKMLQLREGAPLDMRLGLSDIGVDSLAANEIRSWVFKNVGKDVGVMKILGAASVDKLCEEIAGLVVAARN",
                 "length": 2480,
                 "architectures_nb": 1,
                 "domains": [
@@ -4365,7 +2855,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -4378,7 +2868,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -4391,13 +2881,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_12214T0",
+                "sequence": "MSSTSQEPIAVVGFSFKLPQGVDDVDNFWDVLETRTNLSTDWPEDRINVGAVKSNQYNKVQCRGGHFITEDPAVFDAPFFSVTAKEAASMDPLQRWTLEASYRAFENAGIPIEDLRQSNTAVFSASMSDDYSRMGSMDPEDHHQMATTGTFASIIPNRVSWYFDLRGPSIHVDSACSSSLFAVDMACQSILSGNAKTALVTGGNLILVPNSFQMLSAQGFLSPSSKCFSFDHRANGYARGEGIVAMVIKPLADAIRDGNVIRAVIRASASNQDGRTPGLTQPSSDSQADLIRRVYEKANLPLDRTRFFEAHGTGTPVGDPIEMAAIGRVFAPVRSPETPLFVGSVKSNVGHLEGCAGLAGLVKTILALENGIIPPQANFEKVNPELDTERYKIEIPAAAIPWPCEGLRRASVNSFGFGGTNSHVIVDDALHFLEEAGLKGHHNTVRSPSSDGMAKGVPEAELSGSRLKQNGLKQNGDANGSSDEYPLPYDSSKTNGTATKGEDITQDAAATYGNGNQHEHPRILVWSAADQQALARVGKQLESFHSDRIAGNSPQKLDRLAYTLATRRSFMLWRQCATVMSTSAGAAPQSLLAASCKATRSTGTSELGIAFVFTGQGAQYVGMGRGLLRYPAFKQALQQIDHVYQRLGCKWSLFDELNNGTTIDSPTRSQPLSTALQIALVHLLRAFGIVPKAVVGHSSGEIAAAYAAGALSLESASKVSFVRGQLAGHLKQQLEVAQTPGAMMSVNLPEAEVPSYLADKDLLQDSNITIACINSPGNVTLAGDEAAIDAVKSCLDKDGIFAQKLHTGVAYHSAHMDQIACQYLIQMGELEGPASLEGAKRIPMVSSVTGKTIDTSELARPQYWVDNMVSPVQFFDAIRTLTSALKDQAGIITDLIEVGPHPALRRPVLDTLKTAIKKSQREIRYACILHRYHPAHEAALGLVGQLFCSGYSVDIPAANSHSGVDIAPLVDLPEYPFDRSKKYWTESRLSRDFRLRQPTRSGDFLGARFYDWNPLEPRWRSFWSVESAPWTGDHVVSGTVILPGAAMLIMAIEAVQEMGISNREVLGYDVHEAEFTAPVIIRQRWEERTEVMVRLRPIKSATNEINAAAQSEVVIFAYLDDQWADCFRARLSVRYGGVSRTQTDEWKLAHNRLVDELGRADKSCTRPISPQVFYDDAAELGIEWKDWFRHLEDIRWDGHGSTIGHIDLERRHPGGRYKTTSIVHPAVLDAAFQVLRVSTTKGLSMSSASTNVPFKLSGAYFAASHKWQAPGTASVRFYADCSPEDCGRSRVKGRIRAISDDGTILCSMENMVMAAVSSGSRSHDANRKLLHRVDWRPQMSMLSAEQLANECEANTFPDKDEETLVVQFDKLRLVMTEAIAMSVHELDSGNLSVPESMQRHLVWMRQHLKDTKIKPRGLSREELEVELRELELMRPAWQLHGAFIRELQPIMTGSVDPLQVMFGSDKAGLFYTDMFDQVCDHRLRKFLHLAVHENPNMRIIEVGAGTGGFTGSILPILAALETETGTQRFSSYTYTDVSPAFFEAAEARWGAAGGCLRERMVFKTFNMKHSPAKEGFKEGAYDMVIAGSVLHATEDLLDTMRNVRKLLKPGGILLALETIAPQDIITNYSTGLIPGWWGEREEWRGLSAAIPESMWDWVFTKTGFSERQLSLRDYRSDELHLFSVIVSRATIENNLLDQKHASKLLVLVGDINEQCQIRAAELVRDQVAKGRNSRILDLETAAGVRIGEEDVVISMVDMWRSVLASPSAAEFYAVQDLISRTKNMLWVTLVNPSDDESAKGSADLGWMRTVRTEEPGKSLVSLLIESSLSGQDCSKHSGCVAKVFDAAFGPSASPEREYLCRDNCIITGRVIEDIKQNKQLLSLLRPQLQKAPWLSKGPVKLCVGADRTLEALAFFEDPDHNRPVEADQVEIEAQSWAINFRDVLVALGKIESDNDLGVDCAGVVTRVGPQCQNVQPGDRVAMVSPNCMRAFPRSPQGAVCKIPDSMSFETATSVLIPGMTAYFGLVDRARLSKGERVLIHSAAGSSGQMAVWIAKMLGAEVFATCSDDSKRNFLVNQLGISEDHIFFSRDSSFADAVQRMTQGRGVDVVFNSLSGDALRASWALLAPFGRFIDVGEADQHANAALPMGGFLHNRSYFALDLRDVVLNNLELTSRLLRDTVQLLVDGKISQPGPVLNIFPASDLELGFRQLQSGKNIGRFLITLDRNDVVPQMITESRDWMFDSEASYLIAGGTGGLGRSLAKFFASRGARHIILPSRSGSGEAGSKVSEMLEELRSRGINIEAPRCDVADAASLAAALKDCRDRLGMPPVKGCINAAMVLQDSVFANMSHAQWDLTVRSKVKTSWNLHRQFNTPDLDFFVLLSSIIGTIGGPGQANYAAGCAAQDWLAEHRQRLGLRGSISIDVGWMKNIGIVSEEVSYQRHLKLVEDMHKLEEDEFLALLTLCCDPSGPSSPQSGDGARVLFGLRTPDEFLNQGKEPPEMLSRPLFATFLHNEKSVEQAVGQPAASDPAVVFRATPDPSDRARVVVEALKQKLGRAMAISPGDVQVEKPLSVYGVDSLFAVELRNWILKDFSATVAVFDIMGNVPISNIGKLVVGRSTVGFGQL",
                 "length": 2626,
                 "architectures_nb": 1,
                 "domains": [
@@ -4411,7 +2902,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -4424,7 +2915,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -4437,98 +2928,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_12447T0",
-                "length": 4035,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 12,
-                        "length": 435,
-                        "cevalue": 3.8e-188,
-                        "ievalue": 1.3e-185,
-                        "score": 617.0,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 560,
-                        "length": 319,
-                        "cevalue": 1.6e-103,
-                        "ievalue": 5.9e-101,
-                        "score": 337.7,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2432,
-                        "length": 70,
-                        "cevalue": 1.4e-13,
-                        "ievalue": 3.9e-11,
-                        "score": 42.5,
-                        "hmm_length": 70,
-                        "hmm_start": 3,
-                        "hmm_end": 66,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2607,
-                        "length": 294,
-                        "cevalue": 1.7e-63,
-                        "ievalue": 1e-60,
-                        "score": 205.0,
-                        "hmm_length": 284,
-                        "hmm_start": 2,
-                        "hmm_end": 283,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3088,
-                        "length": 488,
-                        "cevalue": 3e-119,
-                        "ievalue": 7.6e-117,
-                        "score": 390.3,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3604,
-                        "length": 71,
-                        "cevalue": 4.2e-13,
-                        "ievalue": 1.2e-10,
-                        "score": 40.9,
-                        "hmm_length": 70,
-                        "hmm_start": 4,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_12613T0",
+                "sequence": "MSTAEGQGAAPAGSPSCQGAIAVVGLACRFPGDAADINGLWQMMEDGKSAWTKIPESRMNVRGYYHPDPSRQGSFHFRGAHFLQNDLAEFDAGASNDEDVTFMACLSDHSFHFVAGIPKEAIDGTDATVWIGSFVKDYEQLCLRDQDQTPQYAATGNGIAILGNRISHCYNLAGTSQTMDTGCSASLVSIHQACQSLLSGECSTAIAGGVGLILTPNTILPMTSVGFLSSDGRCFAFDSRANGYGRGEGAAMVILRRLEDAIANNDVIRGVIRSTASNQDGRTPGITMPSQERQMSNILQAYRKAGLDTDRTEFVECHGTGTKAGDMRELEAIYRAISVNRAVDNPVMVGSIKTNIGHLEGAAGIAGVIKAVLATEKGFIPKHLNFVQPNPNIDFEGWRVKVPTELTPWPVHGLRRASVNCFGFGGTNAHAIIEDAAHHLSEANLTGFHASYLFPGDELLQPRKSDANSQDCLVDGDAPRLFVYSSHEEERVSLVAQSHAPYLRRRVEDGSATLQLMDQYAHTLLERRSKLEWRAFLVARGPADLLQKIFNFDNSLVMDFPRDAEVRPALVFCGQGAQWHAVGRELLDYAAFKSNIEAADSYIRQELGADFSLLEVLTADQDSSRIDLAHVSQISTTAVQVALVDVLFASNVVPIAVVGHSSGEIAAAYAAGAVTRESAWKIAYYRGYCVASWQEKDHGPPGRMLAVGLSARDVQAFIHQTSKGSVQVACHNGPSSVTLSGDEAAILEVQNILAEAGVFSRLVPVNAAYHSRHMEHVAADYLQKLGSIEIRNVTLGPVLYSSLTGSELSPSRLGAKHWVKTLTCPVLFHQAVQTLMRNANPTVVVEVSPTGIWEGTIRRILSAMDYREPVPYFSVLQNGTGAMTSTLQVLRELWIRGVPIKMDWTYSKSRSQSQPQSQSWQNGLVQTSRPPQHLHDLPPYPWNHDKLYWYESQLSKNNRFRTHGREDLIGAPFDLGIKTEKSWRGFFRLKENPWIEHHQVQKSILYPAAGMIAMAIQAGQQLAELGRQEVVAFEIKSFSILAPIVIPTSTDGLEHAISTKLAKSESSEPLQGVAIYHFSIYTKPDGVATTKHAEGQLHIIYGDVASSTLEEMQIEDSAHRSVYDQYKETSDEEVSPRQLYEDLNNLGLNYGPLFRNIKNISRSSQHGGYCHSQVQIPDTASAMPFAYEFPHLIHPATLDSFLQTIFAIGEDVMLPCSIDNIFVSAEMPRGAGGRFLGYTTAQATTRRSAVADVVMFDEQLDQIKVSIKGLKLKSAVAAVGDGGGFLPNHRNLCSEIVWKQDVDRSSLGNFMAWLDSLGHAIPAMRVLQLGGLSEIASSVIEALENGHETPRFGSFTLCDREDLIFSQLQQKYVATPVMQRLLWEPLQQVAMSSPYDLVIMKASQTQDLTAVGQVLSPGGYVVVQLEGVVDKTDKDSLRVIKRLADAGFRNAEKLDQSSGRHSYIVACSSKVPDKAIGGQRNITILLPDVLTPFLEKLHKSLLKCLTALPQITYTSGAVSAHPKFNPKTVYLSLLEAETPLIFDLVESQWETLHSLFRTKNLLWVTAGAQMSDINPLMAASIGLMRTIRSEDDQKRLVSVDIDPRTNNDMVSTSKALCDILEANFILSTIAKESEYVIRDGKRFIPRLMTLPAVNSLIEKEAHLPERLEEFPLWQQGNHVKLAPKSVGSRLGLYFTKEDTTTRPLKETEIRVRVHQSHLLPRDMDALRGNGSEIGSDAVGTILEVGSKVFSSFKVNDQVMVFARGTISSTVTADQKFVWSRAATSPPHGSFSPTAFISAAYGLVISGRLRRGNTVLVHAAASAYGQAAVCIAKAKGASVIAAVSSPEQRKVVQALGITDDCIVDGQDDAFVGPVGRLTRGRGVDVVFGPASRSLVANFRSCAEFGRISQLASDTLELPSMDQAILKNLSLETFDISKLVEKQPWVVDEAINEVNALFQDSDSACRIQPMISHDLESLATIAADPTTDPWLGLHAVDTKEDTRVMMPVNLTKPLQLNSNGTYLLVGGLGGIGRSIAQLMVERGARHLAFLSRSGAKSKAATDLISSLQLKGVHIQDLKVDICDENQMRDAILFVQHNMPPIKGAVQCAAVLEDSIFDKMTYAKWTKAFRPKAIGSWNLHNTLPDTLDFLVFLSSSAGVLGNRGQANYAAGNTFQDALAHHRASLGRHSVSLDLGLVLGAGVVAENERLLDMMLASGFFGVALRHVHLVLERAMASLPRAAGPDQLLRLPTQVVTQMGSGGLVLQDRPVDPFWTRSPLFRFLNQVDLPAGTVNFFATGAAQDVVGDDRLHGRTGSKGSNSSTSTSNAGQDLRVAIRRASSPEKAASIAVGAVTRALARFMGVGLGSSSSSAAGSRPTTAAGSASTSFASTPVSTSFSSGAAAPAAMPLPRATRGGLLDPSRSTVSYGVDSLVKLNITRWIVDQSGVAVGDVDEFPSINELGAKIAELVLADSDGKTN",
                 "length": 2475,
                 "architectures_nb": 1,
                 "domains": [
@@ -4542,7 +2949,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -4555,7 +2962,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -4568,13 +2975,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 21,
                         "hmm_end": 68,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_13591T0",
+                "sequence": "MKANIQAFDAPFFAMTPAEAASLDPQQRMLLECVYTAMENAGYTMADMHSAPFGVYVGNFMLDFRNLVIKDVDVPMTYTATGSVASTLAGRISWFYGLRGPAVSVDTACSSSMVALHQAVVGLKQRDCSIAIVCGTNVILTPEMGLEMNGLGVLDPAGASRSFDKSGNGYGRGEGISVVVLKRLSDAIADGDTIRAVIRNTGCNHDGHSPGLTTPAKEAQVELMQLTYARAKLDPAETRFFEAHGTGTNVGDPIEASAIAEIFAKTRTPEEPLYVGALKSNIGHTEGNSGIASFIKGVLCLESGIIPANAWFREKNPRIKEEWNLHFPTKSVPWPKTPSGVRRVSINSFGISGTNAHVIMDDALSYLRANSIDALHHTVEIPRLSPRAPLPQPVINGTGFPPQLFVLSSQDQDGIARLCRAYREYLPTMTEPLYNLSYTLAEKRSRLDWRAFVVASSSAELEAALKQELLATRTASEPGLGLVFTGQGAQWPRMGAGLARFDVYRESLEAANAYLKTIGCEWSVVDELSKSAGDSNINKAEFSQTLCTVLQVALVDLFNEWGLQFRAVVGHSSGETAAAYAAGAISKESAWRIAFWRGKLSAKLSDALEQPKGTMAAVGLTVDKAKEYIDKVYESGFQGVEKLAVGCMNSPNSQTISGDVAQVEALVELLNSEGVFARKLKVEMAYHSHLMNPIAEEYAQSMGEIEPPGSASKQGSPVEFFSSAYGCHVEHEKLRQAAYWTTNLTSAVRFNESVAAMLEAKMDEESLCDLVTDLLEIGPHAALQGLLRNINDATRPNTGVKYHHALKRGEDDVVAILSAAGSLFARGLELSLSKANHVENATPRLMVDLPRYRFQHNKEYWYECRLSRNFRFRHFSRHELFGKPVNDWNGKHDAIWHNWIRLSENPWAEHHTINGSVLYPAAGMLVMAIEGCKQLAQLDNPERKLISGFRFREVSFHSALKVPVGAMGVESHLYLRPAKQAALESKPSAWREFQVCTAQDDDSFREHCCGQVLIEYQEASSAVDDGREKQAFKEHCRVRIRDAKARCKTRGTSKDFYDAWGAVGLTFGPTFQTVSEFQVDHAAGVALAQIKPTTPLLRSLMPHNYLQPHLIHPTTLDGAIQACLVPLVSNPARKQQSPIVVSFMDELWHLLSCTAVDPTSAEPIIKLSGCIVTEVNGNEEAAPTQDPKHKAWNIDYRPDPSFLSPEAAQEAFAGGDGFLEYVDALAHKNGSLKVLDVCEGSCSSANSRNVLARLQGRHLQYDVTVSDDSLLGELQASGLSEYEGVSFKVFDVKADPSSQGFEAASYHLLLAPIKSVPDIDEMDRVVGRFLSLLQPDGKIIFTGVHGAAAAAETWGTCLTRNGFKSVDAVLGGAEGRVVIASAPRQESEKRALGSCYVVGDLTSDLQRTVAEKVAASLLESSGLAAKTATVSEYRQLTAAIGQGEVAKSSCIVLSELENPLLATADADSLAAVKTMVTGKQLLWVCKDDSPDTAMVTGFAAAMRLEQPSLTFVTLAFGSLESPAAVADKILSVKARITSDKEAAHETTYKVVNGVLAVPRLTEATAVTRHILQAPCTATVPTRFTTTAKPLRLQIKQIGLLSSLHFTHDAIHSSPLGDFEVEFKTMATAINFKDLAVMLGKIQSTPFGLEAAGVVTRVGAGVTRFRPGDHVFGFTFNGAFSTYARGAEGTLAPVPEGMSFAECSTIPIVYTTAYACLYDVGDLEKRLRRGQKPPTVLIHAAAGGVGQAAIQLAQRAGLEIFATVGSVEKRDFLHGTYGIAHDHIFSSRDLTFKDGVRRMMADRGVDMVINSLAGDALRATWELVAPFGAFAEIGLSDIESRSRISMGTLARGVRLEALELNYMRKTDPGRLDDLFSRAMESVLGEKLPRATPITRFPMSRIQDAMRFMQSGKHIGKITIEAVDGDVVDVADAGLSETSFDENATYVVSGGFGGLGIEIIRWMVARGARNLVVLSRRGAADDAAKALVDEVQAAGAKIITPCCDITNLQSLQQVLGKALEGLPAVKGCIQASTVLRDNVFTSMTPEEWHGALGVKATGSQNLWTALTADSYRLDFFTMLSSLTGITGNVGQSNYSAGNAWQDAFARQLSSEGHNAVSLNVPVMSDAGMVAVRPALREYLLSTGWSYMSTAELIRLLDYHCRPVESRTARESQVVPMLWLPKYSADEGAEQPGWQHEPMFNHLDLQDGYSKASALGKQDRGRRTTADLIAAADTVEDAEKIVLDALLEQLSNILQREVTDLDPARPMSVFGVDSLVAVELRVWINKQVGADVSVFDMTSGQRISQLAAKAAATSKFLTFKVE",
                 "length": 2320,
                 "architectures_nb": 1,
                 "domains": [
@@ -4588,7 +2996,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 65,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -4601,7 +3009,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -4614,13 +3022,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_13767T0",
+                "sequence": "MGSTVPANDDIAIIGMACRFPGDATNPSRLWDLLMDGRSAWSPVPATRWNQDAHYHPSPEHAGSNVVKGGHFLRDGEQNGKQFDAAFFNIPRTETETMDLQQRVVMENVYEAMESAGLRLEDVKGSKTSVFAGVFTDDVRSILQEDPDLSVKYKPIGTSAAILAARVSWFYDLRGASFTLDTACSGSIVALHTGAQDLRAGLSDMSIITGVNIIESPEFMFRASGLGMVSPDGKCYSLDSRANGYGRGEGVGTVILKPVWAAIRDGNVIRGVLRGTGVNSDGRGTGGITLPNKAAQERLIRDVYSRNNLDTDHTGFIEGHFTGTPAGDPTEASAIASVFQRGGPAAKPPLYVGAVKANIGHLEAASGMAQIIKTVLALENGVIPPNTNFEKINPRIPIERWGLKLPLVPTPFEPGPLGVRRASINSFGFGGTNAHVVIDDARSYLENLGLGDRSHLHVTKSNTSLTPAPEANDAAPRPQPPAHKVFLVSANDQDGISRILASLAEHLQKQTNQDGTLKIDDAYLTSLAMTLSERRSRLSWRLAVTADTAASLLSALTDPATTADAVRPGKANTPAAAFIFTGQGAQWFAMGRELLAYDVFRASVAEADAFIAGTLGGGFSVLEELARRDADATKIDQPLYSQTLCTVLQVALVDLLASWNLLPRRVVGHSSGEIGAAYAAGALDRQSAWKVAYCRGVVSAKPAAGDKRGAMMAIGCTAEEVAPIIAEVEEKLGAGELVIACYNSPHSLTISGDEAKVDALVEIASSRKLFARKLRVPKAYHSSHMLPVSDEYRSLMGTLTGTPSPDVQVASSVTGGLIPAGDMTSADYWVQNLVSPVRFSQALVALCTANVARKQLKVGGGAELPVSHLVEVGPHGALQAAARDAVLSDPNYRHLRYVSVLTRARHACATALRAVGTLAAAGLPVDLRRVNRVADAQPLLVDLPPYPFHHARETHSWLESRTSRAWRFRKHARHDVLGAPVRDWDPDAPRWRNHLRVAEVPWLRDHKVTDSIVVAGVTYLVMAVEAVRQLYGDRGEAPLGFNLRDVSISRALQVGEDEHAETMFSMRRVAESRQADSSTWWEWKVTSFSPHDDAWLEHSRGQIAAETSASTATGVIDDGREEEARRRRFGKLLSTATQACTAPQTEALPSKYAELERIGLGFGPLFRNVASMHNNSSGDNKTRGQSLATIRIPDVASAMPARALAPSVIQPPVFDSILQSFIFALQASAERLTEPMVPVAMRSVWVSADVEAQPGAELKVHASAGRVGHKKVEADITTWSSTAAGTPVRVVMRGIEAVPLQQSTASGESGSSAREISFNLEWKPDVDILEANGEAEACMRRALQPLETPDLEAAAVKQLGDVQLACAIWILEAVKELEARPLADEKALPDHMQKYLGWLRRIADDYKHNRVLRQDPSWAAVVDDAAARDRFMAEYEASGHPEALMINRMGRNIAAVLRGDVDGLHLLFGMDDMLERVYRVAIGTQKIHTLMGAYTRALSHKRGADLKVLEIGAGTGGTTTSILEAVCPHGTRVVGESRLLKYTYTDISPGFFETAAGKFAKWKNGGVLEFKTLDIDRDVEAQGFDLASYDLVVAANCLHATSDITKTMARVNSLLKPGGKVLLQETTEIWCLESPLVFGMLAGWWAGREDFRPWGPLLDGKGWEQVLRNAGFAETVLELKDSPREELHVQSMIVATRPAEASKQLDDDDVIRRVFVVAHTTPEDVALAAAVSAAVAEVTKLDVSVVPFADLAQHQLKNTCCIVTMETTAPFLASSFSEAEFALLRQLLTTAGGLLWLTLDPHENPHMALIPGLLRTVRWERDLDGSDLLLMHLPSSETSLVVSNAVKVFKHHFGGPFISPDRHADYLVSEVDSADGGYVQTARIVAAPPVNRFIAQRTTELQPQRQAFGADPERSLKLHTSGPGNLDKLHFVDWPGAQQPLGGGEVQVDIRAAGLNFRDVMVAMGELANNILGYEGAGVVTHVGSEVADVEVGDRVIVVWNGDNNCLQTRTRVPRELLAKMPDGMSFEEAASIPVVFVTAYFCLYEVARLQPGETILVHAAAGGTGQAVIQLAKHLGAEVYATVSSREKRKLLVDEYGLAEDHIFSSRDLSFADGVMRMTNGRGVDVIINSLSGEALRASFNCIAMFGRFIEIGKRDIMANAKIDMLPFSRCATFTAVDLAQIATLARPLTSRILRSVVDLHAAGKLHACRPLNVHRFAELEDAFRLLQQGRHMGKVVLAAHPDDLVKVVPKPPAPTRLRPDATYLLPGGAGGLGRSIARWMAAPAQGAKNVVFLSRGGADAPTTRELLAELSGMGVRATALKCDVADEAQLVAALAQLKRQGFPRIAGVIQGAMQLRDSAFEFMTHAQWAECLGPKVQGTWNLHRHAPADVDFFVMLGSVAGLVGNRGQSNYAAGNTFQDALAVHRRARGLAATCIDLCNVMSVGFVAENQETLNKNPLFFYAHDGIREDEFLSLVEFHLDAERARHGGQPQIGVGLAPLSVFQDRGLPEPTFIKSPLFRQMRSAGGAALADAAEQGGAVSVANALKFAASHEAAAQIICDALVKRISRTMRIAEPDIDIGKPIHAYGVDSLVAMEIRNYLASECGAAISVLEIMGNKSMEVLSGDVAKGSKFVAGEAK",
                 "length": 2641,
                 "architectures_nb": 1,
                 "domains": [
@@ -4634,7 +3043,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 2,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -4647,7 +3056,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 309,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -4660,13 +3069,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_14831T0",
+                "sequence": "MPFLSDSPPLSPGGSSSASSTAASSTLHQTHAQSNDPIAIVGISLRGPGDGADTERFWQMLLDGRSARRDIPKDRYNVDGFYHPDGDRLGSIQQRQAHFLEQDFKVFDAPFFSVTPKEAKAMDPTHRMLLEATYEGFENAGMRLEDVAGTKTSVYVGTFTADFPSLQARDNAGPSIYHATGTSASLASNRLSWFYDLKGPSLTVDTACSSSLTAFHLGCQSLRTGEASMSVIAGANLMFGPDMSILLGAAKILSPEGRSKMWDASADGFARGEGIGVLVLKPLSAALRDGDTVRAVVLASATNEDGYTPGISLPNSEAQQELIRDAYAMAGVDPADTGYVEAHGTGTQAGDPLEARAIIRTIGAAGRRRADLYVGSVKTNIGHLEGAAGVAGVIKAALAVERGVIPRNLWFDKLNSQIKLPSNVKIPVETTVWPSSGPRRASVNSFGFGGANAHVILEDAASYFARTGQSGRHFTAGAAKALLSEQYSDSDVSSGSDSETSCNNGNGNSNSNSNSKTKSKTSTPKILVVSSNDQDGVKRNVETIKSYLSSKPQTDLADLAYTLNSKRTTFPWKSFAIARDLDSAPDGLDAMPAAVRSSNASVPRVAFAFTGQGAQWHAMGRGLSVYKTWRDSMAVSQQVLTSLGCPWSLGEELSRGEKDSRLRLTEYSQPICTALQIALVDLLRSWAVEPVAVVGHSSGEIAAAYTAGFLSHESAVKVAWLRGQVSGTVSRDGGMLAVNAPAEAMQARLGKLTTGRAVVACMNSPRACTVSGDRAAVDELHDLLKADEVVCTKLPMDVAYHSFHMEAAREQYEQALAGIPHLRPKSGPTMFSSVTGELVGADAMSPSYWVDNLVSPVNFTAASRSLLHHSPAKTRTDRSAFASVLVEIGPHSALRSYLLDVFKAEDRLTDLSYVGVLRRKMDAVDTALQAAGELWAKGCAIDVDRVNGTAPSDAKMLVDLPPYRWNHTKSFWEESHLSRQYRLRASPRTDLLGYRVPGVPDPTFRNFLRCTENPWIREHRVQGDVLYPGVGMVVMAVEAARAVADANEEVLGYELRDVAISTALRVPDDEAGVEVMTQLHARRTGTKAAPSNALYEFAVSSWSDDAEQWTVHARGLVSLTYRSSLTPAMQGELERECQARGREFEVAKATCQRPARSFLYDQVEAIGMVYGPTFRNMTELYAGPDANSYGVIGIPDTKKIMPKGFEYPFVVHPATFDSVLHLLFPCIAGEEESLSEAVVPFSFDRIFISAKMPTEAGTKLQGHCSARKLSYTTWTSGITVCGEQLDEPLIIMEGLGLASIGGSGSEENAKESRAGCFGQNWHEDVDLLSPAQIKELVYHRTLKSKDDDTVLDKLEYVCLVYIARCLAWLETEEGRPHLPTSGFWKLYVEWMHDTVAAFPPLAGDPAEVEAELQRCKEAIVHSPSGDITVQMVERIGVSLPAIFRREVEPLQVMTEGDLLYTFYRGAFGTSFNTNVAEYVGLIADKSPGLHILEIGAGTGGTTYHVLERLRNPDGTSKAARYFFSDISPGFLAKAADRFQTDASVMEFGTCNIENDPLTQGFAAESFDLIVCANVLHATKSIQETLAHCRALLKPGGRLVLSEVTIKRIFSGFIMGPLPGWWLGEDDGRHGGPLLDVPEWETALTKAGFSGVDMDVRGDREESLEPVSLIISTKPLTKRIAAADEFVVVTPALAESQKLAQAIVDTIKSAGKKCTSLAWEDVTKEAVQGQYCICLAEWESPILVDLTDENWTRLRDVVLGSAGTLWVTGGAAMDTPEPLKSLMVGLARAIRNENAGVLLATLDLETAATIDMRQGCDAVLKVALEHSRGETPDGEFAARRGRVFVPRVERLPGVDASLRKYENKGDPEPVSFVGCGRPLKLTIKTPGLLDTFRWVEDETYHTPVPEDWVEIQVKAVGLNFKDVLVALGNLAEYKLGVDVSGVVTRVGAGVKGLKPGDKVMTASCDTFATFVRFPAKGAIPIPEDMAFEEAASMPLIFLTAYYALVTAGHLVAGERILIHAAAGGVGQAAIQIAQSIGAEIFATVGSDEKKQLIMDQYGIPADHIFSSRDTSFYKGVMRATDKQGVDVVLNSLAGEALRLSWHSLAKFGRFLEIGKADLFANTGLDMQPFLDNKSYIGVNLLDFENNPTPRAVALWRETAALIHDGGVRPVHPLQRFTMADVEKAFRYMQTGKHTGKVVVCVDEADVVPAIPRTPKVPIVADATYVVAGLGGICREIGRWLAEKGAKHLVFLSRTAASSAENKEFSAGLEKTYGAKIHAFDCDVGDKTALAGVLEAIGHLPKVRGCVTGAMVLHDTLFDSMTADHVRTTVGPKVHGTWNLHEQLPADMDFFVMLSSLAGVMGHRGQGNYGCGNIFQDYVAAHRRGLGRRATTVDIGYLLSVGFVAEHDEYVDHVKAMGLKVMRSSDLHGLLATAMEADLDASPAQVMCGLPYREHDDAWYWIRDGRFAALRNVGAAGAAAGSGGGISLREELARCGPGDDEAAVDLITRALVQRLAKLMMMPEADIDAGRPLSAYGVDSLVAVEVRNWVSKEVVVEVSVFDLMANVPMRVLAANLAKKSALLSDKA",
                 "length": 2585,
                 "architectures_nb": 1,
                 "domains": [
@@ -4680,7 +3090,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -4693,7 +3103,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 2,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -4706,393 +3116,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_14897T0",
-                "length": 4270,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 3,
-                        "length": 440,
-                        "cevalue": 1.5e-181,
-                        "ievalue": 5.2e-179,
-                        "score": 595.2,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 584,
-                        "length": 321,
-                        "cevalue": 6.6e-112,
-                        "ievalue": 2.4e-109,
-                        "score": 365.2,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2527,
-                        "length": 70,
-                        "cevalue": 2.1e-17,
-                        "ievalue": 5.9e-15,
-                        "score": 54.7,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2705,
-                        "length": 316,
-                        "cevalue": 5.1e-60,
-                        "ievalue": 3e-57,
-                        "score": 193.6,
-                        "hmm_length": 284,
-                        "hmm_start": 3,
-                        "hmm_end": 282,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3220,
-                        "length": 526,
-                        "cevalue": 2.9e-125,
-                        "ievalue": 7.3e-123,
-                        "score": 410.1,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3793,
-                        "length": 76,
-                        "cevalue": 8.5e-18,
-                        "ievalue": 2.4e-15,
-                        "score": 56.0,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_14943T0",
-                "length": 3973,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 10,
-                        "length": 215,
-                        "cevalue": 1.7e-84,
-                        "ievalue": 5.7e-82,
-                        "score": 275.5,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 213,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "KS",
-                        "start": 225,
-                        "length": 193,
-                        "cevalue": 5.3e-79,
-                        "ievalue": 1.8e-76,
-                        "score": 257.4,
-                        "hmm_length": 422,
-                        "hmm_start": 244,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 525,
-                        "length": 328,
-                        "cevalue": 7.5e-94,
-                        "ievalue": 2.8e-91,
-                        "score": 305.9,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2367,
-                        "length": 75,
-                        "cevalue": 1e-12,
-                        "ievalue": 2.9e-10,
-                        "score": 39.7,
-                        "hmm_length": 70,
-                        "hmm_start": 3,
-                        "hmm_end": 66,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2456,
-                        "length": 293,
-                        "cevalue": 4.9e-58,
-                        "ievalue": 2.9e-55,
-                        "score": 187.1,
-                        "hmm_length": 284,
-                        "hmm_start": 3,
-                        "hmm_end": 283,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 2916,
-                        "length": 487,
-                        "cevalue": 2.8e-108,
-                        "ievalue": 7.1e-106,
-                        "score": 354.1,
-                        "hmm_length": 475,
-                        "hmm_start": 26,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3431,
-                        "length": 71,
-                        "cevalue": 1.6e-15,
-                        "ievalue": 4.6e-13,
-                        "score": 48.7,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_15097T0",
-                "length": 4121,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 7,
-                        "length": 435,
-                        "cevalue": 7.1e-195,
-                        "ievalue": 2.4e-192,
-                        "score": 639.1,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 556,
-                        "length": 319,
-                        "cevalue": 9e-105,
-                        "ievalue": 3.3e-102,
-                        "score": 341.8,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2428,
-                        "length": 70,
-                        "cevalue": 4e-14,
-                        "ievalue": 1.1e-11,
-                        "score": 44.2,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 68,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2679,
-                        "length": 299,
-                        "cevalue": 2.7e-62,
-                        "ievalue": 1.6e-59,
-                        "score": 201.1,
-                        "hmm_length": 284,
-                        "hmm_start": 4,
-                        "hmm_end": 284,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3164,
-                        "length": 485,
-                        "cevalue": 6.5e-120,
-                        "ievalue": 1.6e-117,
-                        "score": 392.5,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3677,
-                        "length": 73,
-                        "cevalue": 1.8e-16,
-                        "ievalue": 5.1e-14,
-                        "score": 51.7,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 70,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_15100T0",
-                "length": 3002,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 13,
-                        "length": 432,
-                        "cevalue": 1.9e-195,
-                        "ievalue": 6.6e-193,
-                        "score": 641.0,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 558,
-                        "length": 320,
-                        "cevalue": 5.9e-102,
-                        "ievalue": 2.2e-99,
-                        "score": 332.5,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2433,
-                        "length": 71,
-                        "cevalue": 7.8e-14,
-                        "ievalue": 2.2e-11,
-                        "score": 43.3,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 68,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2573,
-                        "length": 292,
-                        "cevalue": 3.5e-59,
-                        "ievalue": 2.1e-56,
-                        "score": 190.9,
-                        "hmm_length": 284,
-                        "hmm_start": 6,
-                        "hmm_end": 282,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_15272T0",
-                "length": 2912,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 5,
-                        "length": 428,
-                        "cevalue": 3.8e-192,
-                        "ievalue": 1.3e-189,
-                        "score": 630.1,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 542,
-                        "length": 312,
-                        "cevalue": 3.1e-104,
-                        "ievalue": 1.2e-101,
-                        "score": 340.0,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2364,
-                        "length": 70,
-                        "cevalue": 1.7e-13,
-                        "ievalue": 4.8e-11,
-                        "score": 42.2,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 68,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2492,
-                        "length": 294,
-                        "cevalue": 2e-54,
-                        "ievalue": 1.2e-51,
-                        "score": 175.3,
-                        "hmm_length": 284,
-                        "hmm_start": 3,
-                        "hmm_end": 282,
-                        "color": "fuchsia",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
@@ -5100,28 +3124,28 @@ $FAM_LIST = [
         ]
     },
     {
-        "name": "PKS-NRPS.0",
+        "name": "PKS-NRPS",
         "rules": {
             "mandatories": [
                 {
                     "name": "KS",
                     "evalue": 0.01,
-                    "color": "mediumspringgreen"
+                    "color": "peru"
                 },
                 {
                     "name": "AT",
                     "evalue": 0.01,
-                    "color": "aqua"
+                    "color": "mediumseagreen"
                 },
                 {
                     "name": "C",
                     "evalue": 0.01,
-                    "color": "fuchsia"
+                    "color": "navajowhite"
                 },
                 {
                     "name": "PP-binding",
                     "evalue": 0.01,
-                    "color": "papayawhip"
+                    "color": "maroon"
                 }
             ],
             "forbidden": [
@@ -5134,6 +3158,7 @@ $FAM_LIST = [
         "proteins": [
             {
                 "id": "MGG_03810T0",
+                "sequence": "MSSSPESQSSPEPIAIVGTGFRFPGGASTPSKLWDLLHSPRDVLAPIPQSRFNAEGFYHQDGEYGGHSNVRDSYTIAEDVAAWDAGFFNVAAAEASAIDPQQRLLTECVYEALESGGHSVQALRGSDTAVYVGLVNEEYSDIHYRELNTTPRYFSTGTGRSIASNRISYIFDWRGASMTIDTACSSSLVAIHQAVQTLRSGAFKVAVAAGVNMLLGPEPYIVESSFHMLSPTGRCRMWDASADGYGRGDGVAAVILKTLSQAIEDGDRIESVIRETGINQDGATGGITVPNASAQIALIRDTYRRAGLDLAKRSDRPQFFECHGTGTPTGDPLEARAVHEALGKHIVVDESPGRPPLYVGSIKTVIGHTEATAGIAGIIKASLALQNGLIPPNLLFERLNPAIEPLYHGLQVPVGKPVPWPATGASPRRASVNSFGFGGTAIWTNTRRPKNSHAILESYQLPQAQGTKCAQKSVPLPFVFSAATKASLKRMLALFGDFLSPQQRPQDLTAHDLAFTLNSRRSALSCRAVFAARGLEDLASKIRDTISDPDWQPTATAPEGKNVGSRAPRILGVFAGQGAQWPGMARQIIGDIPFVQQRVVELEGHLQDLASQDAPSWSLRDELGKVQGSNLDLAQFSQPLCTALQIIQIDLLAAAGIRFSAVVGHSSGEIAAAYAAGLLSARDAMVVAYYRGLHSPRLAGKSKNSKGGSMMAAGISYAEALAVVGLEQFQGRIAVAAHNSPASVTLSGDEDAILEAKELLTSDGKFARLLRVDQAYHSHHMRPCLAPYVASLQRAGVGAVRPRPHSNQETIWYSSVHRDGAGQRVMTAVDCEYWAANMAQTVLFAGAVESAVTADASAAAQPFTTAIGLGPHGALRGPLEDILGSLSRTQGGNSTAERTQIPYTDVLTRNQDDSLCLMRCVGTLLANGAINSADVGRFQSTVYQLEHLGGRRLIPARNLPSYPWDHSRTFWHESRRSRALRTRSKPAHPLLGTLSPDSSATDLAWHNLVRLADLPWLRGHRLQGQVVYPAAAYMAGAIDAALHVAGEMGREVRAIEFRHVWIGKAIAFDDDSASGGVEVYTTLTINDDRVDEKAVLDARFRVRSSVFGSASTDAAMNFSGSMLITMLDPGGQAWPLLLPQKQPPALLVQVGHEGFYQELDQIGYQYTDSFRTLTSARRKLGYAQSSLQLPLPGLLHRSEKDFLLHPGPLDALFQAILLAYSSPGDGRLWSLHVPIAVDRMLIDVDKVRASNSTSAYSIKATITQDPSFSGQPQKGIGGDVGIFTSDGSVGLVRAEGVRLAPLAMAAADDDVDMFLEPVEGGISTDCAASMFLPDNNTIARATEEETRLGWLLERIAHFYLGRLAEEITPEQEAKAQWHHQKLIKYARRVSREVAAGRQPYVKVEHAQDTYEIITDLMDRHAHVIDVQLMRAVGENLGAAVRGETVILQHMMHDGMLNRSYEETLGVKPFSEFLSRVIEQITFVHPEASILEIGAGTGGATKRILKRIPDRFGHYTFTDISSGFFEKAKSVFSSFVGSGRMSFRALDIERDPVREQGFQEHSYDVVLASFVLHATADLENTLRNCRRLLRPGGYLVLLEMTSNDTLRLGLTMGGLEGWWLGADTGRPWSPCVGFDEWHRLLELTGFTGVEDQTPQLDLLAWPYGILVSRAVNSDVRMLLEPCKEVLLTRDSLARMPNLLIVAGSSAKNVALAGELRGMLRPFSASQMVVNGGFGGFVREQTQRRQSCLHEGAQEKDLTVLYLADLDQQPLLQDISQDAFQGLKELLRLSPKHLLWLTHGARDGQRPYAVASIGLGRALIMEYRQVAMQFIDFATASPDAGEVSDHLLRLVVQSAFKKQGTNLLHSQESEIAVDEHGRVLVSRIQPHRHFNHAYNSARRVVSEPADPSGDYEVYDEWDEDGAELVSRIPLPRPQGLTHSSSVGYAAARGIKPLYSVPLALRPGGRTWNVSAGFPVPPISAETSAQRSVQIILSDRVGSVITALSKPMSVSAEANLPVLLGDMAALILASLITSEVEHDCQPIKHGYEPRSQGVFLVLEPHVALARLLFTKAAASASWTITCVTTSPEKAALAPEDFAFFDANASRPAIRQALRLSGFAKVLGIVICCDPAARNSDAQPLARALRGSLPELARVRTTLVADLVRDAHVSRPVPEIKSGPASQSRLISIFHDAVINAQKITPSRSHESVHFVSPQEYVQRSAKSTPNGLSVIDWSAAWRSPLTTTARPLDGVEPLLRGDRTYLLLGLGGKGGLGSSLAEYMVGQGARHIVLTSRNPGVQSELVASYAGRGVRIEGVANDITDKTALEKLVKDLQESPDWPPIAGVANGAMVLADVSLDNMTHDQMVRVLRPKVVGSTLLDQIFESAPLDFFMLVSSLSCVLGNRGQANYDAANMFLVGLAKQRRARGLAASVVDIGAVMGTGYMAREVKEQTLRQMVGAGFSKMSERDFCMAFAHGILAGRPGLAYGGSSSSSSEVITGLNVPPPTAEFQPDWVTNPRFSHMIAKSRAIASRKAQDPVSETKAEKTRDLLKRSRTPGELSRVVSAAMFKKMVYMLQVGQEVAGDVDAFSRRSTSSLGVDSLVAVELRTWVFREFGVDIPVFKILADTNLADMVGFILAALPAKLTPSLEKDSNRGSVPGSALEEPKQQQQQQQQQPTKGSDSPSLVAEITTTTATTTSTTTTSTTTTSTTTTTNTTEQDRIGQSSSRTGSSSSEQSPASAPFEKTVAMSYGQSRFWLMNNLGPTPTVCNVVNDMEIKAELDTAALARAVQSLGMRHEALRTAFVSTGRDSDLPHQVVLMQSPLQLETREVQSLDEVDRLYHELHHAQFNLETGELVKMVLASLPSGQVHHLLIGYHHINMDSFSMAILMSELLQLYAGTVLEPRTLQQSDLALYEQDQLRSGKWARELAFWRRLSAENPTLHEPLPILHLSPSSTTRARPDRIAYRAQVRSRRISAATAQRLRSLCRHVGVTPFHVYTTVLQVLITRLAQVQRVTVGMADGNRGSLHLPGADGAVGNFLNMVPLFLGSPPRDHTIYMLLCQTRDVVLEAISNASVPIELITEQTGAPKNPSCSPLFQVFIDYKRVTETLPLPEGKGTVQGSRYLLSKTPYDIMLDVIDTPAGDALLQLHAQDGLYTSEESARLLDLYSTLLDSFSQANSKTAVGDARMVTADQAEAALRLGRGQILHLKHQSILPSLDLAAQSLQDTVALGDMSKSSLSWADMTRKSIALCRELRRLGVSPGARVGMFQEPTVDWVVTMLGVWRAGASYVPLDLAQGLPRLARIAKASKLAALVVHSETAALVARLGRDPNDGVVDISTLHHFPLLGAAALPDVSGLDIESSDEAMLLYTSGTTGEPKGISIPHRIVVNGIEGMIQRWPELKSKPLTVLQHCSLGFDVSWFTVLLGLACKGQAVIASRDVRGDPRALARIIVQNGINCTVATPSETMAWLQGDHLGELASSDWGWHVAVGEPIPAAFLRQVHQHGKPSLRVINAYGPSETWMPLSHEIPLGQARTMEDVERLWPVPIGSTMPNYAVRVEDVNGHVLPPGMPGQVVIGGCGVALGYVSSEPTVTDPRFLPDSHPAEVHLARGWDKVHPSGDYGYMTEEGLFFSLGRISGDTQIKLRGMRLDLRHVEAAMMDMEMAQGFVVDVVVGVRSTDGQPLAAGSLADDSTSKVLVAHAVTDASTATTDTDERLRSIAENLPLPDYMRPAVVVPVDSIPLTPNGKQDRAAIALWPVQLGSMKVHESNAAEWESSSPQAAHVSNGDKQPLELMSRIWREALGLSPTGSEQPGPMEPDDDFFQMGGNSILLTRVQRSIRLEHGVDLPLRELFHNTTLAQMSQLLLDQDGNGLSGDRIDWEAETQPLPELDLALHVTKVSPADSVPGIGTQQGGVVVALTGAAGFLGRHLVQNLIQHPAVAAIHCIAVRSRPERLAAHQEAARAAGKNLIIHPGDLSQPHLGIADPAMARAVFSTADVIIHNAADTSFLKSYTTLRAANLDALKTLTRLSLIHRTIAPPQHSPRRRPAHMHLVSTAGVATFAGRDLREEPLGRHPPPHVDEGYLLTKWAGELFLERVAAASEGLLAATVHRTAALVGPGAPELDIVSSVVRYSLAVGAVPTLEGYGGRIQFVPVEEVARAMVDASLGAEAAAGGIRYRNHCSADAHLTVDLSDLGTYCKRSLGQTGSLPVLGDDEWIEKAEAAGFPPLLGTYLRADTLGGKRKTFRLLLRAQEGTGKTRI",
                 "length": 4256,
                 "architectures_nb": 1,
                 "domains": [
@@ -5147,7 +3172,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 417,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -5160,7 +3185,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -5173,7 +3198,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -5186,7 +3211,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 279,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -5199,7 +3224,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -5212,13 +3237,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 5,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_09589T0",
+                "sequence": "MIEPIAVIGLANRFPGGADTPARLWTILKDAASAEAADLSREPPPGRMNLRKFYHPDGDRHGRTPVGKAYFLSEDLDPALFDASFFGISPLEAEAMDPQQRMLLETVYEASESAGMPLDKLKAANCAVYVGAMTADYAELPTRDVEDVSTYMASGTSRAVLANRISHFFDLRGPSVCLDTACSSSLVALHLACQDLRTGCADMAVVAGSCLILSPDMFISESKLHMLSPTGHCRMWDSSADGYARGEGAAALFLKPLSRALADGDPVHGVIRASGVNSDGRTPGITMPSYRAQARLIKDVYKSAGLNPLKPEDRCQYFEAHGTGTQAGDPVEAHGVFDAFFSTESDGGEPDDFFSTGSHEVSDGRLEDDDGKQLLVGSIKTVLGHLEGCAGLAGIIKVLLAMKHGVVPPNKHFVKLNPKIVQFSHRLRVPTEALAWPDPGGPGGTRRASVNSFGFGGTNAHVIVEGFHGGVAAVAGLQEKRDCPSPLLSTQLLLSARSETSLRRYAQRLASYLEQNQDLNMGDLAWILRTRRNQFPVRLAISGASNDELQKALQTAAVDKSVECIHAPPQPLVSPSEGLGLLGVFTGQGAQWPAMGRELILQEPVFRRSIEACEAALSNLPDAPDWSLKAELLKTDQEDSRMSEAVLAQPATTAVEIGLVDVLASKGIRFAAVVGHSSGEMAALYAAGFLSLQDAVRIAYYRGLHASRLANDNGAMLAVGLSWDAAARFCDGDRFRGRLWRAAKNSPSSVTLSGDAGAVAEAEAVLKAQNTTARRLKTDKAYHSPHMQACADAYLDSLRACGIKPRVPARRDCVWISSVDGHANRYWASRNGDDGTAELLTSLAGPYWNENLVKPVLFEDAIVAALTNGGPFDACIEVGPHPALKGPVGQSIQPHLPRRKALPYCGALNRGENGLVSISKALGLLWCRFGSTAVDFTKGPRGEDSKHQVLPELPPYAWDHDENMFWRESRISRNHRLREAPETIRPNPSSFRETLIGQRCPDDSDWEPRWRNFFSLKDMPWLRGHSFQGAALFPGMGYIVMIDEVSRHLAAFCGAGGHRLVSMEAYGLTLERTLYVPDGGSPVEVVTSAKVSQRTQAKGQQSSIVEAEITFYICTNPNTGDLVRTAFCSVHLTLGDETTAALGVATVIPARSIPEKLTSQVDIEGFYSCLRGLSLEYGGPFRRLDSLKRRHRAATGVASWDRAEILDGWGDQLHPALLDTGIQPLLGAMADPRTEKLWTAYMPQRIDRILVDPNRSALISDQSLSRVELVADANITMEDHTKLEGDVTMYILGRRPGDLRPLVQIEGLRLAALNRAAPSNDRLLFSATVWQPDIMVGENEFPINYNPPQDSLIEAAERVSLFVCQTIVSEAEAVGVSNLKPHEQLFVEQSRNLMVSARNGQLYPCEAWWLAQDTRETIEMILEQHKHQIDFRVLKAVNDEIGPVFRNEKSMLEVLFANDMLSEFYREGLGLRNTQRQVSEYIKAISHRFPNADILELGAGTGATMLATLDAIGPDVQGSYTFTDVSMGFFPTAKQRVQDAGHDLDRMAFRLLDITLPFEDQGFSDDIKYDVIIAANVIHVAPDISAALVRIRSLLKPGGFLVAVEPTSHLARIQVIMGGLDGWWQAQDRECRMGRGPLLSEEAWDIKLREAGFSGLDVFKGDQPDGRLRTCTSFVTQAVNGNIMALRDPLGHGHGLVDEVQLVIVGGGATLSHHVENHLQPLGIRRKPVFIADVRNTSPQTLPQGATVLLLSELDRPHFKLEQDGNAPLTTVDDSVLDGLKCLFSSAAAVLAVTKNAQSNNPFSRMINGLARGLRTEHRSLRIQVVDIDECQESQPSASPGCLGARMLVELLLRLVLTPAMVKDDDICWTDETELRVRGDKLFIPRIRHDRERNDRINSGRRSITKIVSMAESTVEVRPSLSRKARGTAAEQLPSSACSGFELFSRPRIEWASSDNIAIDVCLSTLVPVASVDPLHTPLYLALGVAQSRSVLALLPLNASVVWVPAHHTLPIDEGDGKMAKELAKALAGLDQSLSSYAHAALALVGISLLAATWLRLAPRGHVVWMHGEFPDVVVQIFERTATKKGVRIFRTSTSSLISPPGSRVKLLHPHTPARVIRDALPGRVAAIITAGPPDEGPDKLPPSYQSAVQVEKLICGSIFSPPGVPEWEYAQGASTEHHFDVLDLKSAVESASGIAGEAMAIVTKTYTLGNLEELALDQEFSIPTLDWQKDKLKRPQPQENGQVACRVQPLVGSHLFRPDRSYLLVGLTGEVGLSLATWMIRQGGARHLVLASRHPSVSHDFVRDMADRYDAKVVVRAMDVGDFASVQQTIHDISNDAALPPLAGVCNGAMVLDDGLFRSLGVNQVVAALKPKADGSLNLDRALAQLERESGPLDFFIMTGSTGSVIGTPGQSNYHMANLFMTCLAVDRRRRGLAGSVLDIGLISELGYVARQEASVHRNMCSMNVLAMSEDELHVIFAEAIVAGRASQETIGDVEVITGLRESRNEADRPFWAAEPRFSFFVKGKPSAAILGHGVSQVTGDAESMGSSPLDDLRATLATISATMDEATLIVRIKAALAQKLENLLQLQPGSINMDGSLISLGIDSLLAMEVGSWLRNTVGAEVSVLQILGGATGESICSSSAASLLSKVRASAEKVTTVDLSPAPDTSQKVGAAVIPKLQTCLQSTDMDVFSSPNASTTKATDANESSPAATTPLTTLSQTSDSKTDDLALHPNKNGEGTNSSQPSAVERTVRMSFGQERLWFMHQFLQDPTTYNETAMYELNGYLDHKRLQKAFDKITRRHEILRTSFYTDPDTDFPMQTVRAVSACTFRFVDANGGFDEHANVIDSEYKAIRERHWDLENGVCTGVTLIRLTHDRHMFIIGSHHIVMDGMTWIILLRDLSREYELDGGPASIPSPPPLQYADFAVRQRHLVEEGRFADDVRFWAQEVGHRGSMAMPLLPMARVSTRQPTDSYKNATSERMLTSVLVSSVRRASSSLQITPFHFHLGVLAILVCRLSRMDEVCIGICDSGRGMRNEGEPDFSGTAGFFINFAPIVLSISPDGDQSQNTFAALSKRVSSKAFAALSHAGVPFDALLDQLKVPRTSRHSPLFQVVINYRLGALSHGDIAGCQVKYVRSHGSRNPYDLCVNISESPNGDCLIEVVMRESLYSADAAESVLGSYCRLLEMASQSQHMTIDNLEISDSLSAPRPSIPATLQDATEHPVWASTISRQIDNAADEYRDAPAISDGDQTLTYCELMRKVDNICELLLKTKTASEDDNFVCVLLFEPSADYIAALLAVLRVAGVAVPIDPRNHKERMAVMVGDCKPTVILHHSQTAEVASWLSSKSSDSKLELVDTSLATSAPRARIVNRSTPDAPAMIIYTSGTTGTPKGAILTQGNYVAISGSIARALALRHGSESVLQQSSPGFDMSQVQIFPCLATGSRLVIASRAQRADPAALALLMEREKVTVMTGTQTEVMQILQARDDPRDAGCDDGEEQIIKRCRHLQTVGVGGEPFSAQLAAQFVLLENATGRRLDVFNMYGPTETCMISNIGRIEYWGNHRDEESRSWPVGPPFANARVYILDQAGRTVPSGSSGEIYIAGEGVGLGYLGRADLTRASFVADTFGPGNTKMYRTGDSGFLDPDGSLVILGRIQDDSQVKIRGIRIELDEVSSVIVRSSGGRVSQAITTVRGTGENKMMVSFAVLNEGSKEDRKDSDAAFLAALASSLPLPSYMCPAAILPLQKFPTTASGKLDRASLDRIQLPPTAPTKPTSNTGDSKLLEMENELLCIWMDLLPDLPNQGVLSPGYTPDTDFFRLGGNSTTLVALRNAIRRRWGINVPLLKLFEATTLRSMTALITKSRSC",
                 "length": 3867,
                 "architectures_nb": 1,
                 "domains": [
@@ -5232,7 +3258,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -5245,7 +3271,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -5258,7 +3284,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 67,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -5271,7 +3297,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 282,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -5284,7 +3310,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -5297,13 +3323,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 1,
                         "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_12447T0",
+                "sequence": "MRDEMWNTATEPIAIIGSGCKFPGGSTTPSKLWELLKDPKDIVSEIRPDRFDVDKYFHPDHKHHGTSNVRHSYFLEENFKHFDAKFFGIRPQEAMAMDPQQRFLLETVYESLEAAGITISDLKGSQAGVFVGNMGVDYSELLSQDIDAFPTYFAPGTARSILSNRISYFFDLHGPSVTVDTACSSSLVAVHQAVQSLRLGETPVAIVCGANLLLGPAQYIAESKLQMLSPNGRSRMWDASADGYARGEGFASIVLKPLSVALANGDHIECIIRETGCNQDGRTKGITMPSPLAQCKLIQETYKRAGLDLSKSSDRPQYFEAHGTGTPAGDPVEAEAISTAFFGPESGFRRTSHDPKLYVGSVKTVIGHTEGTAGLAGLIKASLAMKAKSIPPNLHLERVNPAVQPFYGNLEIPTRLMDWPEPAPGQPLRASVNSFGFGGANAHVILESYTPAAEVAMVTPTAAAGPVFSPFVFSASSDKALASMLSAYSDYLSLNPTVDLRSVAYTLSQHRSVFDKRAAISAPDLDTLKTKLKARSEEASPSGKTAAVQSLERRPRYLGVFTGQGAQWARMGVDVINASPAARAIFEDLEQSLKTLPEEDRPSWSMLEELLAPPETSRVYQANISQTVCTAVQVMMVQLLRAAGIEFSCVVGHSSGEMAAAYTAGYLSARDAVRAAYFRGVHSQLAKGSNGQPGGMIAVGTNFEDAEELCELDDFKGRLCVAASNSAELVTLSGDLDAVQEVKKILDAEEKFNKQLQVDKGYHSHHMLPCSEPYVASLQKCGIQAQVPGDATACRWISSVYVDDMTNLDCRVQDRYWIENLAKPVMFSQALSHALGGDDKFDSVIEVGPHPALKGPASQTIQACLGERLPYFGCLSRGTDSNEAFAEFLGGVWSTFGSSAVDLAAYERFATGGCDQRLVKGLPSYTWDHDVEHYFQSRLSKVVLHRSTPPNELLGTRLPDDTAGEVRWRNSLHPGELPWLLQHSAQGQTVFPGTGYIATTLEAVKQLFDSSGVQTVEIRDMVIGNALVIEANTGVETLFSLTFINTQTDRITAHFSFCSQQGGSTKLVENASGDLVVLLGEPSEDALPRSFHPGTQMKDIDEERFYEAIDKLGYGYEGPFRALSQLQRRMGAATGLVAIPEKTKHFDQMVLHPAALDAMVQTVLLAYCYPGDTRLQGISLPTGIDCIRFNYGMLSEAARPGCQLPFLSCTAFEGDDVLGGVGGDVGGDVDVFSEDKRFALIQLQGLHTKPLSPPSAATDLQIFSEMEWKTASPEGADMEVRGEKRAYVADLYSSMERVAYFYMRHVDREIGKDRSGLAPHQVRFLEWVDHMCGRVEAGTLPHISRKWDHDTRQDILKIIAKYPDSIDLELMHAVGENLCSVFRGEMNALEPMVKKNMLNRFYSDALGMSPYTEDLARMVGHITHRYPHMNILEVGAGTGGATKVMLRRLQDAFASYTYTDISSGFFADARQVFKAHESKMLFKTLDIEKDIVDQGYEENSFDLVIANLVVHATADLDATMGRLRRLVKPGGHLVLLEITTNDPLRFGFIFGPLPGWWLGGEDGRVHSPCVDVEWWDRVMKRNGFSGADIVTPHHTLGPLSVIMTQAVDHRVQLLRQPTSADFGDFTIDPERLTIVGGVKPLAEGLEQLLKPRYQSVAWIPTLEEVSSHSLPVMGSVLSLVELDEPLFKDMTAQTLEGFKFVFQQSRSVYWITCGASGANPYSNMAAGVARTVALEMRHLRLGFLDFEDAKDATVQRLADRFLEFEILGTLEQQGKLDHLTWYQEPELRFDGKNLLVPRMKLSKDRNGRYNSRRRQLTKNVNPREVPVSLVPTTSGKDFVLKESLSSSSTKHGAQDTVSLRVHYASQRSLRLESSDYLFLVLGTNLSSGEAMFALADSNRSIVHVDRQWTTSYLGNLDHGRHALADLYTQIMASTVVAGLSAGDSLVVLDAETPLSQALSARCAAKGVRLTLLSTTTATSHSEADGTNKTNVRIHPLESRRSIESKLPSNATCFLDLSTNNGSEAAAVINSYIPAQCRVETRDTLTATACQVTRSTSTGGLGPAVGDVLPACWANVEAAGRDLSFFSAAVVTPTELTAAAGNGKTSAPRVGDDALLLITDWTAEAEVGVLVQPADSMVRFRQDKTYWLVGLTGGLALSLCRWMVNRGARYVVMTSRNPKIDKEWLQGVESCGATVKIFSNDVTDRAAVNSAYRTISATLPPIAGVVQGAMVLRDTMFAETTMETIESILGPKVRGSIYLDEIFYSTPLDFFVFLSSVTATSGNPGQSIYAGANMFMNSLAAQRRKRGVAGSSVEIGCIMGNGSVTTILSYEHQKYLFSVGNTWLAEQDFLTMFGEAVLASPPDAPDSVTSVTGLRLQFNDDKPDITWFSNPIFQHLVLQSGNAMQTSLSVARQGTPVKSLLQEAKSSEEVLDILKDAFTAKLVSSLQADPDSNLLEVDLETLGMDSLVAVDLRSWFLAELSVDVPVLKILNGSTARLLLEFVQGLIPASMTPKLDGSDGADAAAQEAPPVAPPVTKPKPDVSVKVPPPHQPVASLKPSGPASPTSPSSATASPGRSRSVASPVTADTPVSPTTSASMASLNDSRKLIRTVPVSFGQSRFWFLGSYNPDPLAFNITSLMRISGPLRTNDFGKAVDKVLNHHEALRTSFVSENDAPVQKIWSSPAFALEQRKIADDESEVVKAYTEVQNTRYNLEAGQTMRIMLLTKSPTKHVLVLGYHHINMDGVSFEVLFSDIEKAYNRTPLDRSVMQFPDFTIREAGEYKSGAWRSELQYWQSKFTSLPEPTPLLSVSKRRTRPVNLSYTTHSVSRRINAEQSQAIHTVGRKFKATPFHFYLSVFKTLIARFSGADDFCIGIADANRKEDKVMGAVGLYLNLLPLRVRSALGQTFGETLADMKKVSQEAFANSKVPFDVLLNELSVPRSSSQTPLFQTFVNYRRGVSEERSFCGCTGAGELISGGQIGYDISLDIVENPGGDALVTLSVQKDLYNVDMANLLLDSYFRLVDSFAKNPATSLNRPAIYDPVAVDKALTLGCGPTLEDSSWPETLIHRIENMSVKYATKFALRNGQNGGLTYSQMIARINDIAAKLIDAKVGTGIVGVMQASTMDFICSILAVWKAGAIYTPLDPRLNSTDRLKAVVDECQPACILVDATTKPLFDSLATNAVQIDVSMVQSSKTLEASPKVAIHAKAPSAAAVFYTSGSTGVPKGITLSHASLTYNIMAATRQFGFKEGVDIMLQQSSFSFDMALAQMLTSLSNGGTLVVVPSHLRGDALGLSQLIVAENVSIVQASPTEYKSLIGVNAQHLKTSKWRVALSGGENMTQSLLEVFRSLGKPDLVLFNGYGPTEATINANTRIVPYHEPNSNPDLPLLTWPNYSISIVDLELNPVPVGVFGEVCIGGAGVGLGYFKNDELTAKAFVADKTAPAEFVAKGWKTKFRTGDLGRLSPDGGLIIEGRIDGDTQVKLRGMRIDLKNIESAILQAGAGKIIDAAVSVRRGGADESEPQYLVGHVVLDADQTPEDSQQDFLAQLIPRLRLPRHMKPSLLVPIRALPQTASHKLDRRALQQLPISDAGQIAKQSQQGAELGSDQARMWKLWKQVIPRDVVSQYSITPQSDFFHVGGTSLLLVNLQSLIAREHGRAPPLHAMFESSTVAAMTDLVLSDDASGSTALIDWEQETSIPTLPPHIIPGGAGNKVSVPPRVVLLTGATGFLGRQLMAFLLRQPSVKRIHCLAVRGGAPPSSAAPFSDPRVSIHAGDLNAPHLGLGEAVAELLFAQADVIIHNGADVSFLKTYATLRATNVGSTRELARLAAPRRIPFHFVSSASITQLTGLDEFGEASMAAWAPPADPRGMSGGYAAAKWASEVLLEKAARAWGLPVVIHRPSSITGEGTNSLDLMGNMFKYIEQLEAVPESDSWKGNFDFVSVENVAADIVQAVVAANVVAAGGVKFIYEAGDIVYPLSMVKDMSEGGAKLPVKTMPLAKWVEKAAEKGLDSMLAEYLIKAASTGTSLAFPRLLKDGN",
                 "length": 4035,
                 "architectures_nb": 1,
                 "domains": [
@@ -5317,7 +3344,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -5330,7 +3357,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -5343,7 +3370,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -5356,7 +3383,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 2,
                         "hmm_end": 283,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -5369,7 +3396,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -5382,13 +3409,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 4,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_14897T0",
+                "sequence": "MEPVAIIGYSLRFPGGADTPSKFWELLTSGRDISREPDPRRLNLSKFHHAKGEHHGSSNVLKSYFLDQDPCLFDGSFFGISPLEAEAMDPQQRLLLETVYEAAESAGATLEGLRGSRTSVHVGVMTGDYADVQARDAEDLSSYTASGTSRAMLANRVSYALDLRGPSVCIDTACSSSLVALHQAVRDLAAEGGAAGSDMAIVAGCGLLLDPLMYIAESKLRMLSPTGTSKMWDAAADGYARGEGVAAVLLKPLSRALRDGDPIRGVVRATGVNSDGRTPGITMPSAEAQASLIWDTYRAAGLDPFNVEERCQYFEAHGTGTPAGDPVEARGIFKSFFDPESAKKSRTSEETPLLVGSVKTIIGHLEGCAGLAGVIKVLVAMEHDTIPPNLHLKRLNPEIEPLSRVLKIPTESRPWPTPAAGQPKRASVNSFGFGGTNAHAIIESFDGGLEKQDLGRGRKDTQHDVAGRVHTWEGLAAAAAERPAMPIVLSAHSEQALQRQARNLLEFLRDNPSVEQRDLAWTLFARRSELGVRMSIPAAKSREDLEQSLQETLSKTTAAEKPTKLGEPPKALASPDEGVGILGVFTGQGAQWAGMGRELMLHNGTFRRAISRCQDALATLPVVADRPAWSLAEELSRGEKQSRIAEAEFAQPCTTAVEIALVDVLAAHGVRFSAVVGHSSGEMAACYAAGILTLRDAVRIAYYRGRHARLARSSGAMLAVGLGWDAAEEQITAVQRWRGRLWLAARNSPSSVTISGDADAVEEAHAELQQRGVFSRLLRTGKAYHSPHMEPPAGPYLQSMRACGIKPTKPTGRSPCVWISSVTGTADMFWDGDFGGLASGQYWVDNMVQPVLFADAVTAALTNGGPFDAAIEVGPHPALKGPVGQTVQAHLKRTIPYCGAMNRGADCVTSLSEALGFLWRGFGGGALRHPQDPGEPRPRMVKDLPPYAWDHTTSLWRESRVSRNHRLRPQDRAFLLGRRCPDDTDAEPRWRNMLSLAELPWLRGHAFEGEALYPAAAYLVMLLEVAQFLAAGREVAFVQLSDVSFNRTLAIPEGGRAVEIITSAKVEERKGLRDGIRASVGFSVCRDPVSGAVDTNMCTGSVEVFLAGPDEGPADFFMPRAASPNTKTRVDVDDLYSMFDKAGIEYRGVFRGLVSLSRSTGLATAMASWKSEDIDCGDGLVHPGLIDTCIHPVVAAFATPEMGRVKSAYLPQKLKRLIFNPKIKLLPEQDTQVVVDAYVSNAKPSTLVGDFSIYLADEKQQPMPLVQVEGLSMTTLGRPDPIDDRVLFSRTIWKPDLLSSSDSDDLTADYRPLQNDMIIDAERVSLFTCRKIVETAEKIGIQNLKKHEQMLVAYAQETVNKARRGEQWSSATAILDDATEQDTPCPWLDDDEATINSILEKHRSQVDFALLGAVKDDISAVFSNQAQMLEVLFADNMLGRYYSEGLGVRNAQRQVARYLEGISHRHPQADVIELGAGVGATTRAILDAVGADGYGSYTFTDVSAGFFSEARARFAAEHRGGRMRFARLDVAADLQEQGFERGAYDVVVAANVLHIAPDVAAALRRIRSLLRPGGFLVAVEPTGGLAQVQLILGGLEGWWLAADGCRTVGPQLSVDSWDAKLWDAGFSGLEVLRHHEPHPSLRTCSSFVSQALSDAVSCLRQPLAHAHLLPADSVFVLVGGATMATSRVVREVEAQLVARGAEVVKVRDVGGLAGAAIPDRCSVLYLAELDRPAVRADAEDVDGGVLKGLQTMFGKAGSVFFMTRGAGRRNPSSNMLVGLCRTLRSEVRSLRLQVLDLEDDSIRLEAALVLEHFLRFVMSAALGDEQLLFTDETELLLKSDGMLYIPRIRTYQELNDRVNTSRRNIWAQVGADDHVLELRDPSNGKMADMLGCELVATPKTGIQGTGTGTGTADCDQDLMIHVKYSTLIPIINTQGMARRPAYLCFGVVQGDAEGLERPVLALSSSNKSIVHKASWEVYFVPQGHHVTPITVAAVSLVLAVRAWVRSVPTKSTIWVHGDLDETTLATLEVEAGKVGVKIYWTSSAWGEKSKSTTTTTTTTTATTRTNAKPGRTPVLIHRNMPFRQLKATVPQGISAIITTSSSTDEVSPAQHALGLKHVLCGHLFSPPPSFTSQDRTGSEMAKELEQVFGLSVSLASTEPLVHAAVIPVGQASTTSSNDSSAALSNGLAVLDWTASATVRAKIQPIDASQLFKADKTYFLVGLTRDLGRSICEWMVQQRARHIALASRSLQLPQDWLRSMESAGVAVRVFSMDVTDYQAVRTTVSTMHDSMPPVAGVFNGSMLLSNKLFAALDAAEAMTAIRPKVDGSLHLERALAAHEAAPGRRLDFFLLFSSSGSVIGVPGQSGYHMANLFMSALAADRRARGLAASVIDIGILVEVGYVTRQHSSMVRNLRSLNMNPNWEDEIPAMLAEAIVAGRPGSARPQELIAGLVVSDDDANRPFWAGEPRFAFFVRDQRRRFAADDDDADAAGAGGGSSESPMERLRAVLAAVAAGGSGGGDEVAELTAAIRDALAQKMEKMLQVQPGSLDMASPIVGLGVDSLLAMEVRQWVQKTVGADVSVLKILGGATGDMLAATAADAVMVGLKDAPPAKTVAPKTVAPEAAAAKAPAAKAADNLPVPRPPRSASRMSDSTRSGSGSGTKSPILQATWDDEHSSGTTPSSPESSIACKAQVYPPASLGGASVVRRAPLSFNQERLWFLQHFLSDPCTYNETAMYRLRGPVDAKRLEAAFYQVLARHEIFRTRYQNDAVTGAAVQQVLAAHHHVDHSSRAFRSVDATHEKGEQRQTTIIETEFDAMVNRKWALSTGASIGMTLIVLPSSSSSSPHRPEHVLILGAHHIAVDGTTWTIFFRDLDRAYTAGRLSPSAGPQYADFAMQQRSKTPANHGADMEFWSAELSGLPSEPIPLFPQAKTTRRAPLDRYGSVTARCRLDAAAASEVKRTSARLHMTAFGLHMAVLSVLVSHLSGTSDLCIGFCDGGRPDAFAETAGFFVNMLPVRLDTAARHAGPASFADLARATFAKLMDVMAHSSLSLEALLDALAVPRSTTHSPLFQVVLNYRLDALAHSAVGDGRLEFVKARNSRNPYDVSLSVTDSPDGTCLLDVSMQESLYGPEAAASVLAMYRALMASVCRDGQVKVGDLISSLGAASLPTTMLTMTGAKSGDTVVSEMSDESLTIWHKIKQASLQVGDSTAIHGEGHSPTLSYNDLTGMSSSMATSLQRLCASRGVETRGAFCALLLEPSADYVAALLAVFKLRAVAFPMDTTNHKQRLAVMAKDCRPSILLYHNRTKDLAAWLLKTCNQQDCIAVDVAELISSATNTYDSISLEPTKPTKPSTPTTTTTTTKATTPTPTELPGIILYTSGSTGTPKGVLVTQRSVISIATAINTVADHQTPPVVLQQSSIGFDVSLMQIFSALFTGGSLVVCPHEHRRDPIETARLMRRFAVTTVFATPTEWTLLLGPDGQGLARCSSLRKAMAAGEMVTGGLAARFRRLEKARGGDSRLELFNVYGPTETCMSSNVGRIEYWLDENVQEPARVFAVGPPLDGVRIRVLGLDGNEVPYGAEGEVYIGGVGVGPGYLNRPDLTDAAFLPEPTNDPPAAAGSGRSKKMYRTRDKGYWLPDGSLMVCGRIDGDTQVKMHGIRIELEDVASAILAAADGLVSHAVATVRSDEHDKTIVAFVVPSPRLSPADAPKFLAELPARLPLAEYMRPAAILPLETLPLNASGKLDMAALAEVPLPEQQHHEALQPAPDLAAATSVAGTHTKIHETPPSTDLSYLEQELLSTWTAVLPSLGKQLLKNTSAHRGLDFFRVGGSSITLVVLRDAIRRRFRAHVPLLPLFENSTLGSMAAVVGRQVEKQCGAHWEFWDRETRFDPAMLPLPPPPALSSLGLERRTTWHPYGTGILLTGATTPLGSRLLQRFLSRPDDAVRRVYCVALSPDQQTQLRRSPWLASAESAGRAELLAGDLYDATLGLSPSDVQRLRADADAIVHAGSEGSCLNSYASITEPNLDSTRFLATTLAISPAGAVKPLHLVSSARVLLFSGRDEHGASSVSHHLPPLPDDDSSSSSSSREGFTATKWAAERLLENFAQAAAARGGGVGPVAVHRTGYLITDDAGEMDAVNMIRKYSAVLGAVPSMERFQGWLDMSDMEWVADRLARHVLDVSEAAQDDEKSPVCYVHHTQETPVPVLEFQRYMEDTFGRAFETVSMVEWTRRAVKVGLSPFMASFLCAVCEREGKARYPRLLVGAEEEDM",
                 "length": 4270,
                 "architectures_nb": 1,
                 "domains": [
@@ -5402,7 +3430,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -5415,7 +3443,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -5428,7 +3456,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -5441,7 +3469,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -5454,7 +3482,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -5467,13 +3495,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_14943T0",
+                "sequence": "MAPKSTINEPIAVIGIGCRFPGASSLHKLQEALSAPSDLSQTIPDDRFHVDGFYHPNAQHHASTNVRKSYFLDVNVRKFDHNFFNITAVEAAAMDPQQRLLLETVYEALENASVSDKQLKGSDTGVYVGLMCGDYENILMRDIDCAPRYQATGVGRSIMANRISYTWDLHGPSMTIDTACSSSLVALHQAVQALRLGESRLAIVGGSNLLLGPEWRRRLRKRGRRGGGHLKRLSDAVADGDFIESVIRETGVAQDGRTNGITTPSAGAQANLIRRVYAKAGLDVNRQGPQYFEAHGTGTPAGDPIEAEAIHAVFGGARASDEPNAPPLYVGSVKTIIGHTEGTAGLAGLIKATLALQQRTVFPNKHFHKLNPKIEPFYKGLEIPTSPLPWPKTPDGQPRRASVNSFGFGGTNAHVILESFDNVLRMHQTADQKPQESFIPFVLSAKCESSLAKNIQNHVDWISQHKSLHVHDLALAACRKSLFGYKIAVPATNMEDLCSGLLERLENRNWAKPNGNTSPKRLLGIFTGQGAQYAGMMSGLLQASPWALGRALELEKTLMDLLPAHDRPQNSLVGQLLSSASGKDSSSAAAAAAANVMRAELSQPLCTMIQILLVDILNKAGVTLDAVVGHSSGEIAAAYAAGRLSAATALAVAYYRGINTKLAGGLDGKKGAMSAAPLSYADACLLCSQPRFQGRLSVAASNSPGSTTLSGDQDAVAEAEEELKSQSIKAKRLFVDKAYHSHHMRSCAGAYAANLQRLSGFNKPGKGSTRWFSSVLVRDTTDALLDMSYWVDNMVQPVLFSQALEAACKTLGPLDAIVEIGPHPALRGPVTQTLSNLWPDSDISYVSLIQRGGHDAKSMQMGLAQMLEAGIESMDLHSLHKLLSPVQSLPVRGMPTYSWHHDGEDLWHETRHSKSFRLRQRPVHPLLGSLLPDSSATDMRWRNTLLESELPWIAGHKIQGQMVFPAAGYLCAAVEAARELVGQDEDIKTIDLGDFEIIQALIIPADGFGVESLCTLTDVRRFGKAKLQAAFSLYSAFGDRLSLMAKGTVEVHLASPAAESNELSTMPLESHLEFDPLMRSISKERLYAAWEELGYGYTGPFRAIHGASRRLGAAKGQILPADCGGIAIHPATLDAAIQTVLLAYCHPDDGRLWSVHVPRRIKMFSLNVGTALAVAGGEQSFHFISALPDKGQMGLCGDADLLTHDGRPLAQIIGVDCVSLSPSNADNDARLFFTTQWAPASPDAATVCWDGRAAEADHQLALDLERLSFFYMRQLDKDIPLDHPQRTQGAWHTPEIKAVIKARHPDSLDRRLAEAVGENVSQVVRDGHTMLEHLLEDGLLDDYYHHGTTNKSHIQYLARVVGQLSHRYPGMNILEVGAGTGSATKSIFNQVGDKFASYTYTDISVGFFEKAREVFGKHVDKMVFTTLDLEKDILNQGYKAHSYNLVVASLVLHATSNLKDTLSNVRRLLRPGGFLVINEITDKDAARLGFVFGTLPQWWIGEAEGRTLSPCIGPMEWGSLLQRAGFSHIDSITPDFDLPAFPNSIICTQAVDHRALVLRNPLSNSTVLPRLLVVGGSTTATVGLVGRLVQGLSPHYHDIFHISSLSALDRDRHLGATVLSLADLDRPTFDKIDDETMSALIDVLENCSTILWITHNAKDAVPAAYMSLGFFRTVLWEMPDTRLRTIDFVDGSEPESSVIAASLLEFELAKRWSTESQEHSLLWSDERELVYRHGRFEIPRLVSNDAIDARYNASRRAIYHSQDSKQLRLSSSGGWLEEDTGSPYLAATVAKSKQSGRVKVRVDFSTGFRVPGVTCQGLWNAYIVAVGVAKGKRRVLAVTNDCGKTVWPSAGSVLDISDDAYRDGPVLLTQIAGVMQATYLLAQVPQGGRLLLHEPSDELAAAVDALAQERGVHLTKTSSTRQRKKFTFIDPSWPLRTVRARLGQNIDYFADATTCQNDHETCAKIITPCLPATTTVINTAPLLSPEAFQAPEKSGRDIVFPCSAAAAGPPSAQLLSAYRLARTLSVTTLEVVSLNDFGSQPMDVRRKIIQWKGTKAPLVRISPTCRLVTLRPDRTYWFAGLTSDLGLSLCEWMIDRGARYLVLSSRNPKVDSKWIDKMHRDTGAAVKVISADVADDGSLAKAYSDIKNSMPALAGVVHGAMVLDDKPVRSLDAKSMARVAGPKVHGSNNLHRLLGREKTSLDFFVLFSSISTVLGSYGQANYSASNSYMRSLALQRRQDGKPASVLNLGLVIGIGYASSNLSQSEKERFRSNGFKWISEVDLHHAFAEAVLASPAGSGVDHEITIGVDRFAAEAPSKPFWTENPRLSHLLTYGTTTRENLKSDTACSKLTPREMLATVSSMADARLIIKDSFLLKLQSMLRLSASQMEEESAILNSATDQLGFDSLIAVEVRSWFHKTFGVSMSTLEILSGVTINGIITNACLKVKADLAITTHAASHPASEQGEDSHSTTLMSDASTLNNTVVYRLSGKLNVQKLSKAVEAVAKRHESLRTGIEMDGQGIAKQVVFVQPQLHLEAFELPEGRLACTIRGLEEHKYDVENGKSVRIIVASTSSTEHHLLIGFHHINMDGISLQVLLSELDCAYRGDPLNGSPLQFVDFSRRQQDALEKGEWDCHLEFWRNRLADPPAQLPILPLPNAAKLRCPLVEYRTTEVEARLEPSTVRMVHERCRQLRVTPFCFYLGVFRVLLARLANINDFCIGIADANRLDGDMLDAVGMYLNLLPLRFRTSGGETFEDISQNTKDTIRESLEHSAVPFGVMLSELGVPRSADHSPIFQAFVDYRQGAKEKQSLGDCELEVYHYQGAKTAYDVSLDIIDSGELPTAVRLAVQDSLYSREDGKLLLGAFVHLVKLLAATATTEEEGHRVSIENLPIFPADVVQDAVQLGRGPSKDPTWPGTLLDRVAEVSSCRSHEVAIVDAEDEPGADWIVSLLAIWRVGCVYMPFDAATPMSRIAINCAHASPQLVLVDEAFVTTASTLEKPLLNVSSIPRANKPPGPRTTLSFPETTRRPTDPAAVLYTSGSTGTPKGIVLSHENLVHEIEFSSASYDFGVERVLCQSALGFDMSLTQIFSALAFGGSLHMLPRSQRGDALAITKRILDSGITLTGATPSEYMSWISFGGADLARSNWRRAVCGGEPVTTSLLRAFDSIGRPELRLFNAYGPTETTCSATRTELDYRGPWGDRPTTSGRAAPNCSVCIVDANLAPLPVGMPGEVLIGGAKVALGYLGSCELTATRFIPHASIHEDFAARGWTSVHRTGDVGRLLPDGALVLQGRVDGDTRVKLRGNRVDLVDVEEAMLQAGQGQLLQVFACLYCPDLASDDGALAHPESAVLAALVVVDPCHPSADREELFADLLKRVSLPRAQKPTVVKAVESLPTTVSGKVDRKAAAKLLPKLVGSPPAVLGGEQDKELSETESQLREIWLQTLPAGCYAQVRGSSDFFHSGGDSLLLVALQRKIKQAFGIHVPLVDMFDSSTLKEMSLLIEQKSADEAPIDWHLETEPSLNLKKTDLGKTELDLVTIPSDGPAVVVLTGATGLLGRALLQAFISDARISTIHCIAVRRTDALASFISSNKVQVHAGDLSLSRLGLSPAAARRIFSEAHVVVHNGADVSHLKSYRTIKRANVGSTAQLIQMSLDCGRLLPLHFVSTAGVSLYSGLEEFPEVSAADFPPPADNKSDGYTASKWVSERLLEKCHEIFGLPVWIHRPSNIHRVHDPQFDLFQNLLRFSAALQAIPVFPSLRGHLNLVEAVDVAQEILGDVFADQGDKVNYRHRIGARNLSMDGLADFIRSDPSSDVKVMDVDTWRGLAEAQGLPKTVSEWFGKVARGSPVSLRRGSCATTKGLGRYPAWTSGIHLAGLAQDHAGGHRTRSPSRPKRKCNQASAGSKAMQCPRRPAGQNQQGSKRSWKSASHRPASGREGALAATHRTISLTHVDAHSNLLDRDAMGGFFVVQQQH",
                 "length": 3973,
                 "architectures_nb": 1,
                 "domains": [
@@ -5487,7 +3516,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 213,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -5500,7 +3529,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 244,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -5513,7 +3542,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -5526,7 +3555,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 3,
                         "hmm_end": 66,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -5539,7 +3568,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 283,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -5552,7 +3581,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 26,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -5565,13 +3594,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 69,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_15097T0",
+                "sequence": "MEAQNEPIAIIGTGCRFPGSCDSPSKLWELLEKPRDLLKKIPNDRFSADGFYHPKNSHHGTSNVRHSYLLDEDLRTYDAQFFGVKAIEASSMDPQQRLLMETVYEALESAGLSIKQLQGSDTAVYVGVMSADFMDMLARDVEKFPTYFATGTARSILSNRLSYFYDWHGPSMTIDTACSSSLIALHQAVQVLRSKQSKVAVAAGSNIILGPEQYIAESKLQMLSPDGRSRMWDAEANGYARGEGVAAVVLKTLSQALADGDHIECIIRETGINQDGKTPGITMPSATAQAALIRSTYARAGLDLRKASDRPQFFEAHGTGTPAGDPIEAAAISKAFFGDDVKPHSRDGHDTLFVGSIKTVIGHTEGTAGLAAIIKASTALQAGVLPPNRLFHKLNPKIEPYYSNLKILTEAQPWPRLPEAGTRRVSVNSFGFGGANAHAIVESADGYIARRAAAPNPRSFAPCPLSAASETVLTAMTERLRSYLKSQIASGGTGINMRDLAWTLCSRRSTLGVRSVLPAAKSPQDLLDKLEASAQLPPPATSTKKAPETGPRVFGVFTGQGAQWPRMGAELIEDSPTVAGIVRRLDQSLQSLPVRDRPSWTLREHLLAPKESSQVYIASLSQPLCTALQIILVDLLKVAGITFSGVVGHSSGEIGAAYAAGYLTASDAIRVAYYRGLHLKLVTTKGAMLAAGTTFADAQELCSLPAFEGRACVAASNSPASVTLSGDADAIEEIQIILGEEKKFNRMLQVDRAYHSHHMNVLAAPYKRSLEECGIKPLRPAGGCRWVSSVFTCDVSDIPSDVSLGSSYWVANLVQPVRFTEALEMLYLGASMNGGFDLGIEVGPHPALQGPVKQTVQEFTTDSPLAYTGLMKRGENSTEAMSKGLGYIWQTFGEGVVDFAAYEAFCAGEPAGKSTFAVTKGLPTYPWDHSRTLWQESRLSKAFRTSENPPHELLGRQLLDGVPDRLRWRNIIKRSEIDWLEGHQVQGQIVFPAAGYISACVEACMLAFARDESPVQCIELLDFDIGHAMVIEEDDSLGVDATIELSDMTRSDKTIEARFGFHSTASNDSLAMNTHASCRVVVNLGISDCNVLPPKPHDHDKVFLLDVEAERFYNNLDGLGFNYSGPFRALEGLKRRLGYAEGFIQNASSAIDSKILPPLLVHPATLDLGIQAIMLAYSYPGDTMLRSIYLPTRFERILIDPALCADFAGQPAKVPFDAVAFTGAVKSVTGDINIYSPRGTSLKALQLEGLQTRPLSESEGISVFTDMSWNVATPDSEMVVATTSVPPLDAEFFFTLERVGYYYHRVLNAAFPRSERDHLEWNFKRLLEYNDSVLDGVDRGRNPFARAEWRNDSKETIAEILDKYPNSPDLRLLRAVGENIVAVVKQETTILEHMIEEDKLNIFYEFGEGFPQYASYMGAFAGQLAHRYPHMRVLEIGGGTGMATKAIIKEVGDQFSTYDFTDVSSGFFPKASATFSPYKSKMNFQVLDIEKDPLEQGFKQGSYDLIVASLVLHATRNLAETMTNVRKLLKPGGYLLLMEVTENEQMRFGLLFGGLPGAWLGAEEGRTLSPCVGMEEWEAVLKKTGFGVETCVPHHETLPVPFSVIVAQALDDKVQFLKQPLVQAAEDGTVIPARLTIVGGGPKSSALASEVTKLLGPRYGSIRYIESLDKVRGDDLGVGGSLLCLADLDGPVLQSIDEGKLRGFQDVFQHSKNVLWVTSGVREGDPYARMVIGFGRTIVLEMLHLRLQFLDLESNTTPSASAVAATMLRFDVTGAWDEEHGDMSSGLLHSTEPELFLDAKGRLFVPRFKHNHEMNNRYQSSKANVKEMVDADACTLELCRSSESETWELSKVDAPETLPLWVSREHLVDVHVMYSVNRSVAITKDCFLFPILGKESRTGRPVVGLAPSLTSKVVIPSSFILHGIFTSEDRAVDTLETFFSVLIAHAALGGDCEDLSGTRVIVVEPRNQLANSISGLATGGNASVLCLTSKLGTQWTHIGPKTPKLAIKQLVRPDADARTSCCILDMAEDGGLAETIASFLPSTQRRVIRKADLTAHSGFLPARDCSREIRSLVSSVFHHIMSRVDGPTELPVLAPTDATGSETTPAEFVVSWKSTAKTVAVSVEPIETRVKFQADKTYWLVGLTGNLGLSLCAWMVNQGARNIVVGSKNPKIDGAFLAKMKAKGVNFKVLPLDVCDRDSVRATYKTIASTMPAVAGVCQGAMVLHDTMFTELDVERVEKVTRPKVQGSLYLEEIFHDTALDFFVFFSSIASVVGNPGQSAYAAANMFMSGLATQRRKRGLNASAVAIGAIFGNGYVTRELTLAQQEYLKKVGNRWLSEQDFHTLFAEAVYAGQSHRGKNHEFATGLMTIQDGDEVGQRVTWFKNPMFQHSVMTGGNQGQAAETGKSHRRVQTKVLLQDAVSSEDVREIIYDAFALKLQEALQVEKGRPVGNLTADTLGIDSLVAVDIRSWFIKELQVEVPVLKILSGATVDDIIAQAQKLLPKELIPKFDEKATGLSKPRERSEPAAAPPASPVQKQEPIKAKPEKATAPAPAPAVAPPVQKVDKSAPPTKIETAPHTSKSAMSVLIPADDKISSPKSTTSTEYFGQTPTKSSGSSPWSSKSSWSEIERPDSPDSSDSSHSSDTPPLSRSAGGSLTQAAISKHLKENRAVASAGFEITKSGPISFAQSRFWFLQHFLEDPASALNITVDINLQGALDVPKLEKAVASVGRRHEALRTRFTAAANSEGVVQEVLAASCLGLEVYAVKGAADADAFYKALSAHRYRLDRGENMRIVLLRMSPKSFRLLIGYHHINMDGVSLEVVLQELQLGYSGRALKPESQILQYPDFSRQQHLDYDSGRLADDLAFWRSEFRGQAPPVLPLLPLAKIQSRKPLTTYSTTTTEFCLDEEEMHKIQAVCQMLKVSPFHFHLAIFYTLLARLVDVDDLCIGVSSANRQTPETMSSVGMYLNLLPLVFKVDRSHTFANAIKMIRAKALAAFSHAAVPFDLMIKDLGVAGTSSHSPVFQAMVNYRPGVSTARRFCDCDSEVATFKQGEVPYDLAFDIMENPGGSSLIMLTGQSVYYGKTEMEHIKGIYLELVKSITQNPATRLKAATIFNSSQVDASIQLGRGIYQKPQWPATLVHRIDDMAKRYPDNIAVKDGRGDRITYREMSQKIDCISHALSSDSSCRVKSTVGVLLDPSSDWICSILAILRLGATYVPLDIVTGWDRLSSVVRDSKPDLILVNNRLESQTKNLGDAMATARFVNIENLAPATNQRRSPIATEADHVAALMYTSGSTGVPKAIVIKHESMRNSIEAFTKVVGYREGHEVSLHQSSYSFDMSLSQIFLDLANGGTVHVVPRELRGDPEAIASIIAREGITFTSATPSEVISWIEHGSLSELGSSSWRKVVCGGEPVKESLINGLRKIDKPDLAFFDGYGPTEITFCCAMRAVDYRSDAPPDAEAGGFKPWPNVSVYILDADQKIVPAGVTGEIAIGGGGVVAGYGDHKLSAAAFKHDKWASSEFVQSGWTRLHLTGDVGKIDPIDGTLKLKGRIAGDTQIKLRGMRLDVREVELAIMKTAQGQINDVVVTAHHNKATGASSLIAFAIVADPKASHDFSRVLARLPLPQYMRPAAIFPIDNFPTNASGKVDRIAIRNLDLPQTQDFDRKSAANSDAHLTDTESRLAQLWTQVITKGVISQYQITNESNFFHVGGTSILLVQLRSAIEASFGTRPTLFQLFEAGTLAAMAALIAPLSSSSTTPPSNSPNKHLGTSRTTERDWEEETRISPDLVDVRGESDHFGNPTVVVLTGATGFLGRSILARLLQDSVVEKIHCLAVRSDPQDELFRSPKVVVHRGDLAARNFGMPSRELADIFSEAHAVIHNGADVSFMKTYATLKPANFESTKQLVRLCLPRRISFHYVSSASIVQLTQKDTWGLESVQDYPPIASRNATGYVATKWASERYLEKVSDQCDLPIWIHRPSSIKNPEAAAAGRPGADLISNLMHYSRELRCIPEVCAWNGWLDFVAVETAASEIVDEVYRDFSWPGHVCYLYQSGDEIIPLPDLRSTLQREAGCEFEVLKMDEWVARAQAKGMSELLGDYLCASANAPVTLAMLQKGEAWH",
                 "length": 4121,
                 "architectures_nb": 1,
                 "domains": [
@@ -5585,7 +3615,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -5598,7 +3628,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -5611,7 +3641,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -5624,7 +3654,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 4,
                         "hmm_end": 284,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     },
                     {
@@ -5637,7 +3667,7 @@ $FAM_LIST = [
                         "hmm_length": 475,
                         "hmm_start": 1,
                         "hmm_end": 475,
-                        "color": "orange",
+                        "color": "darkorchid",
                         "status": "likely"
                     },
                     {
@@ -5650,13 +3680,14 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_15100T0",
+                "sequence": "MTLNTTLSKPREPIAVVGTGCRFPGGANSPSKLWEILEKPRGLLKKVPAERFDVDSFYHPDGSFHGRTNAANAYFLDQNIRAFDANFFNIQHHEAEVTDPQHRLLLETVYEALATAGLRVEDLRGSSTAVYCGQMMNDYKDLVNFDQDRLPTYTATGTAASILSNRVSYFFDWHGPSMTIDTACSSSLVAVHHAVQQLRSGSSKVAIAAGANLILGPVPLIVESKMNMLSPTGRSSMWDEKANGYARGEGVAAVVLKTLSQALSDGDNIECVIRETGVNQDGRTPGITMPSHQAQEALIRETYAAAGLDLSRAEDRCQYFEAHGTGTPAGDPQEAEAISRSFFGHGERPPREEPLYVGSIKTVIGHTEGTAGVAGLIKASLAMQNRTIPPNMHFHKLSPKVAPFYQNLHVPTEAQPWPELAPGVPMRASVNSFGFGGTNAHAILEAYPNQGAGLKQTPQRSSAVPIWPIPISANSELSLKATMQDLLQYLKSASGVRVQDLAWTLTNRRSVLPVRRAVAAQTIPDVCAALEASIASIDKKEGHVVSGGSNREPRVLGIFTGQGAQWPAMGKMLISTLPHARDVISQLDQSLSSLPPRYRPSWALHDQLMLEGGSSNVHDARFSQPLCCAIQILLVQMLAAAGIKLEVVVGHSSGEIACAYAAGLVTASQAIRIAYLRGFVSDKASSPNGVEGAMLAAGCSYKDAQELCGLDMFRNRICVAASNAPDSVTISGDADAIEEAREVLEDEGKFARKVKVDKAYHSFHMEQCAEPYVRALLDSGCDAEATTEPSTIWLSSVRPGHCMRAQDVTADYWKDNLLSPVLFSQALEHATREHGPVDLAIEVGCHPALKGPCLKTMEACSEPGAPELPYVGCMRRGGDDVTALAEAFGYVWERFGSESVSLAGLKDVVPQTPVSSLAKTLPAYPWDRTRSYWLDSWRTRFFLGGGEAKRPHLLLGKLSADSTSTALHWRNSIRPRDMAWLDGHQLQGQTVFPGAGYVVMAAEAAMHVANGRSVRLVEFLDVEISKAVTFENEDGLVELNLSLQVDAGLSSAQHTAASFRIDCCLSREDAMSPSSSGRVIITYGPGAGDTLPTAQDEPPHMRSISVETFYEELAAVGYGYANDFRGISTIKRADFKACGSMRLPAPGPAADDRLLLHPVTLDNALQTLIAAVSAPGDGLMRSLLVPTSIGRIALNPWLCGEVSRSGGEVHYNAASTTRQVSSISGDVEVFHPETKQIVFHIEDFRIKAASAPTEASDHTMFMQWTWDRPVPERVLNKPERAATDADREVASAMERMVYFYMRSFLASAAAEKLADLAPHHQRQVRWFQCKMDEVKRGQSPFYQPEWEMDQQADVQGLLDQHNANANIRLVQRVGQGLEDVFFHGRNPFELMDHDGMLTEFYGSSSGFGPSYYYMQDVLAPIMHRYQNMDVLEIGAGTGGATRYILGQDPPPSFNSYTFTDISTSFFEKGHETFAQSDDRVDFRVLDVRRSPEEQGYTPHSYDLVVASNVLHATPNLQETMANVRTLLRPGGKVVVVELTCPRTLRVGFVFGLFADWWAGVDDDRVLQPFVSMDRWDAILKKTGFSGVASRYEDAEGEIFPTSVFQSDAVDDKVARLYEPLLFPAREQSPPIVVVGGATAKTSGILGEVQKLLPGRLFETLHRLEDVRAMIPPNHNCRKPTFLILSELDDPMFADMHQAKFEALKVLSESAGHMLWVTEDAWLDPVKAMAIGFLRTLRLECVDCGIQILDVDHTKNLSADLVADTLLRLEEGSDWEAAGILWTAEPEIYVSQGCARIPRLKPSKPMNDRLNSGRREILAGVDPTTTPVLLYQDIDAAYLQSNDNHGPQDINKGSGSSRLQVLHSLTRAVRLGNFGYLNVVHGILERSGQAVVALCEENGSLVDVFAGCIAHLPEQVQAQGRAGAALLLAVAADLLAQTMVSEVASGSNVIIHGAPDIYANRIAHRAKAKGIHATFVSTHSGPQGDKAAGEDSSSWVAVHENETQLGLSRKLPRPASAFYNLAVDQGPVGAGQVLSKYLTTQHCQTFQAGHLTSLKASVRTRQAGTSLKSMLDESLQACLAAADAGTLSLARTAEDLAATPPDELVALRRTVSHTAVIDWTVNGLVSARVRPVDSGRLFSDDKSYLLIGLTGDLGRSICRWMLGRGAKHVVLSSRNPQIESRWLEEMRVLGGNVMVLPMDISNEESVDAGLDKIRKSFPPIGGVAFGPLVLDDILLKNMRLDQMEAVMRPKVTGARLLQEKLDEQEHRLEFFVMFSSFVMVCGNPGQSAYSAANAYTHGLALQRRARGLAGSTIDIGAVWGVGYILKHDRVEEYESISFKFDKLSEREMHALFAEGVVAGRPGSSSAQRHDVELMTGMRFMDPKHRKLIAHFDDPRFSHFILSEKRERAAVGGAALASVKERLLEADSMGEACQIIADGLSEKLRATLQISHEGGVKLDVALIDQGVDSLSAVTIGTWFSKNLDLELPLLKILGGASVKDLAEEAVERLPPSAIPLIHNAWVNVPSAVQSSTDDSDGSLSPNSHVWSASSTSNSLSVSDSPTKDLEVVLPFERKSCMSLNQEQSWRLQMQTSDPTMFNSTLGMHMRGYMDLDRLARSFQAVLERHEIFRTRFPESGEAVQIIMEAPRIKFQAIPVADKASAEQGFKDVDGQSYNLAAGETLKLIDFYWASDEHMLIIAYNPLVCDGWTYERFFVELSQIYDGKSLPPVPQYADFATRQRTSYETGAMDADLTYWKSVHKTLPEPLPVFSVSSGSASEGPKPSPAWDQHTLDARLSSATAARIQDIARSSKVTPMQFYLASYYVLLSRLTGRADVAIGVADANRPDLDDLSTMGLFVNTLPLRLDHAAHDTFASTLSRTKERMRRATLHSRVPMHVILESLGVDAARPHEFLQAVFDYKQGQAESGSIGQAHMAGVLASRFSTPYDVTLEMRDDPSKTPLLTLKLQSSLYSLQDVHKVMGCYMSLLDGFSRDQGILVGEAELLC",
                 "length": 3002,
                 "architectures_nb": 1,
                 "domains": [
@@ -5670,7 +3701,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -5683,7 +3714,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -5696,7 +3727,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -5709,13 +3740,14 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 6,
                         "hmm_end": 282,
-                        "color": "fuchsia",
+                        "color": "navajowhite",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_15272T0",
+                "sequence": "MTPEPIAIIGSACRFPGDLSTPSDLWDFLQSPRDLQTEVPKDRFNADAFHHADGSHHGRTNARHGYFLNNVKTFDAQFFGVQAGEAESMDPQQRQLLEATYDALCAAGQTLGALKGSDTAVYVGIMTHDFELTKVGDLDAIPTYLATGAATSIASNRLSYFFDWHGPSMTIDTACSSSLVAVHHAVQQLRSGTSRVAVAAGANLMLSPLNFITESKLSMLSPTGRSRMWDAGADGYARGEGIACVVLKTLSQALADGDTIEALIRETGVGQDGRTTGITMPSNVAQASLIKATYARAGLDLNEPQGRPQFFEAHGTGTPAGDPQEAEAISKAFFSSGQDMQDLYVGSIKTVIGHTEGTAGIAGLLKCSLAVQNGIVPPNMLLQKLSPRVEPFTKHLRVPREATPWPAVQEGQPRRASVNSFGFGGTNAHAIVEQYIPSAATPTPRTATTTSANVLPLVFSARTKRSLKSSMASILSLAKTDPSLSVTDLAYTLLQKRTVLPLRHAVAAADLPGLVRALEAAGKEDVGVEHTPKNSSPRILGVFTGQGAQWPAMMKQLVVRVPSAARIVAELDVSLQTLPKQYRPGWTLMEQLMREGDESNVRLAAYSQPLCAAVQIVLVRLLAAAGVAFDAIVGHSSGEIGCAFAAGYVSAAQAIRIAYLRGFTSVHAGQDGAMLAAGMSLDDAKDLVELEDFAGKVCIAACNSPDSVTLSGDLDALEAVVEILQDEGKFARLLRVDKAYHSHHMLPCSEPYIAALEECGCATPDGQGNGVKWYSSVHEGRTMAAEHVTARYWSDNLVSPVLFRQALEQAGLENTFDAAVEVGPHPTLKAPATNTLAAVGAEDLPYTGCLQRGGDDVAALGDCLGYLWERFGAQGAVDAAKFVEDVHGTKPVDLSKRLPTYSWDHSRVYWAESRATQAALHGPRPHLILGTLLPSSTATRLQWRNFIRPRDHEWMQGHELQNQAVFPAAGYVILAMEGALHIAGDKPIGLVEVLDLTIDKAVTFDDADDMAELTLTANITSTTTEQIEMDFVIASCLSRENSLSVSAQGKIVVTLSDPVSLPAPGPAPPHANPVDIKLFYKELDSVGYSYSGNYRCIYSMERSTARAAGQMAHQRLADGAHPLVLHPANLDLAFQTVMAAYSSPGDKRLRSIYVPVGVDRIALVPRVCADTLDGLEGVRYNALNTYDGGDRLSGDVEVFDKASGAVLYTVEGMHLKPLAQPSDAEEHRPFTKTVWGPLDADKILDIERLWATDQDKHVIPIIERCVYYFVRQFLKECTEEDRKNASLGNQRYIAWHEHVVKIAREGKHLFYQPEWEEDTDEIINKLLEENWYHPHLRLAKLVSENCLSTIRENKNPFIWMDENGLLTEFYTSYLTSGPTWEYGQHLIEQIAHRFQNMDILEIGGGTGSATKSILAIPELGFNSYTFTDISAAFFEKAKEKFAPFLDRMDFRKLDITKPPAEQGFKTHAYDLIVASSVLHATPCLAETMANARTLLKPGGHVVICEATNKDHMRVGYLFGSFTDWWAGYDEGRTLDPFATREEWDAIFKKTGFSGIDSITTDRETHLFPNTLLSTHAITPEQLRLDAPLSAPVKPEQPQLVVVGGGEKSAPILAQIRELLPHRTPVVVPSLVDLPDLQSKATYVVLSELDAPVFEGLSDAKLAGLKKLFFGSSAAVLWLTEDAWVSNPVQAMGIGTLRTVRLENPDVPFQSLDVDRLAELDCKFLVEQILRLEEGLPENATWTLEPEICVVNGRPYIPRIKQDMTRNNRMNSTRRPILTEVDAAAVPVVLRDRELVTAATSRPLGVPLDATKVTVQVHHSTAKAIRVCGLGYLHVVTGTTAEGAVLALSESNASVVTVPAKQTFPIKDTTAATLSSAVAALVAQSIVEAPKGSSVLVYAAPAFCVDAVKQLAEARGVNVHLAGTDSSIPGSIVLHPRDTSRALKQKLPAGIASLYDLSADASANSLGQRLVSITGCAARDAEYIARDSASTVVFTESLEAAQLQLVADCISKAPPVVASATITSPADVAHRALDTVIDWQATPKLPARVSPVDNGTLFVDNKTYLLVGLSQSMGRSIASWIIKHGGRHVVLSSRNPEAPEAEWLSEMTRLGGQITVLAMDASKAESVDAGLAKLKDEFGLPPVGGIAYGPLVLRDALLNNMDLETMEIVLRSKVPGAKIFHDRFNDPKTNPLDFFVMFSSAALFGGNPGQANYTAANAYLQSLGQYRRSKGLAASTIHIGAVMGIGYLTRNAREAEFQEKSDVDTLGEAEFLSLFAEAVVSGRKVDGVDGVSAKSVIDMSEIEIGSGIPAFESRHKDTIKFYHDPRFGNLKTPEQRGDSADAGGSRLSVKELLAAATTMEEVQDIISQTLSEKMRGVLHIPPEESVNASAPLLDQGIDSLGAITVASWFSKQLLVEIPILRVLSGASIEELAAEGASRLSPAAIPLVADAQGPTAPSESGASSSEDPQSGALTPLTPMVQSDKAEKILDGVLRRAPMSLMQEYSHKRQLALSDVTISHNTIGVVMEGTLDTAKLDAAVTAAIQRHDIFRTAFKTVDGESSPLLNVLATPSWGLRTEAVASRAEAEAALAALQNEPYDLTAGETFKIVLFTWSPTSHLLVFAYHRLAGDGSTTENLVAELAQLYSGATLPPAPQYTDFAIKQRKSFVSGGMNADVAYWKALYTPVPSPLALLPLPGVKQDRSPVAWDQYTAITRLSPVMAYRIKERTKKLRTTPMNFYLAAYTTLLSELSGQDAVSIGLADTNRSSVADLSTMGYFANLLPLRLSPSAAFSGTVEATKESVRQAMAHSVVPHDLLTAELGLAVPPAEMTCAPLFQAVFDYRQGAAESGVIGGASITEVIASRERTPYDVVLEMSDDPTKEPLITVKLQKSIYQEGDAEVLMERYVEALKAFSQ",
                 "length": 2912,
                 "architectures_nb": 1,
                 "domains": [
@@ -5729,7 +3761,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -5742,7 +3774,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     },
                     {
@@ -5755,7 +3787,7 @@ $FAM_LIST = [
                         "hmm_length": 70,
                         "hmm_start": 2,
                         "hmm_end": 68,
-                        "color": "papayawhip",
+                        "color": "maroon",
                         "status": "likely"
                     },
                     {
@@ -5768,619 +3800,7 @@ $FAM_LIST = [
                         "hmm_length": 284,
                         "hmm_start": 3,
                         "hmm_end": 282,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "name": "PKS-NRPS.1",
-        "rules": {
-            "mandatories": [
-                {
-                    "name": "KS",
-                    "evalue": 0.01,
-                    "color": "mediumspringgreen"
-                },
-                {
-                    "name": "A",
-                    "evalue": 0.01,
-                    "color": "orange"
-                },
-                {
-                    "name": "PP-binding",
-                    "evalue": 0.01,
-                    "color": "papayawhip"
-                }
-            ],
-            "forbidden": [
-                {
-                    "name": "None",
-                    "color": "None"
-                }
-            ]
-        },
-        "proteins": [
-            {
-                "id": "MGG_03810T0",
-                "length": 4256,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 13,
-                        "length": 432,
-                        "cevalue": 6.1e-178,
-                        "ievalue": 2.1e-175,
-                        "score": 583.3,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 417,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 573,
-                        "length": 338,
-                        "cevalue": 1.1e-96,
-                        "ievalue": 4.2e-94,
-                        "score": 315.2,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2558,
-                        "length": 75,
-                        "cevalue": 2.8e-16,
-                        "ievalue": 7.8e-14,
-                        "score": 51.1,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 70,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2740,
-                        "length": 305,
-                        "cevalue": 4.3e-58,
-                        "ievalue": 2.5e-55,
-                        "score": 187.3,
-                        "hmm_length": 284,
-                        "hmm_start": 3,
-                        "hmm_end": 279,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3234,
-                        "length": 512,
-                        "cevalue": 2e-102,
-                        "ievalue": 5.1e-100,
-                        "score": 334.8,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3787,
-                        "length": 74,
-                        "cevalue": 3.6e-16,
-                        "ievalue": 1e-13,
-                        "score": 50.7,
-                        "hmm_length": 70,
-                        "hmm_start": 5,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_07803T0",
-                "length": 1729,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "C",
-                        "start": 151,
-                        "length": 298,
-                        "cevalue": 4.2e-32,
-                        "ievalue": 2.5e-29,
-                        "score": 102.1,
-                        "hmm_length": 284,
-                        "hmm_start": 2,
-                        "hmm_end": 283,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 629,
-                        "length": 458,
-                        "cevalue": 6.3e-126,
-                        "ievalue": 1.6e-123,
-                        "score": 412.3,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 1145,
-                        "length": 71,
-                        "cevalue": 6.1e-13,
-                        "ievalue": 1.7e-10,
-                        "score": 40.4,
-                        "hmm_length": 70,
-                        "hmm_start": 3,
-                        "hmm_end": 68,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "KS",
-                        "start": 1264,
-                        "length": 449,
-                        "cevalue": 3.6e-106,
-                        "ievalue": 1.2e-103,
-                        "score": 346.9,
-                        "hmm_length": 422,
-                        "hmm_start": 2,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_09589T0",
-                "length": 3867,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 4,
-                        "length": 461,
-                        "cevalue": 2.7e-182,
-                        "ievalue": 9.1e-180,
-                        "score": 597.7,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 584,
-                        "length": 328,
-                        "cevalue": 3.4e-112,
-                        "ievalue": 1.3e-109,
-                        "score": 366.1,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2573,
-                        "length": 69,
-                        "cevalue": 1.9e-16,
-                        "ievalue": 5.3e-14,
-                        "score": 51.7,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 67,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2751,
-                        "length": 311,
-                        "cevalue": 1.8e-65,
-                        "ievalue": 1.1e-62,
-                        "score": 211.5,
-                        "hmm_length": 284,
-                        "hmm_start": 2,
-                        "hmm_end": 282,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3254,
-                        "length": 504,
-                        "cevalue": 6.1e-129,
-                        "ievalue": 1.5e-126,
-                        "score": 422.2,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3785,
-                        "length": 76,
-                        "cevalue": 9.3e-20,
-                        "ievalue": 2.6e-17,
-                        "score": 62.2,
-                        "hmm_length": 70,
-                        "hmm_start": 1,
-                        "hmm_end": 70,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_12447T0",
-                "length": 4035,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 12,
-                        "length": 435,
-                        "cevalue": 3.8e-188,
-                        "ievalue": 1.3e-185,
-                        "score": 617.0,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 560,
-                        "length": 319,
-                        "cevalue": 1.6e-103,
-                        "ievalue": 5.9e-101,
-                        "score": 337.7,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2432,
-                        "length": 70,
-                        "cevalue": 1.4e-13,
-                        "ievalue": 3.9e-11,
-                        "score": 42.5,
-                        "hmm_length": 70,
-                        "hmm_start": 3,
-                        "hmm_end": 66,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2607,
-                        "length": 294,
-                        "cevalue": 1.7e-63,
-                        "ievalue": 1e-60,
-                        "score": 205.0,
-                        "hmm_length": 284,
-                        "hmm_start": 2,
-                        "hmm_end": 283,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3088,
-                        "length": 488,
-                        "cevalue": 3e-119,
-                        "ievalue": 7.6e-117,
-                        "score": 390.3,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3604,
-                        "length": 71,
-                        "cevalue": 4.2e-13,
-                        "ievalue": 1.2e-10,
-                        "score": 40.9,
-                        "hmm_length": 70,
-                        "hmm_start": 4,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_14897T0",
-                "length": 4270,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 3,
-                        "length": 440,
-                        "cevalue": 1.5e-181,
-                        "ievalue": 5.2e-179,
-                        "score": 595.2,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 584,
-                        "length": 321,
-                        "cevalue": 6.6e-112,
-                        "ievalue": 2.4e-109,
-                        "score": 365.2,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2527,
-                        "length": 70,
-                        "cevalue": 2.1e-17,
-                        "ievalue": 5.9e-15,
-                        "score": 54.7,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2705,
-                        "length": 316,
-                        "cevalue": 5.1e-60,
-                        "ievalue": 3e-57,
-                        "score": 193.6,
-                        "hmm_length": 284,
-                        "hmm_start": 3,
-                        "hmm_end": 282,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3220,
-                        "length": 526,
-                        "cevalue": 2.9e-125,
-                        "ievalue": 7.3e-123,
-                        "score": 410.1,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3793,
-                        "length": 76,
-                        "cevalue": 8.5e-18,
-                        "ievalue": 2.4e-15,
-                        "score": 56.0,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_14943T0",
-                "length": 3973,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 10,
-                        "length": 215,
-                        "cevalue": 1.7e-84,
-                        "ievalue": 5.7e-82,
-                        "score": 275.5,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 213,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "KS",
-                        "start": 225,
-                        "length": 193,
-                        "cevalue": 5.3e-79,
-                        "ievalue": 1.8e-76,
-                        "score": 257.4,
-                        "hmm_length": 422,
-                        "hmm_start": 244,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 525,
-                        "length": 328,
-                        "cevalue": 7.5e-94,
-                        "ievalue": 2.8e-91,
-                        "score": 305.9,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2367,
-                        "length": 75,
-                        "cevalue": 1e-12,
-                        "ievalue": 2.9e-10,
-                        "score": 39.7,
-                        "hmm_length": 70,
-                        "hmm_start": 3,
-                        "hmm_end": 66,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2456,
-                        "length": 293,
-                        "cevalue": 4.9e-58,
-                        "ievalue": 2.9e-55,
-                        "score": 187.1,
-                        "hmm_length": 284,
-                        "hmm_start": 3,
-                        "hmm_end": 283,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 2916,
-                        "length": 487,
-                        "cevalue": 2.8e-108,
-                        "ievalue": 7.1e-106,
-                        "score": 354.1,
-                        "hmm_length": 475,
-                        "hmm_start": 26,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3431,
-                        "length": 71,
-                        "cevalue": 1.6e-15,
-                        "ievalue": 4.6e-13,
-                        "score": 48.7,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 69,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    }
-                ]
-            },
-            {
-                "id": "MGG_15097T0",
-                "length": 4121,
-                "architectures_nb": 1,
-                "domains": [
-                    {
-                        "name": "KS",
-                        "start": 7,
-                        "length": 435,
-                        "cevalue": 7.1e-195,
-                        "ievalue": 2.4e-192,
-                        "score": 639.1,
-                        "hmm_length": 422,
-                        "hmm_start": 1,
-                        "hmm_end": 422,
-                        "color": "mediumspringgreen",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "AT",
-                        "start": 556,
-                        "length": 319,
-                        "cevalue": 9e-105,
-                        "ievalue": 3.3e-102,
-                        "score": 341.8,
-                        "hmm_length": 310,
-                        "hmm_start": 1,
-                        "hmm_end": 310,
-                        "color": "aqua",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 2428,
-                        "length": 70,
-                        "cevalue": 4e-14,
-                        "ievalue": 1.1e-11,
-                        "score": 44.2,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 68,
-                        "color": "papayawhip",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "C",
-                        "start": 2679,
-                        "length": 299,
-                        "cevalue": 2.7e-62,
-                        "ievalue": 1.6e-59,
-                        "score": 201.1,
-                        "hmm_length": 284,
-                        "hmm_start": 4,
-                        "hmm_end": 284,
-                        "color": "fuchsia",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "A",
-                        "start": 3164,
-                        "length": 485,
-                        "cevalue": 6.5e-120,
-                        "ievalue": 1.6e-117,
-                        "score": 392.5,
-                        "hmm_length": 475,
-                        "hmm_start": 1,
-                        "hmm_end": 475,
-                        "color": "orange",
-                        "status": "likely"
-                    },
-                    {
-                        "name": "PP-binding",
-                        "start": 3677,
-                        "length": 73,
-                        "cevalue": 1.8e-16,
-                        "ievalue": 5.1e-14,
-                        "score": 51.7,
-                        "hmm_length": 70,
-                        "hmm_start": 2,
-                        "hmm_end": 70,
-                        "color": "papayawhip",
+                        "color": "navajowhite",
                         "status": "likely"
                     }
                 ]
@@ -6394,24 +3814,25 @@ $FAM_LIST = [
                 {
                     "name": "KS",
                     "evalue": 0.01,
-                    "color": "mediumspringgreen"
+                    "color": "peru"
                 },
                 {
                     "name": "AT",
                     "evalue": 0.01,
-                    "color": "aqua"
+                    "color": "mediumseagreen"
                 }
             ],
             "forbidden": [
                 {
                     "name": "PP-binding",
-                    "color": "papayawhip"
+                    "color": "maroon"
                 }
             ]
         },
         "proteins": [
             {
                 "id": "MGG_14945T0",
+                "sequence": "MSSPVGTPLETPASPANEPLPLFEVPLAAEGAVLGDNFVDATQAADMNSNGHHHTNGASNGANGANGTSGTNGTNGSIPSQTPINNIPSTQDTRQSKLPPPTGPKYEPVAIVGMACRLPGSVSDPEAFYELCCLGRSGWSEIPSHRFSKEGYHHPNPDRLGCFNPVGGCFLSEDIGLFDAPFFKITEREAVAMDPQHRLILECTYEALENAGIPMHSIAGRNVGCFAGGSFTDYELNNLRDLETQPMHQSTGNAPTMMANRVSYFFDLRGPSHTVETACSSSLTALHLAMQSLRCGDSSLVVLASSHLNVMPDHFVAMSSNGLLSGDGRSYAFDSRANGFGRGEGAGVVILKPLADALRDGDNIRALVVGSGVNQDGRTNGITMPNGESQLDLMRKVYADNGLDPRDCGYVEAHGTGTKVGDPLEMKALHDMFWEDRSPRQPLLVGSVKTNVGHLEGASGIVSLIKSAMMLERGYVLPNHDFREGNKEIPFDEWGVKVPSKVMPWPRGKKYISINSFGFGGGNAHAVLAAPPRVKTKKAPFRLPGEEGLSLEELLEKRKADRAANSDQAEVEGPGADAVPPPVIDHVTTTTATATAIAINTETTTETPTETPTETITETTTTPKPEQTPHKRVEPKRLFVVSASSKSALAKQMANITFYIERRPIAFQSAVLPNMAYTLGQRRSLLPYKHAVVGADSTALTSGFTSCPANPIRSTRPPRIGFVFTGQGAQWHAMGRELLASYPVFQASLESFDACLSRLGATFSLVAELTQKDAKTSRISDAELSQPGCTGVQLALVDLLRDWGVCPDAVVGHSSGEIGAAYAAGALTLHECAAIAYFRGQSVLQLKAAYPGLKGGMLAVGAGSEEVSEMIKTMTPDPARRVVVACVNSPGSITASGDVAAVEELQAKVEEKQLFNRRVRVETAYHSHHMELVADWYGAAVGPLDPKATDLKPKGGRHVVEFYSSLKGKRVRDLAVLDTSYWVQNLTQPVLFSQALTAMCTPAEGKDNLDLLIEMGPHPALEGPAKQILKSIDALSKKPTYLASLVRNKDAVDTTLSLAASLFTHGRALDMGAVNFPVPAARALRVLSDMPKYAWDHGARYWHESRIGRAHLFRRFPRSDVVGSLADWSNDLEPTWRNVVRADDMPWVRGHFMQDMIVYPMAGYLSMAVEAAAQRAVVAGVGQRQDGAGHEDQDDDALAAIDRYVFRDVTISRPFVIQEGVDAEINITMRPNPEGTRESSAIWDEFRIFSWNREREWVEHCRGLIRVEHKSSRMVGGDRPGSPRTVGTGVLGQVNNVHDAKADEAARFEAKKHAISRACTETVAAEDIYRDLDRVTAKYSREFRSMENCSASDTACTADVVVPDTARTMPKGFEPAVHIHPALLDQFTHAAWVVVGAGRGKLSSLFMPRFFKSLSISGNLRHHVSKPGDRMRVYGSGNPDFSSPGSTTISMFATDIEGKSELISMEGLVLDPIHDAGGQQVDQGVARELCYKIDWVPLHGEKVTTVTSRSEDRNKTTPAQNTNREISDSIMIVGPPTQQNPTTLTLTDSLEQQLSKHVSSSTGQSITSIPLETGCSEGADTSPYVGKICIVTAELNGSPLLATLNDAGFAAVQRLILSAKGILWVVRGAHTDATDPRLGMIFGLARTVRSETGIKFATLDLDGKASQDAAEESRLIAEVACHVFGKRPSTDENDIDADGDPDMEFQARDGILSVARVSNDTTLDSFVEQHTNAATAPYPQPFHQPGRPLKLVAGTKGALDTLHFVDDLVNSPSSPLSADEILIEVKVTSMNFKDVMVSMGEVPSPYLGVECAGMVAAVGAAVHDLKVGDRVCASSEGAYSTYTRCRSTSAARVPDDMTLEAAATVPVVFATAYYALFDVARLRRGESVLIHAAAGGVGQAAVMLARMVGADVYATVGSAAKREFLVETYAVPGDRIFYSRDVSFAAAVGRATGGRGVDVVLNSLAGDALRETWECVAPFGRFVEIGKRSILANAGLGMGVFDRNATFASVDLTLVAQERPRVMRRLLDDVFRLLSYGAVRPISPITVFGVCEVEAAFRTLQAGKAHGKILVTAAPGDLVKATYSPRTFDRLFRGDATYVVVGGTGGIGRSIVKWMTEKGARHVVVVSRSDAVSPKVADMIKEAETAHSAKVSVSRCDVAQVEDVERMIAEISSAGMPPIRGMIHSAMVLDVRQTQPPLSSLSTQNTNQ",
                 "length": 2209,
                 "architectures_nb": 1,
                 "domains": [
@@ -6425,7 +3846,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 1,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -6438,13 +3859,14 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 310,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_18133T0",
+                "sequence": "MAACEAVEMSGYSDGRSRSVHPGRIGVVYGQSNEDGYMTTHHERGCDAYTLQTVQRAFAPGRVAHHFGWEGPTWSVDSACSTSSSILHLATGMLAAGEVDMVVAGASNVISSPHGWCALSKSGVLSATGNCKPFRDDADGYCRGEFVGAVVLKRLEDAVAHHDQVLAVIAATGKNQSGNAASITTPDAGAQERLFRRVLRTAGVAPTDISYVEAHGTGTPVGDPCEMTAIAGALARPGSRGKGKGKGKGKGKGKGKGKGKGKGKGKGMGKGEEERLVVGAVKANIGHSEAASGIASLIKGVFMFRHQLVPPQAGMPHTLNPRLLPLLDQAGIVIPSSTRLGAFESAPGRPRRILINNVDAAGGNACFLLEDPAGVLPKRTTPPTALTTLTNITNITNITNPQDSPYHVVTVSARTEASFHKNKRRLVDWLETNPNVRLADLAYTTTARRTHHSPFRFACAASSIKEVVGSLVADMAATQIESAKACDTAVASRSTTPKARPVVWVFSGQGSEYPDMGSELYQTSPVFRDTVDRCVHLCANQGFPSFSDMMLSDGAGAKHDSSGVDRTVKKHLALVTLELALAAFWRHAGVEPSVVVGHSLGEYAALHVAGVLSLADVLHLVGNRARRLAAVCEPGACGMLAVSASADAVGAFLHRRRGGLLSSCSIACINAPNAVVVSGSAADLLAAQEALGQKGIRSQRLAVDFGYHSAQMDAVTSDLERLTAAVSFSAPKLAVASTMLASVVKASDKITINADYLALQTRRPVNFVGAVQAANASLGGTDKAIWLEMGPRAVSSVWLVFCLQLPG",
                 "length": 808,
                 "architectures_nb": 1,
                 "domains": [
@@ -6458,7 +3880,7 @@ $FAM_LIST = [
                         "hmm_length": 422,
                         "hmm_start": 96,
                         "hmm_end": 422,
-                        "color": "mediumspringgreen",
+                        "color": "peru",
                         "status": "likely"
                     },
                     {
@@ -6471,7 +3893,7 @@ $FAM_LIST = [
                         "hmm_length": 310,
                         "hmm_start": 1,
                         "hmm_end": 283,
-                        "color": "aqua",
+                        "color": "mediumseagreen",
                         "status": "likely"
                     }
                 ]
@@ -6479,13 +3901,170 @@ $FAM_LIST = [
         ]
     },
     {
-        "name": "PKS_type3.0",
+        "name": "PKS-like.2",
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "KS",
+                    "evalue": 0.01,
+                    "color": "peru"
+                },
+                {
+                    "name": "PP-binding",
+                    "evalue": 0.01,
+                    "color": "maroon"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "AT",
+                    "color": "mediumseagreen"
+                }
+            ]
+        },
+        "proteins": [
+            {
+                "id": "MGG_07803T0",
+                "sequence": "MYNRCCRKVWIQGRVAYRPAYIRQSPPQQTLYRGIDLLPFTTIVMDHQSGFQNPSPSGGLMFSASAKRFISRIVGFVGRGAEVQQKAVGLCPLKTERRRAAAGGLLLPTGLRMGRSIIMSVRPLPFLTGPAPSPDTAAGFKPSPPTGNLVSVSPLSKAQMALWFDYLQHPTSTHYFLTLKVELDKQPLSLDKIIQVIRGLGKQHAMLRTTFHVDTDTDDMSKSYMAVHDDSWDQEIHVLMNDAQLYEALRKPFQLSSESPVRWVVQMKLQPGSARSTYTVYAAGHHIGVDGASMSVLSNQLLEAVASEVEDQPDHSGPHYGDYIQRQARYLRSSAGAAAGRFWLSQLRHTQPFRWRMEPPEEINTPNYRQLDTWNFFPTAEIQEWGNLYKTSWFRVATSIVGLVTAAMAEPQAHHDHALMVAFGARPRGFENNVSHMANTMPVKFPLSSLLRDDATFSDAVKAMGRNVSTAKKHENFPFMSLMEQANRHMDPTLLDFKVAITYSPKLANKSCELFPVEGIWDLFFCFLEQEDGVALGVISNPRVFGAEALGQLQSLFNEVFALSKARPSFKLSDLAFLQNRTPARFISGPALDDVESISKSRVYRLIKARAASQPDLVALMSAEKGVQMTYRELAAQSSQVAHFLQKQRLCKGDAVLVHLERGFAQIVWILGVMEAGACYVALDKTWPAARKEAILRTANGKLLVTDDEQMDFEKQDTTVVFLAPSAAEIASMPQSTCECEVADDDLAYVVFTSGSTGQPKGVMVEHSNLSHYVSATRSLVKTGPHSRMLQLASFAFDAIVLEYAVTLAHGGTLCFANHPEVLVGEYLADVIDSNQVNFFHCTPSVLSTLPAGRRLPSLRIVSVGGEASPPGLLDHWRKRVELLHAYGPTECTVICTLESLTQDESTQTAIDATVIGKALPNLDIRICEEGKLEPLAPNQVGEICVVGPQVSRGYMGQEELTASKFHNITLADGHPSRLYRTGDKGFIDDDGKLHIQGRIGNREIKVRGYRLDLYEVEKNVMAFDPEVTQVSIQQVGESLVALVVPASIDCDRIRSKLLKDMPRYAVPTRFIRVASLPLNTNGKIDHTQASSLAAELVMHDTVLPTVDATPTPTAAVRAVGVTEENLRLKTKENGMERQEMLRRHLTAEVTALWAKLLGSSRQFDPEVGFFDAGGHSLLLTQLHKLIKERFGTGSRPSLLDIFSMSSIRKQVDCLMGIVDQDAMLGSEPTGGSSSRSQSRRSAETSSSSTSAPSSVPVDAERNLYAIVGISCRFPGANTAEQLWNVLMEQRDAITTFCPAENLGFALEENSVFVPRYGMIDALKDFEPSAYSMSDAEAQTIDPQKRVFLDVAADALADAGTSASPGNPLDPVGVFVGAATNTFLSSRDNPGSKPPGDEEPQSFANHYQQLLDCPIGTFASFKLNLTGPVVTLNTACSSALAALHLACASLSHGDCNAAVVGGVSMAYPQEGGYVTARPGGDSSAVFSPSGVCHPLDSRADGCVPADGAAALVIKRLADARADGCRVYAVIEGVAVSADGSDDKAGLGVPSSSGQSRTVEAALRRAGPQALSRLRYVEMHGSGTPWGDALEVQGLKMAFDRLSKTGAAEQSGTGRAQPEADRIYLGSNKGNCGNTEAASGLLSLIKASMALNLGVVPPLPNLAEPNPKCEFEETKFEPLGKQLALAPGDRVMNKRQRIVRSPNWISDATWFVISTVDNLLPKLTPAAVA",
+                "length": 1729,
+                "architectures_nb": 1,
+                "domains": [
+                    {
+                        "name": "C",
+                        "start": 151,
+                        "length": 298,
+                        "cevalue": 4.2e-32,
+                        "ievalue": 2.5e-29,
+                        "score": 102.1,
+                        "hmm_length": 284,
+                        "hmm_start": 2,
+                        "hmm_end": 283,
+                        "color": "navajowhite",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "A",
+                        "start": 629,
+                        "length": 458,
+                        "cevalue": 6.3e-126,
+                        "ievalue": 1.6e-123,
+                        "score": 412.3,
+                        "hmm_length": 475,
+                        "hmm_start": 1,
+                        "hmm_end": 475,
+                        "color": "darkorchid",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1145,
+                        "length": 71,
+                        "cevalue": 6.1e-13,
+                        "ievalue": 1.7e-10,
+                        "score": 40.4,
+                        "hmm_length": 70,
+                        "hmm_start": 3,
+                        "hmm_end": 68,
+                        "color": "maroon",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "KS",
+                        "start": 1264,
+                        "length": 449,
+                        "cevalue": 3.6e-106,
+                        "ievalue": 1.2e-103,
+                        "score": 346.9,
+                        "hmm_length": 422,
+                        "hmm_start": 2,
+                        "hmm_end": 422,
+                        "color": "peru",
+                        "status": "likely"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "PKS-like.3",
+        "rules": {
+            "mandatories": [
+                {
+                    "name": "AT",
+                    "evalue": 0.01,
+                    "color": "mediumseagreen"
+                },
+                {
+                    "name": "PP-binding",
+                    "evalue": 0.01,
+                    "color": "maroon"
+                }
+            ],
+            "forbidden": [
+                {
+                    "name": "KS",
+                    "color": "peru"
+                }
+            ]
+        },
+        "proteins": [
+            {
+                "id": "MGG_14042T0",
+                "sequence": "MLYPHKNTVIGVTRSILSNRISHFLDIRGPSMTVDTALQLALLAVLADWNVTPAAVVGHSSGKIAAAVAAGYMSSADAIRTAYLRGYGSKQILEPSQQEQAAPSSLGMLAVGVGPDVAQSYLDKVNGPSPDINNVYIAGYSSLSSLAVPGPVSALTVLGAKLKDDGHFARLLQVDLAYHSPYMASVAFYYKKTLEQFCHFGPQGSRNGQGNSAVWFSSVNYVTGKRIDSELPVDAEYWKSNMVMPVQFNQALSSMILDGPEAANEADLMLIEIGPSNALAGPVSQVDKAGNQGLATKVKYCSALKRGANSVYTLLAVAGQLFAVGVPIPLAKVNGYDLAITDDTSIVKIAGTMTTASRVVVDLPNYQWDHSTRYWHEGPASRGWRHRPFVTQHLLGAKVLGTPWSSPTFSKVLHLADVAWLRDHKIGEQRLLQVECTPGLQDTRNLLSMDPPVVSEQGSDGGTEARLLQPWYETRGTLHPVAFDSVTQAFIPALWKGDRAAVGVVTLVLDLICHKLPHPNVLEIGANEQRGGVVGDRDRNSSVSLHWLPSIDADDELNRSRADACASYHFVSAEPQTLLAIQDRYSLLPNASFSLADITMAASVLPGDSEYDLAIVNVSKEHSAAEAGLGSMLKTVHGGMRDKSTGYTVVVLTSTNPQSDVDLVHKVARTAGFEPKSCALREKLGAAGWNVSLSHVGDSECGQVQPGSIVLVCDELYGAVMSKITQSQWDALQMLISKECRILWLTTGAVGSNNSDGNEQIPNQMHPERAAINGLMRSVRREEPHLRLITLDLSPSSMADGVGDASSIQLCLQQLLSPGGSNRTAESEFAERQGILHISRIAPDAALNRAKLERADVYKSDLFDPRTTDPSICVQLRAERLGNIDSLCFAETALPSDLPPNHVEVEVHASGLNYKDVAVTMGLVPADEYRLGEEAAGVVVRVAPDVTTFQPGQRVVVFSRASLANRVRASTERVHAIPDAMSFEDAATLCVVYITAMHALFNLGGLRSGMRVLVHSATGGVGNAAIQLCRSVGDVEIFATVGSDAKKQFLVDELHMPADHVFSSRTPEFVQGIRRLADGAGVDLVLNSLTGPLLESSWHLLAPNGTFVEIGKRDMLARQALPMEPFTRNVSYRALDTSPRFFPDSTINVVMADLFRLLEKGAIKRIFPRQTFSYSRVADAFRLLRQGTHMGKLVVSREHVPSGDMVGEQKEDETKGAKDAGTVVSIRQSPHIPSQLRSDVCHLIVGGLGGLGGSLAVYLAKEMGAKNIATLSRSANVPDKDVKAAFCKTKMPIGGIVHGAMVLRDRPFATMTMTEYHDATGCKIAGALNLHQAALDLDLNLDYFSLLSSISGIVGGKGQANYAAGNAVLDALAAHRRAMGLPACAVDLGAVEDVGYIASHQQQAAAATQPGRDGAAAANHDYLAKVTAGGTLTPINERLLRKIIQLCLLQQQRQLRGPSAGAYQMITGLTVPQPEQSDLPGDARFAALFNVPGSKAGGGEGPSGAAGRGAAGASGGAGHDAESKDLRELQLMLWSCKAVQPAAVRAGLVRVVGAYFAKTLRLEVEQVDVERPLSGFGIDSMAAVEIRNWVRAELGVVLATFEIINASSIIGFCDVVISKLNRV",
+                "length": 1624,
+                "architectures_nb": 2,
+                "domains": [
+                    {
+                        "name": "KS",
+                        "start": 2,
+                        "length": 95,
+                        "cevalue": 2.2e-12,
+                        "ievalue": 7.4e-10,
+                        "score": 37.9,
+                        "hmm_length": 422,
+                        "hmm_start": 140,
+                        "hmm_end": 200,
+                        "color": "peru",
+                        "status": "unlikely"
+                    },
+                    {
+                        "name": "AT",
+                        "start": 28,
+                        "length": 280,
+                        "cevalue": 1.8e-69,
+                        "ievalue": 6.8e-67,
+                        "score": 225.8,
+                        "hmm_length": 310,
+                        "hmm_start": 64,
+                        "hmm_end": 310,
+                        "color": "mediumseagreen",
+                        "status": "likely"
+                    },
+                    {
+                        "name": "PP-binding",
+                        "start": 1548,
+                        "length": 69,
+                        "cevalue": 1.2e-13,
+                        "ievalue": 3.4e-11,
+                        "score": 42.7,
+                        "hmm_length": 70,
+                        "hmm_start": 5,
+                        "hmm_end": 68,
+                        "color": "maroon",
+                        "status": "likely"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "PKS_type3",
         "rules": {
             "mandatories": [
                 {
                     "name": "CHS_like",
                     "evalue": 0.01,
-                    "color": "limegreen"
+                    "color": "fuchsia"
                 }
             ],
             "forbidden": [
@@ -6498,6 +4077,7 @@ $FAM_LIST = [
         "proteins": [
             {
                 "id": "MGG_04643T0",
+                "sequence": "MATSSSPGSRELGLSILGVGSQYPPYALKPDAVETLAKRFYPESPAMSKVLAINRYTGIDARSSIGDPEHPIVNDAVAPSISELHKVFMSDGVPLAVSAARKAFEDAGMTDPAAAAASITHVVSTTCTDSANPGYDHFVARELGLSDSVEKVLLHGVGCSGGLAALRTAANLALGHAMRGLPARILVMALEVSTTFVRSELDSINAEQNTRIGVCLFSDCASAVVLSNGIGHGLDAKEPAYELLGWQNMTIPDTELDLGFDVDPVGWKVVLTPRVPQLTTSALESSFTSLMASLPPLPPNYAKPSDFDWAMHPGGATILTGAEKAMGITPEHMRASYSTYMNHGNSSSATIFSVLDCLRQKEMDALTPGGREPTDYVVGCAFGPGITVETCMLRRRRKAVNAATGLQTPPETESEGSRSDDEDGAKDRSSSSREAAGNGPAGSAAATSGESFVNQAISELELD",
                 "length": 464,
                 "architectures_nb": 1,
                 "domains": [
@@ -6511,13 +4091,14 @@ $FAM_LIST = [
                         "hmm_length": 380,
                         "hmm_start": 1,
                         "hmm_end": 380,
-                        "color": "limegreen",
+                        "color": "fuchsia",
                         "status": "likely"
                     }
                 ]
             },
             {
                 "id": "MGG_06254T0",
+                "sequence": "MDDLFRNSAGVDLATEACRKALEEWGGDAATEITHTVAVTCTNQGNPGYDLMVAQRLGLGAGVDRTLLSGVGCAGGLAILRCAAQLATGAAARGRPARVLCFACEVCTPGMRRELAEADACGDEPAGVSIAGALFADGAAAFVLCNELGMPEKQSNGAGKRPPLLQLLEWDNAVIPDTVQHLASYVNPLGFHTILTRDVPRLAVKAVRPMLESLLQLPYLREQIGSSAEGLGAVDLDWALHPGGQAIISGVQTTLNLTDHQLRATKQIYRTRGNSSSSAVLAVLDLLRGMGKGRDHIVAASFGPGVAIEMAIFRRCR",
                 "length": 318,
                 "architectures_nb": 1,
                 "domains": [
@@ -6531,7 +4112,7 @@ $FAM_LIST = [
                         "hmm_length": 380,
                         "hmm_start": 69,
                         "hmm_end": 380,
-                        "color": "limegreen",
+                        "color": "fuchsia",
                         "status": "likely"
                     }
                 ]
@@ -6539,7 +4120,7 @@ $FAM_LIST = [
         ]
     },
     {
-        "name": "Sesquiterp_synthase",
+        "name": "Sesquiterpene_synthase",
         "rules": {
             "mandatories": [
                 {
@@ -6558,8 +4139,9 @@ $FAM_LIST = [
         "proteins": [
             {
                 "id": "MGG_03833T0",
+                "sequence": "MAEIHRIVPYPSPEPSEMDMSPIAKPDCNDGGNTSTTVMLPDLFVSIMSPSPRLNPVYELVRPAANEWTQKLLNLDAKAYAKHQRVNFSRLASMWMPEADEEGLRVMVDWLTWVFYFDDSRQVFDDGELRDNPAAAQAEAEATLSLMSDSDQQVSPELHPLRYMFHSTWIRFRNRSSKALQNRYKKCMEEYINGILQQVDVSSFDASLDADLYLHFRRKSVGLRPCHALLEYACGIQIPDHVMAHPAIQECMAVSIDLVLLQNDILSYKKEQASNVIHNLIHIYRNQGMTAQEAFDQAGNLIVRAIRRWHLAQLDLPIWGEKIDKEVQRYLQGCLDSCVGSLNWSPHLYFLGDLNFDEVNGTKLLLIGRYYPHFSSGLG",
                 "length": 380,
-                "architectures_nb": 1,
+                "architectures_nb": 2,
                 "domains": [
                     {
                         "name": "sesquiterpene",
@@ -6573,11 +4155,25 @@ $FAM_LIST = [
                         "hmm_end": 354,
                         "color": "blueviolet",
                         "status": "likely"
+                    },
+                    {
+                        "name": "N_ter_TCdom",
+                        "start": 61,
+                        "length": 297,
+                        "cevalue": 2.6e-12,
+                        "ievalue": 4.7e-09,
+                        "score": 35.4,
+                        "hmm_length": 334,
+                        "hmm_start": 182,
+                        "hmm_end": 321,
+                        "color": "sienna",
+                        "status": "unlikely"
                     }
                 ]
             },
             {
                 "id": "MGG_04631T0",
+                "sequence": "MADRTCVTLPDMFRGFIVQEPKVNKHYEAVKPVSEKWLARICAFSPMMQKRVGACDFSYFCSIAAPEAPIHKLRTMCDWGNWVFPFDDMFDSGDLRSDLIVTRHVLDSLLADMKGHKFRGLKIPVVLAHDDIYRRLSEVETKNPSISGVQRRFARAMELYALGVAQHVQDFTESGLPCPQEMLETRRLSVGVAPLYHLVEYAHSIRLPDEVFEDPAIQTLERLGADMVIMSNDMLSYQKEEASTNNEGCPFNMVAACRMSGQSAQEAFDTVGALLEESYYEWEETMRQVPARGGDVERDVQRYIKGIQDVVQANITWSFRSKRYLGVHAPEVRRTKKFDVMTHPPYLDKDMAELR",
                 "length": 356,
                 "architectures_nb": 2,
                 "domains": [
@@ -6595,24 +4191,25 @@ $FAM_LIST = [
                         "status": "likely"
                     },
                     {
-                        "name": "fusicocadiene",
-                        "start": 43,
-                        "length": 301,
-                        "cevalue": 7.9e-06,
-                        "ievalue": 0.0093,
-                        "score": 13.5,
-                        "hmm_length": 714,
-                        "hmm_start": 179,
-                        "hmm_end": 325,
-                        "color": "darkturquoise",
+                        "name": "N_ter_TCdom",
+                        "start": 28,
+                        "length": 304,
+                        "cevalue": 1.1e-10,
+                        "ievalue": 2.1e-07,
+                        "score": 29.9,
+                        "hmm_length": 334,
+                        "hmm_start": 182,
+                        "hmm_end": 327,
+                        "color": "sienna",
                         "status": "unlikely"
                     }
                 ]
             },
             {
                 "id": "MGG_10671T0",
+                "sequence": "MISIVPQHTRTGQDPIAATAANTTTITQCSSPGIARPRAITSSCYLASTMPRKTTEVTIRPLASQPMSPAMSNRLPTKVDANIKAGTTDIITPPSSPRRLSNAAETEGKQAAPPSGAGMHLRLPDMFASLMSIRPPINPNYQKVKAEAEEWTTRTLNLTPLQALRNSKADFTFLVSWWAPSADAEAVRTMVDWQHWAFPWDDQFDEGHLKLDLPGAAAEVVNMTALLDDSHPALSLGQPGTDPIQYAFQQNWYRIRSRAGPALRHRYKMYLKHYMLGVLGQVGSRSRDPRSLSVDEYLAFRRGTIGVMPCLCLVEYAEGIELPQYVVDHPSVKACQQVAVDLVLLDNDILSYRKDLIEGEELNLINILRFSKGLTLQEAVDEMGRMITERYRIWYRALADMPSWGHKLDAEVLRYLDGCRRVALGSLIWSFHTGRYFKDAEGELVREEQKLWIPEELLAGIDGRPARIPSESLPEPVSS",
                 "length": 480,
-                "architectures_nb": 1,
+                "architectures_nb": 2,
                 "domains": [
                     {
                         "name": "sesquiterpene",
@@ -6626,6 +4223,19 @@ $FAM_LIST = [
                         "hmm_end": 362,
                         "color": "blueviolet",
                         "status": "likely"
+                    },
+                    {
+                        "name": "N_ter_TCdom",
+                        "start": 265,
+                        "length": 178,
+                        "cevalue": 7.1e-08,
+                        "ievalue": 0.00013,
+                        "score": 20.8,
+                        "hmm_length": 334,
+                        "hmm_start": 170,
+                        "hmm_end": 329,
+                        "color": "sienna",
+                        "status": "unlikely"
                     }
                 ]
             }
@@ -6638,7 +4248,7 @@ $FAM_LIST = [
                 {
                     "name": "squalene_hopene",
                     "evalue": 0.01,
-                    "color": "peachpuff"
+                    "color": "sandybrown"
                 }
             ],
             "forbidden": [
@@ -6651,6 +4261,7 @@ $FAM_LIST = [
         "proteins": [
             {
                 "id": "MGG_00792T0",
+                "sequence": "MTATSDDNNPLFKESCQALDHATEFARDTLVNKEHWCGWVLSNVTVTAEWIFLQYILGLEMSNEDRRGFLKHFTSSQRPDGSWSLATQTTTGGELSCTIEAYLALKILGVSPEEDYMVRARDYVRSHGGAEKMRMLSRFHLAMFGLIPWAAVPQMPPELIFMPSWSLVNIYKFSSWARCNIVGLCMLRVHEPLYALPNGKQLDNDYLDELWLDPYHKAIPYTVPYLQLMQTSPLGVLFQLGDLFLWLLSFLGFWFLRRWAVSSSIQWTLDHQEPSGDWGGIYPPMHHNILALMLEGWSQDDPVIQRGIGACQRFLAEDPAHGKWMQPSVSPVWDTFLMIRAVADAKTTDDADKLLVKPVDWVLAQQIDDDHIGDWRIYRPDIPAGGFAFEYFNKWYPDVDDTAVGVVALMRHDPSLVNDDRILKAAAWTLGMQNRDFGWAAFDADNNAFYLHATPFSDMDSLTDSSTPDVTGHVLEMLGLMYRLERQGRVKSPEMLAFLSQSHGACDRGLGYLLGSQEAFGGWYGRWGVNYIFGTSAALCALAYFADRKGVRGKMAAGADWLRSRQNPDGGWGELLESYDNKALAGRGRSTPSQTAWALQGLLELEDPRGEVVEAGVNWLLRHQVTSPSRNSGRVSATWPEDDYTATGFPGHFYLKYELYCHYFPMMALARYRSCIQDGA",
                 "length": 681,
                 "architectures_nb": 2,
                 "domains": [
@@ -6664,7 +4275,7 @@ $FAM_LIST = [
                         "hmm_length": 720,
                         "hmm_start": 50,
                         "hmm_end": 711,
-                        "color": "peachpuff",
+                        "color": "sandybrown",
                         "status": "likely"
                     },
                     {
@@ -6677,7 +4288,7 @@ $FAM_LIST = [
                         "hmm_length": 739,
                         "hmm_start": 115,
                         "hmm_end": 727,
-                        "color": "royalblue",
+                        "color": "rebeccapurple",
                         "status": "unlikely"
                     }
                 ]
@@ -6691,7 +4302,7 @@ $FAM_LIST = [
                 {
                     "name": "squalene",
                     "evalue": 0.01,
-                    "color": "rebeccapurple"
+                    "color": "steelblue"
                 }
             ],
             "forbidden": [
@@ -6704,6 +4315,7 @@ $FAM_LIST = [
         "proteins": [
             {
                 "id": "MGG_09239T0",
+                "sequence": "MGTVKNIAYYAFHPVELRAIIQWKIWHEPVHTRNPSKERPTETECFKYLDLTSRSFAAVIKELNPELLMPVCIFYLALRGLDTIEDDMTIPNDKKIPLLRNFADFMDQDGWTFNENGPNERDRELLVHFDQVITELKLVKKPYYEIIRDITVKMGNGMADYVLKTENTTNCINTVEEYEMYCHYVAGLVGEGLTRLFVVAELANPKLLERMDLAESMGQFLQKTNIIRDVHEDYIDKRSWWPRSVWSKYAKEYDDLFKPENRQQAVYCCSELVLNALKNVEDCLYYMAGMREQSVFNFVAIPQTMAIATLELVFQNPKIFERNVKITKGDACRIMLRSTQNLRLVTDLFKEYTRKIHQKNDPRDPNYAAISAQCGKIEQFIETIFPSQDPKVLEMAQKDVKMSEKPGMDTSEAVVLILAVIAMFVFSGGLMVGLAWLMGAQFNNFFSSIDAGMKPSPLPSGHQEL",
                 "length": 466,
                 "architectures_nb": 2,
                 "domains": [
@@ -6717,7 +4329,7 @@ $FAM_LIST = [
                         "hmm_length": 479,
                         "hmm_start": 1,
                         "hmm_end": 479,
-                        "color": "rebeccapurple",
+                        "color": "steelblue",
                         "status": "likely"
                     },
                     {
@@ -6730,262 +4342,16 @@ $FAM_LIST = [
                         "hmm_length": 594,
                         "hmm_start": 394,
                         "hmm_end": 499,
-                        "color": "teal",
+                        "color": "green",
                         "status": "unlikely"
                     }
                 ]
             }
         ]
-    },
-    {"name": "DMATS",
-    "rules": {
-        "mandatories": [
-            {
-                "name": "Trp_DMAT",
-                "evalue": 0.01,
-                "color": "darkslategray"
-            }
-        ],
-        "forbidden": [
-            {
-                "name": "None",
-                "color": "None"
-            }
-        ]
-    },
-    "proteins": [
-        {
-            "id": "MGG_06540T0",
-            "length": 410,
-            "architectures_nb": 1,
-            "domains": [
-                {
-                    "name": "Trp_DMAT",
-                    "start": 47,
-                    "length": 353,
-                    "cevalue": 1.4e-122,
-                    "ievalue": 6.2e-119,
-                    "score": 396.7,
-                    "hmm_length": 350,
-                    "hmm_start": 1,
-                    "hmm_end": 350,
-                    "color": "darkslategray",
-                    "status": "likely"
-                }
-            ]
-        },
-        {
-            "id": "MGG_10953T0",
-            "length": 460,
-            "architectures_nb": 1,
-            "domains": [
-                {
-                    "name": "Trp_DMAT",
-                    "start": 91,
-                    "length": 361,
-                    "cevalue": 4.2e-120,
-                    "ievalue": 1.8e-116,
-                    "score": 388.6,
-                    "hmm_length": 350,
-                    "hmm_start": 1,
-                    "hmm_end": 342,
-                    "color": "darkslategray",
-                    "status": "likely"
-                }
-            ]
-        },
-        {
-            "id": "MGG_12480T0",
-            "length": 405,
-            "architectures_nb": 1,
-            "domains": [
-                {
-                    "name": "Trp_DMAT",
-                    "start": 14,
-                    "length": 350,
-                    "cevalue": 1e-109,
-                    "ievalue": 4.4e-106,
-                    "score": 354.5,
-                    "hmm_length": 350,
-                    "hmm_start": 1,
-                    "hmm_end": 350,
-                    "color": "darkslategray",
-                    "status": "likely"
-                }
-            ]
-        }
-    ]
-},
-{
-    "name": "Ent_kaurene_synthase",
-    "rules": {
-        "mandatories": [
-            {
-                "name": "ent_kaurene",
-                "evalue": 0.01,
-                "color": "mediumvioletred"
-            }
-        ],
-        "forbidden": [
-            {
-                "name": "None",
-                "color": "None"
-            }
-        ]
-    },
-    "proteins": [
-        {
-            "id": "MGG_01949T0",
-            "length": 963,
-            "architectures_nb": 2,
-            "domains": [
-                {
-                    "name": "ent_kaurene",
-                    "start": 2,
-                    "length": 961,
-                    "cevalue": 0.0,
-                    "ievalue": 0.0,
-                    "score": 1717.5,
-                    "hmm_length": 955,
-                    "hmm_start": 1,
-                    "hmm_end": 954,
-                    "color": "mediumvioletred",
-                    "status": "likely"
-                },
-                {
-                    "name": "diterpene",
-                    "start": 5,
-                    "length": 958,
-                    "cevalue": 0.0,
-                    "ievalue": 0.0,
-                    "score": 1570.7,
-                    "hmm_length": 961,
-                    "hmm_start": 2,
-                    "hmm_end": 959,
-                    "color": "mediumslateblue",
-                    "status": "unlikely"
-                }
-            ]
-        },
-        {
-            "id": "MGG_14722T0",
-            "length": 955,
-            "architectures_nb": 2,
-            "domains": [
-                {
-                    "name": "ent_kaurene",
-                    "start": 1,
-                    "length": 947,
-                    "cevalue": 0.0,
-                    "ievalue": 0.0,
-                    "score": 1722.0,
-                    "hmm_length": 955,
-                    "hmm_start": 1,
-                    "hmm_end": 955,
-                    "color": "mediumvioletred",
-                    "status": "likely"
-                },
-                {
-                    "name": "diterpene",
-                    "start": 4,
-                    "length": 944,
-                    "cevalue": 0.0,
-                    "ievalue": 0.0,
-                    "score": 1604.4,
-                    "hmm_length": 961,
-                    "hmm_start": 2,
-                    "hmm_end": 960,
-                    "color": "mediumslateblue",
-                    "status": "unlikely"
-                }
-            ]
-        }
-    ]
-},
-{"name": "DMATS",
-"rules": {
-    "mandatories": [
-        {
-            "name": "Trp_DMAT",
-            "evalue": 0.01,
-            "color": "darkslategray"
-        }
-    ],
-    "forbidden": [
-        {
-            "name": "None",
-            "color": "None"
-        }
-    ]
-},
-"proteins": [
-    {
-        "id": "MGG_06540T0",
-        "length": 410,
-        "architectures_nb": 1,
-        "domains": [
-            {
-                "name": "Trp_DMAT",
-                "start": 47,
-                "length": 353,
-                "cevalue": 1.4e-122,
-                "ievalue": 6.2e-119,
-                "score": 396.7,
-                "hmm_length": 350,
-                "hmm_start": 1,
-                "hmm_end": 350,
-                "color": "darkslategray",
-                "status": "likely"
-            }
-        ]
-    },
-    {
-        "id": "MGG_10953T0",
-        "length": 460,
-        "architectures_nb": 1,
-        "domains": [
-            {
-                "name": "Trp_DMAT",
-                "start": 91,
-                "length": 361,
-                "cevalue": 4.2e-120,
-                "ievalue": 1.8e-116,
-                "score": 388.6,
-                "hmm_length": 350,
-                "hmm_start": 1,
-                "hmm_end": 342,
-                "color": "darkslategray",
-                "status": "likely"
-            }
-        ]
-    },
-    {
-        "id": "MGG_12480T0",
-        "length": 405,
-        "architectures_nb": 1,
-        "domains": [
-            {
-                "name": "Trp_DMAT",
-                "start": 14,
-                "length": 350,
-                "cevalue": 1e-109,
-                "ievalue": 4.4e-106,
-                "score": 354.5,
-                "hmm_length": 350,
-                "hmm_start": 1,
-                "hmm_end": 350,
-                "color": "darkslategray",
-                "status": "likely"
-            }
-        ]
     }
 ]
-},
 
-
-]
-
-var families = $FAM_LIST
+// var families = $FAM_LIST
 
 // constant variables used to draw svg proteins
 const margin = {"top": 0, "right": 5, "bottom": 0, "left": 10};
@@ -7054,9 +4420,57 @@ const y_rect = y_line - rect_height/2;
 
     })
 
+    d3.select("button.sequence").on("click", function () {
+        var duration_time = 275;
+        tt_sequence = d3.select(".tooltip-sequence")
+
+        d3.selectAll(".panel").style("z-index", "1")
+
+        tt_sequence.style("visibility", "visible");
+
+
+        d3.select(".hiding-panel")
+            .style("z-index", "2")
+            .style("display", "initial")
+            .transition().duration(duration_time)
+                .style("opacity", "0.65")
+
+
+        if (d3.select(".hiding-panel").style("display") == "initial") {
+
+            d3.select(".hiding-panel").on("click", function() {
+                d3.select(".hiding-panel")
+                    .style("display", "none")
+                    .style("z-index", "-1")
+
+                tt_sequence.style("visibility", "hidden");
+
+                setTimeout(function () {
+                    d3.select(".hiding-panel")
+                        .style("display", "none");
+                    }, 0);        
+            })
+
+            d3.select("#close-tt-seq").on("click", function() {                
+                d3.select(".hiding-panel")
+                    .style("display", "none")
+                    .style("z-index", "-1")
+
+                tt_sequence.style("visibility", "hidden");
+
+                setTimeout(function () {
+                    d3.select(".hiding-panel")
+                        .style("display", "none");
+                    }, 0);        
+            })
+
+                
+        }
+    })
+
     d3.selectAll(".infobox").on("click", function() {
         var infobox = this;
-        var duration_time = 275;
+        var duration_time = 0;
         var grandParent = this.parentNode.parentNode
 
         d3.selectAll(".panel").style("z-index", "1")
@@ -7093,7 +4507,7 @@ const y_rect = y_line - rect_height/2;
                 setTimeout(function () {
                     d3.select(".hiding-panel")
                         .style("display", "none");
-                    }, 100);        
+                    }, duration_time);        
                 })
 
             d3.select(".hiding-panel").on("click", function() {
@@ -7236,7 +4650,9 @@ function rmProteins() {
 
 
 function updateDetails(protein){
-    console.log(protein.sequence)
+    var BLAST_URL = "https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE=Proteins&PROGRAM=blastp&BLAST_PROGRAMS=blastp&QUERY=MYSEQ&LINK_LOC=protein&PAGE_TYPE=BlastSearch"
+    
+    d3.select("form").attr("action", `${BLAST_URL}`.replace("MYSEQ", protein.sequence))
 
     var domNbMLA = d3.sum(protein.domains.map(function(d) {
         if (d.status === "likely") {
@@ -7248,6 +4664,7 @@ function updateDetails(protein){
     d3.selectAll(".p-id").text(protein.id)
     d3.select("#p-length").text(`${protein.length} amino acids`)
     d3.select("#p-domainInArch").text(domNbMLA)
+    d3.select("#p-sequence").text(protein.sequence)
     
     d3.select("#p-totalDomain").text(`${protein.domains.length}`)
 

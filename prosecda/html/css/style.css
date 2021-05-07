@@ -125,12 +125,13 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -0%);
+    transform: translate(-50%, -50%);
+    padding: 8px;
 
     width: 600px;
     min-height: 300px;
-    background-color: rgba(94, 119, 141, 0.95);
-    color: #fff;
+    background-color: whitesmoke;
+    color: black;
     text-align: left;
     font-size: 14px;
     font-weight: normal;
@@ -139,13 +140,45 @@ section {
     border: 1px solid black;
 
    
-    visibility: visible;
+    visibility: hidden;
     z-index: 5;
   }
 
-  textarea {
-      max-width: 600px;
+.box-sequence {
+      /* width: 95%; */
+      min-height: 280px;
+      margin: 2px;
+      margin-top: 10px;
+      padding: 5px;
+      border: 1px solid black;
   }
+
+.box-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-title p {
+    font-size: medium;
+    font-weight: bolder;
+    margin: 4px;
+}
+
+.box-title svg {
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+.blastp {
+    margin-top: 10px;
+}
+
+#p-sequence {
+    /* word-wrap: break-word; */
+    overflow-wrap: break-word;
+    text-align: left;
+}
+
 
 
 
@@ -517,7 +550,7 @@ table th {
     padding: 4px;
   }
 
-  .container span.title:before {
+.container span.title:before {
     content: "- ";
     text-indent: -5px;
   }

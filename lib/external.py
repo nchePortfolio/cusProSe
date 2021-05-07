@@ -588,6 +588,7 @@ class Protein:
         json_domains = [x.jsonify() for x in self.domains]
         json_protein = {
             "id": self.name,
+            "sequence": self.sequence,
             "length": self.length,
             "architectures_nb": len(self.architectures),
             "domains": json_domains
