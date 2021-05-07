@@ -80,7 +80,7 @@ class Matches:
         if self.list:
             os.makedirs(self.outdir, exist_ok=True)
             for match in self.list:
-                match.report(outdir=self.outdir, nopdf=self.param.nopdf)
+                match.report(outdir=self.outdir, pdf=self.param.pdf)
                 json_all_match.append(match.jsonify())
 
         json_output = {
@@ -179,7 +179,7 @@ class Match:
         else:
             return []
 
-    def report(self, outdir: str, nopdf: bool):
+    def report(self, outdir: str, pdf: bool):
         self.set_colors()
 
         outpath = outdir + self.rule.name + '/'
@@ -187,7 +187,7 @@ class Match:
 
         self.logger.title('Proteins matching {} rule:'.format(self.rule.name))
 
-        if not nopdf:
+        if pdf:
             pdf_pages = PdfPages(filename=outpath + 'all_' + self.rule.name + '.pdf')
 
         for protein in self.proteins:
@@ -196,11 +196,11 @@ class Match:
             protein.write_fasta(outdir=outpath)
             protein.write_xml(outdir=outpath, rule=self.rule)
 
-            if not nopdf:
+            if pdf:
                 self.plot_protein_best_architecture(protein=protein, pdf_pages=pdf_pages)
                 self.plot_protein_all_domains(protein=protein, outpath=outpath)
 
-        if not nopdf:
+        if pdf:
             pdf_pages.close()
 
     def plot_protein_best_architecture(self, protein: Protein, pdf_pages: PdfPages):

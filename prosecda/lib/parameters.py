@@ -41,7 +41,7 @@ class Param:
         self.cval = args.cevalue
         self.ival = args.ievalue
         self.acc = args.acc
-        self.nopdf = args.nopdf
+        self.pdf = args.pdf
         # self.rules = rules.parse_rules(filename=self.yamlrules, score_co=self.score_co)
 
         self.logger = logHandler.Logger(name=__name__)
@@ -65,7 +65,7 @@ class Param:
         self.logger.info('- i-Evalue cutoff for domain match: {}'.format(self.ival))
         self.logger.info('- c-Evalue cutoff for domain match: {}'.format(self.cval))
         self.logger.info('- HMMER accuracy: {}'.format(self.acc))
-        self.logger.info('- --nopdf: {}'.format(self.nopdf))
+        self.logger.info('- --pdf: {}'.format(self.pdf))
         self.logger.info('')
 
 
@@ -95,7 +95,7 @@ def get_arguments():
                         help="HMMER score cutoff (3.0)")
     parser.add_argument("-acc", required=False, default=0.6, type=float,
                         help="HMMER mean probability of the alignment accuracy between each residues of the target and the corresponding hmm state (0.6)")
-    parser.add_argument("--nopdf", required=False, action='store_true', help="Deactivate the generation of the pdf results (False)")
+    parser.add_argument("--pdf", required=False, action='store_true', help="Deactivate the generation of the pdf results (False)")
     args = parser.parse_args()
 
     return args
