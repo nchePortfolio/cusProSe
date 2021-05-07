@@ -3,7 +3,7 @@ var families = $FAM_LIST
 
 // constant variables used to draw svg proteins
 const margin = {"top": 0, "right": 5, "bottom": 0, "left": 10};
-const width = 800 - margin.left - margin.right;
+const width = 650 - margin.left - margin.right;
 const height = 60 - margin.top - margin.bottom;
 const y_line = (height + margin.top + margin.bottom)/2;
 const rect_height = 12;
@@ -68,9 +68,57 @@ const y_rect = y_line - rect_height/2;
 
     })
 
+    d3.select("button.sequence").on("click", function () {
+        var duration_time = 275;
+        tt_sequence = d3.select(".tooltip-sequence")
+
+        d3.selectAll(".panel").style("z-index", "1")
+
+        tt_sequence.style("visibility", "visible");
+
+
+        d3.select(".hiding-panel")
+            .style("z-index", "2")
+            .style("display", "initial")
+            .transition().duration(duration_time)
+                .style("opacity", "0.65")
+
+
+        if (d3.select(".hiding-panel").style("display") == "initial") {
+
+            d3.select(".hiding-panel").on("click", function() {
+                d3.select(".hiding-panel")
+                    .style("display", "none")
+                    .style("z-index", "-1")
+
+                tt_sequence.style("visibility", "hidden");
+
+                setTimeout(function () {
+                    d3.select(".hiding-panel")
+                        .style("display", "none");
+                    }, 0);        
+            })
+
+            d3.select("#close-tt-seq").on("click", function() {                
+                d3.select(".hiding-panel")
+                    .style("display", "none")
+                    .style("z-index", "-1")
+
+                tt_sequence.style("visibility", "hidden");
+
+                setTimeout(function () {
+                    d3.select(".hiding-panel")
+                        .style("display", "none");
+                    }, 0);        
+            })
+
+                
+        }
+    })
+
     d3.selectAll(".infobox").on("click", function() {
         var infobox = this;
-        var duration_time = 275;
+        var duration_time = 0;
         var grandParent = this.parentNode.parentNode
 
         d3.selectAll(".panel").style("z-index", "1")
@@ -107,7 +155,7 @@ const y_rect = y_line - rect_height/2;
                 setTimeout(function () {
                     d3.select(".hiding-panel")
                         .style("display", "none");
-                    }, 100);        
+                    }, duration_time);        
                 })
 
             d3.select(".hiding-panel").on("click", function() {
@@ -155,13 +203,21 @@ function drawProteins(data) {
                 .enter().append("div")
                     .attr("class", "protein")
 
+    // var subdiv = div.append("div")
+    //     .attr("class", "protein-descr")
+    //     .text(d => {
+    //         return `${d.id} (${d.length} aa)`;
+    //     })
+    //     .style("font-weight", "bold")
+
     var subdiv = div.append("div")
         .attr("class", "protein-descr")
+
+    subdiv.append("div")
         .text(d => {
             return `${d.id} (${d.length} aa)`;
         })
         .style("font-weight", "bold")
-        .style("border-bottom", "1px solid")
 
     d3.select(".protein-descr ").classed("selected", true);
 
@@ -242,6 +298,13 @@ function rmProteins() {
 
 
 function updateDetails(protein){
+    var BLAST_URL = "https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE=Proteins&PROGRAM=blastp&BLAST_PROGRAMS=blastp&QUERY=MYSEQ&LINK_LOC=protein&PAGE_TYPE=BlastSearch"
+    
+    d3.select("form").attr("action", `${BLAST_URL}`.replace("MYSEQ", protein.sequence))
+
+    d3.select("#p-sequence").text(protein.sequence)
+    
+
     var domNbMLA = d3.sum(protein.domains.map(function(d) {
         if (d.status === "likely") {
             return 1;
