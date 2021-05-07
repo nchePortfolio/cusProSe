@@ -32,9 +32,10 @@ class Param:
 
         outpath = args.out if args.out[-1] == '/' else args.out + '/'
         default_mainname = 'prosecda_' + date + '/'
-        self.outdirname = outpath + default_mainname
+        # self.outdirname = outpath + default_mainname
+        self.outdirname = outpath + default_mainname if outpath == './' else outpath
         os.makedirs(self.outdirname, exist_ok=True)
-
+        
         self.score_co = args.score
         self.cov = args.cov
         self.cval = args.cevalue

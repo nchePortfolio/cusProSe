@@ -1,6 +1,6 @@
 
 
-var families = $FAM_LIST
+var output = $OUTPUT
 
 // constant variables used to draw svg proteins
 const margin = {"top": 0, "right": 5, "bottom": 0, "left": 10};
@@ -10,16 +10,16 @@ const y_line = (height + margin.top + margin.bottom)/2;
 const rect_height = 12;
 const y_rect = y_line - rect_height/2;
 
+// d3.json("./data.json").then(function(output) {
 
-// d3.json("./data.json").then(function(families) {
-
-    // initialize the page with the content of the 1st element of families 
-    initPage(families[0]);
+    // initialize the page with the content of the 1st element of output 
+    initPage(output.fam[0]);
+    d3.select("#run-title").text(`${output.run}`)
 
     // list all family names in the panel "List of protein families"
     // each element is a <div class="nav-famlist"> 
     var famList = d3.select("#nav-content").selectAll("div")
-        .data(families)
+        .data(output.fam)
         .enter().append("div")
             .attr("class", "nav-famlist")
             .style("display", "block")

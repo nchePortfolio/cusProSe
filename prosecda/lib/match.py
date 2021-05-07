@@ -83,6 +83,11 @@ class Matches:
                 match.report(outdir=self.outdir, nopdf=self.param.nopdf)
                 json_all_match.append(match.jsonify())
 
+        json_output = {
+            'run': os.path.dirname(self.param.outdirname),
+            'fam': json_all_match
+        }
+
         html.generate_html(self.param.outdirname)
         # with open(self.outdir + '/data.json', 'w') as _jsonfile:
         #     _jsonfile.write(json.dumps(json_all_match, indent=4))
@@ -92,7 +97,7 @@ class Matches:
             filedata = _file.read()
 
         # Replace the target string
-        filedata = filedata.replace('$FAM_LIST', json.dumps(json_all_match, indent=4))
+        filedata = filedata.replace('$OUTPUT', json.dumps(json_output, indent=4))
 
         # Rewrite the js/d3_script.js file
         with open(self.param.outdirname + '/js/d3_script.js', 'w') as _file:
