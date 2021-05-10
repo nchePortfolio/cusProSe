@@ -206,7 +206,7 @@ def hmmfetch(hmmdb: str, keys: list, outdir: str) -> str:
     @return: the filename of the new HMM profile database
     """
     keys_file = outdir + 'domains.lst'
-    outfile = outdir + hmmdb.replace('.hmm', '_tmp.hmm')
+    outfile = outdir + os.path.basename(hmmdb.replace('.hmm', '_tmp.hmm'))
 
     with open(keys_file, 'w') as _file:
         _file.write('\n'.join(keys) + '\n')
