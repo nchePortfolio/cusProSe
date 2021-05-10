@@ -26,7 +26,7 @@ class Param:
         @param args: return of argparse.ArgumentParser.parse_args()
         """
         self.proteome_filename = args.proteome
-        self.fasta_dict = seqio.read_fasta(sequences=self.proteome_filename)
+        # self.fasta_dict = seqio.read_fasta(sequences=self.proteome_filename)
         self.hmmdb = args.hmmdb
         self.yamlrules = args.rules
 
@@ -57,7 +57,7 @@ class Param:
         """
         self.logger.info('')
         self.logger.info('# Summary of input files used parameters:')
-        self.logger.info('- Output of hmmsearch (.domtblout): {}'.format(self.hmmdb))
+        self.logger.info('- HMM database: {}'.format(self.hmmdb))
         self.logger.info('- Proteome (.fasta): {}'.format(self.proteome_filename))
         self.logger.info('- Rules (.yaml): {}'.format(self.yamlrules))
         self.logger.info('- Output path: {}'.format(self.outdirname))
